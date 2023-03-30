@@ -1,9 +1,6 @@
-import axios from "axios"
+import axios from 'axios';
 
-const 
 export const App = () => {
-
-
   return (
     <div
       style={{
