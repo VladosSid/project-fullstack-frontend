@@ -1,11 +1,25 @@
-import {IngredientsShoppingList} from '../components/ShoppingListPage/IngredientsShoppingList';
+import IngredientsShoppingList from '../components/ShoppingListPage';
+import {
+  TitltList,
+  TitleListProducts,
+  TitleListNumber,
+} from './ShoppingListPage.styled';
 
-export const ShoppingListPage = () => {
+const ShoppingListPage = () => {
   // тут буде запит за коллекцією інградієнтів
   return (
-    <>
+    <div>
       <h2>Shopping list</h2>
-      <IngredientsShoppingList />
-    </>
+      <div>
+        <TitltList>
+          <TitleListProducts>Products</TitleListProducts>
+          <TitleListNumber>Number</TitleListNumber>
+          <span>Remove</span>
+        </TitltList>
+        <IngredientsShoppingList />
+      </div>
+    </div>
   );
 };
+
+export default ShoppingListPage;

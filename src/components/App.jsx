@@ -1,3 +1,6 @@
+// import ShoppingListPage from '../pages/ShoppingListPage';
+import Footer from './Footer';
+
 export const App = () => {
   return (
     <div
@@ -10,9 +13,9 @@ export const App = () => {
         color: '#010101',
       }}
     >
+         {/* <ShoppingListPage /> */}
       <Footer />
-      React homework template
-      <ShoppingListPage/>
-    </div>
+         </div>
   );
 };
+
