@@ -1,0 +1,34 @@
+import React from 'react';
+import { Recipes } from 'gannaFakeData';
+// import { Link } from 'react-router-dom';
+// import { Container, CardWrapper, RecipeTitle } from 'mainPage.styled';
+import { Container, CardWrapper, RecipeTitle } from './MainPage.styled';
+
+export default function MainPage() {
+  const RecipesByCategory = Recipes.reduce((acc, recipe) => {
+    if (!acc[recipe.category]) {
+      acc[recipe.category] = [recipe];
+    } else {
+      acc[recipe.category].push(recipe);
+    }
+    return acc;
+  }, {});
+
+  return (
+    <Container>
+      {Object.entries(RecipesByCategory).map(([category, recipes]) => (
+        <div key={category}>
+          <h2>{category}</h2>
+          {recipes.map(recipe => (
+            <CardWrapper key={recipe.id}>
+              <a href="https://recepiesPage.com">
+                <img src={recipe.preview} alt={recipe.title} />
+                <RecipeTitle>{recipe.title}</RecipeTitle>
+              </a>
+            </CardWrapper>
+          ))}
+        </div>
+      ))}
+    </Container>
+  );
+}
