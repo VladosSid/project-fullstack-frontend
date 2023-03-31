@@ -2,7 +2,10 @@ import styled from 'styled-components';
 import theme from '../style/generalStyle';
 
 export const AppBox = styled.div`
-  padding: 20px 16px;
+
+  padding-left: 16px;
+  padding-right: 16px;
+
 
   @media ${theme.device.tablet} {
     padding: 20px 32px;

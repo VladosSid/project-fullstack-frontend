@@ -8,7 +8,7 @@ export const App = props => {
   return (
     <AppBox>
       <Header />
-    
+
       <Footer />
     </AppBox>
   );
