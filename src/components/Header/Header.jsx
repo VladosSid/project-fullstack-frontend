@@ -5,11 +5,13 @@ import MobileMenuButton from 'components/MobileMenuButton';
 
 const Header = () => {
   return (
-    <HeaderBox>
-      <Logo />
-      <UserLogo />
-      <MobileMenuButton />
-    </HeaderBox>
+    <section>
+      <HeaderBox>
+        <Logo />
+        <UserLogo />
+        <MobileMenuButton />
+      </HeaderBox>
+    </section>
   );
 };
 
