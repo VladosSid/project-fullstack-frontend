@@ -1,4 +1,4 @@
-import menu from '../../images/menu.svg';
+import menu from '../../images/Header/menu.svg';
 
 const MobileMenuButton = () => {
   return (
