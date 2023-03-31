@@ -1,6 +1,4 @@
-import Footer from './Footer';
-
-export const App = props => {
+export const App = () => {
   return (
     <div
       style={{
@@ -14,6 +12,7 @@ export const App = props => {
     >
       <Footer />
       React homework template
+      <ShoppingListPage/>
     </div>
   );
 };
