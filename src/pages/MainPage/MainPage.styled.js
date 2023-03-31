@@ -8,6 +8,7 @@ export const Container = styled.div`
   width: 100%;
 `;
 export const CardWrapper = styled.div`
+  position: relative;
   img {
     /* width: 343px;
     height: 323px; */
@@ -18,6 +19,16 @@ export const CardWrapper = styled.div`
   > a {
     text-decoration: none;
   }
+`;
+export const RecipeTitleWrapper = styled.div`
+  outline: 1px solid #389b49;
+  position: absolute;
+  left: 16px;
+  right: 16px;
+  bottom: 26px;
+  background: #ffffff;
+  border-radius: 8px;
+  padding: 16px;
 `;
 export const RecipeTitle = styled.h3`
   font-family: 'Poppins';

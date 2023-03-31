@@ -2,7 +2,12 @@ import React from 'react';
 import { Recipes } from 'gannaFakeData';
 // import { Link } from 'react-router-dom';
 // import { Container, CardWrapper, RecipeTitle } from 'mainPage.styled';
-import { Container, CardWrapper, RecipeTitle } from './MainPage.styled';
+import {
+  Container,
+  CardWrapper,
+  RecipeTitle,
+  RecipeTitleWrapper,
+} from './MainPage.styled';
 
 export default function MainPage() {
   const RecipesByCategory = Recipes.reduce((acc, recipe) => {
@@ -23,7 +28,9 @@ export default function MainPage() {
             <CardWrapper key={recipe.id}>
               <a href="https://recepiesPage.com">
                 <img src={recipe.preview} alt={recipe.title} />
-                <RecipeTitle>{recipe.title}</RecipeTitle>
+                <RecipeTitleWrapper>
+                  <RecipeTitle>{recipe.title}</RecipeTitle>
+                </RecipeTitleWrapper>
               </a>
             </CardWrapper>
           ))}
