@@ -1,21 +1,16 @@
-// import ShoppingListPage from '../pages/ShoppingListPage';
+import Header from './Header';
 import Footer from './Footer';
 
-export const App = () => {
+import { AppBox } from './App.styled';
+
+ 
+export const App = props => {
   return (
-    <div
-      style={{
-        height: '100vh',
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        fontSize: 40,
-        color: '#010101',
-      }}
-    >
-         {/* <ShoppingListPage /> */}
+    <AppBox>
+      <Header />
+    
       <Footer />
-         </div>
+    </AppBox>
   );
 };
 

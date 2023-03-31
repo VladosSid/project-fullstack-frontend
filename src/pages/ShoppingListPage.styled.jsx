@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import theme from '../style/generalStyle';
 
 export const TitltList = styled.div`
   background: #8baa36;
@@ -10,15 +11,11 @@ export const TitltList = styled.div`
 export const TitleListProducts = styled.span`
   margin-right: 167px;
 
-  @media (min-width: 375px) {
-    margin-right: 167px;
-  }
-
-  @media (min-width: 768px) {
+  @media ${theme.device.tablet} {
     margin-right: 312px;
   }
 
-  @media (min-width: 1440px) {
+  @media ${theme.device.desktop} {
     margin-right: 750px;
   }
 `;

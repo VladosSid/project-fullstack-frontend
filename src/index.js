@@ -7,7 +7,7 @@ import theme from './style/generalStyle';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <ThemeProvider theme={theme.dark}>
+    <ThemeProvider theme={theme.white}>
       <App />
     </ThemeProvider>
   </React.StrictMode>
