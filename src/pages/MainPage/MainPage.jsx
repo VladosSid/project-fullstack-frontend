@@ -7,6 +7,8 @@ import {
   CardWrapper,
   RecipeTitle,
   RecipeTitleWrapper,
+  RecipeCategoryName,
+  Button,
 } from './MainPage.styled';
 
 export default function MainPage() {
@@ -23,7 +25,7 @@ export default function MainPage() {
     <Container>
       {Object.entries(RecipesByCategory).map(([category, recipes]) => (
         <div key={category}>
-          <h2>{category}</h2>
+          <RecipeCategoryName>{category}</RecipeCategoryName>
           {recipes.map(recipe => (
             <CardWrapper key={recipe.id}>
               <a href="https://recepiesPage.com">
@@ -34,6 +36,7 @@ export default function MainPage() {
               </a>
             </CardWrapper>
           ))}
+          <Button>See all</Button>
         </div>
       ))}
     </Container>

@@ -27,11 +27,4 @@ export const Recipes = [
     preview:
       'https://res.cloudinary.com/ddbvbv5sp/image/upload/v1678560401/yspi0frormix0zwglhos.jpg',
   },
-  {
-    id: 5,
-    title: 'Honey Teriyaki ',
-    category: 'Seafood',
-    preview:
-      'https://res.cloudinary.com/ddbvbv5sp/image/upload/v1678560401/yspi0frormix0zwglhos.jpg',
-  },
 ];
