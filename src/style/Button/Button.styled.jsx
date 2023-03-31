@@ -14,13 +14,14 @@ export const Box = styled.div`
   }
 
   transition: background 250ms cubic-bezier(0.4, 0, 0.2, 1);
-
-  @media ${theme.device.desktop} {
-    background: orange;
-  } ;
 `;
 
 export const ButtonCustom = styled.button`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+
   font-family: 'Poppins';
 
   padding: ${props => props.theme.buttons[props.value].padding};
@@ -28,7 +29,6 @@ export const ButtonCustom = styled.button`
   color: ${props => props.theme.buttons[props.value].color};
   background: ${props => props.theme.buttons[props.value].background};
 
-  clip-path: ${props => props.theme.buttons[props.value].clipPath};
   border: ${props => props.theme.buttons[props.value].border};
   border-radius: ${props => props.theme.buttons[props.value].borderRadius};
 
@@ -47,4 +47,11 @@ export const ButtonCustom = styled.button`
   transition: background 250ms cubic-bezier(0.4, 0, 0.2, 1),
     color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  @media ${theme.device.tablet} {
+    padding: ${props => props.theme.buttons[props.value].tablet.padding};
+
+    font-size: ${props => props.theme.buttons[props.value].tablet.fontSize};
+    line-height: ${props => props.theme.buttons[props.value].tablet.lineHeight};
+  }
 `;
