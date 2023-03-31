@@ -1,4 +1,6 @@
-export const App = () => {
+import Footer from './Footer';
+
+export const App = props => {
   return (
     <div
       style={{
@@ -10,6 +12,7 @@ export const App = () => {
         color: '#010101',
       }}
     >
+      <Footer />
       React homework template
     </div>
   );
