@@ -3,6 +3,7 @@ import Footer from './Footer';
 
 import { AppBox } from './App.styled';
 
+ 
 export const App = props => {
   return (
     <AppBox>
@@ -12,3 +13,4 @@ export const App = props => {
     </AppBox>
   );
 };
+
