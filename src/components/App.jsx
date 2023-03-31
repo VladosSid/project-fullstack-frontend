@@ -1,19 +1,12 @@
 import Footer from './Footer';
 
+import { AppBox } from './App.styled';
+
 export const App = props => {
   return (
-    <div
-      style={{
-        height: '100vh',
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        fontSize: 40,
-        color: '#010101',
-      }}
-    >
+    <AppBox>
       <Footer />
       React homework template
-    </div>
+    </AppBox>
   );
 };
