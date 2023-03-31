@@ -1,9 +1,11 @@
 import { ButtonCustom, Box } from './Button.styled';
 
-export default function Button({ value, nameButton }) {
+export default function Button({ value, nameButton, onclick }) {
   return (
     <Box value={nameButton}>
-      <ButtonCustom value={nameButton}>{value}</ButtonCustom>
+      <ButtonCustom onClick={onclick} value={nameButton}>
+        {value}
+      </ButtonCustom>
     </Box>
   );
 }
