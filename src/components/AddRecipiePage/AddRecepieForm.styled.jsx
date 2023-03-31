@@ -1,4 +1,11 @@
 import styled from 'styled-components';
+import img from "../AddRecipiePage/camera.svg";
+
+
+export const Wrap = styled.div`
+display: flex;
+flex-direction: column;
+`;
 
 export const FilePicker = styled.div`
     width: 357px;
@@ -8,7 +15,9 @@ export const FilePicker = styled.div`
     justify-content: center;
     align-items: center;
     display: flex;
-    background-image: url('./camera.svg'); 
+    background-image: url(${img});
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
 `;
 
 export const Form = styled.form`
