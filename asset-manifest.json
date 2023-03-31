@@ -1,15 +1,14 @@
 {
   "files": {
     "main.css": "/project-fullstack-frontend/static/css/main.23ccd8a5.css",
-    "main.js": "/project-fullstack-frontend/static/js/main.06373996.js",
+    "main.js": "/project-fullstack-frontend/static/js/main.1b5ade8e.js",
     "index.html": "/project-fullstack-frontend/index.html",
     "static/media/logo.svg": "/project-fullstack-frontend/static/media/logo.927dd7695b30c923da175e7879cb0f0d.svg",
-    "static/media/menu.svg": "/project-fullstack-frontend/static/media/menu.0e7a3ceba8d1c2ac98513490254e232d.svg",
     "main.23ccd8a5.css.map": "/project-fullstack-frontend/static/css/main.23ccd8a5.css.map",
-    "main.06373996.js.map": "/project-fullstack-frontend/static/js/main.06373996.js.map"
+    "main.1b5ade8e.js.map": "/project-fullstack-frontend/static/js/main.1b5ade8e.js.map"
   },
   "entrypoints": [
     "static/css/main.23ccd8a5.css",
-    "static/js/main.06373996.js"
+    "static/js/main.1b5ade8e.js"
   ]
 }
