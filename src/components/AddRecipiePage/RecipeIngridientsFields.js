@@ -7,9 +7,11 @@ import {
   IngridientsList,
   IngridientField,
   SelectIngridient,
+  Quantity,
   InputQuantity,
   SelectUnit,
-  Delete
+  Delete,
+  Ingridients,
 } from './RecipeIngridientsFields.styled';
 import INGRIDIENTS from './ingredients.json';
 
@@ -51,7 +53,7 @@ if(!ingridients){
   }
 
   return (
-    <>
+    <Ingridients>
       <Header>
         <Title>Ingridients</Title>
         <Counter>
@@ -89,14 +91,14 @@ if(!ingridients){
                 <option key={item.ttl}>{item.ttl}</option>
               ))}
             </SelectIngridient>
-            <InputQuantity />
+            <Quantity><InputQuantity />
             <SelectUnit>
               {UNIT.map(unit => (
                 <option key={unit}>{unit}</option>
               ))}
-            </SelectUnit>
+            </SelectUnit></Quantity>
             <Delete value={index} onClick={deleteIngridientField}>
-            <svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <svg width="20" height="21" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M15.625 4.875L4.375 16.125" />
 <path d="M15.625 16.125L4.375 4.875" />
 </svg>
@@ -104,7 +106,7 @@ if(!ingridients){
           </IngridientField>
         </IngridientsList>
       ))}
-    </>
+    </Ingridients>
   );
 };
 
