@@ -45,7 +45,6 @@ export const CardWrapper = styled.div`
   }
 `;
 export const RecipeTitleWrapper = styled.div`
-  outline: 1px solid #389b49;
   position: absolute;
   left: 16px;
   right: 16px;

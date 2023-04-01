@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 //------------------------
-export const SearchWrapper = styled.div`
+export const SearchForm = styled.form`
   display: flex;
   position: relative;
   margin-left: 40px;

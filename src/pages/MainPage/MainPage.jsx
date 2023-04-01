@@ -10,9 +10,9 @@ import {
   RecipeCategoryName,
   Button,
   ContainerWrapper,
-  RecipeImg,
 } from './MainPage.styled';
-import SearchBar from 'components/SearchBar';
+
+import MainPageHero from 'components/MainPageHero';
 
 export default function MainPage() {
   const RecipesByCategory = Recipes.reduce((acc, recipe) => {
@@ -26,7 +26,7 @@ export default function MainPage() {
 
   return (
     <ContainerWrapper>
-      <SearchBar />
+      <MainPageHero />
       <Container>
         {Object.entries(RecipesByCategory).map(([category, recipes]) => (
           <div key={category}>

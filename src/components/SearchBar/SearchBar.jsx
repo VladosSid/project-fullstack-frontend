@@ -1,26 +1,31 @@
 // import { FaSistrix } from 'react-icons/fa';
-import React from 'react';
-import { SearchWrapper, SearchInput, SearchBtn } from './SearchBar.styled';
+import React, { useState } from 'react';
+import { SearchForm, SearchInput, SearchBtn } from './SearchBar.styled';
 //------------------------------------------
-export default function SearchBar() {
-  //   const [searchWord, setSearchWord] = useState('');
-  //   const handleChange = evt => {
-  //     setSearchWord(evt.currentTarget.value.toLowerCase());
-  //   };
+export default function SearchBar({ onSubm }) {
+  const [searchWord, setSearchWord] = useState('');
 
-  //   const handleSubmit = evt => {
-  //     evt.preventDefault();
-  //     if (searchWord.trim() === '') {
-  //       console.log('Please fill the search form ');
-  //       return;
-  //     }
+  const handleChange = evt => {
+    setSearchWord(evt.currentTarget.value.toLowerCase());
+  };
 
-  //     // onSubm(searchWord);
-  //   };
+  const handleSubmit = evt => {
+    evt.preventDefault();
+    if (searchWord.trim() === '') {
+      console.log('Please fill the search form ');
+      return;
+    }
+
+    onSubm(searchWord);
+  };
   return (
-    <SearchWrapper>
-      <SearchInput placeholder="Beef" />
+    <SearchForm onSubmit={handleSubmit}>
+      <SearchInput
+        placeholder="Beef"
+        value={searchWord}
+        onChange={handleChange}
+      />
       <SearchBtn>Search</SearchBtn>
-    </SearchWrapper>
+    </SearchForm>
   );
 }
