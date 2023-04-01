@@ -1,5 +1,5 @@
-import Footer from "components/Footer/Footer";
-import Header from "components/Header/Header";
+// import Footer from "components/Footer/Footer";
+// import Header from "components/Header/Header";
 import { Container } from "./MainPageTemporary.styled";
 // import { Container } from "./MainPageTemporary.styled";
 
