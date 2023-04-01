@@ -368,7 +368,7 @@ export const theme = {
 
       buttonSecondaryWidth: {
         width: '100%',
-        padding: '18px 0',
+        padding: '11px 0',
 
         background: '#8BAA36',
         color: '#fff',
@@ -376,7 +376,7 @@ export const theme = {
         border: 'none',
         borderRadius: '6px',
 
-        fontSize: '16px',
+        fontSize: '14px',
         lineHeight: '18px',
 
         hoverBackground: '#1E1F28',
@@ -386,7 +386,7 @@ export const theme = {
 
       buttonSecondaryWidthWhite: {
         width: '100%',
-        padding: '18px 0',
+        padding: '11px 0',
 
         background: '#D9D9D9',
         color: '#23262A',
@@ -394,8 +394,8 @@ export const theme = {
         border: 'none',
         borderRadius: '6px',
 
-        fontSize: '16px',
-        lineHeight: '18px',
+        fontSize: '14px',
+        lineHeight: '16px',
 
         hoverBackground: 'transparent',
         hoverColor: '#23262A',
@@ -413,7 +413,7 @@ export const theme = {
         borderRadius: '6px',
 
         fontSize: '14px',
-        lineHeight: '18px',
+        lineHeight: '16px',
 
         hoverBackground: '#1E1F28',
         hoverColor: '#fff',
