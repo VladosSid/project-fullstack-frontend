@@ -2,7 +2,6 @@ import styled from 'styled-components';
 import theme from '../style/generalStyle';
 
 export const AppBox = styled.div`
-  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
