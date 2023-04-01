@@ -53,10 +53,14 @@ export default function MainPage() {
     }
     return acc;
   }, {});
-
+  const handleFormSubmit = query => {
+    console.log('Query in Main', query);
+    // const nextQuery = query !== '' ? { query } : {};
+    // setSearchParams(nextQuery);
+  };
   return (
     <ContainerWrapper>
-      <MainPageHero />
+      <MainPageHero onSubm={handleFormSubmit} />
       <Container>
         {Object.entries(RecipesByCategory).map(([category, recipes]) => (
           <div key={category}>
