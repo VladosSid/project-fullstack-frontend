@@ -1,14 +1,16 @@
 {
   "files": {
-    "main.css": "/project-fullstack-frontend/static/css/main.23ccd8a5.css",
-    "main.js": "/project-fullstack-frontend/static/js/main.b73ded4a.js",
+    "main.css": "/project-fullstack-frontend/static/css/main.1276fa99.css",
+    "main.js": "/project-fullstack-frontend/static/js/main.ed344c86.js",
+    "static/media/ava.svg": "/project-fullstack-frontend/static/media/ava.b30184f18a6a67ace46a0d1adffc745e.svg",
     "index.html": "/project-fullstack-frontend/index.html",
     "static/media/logo.svg": "/project-fullstack-frontend/static/media/logo.927dd7695b30c923da175e7879cb0f0d.svg",
-    "main.23ccd8a5.css.map": "/project-fullstack-frontend/static/css/main.23ccd8a5.css.map",
-    "main.b73ded4a.js.map": "/project-fullstack-frontend/static/js/main.b73ded4a.js.map"
+    "static/media/search.svg": "/project-fullstack-frontend/static/media/search.2d6c8eb4d03192b8ece8dd107cf5062e.svg",
+    "main.1276fa99.css.map": "/project-fullstack-frontend/static/css/main.1276fa99.css.map",
+    "main.ed344c86.js.map": "/project-fullstack-frontend/static/js/main.ed344c86.js.map"
   },
   "entrypoints": [
-    "static/css/main.23ccd8a5.css",
-    "static/js/main.b73ded4a.js"
+    "static/css/main.1276fa99.css",
+    "static/js/main.ed344c86.js"
   ]
 }
