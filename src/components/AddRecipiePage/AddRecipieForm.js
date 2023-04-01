@@ -1,11 +1,10 @@
-import { useState } from "react";
-import  { FilePicker, Form, InputFile, InputText, FieldList, SelectList, Wrap }  from "./AddRecepieForm.styled";
+import  { FilePicker, Form, InputFile, InputText, FieldList, SelectList }  from "./AddRecepieForm.styled";
 
 const AddRecipieForm = () => {
     const CATEGORY = ["Beef", "Breakfast", "Chicken", "Desserts", "Goat", "Lamb", "Miscellaneous", "Pasta", "Pork", "Seafood", "Side"]
     const STEP = [5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60, 65, 70, 75, 80, 85, 90, 95, 100, 105, 110, 115, 120, 125, 130, 135, 140]
 
-   return (<Wrap>
+   return (<>
         <h1>Add recipe</h1>
         <Form>
         <FilePicker onClick={() => document.querySelector('.input-file').click()}>
@@ -22,7 +21,7 @@ const AddRecipieForm = () => {
             <SelectList>{STEP.map((item) => <option key={item} value={item}>{item + " min"}</option>)}</SelectList>
             </div>          
             </FieldList>
-        </Form></Wrap>
+        </Form></>
     )
 }
 

@@ -1,5 +1,4 @@
 import AddRecipiePage from "./AddRecipiePage/AddResipiePage";
-import AddRecipieForm from "./AddRecipiePage/AddRecipieForm";
 
 export const App = () => {
   return (
@@ -12,7 +11,7 @@ export const App = () => {
         fontSize: 40,
         color: '#010101',
       }}
-    ><AddRecipieForm />
+    ><AddRecipiePage />
       React homework template
     </div>
   );
