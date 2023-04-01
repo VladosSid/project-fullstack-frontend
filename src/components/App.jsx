@@ -1,18 +1,15 @@
-import AddRecipiePage from "./AddRecipiePage/AddResipiePage";
+import Header from './Header';
+import Footer from './Footer';
+import { AppBox } from './App.styled';
 
-export const App = () => {
+ 
+export const App = props => {
   return (
-    <div
-      style={{
-        height: '100vh',
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        fontSize: 40,
-        color: '#010101',
-      }}
-    ><AddRecipiePage />
-      React homework template
-    </div>
+    <AppBox>
+      <Header />
+        
+      <Footer />
+    </AppBox>
   );
 };
+
