@@ -1,4 +1,6 @@
+
 import { Route, Routes } from 'react-router-dom';
+
 import { AppBox } from './App.styled';
 
 import RestrictedRoute from './Routes/RestrictedRoute';
@@ -14,6 +16,7 @@ import HomePage from 'pages/HomePage';
 export const App = () => {
   return (
     <AppBox>
+
       <Routes>
         <Route index
           element={
@@ -50,6 +53,7 @@ export const App = () => {
         </Route>
         <Route path="*" element={<NotFound />} />
       </Routes>
+
     </AppBox>
   );
 };
