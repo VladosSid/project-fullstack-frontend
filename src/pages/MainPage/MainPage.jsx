@@ -1,18 +1,17 @@
 import React from 'react';
 import { Recipes } from 'gannaFakeData';
+
 // import { Link } from 'react-router-dom';
 // import { Container, CardWrapper, RecipeTitle } from 'mainPage.styled';
 import {
   Container,
-  CardWrapper,
-  RecipeTitle,
-  RecipeTitleWrapper,
   RecipeCategoryName,
   Button,
   ContainerWrapper,
 } from './MainPage.styled';
 
 import MainPageHero from 'components/MainPageHero';
+import DishCard from 'components/DishCard';
 
 export default function MainPage() {
   const RecipesByCategory = Recipes.reduce((acc, recipe) => {
@@ -31,16 +30,11 @@ export default function MainPage() {
         {Object.entries(RecipesByCategory).map(([category, recipes]) => (
           <div key={category}>
             <RecipeCategoryName>{category}</RecipeCategoryName>
+
             {recipes.map(recipe => (
-              <CardWrapper key={recipe.id}>
-                <a href="https://recepiesPage.com">
-                  <img src={recipe.preview} alt={recipe.title} />
-                  <RecipeTitleWrapper>
-                    <RecipeTitle>{recipe.title}</RecipeTitle>
-                  </RecipeTitleWrapper>
-                </a>
-              </CardWrapper>
+              <DishCard key={recipe.id} recipe={recipe} />
             ))}
+
             <Button>See all</Button>
           </div>
         ))}
