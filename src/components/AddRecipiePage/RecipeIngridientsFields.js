@@ -16,9 +16,12 @@ import INGRIDIENTS from './ingredients.json';
 const RecipeIngridientsFields = () => {
   const [count, setCount] = useState(0);
   const [ingridient, setIngridient] = useState([]);
-  const [ingridients, setIngridients] = useState({});
+  const [ingridients, setIngridients] = useState(INGRIDIENTS);
 
-  setIngridients(INGRIDIENTS)
+if(!ingridients){
+    setIngridients(INGRIDIENTS)
+}
+  
 
   const UNIT = ['tbs', 'tsp', 'kg', 'g'];
 
