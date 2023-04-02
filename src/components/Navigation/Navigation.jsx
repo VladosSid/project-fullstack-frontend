@@ -1,9 +1,10 @@
 import { Ul } from './Navigation.styled';
+import { HeaderNav } from './Navigation.styled';
 import search from '../../images/Header/search.svg';
 
 const Navigation = () => {
   return (
-    <nav>
+    <HeaderNav>
       <Ul>
         <li>
           <a href="/categories">Categories</a>
@@ -27,7 +28,7 @@ const Navigation = () => {
           </a>
         </li>
       </Ul>
-    </nav>
+    </HeaderNav>
   );
 };
 
