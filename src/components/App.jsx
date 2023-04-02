@@ -4,8 +4,8 @@ import { AppBox } from './App.styled';
 
 // import AddRecipiePage from './AddRecipiePage/AddRecipePage';
 
-// import MainPage from 'pages/MainPage/MainPage';
-
+import MainPage from 'pages/MainPage/MainPage';
+import SearchPage from 'pages/SearchPage/SearchPage';
 import RestrictedRoute from './Routes/RestrictedRoute';
 import PrivateRoute from './Routes/PrivateRoute';
 
@@ -25,7 +25,6 @@ export const App = () => {
             <RestrictedRoute component={<TemporaryMain />} redirectTo="/main" />
           }
         />
-
 
         {/* !!!! AUTHORIZATION AS AN EXAMPLE !!!! */}
         {/* <Route
@@ -50,6 +49,8 @@ export const App = () => {
           element={<PrivateRoute component={<SharedLayout />} redirectTo="/" />}
         >
           <Route path="/home" element={<HomePage />} />
+          <Route path="/main-page" element={<MainPage />} />
+          <Route path="/search-page" element={<SearchPage />} />
           <Route path="/shopping-list" element={<ShoppingListPage />} />
         </Route>
         <Route path="*" element={<NotFound />} />

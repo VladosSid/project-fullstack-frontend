@@ -15,6 +15,7 @@ import MainPageHero from 'components/MainPageHero';
 import DishCard from 'components/DishCard';
 
 export default function MainPage() {
+  const { REACT_APP_BASE_URL } = process.env;
   const [width, setWidth] = useState(window.innerWidth);
 
   const handleResize = () => {
