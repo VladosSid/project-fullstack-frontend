@@ -2,6 +2,7 @@ import styled from 'styled-components';
 import theme from '../../style/generalStyle';
 
 export const List = styled.ul`
+
   list-style: none;
 `;
 export const Item = styled.li`
@@ -23,9 +24,8 @@ export const Item = styled.li`
 
 export const ItemContayner = styled.div`
   display: flex;
-  padding-top: 50px;
+    padding-top: 50px;
   padding-bottom: 50px;
-
 `;
 
 export const ImageContayner = styled.div`
@@ -92,21 +92,22 @@ export const Remove = styled.button`
   display: flex;
   background-color: transparent;
   border: 0;
-  fill: #fafafa;
 `;
-export const RemoveImg = styled.img`
-  width=8px;
-   height=8px;
-     @media ${theme.device.tablet}{
-        width=12px;
-   height=12px;
-     }
-  &:hover{
-    background-color: #8BAA36;
-     border-radius: 4px;
-      fill: #fafafa;
-      color:#fafafa;
-  };
 
+export const RemoveSvg = styled.div`
+  svg {
+    stroke: #333333;
+    width: 8px;
+    height: 8px;
 
- `;
+    @media ${theme.device.tablet} {
+      width: 12px;
+      height: 12px;
+    }
+
+    &:hover {
+      stroke: #8baa36;
+    }
+  }
+`;
+
