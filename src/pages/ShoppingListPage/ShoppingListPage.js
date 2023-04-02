@@ -1,4 +1,4 @@
-import IngredientsShoppingList from '../components/ShoppingListPage';
+import IngredientsShoppingList from '../../components/ShoppingListPage';
 import {
   TitltList,
   TitleListProducts,
@@ -7,7 +7,7 @@ import {
   TitleShopingList,
   Tabl,
 } from './ShoppingListPage.styled';
-import ingredients from '../ingredients.json';
+import ingredients from '../../ingredients.json';
 
 const ShoppingListPage = () => {
  // тут буде запит за коллекцією інградієнтів
