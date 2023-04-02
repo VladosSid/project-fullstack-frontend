@@ -1,18 +1,18 @@
 import {
   Box,
-  ButtonWrapper,
+  // ButtonWrapper,
   //   Img,
   List,
   ListHeaderText,
-  ListItem,
+  // ListItem,
   ListItemHeader,
   //   Measure,
   //   Title,
-  Wrapper,
+  // Wrapper,
 } from './RecipeInngredientsList.styled';
 
 const RecipeInngredientsList = ({}) => {
-  const list = useSelector(selectList);
+  // const list = useSelector(selectList);
 
   return (
     <Box>
@@ -24,26 +24,24 @@ const RecipeInngredientsList = ({}) => {
             <ListHeaderText>Add to list</ListHeaderText>
           </div>
         </ListItemHeader>
-        {ingr?.map(({ _id, ttl, thb, measure }) => {
-          //   const isChecked = list?.some(item => item._id === _id);
-          return (
-            <ListItem>
-              {/* key={_id}, */}
-              <Wrapper>
-                {/* <Img alt={ttl} src={thb} width={48} height={48} />
+        {/* {ingr?.map(({ _id, ttl, thb, measure }) => { */}
+        {/* const isChecked = list?.some(item => item._id === _id); // return ( */}
+        {/*  <ListItem> */}
+        {/* key={_id}, */}
+        {/* <Wrapper> */}
+        {/* <Img alt={ttl} src={thb} width={48} height={48} />
                 <Title>{ttl}</Title> */}
-              </Wrapper>
-              <ButtonWrapper>
-                {/* <Measure>{measure}</Measure>
+        {/* </Wrapper> */}
+        {/* <ButtonWrapper> */}
+        {/* <Measure>{measure}</Measure>
                 <CustomCheckbox
                   recipeId={recipeId}
                   ingredientId={_id}
                   isChecked={isChecked}
                 /> */}
-              </ButtonWrapper>
-            </ListItem>
-          );
-        })}
+        {/* </ButtonWrapper> */}
+        {/* </ListItem> */}
+        {/*  );  })} */}
       </List>
     </Box>
   );
