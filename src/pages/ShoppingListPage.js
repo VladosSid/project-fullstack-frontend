@@ -15,17 +15,18 @@ const ShoppingListPage = () => {
   const titleShopingList = "Shopping list";
   return (
     <ContanerShopingList>
-      <MainPageTitle title={titleShopingList} />
-      {/* <TitleShopingList>Shopping list</TitleShopingList> */}
-      <Tabl>
-        <TitltList>
-          <TitleListProducts>Products</TitleListProducts>
-          <TitleListNumber>Number</TitleListNumber>
-          <span>Remove</span>
-        </TitltList>
-        <IngredientsShoppingList ingredients={ingredients} />
-      </Tabl>
-    </ContanerShopingList>
+      <MainPageTitle title={titleShopingList}/>
+        {/* <TitleShopingList>Shopping list</TitleShopingList> */}
+        <Tabl>
+          <TitltList>
+            <TitleListProducts>Products</TitleListProducts>
+            <TitleListNumber>Number</TitleListNumber>
+            <span>Remove</span>
+          </TitltList>
+          <IngredientsShoppingList ingredients={ingredients} />
+        </Tabl>
+    
+       </ContanerShopingList>
   );
 };
 

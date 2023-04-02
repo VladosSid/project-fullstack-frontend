@@ -5,8 +5,10 @@ export const List = styled.ul`
   list-style: none;
 `;
 export const Item = styled.li`
-  position: relative;
+
   padding: 0 16px;
+  width: 343px;
+  border-bottom: 1px solid #e0e0e0;
 
   @media ${theme.device.tablet} {
     padding: 0 32px;
@@ -15,7 +17,7 @@ export const Item = styled.li`
 
   @media ${theme.device.desktop} {
     padding: 0 40px;
-    width: 1160px;
+    width: 1240px;
   }
 `;
 
@@ -23,16 +25,7 @@ export const ItemContayner = styled.div`
   display: flex;
   padding-top: 50px;
   padding-bottom: 50px;
-  padding-right: 22px;
-  width: 343px;
-  border-bottom: 1px solid #e0e0e0;
-  @media ${theme.device.tablet} {
-    padding-right: 49px;
-    width: 704px;
-  }
-  @media ${theme.device.desktop} {
-    width: 1160px;
-  }
+
 `;
 
 export const ImageContayner = styled.div`
@@ -50,7 +43,6 @@ export const ImageContayner = styled.div`
   }
 `;
 
-
 export const TitleProduct = styled.div`
   position: absolute;
   left: 96px;
@@ -66,6 +58,9 @@ export const TitleProduct = styled.div`
     font-size: 16px;
     line-height: 24px;
   }
+  @media ${theme.device.desktop} {
+    left: 170px;
+  } ;
 `;
 
 export const NumberContayner = styled.div`
