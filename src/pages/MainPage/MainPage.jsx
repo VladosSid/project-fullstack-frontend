@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Recipes } from 'gannaFakeData';
+import { useLocation } from 'react-router-dom';
+import { useSearchParams } from 'react-router-dom';
 // import axios from 'axios';
 
 // import { Link } from 'react-router-dom';
@@ -13,8 +15,11 @@ import {
 
 import MainPageHero from 'components/MainPageHero';
 import DishCard from 'components/DishCard';
-
+//--------------------------------------
 export default function MainPage() {
+  const location = useLocation();
+  const [searchParams, setSearchParams] = useSearchParams();
+  const queryFilm = searchParams.get('query');
   const { REACT_APP_BASE_URL } = process.env;
   const [width, setWidth] = useState(window.innerWidth);
 
@@ -54,11 +59,13 @@ export default function MainPage() {
     }
     return acc;
   }, {});
+  //---------------------------
   const handleFormSubmit = query => {
     console.log('Query in Main', query);
-    // const nextQuery = query !== '' ? { query } : {};
-    // setSearchParams(nextQuery);
+    const nextQuery = query !== '' ? { query } : {};
+    setSearchParams(nextQuery);
   };
+  //-------------------
   return (
     <ContainerWrapper>
       <MainPageHero onSubm={handleFormSubmit} />
@@ -68,7 +75,7 @@ export default function MainPage() {
             <RecipeCategoryName>{category}</RecipeCategoryName>
 
             {recipes.map(recipe => (
-              <DishCard key={recipe.id} recipe={recipe} />
+              <DishCard key={recipe.id} location={location} recipe={recipe} />
             ))}
 
             <Button>See all</Button>
