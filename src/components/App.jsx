@@ -15,6 +15,7 @@ import NotFound from 'pages/NotFoundPage/NotFoundPage';
 
 import SharedLayout from './SharedLayout/SharedLayout';
 import HomePage from '../pages/Example/HomePage';
+import CategoriesPage from '../pages/CategoriesPage';
 // import SearchPage from '../pages/SearchPage/SearchPage';
 // import MainPage from 'pages/MainPage/MainPage';
 
@@ -56,6 +57,7 @@ export const App = () => {
 
           <Route path="/search" element={<SearchPage />} />
           <Route path="/shopping-list" element={<ShoppingListPage />} />
+          <Route path="/categories" element={<CategoriesPage />} />
         </Route>
         <Route path="*" element={<NotFound />} />
       </Routes>
