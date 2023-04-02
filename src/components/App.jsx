@@ -10,7 +10,7 @@ import RestrictedRoute from './Routes/RestrictedRoute';
 import PrivateRoute from './Routes/PrivateRoute';
 
 import TemporaryMain from 'pages/MainPageTemporary';
-import ShoppingListPage from 'pages/ShoppingListPage';
+import ShoppingListPage from 'pages/ShoppingListPage/ShoppingListPage';
 import NotFound from 'pages/NotFoundPage';
 import SharedLayout from './SharedLayout/SharedLayout';
 import HomePage from 'pages/HomePage';
