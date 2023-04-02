@@ -1,5 +1,5 @@
 import { MdOutlineEmail } from 'react-icons/md';
-import { useDispatch } from 'react-redux';
+// import { useDispatch } from 'react-redux';
 import logo from '../../images/Footer/logoFooter.png';
 import { UseSvg } from '../../helpers/useSvg/useSvg';
 import {
@@ -20,22 +20,22 @@ import {
   ImgSocial,
 } from './Footer.styled';
 
-import { authOperations } from '../../redux/users';
+// import { authOperations } from '../../redux/users';
 
 export function Footer() {
-  const dispatch = useDispatch();
+  // const dispatch = useDispatch();
 
-  try {
-    dispatch(
-      authOperations.register({
-        username: 'VladosTest',
-        email: 'sidorsv.dev@meta.ua',
-        password: '123456',
-      })
-    );
-  } catch (err) {
-    console.log(err.message);
-  }
+  // try {
+  //   dispatch(
+  //     authOperations.register({
+  //       username: 'VladosTest',
+  //       email: 'sidorsv.dev@meta.ua',
+  //       password: '123456',
+  //     })
+  //   );
+  // } catch (err) {
+  //   console.log(err.message);
+  // }
   return (
     <FooterBox>
       <FlexBox>
