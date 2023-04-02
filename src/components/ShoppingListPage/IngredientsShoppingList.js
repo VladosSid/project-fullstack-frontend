@@ -8,12 +8,10 @@ import {
   Remove,
   RemoveImg,
 } from './IngredientsShoppingList.styled';
-import remove from '../../images/ShopingList/remove.svg'
-
+import remove from '../../images/ShopingList/remove.svg';
 
 const IngredientsShoppingList = ingredients => {
-   const ingredientsArr = ingredients.ingredients;
- console.log(ingredientsArr);
+  const ingredientsArr = ingredients.ingredients;
   return (
     <List>
       {ingredientsArr.map(ingredient => (
