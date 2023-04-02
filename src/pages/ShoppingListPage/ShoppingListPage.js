@@ -17,6 +17,7 @@ const ShoppingListPage = () => {
     <ContanerShopingList>
       <MainPageTitle title={titleShopingList} />
       {/* <TitleShopingList>Shopping list</TitleShopingList> */}
+
       <Tabl>
         <TitltList>
           <TitleListProducts>Products</TitleListProducts>

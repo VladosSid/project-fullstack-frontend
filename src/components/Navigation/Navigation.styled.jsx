@@ -1,6 +1,19 @@
 import styled from 'styled-components';
 import theme from 'style/generalStyle';
 
+export const HeaderNav = styled.nav`
+  @media ${theme.device.mobail} {
+    display: none;
+  }
+  @media ${theme.device.tablet} {
+    display: none;
+  }
+  @media ${theme.device.desktop} {
+    display: flex;
+    flex-direction: row;
+  }
+`;
+
 export const Ul = styled.ul`
   display: flex;
   flex-direction: column;

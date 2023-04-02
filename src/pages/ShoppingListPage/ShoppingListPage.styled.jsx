@@ -2,7 +2,6 @@ import styled from 'styled-components';
 import theme from '../../style/generalStyle';
 
 export const ContanerShopingList = styled.div`
-
  display:inline-block 
   width: 375px;
   padding: 0 8px 50px 8px;
@@ -13,7 +12,9 @@ export const ContanerShopingList = styled.div`
     width: 1441px;
   } ;
 `;
+
 export const Tabl = styled.div``;
+
 
 export const TitltList = styled.div`
   display: flex;
