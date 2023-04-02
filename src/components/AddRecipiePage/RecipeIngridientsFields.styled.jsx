@@ -274,7 +274,7 @@ export const IngridientField = styled.li`
   justify-content: space-between;
 `;
 
-export const Quantity = styled.p`
+export const Quantity = styled.div`
   flex-wrap: nowrap;
   display: flex;
 `;

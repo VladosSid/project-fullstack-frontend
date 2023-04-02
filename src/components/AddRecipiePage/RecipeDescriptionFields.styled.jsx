@@ -187,3 +187,8 @@ export const FieldList = styled.div`
     width: 393px;
   }
 `;
+
+export const Photo = styled.img`
+background-color: #FFFFFF;
+`;
+

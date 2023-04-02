@@ -1,15 +1,14 @@
-
 import { Route, Routes } from 'react-router-dom';
 
 import { AppBox } from './App.styled';
 
 import AddRecipiePage from '../pages/AddRecipePage/AddRecipePage'; 
-// import MainPage from 'pages/MainPage/MainPage';
+import MainPage from 'pages/MainPage/MainPage';
 
 
 import RestrictedRoute from './Routes/RestrictedRoute';
 import PrivateRoute from './Routes/PrivateRoute';
-
+import SearchPage from 'pages/SearchPage/SearchPage';
 import TemporaryMain from 'pages/MainPageTemporary';
 import ShoppingListPage from 'pages/ShoppingListPage';
 import NotFound from 'pages/NotFoundPage';
@@ -65,4 +64,3 @@ export const App = () => {
     </AppBox>
   );
 };
-
