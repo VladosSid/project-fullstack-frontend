@@ -1,13 +1,13 @@
 import {
   Box,
   ButtonWrapper,
-  Img,
+  //   Img,
   List,
   ListHeaderText,
   ListItem,
   ListItemHeader,
-  Measure,
-  Title,
+  //   Measure,
+  //   Title,
   Wrapper,
 } from './RecipeInngredientsList.styled';
 
@@ -25,20 +25,21 @@ const RecipeInngredientsList = ({}) => {
           </div>
         </ListItemHeader>
         {ingr?.map(({ _id, ttl, thb, measure }) => {
-          const isChecked = list?.some(item => item._id === _id);
+          //   const isChecked = list?.some(item => item._id === _id);
           return (
-            <ListItem key={_id}>
+            <ListItem>
+              {/* key={_id}, */}
               <Wrapper>
-                <Img alt={ttl} src={thb} width={48} height={48} />
-                <Title>{ttl}</Title>
+                {/* <Img alt={ttl} src={thb} width={48} height={48} />
+                <Title>{ttl}</Title> */}
               </Wrapper>
               <ButtonWrapper>
-                <Measure>{measure}</Measure>
+                {/* <Measure>{measure}</Measure>
                 <CustomCheckbox
                   recipeId={recipeId}
                   ingredientId={_id}
                   isChecked={isChecked}
-                />
+                /> */}
               </ButtonWrapper>
             </ListItem>
           );
