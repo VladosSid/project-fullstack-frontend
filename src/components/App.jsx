@@ -1,6 +1,6 @@
 import { Route, Routes } from 'react-router-dom';
 
-import { AppBox } from './App.styled';
+import { AppBox, BoxBodyApp } from './App.styled';
 
 // import AddRecipiePage from './AddRecipiePage/AddRecipePage';
 
