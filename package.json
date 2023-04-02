@@ -2,7 +2,6 @@
   "name": "project-fullstack-frontend",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://VladosSid.github.io/project-fullstack-frontend/",
   "dependencies": {
     "@reduxjs/toolkit": "^1.9.3",
     "@testing-library/jest-dom": "^5.16.3",
@@ -16,6 +15,7 @@
     "react-dom": "^18.1.0",
     "react-icons": "^4.8.0",
     "react-modal": "^3.16.1",
+    "react-redux": "^8.0.5",
     "react-router-dom": "^6.10.0",
     "react-scripts": "5.0.1",
     "redux-persist": "^6.0.0",

@@ -26,7 +26,6 @@ export const App = () => {
           }
         />
 
-
         {/* !!!! AUTHORIZATION AS AN EXAMPLE !!!! */}
         {/* <Route
           index
