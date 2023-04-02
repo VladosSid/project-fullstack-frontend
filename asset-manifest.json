@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/project-fullstack-frontend/static/css/main.1276fa99.css",
-    "main.js": "/project-fullstack-frontend/static/js/main.f7ef2034.js",
+    "main.js": "/project-fullstack-frontend/static/js/main.ca45da51.js",
     "static/media/AuthPageBackground.png": "/project-fullstack-frontend/static/media/AuthPageBackground.80f072d671a5d31fcdcb.png",
     "static/media/ava.svg": "/project-fullstack-frontend/static/media/ava.b30184f18a6a67ace46a0d1adffc745e.svg",
     "index.html": "/project-fullstack-frontend/index.html",
@@ -11,10 +11,10 @@
     "static/media/x.svg": "/project-fullstack-frontend/static/media/x.4361f7124e50acd44864b5ffb9da59e7.svg",
     "static/media/menu.svg": "/project-fullstack-frontend/static/media/menu.0e7a3ceba8d1c2ac98513490254e232d.svg",
     "main.1276fa99.css.map": "/project-fullstack-frontend/static/css/main.1276fa99.css.map",
-    "main.f7ef2034.js.map": "/project-fullstack-frontend/static/js/main.f7ef2034.js.map"
+    "main.ca45da51.js.map": "/project-fullstack-frontend/static/js/main.ca45da51.js.map"
   },
   "entrypoints": [
     "static/css/main.1276fa99.css",
-    "static/js/main.f7ef2034.js"
+    "static/js/main.ca45da51.js"
   ]
 }
