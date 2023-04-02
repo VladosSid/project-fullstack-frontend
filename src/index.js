@@ -9,7 +9,7 @@ import theme from './style/generalStyle';
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <ThemeProvider theme={theme.white}>
-      <BrowserRouter>        
+      <BrowserRouter basename="/project-fullstack-frontend">        
         <App />
       </BrowserRouter>
     </ThemeProvider>
