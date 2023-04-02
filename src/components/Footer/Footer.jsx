@@ -81,7 +81,7 @@ export function Footer() {
 
       <ListSocialNetworks>
         <ImgSocial>
-          <UseSvg id="facebook" />
+          <UseSvg id="remove" />
         </ImgSocial>
         <ImgSocial>
           <UseSvg id="youtube" />
