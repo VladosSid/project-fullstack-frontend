@@ -11,7 +11,7 @@ import {
   // Wrapper,
 } from './RecipeInngredientsList.styled';
 
-const RecipeInngredientsList = ({}) => {
+const RecipeInngredientsList = () => {
   // const list = useSelector(selectList);
 
   return (
