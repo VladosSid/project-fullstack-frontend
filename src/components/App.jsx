@@ -4,8 +4,8 @@ import { AppBox } from './App.styled';
 
 // import AddRecipiePage from './AddRecipiePage/AddRecipePage';
 
-// import MainPage from 'pages/MainPage/MainPage';
-
+import MainPage from 'pages/MainPage/MainPage';
+import SearchPage from 'pages/SearchPage/SearchPage';
 import RestrictedRoute from './Routes/RestrictedRoute';
 import PrivateRoute from './Routes/PrivateRoute';
 
@@ -30,7 +30,6 @@ export const App = () => {
           }
         />
 
-
         {/* !!!! AUTHORIZATION AS AN EXAMPLE !!!! */}
         {/* <Route
           index
@@ -53,8 +52,10 @@ export const App = () => {
           path="/"
           element={<PrivateRoute component={<SharedLayout />} redirectTo="/" />}
         >
+
           <Route path="/example" element={<HomePage />} />
           <Route path="/home" element={<MainPage />} />
+
           <Route path="/search" element={<SearchPage />} />
           <Route path="/shopping-list" element={<ShoppingListPage />} />
           

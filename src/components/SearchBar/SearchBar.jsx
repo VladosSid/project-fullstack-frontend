@@ -6,11 +6,13 @@ export default function SearchBar({ onSubm }) {
   const [searchWord, setSearchWord] = useState('');
 
   const handleChange = evt => {
-    setSearchWord(evt.currentTarget.value.toLowerCase());
+    setSearchWord(evt.currentTarget.value);
+    // setSearchWord(evt.currentTarget.value.toLowerCase());
   };
 
   const handleSubmit = evt => {
     evt.preventDefault();
+    console.log('in SB');
     if (searchWord.trim() === '') {
       console.log('Please fill the search form ');
       return;
