@@ -1,11 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { Recipes } from 'gannaFakeData';
 import { useLocation } from 'react-router-dom';
-import { useSearchParams } from 'react-router-dom';
-// import axios from 'axios';
 
-// import { Link } from 'react-router-dom';
-// import { Container, CardWrapper, RecipeTitle } from 'mainPage.styled';
+// import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
+
 import {
   Container,
   RecipeCategoryName,
@@ -15,12 +14,14 @@ import {
 
 import MainPageHero from 'components/MainPageHero';
 import DishCard from 'components/DishCard';
+import createsearchUrl from 'helpers/createSearchUrl';
 //--------------------------------------
 export default function MainPage() {
   const location = useLocation();
-  const [searchParams, setSearchParams] = useSearchParams();
-  const queryFilm = searchParams.get('query');
-  const { REACT_APP_BASE_URL } = process.env;
+  const navigate = useNavigate();
+  // const [searchParams, setSearchParams] = useSearchParams();
+  // const queryRec = searchParams.get('query');
+  // const { REACT_APP_BASE_URL } = process.env;
   const [width, setWidth] = useState(window.innerWidth);
 
   const handleResize = () => {
@@ -62,8 +63,11 @@ export default function MainPage() {
   //---------------------------
   const handleFormSubmit = query => {
     console.log('Query in Main', query);
-    const nextQuery = query !== '' ? { query } : {};
-    setSearchParams(nextQuery);
+
+    // const nextQuery = query !== '' ? { query } : {};
+    // setSearchParams(nextQuery);
+    const searchUrl = createsearchUrl(query);
+    navigate(searchUrl);
   };
   //-------------------
   return (

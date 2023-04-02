@@ -50,7 +50,7 @@ export const App = () => {
         >
           <Route path="/home" element={<HomePage />} />
           <Route path="/main-page" element={<MainPage />} />
-          <Route path="/search-page" element={<SearchPage />} />
+          <Route path="/search" element={<SearchPage />} />
           <Route path="/shopping-list" element={<ShoppingListPage />} />
         </Route>
         <Route path="*" element={<NotFound />} />
