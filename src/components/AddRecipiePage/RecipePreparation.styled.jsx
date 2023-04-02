@@ -6,16 +6,18 @@ export const Title = styled.div`
   justify-content: space-between;
   font-weight: 600;
   margin-top: 100px;
+  color: #3e4462;
 `;
 
-export const Textarea = styled.div`
+export const Textarea = styled.textarea`
 padding: 20px;
 height: 224px;
-width: 505px;
+width: 100%;
 color: #333333;
-background-color: #D9D9D9;
+background-color: #F5F5F5;
 border: 0;
 border-radius: 6px;
 margin-top: 32px;
+box-sizing: border-box;
 `;
 

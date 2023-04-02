@@ -2,7 +2,11 @@
 import { Route, Routes } from 'react-router-dom';
 
 import { AppBox } from './App.styled';
+
+// import AddRecipiePage from './AddRecipiePage/AddRecipePage';
+
 // import MainPage from 'pages/MainPage/MainPage';
+
 
 import RestrictedRoute from './Routes/RestrictedRoute';
 import PrivateRoute from './Routes/PrivateRoute';
@@ -17,7 +21,9 @@ import HomePage from 'pages/HomePage';
 export const App = () => {
   return (
     <AppBox>
-
+      <Header />
+        <AddRecipiePage />
+        <Footer />
       <Routes>
         <Route index
           element={
@@ -54,6 +60,7 @@ export const App = () => {
         </Route>
         <Route path="*" element={<NotFound />} />
       </Routes>
+
 
     </AppBox>
   );

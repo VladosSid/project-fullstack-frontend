@@ -1,4 +1,11 @@
 import styled from 'styled-components';
+import theme from 'style/generalStyle';
+
+export const Ingridients = styled.div`
+  @media ${theme.device.desktop} {
+    width: 609px;
+  }
+`;
 
 export const Header = styled.div`
   display: flex;
@@ -7,6 +14,7 @@ export const Header = styled.div`
   font-size: 16px;
   font-weight: 400;
   margin-top: 100px;
+  margin-bottom: 4px;
 `;
 
 export const Simbol = styled.button`
@@ -34,6 +42,7 @@ export const Title = styled.div`
   font-size: 24px;
   justify-content: space-between;
   font-weight: 600;
+  color: #3e4462;
 `;
 
 export const Counter = styled.div`
@@ -56,32 +65,44 @@ export const IngridientField = styled.li`
   display: flex;
   list-style: none;
   align-items: center;
-  margin-bottom: 24px;
+  margin-top: 20px;
+  width:100%;
+  justify-content: space-between;
 `;
 
 export const SelectIngridient = styled.select`
   border: none;
-  background-color: #d9d9d9;
+  background-color: #f5f5f5;
   height: 59px;
+  width: 194px;
   border-radius: 6px;
-  margin-right: 32px;
+  margin-right: 16px;
   padding-left: 18px;
    {
     :focus-visible {
       outline: none;
     }
   }
+  @media ${theme.device.desktop} {
+    width: 398px;
+  }
 `;
+
+export const Quantity = styled.p`
+    flex-wrap: nowrap;
+    display: flex;
+`;
+
 
 export const InputQuantity = styled.input`
   display: flex;
   list-style: none;
-  background-color: #d9d9d9;
+  background-color: #f5f5f5;
   border: none;
   border-top-left-radius: 6px;
   border-bottom-left-radius: 6px;
-  padding-left: 14px;
-  width: 20px;
+  padding-left: 16px;
+  width: 16px;
   height: 59px;
   padding-top: 0;
   padding-bottom: 0;
@@ -91,15 +112,18 @@ export const InputQuantity = styled.input`
       outline: none;
     }
   }
+  @media ${theme.device.desktop} {
+    width: 31px;
+  }
 `;
 
 export const SelectUnit = styled.select`
   border: none;
-  background-color: #d9d9d9;
+  background-color: #f5f5f5;
   height: 59px;
+  width: 50px;
   border-top-right-radius: 6px;
   border-bottom-right-radius: 6px;
-  margin-right: 60px;
    {
     :focus-visible {
       outline: none;
@@ -112,11 +136,14 @@ export const Delete = styled.button`
   stroke-width: 1.5;
   stroke-linecap: round;
   stroke-linejoin: round;
-  height: 16px;
-  width: 16px;
+  height: 59px;
+  width: 51px;
   border: 0;
   stroke: #333333;
   padding: 0;
+  display: flex;
+  justify-content: end;
+  align-items: center;
    {
     :hover {
       stroke: #8baa36;
