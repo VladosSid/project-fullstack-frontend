@@ -8,22 +8,23 @@ const Navigation = () => {
     <HeaderNav>
       <Ul>
         <li>
-          <NavLink to="/categories">Categories</NavLink>
+          <a href="/project-fullstack-frontend/categories">Categories</a>
         </li>
         <li>
-          <NavLink to="/add">Add recipes</NavLink>
+          <a href="/project-fullstack-frontend/add">Add recipes</a>
         </li>
         <li>
-          <NavLink to="/my">My recipes</NavLink>
+          <a href="/project-fullstack-frontend/my">My recipes</a>
         </li>
         <li>
-          <NavLink to="/favorite">Favorites</NavLink>
+          <a href="/project-fullstack-frontend/favorite">Favorites</a>
         </li>
         <li>
-          <NavLink to="/shopping-list">Shopping list</NavLink>
+          <a href="/project-fullstack-frontend/shopping-list">Shopping list</a>
         </li>
         <li>
-          <NavLink to="/search">
+          <a href="/project-fullstack-frontend/search">
+
             <img src={search} alt="search" />
             <p>Search</p>
           </NavLink>

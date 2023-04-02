@@ -6,14 +6,15 @@ import {
   Header,
   IngridientsList,
   IngridientField,
-  SelectIngridient,
   Quantity,
   InputQuantity,
-  SelectUnit,
   Delete,
   Ingridients,
+  CustomSelect,
+  CustomSelectUnit
 } from './RecipeIngridientsFields.styled';
 import INGRIDIENTS from './ingredients.json';
+
 
 const RecipeIngridientsFields = () => {
   const [count, setCount] = useState(0);
@@ -86,17 +87,9 @@ if(!ingridients){
       {ingridient.map((field, index) => (
         <IngridientsList key={index}>
           <IngridientField>
-            <SelectIngridient>
-              {ingridients.map(item => (
-                <option key={item.ttl}>{item.ttl}</option>
-              ))}
-            </SelectIngridient>
-            <Quantity><InputQuantity />
-            <SelectUnit>
-              {UNIT.map(unit => (
-                <option key={unit}>{unit}</option>
-              ))}
-            </SelectUnit></Quantity>
+            <CustomSelect className="react-select-container" classNamePrefix="react-select" options={ingridients.map(({ttl}) =>({value: ttl, label: ttl}))}  />
+            <Quantity><InputQuantity defaultValue="0"/>
+            <CustomSelectUnit placeholder="" classNamePrefix="react-select" options={UNIT.map((unit) =>({value: unit, label: unit}))} /></Quantity>
             <Delete value={index} onClick={deleteIngridientField}>
             <svg width="20" height="21" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M15.625 4.875L4.375 16.125" />
