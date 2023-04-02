@@ -1,4 +1,3 @@
-
 import { Route, Routes } from 'react-router-dom';
 
 import { AppBox } from './App.styled';
@@ -6,7 +5,6 @@ import { AppBox } from './App.styled';
 // import AddRecipiePage from './AddRecipiePage/AddRecipePage';
 
 // import MainPage from 'pages/MainPage/MainPage';
-
 
 import RestrictedRoute from './Routes/RestrictedRoute';
 import PrivateRoute from './Routes/PrivateRoute';
@@ -17,15 +15,12 @@ import NotFound from 'pages/NotFoundPage';
 import SharedLayout from './SharedLayout/SharedLayout';
 import HomePage from 'pages/HomePage';
 
- 
 export const App = () => {
   return (
     <AppBox>
-      <Header />
-        <AddRecipiePage />
-        <Footer />
       <Routes>
-        <Route index
+        <Route
+          index
           element={
             <RestrictedRoute component={<TemporaryMain />} redirectTo="/main" />
           }
@@ -49,20 +44,15 @@ export const App = () => {
           }
         /> */}
 
-
-        
-        <Route path="/"
-          element={
-            <PrivateRoute component={<SharedLayout />} redirectTo="/" />
-        }>
-          <Route path="/home" element={<HomePage />} />         
+        <Route
+          path="/"
+          element={<PrivateRoute component={<SharedLayout />} redirectTo="/" />}
+        >
+          <Route path="/home" element={<HomePage />} />
           <Route path="/shopping-list" element={<ShoppingListPage />} />
         </Route>
         <Route path="*" element={<NotFound />} />
       </Routes>
-
-
     </AppBox>
   );
 };
-
