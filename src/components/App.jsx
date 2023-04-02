@@ -2,7 +2,7 @@
 import { Route, Routes } from 'react-router-dom';
 
 import { AppBox } from './App.styled';
-import MainPage from 'pages/MainPage/MainPage';
+// import MainPage from 'pages/MainPage/MainPage';
 
 import RestrictedRoute from './Routes/RestrictedRoute';
 import PrivateRoute from './Routes/PrivateRoute';
