@@ -13,6 +13,7 @@ width: 100%;
 
 @media ${theme.device.desktop} {
     flex-direction: row;
+}
 `;
 
 export const Col = styled.div`
