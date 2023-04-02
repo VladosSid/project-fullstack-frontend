@@ -12,7 +12,7 @@ import PrivateRoute from './Routes/PrivateRoute';
 import TemporaryMain from 'pages/TitlePageTemporary/TitlePageTemporary';
 import ShoppingListPage from 'pages/ShoppingListPage/ShoppingListPage';
 import NotFound from 'pages/NotFoundPage/NotFoundPage';
-
+import AddRecipiePage from 'pages/AddRecipePage/AddRecipePage';
 import SharedLayout from './SharedLayout/SharedLayout';
 import HomePage from '../pages/Example/HomePage';
 // import SearchPage from '../pages/SearchPage/SearchPage';
@@ -53,7 +53,7 @@ export const App = () => {
         >
           <Route path="/example" element={<HomePage />} />
           <Route path="/home" element={<MainPage />} />
-
+          <Route path="/add" element={<AddRecipiePage />} />  
           <Route path="/search" element={<SearchPage />} />
           <Route path="/shopping-list" element={<ShoppingListPage />} />
         </Route>
