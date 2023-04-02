@@ -11,8 +11,8 @@ export default function SearchPage() {
   // const searchQuery = searchParams.get('query');
   const [searchParams] = useSearchParams();
   const searchQuery = searchParams.get('query');
+  console.log('in SP', searchQuery);
 
-  console.log('In SP query', searchQuery);
   return (
     <ContainerWrapper>
       <SearchBar green />
