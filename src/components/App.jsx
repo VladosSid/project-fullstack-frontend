@@ -9,9 +9,11 @@ import { AppBox } from './App.styled';
 import RestrictedRoute from './Routes/RestrictedRoute';
 import PrivateRoute from './Routes/PrivateRoute';
 
+
 import TemporaryMain from 'pages/TitlePageTemporary/TitlePageTemporary';
 import ShoppingListPage from 'pages/ShoppingListPage/ShoppingListPage';
 import NotFound from 'pages/NotFoundPage/NotFoundPage';
+
 import SharedLayout from './SharedLayout/SharedLayout';
 import HomePage from 'pages/Example/HomePage';
 import SearchPage from 'pages/SearchPage/SearchPage';

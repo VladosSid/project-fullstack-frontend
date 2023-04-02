@@ -4,16 +4,20 @@ import {
   TitleListProducts,
   TitleListNumber,
   ContanerShopingList,
-  TitleShopingList,
+  // TitleShopingList,
   Tabl,
 } from './ShoppingListPage.styled';
+import { MainPageTitle } from '../../components/MainPageTitle/MainPageTitle';
 import ingredients from '../../ingredients.json';
 
 const ShoppingListPage = () => {
- // тут буде запит за коллекцією інградієнтів
+  // тут буде запит за коллекцією інградієнтів
+  const titleShopingList = 'Shopping list';
   return (
     <ContanerShopingList>
-      <TitleShopingList>Shopping list</TitleShopingList>
+      <MainPageTitle title={titleShopingList} />
+      {/* <TitleShopingList>Shopping list</TitleShopingList> */}
+
       <Tabl>
         <TitltList>
           <TitleListProducts>Products</TitleListProducts>
