@@ -13,7 +13,9 @@ import TemporaryMain from 'pages/MainPageTemporary';
 import ShoppingListPage from 'pages/ShoppingListPage';
 import NotFound from 'pages/NotFoundPage';
 import SharedLayout from './SharedLayout/SharedLayout';
+
 import HomePage from 'pages/HomePage';
+import CategoriesPage from '../pages/CategoriesPage';
 
 export const App = () => {
   return (
@@ -25,7 +27,6 @@ export const App = () => {
             <RestrictedRoute component={<TemporaryMain />} redirectTo="/main" />
           }
         />
-
 
         {/* !!!! AUTHORIZATION AS AN EXAMPLE !!!! */}
         {/* <Route
@@ -51,6 +52,7 @@ export const App = () => {
         >
           <Route path="/home" element={<HomePage />} />
           <Route path="/shopping-list" element={<ShoppingListPage />} />
+          <Route path="/categories" element={<CategoriesPage />} />
         </Route>
         <Route path="*" element={<NotFound />} />
       </Routes>
