@@ -11,6 +11,7 @@ import { MainPageTitle } from '../../components/MainPageTitle/MainPageTitle';
 import ingredients from '../../ingredients.json';
 
 const ShoppingListPage = () => {
+
   // тут буде запит за коллекцією інградієнтів
   const titleShopingList = 'Shopping list';
   return (

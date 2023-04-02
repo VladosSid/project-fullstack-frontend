@@ -6,9 +6,9 @@ import {
   TitleProduct,
   NumberContayner,
   Remove,
-  RemoveImg,
+  RemoveSvg,
 } from './IngredientsShoppingList.styled';
-import remove from '../../images/ShopingList/remove.svg';
+import UseSvg from '../../helpers/useSvg/useSvg';
 
 const IngredientsShoppingList = ingredients => {
   const ingredientsArr = ingredients.ingredients;
@@ -23,7 +23,9 @@ const IngredientsShoppingList = ingredients => {
             <TitleProduct>{ingredient.ttl}</TitleProduct>
             <NumberContayner>5</NumberContayner>
             <Remove>
-              <RemoveImg src={remove} alt="remove" />
+              <RemoveSvg>
+              <UseSvg id="remove"/>
+              </RemoveSvg>
             </Remove>
           </ItemContayner>
         </Item>
