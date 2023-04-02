@@ -11,31 +11,49 @@ export const FooterBox = styled.footer`
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  gap: 32px;
 
   @media ${theme.device.tablet} {
-    padding-right: 94px;
+    padding-right: 32px;
     padding-left: 32px;
+  }
+
+  @media ${theme.device.desktop} {
+    padding-right: 100px;
+    padding-left: 100px;
+    gap: 40px;
   } ;
 `;
 
-export const BoxNav = styled.div`
+export const FlexBox = styled.div`
   display: flex;
-  width: 100%;
   align-items: center;
   justify-content: center;
   flex-direction: column;
   gap: 32px;
-
-  margin-bottom: 32px;
-
+  calc((100%) / 1);
+  
   @media ${theme.device.tablet} {
+    width: 100%;
+    justify-content: center;
     flex-direction: row;
-    justify-content: space-between;
-    margin-bottom: 72px;
-  } ;
-`;
 
-export const BoxLogoDescription = styled.div``;
+    flex-wrap: wrap;
+  calc((100% - 32px) / 2);
+  gap: 32px;
+  };
+
+   @media screen and (min-width: 1281px) {
+    width: 100%;
+    justify-content: space-between;
+    flex-direction: row;
+
+    flex-wrap: nowrap;
+  calc((100% - 64px) / 3);
+
+  margin-bottom: ;
+  };
+`;
 
 export const BoxLogo = styled.div`
   display: flex;
@@ -47,6 +65,12 @@ export const BoxLogo = styled.div`
     justify-content: start;
 
     margin-bottom: 24px;
+  }
+
+  @media ${theme.device.tablet} {
+    justify-content: start;
+
+    margin-bottom: 40px;
   } ;
 `;
 
@@ -86,7 +110,14 @@ export const ListDescrition = styled.ul`
     letter-spacing: -0.02em;
 
     color: #fafafa;
-    display: block;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  @media ${theme.device.desktop} {
+    font-size: 18px;
+    line-height: 24px;
+    gap: 12px;
   } ;
 `;
 
@@ -110,25 +141,79 @@ export const NavList = styled.ul`
   color: #fafafa;
 
   @media ${theme.device.tablet} {
-    align-items: start;
+    align-items: center;
+    margin-left: 180px;
+  }
+
+  @media screen and (min-width: 1281px) {
+    margin-left: 0;
+  }
+
+  @media ${theme.device.desktop} {
+    align-items: center;
+    margin-left: 0;
+    gap: 24px;
   } ;
 `;
 
 export const BoxForm = styled.form`
-  position: relative;
-
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
   gap: 8px;
 
-  margin-bottom: 44px;
-
   @media ${theme.device.tablet} {
     flex-direction: row;
     gap: 12px;
+  }
+
+  @media screen and (min-width: 1231px) {
+    flex-direction: column;
+    align-items: start;
+
+    gap: 12px;
+  }
+
+  @media ${theme.device.desktop} {
+    margin-left: 70px;
   } ;
+`;
+
+export const BoxTitle = styled.div`
+  display: none;
+
+  @media ${theme.device.desktop} {
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    flex-direction: column;
+    gap: 8px;
+  }
+`;
+
+export const Title = styled.h2`
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 27px;
+
+  /* identical to box height */
+
+  color: #fafafa;
+`;
+export const Text = styled.h2`
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+
+  /* or 129% */
+  letter-spacing: -0.02em;
+
+  color: #fafafa;
 `;
 
 export const LabelForm = styled.label`
@@ -165,6 +250,8 @@ export const Input = styled.input`
 `;
 
 export const Button = styled.button`
+  width: 251px;
+
   display: flex;
   justify-content: center;
   align-items: center;
@@ -176,7 +263,6 @@ export const Button = styled.button`
   color: #fff;
   background: #8baa36;
 
-  width: 100%;
   padding: 11px 0;
 
   border: none;
@@ -189,7 +275,11 @@ export const Button = styled.button`
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
   @media ${theme.device.tablet} {
-    padding: 11px 51px;
+    width: 171px;
+  }
+
+  @media screen and (min-width: 1231px) {
+    width: 100%;
   } ;
 `;
 
@@ -200,4 +290,14 @@ export const ListSocialNetworks = styled.ul`
   align-items: center;
   justify-content: center;
   gap: 16px;
+`;
+
+export const ImgSocial = styled.li`
+  svg {
+    fill: #8baa36;
+
+    &:hover {
+      fill: #fff;
+    }
+  }
 `;

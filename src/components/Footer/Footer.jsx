@@ -1,28 +1,29 @@
 import { MdOutlineEmail } from 'react-icons/md';
-import { FaTwitter } from 'react-icons/fa';
-import { AiFillYoutube } from 'react-icons/ai';
-import { BsFacebook, BsInstagram } from 'react-icons/bs';
 import logo from '../../images/Footer/logoFooter.png';
+import { UseSvg } from '../../helpers/useSvg/useSvg';
 import {
   FooterBox,
-  BoxNav,
-  BoxLogoDescription,
+  FlexBox,
   BoxLogo,
   TextLogo,
   ListDescrition,
   NavList,
   BoxForm,
+  BoxTitle,
+  Title,
+  Text,
   Input,
   Button,
   LabelForm,
   ListSocialNetworks,
+  ImgSocial,
 } from './Footer.styled';
 
 export function Footer() {
   return (
     <FooterBox>
-      <BoxNav>
-        <BoxLogoDescription>
+      <FlexBox>
+        <div>
           <BoxLogo>
             {/* <a href="#"> */}
             <img src={logo} alt="" />
@@ -32,11 +33,14 @@ export function Footer() {
 
           <ListDescrition>
             <li>Database of recipes that can be replenished </li>
-            <li>Flexible search for desired and unwanted ingredients</li>
+            <li>
+              Flexible search for desired and unwanted <br />
+              ingredients
+            </li>
             <li>Ability to add your own recipes with photos</li>
             <li>Convenient and easy to use</li>
           </ListDescrition>
-        </BoxLogoDescription>
+        </div>
 
         <NavList>
           <li>Ingredients</li>
@@ -45,42 +49,50 @@ export function Footer() {
           <li>Favorite</li>
           <li>Shopping list</li>
         </NavList>
-      </BoxNav>
 
-      <BoxForm>
-        <div>
-          <LabelForm>
-            <MdOutlineEmail style={{ scale: '1.7', fill: '#fff' }} />
-          </LabelForm>
-          <Input
-            placeholder="Enter your email address"
-            name="email"
-            type="text"
-          />
-        </div>
+        <BoxForm>
+          <BoxTitle>
+            <Title>Subscribe to our Newsletter</Title>
 
-        <Button>Subcribe</Button>
-      </BoxForm>
+            <Text>
+              Subscribe up to our newsletter. Be in touch with <br /> latest
+              news and special offers, etc.
+            </Text>
+          </BoxTitle>
+          <div
+            style={{
+              position: 'relative',
+            }}
+          >
+            <LabelForm>
+              <MdOutlineEmail style={{ scale: '1.7', fill: '#fff' }} />
+            </LabelForm>
+
+            <Input
+              placeholder="Enter your email address"
+              name="email"
+              type="text"
+            />
+          </div>
+
+          <Button>Subcribe</Button>
+        </BoxForm>
+      </FlexBox>
 
       <ListSocialNetworks>
-        <li>
-          <BsFacebook
-            style={{ fill: '#8BAA36', width: '23px', scale: '1.5' }}
-          />
-        </li>
-        <li>
-          <AiFillYoutube
-            style={{ fill: '#8BAA36', width: '23px', scale: '1.5' }}
-          />
-        </li>
-        <li>
-          <FaTwitter style={{ fill: '#8BAA36', width: '23px', scale: '1.5' }} />
-        </li>
-        <li>
-          <BsInstagram
-            style={{ fill: '#8BAA36', width: '23px', scale: '1.5' }}
-          />
-        </li>
+        <ImgSocial>
+          <UseSvg id="facebook" />
+        </ImgSocial>
+        <ImgSocial>
+          <UseSvg id="youtube" />
+        </ImgSocial>
+
+        <ImgSocial>
+          <UseSvg id="twit" />
+        </ImgSocial>
+        <ImgSocial>
+          <UseSvg id="inst" />
+        </ImgSocial>
       </ListSocialNetworks>
     </FooterBox>
   );

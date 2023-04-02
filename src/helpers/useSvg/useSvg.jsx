@@ -17,8 +17,8 @@ export const UseSvg = ({ id }) => {
     case 'youtube':
       return (
         <svg
-          width="20"
-          height="15"
+          width="20px"
+          height="15px"
           viewBox="0 0 20 15"
           xmlns="http://www.w3.org/2000/svg"
         >
