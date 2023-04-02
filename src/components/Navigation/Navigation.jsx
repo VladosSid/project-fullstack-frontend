@@ -1,3 +1,4 @@
+import { NavLink } from 'react-router-dom';
 import { Ul } from './Navigation.styled';
 import { HeaderNav } from './Navigation.styled';
 import search from '../../images/Header/search.svg';
@@ -7,25 +8,25 @@ const Navigation = () => {
     <HeaderNav>
       <Ul>
         <li>
-          <a href="/categories">Categories</a>
+          <NavLink to="/categories">Categories</NavLink>
         </li>
         <li>
-          <a href="/add">Add recipes</a>
+          <NavLink to="/add">Add recipes</NavLink>
         </li>
         <li>
-          <a href="/my">My recipes</a>
+          <NavLink to="/my">My recipes</NavLink>
         </li>
         <li>
-          <a href="/favorite">Favorites</a>
+          <NavLink to="/favorite">Favorites</NavLink>
         </li>
         <li>
-          <a href="/shopping-list">Shopping list</a>
+          <NavLink to="/shopping-list">Shopping list</NavLink>
         </li>
         <li>
-          <a href="/search">
+          <NavLink to="/search">
             <img src={search} alt="search" />
             <p>Search</p>
-          </a>
+          </NavLink>
         </li>
       </Ul>
     </HeaderNav>

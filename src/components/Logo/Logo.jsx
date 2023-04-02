@@ -1,12 +1,13 @@
+import { NavLink } from 'react-router-dom';
 import logo from '../../images/Header/logo.svg';
 import { LogoSvg } from './Logo.styled';
 
 const Logo = () => {
   return (
     <LogoSvg>
-      <a href="/So Yummy" aria-current="page">
+      <NavLink to="/home" aria-current="page">
         <img src={logo} alt="logo" width={40} height={40} />
-      </a>
+      </NavLink>
     </LogoSvg>
   );
 };
