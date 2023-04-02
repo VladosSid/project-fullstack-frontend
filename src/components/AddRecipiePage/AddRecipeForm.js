@@ -2,7 +2,7 @@ import { useState } from "react";
 import RecipeDescriptionFields from "./RecipeDescriptionFields";
 import RecipeIngridientsFields from "./RecipeIngridientsFields";
 import RecipePreparationFields from "./RecipePreparationFields";
-import { Form } from "./AddRecipeForm.styled";
+import { Form, Button } from "./AddRecipeForm.styled";
 
 
 const AddRecipieForm = () => {
@@ -20,7 +20,7 @@ return(<>
     <RecipeDescriptionFields />
     <RecipeIngridientsFields />
     <RecipePreparationFields />
-    <button type="submit">Add</button>
+    <Button type="submit">Add</Button>
   </Form></>
 )
 

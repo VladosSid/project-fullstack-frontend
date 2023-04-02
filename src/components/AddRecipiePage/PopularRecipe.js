@@ -8,7 +8,6 @@ const PopularRecipe = () => {
   if(!recipes.length) {
     setRecipes(RECIPE)
   }
-console.log(recipes)
 
   return (
     <Popular>
