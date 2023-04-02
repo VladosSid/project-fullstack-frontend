@@ -1,5 +1,5 @@
 {
-  "name": "react-homework-template",
+  "name": "project-fullstack-frontend",
   "version": "0.1.0",
   "private": true,
   "homepage": "https://VladosSid.github.io/project-fullstack-frontend/",
@@ -9,7 +9,6 @@
     "@testing-library/react": "^12.1.4",
     "@testing-library/user-event": "^13.5.0",
     "axios": "^1.3.4",
-    "formik": "^2.2.9",
     "notiflix": "^3.2.6",
     "prop-types": "^15.8.1",
     "react": "^18.1.0",

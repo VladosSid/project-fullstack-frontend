@@ -1,40 +1,117 @@
 import styled from 'styled-components';
+import theme from '../../style/generalStyle';
 
 export const List = styled.ul`
-  
+  list-style: none;
 `;
 export const Item = styled.li`
+  position: relative;
+  padding: 0 16px;
 
+  @media ${theme.device.tablet} {
+    padding: 0 32px;
+    width: 704px;
+  }
+
+  @media ${theme.device.desktop} {
+    padding: 0 40px;
+    width: 1160px;
+  }
+`;
+
+export const ItemContayner = styled.div`
+  display: flex;
   padding-top: 50px;
   padding-bottom: 50px;
+  padding-right: 22px;
+  width: 343px;
   border-bottom: 1px solid #e0e0e0;
+  @media ${theme.device.tablet} {
+    padding-right: 49px;
+    width: 704px;
+  }
+  @media ${theme.device.desktop} {
+    width: 1160px;
+  }
 `;
+
 export const ImageContayner = styled.div`
+  display: flex;
   width: 60px;
   height: 60px;
   border-radius: 6px;
   background: #ebf3d4;
   padding: 6px;
-  margin-right:10px;
-`;
-export const ItemContayner = styled.div`
-  display: flex;
+  margin-right: 170px;
+  @media ${theme.device.tablet} {
+    width: 93px;
+    height: 97px;
+    margin-right: auto;
+  }
 `;
 
+
 export const TitleProduct = styled.div`
-  margin-right: 118px;
+  position: absolute;
+  left: 96px;
+  width: 100px;
+  font-family: 'Poppins';
+  font-size: 10px;
+  line-height: 12px;
+  color: #3e4462;
+
+  @media ${theme.device.tablet} {
+    left: 148px;
+    width: 200px;
+    font-size: 16px;
+    line-height: 24px;
+  }
 `;
 
 export const NumberContayner = styled.div`
-  width: 37px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Poppins';
+  font-size: 10px;
+  line-height: 15px;
+  min-width: 37px;
   height: 23px;
   border-radius: 4px;
   background: #8baa36;
   color: #fafafa;
   margin-right: 49px;
+  @media ${theme.device.tablet} {
+    min-width: 68px;
+    height: 35px;
+    font-size: 18px;
+    line-height: 27px;
+    margin-right: 115px;
+  }
+  @media ${theme.device.desktop} {
+    margin-right: 142px;
+  } ;
 `;
 
 export const Remove = styled.button`
+  display: flex;
   background-color: transparent;
   border: 0;
+  fill: #fafafa;
 `;
+export const RemoveImg = styled.img`
+  width=8px;
+   height=8px;
+     @media ${theme.device.tablet}{
+        width=12px;
+   height=12px;
+     }
+  &:hover{
+    background-color: #8BAA36;
+     border-radius: 4px;
+      fill: #fafafa;
+      color:#fafafa;
+  };
+
+
+ `;

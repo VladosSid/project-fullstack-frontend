@@ -3,22 +3,26 @@ import {
   TitltList,
   TitleListProducts,
   TitleListNumber,
+  ContanerShopingList,
+  TitleShopingList,
+  Tabl,
 } from './ShoppingListPage.styled';
+import ingredients from '../ingredients.json';
 
 const ShoppingListPage = () => {
-  // тут буде запит за коллекцією інградієнтів
+ // тут буде запит за коллекцією інградієнтів
   return (
-    <div>
-      <h2>Shopping list</h2>
-      <div>
+    <ContanerShopingList>
+      <TitleShopingList>Shopping list</TitleShopingList>
+      <Tabl>
         <TitltList>
           <TitleListProducts>Products</TitleListProducts>
           <TitleListNumber>Number</TitleListNumber>
           <span>Remove</span>
         </TitltList>
-        <IngredientsShoppingList />
-      </div>
-    </div>
+        <IngredientsShoppingList ingredients={ingredients} />
+      </Tabl>
+    </ContanerShopingList>
   );
 };
 
