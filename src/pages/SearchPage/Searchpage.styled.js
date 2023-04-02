@@ -8,3 +8,9 @@ export const ContainerWrapper = styled.div`
   align-items: center;
   justify-content: center;
 `;
+export const Container = styled.div`
+  display: grid;
+  /* grid-template-columns: repeat(auto-fit, 343px); */
+  gap: 16px;
+  width: 100%;
+`;

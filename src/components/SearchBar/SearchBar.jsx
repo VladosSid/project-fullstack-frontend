@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import { SearchForm, SearchInput, SearchBtn } from './SearchBar.styled';
 //------------------------------------------
-export default function SearchBar({ onSubm }) {
+export default function SearchBar({ green, onSubm }) {
   const [searchWord, setSearchWord] = useState('');
 
   const handleChange = evt => {
@@ -27,7 +27,7 @@ export default function SearchBar({ onSubm }) {
         value={searchWord}
         onChange={handleChange}
       />
-      <SearchBtn>Search</SearchBtn>
+      <SearchBtn green={green}>Search</SearchBtn>
     </SearchForm>
   );
 }
