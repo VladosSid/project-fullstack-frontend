@@ -8,7 +8,7 @@
 /node_modules
 /.pnp
 .pnp.js
-pakage-lock
+package-lock.json
 
 # testing
 /coverage

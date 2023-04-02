@@ -2,25 +2,28 @@ import { Route, Routes } from 'react-router-dom';
 
 import { AppBox } from './App.styled';
 
-import AddRecipiePage from '../pages/AddRecipePage/AddRecipePage'; 
-import MainPage from 'pages/MainPage/MainPage';
+// import AddRecipiePage from './AddRecipiePage/AddRecipePage';
 
-
+import MainPage from '../pages/MainPage/MainPage';
+import SearchPage from '../pages/SearchPage/SearchPage';
 import RestrictedRoute from './Routes/RestrictedRoute';
 import PrivateRoute from './Routes/PrivateRoute';
-import SearchPage from 'pages/SearchPage/SearchPage';
-import TemporaryMain from 'pages/MainPageTemporary';
-import ShoppingListPage from 'pages/ShoppingListPage';
-import NotFound from 'pages/NotFoundPage';
-import SharedLayout from './SharedLayout/SharedLayout';
-import HomePage from 'pages/HomePage';
 
- 
+import TemporaryMain from 'pages/TitlePageTemporary/TitlePageTemporary';
+import ShoppingListPage from 'pages/ShoppingListPage/ShoppingListPage';
+import NotFound from 'pages/NotFoundPage/NotFoundPage';
+
+import SharedLayout from './SharedLayout/SharedLayout';
+import HomePage from '../pages/Example/HomePage';
+// import SearchPage from '../pages/SearchPage/SearchPage';
+// import MainPage from 'pages/MainPage/MainPage';
+
 export const App = () => {
   return (
     <AppBox>
       <Routes>
-        <Route index
+        <Route
+          index
           element={
             <RestrictedRoute component={<TemporaryMain />} redirectTo="/main" />
           }
@@ -44,23 +47,18 @@ export const App = () => {
           }
         /> */}
 
-
-        
-        <Route path="/"
-          element={
-            <PrivateRoute component={<SharedLayout />} redirectTo="/" />
-        }>
+        <Route
+          path="/"
+          element={<PrivateRoute component={<SharedLayout />} redirectTo="/" />}
+        >
           <Route path="/example" element={<HomePage />} />
           <Route path="/home" element={<MainPage />} />
 
           <Route path="/search" element={<SearchPage />} />
-          <Route path="/shopping-list" element={<ShoppingListPage />} />      
-          <Route path="/add" element={<AddRecipiePage />} />
+          <Route path="/shopping-list" element={<ShoppingListPage />} />
         </Route>
         <Route path="*" element={<NotFound />} />
       </Routes>
-
-
     </AppBox>
   );
 };
