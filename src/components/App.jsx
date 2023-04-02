@@ -20,7 +20,6 @@ import HomePage from 'pages/HomePage';
 export const App = () => {
   return (
     <AppBox>
-           <AddRecipiePage />
       <Routes>
         <Route index
           element={
@@ -52,9 +51,12 @@ export const App = () => {
           element={
             <PrivateRoute component={<SharedLayout />} redirectTo="/" />
         }>
-          <Route path="/home" element={<HomePage />} />         
+          <Route path="/example" element={<HomePage />} />
+          <Route path="/home" element={<MainPage />} />
+
+          <Route path="/search" element={<SearchPage />} />
+          <Route path="/shopping-list" element={<ShoppingListPage />} />      
           <Route path="/add" element={<AddRecipiePage />} />
-          <Route path="/shopping-list" element={<ShoppingListPage />} />
         </Route>
         <Route path="*" element={<NotFound />} />
       </Routes>
