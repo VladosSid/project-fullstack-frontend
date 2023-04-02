@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Recipes } from 'gannaFakeData';
+// import { recipesG } from 'gannaFakeData';
 import { useLocation } from 'react-router-dom';
 import instanceBacEnd from 'helpers/requestBackEnd';
 // import axios from 'axios';
@@ -19,24 +19,25 @@ import createsearchUrl from 'helpers/createSearchUrl';
 export default function MainPage() {
   const location = useLocation();
   const navigate = useNavigate();
+  const [recipes, setRecipes] = useState([]);
   // const [searchParams, setSearchParams] = useSearchParams();
   // const queryRec = searchParams.get('query');
+  const [width] = useState(window.innerWidth);
 
-  const [width, setWidth] = useState(window.innerWidth);
+  //Do we need resize?
+  //const [width, setWidth] = useState(window.innerWidth);
+  // const handleResize = () => {
+  //   setWidth(window.innerWidth);
+  // };
 
-  const handleResize = () => {
-    setWidth(window.innerWidth);
-  };
+  // useEffect(() => {
+  //   window.addEventListener('resize', handleResize);
 
-  useEffect(() => {
-    window.addEventListener('resize', handleResize);
+  //   return () => {
+  //     window.removeEventListener('resize', handleResize);
+  //   };
+  // }, []);
 
-    return () => {
-      window.removeEventListener('resize', handleResize);
-    };
-  }, []);
-
-  // const searchUrl = `${BASE_URL}search/movie?api_key=${keyApi}&query=${queryFilm}&page=`;
   useEffect(() => {
     instanceBacEnd.defaults.headers.common.Authorization =
       'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDI4NzUwYzFiNzM4ODYyOTFmZjg2NjEiLCJpYXQiOjE2ODAzNzMwMjZ9.ymP8t20SkiGApZlELcfcz82ilJZ3AUN_Ax2PBk8eHvI';
@@ -52,17 +53,17 @@ export default function MainPage() {
       queryQuantity = 4;
     }
     instanceBacEnd
-      .get('/recipes/main-page?query=2')
+      .get(`/recipes/main-page?query=${queryQuantity}`)
+
       .then(function (response) {
-        console.log(response.data);
-        console.log(response);
+        setRecipes(response.data.result);
       })
       .catch(function (error) {
         console.log(error.message);
       });
   }, [width]);
 
-  const RecipesByCategory = Recipes.reduce((acc, recipe) => {
+  const RecipesByCategory = recipes.reduce((acc, recipe) => {
     if (!acc[recipe.category]) {
       acc[recipe.category] = [recipe];
     } else {
@@ -73,7 +74,7 @@ export default function MainPage() {
   //---------------------------
   const handleFormSubmit = query => {
     console.log('Query in Main', query);
-
+    console.log('recipes', recipes);
     // const nextQuery = query !== '' ? { query } : {};
     // setSearchParams(nextQuery);
     const searchUrl = createsearchUrl(query);
@@ -89,7 +90,7 @@ export default function MainPage() {
             <RecipeCategoryName>{category}</RecipeCategoryName>
 
             {recipes.map(recipe => (
-              <DishCard key={recipe.id} location={location} recipe={recipe} />
+              <DishCard key={recipe._id} location={location} recipe={recipe} />
             ))}
 
             <Button>See all</Button>
