@@ -1,3 +1,4 @@
+import { NavLink } from 'react-router-dom';
 import { Ul } from './Navigation.styled';
 import { HeaderNav } from './Navigation.styled';
 import search from '../../images/Header/search.svg';
@@ -23,9 +24,10 @@ const Navigation = () => {
         </li>
         <li>
           <a href="/project-fullstack-frontend/search">
+
             <img src={search} alt="search" />
             <p>Search</p>
-          </a>
+          </NavLink>
         </li>
       </Ul>
     </HeaderNav>

@@ -6,6 +6,10 @@ export const BurgerBtn = styled.button`
   padding: 0;
   border: none;
   background-color: transparent;
+
+  @media ${theme.device.desktop} {
+    display: none;
+  }
 `;
 
 export const BackdropMobileMenu = styled.div`
@@ -18,6 +22,7 @@ export const BackdropMobileMenu = styled.div`
   position: fixed;
 
   background-color: #ebf3d4;
+
   z-index: 150;
 
   @media ${theme.device.mobail} {

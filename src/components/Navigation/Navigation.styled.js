@@ -20,6 +20,37 @@ export const Ul = styled.ul`
   align-items: center;
   gap: 32px;
 
+  @media ${theme.device.mobail} {
+    font-size: 18px;
+    line-height: 18px;
+
+    letter-spacing: -0.02em;
+  }
+
+  @media ${theme.device.tablet} {
+    font-size: 24px;
+    line-height: 24px;
+
+    letter-spacing: -0.02em;
+  }
+
+  @media ${theme.device.desktop} {
+    font-size: 14px;
+    line-height: 22px;
+  }
+
+  li a:hover,
+  li a:focus {
+    color: #8baa36;
+  }
+
+  li a {
+    color: #22252a;
+    &.active {
+      color: #8baa36;
+    }
+  }
+
   li:last-child a {
     display: flex;
     align-items: center;
