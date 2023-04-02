@@ -3,8 +3,7 @@ import styled from 'styled-components';
 export const SearchForm = styled.form`
   display: flex;
   position: relative;
-  margin-left: 40px;
-  margin-right: 40px;
+  margin: 0 auto;
 `;
 
 export const SearchInput = styled.input`
