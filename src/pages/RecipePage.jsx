@@ -1,7 +1,7 @@
-import RecipeInngredientsList from 'Components/Recipe/RecipeInngredientsList/RecipeInngredientsList';
+// import RecipeInngredientsList from 'Components/Recipe/RecipeInngredientsList/RecipeInngredientsList';
 
-import RecipePageHero from 'Components/Recipe/RecipePageHero/RecipePageHero';
-import RecipePreparation from 'Components/Recipe/RecipePreparation/RecipePreparation';
+// import RecipePageHero from 'Components/Recipe/RecipePageHero/RecipePageHero';
+// import RecipePreparation from 'Components/Recipe/RecipePreparation/RecipePreparation';
 
 const RecipePage = () => {
   //   const { id } = useParams();
@@ -11,7 +11,7 @@ const RecipePage = () => {
   //   }, [dispatch, id]);
 
   return (
-    <Container>
+    <div>
       {/* <RecipePageHero title={title} description={description} time={time} />
       <RecipeInngredientsList ingredients={ingredients} recipeId={_id} />
       <RecipePreparation
@@ -19,7 +19,7 @@ const RecipePage = () => {
         title={title}
         instructions={instructions}
       /> */}
-    </Container>
+    </div>
   );
 };
 
