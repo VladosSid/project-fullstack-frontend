@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import theme from '../style/generalStyle';
+import theme from '../../style/generalStyle';
 
 export const ContanerShopingList = styled.div`
 
@@ -13,10 +13,7 @@ export const ContanerShopingList = styled.div`
     width: 1441px;
   } ;
 `;
-export const Tabl = styled.div`
-
-`;
-
+export const Tabl = styled.div``;
 
 export const TitltList = styled.div`
   display: flex;

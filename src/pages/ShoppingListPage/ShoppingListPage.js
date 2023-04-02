@@ -8,7 +8,7 @@ import {
   Tabl,
 } from './ShoppingListPage.styled';
 import { MainPageTitle } from '../../components/MainPageTitle/MainPageTitle';
-import ingredients from '../ingredients.json';
+import ingredients from '../../ingredients.json';
 
 const ShoppingListPage = () => {
   // тут буде запит за коллекцією інградієнтів
