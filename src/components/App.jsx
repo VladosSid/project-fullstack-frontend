@@ -1,6 +1,6 @@
 import { Route, Routes } from 'react-router-dom';
 
-import { AppBox, BoxBodyApp } from './App.styled';
+import { AppBox } from './App.styled';
 
 // import AddRecipiePage from './AddRecipiePage/AddRecipePage';
 
@@ -25,6 +25,7 @@ export const App = () => {
             <RestrictedRoute component={<TemporaryMain />} redirectTo="/main" />
           }
         />
+
 
         {/* !!!! AUTHORIZATION AS AN EXAMPLE !!!! */}
         {/* <Route
