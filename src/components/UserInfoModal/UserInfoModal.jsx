@@ -15,6 +15,10 @@ const UserInfoModal = () => {
       <MediaInput type="file" />
       <CrossSvg src={plus} alt="plus" />
       <NameInput type="text" placeholder="Olena" />
+      <FiUser
+        size={18}
+        style={{ position: 'absolute', bottom: '116px', left: '40px' }}
+      />
       <button>Save Changes</button>
     </UserInfoModalBackdrop>
   );
