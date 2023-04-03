@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import theme from '../style/generalStyle';
+// import theme from '../style/generalStyle';
 
 export const CardWrapper = styled.div`
 position: relative;

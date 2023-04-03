@@ -5,13 +5,13 @@ import { StyledTab as Tab } from './CategoriesTabs.styled';
 import { DishCardContainer } from './CategoriesTabs.styled';
 import { Box } from '@mui/material';
 import DishCard from '../DishCard/DishCard';
-import { useSearchParams } from 'react-router-dom';
+// import { useSearchParams } from 'react-router-dom';
 
 import { Recipes } from '../../RecipesData';
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
-  let [searchParams, setSearchParams] = useSearchParams();
+  // let [searchParams, setSearchParams] = useSearchParams();
   return (
     <div
       role="tabpanel"
