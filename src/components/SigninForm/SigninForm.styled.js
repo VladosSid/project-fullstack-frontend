@@ -14,11 +14,13 @@ export const Form = styled.form`
     border-radius: 30px;
     padding: 32px 28px 40px 28px;
     margin-bottom: 18px;
+    /* width: 335px; */
 
     background-color: #2A2C36;
 
     @media ${theme.device.tablet} {
         padding: 44px 50px;
+        /* width: 500px; */
     }
 `
 
