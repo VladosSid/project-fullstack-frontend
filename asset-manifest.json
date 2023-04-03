@@ -1,8 +1,10 @@
 {
   "files": {
     "main.css": "/project-fullstack-frontend/static/css/main.1276fa99.css",
-    "main.js": "/project-fullstack-frontend/static/js/main.e3463f1c.js",
-    "static/media/AuthPageBackground.png": "/project-fullstack-frontend/static/media/AuthPageBackground.80f072d671a5d31fcdcb.png",
+    "main.js": "/project-fullstack-frontend/static/js/main.9bcda8ea.js",
+    "static/media/WelcomePageBgDesktop.jpg": "/project-fullstack-frontend/static/media/WelcomePageBgDesktop.f31fc4303d48e5b012c6.jpg",
+    "static/media/WelcomePageBgTablet.jpg": "/project-fullstack-frontend/static/media/WelcomePageBgTablet.7abf4f24790a74657a90.jpg",
+    "static/media/WelcomePageBgMobile.jpg": "/project-fullstack-frontend/static/media/WelcomePageBgMobile.8aac0106e3b46109ca27.jpg",
     "static/media/ava.svg": "/project-fullstack-frontend/static/media/ava.b30184f18a6a67ace46a0d1adffc745e.svg",
     "static/media/camera.svg": "/project-fullstack-frontend/static/media/camera.64fb944f2bd998a99c7c9f5cf8ab6110.svg",
     "index.html": "/project-fullstack-frontend/index.html",
@@ -13,10 +15,10 @@
     "static/media/menu.svg": "/project-fullstack-frontend/static/media/menu.0e7a3ceba8d1c2ac98513490254e232d.svg",
     "static/media/chevron-down.svg": "/project-fullstack-frontend/static/media/chevron-down.6ca21e11e19f8046984073ff192ce57d.svg",
     "main.1276fa99.css.map": "/project-fullstack-frontend/static/css/main.1276fa99.css.map",
-    "main.e3463f1c.js.map": "/project-fullstack-frontend/static/js/main.e3463f1c.js.map"
+    "main.9bcda8ea.js.map": "/project-fullstack-frontend/static/js/main.9bcda8ea.js.map"
   },
   "entrypoints": [
     "static/css/main.1276fa99.css",
-    "static/js/main.e3463f1c.js"
+    "static/js/main.9bcda8ea.js"
   ]
 }
