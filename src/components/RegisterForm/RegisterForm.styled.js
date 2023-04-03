@@ -3,8 +3,11 @@ import theme from '../../style/generalStyle';
 
 export const Container = styled.div`
     z-index: 3;
-
     text-align: center;
+
+    @media ${theme.device.desktop} {
+        margin-left: 115px;
+    }
 `
 
 export const Form = styled.form`
@@ -37,10 +40,6 @@ export const FormTitle = styled.h2`
 
         font-size: 28px;
         line-height: 1.07;
-    }
-
-    @media ${theme.device.desktop} {
-
     }
 `
 
