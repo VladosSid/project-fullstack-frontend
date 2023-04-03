@@ -1,5 +1,16 @@
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 import theme from 'style/generalStyle';
+
+const translate = keyframes`
+from {
+  transform: translateY(-130vh);
+  opacity: 0.3;
+}
+to {
+  transform: translateY(0);
+  opacity: 1;
+}
+`;
 
 export const BurgerBtn = styled.button`
   cursor: pointer;
@@ -13,6 +24,7 @@ export const BurgerBtn = styled.button`
 `;
 
 export const BackdropMobileMenu = styled.div`
+  animation: ${translate} 0.3s linear;
   position: absolute;
   width: -webkit-fill-available;
   height: 100vh;

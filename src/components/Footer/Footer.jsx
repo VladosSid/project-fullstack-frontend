@@ -1,5 +1,5 @@
 import { MdOutlineEmail } from 'react-icons/md';
-// import { useDispatch } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import logo from '../../images/Footer/logoFooter.png';
 import { UseSvg } from '../../helpers/useSvg/useSvg';
 import {
@@ -20,22 +20,44 @@ import {
   ImgSocial,
 } from './Footer.styled';
 
-// import { authOperations } from '../../redux/users';
+import { authOperations } from '../../redux/users';
 
 export function Footer() {
-  // const dispatch = useDispatch();
+  const dispatch = useDispatch();
 
-  // try {
-  //   dispatch(
-  //     authOperations.register({
-  //       username: 'VladosTest',
-  //       email: 'sidorsv.dev@meta.ua',
-  //       password: '123456',
-  //     })
-  //   );
-  // } catch (err) {
-  //   console.log(err.message);
-  // }
+  const setTest = e => {
+    e.preventDefault();
+
+    try {
+      dispatch(
+        authOperations.logIn({
+          email: 'sidorsv.dev@meta.ua',
+          password: '123456',
+        })
+        // authOperations.logOut()
+      );
+    } catch (err) {
+      console.log(err.message);
+    }
+  };
+  const setTestOut = e => {
+    e.preventDefault();
+
+    try {
+      dispatch(authOperations.logOut());
+    } catch (err) {
+      console.log(err.message);
+    }
+  };
+  const setTestCurrent = e => {
+    e.preventDefault();
+
+    try {
+      dispatch(authOperations.fetchCurrentUser());
+    } catch (err) {
+      console.log(err.message);
+    }
+  };
   return (
     <FooterBox>
       <FlexBox>
@@ -91,7 +113,15 @@ export function Footer() {
             />
           </div>
 
-          <Button>Subcribe</Button>
+          <Button type="button" onClick={e => setTest(e)}>
+            Subcribe(LogIn)
+          </Button>
+          <Button type="button" onClick={e => setTestOut(e)}>
+            LogOuth
+          </Button>
+          <Button type="button" onClick={e => setTestCurrent(e)}>
+            Current
+          </Button>
         </BoxForm>
       </FlexBox>
 
