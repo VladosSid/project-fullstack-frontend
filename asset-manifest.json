@@ -1,14 +1,20 @@
 {
   "files": {
     "main.css": "/project-fullstack-frontend/static/css/main.1276fa99.css",
-    "main.js": "/project-fullstack-frontend/static/js/main.a93a5b9d.js",
+    "main.js": "/project-fullstack-frontend/static/js/main.87da6f8b.js",
     "static/media/bg-list-3x.png": "/project-fullstack-frontend/static/media/bg-list-3x.33628d6df40456852e08.png",
     "static/media/AuthImgDesktop.png": "/project-fullstack-frontend/static/media/AuthImgDesktop.549be07b60dab8fc00fa.png",
     "static/media/WelcomePageBgDesktop.jpg": "/project-fullstack-frontend/static/media/WelcomePageBgDesktop.f31fc4303d48e5b012c6.jpg",
+    "static/media/not_found_desk_2x.png": "/project-fullstack-frontend/static/media/not_found_desk_2x.3cfaecf1beea8a207660.png",
+    "static/media/not_found_tablet_2x.png": "/project-fullstack-frontend/static/media/not_found_tablet_2x.276a273fa011a4e83403.png",
     "static/media/WelcomePageBgTablet.jpg": "/project-fullstack-frontend/static/media/WelcomePageBgTablet.7abf4f24790a74657a90.jpg",
     "static/media/AuthImgTablet.png": "/project-fullstack-frontend/static/media/AuthImgTablet.73245f21375be7dcbb3d.png",
+    "static/media/not_found_mob_2x.png": "/project-fullstack-frontend/static/media/not_found_mob_2x.b3175fd4a71fd9a8c792.png",
+    "static/media/not_found_desk_1x.png": "/project-fullstack-frontend/static/media/not_found_desk_1x.0fce8791c1b5e9b8cbf9.png",
+    "static/media/not_found_tablet_1x.png": "/project-fullstack-frontend/static/media/not_found_tablet_1x.a4d4ef93bde63ef4e6fc.png",
     "static/media/AuthImgMobile.png": "/project-fullstack-frontend/static/media/AuthImgMobile.b85625f4b2da37e130bd.png",
     "static/media/WelcomePageBgMobile.jpg": "/project-fullstack-frontend/static/media/WelcomePageBgMobile.8aac0106e3b46109ca27.jpg",
+    "static/media/not_found_mob_1x.png": "/project-fullstack-frontend/static/media/not_found_mob_1x.830623caea782215ca94.png",
     "static/media/ava.svg": "/project-fullstack-frontend/static/media/ava.b30184f18a6a67ace46a0d1adffc745e.svg",
     "static/media/camera.svg": "/project-fullstack-frontend/static/media/camera.64fb944f2bd998a99c7c9f5cf8ab6110.svg",
     "index.html": "/project-fullstack-frontend/index.html",
@@ -19,10 +25,10 @@
     "static/media/menu.svg": "/project-fullstack-frontend/static/media/menu.0e7a3ceba8d1c2ac98513490254e232d.svg",
     "static/media/chevron-down.svg": "/project-fullstack-frontend/static/media/chevron-down.6ca21e11e19f8046984073ff192ce57d.svg",
     "main.1276fa99.css.map": "/project-fullstack-frontend/static/css/main.1276fa99.css.map",
-    "main.a93a5b9d.js.map": "/project-fullstack-frontend/static/js/main.a93a5b9d.js.map"
+    "main.87da6f8b.js.map": "/project-fullstack-frontend/static/js/main.87da6f8b.js.map"
   },
   "entrypoints": [
     "static/css/main.1276fa99.css",
-    "static/js/main.a93a5b9d.js"
+    "static/js/main.87da6f8b.js"
   ]
 }
