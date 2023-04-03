@@ -8,12 +8,17 @@ import {
 const AuthNav = () => {
     return (
         <NavContainer>
-            <RegisterBtn>
-                <Link to={"/register"} style={{color: "inherit"}}>Registration</Link>
-            </RegisterBtn>
-            <SigninBtn>
-                <Link to={"/login"} style={{color: "inherit"}}>Sign in</Link>
-            </SigninBtn>
+            <Link to={"/register"} style={{color: "inherit"}}>
+                <RegisterBtn>
+                    Registration
+                </RegisterBtn>
+            </Link>
+            
+            <Link to={"/login"} style={{color: "inherit"}}>
+                <SigninBtn>
+                    Sign in
+                </SigninBtn>
+            </Link>
         </NavContainer>
     )
 }

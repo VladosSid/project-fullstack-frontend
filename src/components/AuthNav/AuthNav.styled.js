@@ -15,6 +15,7 @@ export const RegisterBtn = styled.button`
     // check paddings for different devices
     padding: 50px 42px;
     border: none;
+    cursor: pointer;
 
     background-color: #8BAA36;
     color: #FAFAFA;
@@ -36,6 +37,7 @@ export const SigninBtn = styled.button`
     clip-path: inset(25% 0 25% 0 round 15% 35% 15% 30%);
     // check paddings for different devices
     padding: 50px 42px;
+    cursor: pointer;
 
     /* отображается некорректно */
     border: 2px solid #FAFAFA;
