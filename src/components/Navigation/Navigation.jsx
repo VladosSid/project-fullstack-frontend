@@ -1,4 +1,5 @@
 // import { NavLink } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import { Ul } from './Navigation.styled';
 import { HeaderNav } from './Navigation.styled';
 import search from '../../images/Header/search.svg';
@@ -8,25 +9,29 @@ const Navigation = () => {
     <HeaderNav>
       <Ul>
         <li>
-          <a href="/project-fullstack-frontend/categories">Categories</a>
+          <NavLink to="/project-fullstack-frontend/categories">
+            Categories
+          </NavLink>
         </li>
         <li>
-          <a href="/project-fullstack-frontend/add">Add recipes</a>
+          <NavLink to="/project-fullstack-frontend/add">Add recipes</NavLink>
         </li>
         <li>
-          <a href="/project-fullstack-frontend/my">My recipes</a>
+          <NavLink to="/project-fullstack-frontend/my">My recipes</NavLink>
         </li>
         <li>
-          <a href="/project-fullstack-frontend/favorite">Favorites</a>
+          <NavLink to="/project-fullstack-frontend/favorite">Favorites</NavLink>
         </li>
         <li>
-          <a href="/project-fullstack-frontend/shopping-list">Shopping list</a>
+          <NavLink to="/project-fullstack-frontend/shopping-list">
+            Shopping list
+          </NavLink>
         </li>
         <li>
-          <a href="/project-fullstack-frontend/search">
+          <NavLink to="/project-fullstack-frontend/search">
             <img src={search} alt="search" />
             <p>Search</p>
-          </a>
+          </NavLink>
         </li>
       </Ul>
     </HeaderNav>
