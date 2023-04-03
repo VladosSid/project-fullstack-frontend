@@ -18,7 +18,7 @@ const register = createAsyncThunk(
     try {
       const { data } = await instanceBacEnd.post('/users/signup', userData);
       console.log(data);
-      token.set(data.token);
+      // token.set(data.token);
 
       Notiflix.Notify.success(`Account successfully created.`);
       return data;

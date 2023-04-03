@@ -25,17 +25,23 @@ import {
 export function Footer() {
   // const dispatch = useDispatch();
 
-  // try {
-  //   dispatch(
-  //     authOperations.register({
-  //       username: 'VladosTest',
-  //       email: 'sidorsv.dev@meta.ua',
-  //       password: '123456',
-  //     })
-  //   );
-  // } catch (err) {
-  //   console.log(err.message);
-  // }
+  const setTest = e => {
+    console.log('123');
+    e.preventDefault();
+    console.log(e.target);
+
+    // try {
+    //   dispatch(
+    //     authOperations.register({
+    //       username: 'VladosTest',
+    //       email: 'sidorsv.dev@meta.ua',
+    //       password: '123456',
+    //     })
+    //   );
+    // } catch (err) {
+    //   console.log(err.message);
+    // }
+  };
   return (
     <FooterBox>
       <FlexBox>
@@ -91,7 +97,9 @@ export function Footer() {
             />
           </div>
 
-          <Button>Subcribe</Button>
+          <Button type="button" onClick={e => setTest(e)}>
+            Subcribe
+          </Button>
         </BoxForm>
       </FlexBox>
 

@@ -14,9 +14,12 @@ export const authSlice = createSlice({
   initialState,
   extraReducers: {
     [authOperations.register.fulfilled](state, action) {
+      console.log(state);
+      console.log(action.payload);
       state.user = { ...action.payload.user };
       state.token = action.payload.token;
       state.isLoggedIn = true;
+      console.log(state);
     },
     [authOperations.register.rejected](state, action) {
       state.error = action.payload;
