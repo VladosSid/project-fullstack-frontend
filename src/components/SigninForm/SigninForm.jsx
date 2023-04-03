@@ -1,48 +1,63 @@
+import { Link } from "react-router-dom";
 import {  
     FiMail, 
     FiLock 
 } from "react-icons/fi";
+import {
+    Container,
+    Form,
+    FormTitle,
+    ListItem,
+    Label,
+    Input,
+    Button,
+    Redirect
+} from "./SigninForm.styled";
 
 const SigninForm = () => {
     return (
         // только разметка, стили позже
-        <div>
-            <h2>Sign In</h2>
-            <form>
+        <Container>
+            <Form>
+                <FormTitle>Sign In</FormTitle>
                 <ul>
                     {/* email */}
-                    <li>
-                        <label
+                    <ListItem>
+                        <Label
                             htmlFor="emailInput"
                         >
                             <FiMail />
-                        </label>
-                        <input 
+                        </Label>
+                        <Input 
                             type="text"
-                            name="username"
+                            name="email"
+                            placeholder="Email"
                             id="emailInput"
                             required
                         />
-                    </li>
+                    </ListItem>
                     {/* password */}
-                    <li>
-                        <label
+                    <ListItem>
+                        <Label
                             htmlFor="passwordInput"
                         >
                             <FiLock />
-                        </label>
-                        <input 
+                        </Label>
+                        <Input 
                             type="text"
-                            name="username"
+                            name="password"
+                            placeholder="Password"
                             id="passwordInput"
                             required
                         />
-                    </li>
+                    </ListItem>
                 </ul>
-                <button type='submit'>Sign In</button>
-            </form>
-            {/* <Link to={"/register"}>Registration</Link> */}
-        </div>
+                <Button type='submit'>Sign In</Button>
+            </Form>
+            <Link to={"/register"}>
+                <Redirect>Registration</Redirect>
+            </Link>
+        </Container>
     )
 }
 

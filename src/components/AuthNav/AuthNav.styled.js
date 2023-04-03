@@ -11,49 +11,52 @@ export const NavContainer = styled.div`
 `
 
 export const RegisterBtn = styled.button`
-    clip-path: inset(25% 0 25% 0 round 15% 35% 15% 30%);
-    // check paddings for different devices
-    padding: 40px 32px;
-    border: none;
+    /* clip-path: inset(25% 0 25% 0 round 15% 35% 15% 30%); */
+    padding: 12px 24px;
+    border-radius: 24px 44px;
+    border: 2px solid transparent;
     cursor: pointer;
 
     background-color: #8BAA36;
     color: #FAFAFA;
-    /* add transition? */
+    
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
     font-family: 'Poppins';
     font-style: normal;
     font-weight: 400;
-    font-size: 16px;
+    font-size: 14px;
     line-height: 1.5;
-
+    
     &:hover,
     &:focus {
         background-color: #22252A; 
     }
 
     @media ${theme.device.tablet} {
-        padding: 50px 42px;
+        padding: 22px 44px;
+        font-size: 16px;
     }
 `
 
 export const SigninBtn = styled.button`
-    clip-path: inset(25% 0 25% 0 round 15% 35% 15% 30%);
-    // check paddings for different devices
-    padding: 40px 32px;
-    cursor: pointer;
-
-    /* отображается некорректно */
+    /* clip-path: inset(25% 0 25% 0 round 15% 35% 15% 30%); */
+    padding: 12px 24px;
+    border-radius: 24px 44px;
     border: 2px solid #FAFAFA;
+    cursor: pointer;    
 
     background-color: transparent;
     color: #FAFAFA;
-    /* add transition? */
+
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
     font-family: 'Poppins';
     font-style: normal;
     font-weight: 400;
-    font-size: 16px;
+    font-size: 14px;
     line-height: 1.5;
 
     &:hover,
@@ -64,6 +67,7 @@ export const SigninBtn = styled.button`
     }
 
     @media ${theme.device.tablet} {
-        padding: 50px 42px;
+        padding: 22px 44px;
+        font-size: 16px;
     }
 `

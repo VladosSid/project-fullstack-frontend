@@ -17,7 +17,7 @@ export const Container = styled.div`
   background-position: center;
   background-size: cover;
   height: 100vh;
-  width: 100vw;  
+  width: calc(100vw - 70px);  
   color: #fff;
 
   @media ${theme.device.tablet} {
