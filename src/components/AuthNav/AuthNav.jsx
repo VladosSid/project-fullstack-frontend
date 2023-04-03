@@ -1,13 +1,15 @@
 import {
-    NavContainer
+    NavContainer,
+    RegisterBtn,
 } from "./AuthNav.styled";
 
 const AuthNav = () => {
     return (
         <NavContainer>
-            <button>
+            <RegisterBtn>
+                Registration
                 {/* <Link to={/register>} /> */}
-            </button>
+            </RegisterBtn>
             <button>
                 {/* <Link to={/login>} /> */}
             </button>
