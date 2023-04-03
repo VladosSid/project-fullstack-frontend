@@ -11,10 +11,10 @@ export const NavContainer = styled.div`
 `
 
 export const RegisterBtn = styled.button`
-    clip-path: inset(25% 0 25% 0 round 15% 35% 15% 30%);
-    // check paddings for different devices
-    padding: 40px 32px;
-    border: none;
+    /* clip-path: inset(25% 0 25% 0 round 15% 35% 15% 30%); */
+    padding: 12px 24px;
+    border-radius: 24px 44px;
+    border: 2px solid transparent;
     cursor: pointer;
 
     background-color: #8BAA36;
@@ -33,18 +33,16 @@ export const RegisterBtn = styled.button`
     }
 
     @media ${theme.device.tablet} {
-        padding: 50px 42px;
+        padding: 22px 44px;
     }
 `
 
 export const SigninBtn = styled.button`
-    clip-path: inset(25% 0 25% 0 round 15% 35% 15% 30%);
-    // check paddings for different devices
-    padding: 40px 32px;
-    cursor: pointer;
-
-    /* отображается некорректно */
+    /* clip-path: inset(25% 0 25% 0 round 15% 35% 15% 30%); */
+    padding: 12px 24px;
+    border-radius: 24px 44px;
     border: 2px solid #FAFAFA;
+    cursor: pointer;    
 
     background-color: transparent;
     color: #FAFAFA;
@@ -64,6 +62,6 @@ export const SigninBtn = styled.button`
     }
 
     @media ${theme.device.tablet} {
-        padding: 50px 42px;
+        padding: 22px 44px;
     }
 `
