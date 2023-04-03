@@ -49,6 +49,8 @@ export const Background = styled.div`
 `
 
 export const Image = styled.div`
+    /* position lower on mobile */
+
     background-image: url(${MobileImg});
     background-repeat: no-repeat;
     background-position: center;
@@ -56,7 +58,7 @@ export const Image = styled.div`
 
     width: 285px; 
     height: 250px;
-    z-index: 3;
+    z-index: 2;
 
     @media ${theme.device.tablet} {
         background-image: url(${TabletImg});

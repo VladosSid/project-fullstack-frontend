@@ -13,6 +13,10 @@ export const Form = styled.form`
     margin-bottom: 18px;
 
     background-color: #2A2C36;
+
+    @media ${theme.device.tablet} {
+        padding: 44px 50px;
+    }
 `
 
 export const FormTitle = styled.h2`
@@ -29,7 +33,10 @@ export const FormTitle = styled.h2`
     color: #FAFAFA;
 
     @media ${theme.device.tablet} {
+        margin-bottom: 32px;
 
+        font-size: 28px;
+        line-height: 1.07;
     }
 
     @media ${theme.device.desktop} {
@@ -44,11 +51,17 @@ export const ListItem = styled.li`
     &:last-of-type {
         margin-bottom: 28px;
     }
+
+    @media ${theme.device.tablet} {
+        margin-bottom: 24px;
+
+        &:last-of-type {
+        margin-bottom: 50px;
+    }
+    }
 `
 
 export const Label = styled.label`
-    
-
     svg {
         position: absolute;
         top: 12px;
@@ -59,6 +72,11 @@ export const Label = styled.label`
 
         stroke: #FAFAFA;
         opacity: 0.8;
+
+        @media ${theme.device.tablet} {
+            width: 24px;
+            height: 24px;
+        }
     }
 `
 
@@ -66,6 +84,7 @@ export const Input = styled.input`
     padding: 12px 14px 12px 40px;
     border: 1px solid #FAFAFA;
     border-radius: 6px;
+    width: 200px;
 
     background-color: transparent;
 
@@ -79,6 +98,15 @@ export const Input = styled.input`
 
         color: #FAFAFA;
         opacity: 0.8;
+
+        @media ${theme.device.tablet} {
+            font-size: 18px;
+        }
+    }
+
+    @media ${theme.device.tablet} {
+        padding: 16px 18px 16px 50px;
+        width: 300px;
     }
 `
 
@@ -104,6 +132,11 @@ export const Button = styled.button`
     &:focus {
         color: #22252A;
     }
+
+    @media ${theme.device.tablet} {
+        padding: 19px 0;
+        font-size: 16px;
+    }   
 `
 
 export const Redirect = styled.span`
@@ -123,4 +156,8 @@ export const Redirect = styled.span`
         color: #8BAA36;
         text-decoration: none;
     }
+
+    @media ${theme.device.tablet} {
+        font-size: 16px;
+    } 
 `
