@@ -1,8 +1,8 @@
 // import { FaSistrix } from 'react-icons/fa';
 import React, { useState } from 'react';
-import { SearchForm, SearchInput, SearchBtn } from './SearchBar.styled';
+import { SearchesForm, SearchInput, SearchBtn } from './SearchForm.styled';
 //------------------------------------------
-export default function SearchBar({ green, onSubm }) {
+export default function SearchForm({ green, onSubm }) {
   const [searchWord, setSearchWord] = useState('');
 
   const handleChange = evt => {
@@ -21,13 +21,13 @@ export default function SearchBar({ green, onSubm }) {
     onSubm(searchWord);
   };
   return (
-    <SearchForm onSubmit={handleSubmit}>
+    <SearchesForm onSubmit={handleSubmit}>
       <SearchInput
         placeholder="Beef"
         value={searchWord}
         onChange={handleChange}
       />
       <SearchBtn green={green}>Search</SearchBtn>
-    </SearchForm>
+    </SearchesForm>
   );
 }

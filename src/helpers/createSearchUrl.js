@@ -8,7 +8,7 @@ export function createSearchUrl(query) {
   return searchUrl;
 }
 export function createCategoryUrl(category) {
-  const categoryWord = category.toLowerCase();
+  // const categoryWord = category.toLowerCase();
   // const categoryUrl = `/categories/${categoryWord}`;
   const categoryUrl = `/categories`;
   //   navigate(`/search?type=${searchType}&term=${encodedSearchTerm}`);

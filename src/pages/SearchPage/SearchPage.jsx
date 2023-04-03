@@ -1,4 +1,4 @@
-import SearchBar from 'components/SearchBar/SearchBar';
+import SearchForm from 'components/SearchForm/SearchForm';
 import React from 'react';
 import { recipesG } from 'gannaFakeData';
 import DishCard from 'components/DishCard/DishCard';
@@ -15,7 +15,7 @@ export default function SearchPage() {
 
   return (
     <ContainerWrapper>
-      <SearchBar green />
+      <SearchForm green />
       <Container>
         {recipesG.map(recipe => (
           <DishCard key={recipe._id} location={location} recipe={recipe} />
@@ -24,3 +24,19 @@ export default function SearchPage() {
     </ContainerWrapper>
   );
 }
+
+// function SearchTypeSelector({ type, onChange }) {
+//   function handleSelect(eventKey) {
+//     onChange(eventKey);
+//   }
+
+//   return (
+//     <DropdownButton
+//       title={type === 'query' ? 'Поиск по запросу' : 'Поиск по ингредиенту'}
+//       onSelect={handleSelect}
+//     >
+//       <Dropdown.Item eventKey="query">Поиск по запросу</Dropdown.Item>
+//       <Dropdown.Item eventKey="ingredient">Поиск по ингредиенту</Dropdown.Item>
+//     </DropdownButton>
+//   );
+// }
