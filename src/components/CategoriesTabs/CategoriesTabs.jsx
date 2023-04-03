@@ -4,14 +4,14 @@ import { StyledTabs as Tabs } from './CategoriesTabs.styled';
 import { StyledTab as Tab } from './CategoriesTabs.styled';
 import { DishCardContainer } from './CategoriesTabs.styled';
 import { Box } from '@mui/material';
-
 import DishCard from '../DishCard/DishCard';
+import { useSearchParams } from 'react-router-dom';
 
 import { Recipes } from '../../RecipesData';
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
-
+  let [searchParams, setSearchParams] = useSearchParams();
   return (
     <div
       role="tabpanel"
@@ -82,8 +82,8 @@ export default function CategoriesTabs(props) {
         </Tabs>
       </Box>
       <TabPanel value={value} index={value}>
-        {Recipes.map(recipe => (
-          <DishCardContainer>
+        {Recipes.map((recipe, index) => (
+          <DishCardContainer key={index}>
             <DishCard recipe={recipe} />
           </DishCardContainer>
         ))}

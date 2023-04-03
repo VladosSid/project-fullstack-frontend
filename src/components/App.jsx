@@ -39,10 +39,12 @@ export const App = () => {
           element={<PrivateRoute component={<SharedLayout />} redirectTo="/" />}
         >
           <Route path="/home" element={<MainPage />} />
+
           <Route path="/categories" element={<CategoriesPage />} />
           <Route path="/add" element={<AddRecipiePage />} />  
           <Route path="/my" element={<RecipePage />} />
           <Route path="/favorite" element={<FavoritePage />} />
+
           <Route path="/shopping-list" element={<ShoppingListPage />} />
           <Route path="/search" element={<SearchPage />} />
         </Route>
