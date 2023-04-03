@@ -11,7 +11,7 @@ import SharedLayout from './SharedLayout/SharedLayout';
 import MainPage from '../pages/MainPage/MainPage';
 import CategoriesPage from '../pages/CategoriesPage';
 import AddRecipiePage from 'pages/AddRecipePage/AddRecipePage';
-import MyRecipesPage from 'pages/MyRecipePage/MyRecipesPage';
+import RecipePage from 'pages/RecipePage/RecipePage';
 import FavoritePage from 'pages/FavoritePage/FavoritePage';
 import ShoppingListPage from 'pages/ShoppingListPage/ShoppingListPage';
 import SearchPage from '../pages/SearchPage/SearchPage';
@@ -41,7 +41,7 @@ export const App = () => {
           <Route path="/home" element={<MainPage />} />
           <Route path="/categories" element={<CategoriesPage />} />
           <Route path="/add" element={<AddRecipiePage />} />  
-          <Route path="/my" element={<MyRecipesPage />} />
+          <Route path="/my" element={<RecipePage />} />
           <Route path="/favorite" element={<FavoritePage />} />
           <Route path="/shopping-list" element={<ShoppingListPage />} />
           <Route path="/search" element={<SearchPage />} />
