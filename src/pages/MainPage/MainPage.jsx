@@ -14,7 +14,7 @@ import {
 
 import MainPageHero from 'components/MainPageHero';
 import DishCard from 'components/DishCard';
-import createsearchUrl from 'helpers/createSearchUrl';
+import { createCategoryUrl, createSearchUrl } from 'helpers/createSearchUrl';
 //--------------------------------------
 export default function MainPage() {
   const location = useLocation();
@@ -83,8 +83,17 @@ export default function MainPage() {
     console.log('recipes', recipes);
     // const nextQuery = query !== '' ? { query } : {};
     // setSearchParams(nextQuery);
-    const searchUrl = createsearchUrl(query);
+    const searchUrl = createSearchUrl(query);
     navigate(searchUrl);
+  };
+
+  const handleCategoryClick = category => {
+    console.log('category in Main', category);
+
+    // const nextQuery = query !== '' ? { query } : {};
+    // setSearchParams(nextQuery);
+    const categoryUrl = createCategoryUrl(category);
+    navigate(categoryUrl);
   };
   //-------------------
   return (
@@ -99,7 +108,9 @@ export default function MainPage() {
               <DishCard key={recipe._id} location={location} recipe={recipe} />
             ))}
 
-            <Button>See all</Button>
+            <Button onClick={() => handleCategoryClick(category)}>
+              See all
+            </Button>
           </div>
         ))}
       </Container>
