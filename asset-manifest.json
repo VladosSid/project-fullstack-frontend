@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/project-fullstack-frontend/static/css/main.1276fa99.css",
-    "main.js": "/project-fullstack-frontend/static/js/main.30f36242.js",
+    "main.js": "/project-fullstack-frontend/static/js/main.f2b11b90.js",
     "static/media/AuthPageBackground.png": "/project-fullstack-frontend/static/media/AuthPageBackground.80f072d671a5d31fcdcb.png",
     "static/media/ava.svg": "/project-fullstack-frontend/static/media/ava.b30184f18a6a67ace46a0d1adffc745e.svg",
     "static/media/camera.svg": "/project-fullstack-frontend/static/media/camera.64fb944f2bd998a99c7c9f5cf8ab6110.svg",
@@ -12,10 +12,10 @@
     "static/media/menu.svg": "/project-fullstack-frontend/static/media/menu.0e7a3ceba8d1c2ac98513490254e232d.svg",
     "static/media/chevron-down.svg": "/project-fullstack-frontend/static/media/chevron-down.6ca21e11e19f8046984073ff192ce57d.svg",
     "main.1276fa99.css.map": "/project-fullstack-frontend/static/css/main.1276fa99.css.map",
-    "main.30f36242.js.map": "/project-fullstack-frontend/static/js/main.30f36242.js.map"
+    "main.f2b11b90.js.map": "/project-fullstack-frontend/static/js/main.f2b11b90.js.map"
   },
   "entrypoints": [
     "static/css/main.1276fa99.css",
-    "static/js/main.30f36242.js"
+    "static/js/main.f2b11b90.js"
   ]
 }
