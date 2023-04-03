@@ -1,14 +1,17 @@
+import {
+    NavContainer
+} from "./AuthNav.styled";
+
 const AuthNav = () => {
     return (
-        // пока набрасываю только структуру, стили добавлю позже
-        <div>
+        <NavContainer>
             <button>
                 {/* <Link to={/register>} /> */}
             </button>
             <button>
                 {/* <Link to={/login>} /> */}
             </button>
-        </div>
+        </NavContainer>
     )
 }
 
