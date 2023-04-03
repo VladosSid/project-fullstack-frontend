@@ -13,7 +13,7 @@ export const NavContainer = styled.div`
 export const RegisterBtn = styled.button`
     clip-path: inset(25% 0 25% 0 round 15% 35% 15% 30%);
     // check paddings for different devices
-    padding: 50px 42px;
+    padding: 40px 32px;
     border: none;
     cursor: pointer;
 
@@ -31,12 +31,16 @@ export const RegisterBtn = styled.button`
     &:focus {
         background-color: #22252A; 
     }
+
+    @media ${theme.device.tablet} {
+        padding: 50px 42px;
+    }
 `
 
 export const SigninBtn = styled.button`
     clip-path: inset(25% 0 25% 0 round 15% 35% 15% 30%);
     // check paddings for different devices
-    padding: 50px 42px;
+    padding: 40px 32px;
     cursor: pointer;
 
     /* отображается некорректно */
@@ -57,5 +61,9 @@ export const SigninBtn = styled.button`
         background-color: #ECECEC; 
         border: 2px solid #8BAA36;
         color: #8BAA36;
+    }
+
+    @media ${theme.device.tablet} {
+        padding: 50px 42px;
     }
 `
