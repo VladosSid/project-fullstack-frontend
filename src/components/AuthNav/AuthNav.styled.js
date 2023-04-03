@@ -10,7 +10,7 @@ export const NavContainer = styled.div`
     }
 `
 
-export const RegisterBtn = styled.a`
+export const RegisterBtn = styled.button`
     clip-path: inset(25% 0 25% 0 round 15% 35% 15% 30%);
     // check paddings for different devices
     padding: 50px 42px;
@@ -32,7 +32,7 @@ export const RegisterBtn = styled.a`
     }
 `
 
-export const SigninBtn = styled.a`
+export const SigninBtn = styled.button`
     clip-path: inset(25% 0 25% 0 round 15% 35% 15% 30%);
     // check paddings for different devices
     padding: 50px 42px;
