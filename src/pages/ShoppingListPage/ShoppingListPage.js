@@ -1,32 +1,28 @@
-import IngredientsShoppingList from '../../components/ShoppingListPage';
-import {
-  TitltList,
-  TitleListProducts,
-  TitleListNumber,
-  ContanerShopingList,
-  // TitleShopingList,
-  Tabl,
-} from './ShoppingListPage.styled';
+import React
+// ,{ useEffect, useDispatch }
+  from 'react';
+import ShoppingList from '../../components/ShoppingListPage/ShoppingList';
+
+import { ContanerShopingList } from './ShoppingListPage.styled';
+
 import { MainPageTitle } from '../../components/MainPageTitle/MainPageTitle';
 import ingredients from '../../ingredients.json';
 
+//   const dispatch = useDispatch();
+
 const ShoppingListPage = () => {
 
+//   useEffect(() => {
+//     dispatch(getIngredients([dispatch]));
+    
+//   });
+  
   // тут буде запит за коллекцією інградієнтів
   const titleShopingList = 'Shopping list';
   return (
     <ContanerShopingList>
       <MainPageTitle title={titleShopingList} />
-      {/* <TitleShopingList>Shopping list</TitleShopingList> */}
-
-      <Tabl>
-        <TitltList>
-          <TitleListProducts>Products</TitleListProducts>
-          <TitleListNumber>Number</TitleListNumber>
-          <span>Remove</span>
-        </TitltList>
-        <IngredientsShoppingList ingredients={ingredients} />
-      </Tabl>
+      <ShoppingList ingredients={ingredients} />
     </ContanerShopingList>
   );
 };
