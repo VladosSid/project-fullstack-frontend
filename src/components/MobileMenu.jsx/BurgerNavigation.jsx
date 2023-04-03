@@ -1,4 +1,5 @@
 // import { NavLink } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import x from '../../images/Header/x.svg';
 import search from '../../images/Header/search.svg';
 import Logo from 'components/Logo/Logo';
@@ -18,27 +19,31 @@ const BurgerNavigation = ({ onClick }) => {
       <nav>
         <Ul>
           <li>
-            <a href="/project-fullstack-frontend/categories">Categories</a>
+            <NavLink to="/project-fullstack-frontend/categories">
+              Categories
+            </NavLink>
           </li>
           <li>
-            <a href="/project-fullstack-frontend/add">Add recipes</a>
+            <NavLink to="/project-fullstack-frontend/add">Add recipes</NavLink>
           </li>
           <li>
-            <a href="/project-fullstack-frontend/my">My recipes</a>
+            <NavLink to="/project-fullstack-frontend/my">My recipes</NavLink>
           </li>
           <li>
-            <a href="/project-fullstack-frontend/favorite">Favorites</a>
+            <NavLink to="/project-fullstack-frontend/favorite">
+              Favorites
+            </NavLink>
           </li>
           <li>
-            <a href="/project-fullstack-frontend/shopping-list">
+            <NavLink to="/project-fullstack-frontend/shopping-list">
               Shopping list
-            </a>
+            </NavLink>
           </li>
           <li>
-            <a href="/project-fullstack-frontend/search">
+            <NavLink to="/project-fullstack-frontend/search">
               <img src={search} alt="search" />
               <p>Search</p>
-            </a>
+            </NavLink>
           </li>
         </Ul>
       </nav>

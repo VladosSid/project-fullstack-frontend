@@ -11,11 +11,13 @@ const UserLogo = () => {
   };
 
   return (
-    <UserLogoBtn onClick={() => clickToggle()}>
-      <img src={ava} alt="avatar" />
-      <p>Olena</p>
+    <>
+      <UserLogoBtn onClick={() => clickToggle()}>
+        <img src={ava} alt="avatar" />
+        <p>Olena</p>
+      </UserLogoBtn>
       {isOpen && <UserLogoModal />}
-    </UserLogoBtn>
+    </>
   );
 };
 
