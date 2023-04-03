@@ -47,6 +47,7 @@ export const UserInfoModalBackdrop = styled.div`
 `;
 
 export const MediaInput = styled.input`
+  cursor: pointer;
   position: absolute;
   top: 100px;
   right: 140px;
@@ -56,7 +57,7 @@ export const MediaInput = styled.input`
 `;
 
 export const NameInput = styled.input`
-  padding: 15px 15px 10px;
+  padding: 15px 15px 10px 50px;
 
   width: 264px;
   border: 1px solid #bababc;
@@ -78,6 +79,7 @@ export const GroupSvg = styled.div`
 `;
 
 export const CrossSvg = styled.img`
+  pointer-events: none;
   position: absolute;
   top: 100px;
   right: 140px;

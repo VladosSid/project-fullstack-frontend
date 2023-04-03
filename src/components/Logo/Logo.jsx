@@ -6,7 +6,7 @@ import { LogoSvg } from './Logo.styled';
 const Logo = () => {
   return (
     <LogoSvg>
-      <NavLink to="/project-fullstack-frontend/home" aria-current="page">
+      <NavLink to="/home" aria-current="page">
         <img src={logo} alt="logo" width={40} height={40} />
       </NavLink>
     </LogoSvg>

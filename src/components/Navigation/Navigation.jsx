@@ -9,26 +9,26 @@ const Navigation = () => {
     <HeaderNav>
       <Ul>
         <li>
-          <NavLink to="/project-fullstack-frontend/categories">
+          <NavLink to="/categories">
             Categories
           </NavLink>
         </li>
         <li>
-          <NavLink to="/project-fullstack-frontend/add">Add recipes</NavLink>
+          <NavLink to="/add">Add recipes</NavLink>
         </li>
         <li>
-          <NavLink to="/project-fullstack-frontend/my">My recipes</NavLink>
+          <NavLink to="/my">My recipes</NavLink>
         </li>
         <li>
-          <NavLink to="/project-fullstack-frontend/favorite">Favorites</NavLink>
+          <NavLink to="/favorite">Favorites</NavLink>
         </li>
         <li>
-          <NavLink to="/project-fullstack-frontend/shopping-list">
+          <NavLink to="/shopping-list">
             Shopping list
           </NavLink>
         </li>
         <li>
-          <NavLink to="/project-fullstack-frontend/search">
+          <NavLink to="/search">
             <img src={search} alt="search" />
             <p>Search</p>
           </NavLink>
