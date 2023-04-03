@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import { SearchesForm, SearchInput, SearchBtn } from './SearchForm.styled';
 //------------------------------------------
-export default function SearchForm({ green, onSubm }) {
+export default function SearchForm({ green, onSubm, marginBottom }) {
   const [searchWord, setSearchWord] = useState('');
 
   const handleChange = evt => {
@@ -21,7 +21,7 @@ export default function SearchForm({ green, onSubm }) {
     onSubm(searchWord);
   };
   return (
-    <SearchesForm onSubmit={handleSubmit}>
+    <SearchesForm onSubmit={handleSubmit} marginBottom={marginBottom}>
       <SearchInput
         placeholder="Beef"
         value={searchWord}

@@ -6,6 +6,7 @@ export const SearchesForm = styled.form`
   margin: 0 auto;
   justify-content: center;
   align-items: center;
+  margin-bottom: ${props => (props.marginBottom ? '24px' : 0)};
 `;
 
 export const SearchInput = styled.input`
