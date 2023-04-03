@@ -54,7 +54,7 @@ export const App = () => {
         >
           <Route path="/example" element={<HomePage />} />
           <Route path="/home" element={<MainPage />} />
-          <Route path="/add" element={<AddRecipiePage />} />  
+          <Route path="/add" element={<AddRecipiePage />} />
           <Route path="/search" element={<SearchPage />} />
           <Route path="/shopping-list" element={<ShoppingListPage />} />
           <Route path="/categories" element={<CategoriesPage />} />

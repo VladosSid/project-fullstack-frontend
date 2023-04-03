@@ -75,6 +75,18 @@ export const authSlice = createSlice({
       state.error = action.payload;
       state.isGetingCurentUser = false;
     },
+
+    // updateDataUser
+    [authOperations.updateUserData.fulfilled](state, action) {
+      const { email, username, avatarURL } = action.payload.user;
+
+      state.user.email = email;
+      state.user.name = username;
+      state.user.avatarURL = avatarURL;
+    },
+    [authOperations.updateUserData.rejected](state, action) {
+      state.error = action.payload;
+    },
   },
 });
 

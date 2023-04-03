@@ -75,10 +75,31 @@ const fetchCurrentUser = createAsyncThunk(
   }
 );
 
+const updateUserData = createAsyncThunk(
+  'auth/updateUserData',
+  async (updateData, thunkAPI) => {
+    try {
+      const { data } = await instanceBacEnd.patch('/users/update', updateData, {
+        headers: {
+          'Content-type': 'multipart/form-data',
+        },
+      });
+
+      console.log(data);
+
+      Notiflix.Notify.success(`Logout completed.`);
+      return data;
+    } catch (err) {
+      return thunkAPI.rejectWithValue(err.message);
+    }
+  }
+);
+
 const operations = {
   register,
   logIn,
   logOut,
   fetchCurrentUser,
+  updateUserData,
 };
 export default operations;
