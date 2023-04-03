@@ -5,6 +5,7 @@ export const HeaderBox = styled.header`
   display: flex;
   align-items: center;
   justify-content: space-between;
+  margin-bottom: 60px;
 
   @media ${theme.device.mobail} {
     padding-top: 20px;

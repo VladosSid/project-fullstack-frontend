@@ -39,6 +39,10 @@ export const StyledBox = styled(Box)`
   && {
     display: flex;
     gap: 14px;
+
+    @media ${theme.device.mobail} {
+      justify-content: center;
+    }
   }
 `;
 
@@ -47,7 +51,8 @@ export const DishCardContainer = styled.div`
     width: 336px;
     heigth: 323px;
   }
-  @media ${theme.device.desktop} {
+  //  ${theme.device.desktop}
+  @media screen and (min-width: 1240px) {
     width: 300px;
     heigth: 323px;
   }

@@ -1,5 +1,6 @@
-import { MainSection } from '../components/MainSection/MainSection';
+import { MainContainer } from '../components/MainContainer/MainContainer';
 import CategoriesTabs from '../components/CategoriesTabs/CategoriesTabs';
+import { MainPageTitle } from 'components/MainPageTitle/MainPageTitle';
 
 const CategoriesPage = () => {
   const tabsTitles = [
@@ -18,9 +19,10 @@ const CategoriesPage = () => {
   const idCategory = 5;
 
   return (
-    <MainSection title="Categories">
+    <MainContainer>
+      <MainPageTitle title="Categories" />
       <CategoriesTabs tabsTitles={tabsTitles} idCategory={idCategory} />
-    </MainSection>
+    </MainContainer>
   );
 };
 

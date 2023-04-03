@@ -1,9 +1,8 @@
 import styled from 'styled-components';
 import theme from '../../style/generalStyle';
 
-
 export const ContaynerTitle = styled.div`
-Width:100%;
+  width: 100%;
 
   position: relative;
 `;
@@ -16,7 +15,6 @@ export const Title = styled.h2`
   font-size: 28px;
   line-height: 28px;
   color: #001833;
-  background-image: url('../../images/background/kisspng-pasta-1.jpg');
 
   @media ${theme.device.tablet} {
     padding-top: 73px;
@@ -86,4 +84,3 @@ export const BackgroundTopTwo = styled.img`
     right: 171px;
   } ;
 `;
-
