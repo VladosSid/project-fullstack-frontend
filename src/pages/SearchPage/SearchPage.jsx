@@ -6,6 +6,7 @@ import { useLocation } from 'react-router-dom';
 import { ContainerWrapper, Container, SearchBar } from './Searchpage.styled';
 import { useSearchParams } from 'react-router-dom';
 import SearchTypeSelector from 'components/SearchTypeSelector/SearchTypeSelector';
+
 export default function SearchPage() {
   const location = useLocation();
   // const [searchParams, setSearchParams] = useSearchParams();
@@ -15,20 +16,20 @@ export default function SearchPage() {
   console.log('in SP', searchQueryF);
   //---------------------------
   const [searchType, setSearchType] = useState('query');
-  const [searchQuery, setSearchQuery] = useState('');
-  const [searchIngredient, setSearchIngredient] = useState('');
+  // const [searchQuery, setSearchQuery] = useState('');
+  // const [searchIngredient, setSearchIngredient] = useState('');
 
   const handleSearchTypeChange = value => {
     setSearchType(value);
   };
 
-  const handleQueryChange = event => {
-    setSearchQuery(event.target.value);
-  };
+  // const handleQueryChange = event => {
+  //   setSearchQuery(event.target.value);
+  // };
 
-  const handleIngredientChange = event => {
-    setSearchIngredient(event.target.value);
-  };
+  // const handleIngredientChange = event => {
+  //   setSearchIngredient(event.target.value);
+  // };
 
   const handleSubmit = event => {
     event.preventDefault();
