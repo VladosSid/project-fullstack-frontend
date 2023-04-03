@@ -1,6 +1,7 @@
 import {
     NavContainer,
     RegisterBtn,
+    SigninBtn
 } from "./AuthNav.styled";
 
 const AuthNav = () => {
@@ -10,9 +11,10 @@ const AuthNav = () => {
                 Registration
                 {/* <Link to={/register>} /> */}
             </RegisterBtn>
-            <button>
+            <SigninBtn>
+                Sign in
                 {/* <Link to={/login>} /> */}
-            </button>
+            </SigninBtn>
         </NavContainer>
     )
 }
