@@ -4,9 +4,15 @@ import theme from '../../style/generalStyle';
 export const HeroContainer = styled.div`
     text-align: center;
     margin-bottom: 44px;
+    width: 305px;
 
     @media ${theme.device.tablet} {
         margin-bottom: 40px;
+        width: 505px;
+    }
+
+    @media ${theme.device.desktop} {
+        width: 544px;
     }
 `
 
