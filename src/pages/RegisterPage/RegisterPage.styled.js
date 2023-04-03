@@ -16,8 +16,13 @@ export const Container = styled.div`
     color: #fff;
 
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
+
+    @media ${theme.device.desktop} {
+        flex-direction: row;
+    }
 `
 
 export const Background = styled.div`
