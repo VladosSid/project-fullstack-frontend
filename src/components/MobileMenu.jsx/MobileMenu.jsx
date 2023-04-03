@@ -11,11 +11,8 @@ const MobileMenu = () => {
 
   return (
     <>
-      {!isOpen ? (
-        <BurgerButton onClick={clickToggle} />
-      ) : (
-        <BurgerNavigation onClick={clickToggle} />
-      )}
+      <BurgerButton onClick={clickToggle} isOpen={isOpen} />
+      <BurgerNavigation onClick={clickToggle} isOpen={isOpen} />
     </>
   );
 };

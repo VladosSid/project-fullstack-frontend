@@ -1,4 +1,3 @@
-// import { NavLink } from 'react-router-dom';
 import { NavLink } from 'react-router-dom';
 import { Ul } from './Navigation.styled';
 import { HeaderNav } from './Navigation.styled';
@@ -9,9 +8,7 @@ const Navigation = () => {
     <HeaderNav>
       <Ul>
         <li>
-          <NavLink to="/categories">
-            Categories
-          </NavLink>
+          <NavLink to="/categories">Categories</NavLink>
         </li>
         <li>
           <NavLink to="/add">Add recipes</NavLink>
@@ -23,9 +20,7 @@ const Navigation = () => {
           <NavLink to="/favorite">Favorites</NavLink>
         </li>
         <li>
-          <NavLink to="/shopping-list">
-            Shopping list
-          </NavLink>
+          <NavLink to="/shopping-list">Shopping list</NavLink>
         </li>
         <li>
           <NavLink to="/search">
