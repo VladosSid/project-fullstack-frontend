@@ -13,6 +13,8 @@ export const Form = styled.form`
 `
 
 export const FormTitle = styled.h2`
+    margin-bottom: 18px;
+
     font-family: 'Poppins';
     font-style: normal;
     font-weight: 600;
