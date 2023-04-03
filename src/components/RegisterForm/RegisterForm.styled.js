@@ -3,11 +3,14 @@ import theme from '../../style/generalStyle';
 
 export const Container = styled.div`
     z-index: 3;
+
+    text-align: center;
 `
 
 export const Form = styled.form`
     border-radius: 30px;
     padding: 32px 28px 40px 28px;
+    margin-bottom: 18px;
 
     background-color: #2A2C36;
 `
@@ -15,6 +18,7 @@ export const Form = styled.form`
 export const FormTitle = styled.h2`
     margin-bottom: 18px;
 
+    text-align: left;
     font-family: 'Poppins';
     font-style: normal;
     font-weight: 600;
@@ -99,5 +103,24 @@ export const Button = styled.button`
     &:hover,
     &:focus {
         color: #22252A;
+    }
+`
+
+export const Redirect = styled.span`
+    text-decoration: underline;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.5;
+
+    color: #FAFAFA;
+
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover,
+    &:focus {
+        color: #8BAA36;
+        text-decoration: none;
     }
 `

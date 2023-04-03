@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { 
     FiUser, 
     FiMail, 
@@ -10,7 +11,8 @@ import {
     ListItem,
     Label,
     Input,
-    Button
+    Button,
+    Redirect
 } from "./RegisterForm.styled";
 
 const RegisterForm = () => {
@@ -67,7 +69,9 @@ const RegisterForm = () => {
                 </ul>
                 <Button type='submit'>Sign Up</Button>
             </Form>
-            {/* <Link to={"/login"}>Sign In</Link> */}
+            <Link to={"/login"}>
+                <Redirect>Sign In</Redirect>
+            </Link>
         </Container>
     )
 }
