@@ -1,10 +1,16 @@
 import RegisterForm from "components/RegisterForm";
+import {
+    Container,
+    Background
+} from "./RegisterPage.styled";
 
 const RegisterPage = () => {
     return (
-        <>
-            <RegisterForm />
-        </>
+        <Container>
+            <Background>
+                <RegisterForm />
+            </Background>
+        </Container>
     )
 }
 
