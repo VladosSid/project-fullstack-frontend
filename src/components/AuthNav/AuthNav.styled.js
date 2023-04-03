@@ -19,14 +19,15 @@ export const RegisterBtn = styled.button`
 
     background-color: #8BAA36;
     color: #FAFAFA;
-    /* add transition? */
+    
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
     font-family: 'Poppins';
     font-style: normal;
     font-weight: 400;
-    font-size: 16px;
+    font-size: 14px;
     line-height: 1.5;
-
+    
     &:hover,
     &:focus {
         background-color: #22252A; 
@@ -34,6 +35,7 @@ export const RegisterBtn = styled.button`
 
     @media ${theme.device.tablet} {
         padding: 22px 44px;
+        font-size: 16px;
     }
 `
 
@@ -46,12 +48,15 @@ export const SigninBtn = styled.button`
 
     background-color: transparent;
     color: #FAFAFA;
-    /* add transition? */
+
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
     font-family: 'Poppins';
     font-style: normal;
     font-weight: 400;
-    font-size: 16px;
+    font-size: 14px;
     line-height: 1.5;
 
     &:hover,
@@ -63,5 +68,6 @@ export const SigninBtn = styled.button`
 
     @media ${theme.device.tablet} {
         padding: 22px 44px;
+        font-size: 16px;
     }
 `
