@@ -6,7 +6,8 @@ import {
 import {
     Container,
     Form,
-    FormTitle
+    FormTitle,
+    Input
 } from "./RegisterForm.styled";
 
 const RegisterForm = () => {
@@ -22,9 +23,10 @@ const RegisterForm = () => {
                         >
                             <FiUser />
                         </label>
-                        <input 
+                        <Input 
                             type="text"
                             name="username"
+                            placeholder="Name"
                             id="usernameInput"
                             required
                         />
@@ -36,9 +38,10 @@ const RegisterForm = () => {
                         >
                             <FiMail />
                         </label>
-                        <input 
+                        <Input 
                             type="text"
-                            name="username"
+                            name="email"
+                            placeholder="Email"
                             id="emailInput"
                             required
                         />
@@ -50,9 +53,10 @@ const RegisterForm = () => {
                         >
                             <FiLock />
                         </label>
-                        <input 
+                        <Input 
                             type="text"
-                            name="username"
+                            name="password"
+                            placeholder="Password"
                             id="passwordInput"
                             required
                         />

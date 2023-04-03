@@ -32,3 +32,23 @@ export const FormTitle = styled.h2`
 
     }
 `
+
+export const Input = styled.input`
+    padding: 12px 14px;
+    border: 1px solid #FAFAFA;
+    border-radius: 6px;
+
+    background-color: transparent;
+
+    &::placeholder {
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 1.5;
+        letter-spacing: -0.02em;
+
+        color: #FAFAFA;
+        opacity: 0.8;
+    }
+`
