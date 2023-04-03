@@ -1,10 +1,13 @@
 {
   "files": {
     "main.css": "/project-fullstack-frontend/static/css/main.1276fa99.css",
-    "main.js": "/project-fullstack-frontend/static/js/main.d8ff1e67.js",
+    "main.js": "/project-fullstack-frontend/static/js/main.a93a5b9d.js",
     "static/media/bg-list-3x.png": "/project-fullstack-frontend/static/media/bg-list-3x.33628d6df40456852e08.png",
+    "static/media/AuthImgDesktop.png": "/project-fullstack-frontend/static/media/AuthImgDesktop.549be07b60dab8fc00fa.png",
     "static/media/WelcomePageBgDesktop.jpg": "/project-fullstack-frontend/static/media/WelcomePageBgDesktop.f31fc4303d48e5b012c6.jpg",
     "static/media/WelcomePageBgTablet.jpg": "/project-fullstack-frontend/static/media/WelcomePageBgTablet.7abf4f24790a74657a90.jpg",
+    "static/media/AuthImgTablet.png": "/project-fullstack-frontend/static/media/AuthImgTablet.73245f21375be7dcbb3d.png",
+    "static/media/AuthImgMobile.png": "/project-fullstack-frontend/static/media/AuthImgMobile.b85625f4b2da37e130bd.png",
     "static/media/WelcomePageBgMobile.jpg": "/project-fullstack-frontend/static/media/WelcomePageBgMobile.8aac0106e3b46109ca27.jpg",
     "static/media/ava.svg": "/project-fullstack-frontend/static/media/ava.b30184f18a6a67ace46a0d1adffc745e.svg",
     "static/media/camera.svg": "/project-fullstack-frontend/static/media/camera.64fb944f2bd998a99c7c9f5cf8ab6110.svg",
@@ -16,10 +19,10 @@
     "static/media/menu.svg": "/project-fullstack-frontend/static/media/menu.0e7a3ceba8d1c2ac98513490254e232d.svg",
     "static/media/chevron-down.svg": "/project-fullstack-frontend/static/media/chevron-down.6ca21e11e19f8046984073ff192ce57d.svg",
     "main.1276fa99.css.map": "/project-fullstack-frontend/static/css/main.1276fa99.css.map",
-    "main.d8ff1e67.js.map": "/project-fullstack-frontend/static/js/main.d8ff1e67.js.map"
+    "main.a93a5b9d.js.map": "/project-fullstack-frontend/static/js/main.a93a5b9d.js.map"
   },
   "entrypoints": [
     "static/css/main.1276fa99.css",
-    "static/js/main.d8ff1e67.js"
+    "static/js/main.a93a5b9d.js"
   ]
 }
