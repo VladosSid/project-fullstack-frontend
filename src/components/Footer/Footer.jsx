@@ -1,4 +1,5 @@
 import { MdOutlineEmail } from 'react-icons/md';
+import { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import logo from '../../images/Footer/logoFooter.png';
 import { UseSvg } from '../../helpers/useSvg/useSvg';
@@ -23,6 +24,7 @@ import {
 import { authOperations } from '../../redux/users';
 
 export function Footer() {
+  const [file, setFile] = useState(null);
   const dispatch = useDispatch();
 
   const setTest = e => {
@@ -34,7 +36,6 @@ export function Footer() {
           email: 'sidorsv.dev@meta.ua',
           password: '123456',
         })
-        // authOperations.logOut()
       );
     } catch (err) {
       console.log(err.message);
@@ -58,6 +59,21 @@ export function Footer() {
       console.log(err.message);
     }
   };
+
+  const uploadContent = e => {
+    e.preventDefault();
+    setFile(e.target.files[0]);
+
+    const formData = new FormData();
+
+    if (e.target.files[0]) {
+      formData.append('username', 'Vlados');
+      formData.append('img', file);
+
+      dispatch(authOperations.updateUserData(formData));
+    }
+  };
+
   return (
     <FooterBox>
       <FlexBox>
@@ -112,6 +128,13 @@ export function Footer() {
               type="text"
             />
           </div>
+
+          <input
+            type="file"
+            accept="image/png, image/jpeg"
+            id="contained-button-content"
+            onChange={e => uploadContent(e)}
+          />
 
           <Button type="button" onClick={e => setTest(e)}>
             Subcribe(LogIn)

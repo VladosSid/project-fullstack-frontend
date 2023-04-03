@@ -2,7 +2,7 @@ export const theme = {
   device: {
     mobail: 'screen and (min-width: 376px)',
     tablet: 'screen and (min-width: 769px)',
-    desktop: 'screen and (min-width: 1441px)',
+    desktop: 'screen and (min-width: 1240px)',
   },
 
   dark: {
