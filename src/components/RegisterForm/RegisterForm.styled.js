@@ -33,8 +33,33 @@ export const FormTitle = styled.h2`
     }
 `
 
+export const ListItem = styled.li`
+    position: relative;
+    margin-bottom: 12px;
+
+    &:last-of-type {
+        margin-bottom: 28px;
+    }
+`
+
+export const Label = styled.label`
+    
+
+    svg {
+        position: absolute;
+        top: 12px;
+        left: 14px;
+
+        width: 18px;
+        height: 18px;
+
+        stroke: #FAFAFA;
+        opacity: 0.8;
+    }
+`
+
 export const Input = styled.input`
-    padding: 12px 14px;
+    padding: 12px 14px 12px 40px;
     border: 1px solid #FAFAFA;
     border-radius: 6px;
 

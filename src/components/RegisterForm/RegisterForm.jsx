@@ -7,6 +7,8 @@ import {
     Container,
     Form,
     FormTitle,
+    ListItem,
+    Label,
     Input
 } from "./RegisterForm.styled";
 
@@ -17,12 +19,12 @@ const RegisterForm = () => {
                 <FormTitle>Registration</FormTitle>
                 <ul>
                     {/* username */}
-                    <li>
-                        <label
+                    <ListItem>
+                        <Label
                             htmlFor="usernameInput"
                         >
                             <FiUser />
-                        </label>
+                        </Label>
                         <Input 
                             type="text"
                             name="username"
@@ -30,14 +32,14 @@ const RegisterForm = () => {
                             id="usernameInput"
                             required
                         />
-                    </li>
+                    </ListItem>
                     {/* email */}
-                    <li>
-                        <label
+                    <ListItem>
+                        <Label
                             htmlFor="emailInput"
                         >
                             <FiMail />
-                        </label>
+                        </Label>
                         <Input 
                             type="text"
                             name="email"
@@ -45,14 +47,14 @@ const RegisterForm = () => {
                             id="emailInput"
                             required
                         />
-                    </li>
+                    </ListItem>
                     {/* password */}
-                    <li>
-                        <label
+                    <ListItem>
+                        <Label
                             htmlFor="passwordInput"
                         >
                             <FiLock />
-                        </label>
+                        </Label>
                         <Input 
                             type="text"
                             name="password"
@@ -60,7 +62,7 @@ const RegisterForm = () => {
                             id="passwordInput"
                             required
                         />
-                    </li>
+                    </ListItem>
                 </ul>
                 <button type='submit'>Sign Up</button>
             </Form>
