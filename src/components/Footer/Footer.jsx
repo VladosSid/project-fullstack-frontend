@@ -1,5 +1,5 @@
 import { MdOutlineEmail } from 'react-icons/md';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import logo from '../../images/Footer/logoFooter.png';
 import { UseSvg } from '../../helpers/useSvg/useSvg';
@@ -22,8 +22,6 @@ import {
 } from './Footer.styled';
 
 import { authOperations } from '../../redux/users';
-
-import { UpdateUserData } from '../../helpers/request';
 
 export function Footer() {
   const [file, setFile] = useState(null);
@@ -70,7 +68,7 @@ export function Footer() {
 
     if (e.target.files[0]) {
       formData.append('username', 'Vlados');
-      formData.append('img', e.target.files[0]);
+      formData.append('img', file);
 
       dispatch(authOperations.updateUserData(formData));
     }
