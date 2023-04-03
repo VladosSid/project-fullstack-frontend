@@ -77,3 +77,27 @@ export const Input = styled.input`
         opacity: 0.8;
     }
 `
+
+export const Button = styled.button`
+    padding: 12px 0;
+    width: 100%;
+    border-radius: 6px;
+    border: none;
+
+    text-align: center;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.12;
+
+    background-color: #8BAA36;
+    color: #FAFAFA;
+
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover,
+    &:focus {
+        color: #22252A;
+    }
+`

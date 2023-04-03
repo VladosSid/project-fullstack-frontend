@@ -9,7 +9,8 @@ import {
     FormTitle,
     ListItem,
     Label,
-    Input
+    Input,
+    Button
 } from "./RegisterForm.styled";
 
 const RegisterForm = () => {
@@ -64,7 +65,7 @@ const RegisterForm = () => {
                         />
                     </ListItem>
                 </ul>
-                <button type='submit'>Sign Up</button>
+                <Button type='submit'>Sign Up</Button>
             </Form>
             {/* <Link to={"/login"}>Sign In</Link> */}
         </Container>
