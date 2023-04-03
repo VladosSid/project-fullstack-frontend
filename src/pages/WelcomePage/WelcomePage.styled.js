@@ -6,6 +6,11 @@ import TabletBg from "../../images/Auth/WelcomePageBgTablet.jpg";
 import DesktopBg from "../../images/Auth/WelcomePageBgDesktop.jpg";
 
 export const Container = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
   padding: 0 35px;
   background-image: url(${MobileBg});
   background-repeat: no-repeat;
