@@ -87,6 +87,13 @@ export const Input = styled.input`
 
     background-color: transparent;
 
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover,
+    &:focus {
+        border: 1px solid #8BAA36;
+    }
+
     &::placeholder {
         font-family: 'Poppins';
         font-style: normal;
