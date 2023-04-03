@@ -47,8 +47,8 @@ export const App = () => {
 
           <Route path="/shopping-list" element={<ShoppingListPage />} />
           <Route path="/search" element={<SearchPage />} />
+          <Route path="*" element={<NotFound />} />
         </Route>
-        <Route path="*" element={<NotFound />} />
       </Routes>
     </AppBox>
   );
