@@ -42,7 +42,7 @@ export const SearchBtn = styled.button`
   /* background: #22252a; */
 
   /* identical to box height */
-  background-color: #22252a;
+  /* background-color: #22252a; !!!!!*/
 
   border-radius: 24px 44px;
   border: 1px solid rgb(250, 250, 250);
@@ -52,4 +52,5 @@ export const SearchBtn = styled.button`
   font-weight: 400;
   font-size: 14px;
   line-height: 1.5;
+  background-color: ${props => (props.green ? '#8BAA36' : '#22252a')};
 `;
