@@ -3,13 +3,17 @@ import {
     FiMail, 
     FiLock 
 } from "react-icons/fi";
+import {
+    Container,
+    Form,
+    FormTitle
+} from "./RegisterForm.styled";
 
 const RegisterForm = () => {
     return (
-        // только разметка, стили позже
-        <div>
-            <h2>Registration</h2>
-            <form>
+        <Container>
+            <Form>
+                <FormTitle>Registration</FormTitle>
                 <ul>
                     {/* username */}
                     <li>
@@ -55,9 +59,9 @@ const RegisterForm = () => {
                     </li>
                 </ul>
                 <button type='submit'>Sign Up</button>
-            </form>
+            </Form>
             {/* <Link to={"/login"}>Sign In</Link> */}
-        </div>
+        </Container>
     )
 }
 
