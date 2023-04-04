@@ -1,10 +1,12 @@
 import { Title, Textarea } from "./RecipePreparation.styled"
 
+
+
 const RecipePreparationFields = ( {onChange} ) => {
     const handleValueSetInstructions = (e) => {
-        console.log(e.currentTarget.value)
-        onChange({instructions: e.currentTarget.value})
-
+            let value = e.currentTarget.value
+            let format = value.split(/\r|\n/);
+        onChange({instructions: value})
     }
 
 return(<>

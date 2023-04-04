@@ -19,7 +19,7 @@ import Notiflix from 'notiflix';
 const RecipeIngridientsFields = ({onChange}) => {
   const [count, setCount] = useState(0);
   const [ingridient, setIngridient] = useState([]);
-  const [ingridients, setIngridients] = useState(INGRIDIENTS);
+  const [ingredients, setIngredients] = useState(INGRIDIENTS);
   const [quantity, setQuantity] = useState(null);
 
   const handleValueSelectIngridient = (e) => {
@@ -27,9 +27,9 @@ const RecipeIngridientsFields = ({onChange}) => {
   const item = {
     id: e.value[Object.keys(e.value)].$oid
   }
-  const ingridients = {[index]: item}
+  const ingredients = {[index]: item}
   
-    onChange({ingridients: ingridients})
+    onChange({ingredients: ingredients})
  
 }
 
@@ -41,7 +41,7 @@ console.log(quantity)
   }
   const measure = {[index]: item}
   if(quantity) {
-  onChange({ingridients: measure})
+  onChange({ingredients: measure})
 }
 else return Notiflix.Notify.warning('Count field is empty')
 }
@@ -62,7 +62,7 @@ else return Notiflix.Notify.warning('Count field is empty')
       case 'minus':
         if (count > 0) {
           setCount(count - 1);
-          let newIingridients = ingridient
+          let newIingridients = ingredients
           newIingridients.pop()
           setIngridient(newIingridients)
         }
@@ -107,7 +107,7 @@ else return Notiflix.Notify.warning('Count field is empty')
       {ingridient.map((field, index) => (
         <IngridientsList key={index}>
           <IngridientField>
-            <CustomSelect key={index} id={index} onChange={handleValueSelectIngridient} className="react-select-container" classNamePrefix="react-select" options={ingridients.map(({ttl, _id}) =>({value:{[index]: _id}, label: ttl}))}  />
+            <CustomSelect key={index} id={index} onChange={handleValueSelectIngridient} className="react-select-container" classNamePrefix="react-select" options={ingredients.map(({ttl, _id}) =>({value:{[index]: _id}, label: ttl}))}  />
             <Quantity><InputQuantity onChange={(e) => setQuantity(e.currentTarget.value)} defaultValue="0"/>
             <CustomSelectUnit key={index} id={index} onChange={handleValueSelectMessure} placeholder="" classNamePrefix="react-select" options={UNIT.map((unit) =>({value:{[index]: unit}, label: unit}))} /></Quantity>
             <Delete value={index} onClick={deleteIngridientField}>

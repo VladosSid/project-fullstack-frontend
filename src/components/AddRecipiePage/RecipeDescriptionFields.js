@@ -76,19 +76,19 @@ const handleUploadClick = (event) => {
           onClick={() => document.querySelector('.input-file').click()}
         >
           <div>{image && <Photo src={image} alt="photo"/>}</div>
-          <InputFile type="file" className="input-file" accept="image/*" onChange={handleUploadClick}/>
+          <InputFile required={true} type="file" className="input-file" accept="image/*" onChange={handleUploadClick}/>
         </FilePicker>
         <FieldList>
         
-          <InputText type="text" onChange={handleValueSet} placeholder="Enter item title" id="title" />
-          <InputText type="text" onChange={handleValueSet} placeholder="Enter about recipe" id="about" />
+          <InputText required={true} type="text" onChange={handleValueSet} placeholder="Enter item title" id="title" />
+          <InputText required={true} type="text" onChange={handleValueSet} placeholder="Enter about recipe" id="about" />
           <Row>
             <InputText disabled={true} type="text" placeholder="Category" />
-            <CustomSelect  onChange={handleValueSelectCategory} defaultValue={categorys[0]} classNamePrefix="react-select" options={categorys} id="category" />
+            <CustomSelect required={true} onChange={handleValueSelectCategory} defaultValue={categorys[0]} classNamePrefix="react-select" options={categorys} id="category" />
           </Row>
           <Row>
             <InputText disabled={true} type="text" placeholder="Coocking time"  />
-            <CustomSelect onChange={handleValueSelectTime} defaultValue={step[0]} classNamePrefix="react-select" options={step} id="time"/>
+            <CustomSelect required={true} onChange={handleValueSelectTime} defaultValue={step[0]} classNamePrefix="react-select" options={step} id="time"/>
           </Row>
         </FieldList>
       </Desc>
