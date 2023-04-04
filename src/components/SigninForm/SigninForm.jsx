@@ -1,4 +1,7 @@
+import { useState } from "react";
+import { useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
+import { authOperations } from "../../redux/users";
 import {  
     FiMail, 
     FiLock 
@@ -16,9 +19,38 @@ import {
 } from "./SigninForm.styled";
 
 const SigninForm = () => {
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
+
+    const dispatch = useDispatch();
+
+    const handleChange = event => {
+        const { name, value } = event.currentTarget;
+        switch (name) {
+            case 'email':
+                return setEmail(value);
+            case 'password': 
+                return setPassword(value);
+            default:
+                return;
+        }
+    };
+    
+    const handleSubmit = event => {
+        event.preventDefault();
+        const userData = { email, password };
+        dispatch(authOperations.logIn(userData));
+        reset();
+    }
+
+    const reset = () => {
+        setEmail('');
+        setPassword('');
+    };
+
     return (
         <Container>
-            <Form>
+            <Form onSubmit={handleSubmit}>
                 <FormTitle>Sign In</FormTitle>
                 <List>
                     {/* email */}
@@ -29,11 +61,13 @@ const SigninForm = () => {
                             <FiMail />
                         </Label>
                         <Input 
-                            type="text"
+                            type="email"
                             name="email"
                             placeholder="Email"
                             id="emailInput"
                             required
+                            value={email}
+                            onChange={handleChange}
                         />
                     </ListItem>
                     {/* password */}
@@ -44,11 +78,13 @@ const SigninForm = () => {
                             <FiLock />
                         </Label>
                         <Input 
-                            type="text"
+                            type="password"
                             name="password"
                             placeholder="Password"
                             id="passwordInput"
                             required
+                            value={password}
+                            onChange={handleChange}
                         />
                     </ListItem>
                 </List>
