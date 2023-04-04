@@ -2,55 +2,57 @@ import styled from 'styled-components';
 import theme from '../../style/generalStyle';
 
 export const List = styled.ul`
-
+  // margin: 0 auto;
   list-style: none;
 `;
 export const Item = styled.li`
-
-  padding: 0 16px;
-  width: 343px;
+  padding: 0 8px;
+  max-width: 343px;
   border-bottom: 1px solid #e0e0e0;
 
   @media ${theme.device.tablet} {
     padding: 0 32px;
-    width: 704px;
+    max-width: 704px;
   }
 
   @media ${theme.device.desktop} {
     padding: 0 40px;
-    width: 1240px;
+    max-width: 1160px;
+    // width: 1240px;
   }
 `;
 
-export const ItemContayner = styled.div`
+export const ItemContainer = styled.div`
   display: flex;
     padding-top: 50px;
   padding-bottom: 50px;
 `;
 
-export const ImageContayner = styled.div`
+export const ImageContainer = styled.div`
   display: flex;
   width: 60px;
   height: 60px;
   border-radius: 6px;
   background: #ebf3d4;
   padding: 6px;
-  margin-right: 170px;
+  margin-right: 10px;
   @media ${theme.device.tablet} {
     width: 93px;
     height: 97px;
-    margin-right: auto;
+    margin-right: 16px;
   }
 `;
 
 export const TitleProduct = styled.div`
-  position: absolute;
-  left: 96px;
+  // position: absolute;
+  // left: 96px;
+
   width: 100px;
   font-family: 'Poppins';
   font-size: 10px;
   line-height: 12px;
   color: #3e4462;
+  margin-right: auto;
 
   @media ${theme.device.tablet} {
     left: 148px;
@@ -59,11 +61,11 @@ export const TitleProduct = styled.div`
     line-height: 24px;
   }
   @media ${theme.device.desktop} {
-    left: 170px;
+    left: 249px;
   } ;
 `;
 
-export const NumberContayner = styled.div`
+export const NumberContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;

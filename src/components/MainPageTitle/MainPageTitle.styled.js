@@ -35,16 +35,16 @@ export const BackgroundTopOne = styled.img`
   width: 8px;
   height: 8px;
   bottom: 105px;
-  right: 244px;
+  right: 236px;
   @media ${theme.device.tablet} {
     width: 14px;
     height: 14px;
     bottom: 136px;
-    right: 530px;
+    right: 495px;
   }
   @media ${theme.device.desktop} {
     bottom: 145px;
-    right: 1093px;
+    right: 993px;
   } ;
 `;
 
@@ -54,16 +54,16 @@ export const BackgroundTop = styled.img`
   width: 6px;
   height: 6px;
   bottom: 43px;
-  right: 120px;
+  right: 112px;
   @media ${theme.device.tablet} {
     width: 12px;
     height: 12px;
     bottom: 69px;
-    right: 315px;
+    right: 280px;
   }
   @media ${theme.device.desktop} {
     bottom: 65px;
-    right: 617px;
+    right: 517px;
   } ;
 `;
 export const BackgroundTopTwo = styled.img`
@@ -72,15 +72,15 @@ export const BackgroundTopTwo = styled.img`
   width: 8px;
   height: 8px;
   bottom: 73px;
-  right: 15px;
+  right: 7px;
   @media ${theme.device.tablet} {
     width: 14px;
     height: 14px;
     bottom: 123px;
-    right: 23px;
+    right: -9px;
   }
   @media ${theme.device.desktop} {
     bottom: 132px;
-    right: 171px;
+    right: 71px;
   } ;
 `;

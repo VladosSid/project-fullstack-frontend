@@ -3,8 +3,9 @@ import theme from '../../style/generalStyle';
 
 export const Main = styled.div`
   position: relative;
-  padding: 0 16px;
+  padding: 0 8px;
   margin: 0 auto;
+  width: 375px;
 
   @media ${theme.device.tablet} {
     padding: 0 32px;
