@@ -1,3 +1,5 @@
+import { useState } from 'react';
+import { useDispatch } from 'react-redux';
 import { Link } from "react-router-dom";
 import {  
     FiMail, 
@@ -7,6 +9,7 @@ import {
     Container,
     Form,
     FormTitle,
+    List,
     ListItem,
     Label,
     Input,
@@ -16,11 +19,10 @@ import {
 
 const SigninForm = () => {
     return (
-        // только разметка, стили позже
         <Container>
             <Form>
                 <FormTitle>Sign In</FormTitle>
-                <ul>
+                <List>
                     {/* email */}
                     <ListItem>
                         <Label
@@ -51,7 +53,7 @@ const SigninForm = () => {
                             required
                         />
                     </ListItem>
-                </ul>
+                </List>
                 <Button type='submit'>Sign In</Button>
             </Form>
             <Link to={"/register"}>

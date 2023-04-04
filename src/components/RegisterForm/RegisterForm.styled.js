@@ -43,6 +43,10 @@ export const FormTitle = styled.h2`
     }
 `
 
+export const List = styled.ul`
+    list-style: none;
+`
+
 export const ListItem = styled.li`
     position: relative;
     margin-bottom: 12px;

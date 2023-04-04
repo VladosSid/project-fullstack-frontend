@@ -44,6 +44,9 @@ export const FormTitle = styled.h2`
         line-height: 1.07;
     }
 `
+export const List = styled.ul`
+    list-style: none;
+`
 
 export const ListItem = styled.li`
     position: relative;

@@ -8,6 +8,7 @@ import {
     Container,
     Form,
     FormTitle,
+    List,
     ListItem,
     Label,
     Input,
@@ -20,7 +21,7 @@ const RegisterForm = () => {
         <Container>
             <Form>
                 <FormTitle>Registration</FormTitle>
-                <ul>
+                <List>
                     {/* username */}
                     <ListItem>
                         <Label
@@ -66,7 +67,7 @@ const RegisterForm = () => {
                             required
                         />
                     </ListItem>
-                </ul>
+                </List>
                 <Button type='submit'>Sign Up</Button>
             </Form>
             <Link to={"/login"}>
