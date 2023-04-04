@@ -1,4 +1,7 @@
+import { useState } from "react";
+import { useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
+import { authOperations } from "../../redux/users";
 import { 
     FiUser, 
     FiMail, 
@@ -17,9 +20,42 @@ import {
 } from "./RegisterForm.styled";
 
 const RegisterForm = () => {
+    const [username, setUsername] = useState('');
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
+
+    const dispatch = useDispatch();
+
+    const handleChange = event => {
+        const { name, value } = event.currentTarget;
+        switch (name) {
+            case 'username':
+                return setUsername(value);
+            case 'email':
+                return setEmail(value);
+            case 'password': 
+                return setPassword(value);
+            default:
+                return;
+        }
+    };
+    
+    const handleSubmit = event => {
+        event.preventDefault();
+        const userData = { username, email, password };
+        dispatch(authOperations.register(userData));
+        reset();
+    }
+
+    const reset = () => {
+        setUsername('');
+        setEmail('');
+        setPassword('');
+    };
+
     return (
         <Container>
-            <Form>
+            <Form onSubmit={handleSubmit}>
                 <FormTitle>Registration</FormTitle>
                 <List>
                     {/* username */}
@@ -35,6 +71,8 @@ const RegisterForm = () => {
                             placeholder="Name"
                             id="usernameInput"
                             required
+                            value={username}
+                            onChange={handleChange}
                         />
                     </ListItem>
                     {/* email */}
@@ -45,11 +83,13 @@ const RegisterForm = () => {
                             <FiMail />
                         </Label>
                         <Input 
-                            type="text"
+                            type="email"
                             name="email"
                             placeholder="Email"
                             id="emailInput"
                             required
+                            value={email}
+                            onChange={handleChange}
                         />
                     </ListItem>
                     {/* password */}
@@ -60,11 +100,13 @@ const RegisterForm = () => {
                             <FiLock />
                         </Label>
                         <Input 
-                            type="text"
+                            type="password"
                             name="password"
                             placeholder="Password"
                             id="passwordInput"
                             required
+                            value={password}
+                            onChange={handleChange}
                         />
                     </ListItem>
                 </List>
