@@ -19,30 +19,32 @@ import Notiflix from 'notiflix';
 const RecipeIngridientsFields = ({ onChange }) => {
   const [count, setCount] = useState(0);
   const [ingridient, setIngridient] = useState([]);
-  const [ingridients, setIngridients] = useState(INGRIDIENTS); // eslint-disable-line
+  const [ingredients, setIngredients] = useState(INGRIDIENTS);
   const [quantity, setQuantity] = useState(null);
 
-  const handleValueSelectIngridient = e => {
-    const index = Object.keys(e.value);
-    const item = {
-      id: e.value[Object.keys(e.value)].$oid,
-    };
-    const ingridients = { [index]: item };
+  const handleValueSelectIngridient = (e) => {
+  const index = Object.keys(e.value)
+  const item = {
+    id: e.value[Object.keys(e.value)].$oid
+  }
+  const ingredients = {[index]: item}
+  
+    onChange({ingredients: ingredients})
+ 
+}
 
-    onChange({ ingridients: ingridients });
-  };
-
-  const handleValueSelectMessure = e => {
-    const index = Object.keys(e.value);
-    console.log(quantity);
-    const item = {
-      measure: quantity + e.value[Object.keys(e.value)],
-    };
-    const measure = { [index]: item };
-    if (quantity) {
-      onChange({ ingridients: measure });
-    } else return Notiflix.Notify.warning('Count field is empty');
-  };
+const handleValueSelectMessure = (e) => {
+  const index = Object.keys(e.value)
+console.log(quantity)
+  const item = {
+    measure: (quantity+e.value[Object.keys(e.value)])
+  }
+  const measure = {[index]: item}
+  if(quantity) {
+  onChange({ingredients: measure})
+}
+else return Notiflix.Notify.warning('Count field is empty')
+}
 
   const UNIT = ['tbs', 'tsp', 'kg', 'g'];
 
@@ -60,9 +62,9 @@ const RecipeIngridientsFields = ({ onChange }) => {
       case 'minus':
         if (count > 0) {
           setCount(count - 1);
-          let newIingridients = ingridient;
-          newIingridients.pop();
-          setIngridient(newIingridients);
+          let newIingridients = ingredients
+          newIingridients.pop()
+          setIngridient(newIingridients)
         }
         break;
       case 'plus':
@@ -105,6 +107,9 @@ const RecipeIngridientsFields = ({ onChange }) => {
       {ingridient.map((field, index) => (
         <IngridientsList key={index}>
           <IngridientField>
+            <CustomSelect key={index} id={index} onChange={handleValueSelectIngridient} className="react-select-container" classNamePrefix="react-select" options={ingredients.map(({ttl, _id}) =>({value:{[index]: _id}, label: ttl}))}  />
+            <Quantity><InputQuantity onChange={(e) => setQuantity(e.currentTarget.value)} defaultValue="0"/>
+            <CustomSelectUnit key={index} id={index} onChange={handleValueSelectMessure} placeholder="" classNamePrefix="react-select" options={UNIT.map((unit) =>({value:{[index]: unit}, label: unit}))} /></Quantity>
             <CustomSelect
               key={index}
               id={index}

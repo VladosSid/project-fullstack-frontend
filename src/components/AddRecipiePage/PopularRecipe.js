@@ -1,27 +1,34 @@
 import { useState } from 'react';
 import { Title } from './RecipeIngridientsFields.styled';
-import { Col, Label, Recipe, Thumb, Desc, Recipes, Popular } from './PopularRecipe.styled';
+import {
+  Col,
+  Label,
+  Recipe,
+  Thumb,
+  Desc,
+  Recipes,
+  Popular,
+} from './PopularRecipe.styled';
 import RECIPE from './recipes.json';
 
 const PopularRecipe = () => {
-  const [recipes, setRecipes] = useState([]);
-  if(!recipes.length) {
-    setRecipes(RECIPE)
-  }
+  const [recipes, setRecipes] = useState(RECIPE);
+  const [viewport, setViewport] = useState(window.visualViewport.width);
 
   return (
     <Popular>
       <Title>Popular Recipe</Title>
       <Recipes>
-        {recipes && recipes.map(({ title, description, thumb }) => (
-          <Recipe key={title}>
-            <Thumb src={thumb} alt={title} />
-            <Col>
-            <Label>{title}</Label>
-            <Desc>{description}</Desc>
-            </Col>
-          </Recipe>
-        ))}
+        {recipes &&
+          recipes.map(({ title, description, thumb }) => (
+            <Recipe key={title}>
+              <Thumb src={thumb} alt={title} />
+              <Col>
+                <Label>{title}</Label>
+                <Desc>{description}</Desc>
+              </Col>
+            </Recipe>
+          ))}
       </Recipes>
     </Popular>
   );
