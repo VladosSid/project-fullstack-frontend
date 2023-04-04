@@ -16,7 +16,7 @@ const UserLogo = () => {
         <img src={ava} alt="avatar" />
         <p>Olena</p>
       </UserLogoBtn>
-      {isOpen && <UserLogoModal />}
+      <UserLogoModal isOpen={isOpen} clickToggle={clickToggle} />
     </>
   );
 };
