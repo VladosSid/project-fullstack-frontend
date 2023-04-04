@@ -12,8 +12,8 @@ import {
 import RECIPE from './recipes.json';
 
 const PopularRecipe = () => {
-  const [recipes, setRecipes] = useState(RECIPE);
-  const [viewport, setViewport] = useState(window.visualViewport.width);
+  const [recipes, setRecipes] = useState(RECIPE); // eslint-disable-line
+  // const [viewport, setViewport] = useState(window.visualViewport.width);
 
   return (
     <Popular>
