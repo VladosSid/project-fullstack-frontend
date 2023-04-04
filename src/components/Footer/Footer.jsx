@@ -1,5 +1,8 @@
 import { MdOutlineEmail } from 'react-icons/md';
-// import { useState } from 'react';
+
+import { useState } from 'react';
+
+
 // import { useDispatch } from 'react-redux';
 import logo from '../../images/Footer/logoFooter.png';
 import { UseSvg } from '../../helpers/useSvg/useSvg';
@@ -19,7 +22,10 @@ import {
   LabelForm,
   ListSocialNetworks,
   ImgSocial,
+  BoxAfter,
 } from './Footer.styled';
+
+import { MainContainer } from '../MainContainer/MainContainer';
 
 // import { authOperations } from '../../redux/users';
 
@@ -30,11 +36,14 @@ import {
 export function Footer() {
   // const [file, setFile] = useState(null);
   // const dispatch = useDispatch();
-  // const [email, setEmail] = useState('')
+  const [email, setEmail] = useState('');
 
-  // const  = e => {
-  //   console.log(e);
-  // }
+  const emailSet = e => {
+    console.log(e);
+    setEmail(e.target.value);
+
+    console.log('123', email);
+  };
   // const setTest = async e => {
   //   e.preventDefault();
 
@@ -94,74 +103,77 @@ export function Footer() {
   // };
 
   return (
-    <FooterBox>
-      <FlexBox>
-        <div>
-          <BoxLogo>
-            {/* <a href="#"> */}
-            <img src={logo} alt="" />
-            <TextLogo>So Yummy</TextLogo>
-            {/* </a> */}
-          </BoxLogo>
+    <>
+      <FooterBox>
+        <MainContainer>
+          <FlexBox>
+            <div>
+              <BoxLogo>
+                {/* <a href="#"> */}
+                <img src={logo} alt="" />
+                <TextLogo>So Yummy</TextLogo>
+                {/* </a> */}
+              </BoxLogo>
 
-          <ListDescrition>
-            <li>Database of recipes that can be replenished </li>
-            <li>
-              Flexible search for desired and unwanted <br />
-              ingredients
-            </li>
-            <li>Ability to add your own recipes with photos</li>
-            <li>Convenient and easy to use</li>
-          </ListDescrition>
-        </div>
+              <ListDescrition>
+                <li>Database of recipes that can be replenished </li>
+                <li>
+                  Flexible search for desired and unwanted <br />
+                  ingredients
+                </li>
+                <li>Ability to add your own recipes with photos</li>
+                <li>Convenient and easy to use</li>
+              </ListDescrition>
+            </div>
 
-        <NavList>
-          <li>Ingredients</li>
-          <li>Add recipes</li>
-          <li>My recipes</li>
-          <li>Favorite</li>
-          <li>Shopping list</li>
-        </NavList>
+            <NavList>
+              <li>Ingredients</li>
+              <li>Add recipes</li>
+              <li>My recipes</li>
+              <li>Favorite</li>
+              <li>Shopping list</li>
+            </NavList>
 
-        <BoxForm>
-          <BoxTitle>
-            <Title>Subscribe to our Newsletter</Title>
+            <BoxForm>
+              <BoxTitle>
+                <Title>Subscribe to our Newsletter</Title>
 
-            <Text>
-              Subscribe up to our newsletter. Be in touch with <br /> latest
-              news and special offers, etc.
-            </Text>
-          </BoxTitle>
-          <div
-            style={{
-              position: 'relative',
-            }}
-          >
-            <LabelForm>
-              <MdOutlineEmail style={{ scale: '1.7', fill: '#fff' }} />
-            </LabelForm>
+                <Text>
+                  Subscribe up to our newsletter. Be in touch with <br /> latest
+                  news and special offers, etc.
+                </Text>
+              </BoxTitle>
+              <div
+                style={{
+                  position: 'relative',
+                }}
+              >
+                <LabelForm>
+                  <MdOutlineEmail style={{ scale: '1.7', fill: '#fff' }} />
+                </LabelForm>
 
-            <Input
-              placeholder="Enter your email address"
-              name="email"
-              type="text"
-            />
-          </div>
+                <Input
+                  placeholder="Enter your email address"
+                  name="email"
+                  type="text"
+                  onChange={e => emailSet(e)}
+                />
+              </div>
 
-          {/* <input
+              {/* <input
             type="file"
             accept="image/png, image/jpeg"
             id="contained-button-content"
             onChange={e => uploadContent(e)}
           /> */}
 
-          <Button
-            type="button"
-            // onClick={e => setTest(e)}
-          >
-            Subcribe(LogIn)
-          </Button>
-          {/* <Button type="button" onClick={e => setTestOut(e)}>
+              <Button
+                type="button"
+                // onClick={e => setTest(e)}
+              >
+                Subcribe(LogIn)
+              </Button>
+              {/* <Button type="button" onClick={e => setTestOut(e)}>
             LogOuth
           </Button>
           <Button type="button" onClick={e => setTestCurrent(e)}>
@@ -170,25 +182,33 @@ export function Footer() {
           <Button type="button" onClick={e => setCategory(e)}>
             Category
           </Button> */}
-        </BoxForm>
-      </FlexBox>
+            </BoxForm>
+          </FlexBox>
 
-      <ListSocialNetworks>
-        <ImgSocial>
-          <UseSvg id="facebook" />
-        </ImgSocial>
-        <ImgSocial>
-          <UseSvg id="youtube" />
-        </ImgSocial>
+          <ListSocialNetworks>
+            <ImgSocial>
+              <UseSvg id="facebook" />
+            </ImgSocial>
+            <ImgSocial>
+              <UseSvg id="youtube" />
+            </ImgSocial>
 
-        <ImgSocial>
-          <UseSvg id="twit" />
-        </ImgSocial>
-        <ImgSocial>
-          <UseSvg id="inst" />
-        </ImgSocial>
-      </ListSocialNetworks>
-    </FooterBox>
+            <ImgSocial>
+              <UseSvg id="twit" />
+            </ImgSocial>
+            <ImgSocial>
+              <UseSvg id="inst" />
+            </ImgSocial>
+          </ListSocialNetworks>
+        </MainContainer>
+      </FooterBox>
+      <MainContainer>
+        <BoxAfter>
+          <span>© 2023 All Rights Reserved.</span>
+          <span>Terms of Service</span>
+        </BoxAfter>
+      </MainContainer>
+    </>
   );
 }
 
