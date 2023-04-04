@@ -1,9 +1,15 @@
 import { Title, Textarea } from "./RecipePreparation.styled"
 
-const RecipePreparationFields = () => {
+const RecipePreparationFields = ( {onChange} ) => {
+    const handleValueSetInstructions = (e) => {
+        console.log(e.currentTarget.value)
+        onChange({instructions: e.currentTarget.value})
+
+    }
+
 return(<>
     <Title>Recipe Preparation</Title>
-    <Textarea placeholder="Enter recipe"></Textarea>
+    <Textarea onChange={handleValueSetInstructions} placeholder="Enter recipe"></Textarea>
     </>
 )
 }
