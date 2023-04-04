@@ -1,5 +1,5 @@
 import { MdOutlineEmail } from 'react-icons/md';
-import { useState } from 'react';
+// import { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import logo from '../../images/Footer/logoFooter.png';
 import { UseSvg } from '../../helpers/useSvg/useSvg';
@@ -21,20 +21,20 @@ import {
   ImgSocial,
 } from './Footer.styled';
 
-import { authOperations } from '../../redux/users';
+// import { authOperations } from '../../redux/users';
 
-import { recipeOperations } from '../../redux/recipe';
+// import { recipeOperations } from '../../redux/recipe';
 
-import { queryBackEnd } from '../../helpers/request';
+// import { queryBackEnd } from '../../helpers/request';
 
 export function Footer() {
   // const [file, setFile] = useState(null);
-  const dispatch = useDispatch();
-  const [email, setEmail] = useState('')
+  // const dispatch = useDispatch();
+  // const [email, setEmail] = useState('')
 
-  const  = e => {
-    console.log(e);
-  }
+  // const  = e => {
+  //   console.log(e);
+  // }
   // const setTest = async e => {
   //   e.preventDefault();
 
