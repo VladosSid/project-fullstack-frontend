@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/project-fullstack-frontend/static/css/main.3a858f9d.css",
-    "main.js": "/project-fullstack-frontend/static/js/main.9c75b450.js",
+    "main.js": "/project-fullstack-frontend/static/js/main.f1876609.js",
     "static/media/bg-list-3x.png": "/project-fullstack-frontend/static/media/bg-list-3x.33628d6df40456852e08.png",
     "static/media/AuthImgDesktop.png": "/project-fullstack-frontend/static/media/AuthImgDesktop.549be07b60dab8fc00fa.png",
     "static/media/WelcomePageBgDesktop.jpg": "/project-fullstack-frontend/static/media/WelcomePageBgDesktop.f31fc4303d48e5b012c6.jpg",
@@ -26,10 +26,10 @@
     "static/media/menu.svg": "/project-fullstack-frontend/static/media/menu.0e7a3ceba8d1c2ac98513490254e232d.svg",
     "static/media/chevron-down.svg": "/project-fullstack-frontend/static/media/chevron-down.6ca21e11e19f8046984073ff192ce57d.svg",
     "main.3a858f9d.css.map": "/project-fullstack-frontend/static/css/main.3a858f9d.css.map",
-    "main.9c75b450.js.map": "/project-fullstack-frontend/static/js/main.9c75b450.js.map"
+    "main.f1876609.js.map": "/project-fullstack-frontend/static/js/main.f1876609.js.map"
   },
   "entrypoints": [
     "static/css/main.3a858f9d.css",
-    "static/js/main.9c75b450.js"
+    "static/js/main.f1876609.js"
   ]
 }
