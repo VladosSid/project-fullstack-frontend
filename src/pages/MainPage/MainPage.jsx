@@ -14,7 +14,7 @@ import {
 
 import MainPageHero from 'components/MainPageHero';
 import DishCard from 'components/DishCard';
-import createsearchUrl from 'helpers/createSearchUrl';
+import { createCategoryUrl, createSearchUrl } from 'helpers/createSearchUrl';
 //--------------------------------------
 export default function MainPage() {
   const location = useLocation();
@@ -40,18 +40,24 @@ export default function MainPage() {
 
   useEffect(() => {
     instanceBacEnd.defaults.headers.common.Authorization =
-      'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDI4NzUwYzFiNzM4ODYyOTFmZjg2NjEiLCJpYXQiOjE2ODAzNzMwMjZ9.ymP8t20SkiGApZlELcfcz82ilJZ3AUN_Ax2PBk8eHvI';
-    let queryQuantity = 1;
-
-    if (width < 1441) {
+      'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDI4NGEyNDI5ODkxOTJkMDJkOTc1ZGMiLCJpYXQiOjE2ODAzNjQzOTB9.F6KumBIsfhDh32UmksQgN3JqdFUpxwqq0ifHBL8dq3A';
+    let queryQuantity;
+    if (width >= 769 && width < 1441) {
       queryQuantity = 2;
-    }
-    if (width < 769) {
+    } else if (width > 1441) {
+      queryQuantity = 4;
+    } else if (width < 769) {
       queryQuantity = 1;
     }
-    if (width >= 1441) {
-      queryQuantity = 4;
-    }
+    // if (width < 1441) {
+    //   queryQuantity = 2;
+    // }
+    // if (width < 769) {
+    //   queryQuantity = 1;
+    // }
+    // if (width >= 1441) {
+    //   queryQuantity = 4;
+    // }
     instanceBacEnd
       .get(`/recipes/main-page?query=${queryQuantity}`)
 
@@ -77,8 +83,17 @@ export default function MainPage() {
     console.log('recipes', recipes);
     // const nextQuery = query !== '' ? { query } : {};
     // setSearchParams(nextQuery);
-    const searchUrl = createsearchUrl(query);
+    const searchUrl = createSearchUrl(query);
     navigate(searchUrl);
+  };
+
+  const handleCategoryClick = category => {
+    console.log('category in Main', category);
+
+    // const nextQuery = query !== '' ? { query } : {};
+    // setSearchParams(nextQuery);
+    const categoryUrl = createCategoryUrl(category);
+    navigate(categoryUrl);
   };
   //-------------------
   return (
@@ -93,7 +108,9 @@ export default function MainPage() {
               <DishCard key={recipe._id} location={location} recipe={recipe} />
             ))}
 
-            <Button>See all</Button>
+            <Button onClick={() => handleCategoryClick(category)}>
+              See all
+            </Button>
           </div>
         ))}
       </Container>

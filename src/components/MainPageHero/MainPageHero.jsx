@@ -1,4 +1,4 @@
-import SearchBar from 'components/SearchBar';
+import SearchForm from 'components/SearchForm';
 import React from 'react';
 
 // import { useSearchParams } from 'react-router-dom';
@@ -9,7 +9,7 @@ export default function MainPageHero({ onSubm }) {
 
   return (
     <div>
-      <SearchBar onSubm={onSubm} />
+      <SearchForm onSubm={onSubm} />
     </div>
   );
 }
