@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/project-fullstack-frontend/static/css/main.286e001b.css",
-    "main.js": "/project-fullstack-frontend/static/js/main.9b3e2d12.js",
+    "main.css": "/project-fullstack-frontend/static/css/main.67a6545b.css",
+    "main.js": "/project-fullstack-frontend/static/js/main.9c3751ec.js",
     "static/media/bg-list-3x.png": "/project-fullstack-frontend/static/media/bg-list-3x.33628d6df40456852e08.png",
     "static/media/AuthImgDesktop.png": "/project-fullstack-frontend/static/media/AuthImgDesktop.549be07b60dab8fc00fa.png",
     "static/media/WelcomePageBgDesktop.jpg": "/project-fullstack-frontend/static/media/WelcomePageBgDesktop.f31fc4303d48e5b012c6.jpg",
@@ -20,16 +20,16 @@
     "static/media/camera.svg": "/project-fullstack-frontend/static/media/camera.64fb944f2bd998a99c7c9f5cf8ab6110.svg",
     "index.html": "/project-fullstack-frontend/index.html",
     "static/media/logo.svg": "/project-fullstack-frontend/static/media/logo.927dd7695b30c923da175e7879cb0f0d.svg",
+    "static/media/pen.svg": "/project-fullstack-frontend/static/media/pen.d7617ee24ea37b4a422693a0f1770dbc.svg",
     "static/media/search.svg": "/project-fullstack-frontend/static/media/search.2d6c8eb4d03192b8ece8dd107cf5062e.svg",
-    "static/media/plus.svg": "/project-fullstack-frontend/static/media/plus.8c86a0703a07c4d43afd9ddd1840f46f.svg",
     "static/media/x.svg": "/project-fullstack-frontend/static/media/x.4361f7124e50acd44864b5ffb9da59e7.svg",
     "static/media/menu.svg": "/project-fullstack-frontend/static/media/menu.0e7a3ceba8d1c2ac98513490254e232d.svg",
     "static/media/chevron-down.svg": "/project-fullstack-frontend/static/media/chevron-down.6ca21e11e19f8046984073ff192ce57d.svg",
-    "main.286e001b.css.map": "/project-fullstack-frontend/static/css/main.286e001b.css.map",
-    "main.9b3e2d12.js.map": "/project-fullstack-frontend/static/js/main.9b3e2d12.js.map"
+    "main.67a6545b.css.map": "/project-fullstack-frontend/static/css/main.67a6545b.css.map",
+    "main.9c3751ec.js.map": "/project-fullstack-frontend/static/js/main.9c3751ec.js.map"
   },
   "entrypoints": [
-    "static/css/main.286e001b.css",
-    "static/js/main.9b3e2d12.js"
+    "static/css/main.67a6545b.css",
+    "static/js/main.9c3751ec.js"
   ]
 }
