@@ -15,6 +15,7 @@ import {
 import storage from 'redux-persist/lib/storage';
 
 import authReducer from './users/auth-slice';
+import recipeReducer from './recipe/recipe-salice';
 
 // const middleware = [
 //   ...getDefaultMiddleware({
@@ -24,16 +25,22 @@ import authReducer from './users/auth-slice';
 //   }),
 // ];
 
-const persistConfig = {
+const persistConfigUser = {
   key: 'token',
   storage,
   whitelist: ['token'],
 };
 
+const persistConfigIngredients = {
+  key: 'ingredients',
+  storage,
+  whitelist: ['allIngredients'],
+};
+
 export const store = configureStore({
   reducer: {
-    auth: persistReducer(persistConfig, authReducer),
-    // contacts: contactsReducer,
+    auth: persistReducer(persistConfigUser, authReducer),
+    recipe: persistReducer(persistConfigIngredients, recipeReducer),
   },
 
   // middleware,

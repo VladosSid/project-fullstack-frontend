@@ -23,6 +23,8 @@ import {
 
 import { authOperations } from '../../redux/users';
 
+import { recipeOperations } from '../../redux/recipe';
+
 export function Footer() {
   const [file, setFile] = useState(null);
   const dispatch = useDispatch();
@@ -55,6 +57,15 @@ export function Footer() {
 
     try {
       dispatch(authOperations.fetchCurrentUser());
+    } catch (err) {
+      console.log(err.message);
+    }
+  };
+  const setCategory = e => {
+    e.preventDefault();
+
+    try {
+      dispatch(recipeOperations.allIngredients());
     } catch (err) {
       console.log(err.message);
     }
@@ -144,6 +155,9 @@ export function Footer() {
           </Button>
           <Button type="button" onClick={e => setTestCurrent(e)}>
             Current
+          </Button>
+          <Button type="button" onClick={e => setCategory(e)}>
+            Category
           </Button>
         </BoxForm>
       </FlexBox>
