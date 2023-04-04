@@ -7,7 +7,6 @@ const categoryList = createAsyncThunk(
   async (_, thunkAPI) => {
     try {
       const { data } = await instanceBacEnd.get('/recipes/category-list');
-      console.log(data.result.data);
       return data.result.data;
     } catch (err) {
       return thunkAPI.rejectWithValue(err.message);
@@ -20,7 +19,6 @@ const allIngredients = createAsyncThunk(
   async (_, thunkAPI) => {
     try {
       const { data } = await instanceBacEnd.get('/ingredients/list');
-      console.log(data);
       return data;
     } catch (err) {
       return thunkAPI.rejectWithValue(err.message);

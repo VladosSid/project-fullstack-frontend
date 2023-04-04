@@ -25,13 +25,17 @@ import { authOperations } from '../../redux/users';
 
 import { recipeOperations } from '../../redux/recipe';
 
+import { queryBackEnd } from '../../helpers/request';
+
 export function Footer() {
   const [file, setFile] = useState(null);
   const dispatch = useDispatch();
 
-  const setTest = e => {
+  const setTest = async e => {
     e.preventDefault();
 
+    const result = await queryBackEnd.querySubscribe('TestMail@gmail.com');
+    console.log(result);
     try {
       dispatch(
         authOperations.logIn({
