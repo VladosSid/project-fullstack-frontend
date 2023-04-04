@@ -6,8 +6,6 @@ const initialState = {
     name: null,
     email: null,
     avatarURL: null,
-    favorites: null,
-    shoppingList: null,
   },
   token: null,
   isLoggedIn: false,
@@ -47,7 +45,6 @@ export const authSlice = createSlice({
         name: null,
         email: null,
         avatarURL: null,
-        favorites: null,
       };
       state.token = null;
       state.isLoggedIn = false;
@@ -61,12 +58,11 @@ export const authSlice = createSlice({
       state.isGetingCurentUser = true;
     },
     [authOperations.fetchCurrentUser.fulfilled](state, action) {
-      const { email, username, avatarURL, favorites } = action.payload.user;
+      const { email, username, avatarURL } = action.payload.user;
 
       state.user.email = email;
       state.user.name = username;
       state.user.avatarURL = avatarURL;
-      state.user.favorites = favorites;
 
       state.isLoggedIn = true;
       state.isGetingCurentUser = false;

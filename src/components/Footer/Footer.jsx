@@ -28,66 +28,70 @@ import { recipeOperations } from '../../redux/recipe';
 import { queryBackEnd } from '../../helpers/request';
 
 export function Footer() {
-  const [file, setFile] = useState(null);
+  // const [file, setFile] = useState(null);
   const dispatch = useDispatch();
+  const [email, setEmail] = useState('')
 
-  const setTest = async e => {
-    e.preventDefault();
+  const  = e => {
+    console.log(e);
+  }
+  // const setTest = async e => {
+  //   e.preventDefault();
 
-    const result = await queryBackEnd.querySubscribe('TestMail@gmail.com');
-    console.log(result);
-    try {
-      dispatch(
-        authOperations.logIn({
-          email: 'sidorsv.dev@meta.ua',
-          password: '123456',
-        })
-      );
-    } catch (err) {
-      console.log(err.message);
-    }
-  };
-  const setTestOut = e => {
-    e.preventDefault();
+  //   const result = await queryBackEnd.queryCategoryList();
+  //   console.log(result);
+  //   try {
+  //     dispatch(
+  //       authOperations.logIn({
+  //         email: 'sidorsv.dev@meta.ua',
+  //         password: '123456',
+  //       })
+  //     );
+  //   } catch (err) {
+  //     console.log(err.message);
+  //   }
+  // };
+  // const setTestOut = e => {
+  //   e.preventDefault();
 
-    try {
-      dispatch(authOperations.logOut());
-    } catch (err) {
-      console.log(err.message);
-    }
-  };
-  const setTestCurrent = e => {
-    e.preventDefault();
+  //   try {
+  //     dispatch(authOperations.logOut());
+  //   } catch (err) {
+  //     console.log(err.message);
+  //   }
+  // };
+  // const setTestCurrent = e => {
+  //   e.preventDefault();
 
-    try {
-      dispatch(authOperations.fetchCurrentUser());
-    } catch (err) {
-      console.log(err.message);
-    }
-  };
-  const setCategory = e => {
-    e.preventDefault();
+  //   try {
+  //     dispatch(authOperations.fetchCurrentUser());
+  //   } catch (err) {
+  //     console.log(err.message);
+  //   }
+  // };
+  // const setCategory = e => {
+  //   e.preventDefault();
 
-    try {
-      dispatch(recipeOperations.allIngredients());
-    } catch (err) {
-      console.log(err.message);
-    }
-  };
+  //   try {
+  //     dispatch(recipeOperations.allIngredients());
+  //   } catch (err) {
+  //     console.log(err.message);
+  //   }
+  // };
 
-  const uploadContent = e => {
-    e.preventDefault();
-    setFile(e.target.files[0]);
+  // const uploadContent = e => {
+  //   e.preventDefault();
+  //   setFile(e.target.files[0]);
 
-    const formData = new FormData();
+  //   const formData = new FormData();
 
-    if (e.target.files[0]) {
-      formData.append('username', 'Vlados');
-      formData.append('img', file);
+  //   if (e.target.files[0]) {
+  //     formData.append('username', 'Vlados');
+  //     formData.append('img', file);
 
-      dispatch(authOperations.updateUserData(formData));
-    }
-  };
+  //     dispatch(authOperations.updateUserData(formData));
+  //   }
+  // };
 
   return (
     <FooterBox>
@@ -144,17 +148,20 @@ export function Footer() {
             />
           </div>
 
-          <input
+          {/* <input
             type="file"
             accept="image/png, image/jpeg"
             id="contained-button-content"
             onChange={e => uploadContent(e)}
-          />
+          /> */}
 
-          <Button type="button" onClick={e => setTest(e)}>
+          <Button
+            type="button"
+            // onClick={e => setTest(e)}
+          >
             Subcribe(LogIn)
           </Button>
-          <Button type="button" onClick={e => setTestOut(e)}>
+          {/* <Button type="button" onClick={e => setTestOut(e)}>
             LogOuth
           </Button>
           <Button type="button" onClick={e => setTestCurrent(e)}>
@@ -162,7 +169,7 @@ export function Footer() {
           </Button>
           <Button type="button" onClick={e => setCategory(e)}>
             Category
-          </Button>
+          </Button> */}
         </BoxForm>
       </FlexBox>
 
