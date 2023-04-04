@@ -1,23 +1,21 @@
 import { Route, Routes } from 'react-router-dom';
-
 import { AppBox } from './App.styled';
 
-// import AddRecipiePage from './AddRecipiePage/AddRecipePage';
-
-import MainPage from '../pages/MainPage/MainPage';
-import SearchPage from '../pages/SearchPage/SearchPage';
 import RestrictedRoute from './Routes/RestrictedRoute';
 import PrivateRoute from './Routes/PrivateRoute';
 
-import TemporaryMain from 'pages/TitlePageTemporary/TitlePageTemporary';
-import ShoppingListPage from 'pages/ShoppingListPage/ShoppingListPage';
-import NotFound from 'pages/NotFoundPage/NotFoundPage';
-import AddRecipiePage from 'pages/AddRecipePage/AddRecipePage';
+import WelcomePage from 'pages/WelcomePage/WelcomePage';
+import RegisterPage from 'pages/RegisterPage/RegisterPage';
+import SigninPage from 'pages/SigninPage/SigninPage';
 import SharedLayout from './SharedLayout/SharedLayout';
-import HomePage from '../pages/Example/HomePage';
+import MainPage from '../pages/MainPage/MainPage';
 import CategoriesPage from '../pages/CategoriesPage';
-// import SearchPage from '../pages/SearchPage/SearchPage';
-// import MainPage from 'pages/MainPage/MainPage';
+import AddRecipiePage from 'pages/AddRecipePage/AddRecipePage';
+import RecipePage from 'pages/RecipePage/RecipePage';
+import FavoritePage from 'pages/FavoritePage/FavoritePage';
+import ShoppingListPage from 'pages/ShoppingListPage/ShoppingListPage';
+import SearchPage from '../pages/SearchPage/SearchPage';
+import NotFound from 'pages/NotFoundPage/NotFoundPage';
 
 export const App = () => {
   return (
@@ -25,41 +23,34 @@ export const App = () => {
       <Routes>
         <Route
           index
-          element={
-            <RestrictedRoute component={<TemporaryMain />} redirectTo="/main" />
-          }
+          element={<RestrictedRoute component={<WelcomePage />} redirectTo="/main" />}
         />
-
-        {/* !!!! AUTHORIZATION AS AN EXAMPLE !!!! */}
-        {/* <Route
-          index
-          element={
-            <RestrictedRoute component={<AuthPage />} redirectTo="/main" />
-          }
-        /> */}
-        {/* <Route path="/register"
-          element={
-            <RestrictedRoute component={<RegisterPage />} redirectTo="/main" />
-          }
-        /> */}
-        {/* <Route path="/login"
-          element={
-            <RestrictedRoute component={<LoginPage />} redirectTo="/main" />
-          }
-        /> */}
+        <Route
+          path="/register"
+          element={<RestrictedRoute component={<RegisterPage />} redirectTo="/main" />}
+        />
+        <Route
+          path="/login"
+          element={<RestrictedRoute component={<SigninPage />} redirectTo="/main" />}
+        />
 
         <Route
           path="/"
           element={<PrivateRoute component={<SharedLayout />} redirectTo="/" />}
         >
-          <Route path="/example" element={<HomePage />} />
           <Route path="/home" element={<MainPage />} />
-          <Route path="/add" element={<AddRecipiePage />} />  
-          <Route path="/search" element={<SearchPage />} />
-          <Route path="/shopping-list" element={<ShoppingListPage />} />
+
+
           <Route path="/categories" element={<CategoriesPage />} />
+          <Route path="/add" element={<AddRecipiePage />} />  
+          <Route path="/my" element={<RecipePage />} />
+          <Route path="/favorite" element={<FavoritePage />} />
+
+
+          <Route path="/shopping-list" element={<ShoppingListPage />} />
+          <Route path="/search" element={<SearchPage />} />
+          <Route path="*" element={<NotFound />} />
         </Route>
-        <Route path="*" element={<NotFound />} />
       </Routes>
     </AppBox>
   );

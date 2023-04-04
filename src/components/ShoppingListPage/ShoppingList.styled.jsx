@@ -4,7 +4,7 @@ import theme from '../../style/generalStyle';
 export const Tabl = styled.div``;
 export const TitltList = styled.div`
   display: flex;
-  width: 357px;
+  max-width: 357px;
   background: #8baa36;
   border-radius: 8px;
   padding: 10px;
@@ -14,13 +14,13 @@ export const TitltList = styled.div`
   line-height: 18px;
 
   @media ${theme.device.tablet} {
-    width: 734px;
+    max-width: 734px;
     font-size: 18px;
     line-height: 27px;
     padding: 20px;
   }
   @media ${theme.device.desktop} {
-    width: 1240px;
+    max-width: 1240px;
     padding: 21px 40px;
   } ;
 `;

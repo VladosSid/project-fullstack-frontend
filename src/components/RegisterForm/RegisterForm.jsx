@@ -1,63 +1,78 @@
+import { Link } from "react-router-dom";
 import { 
     FiUser, 
     FiMail, 
     FiLock 
 } from "react-icons/fi";
+import {
+    Container,
+    Form,
+    FormTitle,
+    ListItem,
+    Label,
+    Input,
+    Button,
+    Redirect
+} from "./RegisterForm.styled";
 
 const RegisterForm = () => {
     return (
-        // только разметка, стили позже
-        <div>
-            <h2>Registration</h2>
-            <form>
+        <Container>
+            <Form>
+                <FormTitle>Registration</FormTitle>
                 <ul>
                     {/* username */}
-                    <li>
-                        <label
+                    <ListItem>
+                        <Label
                             htmlFor="usernameInput"
                         >
                             <FiUser />
-                        </label>
-                        <input 
+                        </Label>
+                        <Input 
                             type="text"
                             name="username"
+                            placeholder="Name"
                             id="usernameInput"
                             required
                         />
-                    </li>
+                    </ListItem>
                     {/* email */}
-                    <li>
-                        <label
+                    <ListItem>
+                        <Label
                             htmlFor="emailInput"
                         >
                             <FiMail />
-                        </label>
-                        <input 
+                        </Label>
+                        <Input 
                             type="text"
-                            name="username"
+                            name="email"
+                            placeholder="Email"
                             id="emailInput"
                             required
                         />
-                    </li>
+                    </ListItem>
                     {/* password */}
-                    <li>
-                        <label
+                    <ListItem>
+                        <Label
                             htmlFor="passwordInput"
                         >
                             <FiLock />
-                        </label>
-                        <input 
+                        </Label>
+                        <Input 
                             type="text"
-                            name="username"
+                            name="password"
+                            placeholder="Password"
                             id="passwordInput"
                             required
                         />
-                    </li>
+                    </ListItem>
                 </ul>
-                <button type='submit'>Sign Up</button>
-            </form>
-            {/* <Link to={"/login"}>Sign In</Link> */}
-        </div>
+                <Button type='submit'>Sign Up</Button>
+            </Form>
+            <Link to={"/login"}>
+                <Redirect>Sign In</Redirect>
+            </Link>
+        </Container>
     )
 }
 

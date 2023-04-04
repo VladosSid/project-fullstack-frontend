@@ -1,5 +1,6 @@
 import { MdOutlineEmail } from 'react-icons/md';
-// import { useDispatch } from 'react-redux';
+import { useState } from 'react';
+import { useDispatch } from 'react-redux';
 import logo from '../../images/Footer/logoFooter.png';
 import { UseSvg } from '../../helpers/useSvg/useSvg';
 import {
@@ -20,22 +21,74 @@ import {
   ImgSocial,
 } from './Footer.styled';
 
-// import { authOperations } from '../../redux/users';
+import { authOperations } from '../../redux/users';
+
+import { recipeOperations } from '../../redux/recipe';
+
+import { queryBackEnd } from '../../helpers/request';
 
 export function Footer() {
-  // const dispatch = useDispatch();
+  const [file, setFile] = useState(null);
+  const dispatch = useDispatch();
 
-  // try {
-  //   dispatch(
-  //     authOperations.register({
-  //       username: 'VladosTest',
-  //       email: 'sidorsv.dev@meta.ua',
-  //       password: '123456',
-  //     })
-  //   );
-  // } catch (err) {
-  //   console.log(err.message);
-  // }
+  const setTest = async e => {
+    e.preventDefault();
+
+    const result = await queryBackEnd.querySubscribe('TestMail@gmail.com');
+    console.log(result);
+    try {
+      dispatch(
+        authOperations.logIn({
+          email: 'sidorsv.dev@meta.ua',
+          password: '123456',
+        })
+      );
+    } catch (err) {
+      console.log(err.message);
+    }
+  };
+  const setTestOut = e => {
+    e.preventDefault();
+
+    try {
+      dispatch(authOperations.logOut());
+    } catch (err) {
+      console.log(err.message);
+    }
+  };
+  const setTestCurrent = e => {
+    e.preventDefault();
+
+    try {
+      dispatch(authOperations.fetchCurrentUser());
+    } catch (err) {
+      console.log(err.message);
+    }
+  };
+  const setCategory = e => {
+    e.preventDefault();
+
+    try {
+      dispatch(recipeOperations.allIngredients());
+    } catch (err) {
+      console.log(err.message);
+    }
+  };
+
+  const uploadContent = e => {
+    e.preventDefault();
+    setFile(e.target.files[0]);
+
+    const formData = new FormData();
+
+    if (e.target.files[0]) {
+      formData.append('username', 'Vlados');
+      formData.append('img', file);
+
+      dispatch(authOperations.updateUserData(formData));
+    }
+  };
+
   return (
     <FooterBox>
       <FlexBox>
@@ -91,7 +144,25 @@ export function Footer() {
             />
           </div>
 
-          <Button>Subcribe</Button>
+          <input
+            type="file"
+            accept="image/png, image/jpeg"
+            id="contained-button-content"
+            onChange={e => uploadContent(e)}
+          />
+
+          <Button type="button" onClick={e => setTest(e)}>
+            Subcribe(LogIn)
+          </Button>
+          <Button type="button" onClick={e => setTestOut(e)}>
+            LogOuth
+          </Button>
+          <Button type="button" onClick={e => setTestCurrent(e)}>
+            Current
+          </Button>
+          <Button type="button" onClick={e => setCategory(e)}>
+            Category
+          </Button>
         </BoxForm>
       </FlexBox>
 

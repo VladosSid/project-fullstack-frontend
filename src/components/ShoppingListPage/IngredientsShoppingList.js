@@ -1,33 +1,54 @@
 import {
   List,
   Item,
-  ImageContayner,
-  ItemContayner,
+  ImageContainer,
+  ItemContainer,
   TitleProduct,
-  NumberContayner,
+  NumberContainer,
   Remove,
   RemoveSvg,
 } from './IngredientsShoppingList.styled';
 import UseSvg from '../../helpers/useSvg/useSvg';
+import axios from 'axios';
 
-const IngredientsShoppingList = ingredients => {
-  const ingredientsArr = ingredients.ingredients;
+
+
+
+const IngredientsShoppingList = ({ingredients}) => {
+
+
+const deleteIngradient = async (contactId) => {
+    try {
+      const response = await axios.delete(`/ingradients/${contactId}`);
+      return response.data;
+    } catch (error) {
+      return console.log(error.message);
+    }
+  }
+
+
+  const ingredientsArr = ingredients;
   return (
     <List>
       {ingredientsArr.map(ingredient => (
         <Item key={ingredient._id.$oid}>
-          <ItemContayner>
-            <ImageContayner>
+          <ItemContainer>
+            <ImageContainer>
               <img src={ingredient.thb} alt="ingredient" />
-            </ImageContayner>
+            </ImageContainer>
             <TitleProduct>{ingredient.ttl}</TitleProduct>
-            <NumberContayner>5</NumberContayner>
+            <NumberContainer>5</NumberContainer>
             <Remove>
-              <RemoveSvg>
-              <UseSvg id="remove"/>
+              <RemoveSvg
+                onClick={() => {
+                  console.log(ingredient._id.$oid);
+                  deleteIngradient(ingredient._id.$oid);
+                }}
+              >
+                <UseSvg id="remove" />
               </RemoveSvg>
             </Remove>
-          </ItemContayner>
+          </ItemContainer>
         </Item>
       ))}
     </List>

@@ -13,17 +13,6 @@ export const BurgerBtn = styled.button`
 `;
 
 export const BackdropMobileMenu = styled.div`
-  position: absolute;
-  width: -webkit-fill-available;
-  height: 100vh;
-  top: 0;
-  left: 0;
-  overflow: hidden;
-  position: fixed;
-
-  background-color: #ebf3d4;
-
-  z-index: 150;
 
   @media ${theme.device.mobail} {
     padding: 20px 16px;
@@ -46,7 +35,7 @@ export const BackdropMobileMenu = styled.div`
     display: flex;
     align-items: center;
     justify-content: space-between;
-  }
+  } */
 `;
 
 export const CrossIcon = styled.button`

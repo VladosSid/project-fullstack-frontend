@@ -1,14 +1,25 @@
+import { Link } from "react-router-dom";
+import {
+    NavContainer,
+    RegisterBtn,
+    SigninBtn
+} from "./AuthNav.styled";
+
 const AuthNav = () => {
     return (
-        // пока набрасываю только структуру, стили добавлю позже
-        <div>
-            <button>
-                {/* <Link to={/register>} /> */}
-            </button>
-            <button>
-                {/* <Link to={/login>} /> */}
-            </button>
-        </div>
+        <NavContainer>
+            <Link to={"/register"} style={{color: "inherit"}}>
+                <RegisterBtn>
+                    Registration
+                </RegisterBtn>
+            </Link>
+            
+            <Link to={"/login"} style={{color: "inherit"}}>
+                <SigninBtn>
+                    Sign in
+                </SigninBtn>
+            </Link>
+        </NavContainer>
     )
 }
 

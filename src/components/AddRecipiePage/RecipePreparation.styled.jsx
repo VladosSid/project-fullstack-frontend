@@ -19,5 +19,11 @@ border: 0;
 border-radius: 6px;
 margin-top: 32px;
 box-sizing: border-box;
+resize: none;
+::placeholder {
+  font-size: 18px;
+  font-family: Poppins;
+  font-weight: 400;
+}
 `;
 
