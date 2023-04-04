@@ -85,8 +85,6 @@ const updateUserData = createAsyncThunk(
         },
       });
 
-      console.log(data);
-
       Notiflix.Notify.success(`Logout completed.`);
       return data;
     } catch (err) {
