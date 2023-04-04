@@ -6,23 +6,6 @@ export const FooterBox = styled.footer`
   background: #22252a;
   padding-top: 28px;
   padding-bottom: 18px;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  gap: 32px;
-
-  @media ${theme.device.tablet} {
-    padding-right: 32px;
-    padding-left: 32px;
-  }
-
-  @media ${theme.device.desktop} {
-    padding-right: 100px;
-    padding-left: 100px;
-    gap: 40px;
-  } ;
 `;
 
 export const FlexBox = styled.div`
@@ -101,10 +84,9 @@ export const TextLogo = styled.span`
 
 export const ListDescrition = styled.ul`
   display: none;
+  list-style: inside;
 
   @media ${theme.device.tablet} {
-    padding-left: 16px;
-
     font-family: 'Poppins';
     font-style: normal;
     font-weight: 400;
@@ -146,11 +128,13 @@ export const NavList = styled.ul`
 
   @media ${theme.device.tablet} {
     align-items: center;
-    margin-left: 180px;
+    margin-left: 194px;
+    margin-right: 56px;
   }
 
   @media screen and (min-width: 1281px) {
     margin-left: 0;
+    margin-right: 0;
   }
 
   @media ${theme.device.desktop} {
