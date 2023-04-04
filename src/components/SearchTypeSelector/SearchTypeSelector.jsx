@@ -8,7 +8,7 @@ import {
 
 export default function SearchTypeSelector({ onChange, selectedType }) {
   const options = [
-    { value: 'query', label: 'Title' },
+    { value: 'title', label: 'Title' },
     { value: 'ingredient', label: 'Ingredients' },
   ];
 
@@ -27,18 +27,6 @@ export default function SearchTypeSelector({ onChange, selectedType }) {
           onChange={handleChange}
         />
       </CustomSelectBox>
-      {/* <Select
-        options={options}
-        value={selectedOption}
-        onChange={handleChange}
-        styles={customStyles}
-      /> */}
     </>
   );
 }
-// const customStyles = {
-//   dropdownIndicator: (provided, state) => ({
-//     ...provided,
-//     color: '#8BAA36',
-//   }),
-// };

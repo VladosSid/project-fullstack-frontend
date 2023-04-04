@@ -1,9 +1,8 @@
-export function createSearchUrl(queryWord, type = 'query') {
+export function createSearchUrl(queryWord, type = 'title') {
   const searchWord = queryWord.toLowerCase();
   const encodedSearchTerm = encodeURIComponent(searchWord);
 
   const searchUrl = `/search?query=${encodedSearchTerm}&type=${type}`;
-  //   navigate(`/search?type=${searchType}&term=${encodedSearchTerm}`);
   console.log('searchUrl', searchUrl);
   return searchUrl;
 }

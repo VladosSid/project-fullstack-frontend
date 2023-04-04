@@ -1,15 +1,20 @@
-import React, { useState } from 'react';
+import React from 'react';
 import SearchForm from 'components/SearchForm/SearchForm';
 import { SearchTypeSelectorBox } from './SearchBar.styled';
 import SearchTypeSelector from 'components/SearchTypeSelector/SearchTypeSelector';
 
 //-------------
 export default function SearchBar(props) {
-  const { onTypeChange, selectedType, onSubm } = props;
+  const { onTypeChange, selectedType, onSubm, searchQuery } = props;
 
   return (
     <>
-      <SearchForm green onSubm={onSubm} marginBottom />
+      <SearchForm
+        green
+        onSubm={onSubm}
+        marginBottom
+        searchQuery={searchQuery}
+      />
       <SearchTypeSelectorBox>
         <SearchTypeSelector
           onChange={onTypeChange}

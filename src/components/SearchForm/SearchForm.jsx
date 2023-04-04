@@ -1,13 +1,16 @@
-// import { FaSistrix } from 'react-icons/fa';
 import React, { useState } from 'react';
 import { SearchesForm, SearchInput, SearchBtn } from './SearchForm.styled';
 //------------------------------------------
-export default function SearchForm({ green, onSubm, marginBottom }) {
-  const [searchWord, setSearchWord] = useState('');
+export default function SearchForm({
+  green,
+  onSubm,
+  marginBottom,
+  searchQuery,
+}) {
+  const [searchWord, setSearchWord] = useState(searchQuery || '');
 
   const handleChange = evt => {
     setSearchWord(evt.currentTarget.value);
-    // setSearchWord(evt.currentTarget.value.toLowerCase());
   };
 
   const handleSubmit = evt => {
@@ -17,7 +20,7 @@ export default function SearchForm({ green, onSubm, marginBottom }) {
       console.log('Please fill the search form ');
       return;
     }
-    console.log('in SForm', searchWord);
+
     onSubm(searchWord);
   };
   return (
