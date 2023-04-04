@@ -1,3 +1,4 @@
+import { useSelector } from 'react-redux';
 import IngredientsShoppingList from './IngredientsShoppingList';
 import {
   TitltList,
@@ -5,10 +6,29 @@ import {
   TitleListNumber,
   Tabl,
 } from './ShoppingList.styled';
+import ingredients from '../../ingredients.json';
+import authSelectors from '../../redux/users/auth-selectors'
+import recipeSelectors from '../../redux/recipe/recipe-selectors';
+//useState
 
-const ShoppingList = ({ingredients}) => {
+
+
+//   useEffect(() => {
+// console.log(ingredientsS);
+//   }, [ingredientsS]);
+
+const ShoppingList = () => {
+const ingredientsShopping = useSelector(authSelectors.getShoppingList);
+  console.log(ingredientsShopping);
+
+  const ollIngradients = useSelector(recipeSelectors.getAllIngredients);
+  console.log(ollIngradients);
+ 
+  
+
+
   return (
-     <Tabl>
+    <Tabl>
       <TitltList>
         <TitleListProducts>Products</TitleListProducts>
         <TitleListNumber>Number</TitleListNumber>

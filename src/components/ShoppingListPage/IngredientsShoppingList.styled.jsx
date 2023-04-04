@@ -7,25 +7,29 @@ export const List = styled.ul`
 `;
 export const Item = styled.li`
   padding: 0 8px;
-  max-width: 343px;
-  border-bottom: 1px solid #e0e0e0;
+  max-width: 100%;
+
 
   @media ${theme.device.tablet} {
-    padding: 0 32px;
+    // padding: 0 32px;
     max-width: 704px;
   }
 
   @media ${theme.device.desktop} {
-    padding: 0 40px;
+    padding: 0 41px;
     max-width: 1160px;
-    // width: 1240px;
   }
 `;
 
 export const ItemContainer = styled.div`
   display: flex;
-    padding-top: 50px;
+  padding-top: 50px;
   padding-bottom: 50px;
+  border-bottom: 1px solid #e0e0e0;
+
+  @media ${theme.device.desktop} {
+    padding-right: 32px;
+   }
 `;
 
 export const ImageContainer = styled.div`
