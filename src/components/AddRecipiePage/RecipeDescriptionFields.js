@@ -28,35 +28,29 @@ const CATEGORY = [
     100, 105, 110, 115, 120, 125, 130, 135, 140,
   ];
 
-const RecipeDescriptionFields = () => {
+const RecipeDescriptionFields = ({ onChange }) => {
 const [image, setImage] = useState(null)
-const [title, setTitle] = useState("")
-const [about, setAbout] = useState("")
-const [category, setCategory] = useState("")
-const [time, setTime] = useState("")
-
-console.log(title, about, category, time)
 
 const categorys = CATEGORY.map((category) =>({value: category, label: category}))
   const step = STEP.map((step) =>({value: step, label: step}))
 
-const handleValueSet = (e) => {
-  console.log(e.currentTarget.id)
-  console.log(e.currentTarget.value)
+  const handleValueSelectCategory = (e) => {
+    onChange({category: e.value})
+}
+
+  const handleValueSelectTime = (e) => {
+    onChange({time: e.value})
+
+  }
+
+  const handleValueSet = (e) => {
   // eslint-disable-next-line default-case
   switch (e.currentTarget.id) {
       case 'title':
-        setTitle(e.currentTarget.value)
+        onChange({title: e.currentTarget.value})
         break;
       case 'about':
-       setAbout(e.currentTarget.value)
-       break;
-       case 'category':
-       setCategory(e.currentTarget.value)
-       break;
-       case 'time':
-       setTime(e.currentTarget.value)
-       break;
+        onChange({description: e.currentTarget.value})
   };
 }
 
@@ -68,6 +62,7 @@ const handleUploadClick = (event) => {
       reader.readAsDataURL(file);
       reader.onloadend = function (e) {
         setImage(reader.result);
+        onChange({img: event.target.files[0]})
       };
     }
   };
@@ -89,11 +84,11 @@ const handleUploadClick = (event) => {
           <InputText type="text" onChange={handleValueSet} placeholder="Enter about recipe" id="about" />
           <Row>
             <InputText disabled={true} type="text" placeholder="Category" />
-            <CustomSelect onChange={handleValueSet} defaultValue={categorys[0]} classNamePrefix="react-select" options={categorys} id="category" />
+            <CustomSelect  onChange={handleValueSelectCategory} defaultValue={categorys[0]} classNamePrefix="react-select" options={categorys} id="category" />
           </Row>
           <Row>
             <InputText disabled={true} type="text" placeholder="Coocking time"  />
-            <CustomSelect defaultValue={step[0]} classNamePrefix="react-select" options={step} id="time"/>
+            <CustomSelect onChange={handleValueSelectTime} defaultValue={step[0]} classNamePrefix="react-select" options={step} id="time"/>
           </Row>
         </FieldList>
       </Desc>
