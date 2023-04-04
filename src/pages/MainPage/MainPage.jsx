@@ -62,7 +62,7 @@ export default function MainPage() {
       .get(`/recipes/main-page?query=${queryQuantity}`)
 
       .then(function (response) {
-        setRecipes(response.data.result);
+        setRecipes(response.data.result.data);
       })
       .catch(function (error) {
         console.log(error.message);
