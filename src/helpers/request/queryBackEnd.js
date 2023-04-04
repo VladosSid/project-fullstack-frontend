@@ -46,11 +46,42 @@ const querySubscribe = async email => {
   }
 };
 
+// отримати список своїх рецептів
+const queryFavorite = async () => {
+  try {
+    const { data } = await instanceBacEnd.get(`/ownRecipes`);
+    return data.result.data;
+  } catch (err) {
+    console.log(err.message);
+  }
+};
+
+// получить весь список категорий
+const queryCategoryList = async () => {
+  try {
+    const { data } = await instanceBacEnd.get('/recipes/category-list');
+    return data.result.data;
+  } catch (err) {
+    console.log(err.message);
+  }
+};
+
+// const queryFavoriteDelete = async id => {
+//   try {
+//     const { data } = await instanceBacEnd.delete(`/ownRecipes`, { email });
+//     return data.result.data;
+//   } catch (err) {
+//     console.log(err.message);
+//   }
+// };
+
 const queryBackEnd = {
   queryRecipeMinePage,
   queryRecipeCategori,
   queryRecipeId,
   querySubscribe,
+  queryFavorite,
+  queryCategoryList,
 };
 
 export default queryBackEnd;
