@@ -12,12 +12,12 @@ export default function SearchForm({ green, onSubm, marginBottom }) {
 
   const handleSubmit = evt => {
     evt.preventDefault();
-    console.log('in SB');
+
     if (searchWord.trim() === '') {
       console.log('Please fill the search form ');
       return;
     }
-
+    console.log('in SForm', searchWord);
     onSubm(searchWord);
   };
   return (
