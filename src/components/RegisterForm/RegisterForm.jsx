@@ -40,10 +40,15 @@ const RegisterForm = () => {
         }
     };
     
-    const handleSubmit = event => {
+    const handleSubmit = async event => {
         event.preventDefault();
         const userData = { username, email, password };
-        dispatch(authOperations.register(userData));
+        const registration = await dispatch(authOperations.register(userData));
+        
+        if (registration.meta.requestStatus === "fulfilled") {
+            dispatch(authOperations.logIn({ email, password }));
+        }
+
         reset();
     }
 
