@@ -36,6 +36,9 @@ background-color: #22252A;
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-bottom: 72px;
     @media ${theme.device.desktop} {
+      margin-bottom: 200px;
+
     }
 `;

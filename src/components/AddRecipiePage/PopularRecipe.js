@@ -1,4 +1,5 @@
-import { useState } from 'react';
+/* eslint-disable no-unused-vars */
+import { useEffect, useState } from 'react';
 import { Title } from './RecipeIngridientsFields.styled';
 import {
   Col,
@@ -12,8 +13,19 @@ import {
 import RECIPE from './recipes.json';
 
 const PopularRecipe = () => {
-  const [recipes, setRecipes] = useState(RECIPE);
+  // eslint-disable-next-line no-unused-vars
+  const [recipes, setRecipes] = useState([]);
   const [viewport, setViewport] = useState(window.visualViewport.width);
+
+  useEffect(() => {
+    if (viewport >= 769) {
+      setRecipes(RECIPE)
+    } else if (viewport < 769) {
+      let arr = RECIPE
+      arr.splice(2)
+      setRecipes(arr)
+    }
+  }, [viewport])
 
   return (
     <Popular>
