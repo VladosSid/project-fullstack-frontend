@@ -31,18 +31,18 @@ const deleteIngradient = async (contactId) => {
   return (
     <List>
       {ingredientsArr.map(ingredient => (
-        <Item key={ingredient._id.$oid}>
+        <Item key={ingredient._id}>
           <ItemContainer>
             <ImageContainer>
-              <img src={ingredient.thb} alt="ingredient" />
+              <img src={ingredient.imageUrl} alt="ingredient" />
             </ImageContainer>
-            <TitleProduct>{ingredient.ttl}</TitleProduct>
+            <TitleProduct>{ingredient.title}</TitleProduct>
             <NumberContainer>5</NumberContainer>
             <Remove>
               <RemoveSvg
                 onClick={() => {
-                  console.log(ingredient._id.$oid);
-                  deleteIngradient(ingredient._id.$oid);
+                  console.log(ingredient._id);
+                  deleteIngradient(ingredient._id);
                 }}
               >
                 <UseSvg id="remove" />
