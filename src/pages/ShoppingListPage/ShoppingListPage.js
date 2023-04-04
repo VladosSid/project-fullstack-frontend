@@ -1,29 +1,31 @@
 import React
-// ,{ useEffect, useDispatch }
+// ,{ useEffect }
   from 'react';
+  import { useSelector } from 'react-redux';
 import ShoppingList from '../../components/ShoppingListPage/ShoppingList';
-
-import { ContanerShopingList } from './ShoppingListPage.styled';
-
+// import { ContanerShopingList } from './ShoppingListPage.styled';
 import { MainPageTitle } from '../../components/MainPageTitle/MainPageTitle';
 import ingredients from '../../ingredients.json';
+import { MainContainer } from '../../components/MainContainer/MainContainer';
 
-//   const dispatch = useDispatch();
 
 const ShoppingListPage = () => {
 
+const ingredientsS = useSelector(state => state.auth.user.shoppingList);
+  console.log(ingredientsS);
 //   useEffect(() => {
-//     dispatch(getIngredients([dispatch]));
-    
-//   });
+// console.log(ingredientsS);
+//   }, [ingredientsS]);
   
   // тут буде запит за коллекцією інградієнтів
   const titleShopingList = 'Shopping list';
   return (
-    <ContanerShopingList>
-      <MainPageTitle title={titleShopingList} />
-      <ShoppingList ingredients={ingredients} />
-    </ContanerShopingList>
+    <MainContainer>
+      {/* <ContanerShopingList> */}
+        <MainPageTitle title={titleShopingList} />
+        <ShoppingList ingredients={ingredients} />
+      {/* </ContanerShopingList> */}
+    </MainContainer>
   );
 };
 
