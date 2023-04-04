@@ -6,8 +6,9 @@ export const HeaderBox = styled.header`
   align-items: center;
   justify-content: space-between;
   margin-bottom: 60px;
+  padding-top: 20px;
 
-  @media ${theme.device.mobail} {
+  /* @media ${theme.device.mobail} {
     padding-top: 20px;
   }
   @media ${theme.device.tablet} {
@@ -15,5 +16,5 @@ export const HeaderBox = styled.header`
   }
   @media ${theme.device.desktop} {
     padding-top: 0;
-  }
+  } */
 `;

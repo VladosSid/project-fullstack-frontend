@@ -9,20 +9,18 @@ import {
 import ingredients from '../../ingredients.json';
 import authSelectors from '../../redux/users/auth-selectors'
 import recipeSelectors from '../../redux/recipe/recipe-selectors';
-//useState
-
 
 
 //   useEffect(() => {
-// console.log(ingredientsS);
-//   }, [ingredientsS]);
+// запит за інградієнтами
+//   }, []);
 
 const ShoppingList = () => {
 const ingredientsShopping = useSelector(authSelectors.getShoppingList);
-  console.log(ingredientsShopping);
+  console.log('ingredientsShopping', ingredientsShopping);
 
   const ollIngradients = useSelector(recipeSelectors.getAllIngredients);
-  console.log(ollIngradients);
+  console.log("ollIngradients",ollIngradients);
  
   
 

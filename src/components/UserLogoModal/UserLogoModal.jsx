@@ -1,27 +1,20 @@
-import { useState } from 'react';
 import { HiOutlinePencil } from 'react-icons/hi';
-import { AiOutlineArrowRight } from 'react-icons/ai';
-import { UserLogoPopup } from './UserLogoModal.styled';
 import UserInfoModal from 'components/UserInfoModal/UserInfoModal';
+import style from './UserLogoModal.module.css';
+import pen from '../../images/Header/pen.svg';
 
-const UserLogoModal = () => {
-  const [isOpen, setIsOpen] = useState(false);
-
-  const clickToggle = () => {
-    setIsOpen(prev => !prev);
-  };
-
+const UserLogoModal = ({ isOpen, clickToggle }) => {
   return (
     <>
-      <UserLogoPopup>
+      <div className={isOpen ? style.userLogoPopup : style.hidden}>
         <button onClick={() => clickToggle()}>
           Edit profile <HiOutlinePencil size={14} />
         </button>
         <button>
-          Logout <AiOutlineArrowRight size={18} />
+          Logout <img src={pen} alt="pen" />
         </button>
-      </UserLogoPopup>
-      {isOpen && <UserInfoModal />}
+      </div>
+      <UserInfoModal isOpen={isOpen} />
     </>
   );
 };

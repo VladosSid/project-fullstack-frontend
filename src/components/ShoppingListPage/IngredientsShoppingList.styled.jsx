@@ -2,8 +2,15 @@ import styled from 'styled-components';
 import theme from '../../style/generalStyle';
 
 export const List = styled.ul`
-  // margin: 0 auto;
   list-style: none;
+  padding-bottom: 100px;
+  @media ${theme.device.tablet} {
+    padding-bottom: 200px;
+  }
+
+  @media ${theme.device.desktop} {
+    padding-bottom: 195px;
+  }
 `;
 export const Item = styled.li`
   padding: 0 8px;

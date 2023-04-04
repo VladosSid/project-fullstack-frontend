@@ -39,6 +39,10 @@ export const Ul = styled.ul`
     line-height: 22px;
   }
 
+  li a {
+    transition: color cubic-bezier(0.075, 0.82, 0.165, 1) 0.5s;
+  }
+
   li a:hover,
   li a:focus {
     color: #8baa36;

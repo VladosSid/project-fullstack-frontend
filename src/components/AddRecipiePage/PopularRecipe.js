@@ -17,6 +17,7 @@ const PopularRecipe = () => {
   const [recipes, setRecipes] = useState([]);
   const [viewport, setViewport] = useState(window.visualViewport.width);
 
+
   useEffect(() => {
     if (viewport >= 769) {
       setRecipes(RECIPE)

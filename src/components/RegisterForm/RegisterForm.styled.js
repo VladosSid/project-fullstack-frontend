@@ -43,6 +43,10 @@ export const FormTitle = styled.h2`
     }
 `
 
+export const List = styled.ul`
+    list-style: none;
+`
+
 export const ListItem = styled.li`
     position: relative;
     margin-bottom: 12px;
@@ -85,9 +89,23 @@ export const Input = styled.input`
     border-radius: 6px;
     width: 200px;
 
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.5;
+    letter-spacing: -0.02em;
+
+    color: #FAFAFA;
+    opacity: 0.8;
+
     background-color: transparent;
 
     transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    @media ${theme.device.tablet} {
+        font-size: 18px;
+    }
 
     &:hover,
     &:focus {
