@@ -1,4 +1,6 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+import { UseSvg } from '../../helpers/useSvg/useSvg';
 
 import {
   CardWrapper,
@@ -9,9 +11,10 @@ import {
   CardTime,
   CardButtonSee,
   CardButtonDelete,
+  CardIcon,
 } from './MyRecipesItem.styled';
 
-export default function CardMyRecipe({ recipe }) {
+const MyRecipesItem = ({ recipe, location }) => {
   return (
     <CardWrapper>
       <CardImg src={recipe.imageUrl} alt={recipe.title} />
@@ -20,12 +23,17 @@ export default function CardMyRecipe({ recipe }) {
         <CardDescription>{recipe.description}</CardDescription>
         <CardTime>{recipe.time}</CardTime>
       </CardTextWrapper>
-      <CardButtonSee type="button" onClick={event => console.log(event)}>
-        See recipe
-      </CardButtonSee>
+      <Link to={`/recipe-page/${recipe._id}`} state={{ from: location }}>
+        <CardButtonSee>See recipe</CardButtonSee>
+      </Link>
+
       <CardButtonDelete type="button" onClick={event => console.log(event)}>
-        Del
+        <CardIcon>
+          <UseSvg id="removefav" />
+        </CardIcon>
       </CardButtonDelete>
     </CardWrapper>
   );
-}
+};
+
+export default MyRecipesItem;
