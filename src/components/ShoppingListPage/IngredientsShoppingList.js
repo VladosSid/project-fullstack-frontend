@@ -14,19 +14,20 @@ import axios from 'axios';
 
 
 
-const IngredientsShoppingList = ingredients => {
+const IngredientsShoppingList = ({ingredients}) => {
+
 
 const deleteIngradient = async (contactId) => {
     try {
       const response = await axios.delete(`/ingradients/${contactId}`);
       return response.data;
     } catch (error) {
-      return console.log(error.message);;
+      return console.log(error.message);
     }
   }
 
 
-  const ingredientsArr = ingredients.ingredients;
+  const ingredientsArr = ingredients;
   return (
     <List>
       {ingredientsArr.map(ingredient => (

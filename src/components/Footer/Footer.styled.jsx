@@ -6,23 +6,6 @@ export const FooterBox = styled.footer`
   background: #22252a;
   padding-top: 28px;
   padding-bottom: 18px;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  gap: 32px;
-
-  @media ${theme.device.tablet} {
-    padding-right: 32px;
-    padding-left: 32px;
-  }
-
-  @media ${theme.device.desktop} {
-    padding-right: 100px;
-    padding-left: 100px;
-    gap: 40px;
-  } ;
 `;
 
 export const FlexBox = styled.div`
@@ -32,6 +15,8 @@ export const FlexBox = styled.div`
   flex-direction: column;
   gap: 32px;
   calc((100%) / 1);
+  margin-bottom: 44px;
+
   
   @media ${theme.device.tablet} {
     width: 100%;
@@ -41,6 +26,8 @@ export const FlexBox = styled.div`
     flex-wrap: wrap;
   calc((100% - 32px) / 2);
   gap: 32px;
+    margin-bottom: 38px;
+
   };
 
    @media screen and (min-width: 1281px) {
@@ -51,7 +38,7 @@ export const FlexBox = styled.div`
     flex-wrap: nowrap;
   calc((100% - 64px) / 3);
 
-  margin-bottom: ;
+  margin-bottom: 41px;
   };
 `;
 
@@ -97,10 +84,9 @@ export const TextLogo = styled.span`
 
 export const ListDescrition = styled.ul`
   display: none;
+  list-style: inside;
 
   @media ${theme.device.tablet} {
-    padding-left: 16px;
-
     font-family: 'Poppins';
     font-style: normal;
     font-weight: 400;
@@ -142,11 +128,13 @@ export const NavList = styled.ul`
 
   @media ${theme.device.tablet} {
     align-items: center;
-    margin-left: 180px;
+    margin-left: 194px;
+    margin-right: 56px;
   }
 
   @media screen and (min-width: 1281px) {
     margin-left: 0;
+    margin-right: 0;
   }
 
   @media ${theme.device.desktop} {
@@ -218,7 +206,7 @@ export const Text = styled.h2`
 
 export const LabelForm = styled.label`
   position: absolute;
-  top: 12px;
+  top: 15px;
   left: 15px;
 `;
 
@@ -299,5 +287,30 @@ export const ImgSocial = styled.li`
     &:hover {
       fill: #fff;
     }
+  }
+`;
+
+export const BoxAfter = styled.div`
+  display: flex;
+  justify-content: center;
+  align-item: center;
+  gap: 14px;
+  padding: 28px 0;
+
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 10px;
+  line-height: 10px;
+
+  letter-spacing: -0.01em;
+
+  color: #22252a;
+
+  opacity: 0.5;
+
+  @media ${theme.device.desktop} {
+    font-size: 14px;
+    line-height: 14px;
   }
 `;

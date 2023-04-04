@@ -1,8 +1,6 @@
-const getAllCategory = store => store.recope.categoriList;
-const getAllIngredients = store => store.recope.allIngredients;
+const getAllIngredients = store => store.recipe.allIngredients;
 
-const authSelectors = {
-  getAllCategory,
+const recipeSelectors = {
   getAllIngredients,
 };
-export default authSelectors;
+export default recipeSelectors;

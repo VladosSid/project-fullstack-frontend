@@ -12,10 +12,8 @@ export const Main = styled.div`
     width: 704px;
   }
 
-  // ${theme.device.desktop}
-  @media screen and (min-width: 1240px) {
+  @media ${theme.device.desktop} {
     width: 1242px;
-    padding-bottom: 200px;
     background-position: top 52px left 258px, top 74px left 1181px,
       top 152px left 720px;
   }
