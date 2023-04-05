@@ -6,6 +6,11 @@
     height: 100%;
     background-color: rgba(0, 0, 0, 0.3);
     z-index: 100;
+    transform: translateY(0);
+}
+
+.unactive {
+    transform: translateY(-130vh);
 }
 
 .penSvg {
@@ -22,11 +27,8 @@
     left: 50%;
     transform: translate(-50%, -50%);
     overflow: auto;
-    
-    position: fixed;
-    
+    position: absolute;
     z-index: 30;
-    
     background: #fafafa;
     box-shadow: 0px 4px 48px rgba(0, 0, 0, 0.1);
     border-radius: 24px;
@@ -52,9 +54,6 @@
     color: #fafafa;
 }
 
-.mediaInput {
-}
-
 .nameInput {
     height: 50px;
     padding: 0;
@@ -71,6 +70,18 @@
     letter-spacing: -0.02em;
 
     color: #23262A;
+}
+
+.closeCross {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    cursor: pointer;
+    padding: 0;
+    border: none;
+    background-color: transparent;
 }
 
 .plusBtn {
@@ -98,9 +109,6 @@
     width: 88px;
     height: 88px;
     margin: 0 auto;
-}
-
-.plusSvg {
 }
 
 .userSvg {
@@ -144,9 +152,9 @@
         top: 135px;
         right: 220px;
     }
-    .plusSvg {
-        top: 135px;
-        right: 220px;
+    .plusBtn {
+     top: 135px;
+    right: 225px;
     }
     .userSvg {
         width: 24px;
@@ -176,11 +184,56 @@
 }
 
 @media screen and (min-width: 1240px) {
-    .nameInput {
-       min-width: 400px;
-    }
     .userInfoModal {
-        height: 425px;
         padding: 60px 50px;
+        height: 300px;
     }
+        .nameInput {
+            min-width: 400px;
+            height: 60px;
+            font-size: 18px;
+            line-height: 27px;
+            letter-spacing: -0.02em;
+            padding-left: 50px;
+        }
+    
+        .mediaInput {
+            top: 135px;
+            right: 220px;
+        }
+    
+        .plusBtn {
+            top: 135px;
+            right: 225px;
+        }
+    
+        .userSvg {
+            width: 24px;
+            height: 24px;
+            bottom: 162px;
+            left: 68px;
+        }
+    
+        .penSvg {
+            height: 20px;
+            width: 20px;
+            right: 70px;
+            bottom: 163px;
+        }
+    
+        .userInfoModal div {
+            width: 103px;
+            height: 103px;
+        }
+    
+        .saveBtn {
+            height: 60px;
+            font-size: 16px;
+            line-height: 18px;
+        }
+    
+        .userAvaSvg {
+            height: 50px;
+            width: 50px;
+        }
 }

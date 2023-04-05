@@ -2,11 +2,15 @@ import plus from '../../images/Header/plus.png';
 import styles from './UserInfoModal.module.css';
 import pen from '../../images/Header/pen.svg';
 import user from '../../images/Header/user.png';
+import x from '../../images/Header/x.svg';
 
-const UserInfoModal = () => {
+const UserInfoModal = ({ toggler, open }) => {
   return (
-    <div className={styles.backdrop}>
+    <div className={open ? styles.backdrop : styles.unactive}>
       <div className={styles.userInfoModal}>
+        <button className={styles.closeCross} onClick={() => toggler()}>
+          <img src={x} alt="cross" />
+        </button>
         <div>
           <img src={user} alt="user" className={styles.userAvaSvg} />
         </div>
@@ -22,4 +26,5 @@ const UserInfoModal = () => {
     </div>
   );
 };
+
 export default UserInfoModal;
