@@ -1,5 +1,6 @@
 import SearchForm from 'components/SearchForm';
 import React from 'react';
+import { MPHeroWrapper } from './MainPageHero.styled';
 
 // import { useSearchParams } from 'react-router-dom';
 
@@ -8,8 +9,8 @@ export default function MainPageHero({ onSubm }) {
   // const queryFilm = searchParams.get('query');
 
   return (
-    <div>
+    <MPHeroWrapper>
       <SearchForm onSubm={onSubm} />
-    </div>
+    </MPHeroWrapper>
   );
 }

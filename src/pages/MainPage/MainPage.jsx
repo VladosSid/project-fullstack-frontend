@@ -42,9 +42,9 @@ export default function MainPage() {
     instanceBacEnd.defaults.headers.common.Authorization =
       'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDI4NGEyNDI5ODkxOTJkMDJkOTc1ZGMiLCJpYXQiOjE2ODAzNjQzOTB9.F6KumBIsfhDh32UmksQgN3JqdFUpxwqq0ifHBL8dq3A';
     let queryQuantity;
-    if (width >= 769 && width < 1441) {
+    if (width >= 769 && width < 1240) {
       queryQuantity = 2;
-    } else if (width > 1441) {
+    } else if (width >= 1240) {
       queryQuantity = 4;
     } else if (width < 769) {
       queryQuantity = 1;
@@ -104,10 +104,15 @@ export default function MainPage() {
         {Object.entries(RecipesByCategory).map(([category, recipes]) => (
           <div key={category}>
             <RecipeCategoryName>{category}</RecipeCategoryName>
-
-            {recipes.map(recipe => (
-              <DishCard key={recipe._id} location={location} recipe={recipe} />
-            ))}
+            <div>
+              {recipes.map(recipe => (
+                <DishCard
+                  key={recipe._id}
+                  location={location}
+                  recipe={recipe}
+                />
+              ))}
+            </div>
 
             <Button onClick={() => handleCategoryClick(category)}>
               See all
