@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 export const DishWrapper = styled.div`
   position: relative;
-  margin-bottom: 24px;
+  /* margin-bottom: 24px; */
   img {
     /* width: 343px;
     height: 323px; */
