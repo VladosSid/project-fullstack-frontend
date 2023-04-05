@@ -143,6 +143,11 @@ export const FilePicker = styled.div`
     height: 344px;
     margin: 0;
   }
+
+  @media ${theme.device.tablet} {
+    height: 268px;
+
+  }
 `;
 
 export const Row = styled.div`
