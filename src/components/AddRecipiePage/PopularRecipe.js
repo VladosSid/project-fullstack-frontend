@@ -19,9 +19,9 @@ const PopularRecipe = () => {
 
 
   useEffect(() => {
-    if (viewport >= 769) {
+    if (viewport >= 1240) {
       setRecipes(RECIPE)
-    } else if (viewport < 769) {
+    } else if (viewport < 1240) {
       let arr = RECIPE
       arr.splice(2)
       setRecipes(arr)

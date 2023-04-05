@@ -18,10 +18,6 @@ width: 100%;
     flex-direction: row;
 }
 
-@media ${theme.device.tablet} {
-    flex-direction: row;
-}
-
 `;
 
 export const Col = styled.div`

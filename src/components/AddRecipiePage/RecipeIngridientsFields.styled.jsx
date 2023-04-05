@@ -104,7 +104,7 @@ border: none;
 
 export const CustomSelect = styled(ReactSelect)`
 .react-select__control {
-    border: none;
+  border: none;
   background-color: #f5f5f5;
   height: 59px;
   width: 194px;
@@ -127,7 +127,7 @@ export const CustomSelect = styled(ReactSelect)`
 
     }
   }
-  @media ${theme.device.desktop} {
+  @media ${theme.device.tablet} {
     width: 398px;
   }
   }
