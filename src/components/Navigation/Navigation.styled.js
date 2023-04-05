@@ -15,6 +15,7 @@ export const HeaderNav = styled.nav`
 `;
 
 export const Ul = styled.ul`
+  list-style: none;
   display: flex;
   flex-direction: column;
   align-items: center;
