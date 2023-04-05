@@ -10,6 +10,8 @@ height: 152px; */
   margin-bottom: 18px;
   background: #ffffff;
   border-radius: 8px;
+  box-shadow: 5px 4px 8px 0px rgba(34, 60, 80, 0.2);
+  border: 1px solid rgba(34, 60, 80, 0.2);
 
   @media ${theme.device.tablet} {
     position: relative;
