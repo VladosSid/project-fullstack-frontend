@@ -1,4 +1,6 @@
-import { useState } from 'react';
+/* eslint-disable no-unused-vars */
+import { useState, useEffect } from 'react';
+import { queryBackEnd } from 'helpers/request';
 import {
   FilePicker,
   InputFile,
@@ -10,19 +12,6 @@ import {
   Photo
 } from './RecipeDescriptionFields.styled';
 
-const CATEGORY = [
-    'Beef',
-    'Breakfast',
-    'Chicken',
-    'Desserts',
-    'Goat',
-    'Lamb',
-    'Miscellaneous',
-    'Pasta',
-    'Pork',
-    'Seafood',
-    'Side',
-  ];
   const STEP = [
     5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60, 65, 70, 75, 80, 85, 90, 95,
     100, 105, 110, 115, 120, 125, 130, 135, 140,
@@ -30,8 +19,29 @@ const CATEGORY = [
 
 const RecipeDescriptionFields = ({ onChange }) => {
 const [image, setImage] = useState(null)
+const [category, setCategory] = useState([])
 
-const categorys = CATEGORY.map((category) =>({value: category, label: category}))
+//const category = queryBackEnd.queryCategoryList()
+const token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDJkZTYwYmNlOTJjN2E5ZGIzOTUyODMiLCJpYXQiOjE2ODA3Mjk5MzB9.4w24PlEZHdCxWxGnub0Er6GjaEog_6NUtHaPm-CbxN0"
+
+useEffect(() => {
+    async function fetchCategory() {
+      let response = await fetch('https://backend-soyummy.onrender.com/api/recipes/category-list', {
+        headers: {
+        Authorization: `Bearer ${token}`,  
+      },
+      method: 'GET',
+      })
+      response = await response.json()
+      setCategory(response.result.data)
+      
+    }
+
+    fetchCategory()
+  }, [])
+
+
+const categorys = category.map((category) =>({value: category, label: category}))
   const step = STEP.map((step) =>({value: step, label: step}))
 
   const handleValueSelectCategory = (e) => {
