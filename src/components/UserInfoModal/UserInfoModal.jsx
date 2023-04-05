@@ -1,4 +1,4 @@
-import { useDispatch } from 'react-redux';
+// import { useDispatch } from 'react-redux';
 import { useState } from 'react';
 import plus from '../../images/Header/plus.png';
 import styles from './UserInfoModal.module.css';
@@ -8,9 +8,9 @@ import x from '../../images/Header/x.svg';
 
 const UserInfoModal = ({ toggler, open }) => {
   const [file, setFile] = useState(null);
-  const [name, setName] = useState(null);
+  // const [name, setName] = useState(null);
 
-  const dispatch = useDispatch();
+  // const dispatch = useDispatch();
 
   const handleUploadClick = e => {
     const file = e.target.files[0];
@@ -23,9 +23,9 @@ const UserInfoModal = ({ toggler, open }) => {
     }
   };
 
-  const onInputChange = e => {
-    setName(e.target.value);
-  };
+  // const onInputChange = e => {
+  //   setName(e.target.value);
+  // };
 
   const handleSubmit = e => {
     e.preventDefault();
