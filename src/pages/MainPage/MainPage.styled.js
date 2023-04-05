@@ -14,7 +14,7 @@ export const Container = styled.div`
   display: grid;
   /* grid-template-columns: repeat(auto-fit, 343px); */
   gap: 16px;
-  width: 100%;
+  /* width: 100%; */
 `;
 export const RecipeCategoryName = styled.h2`
   margin-bottom: 32px;

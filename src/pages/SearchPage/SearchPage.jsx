@@ -58,12 +58,7 @@ export default function SearchPage() {
           searchResults={searchResults}
         />
       )}
-
-      <Container>
-        {recipesG.map(recipe => (
-          <DishCard key={recipe._id} location={location} recipe={recipe} />
-        ))}
-      </Container>
+      <div>Pagination</div>
     </ContainerWrapper>
   );
 }

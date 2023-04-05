@@ -5,6 +5,7 @@ import { useLocation } from 'react-router-dom';
 // import RecipesList from './RecipesList';
 import DishCard from 'components/DishCard/DishCard';
 import instanceBacEnd from 'helpers/requestBackEnd';
+import { GridContainer } from './SearchRecipesList.styled';
 //-------------------------
 export default function SearchRecipesList({ searchQuery, searchType }) {
   const location = useLocation();
@@ -21,7 +22,7 @@ export default function SearchRecipesList({ searchQuery, searchType }) {
     instanceBacEnd.defaults.headers.common.Authorization =
       'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDI4NGEyNDI5ODkxOTJkMDJkOTc1ZGMiLCJpYXQiOjE2ODAzNjQzOTB9.F6KumBIsfhDh32UmksQgN3JqdFUpxwqq0ifHBL8dq3A';
     instanceBacEnd
-      .get(`/search?query=${searchQuery}&type=${searchType}&limit=2`)
+      .get(`/search?query=${searchQuery}&type=${searchType}&limit=12`)
       .then(function (response) {
         setRecipes(response.data.result.data);
       })
@@ -31,11 +32,11 @@ export default function SearchRecipesList({ searchQuery, searchType }) {
   }, [searchQuery, searchType]); //searchQuery
 
   return (
-    <div>
+    <GridContainer>
       {recipes.map(recipe => (
         <DishCard key={recipe._id} location={location} recipe={recipe} />
       ))}
-    </div>
+    </GridContainer>
   );
 }
 
