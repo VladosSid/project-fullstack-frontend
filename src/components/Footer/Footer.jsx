@@ -1,9 +1,9 @@
 import { MdOutlineEmail } from 'react-icons/md';
-
+import { NavLink } from 'react-router-dom';
 import { useState } from 'react';
 
+import Notiflix from 'notiflix';
 
-// import { useDispatch } from 'react-redux';
 import logo from '../../images/Footer/logoFooter.png';
 import { UseSvg } from '../../helpers/useSvg/useSvg';
 import {
@@ -27,80 +27,17 @@ import {
 
 import { MainContainer } from '../MainContainer/MainContainer';
 
-// import { authOperations } from '../../redux/users';
-
-// import { recipeOperations } from '../../redux/recipe';
-
-// import { queryBackEnd } from '../../helpers/request';
+import { queryBackEnd } from '../../helpers/request';
 
 export function Footer() {
-  // const [file, setFile] = useState(null);
-  // const dispatch = useDispatch();
   const [email, setEmail] = useState('');
 
-  const emailSet = e => {
-    console.log(e);
-    setEmail(e.target.value);
-
-    console.log('123', email);
+  const getSubscription = async e => {
+    e.preventDefault();
+    const data = await queryBackEnd.querySubscribe(email);
+    console.log(data);
+    Notiflix.Notify.success(`${data.message}`);
   };
-  // const setTest = async e => {
-  //   e.preventDefault();
-
-  //   const result = await queryBackEnd.queryCategoryList();
-  //   console.log(result);
-  //   try {
-  //     dispatch(
-  //       authOperations.logIn({
-  //         email: 'sidorsv.dev@meta.ua',
-  //         password: '123456',
-  //       })
-  //     );
-  //   } catch (err) {
-  //     console.log(err.message);
-  //   }
-  // };
-  // const setTestOut = e => {
-  //   e.preventDefault();
-
-  //   try {
-  //     dispatch(authOperations.logOut());
-  //   } catch (err) {
-  //     console.log(err.message);
-  //   }
-  // };
-  // const setTestCurrent = e => {
-  //   e.preventDefault();
-
-  //   try {
-  //     dispatch(authOperations.fetchCurrentUser());
-  //   } catch (err) {
-  //     console.log(err.message);
-  //   }
-  // };
-  // const setCategory = e => {
-  //   e.preventDefault();
-
-  //   try {
-  //     dispatch(recipeOperations.allIngredients());
-  //   } catch (err) {
-  //     console.log(err.message);
-  //   }
-  // };
-
-  // const uploadContent = e => {
-  //   e.preventDefault();
-  //   setFile(e.target.files[0]);
-
-  //   const formData = new FormData();
-
-  //   if (e.target.files[0]) {
-  //     formData.append('username', 'Vlados');
-  //     formData.append('img', file);
-
-  //     dispatch(authOperations.updateUserData(formData));
-  //   }
-  // };
 
   return (
     <>
@@ -127,11 +64,21 @@ export function Footer() {
             </div>
 
             <NavList>
-              <li>Ingredients</li>
-              <li>Add recipes</li>
-              <li>My recipes</li>
-              <li>Favorite</li>
-              <li>Shopping list</li>
+              <li>
+                <NavLink to="/search">Ingredients</NavLink>
+              </li>
+              <li>
+                <NavLink to="/add">Add recipes</NavLink>
+              </li>
+              <li>
+                <NavLink to="/my">My recipes</NavLink>
+              </li>
+              <li>
+                <NavLink to="/favorite">Favorites</NavLink>
+              </li>
+              <li>
+                <NavLink to="/shopping-list">Shopping list</NavLink>
+              </li>
             </NavList>
 
             <BoxForm>
@@ -154,34 +101,21 @@ export function Footer() {
 
                 <Input
                   placeholder="Enter your email address"
+                  type="email"
                   name="email"
-                  type="text"
-                  onChange={e => emailSet(e)}
+                  required
+                  value={email}
+                  onChange={e => setEmail(e.target.value)}
                 />
               </div>
 
-              {/* <input
-            type="file"
-            accept="image/png, image/jpeg"
-            id="contained-button-content"
-            onChange={e => uploadContent(e)}
-          /> */}
-
               <Button
+                disabled={email.length > 0 ? false : true}
                 type="button"
-                // onClick={e => setTest(e)}
+                onClick={e => getSubscription(e)}
               >
-                Subcribe(LogIn)
+                Subcribe
               </Button>
-              {/* <Button type="button" onClick={e => setTestOut(e)}>
-            LogOuth
-          </Button>
-          <Button type="button" onClick={e => setTestCurrent(e)}>
-            Current
-          </Button>
-          <Button type="button" onClick={e => setCategory(e)}>
-            Category
-          </Button> */}
             </BoxForm>
           </FlexBox>
 

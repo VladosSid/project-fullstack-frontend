@@ -1,67 +1,70 @@
-import SearchForm from 'components/SearchForm/SearchForm';
-import React, { useState } from 'react';
-import { recipesG } from 'gannaFakeData';
-import DishCard from 'components/DishCard/DishCard';
-import { useLocation } from 'react-router-dom';
-import { ContainerWrapper, Container, SearchBar } from './Searchpage.styled';
+import React, { useState } from 'react'; //useEffect
+
+// import DishCard from 'components/DishCard/DishCard';
+// import { useLocation } from 'react-router-dom';
+import { ContainerWrapper } from './Searchpage.styled';
 import { useSearchParams } from 'react-router-dom';
-import SearchTypeSelector from 'components/SearchTypeSelector/SearchTypeSelector';
-
+import SearchBar from 'components/SearchBar/SearchBar';
+// import { createSearchUrl } from 'helpers/createSearchUrl';
+import SearchRecipesList from 'components/SearchRecipesList/SearchRecipesList';
+//-------------------------------
 export default function SearchPage() {
-  const location = useLocation();
-  // const [searchParams, setSearchParams] = useSearchParams();
-  // const searchQuery = searchParams.get('query');
-  const [searchParams] = useSearchParams();
-  const searchQueryF = searchParams.get('query');
-  console.log('in SP', searchQueryF);
+  // const location = useLocation();
+  const [searchParams, setSearchParams] = useSearchParams();
+  const [searchQuery, setSearchQuery] = useState(
+    searchParams.get('query') || ''
+  );
+  const [searchType, setSearchType] = useState(
+    searchParams.get('type') || 'title'
+  );
+  const updatedParams = new URLSearchParams(searchParams.toString());
+
+  // const [searchResults] = useState([]);
   //---------------------------
-  const [searchType, setSearchType] = useState('query');
-  // const [searchQuery, setSearchQuery] = useState('');
-  // const [searchIngredient, setSearchIngredient] = useState('');
+  // function handleSearch(query) {
+  //   console.log('Query in SP handleSearch', query);
+  //   setSearchQuery(query);
+  // }
 
-  const handleSearchTypeChange = value => {
-    setSearchType(value);
-  };
-
-  // const handleQueryChange = event => {
-  //   setSearchQuery(event.target.value);
-  // };
-
-  // const handleIngredientChange = event => {
-  //   setSearchIngredient(event.target.value);
-  // };
-
-  const handleSubmit = event => {
-    event.preventDefault();
-    // отправка запроса на бекенд с использованием searchType, searchQuery или searchIngredient
-  };
+  //------------
+  function handleSearchTypeChange(type) {
+    setSearchType(type);
+    // setSearchParams({ type: type });
+    updatedParams.set('type', type);
+    if (searchQuery) {
+      setSearchParams(updatedParams);
+    }
+  }
+  //---------
+  function handleSubmit(query) {
+    console.log('Query in SP submit', query);
+    const nextQuery = query !== '' ? query : '';
+    setSearchQuery(nextQuery);
+    // const searchUrl = createSearchUrl(query, query);!!!!!!!
+    setSearchParams({
+      query: query.toLowerCase(),
+      type: searchType,
+    });
+    console.log('nextQuery in SP submit', nextQuery);
+  }
   //----------------------------
   return (
     <ContainerWrapper>
-      <SearchForm green marginBottom />
-      <SearchBar onSubmit={handleSubmit}>
-        <SearchTypeSelector
-          selectedValue={searchType}
-          onChange={handleSearchTypeChange}
-        />
-        {/* {searchType === 'query' ? (
-          <input type="text" value={searchQuery} onChange={handleQueryChange} />
-        ) : (
-          <input
-            type="text"
-            value={searchIngredient}
-            onChange={handleIngredientChange}
-          />
-        )} */}
-      </SearchBar>
-      <Container>
-        {recipesG.map(recipe => (
-          <DishCard key={recipe._id} location={location} recipe={recipe} />
-        ))}
-      </Container>
+      <SearchBar
+        // onSearch={handleSearch}
+        onTypeChange={handleSearchTypeChange}
+        onSubm={handleSubmit}
+        selectedType={searchType}
+        searchQuery={searchQuery}
+      />
+      {searchQuery !== '' && (
+        <SearchRecipesList searchQuery={searchQuery} searchType={searchType} />
+      )}
+      <div>Pagination</div>
     </ContainerWrapper>
   );
 }
+//<SearchRecipesList searchQuery={searchQuery} searchType={searchType} searchResults={searchResults} />
 
 // function SearchTypeSelector({ type, onChange }) {
 //   function handleSelect(eventKey) {

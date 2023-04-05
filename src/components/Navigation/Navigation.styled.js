@@ -15,6 +15,7 @@ export const HeaderNav = styled.nav`
 `;
 
 export const Ul = styled.ul`
+  list-style: none;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -35,6 +36,7 @@ export const Ul = styled.ul`
   }
 
   @media ${theme.device.desktop} {
+    font-weight: 500;
     font-size: 14px;
     line-height: 22px;
   }

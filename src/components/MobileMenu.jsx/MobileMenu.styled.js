@@ -13,7 +13,6 @@ export const BurgerBtn = styled.button`
 `;
 
 export const BackdropMobileMenu = styled.div`
-
   @media ${theme.device.mobail} {
     padding: 20px 16px;
   }
@@ -35,7 +34,7 @@ export const BackdropMobileMenu = styled.div`
     display: flex;
     align-items: center;
     justify-content: space-between;
-  } */
+  }
 `;
 
 export const CrossIcon = styled.button`

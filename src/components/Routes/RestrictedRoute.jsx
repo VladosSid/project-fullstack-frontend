@@ -1,22 +1,19 @@
-import { PropTypes } from "prop-types";
-const { Navigate } = require("react-router-dom");
-// import { useAuth } from "hooks";
+import { PropTypes } from 'prop-types';
+import { useSelector } from 'react-redux';
 
-const RestrictedRoute = ({ component: Component, redirectTo = "/" }) => {
+import { authSelectors } from '../../redux/users';
 
-    // add own hook or execution condition
-    // as example:
-    // const { isLoggedIn } = useAuth();
+const { Navigate } = require('react-router-dom');
 
-    const { isLoggedIn } = false;
+const RestrictedRoute = ({ component: Component, redirectTo = '/' }) => {
+  const isLoggedIn = useSelector(authSelectors.getIsLoggedIn);
 
-    return isLoggedIn ? <Navigate to={redirectTo} /> : Component;
+  return isLoggedIn ? <Navigate to={redirectTo} /> : Component;
 };
 
-
-RestrictedRoute.propTypes ={
-    component: PropTypes.object,
-    redirectTo: PropTypes.string
-}
+RestrictedRoute.propTypes = {
+  component: PropTypes.object,
+  redirectTo: PropTypes.string,
+};
 
 export default RestrictedRoute;

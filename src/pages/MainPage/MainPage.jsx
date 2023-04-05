@@ -10,6 +10,7 @@ import {
   RecipeCategoryName,
   Button,
   ContainerWrapper,
+  GridContainer,
 } from './MainPage.styled';
 
 import MainPageHero from 'components/MainPageHero';
@@ -22,10 +23,10 @@ export default function MainPage() {
   const [recipes, setRecipes] = useState([]);
   // const [searchParams, setSearchParams] = useSearchParams();
   // const queryRec = searchParams.get('query');
+  // const [width] = useState(window.innerWidth);
   const [width] = useState(window.innerWidth);
-
   //Do we need resize?
-  //const [width, setWidth] = useState(window.innerWidth);
+  // const [width, setWidth] = useState(window.innerWidth);
   // const handleResize = () => {
   //   setWidth(window.innerWidth);
   // };
@@ -42,27 +43,20 @@ export default function MainPage() {
     instanceBacEnd.defaults.headers.common.Authorization =
       'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDI4NGEyNDI5ODkxOTJkMDJkOTc1ZGMiLCJpYXQiOjE2ODAzNjQzOTB9.F6KumBIsfhDh32UmksQgN3JqdFUpxwqq0ifHBL8dq3A';
     let queryQuantity;
-    if (width >= 769 && width < 1441) {
+    if (width >= 768 && width < 1440) {
       queryQuantity = 2;
-    } else if (width > 1441) {
+    } else if (width >= 1440) {
       queryQuantity = 4;
-    } else if (width < 769) {
+    } else if (width < 768) {
       queryQuantity = 1;
     }
-    // if (width < 1441) {
-    //   queryQuantity = 2;
-    // }
-    // if (width < 769) {
-    //   queryQuantity = 1;
-    // }
-    // if (width >= 1441) {
-    //   queryQuantity = 4;
-    // }
     instanceBacEnd
       .get(`/recipes/main-page?query=${queryQuantity}`)
 
       .then(function (response) {
         setRecipes(response.data.result.data);
+
+        console.log(queryQuantity, width);
       })
       .catch(function (error) {
         console.log(error.message);
@@ -80,10 +74,11 @@ export default function MainPage() {
   //---------------------------
   const handleFormSubmit = query => {
     console.log('Query in Main', query);
-    console.log('recipes', recipes);
+
     // const nextQuery = query !== '' ? { query } : {};
     // setSearchParams(nextQuery);
     const searchUrl = createSearchUrl(query);
+    console.log('SearchUrl in MainPage', searchUrl);
     navigate(searchUrl);
   };
 
@@ -103,10 +98,15 @@ export default function MainPage() {
         {Object.entries(RecipesByCategory).map(([category, recipes]) => (
           <div key={category}>
             <RecipeCategoryName>{category}</RecipeCategoryName>
-
-            {recipes.map(recipe => (
-              <DishCard key={recipe._id} location={location} recipe={recipe} />
-            ))}
+            <GridContainer>
+              {recipes.map(recipe => (
+                <DishCard
+                  key={recipe._id}
+                  location={location}
+                  recipe={recipe}
+                />
+              ))}
+            </GridContainer>
 
             <Button onClick={() => handleCategoryClick(category)}>
               See all
