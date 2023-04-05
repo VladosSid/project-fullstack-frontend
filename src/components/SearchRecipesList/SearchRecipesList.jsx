@@ -1,11 +1,13 @@
-import React, { useEffect, useState } from 'react'; //useState,
+import React, { useEffect, useState } from 'react';
+import { useLocation } from 'react-router-dom';
 // import { useLocation } from 'react-router-dom';
 // import axios from 'axios';
 // import RecipesList from './RecipesList';
+import DishCard from 'components/DishCard/DishCard';
 import instanceBacEnd from 'helpers/requestBackEnd';
+//-------------------------
 export default function SearchRecipesList({ searchQuery, searchType }) {
-  // const [recipes, setRecipes] = useState([]);
-  // const location = useLocation();
+  const location = useLocation();
   // const [searchValue, setSearchValue] = useState('');
   // const [searchType, setSearchType] = useState('query');
   const [recipes, setRecipes] = useState([]);
@@ -27,8 +29,14 @@ export default function SearchRecipesList({ searchQuery, searchType }) {
         console.log(error.message);
       });
   }, [searchQuery, searchType]); //searchQuery
-  console.log('SP', recipes);
-  return <div>Hier will be RecipesList</div>;
+
+  return (
+    <div>
+      {recipes.map(recipe => (
+        <DishCard key={recipe._id} location={location} recipe={recipe} />
+      ))}
+    </div>
+  );
 }
 
 //<RecipesList recipes={recipes} />
