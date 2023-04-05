@@ -14,6 +14,7 @@ const queryRecipeMinePage = async quantity => {
 };
 
 // получуть рецепты по названию категории
+// Приймаэ назву категорії в форматы рядка
 const queryRecipeCategori = async category => {
   try {
     const { data } = await instanceBacEnd.get(`/recipes/category/${category}`);
@@ -58,6 +59,7 @@ const queryOwnRecipes = async () => {
 };
 
 // видалення рецепта його власником
+// Приймаэ id в форматі рядка
 const queryOwnRecipesDelete = async id => {
   try {
     const { data } = await instanceBacEnd.get(`/ownRecipes/${id}`);
@@ -107,7 +109,7 @@ const queryAddFavorite = async id => {
   }
 };
 
-// видалення рецепту з  favorite
+// видалення рецепту з favorite
 const queryRemoveFavorite = async id => {
   try {
     const { data } = await instanceBacEnd.patch(`/favorite/remove`, id);
@@ -135,10 +137,41 @@ const querySearch = async (type, query, limit = 6, page = 1) => {
     const { data } = await instanceBacEnd.get(
       `/search?page=${page}&limit=${limit}&query=${query}&type=${type}`
     );
-    console.log(data);
     return data;
   } catch (err) {
-    console.log(err.message);
+    return err.response.data.message;
+  }
+};
+
+// отримати список покупок
+const queryShoppingList = async () => {
+  try {
+    const { data } = await instanceBacEnd.get(`/shopping-list`);
+    return data;
+  } catch (err) {
+    return err.response.data.message;
+  }
+};
+
+// отримати список покупок
+// Приймаэ об'єкт: {ing: [ {id: "640c2dd963a319ea671e3660",  measure: "0.5 kg"}]}
+const queryAddShoppingList = async list => {
+  try {
+    const { data } = await instanceBacEnd.patch(`/shopping-list/add`, list);
+    return data;
+  } catch (err) {
+    return err.response.data.message;
+  }
+};
+
+// отримати список покупок
+// Приймає об'єкт: {shoppingListIng: "642d6155d0e6edcddc9507c6"}
+const queryRemoveShoppingList = async idIng => {
+  try {
+    const { data } = await instanceBacEnd.patch(`/shopping-list/remove`, idIng);
+    return data;
+  } catch (err) {
+    return err.response.data.message;
   }
 };
 
@@ -146,16 +179,26 @@ const queryBackEnd = {
   queryRecipeMinePage,
   queryRecipeCategori,
   queryRecipeId,
+
   querySubscribe,
+
   queryOwnRecipes,
   queryOwnRecipesDelete,
+
   queryCategoryList,
+
   querySearch,
+
   queryAllIngredients,
   queryPopular,
+
   queryAddFavorite,
   queryRemoveFavorite,
   queryAllFavorite,
+
+  queryShoppingList,
+  queryAddShoppingList,
+  queryRemoveShoppingList,
 };
 
 export default queryBackEnd;

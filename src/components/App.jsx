@@ -29,7 +29,6 @@ const NotFoundPage = lazy(() => import('../pages/NotFoundPage/NotFoundPage'));
 export const App = () => {
   const dispatch = useDispatch();
   const isGetingCurent = useSelector(authSelectors.getGetingCurentUser);
-  // const isGetingCurent = false;
 
   useEffect(() => {
     dispatch(authOperations.fetchCurrentUser());

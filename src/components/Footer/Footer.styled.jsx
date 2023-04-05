@@ -141,7 +141,24 @@ export const NavList = styled.ul`
     align-items: center;
     margin-left: 0;
     gap: 24px;
-  } ;
+  }
+
+  li a {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 18px;
+
+    letter-spacing: -0.02em;
+
+    color: #fafafa;
+    &:hover {
+      color: rgb(139, 170, 54);
+    }
+
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
 `;
 
 export const BoxForm = styled.form`
@@ -249,16 +266,14 @@ export const Button = styled.button`
   line-height: 18px;
 
   color: #fff;
-  background: #8baa36;
+  background: ${props => (!props.disabled ? '#8baa36' : '#869b4e')};
 
   padding: 11px 0;
 
   border: none;
   border-radius: 6px;
 
-  &:hover {
-    color: #000;
-  }
+  ${props => (!props.disabled ? '&:hover {color: #000;}' : '')}
 
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
@@ -268,7 +283,9 @@ export const Button = styled.button`
 
   @media screen and (min-width: 1231px) {
     width: 100%;
-  } ;
+  }
+
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 `;
 
 export const ListSocialNetworks = styled.ul`
