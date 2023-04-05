@@ -76,12 +76,14 @@ async function addRecipe(e) {
   else return Notiflix.Notify.warning('Instructions field is empty');
 
 if(ingredients){
-  const {id, measure} = ingredients
-  data.append("ingredients[0][id]", ingredients[0][id])  
-  data.append("ingredients[0][measure]", ingredients[0][measure])  
-
+  const entries = Object.entries(ingredients)
+  entries.forEach((element) => {
+  data.append(`ingredients[${element[0]}][id]`, element[1].id)
+  data.append(`ingredients[${element[0]}][measure]`, element[1].measure)   
+  })
 }
 else return Notiflix.Notify.warning('Іngredients field is empty');
+
 
 if (data)
 {await fetch('http://localhost:3001/api/ownRecipes', {
@@ -91,7 +93,9 @@ if (data)
   method: 'POST',
   body: data
 })
-.then(res =>  {navigate('/my')})
+.then(res =>  {
+ navigate('/my')
+})
 .catch(err => {
   Notiflix.Notify.warning(err)
 })
