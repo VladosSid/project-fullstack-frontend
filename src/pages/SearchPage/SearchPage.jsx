@@ -19,13 +19,13 @@ export default function SearchPage() {
   );
   const updatedParams = new URLSearchParams(searchParams.toString());
 
-  // const [searchResults, setSearchResults] = useState([]);
-  const [searchResults] = useState([]);
+  // const [searchResults] = useState([]);
   //---------------------------
-  function handleSearch(query) {
-    console.log('Query in SP handleSearch', query);
-    setSearchQuery(query);
-  }
+  // function handleSearch(query) {
+  //   console.log('Query in SP handleSearch', query);
+  //   setSearchQuery(query);
+  // }
+
   //------------
   function handleSearchTypeChange(type) {
     setSearchType(type);
@@ -51,18 +51,14 @@ export default function SearchPage() {
   return (
     <ContainerWrapper>
       <SearchBar
-        onSearch={handleSearch}
+        // onSearch={handleSearch}
         onTypeChange={handleSearchTypeChange}
         onSubm={handleSubmit}
         selectedType={searchType}
         searchQuery={searchQuery}
       />
       {searchQuery !== '' && (
-        <SearchRecipesList
-          searchQuery={searchQuery}
-          searchType={searchType}
-          searchResults={searchResults}
-        />
+        <SearchRecipesList searchQuery={searchQuery} searchType={searchType} />
       )}
       <div>Pagination</div>
     </ContainerWrapper>
