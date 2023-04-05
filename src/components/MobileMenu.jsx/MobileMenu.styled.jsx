@@ -43,3 +43,25 @@ export const CrossIcon = styled.button`
   padding: 0;
   background-color: transparent;
 `;
+
+export const Switcher = styled.button`
+  width: 60px;
+  height: 30px;
+  cursor: pointer;
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  position: absolute;
+  bottom: 18px;
+  left: 18px;
+  transition: transform cubic-bezier(0.075, 0.82, 0.165, 1) 0.3s;
+
+  @media ${theme.device.desktop} {
+    position: static;
+  }
+
+  &:hover,
+  &:focus {
+    transform: scale(1.1);
+  }
+`;

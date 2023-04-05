@@ -85,7 +85,7 @@ const updateUserData = createAsyncThunk(
         },
       });
 
-      Notiflix.Notify.success(`Logout completed.`);
+      Notiflix.Notify.success(`Info changed`);
       return data;
     } catch (err) {
       Notiflix.Notify.success(err.message);

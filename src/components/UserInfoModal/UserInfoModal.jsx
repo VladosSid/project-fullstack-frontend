@@ -1,5 +1,6 @@
-// import { useDispatch } from 'react-redux';
-import { useState } from 'react';
+import { useDispatch } from 'react-redux';
+import { useState, useEffect } from 'react';
+import { authOperations } from 'redux/users';
 import plus from '../../images/Header/plus.png';
 import styles from './UserInfoModal.module.css';
 import pen from '../../images/Header/pen.svg';
@@ -7,39 +8,63 @@ import user from '../../images/Header/user.png';
 import x from '../../images/Header/x.svg';
 
 const UserInfoModal = ({ toggler, open }) => {
-  const [file, setFile] = useState(null);
-  // const [name, setName] = useState(null);
+  const [img, setImg] = useState(null);
+  const [name, setName] = useState(null);
 
-  // const dispatch = useDispatch();
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    const close = e => {
+      if (e.keyCode === 27) {
+        toggler();
+      }
+    };
+    window.addEventListener('keydown', close);
+    return () => window.removeEventListener('keydown', close);
+  }, [toggler]);
 
   const handleUploadClick = e => {
     const file = e.target.files[0];
     const reader = new FileReader();
     if (file) {
       reader.readAsDataURL(file);
-      reader.onloadend = function (e) {
-        setFile(reader.result);
+      reader.onloadend = function () {
+        setImg(reader.result);
       };
     }
   };
 
-  // const onInputChange = e => {
-  //   setName(e.target.value);
-  // };
+  const onInputChange = e => {
+    setName(e.target.value);
+  };
 
   const handleSubmit = e => {
     e.preventDefault();
+
+    const formData = new FormData();
+    formData.append('img', img);
+    formData.append('username', name);
+    dispatch(authOperations.updateUserData(formData));
+  };
+
+  const check = e => {
+    if (e.currentTarget === e.target) {
+      toggler();
+    }
   };
 
   return (
-    <div className={open ? styles.backdrop : styles.unactive}>
+    <div
+      className={open ? styles.backdrop : styles.unactive}
+      onClick={e => check(e)}
+    >
       <div className={styles.userInfoModal}>
         <button className={styles.closeCross} onClick={() => toggler()}>
           <img src={x} alt="cross" />
         </button>
         <div>
-          {file ? (
-            <img src={file} alt="user" className={styles.uploadedImg} />
+          {img ? (
+            <img src={img} alt="user" className={styles.uploadedImg} />
           ) : (
             <img src={user} alt="user" className={styles.userAvaSvg} />
           )}
@@ -55,16 +80,16 @@ const UserInfoModal = ({ toggler, open }) => {
         </div>
         <img src={plus} alt="plus" className={styles.plusSvg} />
         <input
-          // onInput={e => onInputChange(e)}
+          onInput={e => onInputChange(e)}
           type="text"
-          placeholder="Olena"
+          placeholder="Your name"
           className={styles.nameInput}
         />
         <img src={user} alt="user" className={styles.userSvg} />
         <img src={pen} alt="pen" className={styles.penSvg} />
         <button
           type="submit"
-          onSubmit={e => handleSubmit(e)}
+          onClick={e => handleSubmit(e)}
           className={styles.saveBtn}
         >
           Save Changes
