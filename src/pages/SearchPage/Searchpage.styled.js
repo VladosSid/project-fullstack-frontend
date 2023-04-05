@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import theme from '../../style/generalStyle';
 export const ContainerWrapper = styled.div`
   /* height: 100%; */
   display: flex;
@@ -11,4 +12,13 @@ export const ContainerWrapper = styled.div`
   padding-bottom: 100px;
   padding-left: 16px;
   padding-right: 16px;
+  @media ${theme.device.tablet} {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+
+  @media ${theme.device.desktop} {
+    padding-left: 99px;
+    padding-right: 99px;
+  }
 `;
