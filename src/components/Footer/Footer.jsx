@@ -1,4 +1,5 @@
 import { MdOutlineEmail } from 'react-icons/md';
+import Notiflix from 'notiflix';
 
 import { useState } from 'react';
 
@@ -30,18 +31,18 @@ import { MainContainer } from '../MainContainer/MainContainer';
 
 // import { recipeOperations } from '../../redux/recipe';
 
-// import { queryBackEnd } from '../../helpers/request';
+import { queryBackEnd } from '../../helpers/request';
 
 export function Footer() {
   // const [file, setFile] = useState(null);
   // const dispatch = useDispatch();
   const [email, setEmail] = useState('');
 
-  const emailSet = e => {
-    console.log(e);
-    setEmail(e.target.value);
-
-    console.log('123', email);
+  const getSubscription = async e => {
+    e.preventDefault();
+    const data = await queryBackEnd.querySubscribe(email);
+    console.log(data);
+    Notiflix.Notify.success(`${data.message}`);
   };
   // const setTest = async e => {
   //   e.preventDefault();
@@ -155,7 +156,7 @@ export function Footer() {
                   placeholder="Enter your email address"
                   name="email"
                   type="text"
-                  onChange={e => emailSet(e)}
+                  onChange={e => setEmail(e.target.value)}
                 />
               </div>
 
@@ -166,11 +167,8 @@ export function Footer() {
             onChange={e => uploadContent(e)}
           /> */}
 
-              <Button
-                type="button"
-                // onClick={e => setTest(e)}
-              >
-                Subcribe(LogIn)
+              <Button type="button" onClick={e => getSubscription(e)}>
+                Subcribe
               </Button>
               {/* <Button type="button" onClick={e => setTestOut(e)}>
             LogOuth
