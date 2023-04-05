@@ -26,4 +26,5 @@ const UserInfoModal = ({ toggler, open }) => {
     </div>
   );
 };
+
 export default UserInfoModal;
