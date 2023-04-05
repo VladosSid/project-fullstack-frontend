@@ -1,6 +1,6 @@
 import React from 'react';
 import SearchForm from 'components/SearchForm/SearchForm';
-import { SearchTypeSelectorBox } from './SearchBar.styled';
+import { SearchBarWrapper, SearchTypeSelectorBox } from './SearchBar.styled';
 import SearchTypeSelector from 'components/SearchTypeSelector/SearchTypeSelector';
 
 //-------------
@@ -8,7 +8,7 @@ export default function SearchBar(props) {
   const { onTypeChange, selectedType, onSubm, searchQuery } = props;
 
   return (
-    <>
+    <SearchBarWrapper>
       <SearchForm
         green
         onSubm={onSubm}
@@ -30,7 +30,7 @@ export default function SearchBar(props) {
           />
         )} */}
       </SearchTypeSelectorBox>
-    </>
+    </SearchBarWrapper>
   );
 }
 //function handleSubmit(query) {

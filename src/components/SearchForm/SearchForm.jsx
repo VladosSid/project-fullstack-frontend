@@ -15,7 +15,7 @@ export default function SearchForm({
 
   const handleSubmit = evt => {
     evt.preventDefault();
-
+    console.log('Query in SF submit', searchWord);
     if (searchWord.trim() === '') {
       console.log('Please fill the search form ');
       return;

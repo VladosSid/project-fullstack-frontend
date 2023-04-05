@@ -1,20 +1,50 @@
 import styled from 'styled-components';
-// import theme from './style/generalStyle';
+import theme from '../../style/generalStyle';
 
 export const ContainerWrapper = styled.div`
   height: 100%;
   display: flex;
   flex-direction: column;
-  width: 100%;
-
   align-items: center;
   justify-content: center;
+  padding-left: 16px;
+  padding-right: 16px;
+  @media ${theme.device.tablet} {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+
+  @media ${theme.device.desktop} {
+    padding-left: 99px;
+    padding-right: 99px;
+  }
 `;
 export const Container = styled.div`
-  display: grid;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   /* grid-template-columns: repeat(auto-fit, 343px); */
-  gap: 16px;
+  gap: 32px;
   width: 100%;
+  @media screen and (min-width: 1440px) {
+    gap: 50px;
+  }
+
+  @media ${theme.device.desktop} {
+    gap: 100px;
+  }
+`;
+export const GridContainer = styled.div`
+  justify-content: center;
+  @media ${theme.device.tablet} {
+    display: flex;
+    gap: 32px;
+  }
+
+  @media ${theme.device.desktop} {
+    display: flex;
+    gap: 14px;
+  }
 `;
 export const RecipeCategoryName = styled.h2`
   margin-bottom: 32px;
@@ -85,4 +115,12 @@ export const Button = styled.button`
   font-size: 14px;
   line-height: 1.29;
   margin-left: auto;
+  margin-top: 24px;
+  @media ${theme.device.tablet} {
+    margin-top: 40px;
+  }
+
+  @media ${theme.device.desktop} {
+    margin-top: 60px;
+  }
 `;
