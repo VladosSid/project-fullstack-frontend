@@ -5,16 +5,19 @@ export const HeaderBox = styled.header`
   display: flex;
   align-items: center;
   justify-content: space-between;
+  margin: 0 auto;
   margin-bottom: 60px;
-  padding-top: 20px;
 
-  /* @media ${theme.device.mobail} {
-    padding-top: 20px;
+  @media ${theme.device.mobail} {
+    width: 335px;
+    padding: 20px 16px 0;
   }
   @media ${theme.device.tablet} {
-    padding-top: 0;
+    width: 580px;
+    padding: 20px 30px 0;
   }
   @media ${theme.device.desktop} {
-    padding-top: 0;
-  } */
+    width: 1240px;
+    padding: 20px 100px 0;
+  }
 `;

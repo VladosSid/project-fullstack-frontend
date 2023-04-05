@@ -36,6 +36,7 @@ export const Ul = styled.ul`
   }
 
   @media ${theme.device.desktop} {
+    font-weight: 500;
     font-size: 14px;
     line-height: 22px;
   }
