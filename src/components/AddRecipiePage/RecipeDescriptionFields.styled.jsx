@@ -13,8 +13,8 @@ export const CustomSelect = styled(ReactSelect)`
     border-radius: 0;
     border: 1px solid #e0e0e0;
     border-width: 0px 0px 1px;
-    height: 43px;
-    margin-bottom: 40px;
+    height: 40px;
+    margin-bottom: 24px;
     width: 100px;
     box-sizing: border-box;
     font-size: 14px;
@@ -35,9 +35,16 @@ export const CustomSelect = styled(ReactSelect)`
         co
       }
     }
+    @media ${theme.device.tablet} {
+    font-size: 16px;
+    width: 130px;
+    height: 43px;
+    margin-bottom: 32px;
+  }
     @media ${theme.device.desktop} {
     font-size: 16px;
     width: 130px;
+    margin-bottom: 40px;
   }
   }
 
@@ -120,7 +127,7 @@ export const Desc = styled.div`
   display: flex;
   flex-direction: column;
 
-  @media ${theme.device.desktop} {
+  @media ${theme.device.tablet} {
     display: flex;
     flex-direction: row;
   }
@@ -138,15 +145,16 @@ export const FilePicker = styled.div`
   background-repeat: no-repeat;
   background-position: 50% 50%;
 
+  @media ${theme.device.tablet} {
+    height: 268px;
+    width: 279px;
+    margin: 0;
+  }
+
   @media ${theme.device.desktop} {
     width: 357px;
     height: 344px;
     margin: 0;
-  }
-
-  @media ${theme.device.tablet} {
-    height: 268px;
-
   }
 `;
 
@@ -162,7 +170,7 @@ export const InputFile = styled.input`
 export const InputText = styled.input`
   border: 1px solid #e0e0e0;
   border-width: 0px 0px 1px;
-  height: 43px;
+  height: 40px;
   margin-bottom: 40px;
   padding: 0;
   width: 100%;
@@ -172,8 +180,16 @@ export const InputText = styled.input`
   font-family: Poppins;
   background-color: transparent;
   color: #000000;
+  @media ${theme.device.tablet} {
+    font-size: 16px;
+    line-height: 24px;
+    margin-bottom: 32px;
+    height: 43px;
+  }
   @media ${theme.device.desktop} {
     font-size: 16px;
+    line-height: 24px;
+    margin-bottom: 40px;
   }
   :focus-visible
        {
@@ -187,10 +203,14 @@ export const FieldList = styled.div`
   flex-wrap: wrap;
   flex-direction: column;
   max-width: 393px;
-  @media ${theme.device.desktop} {
-    margin-left: 50px;
+
+  @media ${theme.device.tablet} {
+    margin-left: 32px;
     width: 393px;
   }
+  @media ${theme.device.desktop} {
+    margin-left: 50px;
+      }
 `;
 
 export const Photo = styled.img`

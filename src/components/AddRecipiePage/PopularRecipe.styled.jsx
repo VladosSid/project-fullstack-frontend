@@ -10,14 +10,13 @@ export const Popular = styled.div`
     padding-top: 100px;
     justify-content: start;
     flex-direction: column;
-
   }
 `;
 
 export const Col = styled.div`
   display: flex;
   flex-direction: column;
-  margin-left: 13px
+  margin-left: 13px;
 `;
 
 export const Label = styled.p`
@@ -44,6 +43,11 @@ export const Recipe = styled.li`
   padding-bottom: 13px;
   padding-top: 24px;
   border-bottom: 1px solid rgba(112, 112, 112, 0.17);
+  @media ${theme.device.tablet} {
+    max-width: 336px;
+  }
+  @media ${theme.device.desktop} {
+  }
 `;
 
 export const Thumb = styled.img`
@@ -54,4 +58,13 @@ export const Thumb = styled.img`
 
 export const Recipes = styled.ul`
   margin-bottom: 100px;
+  display: flex;
+  flex-direction: column;
+  @media ${theme.device.tablet} {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  @media ${theme.device.desktop} {
+    flex-direction: column;
+  }
 `;
