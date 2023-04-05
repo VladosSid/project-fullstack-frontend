@@ -10,6 +10,7 @@ import {
   RecipeCategoryName,
   Button,
   ContainerWrapper,
+  GridContainer,
 } from './MainPage.styled';
 
 import MainPageHero from 'components/MainPageHero';
@@ -22,31 +23,31 @@ export default function MainPage() {
   const [recipes, setRecipes] = useState([]);
   // const [searchParams, setSearchParams] = useSearchParams();
   // const queryRec = searchParams.get('query');
-  const [width] = useState(window.innerWidth);
+  // const [width] = useState(window.innerWidth);
 
   //Do we need resize?
-  //const [width, setWidth] = useState(window.innerWidth);
-  // const handleResize = () => {
-  //   setWidth(window.innerWidth);
-  // };
+  const [width, setWidth] = useState(window.innerWidth);
+  const handleResize = () => {
+    setWidth(window.innerWidth);
+  };
 
-  // useEffect(() => {
-  //   window.addEventListener('resize', handleResize);
+  useEffect(() => {
+    window.addEventListener('resize', handleResize);
 
-  //   return () => {
-  //     window.removeEventListener('resize', handleResize);
-  //   };
-  // }, []);
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
 
   useEffect(() => {
     instanceBacEnd.defaults.headers.common.Authorization =
       'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDI4NGEyNDI5ODkxOTJkMDJkOTc1ZGMiLCJpYXQiOjE2ODAzNjQzOTB9.F6KumBIsfhDh32UmksQgN3JqdFUpxwqq0ifHBL8dq3A';
     let queryQuantity;
-    if (width >= 769 && width < 1240) {
+    if (width >= 768 && width < 1440) {
       queryQuantity = 2;
-    } else if (width >= 1240) {
+    } else if (width >= 1440) {
       queryQuantity = 4;
-    } else if (width < 769) {
+    } else if (width < 768) {
       queryQuantity = 1;
     }
     // if (width < 1441) {
@@ -63,6 +64,8 @@ export default function MainPage() {
 
       .then(function (response) {
         setRecipes(response.data.result.data);
+        console.log(response.data.result.data);
+        console.log(queryQuantity, width);
       })
       .catch(function (error) {
         console.log(error.message);
@@ -104,7 +107,7 @@ export default function MainPage() {
         {Object.entries(RecipesByCategory).map(([category, recipes]) => (
           <div key={category}>
             <RecipeCategoryName>{category}</RecipeCategoryName>
-            <div>
+            <GridContainer>
               {recipes.map(recipe => (
                 <DishCard
                   key={recipe._id}
@@ -112,7 +115,7 @@ export default function MainPage() {
                   recipe={recipe}
                 />
               ))}
-            </div>
+            </GridContainer>
 
             <Button onClick={() => handleCategoryClick(category)}>
               See all

@@ -20,16 +20,30 @@ export const ContainerWrapper = styled.div`
   }
 `;
 export const Container = styled.div`
-  display: grid;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   /* grid-template-columns: repeat(auto-fit, 343px); */
   gap: 32px;
   width: 100%;
-  @media ${theme.device.tablet} {
+  @media screen and (min-width: 1440px) {
     gap: 50px;
   }
 
   @media ${theme.device.desktop} {
     gap: 100px;
+  }
+`;
+export const GridContainer = styled.div`
+  justify-content: center;
+  @media ${theme.device.tablet} {
+    display: flex;
+    gap: 32px;
+  }
+
+  @media ${theme.device.desktop} {
+    display: flex;
+    gap: 14px;
   }
 `;
 export const RecipeCategoryName = styled.h2`
