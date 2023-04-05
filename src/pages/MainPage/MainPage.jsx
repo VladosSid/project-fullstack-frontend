@@ -24,20 +24,20 @@ export default function MainPage() {
   // const [searchParams, setSearchParams] = useSearchParams();
   // const queryRec = searchParams.get('query');
   // const [width] = useState(window.innerWidth);
-
+  const [width] = useState(window.innerWidth);
   //Do we need resize?
-  const [width, setWidth] = useState(window.innerWidth);
-  const handleResize = () => {
-    setWidth(window.innerWidth);
-  };
+  // const [width, setWidth] = useState(window.innerWidth);
+  // const handleResize = () => {
+  //   setWidth(window.innerWidth);
+  // };
 
-  useEffect(() => {
-    window.addEventListener('resize', handleResize);
+  // useEffect(() => {
+  //   window.addEventListener('resize', handleResize);
 
-    return () => {
-      window.removeEventListener('resize', handleResize);
-    };
-  }, []);
+  //   return () => {
+  //     window.removeEventListener('resize', handleResize);
+  //   };
+  // }, []);
 
   useEffect(() => {
     instanceBacEnd.defaults.headers.common.Authorization =
