@@ -21,7 +21,7 @@ const register = createAsyncThunk(
       Notiflix.Notify.success(`Account successfully created.`);
       return data;
     } catch (err) {
-      Notiflix.Notify.failure('Account creation error!!!');
+      Notiflix.Notify.failure(err.message);
       return thunkAPI.rejectWithValue(err.message);
     }
   }
@@ -34,7 +34,7 @@ const logIn = createAsyncThunk('auth/logInUser', async (userData, thunkAPI) => {
     token.set(data.user.token);
     return data;
   } catch (err) {
-    Notiflix.Notify.failure('Authorisation Error!!!');
+    Notiflix.Notify.failure(err.message);
     return thunkAPI.rejectWithValue(err.message);
   }
 });
@@ -48,10 +48,10 @@ const logOut = createAsyncThunk('auth/logOut', async (_, thunkAPI) => {
     Notiflix.Notify.success(`Logout completed.`);
 
     return data;
-  } catch (error) {
-    Notiflix.Notify.failure('Logout Error!!!');
+  } catch (err) {
+    Notiflix.Notify.failure(err.message);
 
-    return thunkAPI.rejectWithValue(error.message);
+    return thunkAPI.rejectWithValue(err.message);
   }
 });
 
@@ -69,8 +69,8 @@ const fetchCurrentUser = createAsyncThunk(
     try {
       const { data } = await instanceBacEnd.get('users/current');
       return data;
-    } catch (error) {
-      return thunkAPI.rejectWithValue(error.message);
+    } catch (err) {
+      return thunkAPI.rejectWithValue(err.message);
     }
   }
 );
@@ -88,6 +88,8 @@ const updateUserData = createAsyncThunk(
       Notiflix.Notify.success(`Logout completed.`);
       return data;
     } catch (err) {
+      Notiflix.Notify.success(err.message);
+
       return thunkAPI.rejectWithValue(err.message);
     }
   }

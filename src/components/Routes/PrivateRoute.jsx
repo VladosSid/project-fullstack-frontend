@@ -1,21 +1,25 @@
-import { PropTypes } from "prop-types";
-import { Navigate } from "react-router-dom";
-// import { useAuth } from "hooks";
+import { PropTypes } from 'prop-types';
+import { Navigate } from 'react-router-dom';
+// import { useSelector } from 'react-redux';
 
+// import { authSelectors } from '../../redux/users';
 
-const PrivateRoute = ({ component: Component, redirectTo = "/" }) => {
+const PrivateRoute = ({ component: Component, redirectTo = '/' }) => {
+  // const isLoggedIn = useSelector(authSelectors.getIsLoggedIn);
+  // const isRefreshing = useSelector(authSelectors.getGetingCurentUser);
 
-    // as example
-    // const { isLoggedIn, isRefreshing } = useAuth();
-    // const shouldRedirect = !isRefreshing && !isLoggedIn;
+  // тимчасова зміна
+  const isRefreshing = true;
+  const isLoggedIn = false;
 
-    let shouldRedirect = false;
-    return shouldRedirect ? <Navigate to={redirectTo} /> : Component;
+  const shouldRedirect = !isRefreshing && !isLoggedIn;
+
+  return shouldRedirect ? <Navigate to={redirectTo} /> : Component;
 };
 
 export default PrivateRoute;
 
 PrivateRoute.propTypes = {
-    component: PropTypes.object,
-    redirectTo: PropTypes.string
-}
+  component: PropTypes.object,
+  redirectTo: PropTypes.string,
+};
