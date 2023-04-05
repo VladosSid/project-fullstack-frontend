@@ -7,17 +7,6 @@ export const ContainerWrapper = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding-left: 16px;
-  padding-right: 16px;
-  @media ${theme.device.tablet} {
-    padding-left: 32px;
-    padding-right: 32px;
-  }
-
-  @media ${theme.device.desktop} {
-    padding-left: 99px;
-    padding-right: 99px;
-  }
 `;
 export const Container = styled.div`
   display: flex;
@@ -26,12 +15,18 @@ export const Container = styled.div`
   /* grid-template-columns: repeat(auto-fit, 343px); */
   gap: 32px;
   width: 100%;
+  padding-left: 16px;
+  padding-right: 16px;
   @media screen and (min-width: 1440px) {
+    padding-left: 32px;
+    padding-right: 32px;
     gap: 50px;
   }
 
   @media ${theme.device.desktop} {
     gap: 100px;
+    padding-left: 99px;
+    padding-right: 99px;
   }
 `;
 export const GridContainer = styled.div`
