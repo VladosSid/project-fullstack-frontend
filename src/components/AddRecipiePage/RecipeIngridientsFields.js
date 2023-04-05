@@ -16,7 +16,8 @@ import {
 } from './RecipeIngridientsFields.styled';
 import Notiflix from 'notiflix';
 
-const token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDJkZTYwYmNlOTJjN2E5ZGIzOTUyODMiLCJpYXQiOjE2ODA3Mjk5MzB9.4w24PlEZHdCxWxGnub0Er6GjaEog_6NUtHaPm-CbxN0"
+const token =
+  'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDJkZTYwYmNlOTJjN2E5ZGIzOTUyODMiLCJpYXQiOjE2ODA3Mjk5MzB9.4w24PlEZHdCxWxGnub0Er6GjaEog_6NUtHaPm-CbxN0';
 
 const RecipeIngridientsFields = ({ onChange }) => {
   const [count, setCount] = useState(0);
@@ -26,18 +27,21 @@ const RecipeIngridientsFields = ({ onChange }) => {
 
   useEffect(() => {
     async function fetchMyIngredients() {
-      let response = await fetch('https://backend-soyummy.onrender.com/api/ingredients/list', {
-        headers: {
-        Authorization: `Bearer ${token}`,  
-      },
-  method: 'GET',
-      })
-      response = await response.json()
-      setIngredients(response.data)
+      let response = await fetch(
+        'https://backend-soyummy.onrender.com/api/ingredients/list',
+        {
+          headers: {
+            Authorization: `Bearer ${token}`,
+          },
+          method: 'GET',
+        }
+      );
+      response = await response.json();
+      setIngredients(response.data);
     }
 
-    fetchMyIngredients()
-  }, [])
+    fetchMyIngredients();
+  }, []);
 
   const handleValueSelectIngridient = e => {
     const index = Object.keys(e.value);
