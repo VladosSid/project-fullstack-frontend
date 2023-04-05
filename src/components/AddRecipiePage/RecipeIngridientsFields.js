@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import { useState } from 'react';
 import {
   Counter,
@@ -19,7 +20,7 @@ import Notiflix from 'notiflix';
 const RecipeIngridientsFields = ({ onChange }) => {
   const [count, setCount] = useState(0);
   const [ingridient, setIngridient] = useState([]);
-  const [ingredients, setIngredients] = useState(INGRIDIENTS); // eslint-disable-line
+  const [ingredients, setIngredients] = useState(INGRIDIENTS);
   const [quantity, setQuantity] = useState(null);
 
   const handleValueSelectIngridient = e => {
@@ -34,7 +35,6 @@ const RecipeIngridientsFields = ({ onChange }) => {
 
   const handleValueSelectMessure = e => {
     const index = Object.keys(e.value);
-    console.log(quantity);
     const item = {
       measure: quantity + e.value[Object.keys(e.value)],
     };
@@ -60,7 +60,7 @@ const RecipeIngridientsFields = ({ onChange }) => {
       case 'minus':
         if (count > 0) {
           setCount(count - 1);
-          let newIingridients = ingredients;
+          let newIingridients = ingridient;
           newIingridients.pop();
           setIngridient(newIingridients);
         }
@@ -105,34 +105,6 @@ const RecipeIngridientsFields = ({ onChange }) => {
       {ingridient.map((field, index) => (
         <IngridientsList key={index}>
           <IngridientField>
-            <CustomSelect
-              key={index}
-              id={index}
-              onChange={handleValueSelectIngridient}
-              className="react-select-container"
-              classNamePrefix="react-select"
-              options={ingredients.map(({ ttl, _id }) => ({
-                value: { [index]: _id },
-                label: ttl,
-              }))}
-            />
-            <Quantity>
-              <InputQuantity
-                onChange={e => setQuantity(e.currentTarget.value)}
-                defaultValue="0"
-              />
-              <CustomSelectUnit
-                key={index}
-                id={index}
-                onChange={handleValueSelectMessure}
-                placeholder=""
-                classNamePrefix="react-select"
-                options={UNIT.map(unit => ({
-                  value: { [index]: unit },
-                  label: unit,
-                }))}
-              />
-            </Quantity>
             <CustomSelect
               key={index}
               id={index}
