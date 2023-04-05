@@ -1,16 +1,16 @@
 import { PropTypes } from 'prop-types';
 import { Navigate } from 'react-router-dom';
-// import { useSelector } from 'react-redux';
+import { useSelector } from 'react-redux';
 
-// import { authSelectors } from '../../redux/users';
+import { authSelectors } from '../../redux/users';
 
 const PrivateRoute = ({ component: Component, redirectTo = '/' }) => {
-  // const isLoggedIn = useSelector(authSelectors.getIsLoggedIn);
-  // const isRefreshing = useSelector(authSelectors.getGetingCurentUser);
+  const isLoggedIn = useSelector(authSelectors.getIsLoggedIn);
+  const isRefreshing = useSelector(authSelectors.getGetingCurentUser);
 
   // тимчасова зміна
-  const isRefreshing = true;
-  const isLoggedIn = false;
+  // const isRefreshing = true;
+  // const isLoggedIn = false;
 
   const shouldRedirect = !isRefreshing && !isLoggedIn;
 

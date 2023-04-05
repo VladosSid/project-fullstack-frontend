@@ -1,9 +1,9 @@
 import { Suspense, lazy, useEffect } from 'react'; //eslint-disable-line
 import { Route, Routes } from 'react-router-dom';
-// import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { AppBox } from './App.styled';
 
-// import { authSelectors, authOperations } from '../redux/users';
+import { authSelectors, authOperations } from '../redux/users';
 
 import RestrictedRoute from './Routes/RestrictedRoute';
 import PrivateRoute from './Routes/PrivateRoute';
@@ -27,13 +27,13 @@ const SearchPage = lazy(() => import('../pages/SearchPage/SearchPage'));
 const NotFoundPage = lazy(() => import('../pages/NotFoundPage/NotFoundPage'));
 
 export const App = () => {
-  // const dispatch = useDispatch();
-  // const isGetingCurent = useSelector(authSelectors.getGetingCurentUser);
-  const isGetingCurent = false;
+  const dispatch = useDispatch();
+  const isGetingCurent = useSelector(authSelectors.getGetingCurentUser);
+  // const isGetingCurent = false;
 
-  // useEffect(() => {
-  //   dispatch(authOperations.fetchCurrentUser());
-  // }, [dispatch]);
+  useEffect(() => {
+    dispatch(authOperations.fetchCurrentUser());
+  }, [dispatch]);
 
   return isGetingCurent ? (
     <b>Refreshing user...</b>
