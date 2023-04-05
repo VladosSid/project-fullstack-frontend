@@ -50,21 +50,12 @@ export default function MainPage() {
     } else if (width < 768) {
       queryQuantity = 1;
     }
-    // if (width < 1441) {
-    //   queryQuantity = 2;
-    // }
-    // if (width < 769) {
-    //   queryQuantity = 1;
-    // }
-    // if (width >= 1441) {
-    //   queryQuantity = 4;
-    // }
     instanceBacEnd
       .get(`/recipes/main-page?query=${queryQuantity}`)
 
       .then(function (response) {
         setRecipes(response.data.result.data);
-        console.log(response.data.result.data);
+
         console.log(queryQuantity, width);
       })
       .catch(function (error) {
@@ -83,7 +74,7 @@ export default function MainPage() {
   //---------------------------
   const handleFormSubmit = query => {
     console.log('Query in Main', query);
-    console.log('recipes', recipes);
+
     // const nextQuery = query !== '' ? { query } : {};
     // setSearchParams(nextQuery);
     const searchUrl = createSearchUrl(query);

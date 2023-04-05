@@ -1,15 +1,15 @@
 import React, { useState } from 'react'; //useEffect
-import { recipesG } from 'gannaFakeData';
-import DishCard from 'components/DishCard/DishCard';
-import { useLocation } from 'react-router-dom';
-import { ContainerWrapper, Container } from './Searchpage.styled';
+
+// import DishCard from 'components/DishCard/DishCard';
+// import { useLocation } from 'react-router-dom';
+import { ContainerWrapper } from './Searchpage.styled';
 import { useSearchParams } from 'react-router-dom';
 import SearchBar from 'components/SearchBar/SearchBar';
 // import { createSearchUrl } from 'helpers/createSearchUrl';
 import SearchRecipesList from 'components/SearchRecipesList/SearchRecipesList';
 //-------------------------------
 export default function SearchPage() {
-  const location = useLocation();
+  // const location = useLocation();
   const [searchParams, setSearchParams] = useSearchParams();
   const [searchQuery, setSearchQuery] = useState(
     searchParams.get('query') || ''
@@ -23,6 +23,7 @@ export default function SearchPage() {
   const [searchResults] = useState([]);
   //---------------------------
   function handleSearch(query) {
+    console.log('Query in SP handleSearch', query);
     setSearchQuery(query);
   }
   //------------
@@ -36,10 +37,15 @@ export default function SearchPage() {
   }
   //---------
   function handleSubmit(query) {
-    const nextQuery = query !== '' ? { query } : {};
+    console.log('Query in SP submit', query);
+    const nextQuery = query !== '' ? query : '';
     setSearchQuery(nextQuery);
     // const searchUrl = createSearchUrl(query, query);!!!!!!!
-    setSearchParams({ query: query.toLowerCase(), type: searchType });
+    setSearchParams({
+      query: query.toLowerCase(),
+      type: searchType,
+    });
+    console.log('nextQuery in SP submit', nextQuery);
   }
   //----------------------------
   return (

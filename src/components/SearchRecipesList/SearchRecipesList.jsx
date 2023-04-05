@@ -22,18 +22,16 @@ export default function SearchRecipesList({ searchQuery, searchType }) {
     instanceBacEnd.defaults.headers.common.Authorization =
       'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDI4NGEyNDI5ODkxOTJkMDJkOTc1ZGMiLCJpYXQiOjE2ODAzNjQzOTB9.F6KumBIsfhDh32UmksQgN3JqdFUpxwqq0ifHBL8dq3A';
     instanceBacEnd
-      .get(
-        `/search/?query=${searchQuery.query.toLowerCase()}&type=${searchType}`
-      )
+      .get(`/search/?query=${searchQuery}&type=${searchType}`)
       .then(function (response) {
-        console.log(searchQuery.query.toLowerCase(), searchType);
+        console.log(searchQuery, searchType);
         setRecipes(response.data.result.data);
       })
       .catch(function (error) {
         console.log(error.message);
       });
   }, [searchQuery, searchType]); //searchQuery
-  console.log(recipes);
+
   return (
     <GridContainer>
       {recipes.map(recipe => (
@@ -44,3 +42,4 @@ export default function SearchRecipesList({ searchQuery, searchType }) {
 }
 
 //<RecipesList recipes={recipes} />
+//searchQuery.query.toLowerCase()
