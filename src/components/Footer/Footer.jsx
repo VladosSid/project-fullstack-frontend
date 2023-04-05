@@ -2,7 +2,6 @@ import { MdOutlineEmail } from 'react-icons/md';
 
 import { useState } from 'react';
 
-
 // import { useDispatch } from 'react-redux';
 import logo from '../../images/Footer/logoFooter.png';
 import { UseSvg } from '../../helpers/useSvg/useSvg';
