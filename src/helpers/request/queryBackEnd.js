@@ -48,9 +48,19 @@ const querySubscribe = async email => {
 };
 
 // отримати список своїх рецептів
-const queryFavorite = async () => {
+const queryOwnRecipes = async () => {
   try {
     const { data } = await instanceBacEnd.get(`/ownRecipes`);
+    return data;
+  } catch (err) {
+    return err.response.data.message;
+  }
+};
+
+// видалення рецепта його власником
+const queryOwnRecipesDelete = async id => {
+  try {
+    const { data } = await instanceBacEnd.get(`/ownRecipes/${id}`);
     return data;
   } catch (err) {
     return err.response.data.message;
@@ -67,15 +77,57 @@ const queryCategoryList = async () => {
   }
 };
 
-// const queryFavoriteDelete = async id => {
-//   try {
-//     const { data } = await instanceBacEnd.delete(`/ownRecipes`, { id });
-//     return data.result;
-//   } catch (err) {
-//     console.log(err.message);
-//   }
-// };
+// получить весь список ингредиентов
+const queryAllIngredients = async () => {
+  try {
+    const { data } = await instanceBacEnd.get('/ingredients/list');
+    return data;
+  } catch (err) {
+    return err.response.data.message;
+  }
+};
 
+// получить весь список популярных рецептов
+const queryPopular = async query => {
+  try {
+    const { data } = await instanceBacEnd.get(`/popular-recipe?query=${query}`);
+    return data;
+  } catch (err) {
+    return err.response.data.message;
+  }
+};
+
+// додавання рецепту до favotie
+const queryAddFavorite = async id => {
+  try {
+    const { data } = await instanceBacEnd.patch(`/favorite/add`, id);
+    return data;
+  } catch (err) {
+    return err.response.data.message;
+  }
+};
+
+// видалення рецепту з  favorite
+const queryRemoveFavorite = async id => {
+  try {
+    const { data } = await instanceBacEnd.patch(`/favorite/remove`, id);
+    return data;
+  } catch (err) {
+    return err.response.data.message;
+  }
+};
+
+// отримання масиву з id рецептами
+const queryAllFavorite = async () => {
+  try {
+    const { data } = await instanceBacEnd.get(`/favorite`);
+    return data;
+  } catch (err) {
+    return err.response.data.message;
+  }
+};
+
+// пошук рецептів
 // повертає масив страв за данними пошуку
 // приймає type запиту(ingredients або title); запит query; page сторінка; limit ліміт на 1 сторінкі
 const querySearch = async (type, query, limit = 6, page = 1) => {
@@ -95,9 +147,15 @@ const queryBackEnd = {
   queryRecipeCategori,
   queryRecipeId,
   querySubscribe,
-  queryFavorite,
+  queryOwnRecipes,
+  queryOwnRecipesDelete,
   queryCategoryList,
   querySearch,
+  queryAllIngredients,
+  queryPopular,
+  queryAddFavorite,
+  queryRemoveFavorite,
+  queryAllFavorite,
 };
 
 export default queryBackEnd;
