@@ -84,6 +84,7 @@ export default function MainPage() {
     // const nextQuery = query !== '' ? { query } : {};
     // setSearchParams(nextQuery);
     const searchUrl = createSearchUrl(query);
+    console.log('SearchUrl in MainPage', searchUrl);
     navigate(searchUrl);
   };
 

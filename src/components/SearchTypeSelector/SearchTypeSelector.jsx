@@ -6,17 +6,15 @@ import {
   SearchTypeSpan,
 } from './SearchTypeSelector.styled';
 
-const options = [
-  { value: 'query', label: 'Title' },
-  { value: 'ingredient', label: 'Ingredients' },
-];
+export default function SearchTypeSelector({ onChange, selectedType }) {
+  const options = [
+    { value: 'title', label: 'Title' },
+    { value: 'ingredient', label: 'Ingredients' },
+  ];
 
-export default function SearchTypeSelector({ selectedValue, onChange }) {
-  // const [selectedOption, setSelectedOption] = useState(options[0]);
-
-  // const handleChange = option => {
-  //   setSelectedOption(option);
-  // };
+  function handleChange(option) {
+    onChange(option.value);
+  }
   return (
     <>
       <CustomSelectBox>
@@ -25,22 +23,10 @@ export default function SearchTypeSelector({ selectedValue, onChange }) {
           className="react-select-container"
           classNamePrefix="react-select"
           options={options}
-          value={options.find(option => option.value === selectedValue)}
-          onChange={option => onChange(option.value)}
+          value={options.find(option => option.value === selectedType)}
+          onChange={handleChange}
         />
       </CustomSelectBox>
-      {/* <Select
-        options={options}
-        value={selectedOption}
-        onChange={handleChange}
-        styles={customStyles}
-      /> */}
     </>
   );
 }
-// const customStyles = {
-//   dropdownIndicator: (provided, state) => ({
-//     ...provided,
-//     color: '#8BAA36',
-//   }),
-// };

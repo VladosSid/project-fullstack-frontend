@@ -14,6 +14,3 @@ export const Container = styled.div`
   gap: 16px;
   width: 100%;
 `;
-export const SearchBar = styled.div`
-  margin-bottom: 30px;
-`;
