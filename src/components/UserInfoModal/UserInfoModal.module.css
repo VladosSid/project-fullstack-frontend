@@ -98,8 +98,18 @@
     border-radius: 50px;
     border: none;
 }
-
+.uploadedImg {
+    height: 100%;
+    object-fit: cover;
+}
+.plusSvg {
+    pointer-events: none;
+    position: absolute;
+    top: 100px;
+    right: 130px;
+}
 .userInfoModal div {
+    overflow: hidden;
     position: relative;
     display: flex;
     align-items: center;
@@ -109,6 +119,13 @@
     width: 88px;
     height: 88px;
     margin: 0 auto;
+}
+
+.addImgInput {
+    position: absolute;
+    border-radius: 50px;
+    width: 88px;
+    height: 88px;
 }
 
 .userSvg {
