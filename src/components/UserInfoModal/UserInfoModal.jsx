@@ -55,7 +55,7 @@ const UserInfoModal = ({ toggler, open }) => {
         </div>
         <img src={plus} alt="plus" className={styles.plusSvg} />
         <input
-          onInput={e => onInputChange(e)}
+          // onInput={e => onInputChange(e)}
           type="text"
           placeholder="Olena"
           className={styles.nameInput}
