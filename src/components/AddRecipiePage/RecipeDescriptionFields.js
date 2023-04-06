@@ -21,26 +21,14 @@ const RecipeDescriptionFields = ({ onChange }) => {
   const [image, setImage] = useState(null);
   const [category, setCategory] = useState([]);
 
-  //const category = queryBackEnd.queryCategoryList()
-  const token =
-    'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDJkZTYwYmNlOTJjN2E5ZGIzOTUyODMiLCJpYXQiOjE2ODA3Mjk5MzB9.4w24PlEZHdCxWxGnub0Er6GjaEog_6NUtHaPm-CbxN0';
+  
+ async function getCategory()  {
+    const {result} = await queryBackEnd.queryCategoryList()
+    setCategory(result.data);
+  }
 
   useEffect(() => {
-    async function fetchCategory() {
-      let response = await fetch(
-        'https://backend-soyummy.onrender.com/api/recipes/category-list',
-        {
-          headers: {
-            Authorization: `Bearer ${token}`,
-          },
-          method: 'GET',
-        }
-      );
-      response = await response.json();
-      setCategory(response.result.data);
-    }
-
-    fetchCategory();
+    getCategory()
   }, []);
 
   const categorys = category.map(category => ({
@@ -114,7 +102,7 @@ const RecipeDescriptionFields = ({ onChange }) => {
             onChange={handleValueSelectCategory}
             defaultValue={categorys[0]}
             classNamePrefix="react-select"
-            options={categorys}
+            options={categorys && categorys}
             id="category"
           />
         </Row>
