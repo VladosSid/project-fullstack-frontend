@@ -1,36 +1,40 @@
-// import { useSelector} from 'react-redux';
 import { useEffect, useState } from 'react';
 import IngredientsShoppingList from './IngredientsShoppingList';
 import {
   TitltList,
   TitleListProducts,
   TitleListNumber,
-  Tabl,
+    ImgIngradientsContainer,
 } from './ShoppingList.styled';
 // import ingredients from '../../ingredients.json';
 import queryBackEnd from "../../helpers/request/queryBackEnd"
-// import Notiflix from 'notiflix';
-
+import imgIngradients from "../../images/ShopingList/ingradients.png"
 
 const ShoppingList = () => {
   const [ingredientS, setIngredientS] = useState([]);
-
   useEffect(() => {
-  
-       queryBackEnd
+         queryBackEnd
         .queryShoppingList()
         .then(response => {
-          setIngredientS(response.result[0].shoppingList);
-          console.log("111",response.result[0].shoppingList);
-         })
-
-
+          setIngredientS(response.data);
+                 })
   }, []);
+  
+    const deleteIngradient = contactId => {
+    queryBackEnd
+      .queryRemoveShoppingList({ shoppingListIng: contactId })
+      .then(response => {
+        console.log('response', response);
+        setIngredientS(prevState =>
+          prevState.filter(ingradient => ingradient._id !== contactId)
+        );
+      });
+  };
 
 
   return (
-    <Tabl>
-      {ingredientS.length > 0 && (
+    <div>
+      {ingredientS.length > 0 ? (
         <>
           <TitltList>
             <TitleListProducts>Products</TitleListProducts>
@@ -39,11 +43,15 @@ const ShoppingList = () => {
           </TitltList>
           <IngredientsShoppingList
             ingredients={ingredientS}
-            setIngredientS={setIngredientS}
+            deleteIngradient={deleteIngradient}
           />
         </>
+      ) : (
+        <ImgIngradientsContainer>
+          <img src={imgIngradients} alt="ingredient" />
+        </ImgIngradientsContainer>
       )}
-    </Tabl>
+    </div>
   );
 };
 export default ShoppingList;

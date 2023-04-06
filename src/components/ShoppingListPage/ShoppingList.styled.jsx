@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import theme from '../../style/generalStyle';
 
-export const Tabl = styled.div``;
+
 export const TitltList = styled.div`
   display: flex;
   max-width: 357px;
@@ -39,4 +39,12 @@ export const TitleListNumber = styled.span`
   @media ${theme.device.desktop} {
     margin-right: 124px;
   }
+`;
+
+
+export const ImgIngradientsContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  padding:100px;
+
 `;
