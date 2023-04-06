@@ -175,6 +175,20 @@ const queryRemoveShoppingList = async idIng => {
   }
 };
 
+const queryAddRecipe = async data => {
+  try {
+    const add = await instanceBacEnd.post('/ownRecipes', data, {
+      headers: {
+        'Content-type': 'multipart/form-data',
+      },
+    });
+  return add.status
+} catch (err) {
+  console.log(err.response.data.message)
+  return err.response.data.message;
+}
+};
+
 const queryBackEnd = {
   queryRecipeMinePage,
   queryRecipeCategori,
@@ -199,6 +213,8 @@ const queryBackEnd = {
   queryShoppingList,
   queryAddShoppingList,
   queryRemoveShoppingList,
+
+  queryAddRecipe
 };
 
 export default queryBackEnd;
