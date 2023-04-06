@@ -191,11 +191,10 @@ export const InputText = styled.input`
     line-height: 24px;
     margin-bottom: 40px;
   }
-  :focus-visible
-       {
-        outline: 0;
-        box-shadow: 0;
-      }
+  :focus-visible {
+    outline: 0;
+    box-shadow: 0;
+  }
 `;
 
 export const FieldList = styled.div`
@@ -210,10 +209,9 @@ export const FieldList = styled.div`
   }
   @media ${theme.device.desktop} {
     margin-left: 50px;
-      }
+  }
 `;
 
 export const Photo = styled.img`
-background-color: #FFFFFF;
+  background-color: #ffffff;
 `;
-

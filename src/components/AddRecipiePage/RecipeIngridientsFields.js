@@ -1,5 +1,5 @@
 /* eslint-disable no-unused-vars */
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import {
   Counter,
   Title,
@@ -14,14 +14,34 @@ import {
   CustomSelect,
   CustomSelectUnit,
 } from './RecipeIngridientsFields.styled';
-import INGRIDIENTS from './ingredients.json';
 import Notiflix from 'notiflix';
+
+const token =
+  'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDJkZTYwYmNlOTJjN2E5ZGIzOTUyODMiLCJpYXQiOjE2ODA3Mjk5MzB9.4w24PlEZHdCxWxGnub0Er6GjaEog_6NUtHaPm-CbxN0';
 
 const RecipeIngridientsFields = ({ onChange }) => {
   const [count, setCount] = useState(0);
   const [ingridient, setIngridient] = useState([]);
-  const [ingredients, setIngredients] = useState(INGRIDIENTS);
+  const [ingredients, setIngredients] = useState([]);
   const [quantity, setQuantity] = useState(null);
+
+  useEffect(() => {
+    async function fetchMyIngredients() {
+      let response = await fetch(
+        'https://backend-soyummy.onrender.com/api/ingredients/list',
+        {
+          headers: {
+            Authorization: `Bearer ${token}`,
+          },
+          method: 'GET',
+        }
+      );
+      response = await response.json();
+      setIngredients(response.data);
+    }
+
+    fetchMyIngredients();
+  }, []);
 
   const handleValueSelectIngridient = e => {
     const index = Object.keys(e.value);
@@ -111,9 +131,9 @@ const RecipeIngridientsFields = ({ onChange }) => {
               onChange={handleValueSelectIngridient}
               className="react-select-container"
               classNamePrefix="react-select"
-              options={ingredients.map(({ ttl, _id }) => ({
+              options={ingredients.map(({ title, _id }) => ({
                 value: { [index]: _id },
-                label: ttl,
+                label: title,
               }))}
             />
             <Quantity>

@@ -1,6 +1,5 @@
 /* eslint-disable no-unused-vars */
-import { Title, Textarea } from "./RecipePreparation.styled"
-
+import { Title, Textarea } from './RecipePreparation.styled';
 
 const RecipePreparationFields = ({ onChange }) => {
   const handleValueSetInstructions = e => {

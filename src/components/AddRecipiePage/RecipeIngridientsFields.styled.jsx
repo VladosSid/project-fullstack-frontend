@@ -1,36 +1,34 @@
 import styled from 'styled-components';
 import theme from 'style/generalStyle';
 import down from '../../images/AddRecipiePage/chevron-down.svg';
-import ReactSelect from "react-select";
+import ReactSelect from 'react-select';
 
 export const CustomSelectUnit = styled(ReactSelect)`
-.react-select__value-container {
+  .react-select__value-container {
     padding: 0;
-}
-
-.react-select__control {
-border: none;
-  background-color: #f5f5f5;
-  height: 59px;
-  width: 68px;
-  border-top-right-radius: 6px;
-  border-bottom-right-radius: 6px;
-  background-image: url(${down});
-  background-repeat: no-repeat;
-  background-position: 70%;
-  font-size: 18px;
-  line-height: 27px;
-  font-family: Poppins;
-   {
-    :active
-    :hover,
-    :focus {
-    outline: 0;
-    border: 0;
-    box-shadow: none;
-
-    }
   }
+
+  .react-select__control {
+    border: none;
+    background-color: #f5f5f5;
+    height: 59px;
+    width: 68px;
+    border-top-right-radius: 6px;
+    border-bottom-right-radius: 6px;
+    background-image: url(${down});
+    background-repeat: no-repeat;
+    background-position: 70%;
+    font-size: 18px;
+    line-height: 27px;
+    font-family: Poppins;
+     {
+      :active :hover,
+      :focus {
+        outline: 0;
+        border: 0;
+        box-shadow: none;
+      }
+    }
   }
 
   .css-t3ipsp-control:hover {
@@ -62,7 +60,6 @@ border: none;
   .react-select__menu-list {
     max-height: 185px;
     width: 99px;
-
   }
 
   .react-select__menu:hover {
@@ -73,7 +70,7 @@ border: none;
   .react-select__menu {
     outline: 0;
     border: 0;
-    width:99px;
+    width: 99px;
     margin-top: 0;
     margin-left: -31px;
     box-shadow: 0px 6.51852px 7.82222px rgba(0, 0, 0, 0.0314074);
@@ -91,45 +88,42 @@ border: none;
   }
 
   .react-select__option:hover {
-    color: #8BAA36;
+    color: #8baa36;
     background-color: transparent;
   }
 
   .react-select__option:hover {
-    color: #8BAA36;
+    color: #8baa36;
     background-color: transparent;
   }
 `;
 
-
 export const CustomSelect = styled(ReactSelect)`
-.react-select__control {
-  border: none;
-  background-color: #f5f5f5;
-  height: 59px;
-  width: 194px;
-  border-radius: 6px;
-  margin-right: 16px;
-  padding-left: 18px;
-  background-image: url(${down});
-  background-repeat: no-repeat;
-  background-position: 95%;
-  font-size: 18px;
-  line-height: 27px;
-  font-family: Poppins;
-   {
-    :active
-    :hover,
-    :focus {
-    outline: 0;
-    border: 0;
-    box-shadow: none;
-
+  .react-select__control {
+    border: none;
+    background-color: #f5f5f5;
+    height: 59px;
+    width: 194px;
+    border-radius: 6px;
+    margin-right: 16px;
+    padding-left: 18px;
+    background-image: url(${down});
+    background-repeat: no-repeat;
+    background-position: 95%;
+    font-size: 18px;
+    line-height: 27px;
+    font-family: Poppins;
+     {
+      :active :hover,
+      :focus {
+        outline: 0;
+        border: 0;
+        box-shadow: none;
+      }
     }
-  }
-  @media ${theme.device.tablet} {
-    width: 398px;
-  }
+    @media ${theme.device.tablet} {
+      width: 398px;
+    }
   }
 
   .css-t3ipsp-control:hover {
@@ -162,8 +156,8 @@ export const CustomSelect = styled(ReactSelect)`
     max-height: 185px;
     width: 198px;
     @media ${theme.device.desktop} {
-    width: 398px;
-  }
+      width: 398px;
+    }
   }
 
   .react-select__menu:hover {
@@ -177,10 +171,10 @@ export const CustomSelect = styled(ReactSelect)`
     width: 198px;
     box-shadow: 0px 6.51852px 7.82222px rgba(0, 0, 0, 0.0314074);
     @media ${theme.device.desktop} {
-    width: 398px;
-    margin: 0;
-    padding: 0;
-  }
+      width: 398px;
+      margin: 0;
+      padding: 0;
+    }
   }
 
   .react-select__option {
@@ -195,12 +189,12 @@ export const CustomSelect = styled(ReactSelect)`
   }
 
   .react-select__option:hover {
-    color: #8BAA36;
+    color: #8baa36;
     background-color: transparent;
   }
 
   .react-select__option:hover {
-    color: #8BAA36;
+    color: #8baa36;
     background-color: transparent;
   }
 `;
@@ -299,7 +293,6 @@ export const InputQuantity = styled.input`
       outline: none;
     }
   }
-
 `;
 
 export const Delete = styled.button`

@@ -17,16 +17,15 @@ const PopularRecipe = () => {
   const [recipes, setRecipes] = useState([]);
   const [viewport, setViewport] = useState(window.visualViewport.width);
 
-
   useEffect(() => {
     if (viewport >= 1240) {
-      setRecipes(RECIPE)
+      setRecipes(RECIPE);
     } else if (viewport < 1240) {
-      let arr = RECIPE
-      arr.splice(2)
-      setRecipes(arr)
+      let arr = RECIPE;
+      arr.splice(2);
+      setRecipes(arr);
     }
-  }, [viewport])
+  }, [viewport]);
 
   return (
     <Popular>

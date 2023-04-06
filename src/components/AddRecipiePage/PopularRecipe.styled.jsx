@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import theme from 'style/generalStyle';
 
 export const Popular = styled.div`
-    padding-top: 72px;
+  padding-top: 72px;
 
   @media ${theme.device.desktop} {
     display: flex;
@@ -23,9 +23,8 @@ export const Label = styled.p`
   display: flex;
   font-weight: 500;
   font-size: 16px;
-  color: #3E4462;
+  color: #3e4462;
   line-height: 20px;
-
 `;
 
 export const Desc = styled.p`
@@ -33,7 +32,7 @@ export const Desc = styled.p`
   font-weight: 400;
   font-size: 12px;
   line-height: 16px;
-  color: #7E7E7E;
+  color: #7e7e7e;
 `;
 
 export const Recipe = styled.li`

@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 import theme from 'style/generalStyle';
 
-
 export const Wrap = styled.div`
   display: flex;
   flex-direction: column;
@@ -17,7 +16,7 @@ export const Form = styled.form`
   flex-direction: column;
   @media ${theme.device.desktop} {
     padding-top: 100px;
-}
+  }
 `;
 
 export const Row = styled.div`
@@ -26,19 +25,18 @@ export const Row = styled.div`
 `;
 
 export const Button = styled.div`
-background-color: #22252A;
-    color: rgb(255, 255, 255);
-    border-radius: 24px 44px;
-    border: 1px solid rgb(250, 250, 250);
-    height: 52px;
-    width: 161px;
-    margin-top: 32px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 72px;
-    @media ${theme.device.desktop} {
-      margin-bottom: 200px;
-
-    }
+  background-color: #22252a;
+  color: rgb(255, 255, 255);
+  border-radius: 24px 44px;
+  border: 1px solid rgb(250, 250, 250);
+  height: 52px;
+  width: 161px;
+  margin-top: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 72px;
+  @media ${theme.device.desktop} {
+    margin-bottom: 200px;
+  }
 `;
