@@ -9,28 +9,27 @@ import {
   RemoveSvg,
 } from './IngredientsShoppingList.styled';
 import UseSvg from '../../helpers/useSvg/useSvg';
-import axios from 'axios';
+// import axios from 'axios';
+import queryBackEnd from '../../helpers/request/queryBackEnd';
 
 
 
+const IngredientsShoppingList = ({ ingredients, setIngredientS }) => {
+  const deleteIngradient =  contactId => {
+       queryBackEnd
+      .queryRemoveShoppingList({ shoppingListIng: contactId })
+         .then(response => {
+           console.log('response', response);
+          //  setIngredientS(prevState => prevState.map());
 
-const IngredientsShoppingList = ({ingredients}) => {
+      });
+  };
+  // console.log("4", ingredients);
 
-
-const deleteIngradient = async (contactId) => {
-    try {
-      const response = await axios.delete(`/ingradients/${contactId}`);
-      return response.data;
-    } catch (error) {
-      return console.log(error.message);
-    }
-  }
-
-
-  const ingredientsArr = ingredients;
   return (
     <List>
-      {ingredientsArr.map(ingredient => (
+      {/* <div>test</div> */}
+      {ingredients.map(ingredient => (
         <Item key={ingredient._id}>
           <ItemContainer>
             <ImageContainer>
