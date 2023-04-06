@@ -7,6 +7,7 @@ import {
   MPHeroProduct,
   GreenSpan,
   StyledLink,
+  MPHeroTitle,
 } from './MainPageHero.styled';
 
 // import { useSearchParams } from 'react-router-dom';
@@ -17,6 +18,9 @@ export default function MainPageHero({ onSubm }) {
 
   return (
     <MPHeroBG>
+      <MPHeroTitle>
+        So<span>Yummy</span>
+      </MPHeroTitle>
       <MPHeroText>
         "What to cook?" is not only a recipe app, it is, in fact, your cookbook.
         You can add your own recipes to save them for the future.

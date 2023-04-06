@@ -17,7 +17,8 @@ import SoYummy_mob from '../../images/mainPagePhoto/SoYummy_mob-min.png';
 // import unsplash_desk from '../../images/mainPagePhoto/unsplash_desk-min.png';
 // import unsplash_tab from '../../images/mainPagePhoto/unsplash_tab-min.png';
 import unsplash_mob from '../../images/mainPagePhoto/unsplash_mob-min.png';
-import desktop_bg from '../../images/mainPagePhoto/desktop_bg.png';
+import desktop_bg from '../../images/mainPagePhoto/desktop_bg3.png';
+import tablet_bg from '../../images/mainPagePhoto/tablet_bg.png';
 //-----------------------------------------------
 export const MPHeroBG = styled.div`
   width: 1240px;
@@ -31,30 +32,43 @@ export const MPHeroBG = styled.div`
     background-size: 303px, 320px, 375px, 60px, 280px;
   }
 
-  @media ${theme.device.tablet} {
+  @media screen and (min-width: 768px) {
     height: 640px;
-    /* padding-left: 32px;
-    padding-right: 32px;
-    gap: 50px; */
+    background-repeat: no-repeat;
+    background-image: url('${tablet_bg}');
+    background-size: content;
+    background-position: center center;
   }
 
   @media screen and (min-width: 1240px) {
-    height: 800px;
+    position: relative;
+    height: 688px;
     background-repeat: no-repeat;
     background-image: url('${desktop_bg}');
     background-size: content;
     background-position: center center;
-    /* gap: 100px;
-    padding-left: 99px;
-    padding-right: 99px; */
   }
 `;
+export const MPHeroTitle = styled.h1`
+  color: #8baa36;
+  span {
+    color: #22252a;
+  }
+  @media screen and (min-width: 1240px) {
+    margin-left: 100px;
+    margin-top: 226px;
+    margin-bottom: 14px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 100px;
+    line-height: 1;
 
-// export const MPHeroWrapper = styled.div`
-//   /* padding-top: 71px; */
-//   padding-bottom: 147px;
-// `;
+    letter-spacing: -0.005em;
 
+    /* width: 465px; */
+  }
+`;
 export const MPHeroText = styled.span`
   display: block;
 
@@ -65,9 +79,15 @@ export const MPHeroText = styled.span`
   line-height: 1.33;
   letter-spacing: -0.02em;
   color: #23262a;
+  @media screen and (min-width: 768px) {
+    margin-left: 107px;
+
+    margin-bottom: 50px;
+    width: 248px;
+  }
   @media screen and (min-width: 1240px) {
     margin-left: 107px;
-    margin-top: 340px;
+
     margin-bottom: 50px;
     width: 465px;
   }
@@ -91,7 +111,10 @@ export const MPHeroProduct = styled.span`
   background-color: #ffffff;
   border-radius: 8px;
   @media screen and (min-width: 1240px) {
-    margin-left: 820px;
+    position: absolute;
+    left: 820px;
+    top: 462px;
+    /* margin-left: 820px; */
   }
 `;
 export const GreenSpan = styled.span`

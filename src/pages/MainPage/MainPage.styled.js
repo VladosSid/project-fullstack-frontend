@@ -3,22 +3,28 @@ import theme from '../../style/generalStyle';
 
 export const ContainerWrapper = styled.div`
   height: 100%;
-  width: 1240px;
+
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  @media screen and (min-width: 768px) {
+    width: 768px;
+  }
+  @media screen and (min-width: 1240px) {
+    width: 1240px;
+  }
 `;
 export const Container = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  /* grid-template-columns: repeat(auto-fit, 343px); */
+
   gap: 32px;
-  /* width: 1240px; */
+
   padding-left: 16px;
   padding-right: 16px;
-  @media ${theme.device.tablet} {
+  @media screen and (min-width: 768px) {
     padding-left: 32px;
     padding-right: 32px;
     gap: 50px;
@@ -30,9 +36,10 @@ export const Container = styled.div`
     padding-right: 99px;
   }
 `;
+
 export const GridContainer = styled.div`
   justify-content: center;
-  @media ${theme.device.tablet} {
+  @media screen and (min-width: 768px) {
     display: flex;
     gap: 32px;
   }

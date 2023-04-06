@@ -45,7 +45,7 @@ export default function MainPage() {
     let queryQuantity;
     if (width >= 768 && width < 1240) {
       queryQuantity = 2;
-    } else if (width >= 1440) {
+    } else if (width >= 1240) {
       queryQuantity = 4;
     } else if (width < 768) {
       queryQuantity = 1;
