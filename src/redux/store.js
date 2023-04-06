@@ -16,8 +16,9 @@ import recipeReducer from './recipe/recipe-salice';
 
 const persistConfigUser = {
   key: 'token',
+
   storage,
-  whitelist: ['token'],
+  whitelist: ['token', 'theme'],
 };
 
 const persistConfigIngredients = {

@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import theme from '../../style/generalStyle';
 
 export const FooterBox = styled.footer`
-  background: #22252a;
+  background: ${props => props.theme.color.bavkgroundFooter};
   padding-top: 28px;
   padding-bottom: 18px;
 `;

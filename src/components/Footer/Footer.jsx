@@ -1,6 +1,7 @@
 import { MdOutlineEmail } from 'react-icons/md';
 import { NavLink } from 'react-router-dom';
 import { useState } from 'react';
+import { useDispatch } from 'react-redux';
 
 import Notiflix from 'notiflix';
 
@@ -29,8 +30,13 @@ import { MainContainer } from '../MainContainer/MainContainer';
 
 import { queryBackEnd } from '../../helpers/request';
 
+import theme from '../../redux/theming/theme-operations';
+
 export function Footer() {
   const [email, setEmail] = useState('');
+
+  const dispatch = useDispatch();
+  dispatch(theme.themeSwitch('dark'));
 
   const getSubscription = async e => {
     e.preventDefault();

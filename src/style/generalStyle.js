@@ -155,6 +155,15 @@ export const theme = {
         },
       },
     },
+
+    color: {
+      primary: '#22252A',
+      secondary: '#8BAA36',
+
+      // background
+      backgrounGlobal: '#2A2C36',
+      bavkgroundFooter: '#8BAA36',
+    },
   },
 
   white: {
@@ -419,6 +428,17 @@ export const theme = {
         hoverColor: '#fff',
         hoverBorder: 'none',
       },
+    },
+
+    color: {
+      primary: '#8BAA36',
+      secondary: '#22252A',
+
+      // background
+      backgrounGlobal: '#FFFFFF',
+      bavkgroundFooter: '#22252A',
+
+      //  text
     },
   },
 };
