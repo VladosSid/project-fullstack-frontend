@@ -42,8 +42,8 @@ const BurgerNavigation = ({ onClick, isOpen }) => {
               </NavLink>
             </li>
           </Ul>
+          <SwitcherBtn />
         </nav>
-        <SwitcherBtn />
       </BackdropMobileMenu>
     </div>
   );

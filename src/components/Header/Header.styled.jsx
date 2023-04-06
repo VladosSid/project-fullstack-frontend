@@ -1,24 +1,37 @@
 import styled from 'styled-components';
 import theme from 'style/generalStyle';
 
-export const HeaderBox = styled.header`
+export const HeaderContainer = styled.div`
+  margin: 0 auto;
   position: sticky;
   top: 0;
+  background-color: #fff;
+  z-index: 30;
+
+  @media ${theme.device.mobail} {
+    padding: 20px 16px;
+  }
+  @media ${theme.device.tablet} {
+    padding: 20px 32px;
+  }
+  @media ${theme.device.desktop} {
+    padding: 20px 100px;
+  }
+`;
+
+export const HeaderBox = styled.header`
   display: flex;
   align-items: center;
   justify-content: space-between;
   margin: 0 auto;
 
   @media ${theme.device.mobail} {
-    width: 335px;
-    padding: 20px 16px;
+    max-width: 375px;
   }
   @media ${theme.device.tablet} {
-    width: 580px;
-    padding: 20px 30px;
+    max-width: 767px;
   }
   @media ${theme.device.desktop} {
-    width: 1240px;
-    padding: 20px 100px;
+    max-width: 1240px;
   }
 `;
