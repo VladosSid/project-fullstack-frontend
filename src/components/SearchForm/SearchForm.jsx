@@ -7,6 +7,7 @@ export default function SearchForm({
   marginBottom,
   searchQuery,
   marginTop,
+  isSearchPage,
 }) {
   const [searchWord, setSearchWord] = useState(searchQuery || '');
 
@@ -29,6 +30,7 @@ export default function SearchForm({
       onSubmit={handleSubmit}
       marginBottom={marginBottom}
       marginTop={marginTop}
+      page={isSearchPage ? 'search' : 'main'}
     >
       <SearchInput
         placeholder="Beef"

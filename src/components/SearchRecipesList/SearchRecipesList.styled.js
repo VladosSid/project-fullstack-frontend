@@ -22,7 +22,7 @@ export const GridContainer = styled.div`
     padding-bottom: 50px;
   }
 
-  @media ${theme.device.desktop} {
+  @media screen and (min-width: 1440px) {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
 

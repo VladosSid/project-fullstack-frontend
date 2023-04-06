@@ -4,11 +4,15 @@ export const SearchesForm = styled.form`
   display: flex;
   width: fit-content;
   position: relative;
-  margin: 0 auto;
+  /* margin: 0 auto;
   justify-content: center;
-  align-items: center;
+  align-items: center; */
   margin-bottom: ${props => (props.marginBottom ? '24px' : 0)};
-  margin-top: ${props => (props.marginTop ? '650px' : 0)};
+  /* margin-top: ${props => (props.marginTop ? '650px' : 0)}; */
+  @media screen and (min-width: 1440px) {
+    margin-left: ${props => props.page === 'main' && '100px'};
+  }
+  /* margin-top: 0px; */
 `;
 
 export const SearchInput = styled.input`
