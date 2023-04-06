@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 import { SearchesForm } from 'components/SearchForm/SearchForm.styled';
 import theme from '../../style/generalStyle';
 // import bg_desk from '../../images/mainPagePhoto/bg_desk-min.png';
@@ -74,6 +75,7 @@ export const MPHeroText = styled.span`
 
 export const MPHeroProduct = styled.span`
   display: block;
+  margin-bottom: 7px;
   width: 298px;
   padding: 16px;
   font-family: 'Poppins';
@@ -94,4 +96,20 @@ export const MPHeroProduct = styled.span`
 `;
 export const GreenSpan = styled.span`
   color: #8baa36;
+`;
+
+export const StyledLink = styled(Link)`
+  margin-left: 200px;
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 1.2;
+
+  display: flex;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.2px;
+
+  color: #3e4462;
 `;

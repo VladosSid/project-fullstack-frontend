@@ -1,3 +1,4 @@
+import { BsArrowRight } from 'react-icons/bs';
 import SearchForm from 'components/SearchForm';
 import React from 'react';
 import {
@@ -5,10 +6,11 @@ import {
   MPHeroText,
   MPHeroProduct,
   GreenSpan,
+  StyledLink,
 } from './MainPageHero.styled';
 
 // import { useSearchParams } from 'react-router-dom';
-
+//---------------------------------------------
 export default function MainPageHero({ onSubm }) {
   // const [searchParams, setSearchParams] = useSearchParams();
   // const queryFilm = searchParams.get('query');
@@ -21,11 +23,18 @@ export default function MainPageHero({ onSubm }) {
       </MPHeroText>
       <SearchForm onSubm={onSubm} />
       <MPHeroProduct>
-        <GreenSpan>Delicious and healthy </GreenSpan>
-        <span>
-          way to enjoy a <br /> variety of fresh ingredients in one <br />
-          satisfying meal
-        </span>
+        <div>
+          <GreenSpan>Delicious and healthy </GreenSpan>
+          <span>
+            way to enjoy a <br /> variety of fresh ingredients in one <br />
+            satisfying meal
+          </span>
+        </div>
+
+        <StyledLink to="/categories/breakfast">
+          <span>See recipes</span>{' '}
+          <BsArrowRight style={{ marginLeft: '7px' }} />
+        </StyledLink>
       </MPHeroProduct>
     </MPHeroBG>
   );
