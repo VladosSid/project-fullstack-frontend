@@ -1,15 +1,11 @@
-import { useDispatch } from 'react-redux';
 import { useState } from 'react';
-import operations from 'redux/users/auth-operations';
 import { HiOutlinePencil } from 'react-icons/hi';
 import UserInfoModal from 'components/UserInfoModal/UserInfoModal';
 import style from './UserLogoModal.module.css';
-import arrow from '../../images/Header/arrow.svg';
+import LogoutBtn from 'components/LogoutBtn/LogoutBtn';
 
 const UserLogoModal = ({ isOpen, clickToggle }) => {
   const [open, setOpen] = useState(false);
-
-  const dispatch = useDispatch();
 
   const toggler = () => {
     setOpen(prev => !prev);
@@ -25,9 +21,7 @@ const UserLogoModal = ({ isOpen, clickToggle }) => {
         >
           Edit profile <HiOutlinePencil size={14} />
         </button>
-        <button onClick={() => dispatch(operations.logOut())}>
-          Logout <img src={arrow} alt="pen" />
-        </button>
+        <LogoutBtn />
       </div>
       <UserInfoModal open={open} toggler={toggler} />
     </>

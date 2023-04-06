@@ -10,12 +10,11 @@ const UserLogo = () => {
   const clickToggle = () => {
     setIsOpen(prev => !prev);
   };
-
   return (
     <BtnWrapper>
       <UserLogoBtn onClick={() => clickToggle()}>
         <ImgAva src={ava} alt="avatar" />
-        <p>Olena</p>
+        <p>user</p>
       </UserLogoBtn>
       <UserLogoModal isOpen={isOpen} clickToggle={clickToggle} />
     </BtnWrapper>
