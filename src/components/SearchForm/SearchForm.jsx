@@ -6,6 +6,7 @@ export default function SearchForm({
   onSubm,
   marginBottom,
   searchQuery,
+  marginTop,
 }) {
   const [searchWord, setSearchWord] = useState(searchQuery || '');
 
@@ -24,7 +25,11 @@ export default function SearchForm({
     onSubm(searchWord);
   };
   return (
-    <SearchesForm onSubmit={handleSubmit} marginBottom={marginBottom}>
+    <SearchesForm
+      onSubmit={handleSubmit}
+      marginBottom={marginBottom}
+      marginTop={marginTop}
+    >
       <SearchInput
         placeholder="Beef"
         value={searchWord}

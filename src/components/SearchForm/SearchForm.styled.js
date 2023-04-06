@@ -2,11 +2,13 @@ import styled from 'styled-components';
 //------------------------
 export const SearchesForm = styled.form`
   display: flex;
+  width: fit-content;
   position: relative;
   margin: 0 auto;
   justify-content: center;
   align-items: center;
   margin-bottom: ${props => (props.marginBottom ? '24px' : 0)};
+  margin-top: ${props => (props.marginTop ? '650px' : 0)};
 `;
 
 export const SearchInput = styled.input`
@@ -36,7 +38,9 @@ export const SearchBtn = styled.button`
   position: absolute;
   right: 0;
   width: 113px;
-  height: 52px;
+  height: 60px;
+  border-color: transparent;
+
   /* left: 221px;
   top: 642px; */
 
@@ -46,7 +50,7 @@ export const SearchBtn = styled.button`
   /* background-color: #22252a; !!!!!*/
 
   border-radius: 24px 44px;
-  border: 1px solid rgb(250, 250, 250);
+  /* border: 1px solid rgba(34, 37, 42, 1); */
   color: #fafafa;
   font-family: 'Poppins';
   font-style: normal;
