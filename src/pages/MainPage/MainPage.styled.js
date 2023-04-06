@@ -3,6 +3,7 @@ import theme from '../../style/generalStyle';
 
 export const ContainerWrapper = styled.div`
   height: 100%;
+  width: 1240px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -14,10 +15,10 @@ export const Container = styled.div`
   align-items: center;
   /* grid-template-columns: repeat(auto-fit, 343px); */
   gap: 32px;
-  width: 100%;
+  /* width: 1240px; */
   padding-left: 16px;
   padding-right: 16px;
-  @media screen and (min-width: 1440px) {
+  @media ${theme.device.tablet} {
     padding-left: 32px;
     padding-right: 32px;
     gap: 50px;

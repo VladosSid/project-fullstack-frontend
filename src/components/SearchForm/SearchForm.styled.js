@@ -9,7 +9,7 @@ export const SearchesForm = styled.form`
   align-items: center; */
   margin-bottom: ${props => (props.marginBottom ? '24px' : 0)};
   /* margin-top: ${props => (props.marginTop ? '650px' : 0)}; */
-  @media screen and (min-width: 1440px) {
+  @media screen and (min-width: 1240px) {
     margin-left: ${props => props.page === 'main' && '100px'};
   }
   /* margin-top: 0px; */

@@ -43,7 +43,7 @@ export default function MainPage() {
     instanceBacEnd.defaults.headers.common.Authorization =
       'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDJkZDdmODlmN2I0N2RlNDk0OGI4ZDIiLCJpYXQiOjE2ODA3MjYwMDh9._Zf3orn5P6u54hilJsmRc8snd2oRt7Ol77pu3M3IqYQ';
     let queryQuantity;
-    if (width >= 768 && width < 1440) {
+    if (width >= 768 && width < 1240) {
       queryQuantity = 2;
     } else if (width >= 1440) {
       queryQuantity = 4;

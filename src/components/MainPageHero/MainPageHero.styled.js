@@ -19,7 +19,7 @@ import unsplash_mob from '../../images/mainPagePhoto/unsplash_mob-min.png';
 import desktop_bg from '../../images/mainPagePhoto/desktop_bg.png';
 //-----------------------------------------------
 export const MPHeroBG = styled.div`
-  width: 100%;
+  width: 1240px;
   @media screen and (max-width: 767px) {
     height: 777px;
     background-repeat: no-repeat;
@@ -37,11 +37,11 @@ export const MPHeroBG = styled.div`
     gap: 50px; */
   }
 
-  @media screen and (min-width: 1440px) {
+  @media screen and (min-width: 1240px) {
     height: 800px;
     background-repeat: no-repeat;
     background-image: url('${desktop_bg}');
-    background-size: cover;
+    background-size: content;
     background-position: center center;
     /* gap: 100px;
     padding-left: 99px;
@@ -64,10 +64,34 @@ export const MPHeroText = styled.span`
   line-height: 1.33;
   letter-spacing: -0.02em;
   color: #23262a;
-  @media screen and (min-width: 1440px) {
+  @media screen and (min-width: 1240px) {
     margin-left: 107px;
     margin-top: 340px;
     margin-bottom: 50px;
     width: 465px;
   }
+`;
+
+export const MPHeroProduct = styled.span`
+  display: block;
+  width: 298px;
+  padding: 16px;
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.43;
+
+  letter-spacing: -0.24px;
+
+  color: #3e4462;
+
+  background-color: #ffffff;
+  border-radius: 8px;
+  @media screen and (min-width: 1240px) {
+    margin-left: 820px;
+  }
+`;
+export const GreenSpan = styled.span`
+  color: #8baa36;
 `;

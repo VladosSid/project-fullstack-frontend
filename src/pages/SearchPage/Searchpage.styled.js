@@ -18,7 +18,7 @@ export const ContainerWrapper = styled.div`
     padding-bottom: 200px;
   }
 
-  @media screen and (min-width: 1440px) {
+  @media screen and (min-width: 1240px) {
     padding-left: 99px;
     padding-right: 99px;
   }
