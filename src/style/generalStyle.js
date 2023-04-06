@@ -162,7 +162,10 @@ export const theme = {
 
       // background
       backgrounGlobal: '#2A2C36',
-      bavkgroundFooter: '#8BAA36',
+
+      footer: {
+        bavkgroundFooter: '#8BAA36',
+      },
     },
   },
 
@@ -436,7 +439,18 @@ export const theme = {
 
       // background
       backgrounGlobal: '#FFFFFF',
-      bavkgroundFooter: '#22252A',
+
+      header: {
+        textAndLogo: '#23262A',
+
+        // User Profaile
+        background: '#FAFAFA',
+        borderInputTextLogo: '#23262A',
+      },
+
+      footer: {
+        bavkgroundFooter: '#22252A',
+      },
 
       //  text
     },

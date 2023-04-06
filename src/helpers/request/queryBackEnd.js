@@ -119,7 +119,8 @@ const queryRemoveFavorite = async id => {
   }
 };
 
-// отримання масиву з id рецептами
+// отримання масиву з рецептами  favotie
+
 const queryAllFavorite = async () => {
   try {
     const { data } = await instanceBacEnd.get(`/favorite`);

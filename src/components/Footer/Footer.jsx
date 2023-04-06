@@ -41,7 +41,7 @@ export function Footer() {
   const getSubscription = async e => {
     e.preventDefault();
     const data = await queryBackEnd.querySubscribe(email);
-    console.log(data);
+
     Notiflix.Notify.success(`${data.message}`);
   };
 
