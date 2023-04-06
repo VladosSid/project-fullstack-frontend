@@ -1,19 +1,22 @@
-import { HeaderBox } from './Header.styled';
 import Logo from 'components/Logo';
 import UserLogo from 'components/UserLogo';
 import Navigation from 'components/Navigation';
 import MobileMenu from 'components/MobileMenu.jsx/MobileMenu';
-import { SwitcherBtn } from 'components/MobileMenu.jsx/SwitcherBtn';
+import { HeaderBox } from './Header.styled';
+import { HeaderContainer } from './Header.styled';
+import { HeaderSwitcherBtn } from 'components/MobileMenu.jsx/HeaderSwitcher';
 
 const Header = () => {
   return (
-    <HeaderBox>
-      <Logo />
-      <Navigation />
-      <UserLogo />
-      <MobileMenu />
-      <SwitcherBtn />
-    </HeaderBox>
+    <HeaderContainer>
+      <HeaderBox>
+        <Logo />
+        <Navigation />
+        <UserLogo />
+        <MobileMenu />
+        <HeaderSwitcherBtn />
+      </HeaderBox>
+    </HeaderContainer>
   );
 };
 

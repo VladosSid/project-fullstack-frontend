@@ -10,8 +10,16 @@ const UserLogoModal = ({ isOpen, clickToggle }) => {
   const toggler = () => {
     setOpen(prev => !prev);
   };
+
+  const check = e => {
+    if (e.currentTarget !== e.target) {
+      console.log(true);
+      clickToggle();
+    }
+  };
+
   return (
-    <>
+    <div className={style.popupOverlay} onClick={e => check(e)}>
       <div className={isOpen ? style.userLogoPopup : style.hidden}>
         <button
           onClick={() => {
@@ -24,7 +32,7 @@ const UserLogoModal = ({ isOpen, clickToggle }) => {
         <LogoutBtn />
       </div>
       <UserInfoModal open={open} toggler={toggler} />
-    </>
+    </div>
   );
 };
 

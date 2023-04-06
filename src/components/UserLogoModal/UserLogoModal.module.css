@@ -1,8 +1,6 @@
 .userLogoPopup {
     width: 160px;
     cursor: auto;
-    bottom: -165px;
-    right: -55px;
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -10,10 +8,20 @@
     
     background: #fafafa;
     position: absolute;
+    top: 45px;
+    right: -60px;
     z-index: 20;
     border: 1px solid #8baa36;
     border-radius: 8px;
 }
+
+/* .popupOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+} */
 
 .hidden {
     display: none;
