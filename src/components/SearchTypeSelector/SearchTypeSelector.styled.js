@@ -5,6 +5,7 @@ import ReactSelect from 'react-select';
 export const CustomSelectBox = styled.div`
   display: flex;
   align-items: center;
+  justify-content: center;
 `;
 export const SearchTypeSpan = styled.span`
   font-family: 'Poppins';

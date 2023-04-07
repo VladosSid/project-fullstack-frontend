@@ -33,14 +33,15 @@ export const SearchInput = styled.input`
   width: ${props => (props.page === 'main' ? '295px' : '283px')};
   padding-left: 17px;
   @media screen and (min-width: 768px) {
-    width: ${props => props.page === 'main' && '330px'};
-    height: ${props => props.page === 'main' && '59px'};
+    width: ${props => (props.page === 'main' ? '330px' : '350px')};
+    height: ${props => (props.page === 'main' ? '59px' : '57px')};
     font-size: ${props => props.page === 'main' && '16px'};
     padding-left: ${props => props.page === 'main' && '38px'};
   }
   @media screen and (min-width: 1240px) {
-    width: ${props => props.page === 'main' && '465px'};
+    width: ${props => (props.page === 'main' ? '465px' : '350px')};
     height: ${props => props.page === 'main' && '70px'};
+    /* width: ${props => props.page === 'search' && '350px'}; */
   }
 
   ::placeholder {
@@ -79,8 +80,8 @@ export const SearchBtn = styled.button`
     width: ${props => props.page === 'main' && '113px'};
   }
   @media screen and (min-width: 768px) {
-    width: ${props => props.page === 'main' && '161px'};
-    height: ${props => props.page === 'main' && '59px'};
+    width: ${props => (props.page === 'main' ? '161px' : '161px')};
+    height: ${props => (props.page === 'main' ? '59px' : '59px')};
     font-size: ${props => props.page === 'main' && '16px'};
   }
   @media screen and (min-width: 1240px) {
