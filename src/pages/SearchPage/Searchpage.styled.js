@@ -12,6 +12,7 @@ export const ContainerWrapper = styled.div`
   padding-bottom: 100px;
   padding-left: 16px;
   padding-right: 16px;
+
   @media ${theme.device.tablet} {
     padding-left: 32px;
     padding-right: 32px;

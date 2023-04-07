@@ -1,5 +1,5 @@
 import React, { useState } from 'react'; //useEffect
-
+import { MainPageTitle } from 'components/MainPageTitle/MainPageTitle';
 // import DishCard from 'components/DishCard/DishCard';
 // import { useLocation } from 'react-router-dom';
 import { ContainerWrapper } from './Searchpage.styled';
@@ -43,6 +43,7 @@ export default function SearchPage() {
   //----------------------------
   return (
     <ContainerWrapper>
+      <MainPageTitle title={'Search'} />
       <SearchBar
         // onSearch={handleSearch}
         onTypeChange={handleSearchTypeChange}
