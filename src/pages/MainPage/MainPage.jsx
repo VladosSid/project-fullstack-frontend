@@ -12,6 +12,7 @@ import {
   ContainerWrapper,
   GridContainer,
   Section,
+  MPButton,
 } from './MainPage.styled';
 
 import MainPageHero from 'components/MainPageHero';
@@ -116,6 +117,7 @@ export default function MainPage() {
             </div>
           ))}
         </Container>
+        <MPButton>Other categories</MPButton>
       </Section>
     </ContainerWrapper>
   );

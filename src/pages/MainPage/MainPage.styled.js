@@ -18,6 +18,7 @@ export const ContainerWrapper = styled.div`
 export const Section = styled.section`
   padding-left: 16px;
   padding-right: 16px;
+  padding-bottom: 100px;
   @media screen and (min-width: 768px) {
     padding-left: 32px;
     padding-right: 32px;
@@ -32,9 +33,8 @@ export const Container = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-
   gap: 32px;
-
+  margin-bottom: 40px;
   @media screen and (min-width: 768px) {
     /* width: 768px; */
 
@@ -136,4 +136,22 @@ export const Button = styled.button`
   @media ${theme.device.desktop} {
     margin-top: 60px;
   }
+`;
+
+export const MPButton = styled.button`
+  display: block;
+  width: 195px;
+  height: 46px;
+  /* border-color: transparent; */
+  border-radius: 24px 44px;
+  border: 2px solid #8baa36;
+  background-color: transparent;
+  margin: 0 auto;
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.5;
+  text-align: center;
+  color: #22252a;
 `;

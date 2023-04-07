@@ -21,6 +21,7 @@ import desktop_bg from '../../images/mainPagePhoto/desktop_bg3.png';
 import tablet_bg from '../../images/mainPagePhoto/tablet_bg.png';
 //-----------------------------------------------
 export const MPHeroBG = styled.div`
+  position: relative;
   width: 100%;
   @media screen and (max-width: 767px) {
     height: 841px;
@@ -33,7 +34,6 @@ export const MPHeroBG = styled.div`
   }
 
   @media screen and (min-width: 768px) {
-    position: relative;
     height: 640px;
     /* width: 768px; */
     background-repeat: no-repeat;
@@ -44,7 +44,7 @@ export const MPHeroBG = styled.div`
 
   @media screen and (min-width: 1240px) {
     position: relative;
-    /* width: 1240px; */
+
     height: 688px;
     background-repeat: no-repeat;
     background-image: url('${desktop_bg}');
@@ -134,7 +134,6 @@ export const MPHeroProduct = styled.span`
   background-color: #ffffff;
   border-radius: 8px;
 
-  margin-bottom: 7px;
   @media screen and (max-width: 767px) {
     padding: 8px;
     top: 435px;
@@ -170,6 +169,7 @@ export const StyledLink = styled(Link)`
   display: flex;
   align-items: center;
   text-align: center;
+  margin-top: 7px;
   color: #3e4462;
   font-family: 'Poppins';
   font-style: normal;

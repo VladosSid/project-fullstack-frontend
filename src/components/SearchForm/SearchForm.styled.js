@@ -48,17 +48,8 @@ export const SearchBtn = styled.button`
   position: absolute;
   right: 0;
   width: 113px;
-  height: 60px;
-  border-color: transparent;
-
-  /* left: 221px;
-  top: 642px; */
-
-  /* background: #22252a; */
-
-  /* identical to box height */
-  /* background-color: #22252a; !!!!!*/
-
+  height: 56px;
+  /* border-color: transparent; */
   border-radius: 24px 44px;
   /* border: 1px solid rgba(34, 37, 42, 1); */
   color: #fafafa;
@@ -68,4 +59,8 @@ export const SearchBtn = styled.button`
   font-size: 14px;
   line-height: 1.5;
   background-color: ${props => (props.green ? '#8BAA36' : '#22252a')};
+  border: ${props => (props.green ? '1px solid #8BAA36' : '1px solid #22252a')};
+  @media screen and (max-width: 767px) {
+    width: ${props => props.page === 'main' && '113px'};
+  }
 `;
