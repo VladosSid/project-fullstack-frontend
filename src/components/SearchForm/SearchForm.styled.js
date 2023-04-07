@@ -29,7 +29,8 @@ export const SearchInput = styled.input`
   border-radius: 24px 44px;
   border: 1px solid #f0f0f0;
   height: 52px;
-  width: 295px;
+  /* width: 295px; */
+  width: ${props => (props.page === 'main' ? '295px' : '283px')};
   padding-left: 17px;
   @media screen and (min-width: 768px) {
     width: ${props => props.page === 'main' && '330px'};

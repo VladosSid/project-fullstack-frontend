@@ -19,12 +19,7 @@ export default function SearchPage() {
   );
   const updatedParams = new URLSearchParams(searchParams.toString());
 
-  // const [searchResults] = useState([]);
-  //---------------------------
-  // function handleSearch(query) {
-  //   console.log('Query in SP handleSearch', query);
-  //   setSearchQuery(query);
-  // }
+ 
 
   //------------
   function handleSearchTypeChange(type) {

@@ -10,7 +10,7 @@ export default function SearchForm({
   isSearchPage,
 }) {
   const [searchWord, setSearchWord] = useState(searchQuery || '');
-
+  console.log('is?', isSearchPage);
   const handleChange = evt => {
     setSearchWord(evt.currentTarget.value);
   };
@@ -20,6 +20,7 @@ export default function SearchForm({
     console.log('Query in SF submit', searchWord);
     if (searchWord.trim() === '') {
       console.log('Please fill the search form ');
+
       return;
     }
 

@@ -14,6 +14,7 @@ export default function SearchBar(props) {
         onSubm={onSubm}
         marginBottom
         searchQuery={searchQuery}
+        isSearchPage
       />
       <SearchTypeSelectorBox>
         <SearchTypeSelector

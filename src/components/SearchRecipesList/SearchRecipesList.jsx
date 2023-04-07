@@ -14,10 +14,9 @@ export default function SearchRecipesList({ searchQuery, searchType }) {
   const [recipes, setRecipes] = useState([]);
 
   useEffect(() => {
-    // const SQ = searchQuery.toLowerCase();
+ 
     console.log('in new effect', searchType, searchQuery);
-    // const SQ = searchQuery.query.toLowerCase();
-    // console.log('SQ', SQ);
+   
 
     instanceBacEnd.defaults.headers.common.Authorization =
       'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDJkZDdmODlmN2I0N2RlNDk0OGI4ZDIiLCJpYXQiOjE2ODA3MjYwMDh9._Zf3orn5P6u54hilJsmRc8snd2oRt7Ol77pu3M3IqYQ';
@@ -26,12 +25,12 @@ export default function SearchRecipesList({ searchQuery, searchType }) {
       .then(function (response) {
         console.log(searchQuery, searchType);
         setRecipes(response.data.result.data);
-        console.log(response.data);
+       
       })
       .catch(function (error) {
         console.log(error.message);
       });
-  }, [searchQuery, searchType]); //searchQuery
+  }, [searchQuery, searchType]); 
 
   return (
     <GridContainer>
