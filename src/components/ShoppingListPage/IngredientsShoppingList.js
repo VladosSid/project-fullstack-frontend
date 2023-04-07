@@ -11,7 +11,6 @@ import {
 import UseSvg from '../../helpers/useSvg/useSvg';
 
 const IngredientsShoppingList = ({ ingredients, deleteIngradient }) => {
-
   return (
     <List>
       {ingredients.map(ingredient => (

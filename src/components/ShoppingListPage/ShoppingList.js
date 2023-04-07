@@ -4,33 +4,32 @@ import {
   TitltList,
   TitleListProducts,
   TitleListNumber,
-    ImgIngradientsContainer,
+  ImgIngradientsContainer,
+  ImgIngradients,
+  ImgIngradientsText,
 } from './ShoppingList.styled';
 // import ingredients from '../../ingredients.json';
-import queryBackEnd from "../../helpers/request/queryBackEnd"
-import imgIngradients from "../../images/ShopingList/ingradients.png"
+import queryBackEnd from '../../helpers/request/queryBackEnd';
+import imgIngradients from '../../images/ShopingList/ingradients.png';
+
 
 const ShoppingList = () => {
   const [ingredientS, setIngredientS] = useState([]);
   useEffect(() => {
-         queryBackEnd
-        .queryShoppingList()
-        .then(response => {
-          setIngredientS(response.data);
-                 })
+    queryBackEnd.queryShoppingList().then(response => {
+      setIngredientS(response.data);
+    });
   }, []);
-  
-    const deleteIngradient = contactId => {
+
+  const deleteIngradient = contactId => {
     queryBackEnd
       .queryRemoveShoppingList({ shoppingListIng: contactId })
-      .then(response => {
-        console.log('response', response);
+      .then(response => 
         setIngredientS(prevState =>
-          prevState.filter(ingradient => ingradient._id !== contactId)
-        );
-      });
+          prevState.filter(ingradient =>ingradient._id !== contactId))
+      )
+      .catch(e => console.log('e', e));
   };
-
 
   return (
     <div>
@@ -48,7 +47,8 @@ const ShoppingList = () => {
         </>
       ) : (
         <ImgIngradientsContainer>
-          <img src={imgIngradients} alt="ingredient" />
+          <ImgIngradients src={imgIngradients} alt="ingredient" />
+          <ImgIngradientsText>Your shopping list is empty.</ImgIngradientsText>
         </ImgIngradientsContainer>
       )}
     </div>
