@@ -26,7 +26,7 @@ export default function MainPage() {
 
   //Do we need resize?
 
-  const [viewportWidth, setViewportWidth] = useState(window.innerWidth);
+  // const [viewportWidth, setViewportWidth] = useState(window.innerWidth);
   const [quantity, setQuantity] = useState(() => {
     const width = window.innerWidth;
 
@@ -51,7 +51,7 @@ export default function MainPage() {
         setQuantity(1);
       }
 
-      setViewportWidth(width);
+      // setViewportWidth(width);
     };
     window.addEventListener('resize', handleWindowResize);
 
