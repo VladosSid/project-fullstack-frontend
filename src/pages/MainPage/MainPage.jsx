@@ -117,7 +117,9 @@ export default function MainPage() {
             </div>
           ))}
         </Container>
-        <MPButton>Other categories</MPButton>
+        <MPButton onClick={() => handleCategoryClick('breakfast')}>
+          Other categories
+        </MPButton>
       </Section>
     </ContainerWrapper>
   );
