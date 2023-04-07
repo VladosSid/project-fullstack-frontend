@@ -11,15 +11,8 @@ const UserLogoModal = ({ isOpen, clickToggle }) => {
     setOpen(prev => !prev);
   };
 
-  const check = e => {
-    if (e.currentTarget !== e.target) {
-      console.log(true);
-      clickToggle();
-    }
-  };
-
   return (
-    <div className={style.popupOverlay} onClick={e => check(e)}>
+    <div className={style.popupOverlay}>
       <div className={isOpen ? style.userLogoPopup : style.hidden}>
         <button
           onClick={() => {

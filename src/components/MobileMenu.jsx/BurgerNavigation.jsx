@@ -6,7 +6,7 @@ import Logo from 'components/Logo/Logo';
 import { Ul } from '../Navigation/Navigation.styled';
 import { CrossIcon } from './MobileMenu.styled';
 import { BackdropMobileMenu } from './MobileMenu.styled';
-import { SwitcherBtn } from './SwitcherBtn';
+import { SwButton } from './MobileMenu.styled';
 
 const BurgerNavigation = ({ onClick, isOpen }) => {
   return (
@@ -42,7 +42,7 @@ const BurgerNavigation = ({ onClick, isOpen }) => {
               </NavLink>
             </li>
           </Ul>
-          <SwitcherBtn />
+          <SwButton />
         </nav>
       </BackdropMobileMenu>
     </div>
