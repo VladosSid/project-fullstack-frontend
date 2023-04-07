@@ -17,10 +17,11 @@ import blatt_l_mob from '../../images/mainPagePhoto/blatt_l_mob-min.png';
 // import unsplash_desk from '../../images/mainPagePhoto/unsplash_desk-min.png';
 // import unsplash_tab from '../../images/mainPagePhoto/unsplash_tab-min.png';
 import unsplash_mob from '../../images/mainPagePhoto/unsplash_mob-min.png';
-import desktop_bg from '../../images/mainPagePhoto/desktop_bg3.png';
+import desktop_bg from '../../images/mainPagePhoto/desktop_bg_1440.png';
 import tablet_bg from '../../images/mainPagePhoto/tablet_bg.png';
 //-----------------------------------------------
 export const MPHeroBG = styled.div`
+  /* width: 375px; //****** */
   position: relative;
   width: 100%;
   @media screen and (max-width: 767px) {
@@ -35,7 +36,7 @@ export const MPHeroBG = styled.div`
 
   @media screen and (min-width: 768px) {
     height: 640px;
-    /* width: 768px; */
+
     background-repeat: no-repeat;
     background-image: url('${tablet_bg}');
     background-size: cover;
@@ -52,6 +53,27 @@ export const MPHeroBG = styled.div`
     /* background-position: center center; */
   }
 `;
+
+export const MPHeroSection = styled.div`
+  @media screen and (max-width: 767px) {
+    position: relative;
+    width: 307px;
+    margin: 0 auto;
+  }
+  @media screen and (min-width: 768px) and (max-width: 1239px) {
+    position: relative;
+    width: 703px;
+    margin: 0 auto;
+  }
+  @media screen and (min-width: 1240px) {
+    /* position: relative; */
+    width: 1240px;
+
+    margin: 200px auto 0;
+    padding: 0 100px;
+  }
+`;
+
 export const MPHeroTitle = styled.h1`
   color: #8baa36;
   font-family: 'Poppins';
@@ -70,19 +92,25 @@ export const MPHeroTitle = styled.h1`
     text-align: center;
   }
   @media screen and (min-width: 768px) {
-    margin-left: 32px;
+    /* margin-left: 32px; */
     margin-top: 204px;
     margin-bottom: 24px;
     font-size: 72px;
   }
   @media screen and (min-width: 1240px) {
-    margin-left: 100px;
-    margin-top: 226px;
+    /* margin-left: 100px; */
+    margin-top: 0px;
     margin-bottom: 14px;
 
     font-size: 100px;
 
     /* width: 465px; */
+  }
+`;
+
+export const MDHeroFlex = styled.div`
+  @media screen and (min-width: 1240px) {
+    display: flex;
   }
 `;
 export const MPHeroText = styled.span`
@@ -110,7 +138,8 @@ export const MPHeroText = styled.span`
     letter-spacing: -0.02em;
   }
   @media screen and (min-width: 1240px) {
-    margin-left: 107px;
+    margin-left: 0px;
+
     margin-bottom: 50px;
     width: 465px;
     font-size: 18px;
@@ -120,7 +149,6 @@ export const MPHeroText = styled.span`
 `;
 
 export const MPHeroProduct = styled.span`
-  position: absolute;
   display: block;
   width: 225px;
   font-family: 'Poppins';
@@ -135,16 +163,18 @@ export const MPHeroProduct = styled.span`
   border-radius: 8px;
 
   @media screen and (max-width: 767px) {
+    position: absolute;
     padding: 8px;
-    top: 435px;
-    left: 116px;
+    top: 303px;
+    right: 0px;
   }
 
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 768px) and (max-width: 1239px) {
+    position: absolute;
     width: 260px;
 
-    right: 43px;
-    top: 372px;
+    right: 5px;
+    top: 160px;
 
     padding: 12px;
     font-size: 14px;
@@ -153,10 +183,9 @@ export const MPHeroProduct = styled.span`
   @media screen and (min-width: 1240px) {
     width: 298px;
 
-    left: 820px;
-    top: 462px;
+    /* right: 100px;
+    top: 236px; */
     padding: 16px;
-
     font-size: 14px;
     line-height: 1.43;
   }

@@ -19,8 +19,6 @@ export default function SearchPage() {
   );
   const updatedParams = new URLSearchParams(searchParams.toString());
 
- 
-
   //------------
   function handleSearchTypeChange(type) {
     setSearchType(type);

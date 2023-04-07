@@ -9,14 +9,14 @@ export const SearchesForm = styled.form`
   align-items: center; */
   margin-bottom: ${props => (props.marginBottom ? '24px' : 0)};
   /* margin-top: ${props => (props.marginTop ? '650px' : 0)}; */
-  @media screen and (max-width: 767px) {
+  @media screen and (max-width: 767px) and (max-width: 1239px) {
     margin: ${props => props.page === 'main' && '0px auto'};
   }
-  @media screen and (min-width: 768px) {
+  /* @media screen and (min-width: 768px) {
     margin-left: ${props => props.page === 'main' && '32px'};
-  }
+  } */
   @media screen and (min-width: 1240px) {
-    margin-left: ${props => props.page === 'main' && '100px'};
+    margin-right: ${props => props.page === 'main' && '200px'};
   }
   /* margin-top: 0px; */
 `;

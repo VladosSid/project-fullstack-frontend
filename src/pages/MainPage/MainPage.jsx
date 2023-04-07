@@ -63,6 +63,7 @@ export default function MainPage() {
       .catch(function (error) {
         console.log(error.message);
       });
+    console.log('width', width);
   }, [width]);
 
   const RecipesByCategory = recipes.reduce((acc, recipe) => {
