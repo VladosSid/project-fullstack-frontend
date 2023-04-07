@@ -36,9 +36,8 @@ export const Container = styled.div`
   gap: 32px;
   margin-bottom: 40px;
   @media screen and (min-width: 768px) {
-    /* width: 768px; */
-
     gap: 50px;
+    margin-bottom: 32px;
   }
 
   @media ${theme.device.desktop} {
@@ -129,11 +128,11 @@ export const Button = styled.button`
   line-height: 1.29;
   margin-left: auto;
   margin-top: 24px;
-  @media ${theme.device.tablet} {
+  @media screen and (min-width: 768px) {
     margin-top: 40px;
   }
 
-  @media ${theme.device.desktop} {
+  @media screen and (min-width: 1240px) {
     margin-top: 60px;
   }
 `;
@@ -154,4 +153,12 @@ export const MPButton = styled.button`
   line-height: 1.5;
   text-align: center;
   color: #22252a;
+  @media screen and (min-width: 768px) {
+    width: 239px;
+    height: 61px;
+
+    font-size: 16px;
+  }
+  @media ${theme.device.desktop} {
+  }
 `;

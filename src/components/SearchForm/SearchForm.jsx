@@ -36,8 +36,11 @@ export default function SearchForm({
         placeholder="Beef"
         value={searchWord}
         onChange={handleChange}
+        page={isSearchPage ? 'search' : 'main'}
       />
-      <SearchBtn green={green}>Search</SearchBtn>
+      <SearchBtn green={green} page={isSearchPage ? 'search' : 'main'}>
+        Search
+      </SearchBtn>
     </SearchesForm>
   );
 }
