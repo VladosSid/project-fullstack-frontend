@@ -1,7 +1,7 @@
 export const theme = {
   device: {
-    mobail: 'screen and (min-width: 376px)',
-    tablet: 'screen and (min-width: 769px)',
+    mobail: 'screen and (min-width: 375px)',
+    tablet: 'screen and (min-width: 768px)',
     desktop: 'screen and (min-width: 1240px)',
   },
 
