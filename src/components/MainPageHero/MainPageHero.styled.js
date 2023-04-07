@@ -21,7 +21,7 @@ import desktop_bg from '../../images/mainPagePhoto/desktop_bg3.png';
 import tablet_bg from '../../images/mainPagePhoto/tablet_bg.png';
 //-----------------------------------------------
 export const MPHeroBG = styled.div`
-  width: 1240px;
+  width: 100%;
   @media screen and (max-width: 767px) {
     height: 777px;
     background-repeat: no-repeat;
@@ -33,37 +33,48 @@ export const MPHeroBG = styled.div`
   }
 
   @media screen and (min-width: 768px) {
+    position: relative;
     height: 640px;
+    /* width: 768px; */
     background-repeat: no-repeat;
     background-image: url('${tablet_bg}');
-    background-size: content;
+    background-size: cover;
     background-position: center center;
   }
 
   @media screen and (min-width: 1240px) {
     position: relative;
+    /* width: 1240px; */
     height: 688px;
     background-repeat: no-repeat;
     background-image: url('${desktop_bg}');
-    background-size: content;
-    background-position: center center;
+    background-size: cover;
+    /* background-position: center center; */
   }
 `;
 export const MPHeroTitle = styled.h1`
   color: #8baa36;
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 400;
   span {
     color: #22252a;
+  }
+  @media screen and (min-width: 768px) {
+    margin-left: 32px;
+    margin-top: 204px;
+    margin-bottom: 24px;
+    font-size: 72px;
+    line-height: 1;
+    letter-spacing: -0.005em;
   }
   @media screen and (min-width: 1240px) {
     margin-left: 100px;
     margin-top: 226px;
     margin-bottom: 14px;
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 400;
+
     font-size: 100px;
     line-height: 1;
-
     letter-spacing: -0.005em;
 
     /* width: 465px; */
@@ -75,45 +86,59 @@ export const MPHeroText = styled.span`
   font-family: 'Poppins';
   font-style: normal;
   font-weight: 400;
-  font-size: 18px;
-  line-height: 1.33;
-  letter-spacing: -0.02em;
+
   color: #23262a;
   @media screen and (min-width: 768px) {
-    margin-left: 107px;
-
-    margin-bottom: 50px;
-    width: 248px;
+    margin-left: 38px;
+    margin-bottom: 32px;
+    width: 362px;
+    font-size: 14px;
+    line-height: 1.29;
+    letter-spacing: -0.02em;
   }
   @media screen and (min-width: 1240px) {
     margin-left: 107px;
-
     margin-bottom: 50px;
     width: 465px;
+    font-size: 18px;
+    line-height: 1.33;
+    letter-spacing: -0.02em;
   }
 `;
 
 export const MPHeroProduct = styled.span`
   display: block;
-  margin-bottom: 7px;
-  width: 298px;
-  padding: 16px;
+
   font-family: 'Poppins';
   font-style: normal;
   font-weight: 500;
-  font-size: 14px;
-  line-height: 1.43;
-
-  letter-spacing: -0.24px;
-
   color: #3e4462;
 
   background-color: #ffffff;
   border-radius: 8px;
+  @media screen and (min-width: 768px) {
+    position: absolute;
+    right: 43px;
+    top: 372px;
+    width: 260px;
+    margin-bottom: 7px;
+    padding: 12px;
+    font-size: 14px;
+    line-height: 1.29;
+    letter-spacing: -0.24px;
+  }
   @media screen and (min-width: 1240px) {
     position: absolute;
     left: 820px;
     top: 462px;
+    padding: 16px;
+    margin-bottom: 7px;
+    width: 298px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.43;
+
+    letter-spacing: -0.24px;
     /* margin-left: 820px; */
   }
 `;
@@ -122,17 +147,21 @@ export const GreenSpan = styled.span`
 `;
 
 export const StyledLink = styled(Link)`
-  margin-left: 200px;
-  font-family: 'Poppins';
-  font-style: normal;
-  font-weight: 400;
-  font-size: 10px;
-  line-height: 1.2;
-
   display: flex;
   align-items: center;
   text-align: center;
-  letter-spacing: 0.2px;
-
   color: #3e4462;
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 0.2px;
+  @media screen and (min-width: 768px) {
+    margin-left: 164px;
+    font-size: 10px;
+    line-height: 1.2;
+  }
+  @media screen and (min-width: 1240px) {
+    margin-left: 200px;
+    font-size: 10px;
+  }
 `;

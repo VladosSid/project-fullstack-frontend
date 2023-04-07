@@ -8,13 +8,26 @@ export const ContainerWrapper = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
+
   @media screen and (min-width: 768px) {
-    width: 768px;
   }
   @media screen and (min-width: 1240px) {
-    width: 1240px;
   }
 `;
+
+export const Section = styled.section`
+  padding-left: 16px;
+  padding-right: 16px;
+  @media screen and (min-width: 768px) {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+  @media ${theme.device.desktop} {
+    padding-left: 99px;
+    padding-right: 99px;
+  }
+`;
+
 export const Container = styled.div`
   display: flex;
   flex-direction: column;
@@ -22,18 +35,15 @@ export const Container = styled.div`
 
   gap: 32px;
 
-  padding-left: 16px;
-  padding-right: 16px;
   @media screen and (min-width: 768px) {
-    padding-left: 32px;
-    padding-right: 32px;
+    /* width: 768px; */
+
     gap: 50px;
   }
 
   @media ${theme.device.desktop} {
+    /* width: 1240px; */
     gap: 100px;
-    padding-left: 99px;
-    padding-right: 99px;
   }
 `;
 
