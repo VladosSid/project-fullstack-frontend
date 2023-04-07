@@ -4,7 +4,7 @@ import theme from '../../style/generalStyle';
 export const List = styled.ul`
   list-style: none;
   padding-bottom: 100px;
-  @media ${theme.device.tablet} {
+   @media ${theme.device.tablet} {
     padding-bottom: 200px;
   }
 
