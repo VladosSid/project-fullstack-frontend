@@ -26,6 +26,7 @@ export default function SearchRecipesList({ searchQuery, searchType }) {
       .then(function (response) {
         console.log(searchQuery, searchType);
         setRecipes(response.data.result.data);
+        console.log(response.data);
       })
       .catch(function (error) {
         console.log(error.message);

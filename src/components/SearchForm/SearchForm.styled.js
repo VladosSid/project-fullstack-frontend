@@ -32,13 +32,16 @@ export const SearchInput = styled.input`
   width: 295px;
   padding-left: 17px;
   @media screen and (min-width: 768px) {
-    width: ${props => props.page === 'main' && '351px'};
-    height: ${props => props.page === 'main' && '70px'};
+    width: ${props => props.page === 'main' && '330px'};
+    height: ${props => props.page === 'main' && '59px'};
+    font-size: ${props => props.page === 'main' && '16px'};
+    padding-left: ${props => props.page === 'main' && '38px'};
   }
   @media screen and (min-width: 1240px) {
-    width: ${props => props.page === 'main' && '480px'};
+    width: ${props => props.page === 'main' && '465px'};
     height: ${props => props.page === 'main' && '70px'};
   }
+
   ::placeholder {
     font-family: 'Poppins';
     font-style: normal;
@@ -46,6 +49,9 @@ export const SearchInput = styled.input`
     font-size: 12px;
     line-height: 1.5;
     color: #bdbdbd;
+    @media screen and (min-width: 768px) {
+      font-size: ${props => props.page === 'main' && '16px'};
+    }
   }
   /* ::placeholder {
     font: inherit;
@@ -73,6 +79,12 @@ export const SearchBtn = styled.button`
   }
   @media screen and (min-width: 768px) {
     width: ${props => props.page === 'main' && '161px'};
+    height: ${props => props.page === 'main' && '59px'};
+    font-size: ${props => props.page === 'main' && '16px'};
+  }
+  @media screen and (min-width: 1240px) {
+    width: ${props => props.page === 'main' && '161px'};
     height: ${props => props.page === 'main' && '75px'};
+    font-size: ${props => props.page === 'main' && '16px'};
   }
 `;
