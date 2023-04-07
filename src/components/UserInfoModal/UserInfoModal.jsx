@@ -8,8 +8,9 @@ import user from '../../images/Header/user.png';
 import x from '../../images/Header/x.svg';
 
 const UserInfoModal = ({ toggler, open }) => {
-  const [img, setImg] = useState(null);
-  const [name, setName] = useState(null);
+  const [image, setImg] = useState(null);
+  const [name, setName] = useState('');
+  const [avatar, setAvatar] = useState(null);
 
   const dispatch = useDispatch();
 
@@ -30,6 +31,7 @@ const UserInfoModal = ({ toggler, open }) => {
       reader.readAsDataURL(file);
       reader.onloadend = function () {
         setImg(reader.result);
+        setAvatar(file);
       };
     }
   };
@@ -38,13 +40,21 @@ const UserInfoModal = ({ toggler, open }) => {
     setName(e.target.value);
   };
 
+  const reset = e => {
+    setName('');
+    setImg(null);
+  };
+
   const handleSubmit = e => {
     e.preventDefault();
 
     const formData = new FormData();
-    formData.append('img', img);
+    formData.append('img', avatar);
     formData.append('username', name);
+
     dispatch(authOperations.updateUserData(formData));
+
+    reset();
   };
 
   const check = e => {
@@ -54,48 +64,44 @@ const UserInfoModal = ({ toggler, open }) => {
   };
 
   return (
-    <div
-      className={open ? styles.backdrop : styles.unactive}
-      onClick={e => check(e)}
-    >
+    <form className={open ? styles.backdrop : styles.unactive} onClick={check}>
       <div className={styles.userInfoModal}>
         <button className={styles.closeCross} onClick={() => toggler()}>
           <img src={x} alt="cross" />
         </button>
         <div>
-          {img ? (
-            <img src={img} alt="user" className={styles.uploadedImg} />
+          {image ? (
+            <img src={image} alt="user" className={styles.uploadedImg} />
           ) : (
             <img src={user} alt="user" className={styles.userAvaSvg} />
           )}
           <label htmlFor="upload" className={styles.addImgInput}>
             <input
               style={{ display: 'none' }}
+              name="picture"
               type="file"
-              accept="image/png, image/jpeg"
+              accept="image/*"
               id="upload"
-              onChange={e => handleUploadClick(e)}
+              onChange={handleUploadClick}
             />
           </label>
         </div>
         <img src={plus} alt="plus" className={styles.plusSvg} />
         <input
-          onInput={e => onInputChange(e)}
+          onInput={onInputChange}
           type="text"
+          name="name"
+          value={name}
           placeholder="Your name"
           className={styles.nameInput}
         />
         <img src={user} alt="user" className={styles.userSvg} />
         <img src={pen} alt="pen" className={styles.penSvg} />
-        <button
-          type="submit"
-          onClick={e => handleSubmit(e)}
-          className={styles.saveBtn}
-        >
+        <button type="submit" onClick={handleSubmit} className={styles.saveBtn}>
           Save Changes
         </button>
       </div>
-    </div>
+    </form>
   );
 };
 

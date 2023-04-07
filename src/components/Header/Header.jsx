@@ -4,7 +4,8 @@ import Navigation from 'components/Navigation';
 import MobileMenu from 'components/MobileMenu.jsx/MobileMenu';
 import { HeaderBox } from './Header.styled';
 import { HeaderContainer } from './Header.styled';
-import { HeaderSwitcherBtn } from 'components/MobileMenu.jsx/HeaderSwitcher';
+import { SB } from 'components/MobileMenu.jsx/MobileMenu.styled';
+// import { HeaderSwBtn } from 'components/MobileMenu.jsx/SwitcherHeader.styled';
 
 const Header = () => {
   return (
@@ -14,7 +15,8 @@ const Header = () => {
         <Navigation />
         <UserLogo />
         <MobileMenu />
-        <HeaderSwitcherBtn />
+        <SB />
+        {/* <HeaderSwBtn /> */}
       </HeaderBox>
     </HeaderContainer>
   );

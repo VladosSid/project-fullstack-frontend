@@ -1,5 +1,29 @@
 import styled from 'styled-components';
 import theme from 'style/generalStyle';
+import { SwBtn } from './SwitcherBtn.styled';
+import { HeaderSw } from './SwitcherHeader.styled';
+
+export const SwButton = styled(SwBtn)`
+  @media ${theme.device.mobail} {
+    bottom: -110px;
+    left: -110px;
+  }
+  @media ${theme.device.tablet} {
+    bottom: -100px;
+    left: -210px;
+  }
+`;
+export const SB = styled(HeaderSw)`
+  @media ${theme.device.mobail} {
+    display: none;
+  }
+  @media ${theme.device.tablet} {
+    display: none;
+  }
+  @media ${theme.device.desktop} {
+    display: block;
+  }
+`;
 
 export const BurgerBtn = styled.button`
   cursor: pointer;
@@ -28,9 +52,6 @@ export const BackdropMobileMenu = styled.div`
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    display: flex;
-    align-items: center;
-    justify-content: center;
   }
 
   div {
@@ -47,30 +68,6 @@ export const CrossIcon = styled.button`
   background-color: transparent;
 `;
 
-export const Switcher = styled.button`
-  width: 60px;
-  height: 30px;
-  cursor: pointer;
-  padding: 0;
-  background-color: transparent;
-  border: none;
-  position: absolute;
-  transition: transform cubic-bezier(0.075, 0.82, 0.165, 1) 0.3s;
-
-  @media ${theme.device.mobail} {
-    bottom: -20vw;
-    left: -18vh;
-  }
-  @media ${theme.device.tablet} {
-    bottom: -15vw;
-    left: -34vh;
-  }
-
-  &:hover,
-  &:focus {
-    transform: scale(1.1);
-  }
-`;
 export const HeaderSwitcher = styled.button`
   display: none;
   width: 60px;
