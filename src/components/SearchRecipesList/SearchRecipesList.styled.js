@@ -14,7 +14,7 @@ export const GridContainer = styled.div`
   grid-template-columns: 1fr;
   grid-row-gap: 28px;
   padding-bottom: 40px;
-  @media ${theme.device.tablet} {
+  @media screen and (min-width: 768px) {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-column-gap: 32px;
@@ -22,7 +22,7 @@ export const GridContainer = styled.div`
     padding-bottom: 50px;
   }
 
-  @media ${theme.device.desktop} {
+  @media screen and (min-width: 1240px) {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
 
