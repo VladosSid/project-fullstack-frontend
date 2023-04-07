@@ -33,9 +33,11 @@ export const SearchInput = styled.input`
   padding-left: 17px;
   @media screen and (min-width: 768px) {
     width: ${props => props.page === 'main' && '351px'};
+    height: ${props => props.page === 'main' && '70px'};
   }
   @media screen and (min-width: 1240px) {
-    width: ${props => props.page === 'main' && '369px'};
+    width: ${props => props.page === 'main' && '480px'};
+    height: ${props => props.page === 'main' && '70px'};
   }
   ::placeholder {
     font-family: 'Poppins';
@@ -71,5 +73,6 @@ export const SearchBtn = styled.button`
   }
   @media screen and (min-width: 768px) {
     width: ${props => props.page === 'main' && '161px'};
+    height: ${props => props.page === 'main' && '75px'};
   }
 `;

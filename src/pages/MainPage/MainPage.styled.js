@@ -26,6 +26,7 @@ export const Section = styled.section`
   @media ${theme.device.desktop} {
     padding-left: 99px;
     padding-right: 99px;
+    padding-bottom: 118px;
   }
 `;
 
@@ -41,8 +42,8 @@ export const Container = styled.div`
   }
 
   @media ${theme.device.desktop} {
-    /* width: 1240px; */
     gap: 100px;
+    margin-bottom: 14px;
   }
 `;
 
@@ -158,7 +159,5 @@ export const MPButton = styled.button`
     height: 61px;
 
     font-size: 16px;
-  }
-  @media ${theme.device.desktop} {
   }
 `;
