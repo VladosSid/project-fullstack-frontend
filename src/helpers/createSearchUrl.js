@@ -1,9 +1,9 @@
 export function createSearchUrl(queryWord, type = 'title') {
-  const searchWord = queryWord.toLowerCase();
-  const encodedSearchTerm = encodeURIComponent(searchWord);
+  // const searchWord = queryWord.toLowerCase();
+  const processedValue = queryWord.trim().replace(/ +/g, '%20');
+  // const encodedSearchTerm = encodeURIComponent(processedValue);
+  const searchUrl = `/search?query=${processedValue}&type=${type}`;
 
-  const searchUrl = `/search?query=${encodedSearchTerm}&type=${type}`;
-  console.log('searchUrl', searchUrl);
   return searchUrl;
 }
 export function createCategoryUrl(category) {
