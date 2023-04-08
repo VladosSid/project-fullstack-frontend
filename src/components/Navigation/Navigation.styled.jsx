@@ -76,5 +76,7 @@ export const Ul = styled.ul`
 
 export const SearchImg = styled.img`
   // color: ${props => props.theme.color.header.SearchImg};
+  // stroke: red;
+  // fill: red;
 `;
 

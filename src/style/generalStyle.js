@@ -13,7 +13,6 @@ export const theme = {
       secondary: '#8BAA36',
 
       // background
-      // backgrounGlobal: '#2A2C36',
       backgrounGlobal: '#1E1F28',
 
       header: {
@@ -24,6 +23,23 @@ export const theme = {
 
       mainPageTitle: {
         colorTitle: '#FAFAFA',
+      },
+
+      favorit: {
+        CardWrapper: '#2A2C36',
+        CardTitle: '#FAFAFA',
+        CardDescription: 'rgba(250, 250, 250, 0.6)',
+        CardTime: '#FAFAFA',
+        CardButtonSee: '#8BAA36',
+        CardButtonSeeBorder: '#8BAA36',
+        CardButtonSeeHover: '#22252A',
+        CardButtonDelete: '#1E1F28',
+        CardButtonDeleteHoverBackground: '#EBF3D4',
+        CardButtonDeleteBorder: '#1E1F28',
+        CardIconStroke: '#fafafa',
+        CardIconStrokeHover: '#22252a',
+        CardIconFill: '#1E1F28',
+        CardIconFillHover: '#EBF3D4',
       },
 
       shoppingList: {
@@ -48,13 +64,6 @@ export const theme = {
       // background
       backgrounGlobal: '#FFFFFF',
 
-      // header: {
-      //   textAndLogo: '#23262A',
-
-      //   // User Profaile
-      //   background: '#FAFAFA',
-      //   borderInputTextLogo: '#23262A',
-      // },
       header: {
         backgroun: '#FAFAFA',
         textNavigation: '#23262A',
@@ -63,6 +72,23 @@ export const theme = {
 
       mainPageTitle: {
         colorTitle: '#001833',
+      },
+
+      favorit: {
+        CardWrapper: '#FFFFFF',
+        CardTitle: '#3e4462',
+        CardDescription: '#23262A',
+        CardTime: '#3e4462',
+        CardButtonSee: '#22252A',
+        CardButtonSeeBorder: 'rgb(250, 250, 250)',
+        CardButtonSeeHover: '#8BAA36',
+        CardButtonDelete: '#ebf3d4',
+        CardButtonDeleteHoverBackground: '#1e1f28',
+        CardButtonDeleteBorder: '#EBF3D4',
+        CardIconStroke: '#22252a',
+        CardIconStrokeHover: '#fafafa',
+        CardIconFill: '#ebf3d4',
+        CardIconFillHover: '#22252a',
       },
 
       shoppingList: {

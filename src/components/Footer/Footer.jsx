@@ -35,7 +35,7 @@ import theme from '../../redux/theming/theme-operations';
 export function Footer() {
   const [email, setEmail] = useState('');
 
-  const dispatch = useDispatch();
+    const dispatch = useDispatch();
   dispatch(theme.themeSwitch('white'));
   dispatch(theme.themeSwitch('dark'));
 
