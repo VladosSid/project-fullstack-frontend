@@ -6,12 +6,8 @@ import LogoutBtn from 'components/LogoutBtn/LogoutBtn';
 const UserLogoModal = ({ isOpen, clickToggle }) => {
   const modal = document.getElementById('user-info-modal');
 
-  const toggler = () => {
-    modalHandler();
-  };
-
   const modalHandler = e => {
-    modal.classList.toggle(styleModal.active);
+    modal.classList.add(styleModal.active);
   };
 
   return (
@@ -20,7 +16,7 @@ const UserLogoModal = ({ isOpen, clickToggle }) => {
         <button
           onClick={() => {
             clickToggle();
-            toggler();
+            modalHandler();
           }}
         >
           Edit profile <HiOutlinePencil size={14} />

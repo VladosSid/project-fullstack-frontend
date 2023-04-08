@@ -2,7 +2,6 @@ import { useDispatch } from 'react-redux';
 import { useState, useEffect } from 'react';
 import { authOperations } from 'redux/users';
 
-import styleModal from '../UserInfoModal/UserInfoModal.module.css';
 import styles from './UserInfoModal.module.css';
 import plus from '../../images/Header/plus.png';
 import pen from '../../images/Header/pen.svg';
@@ -13,21 +12,22 @@ const UserInfoModal = () => {
   const [image, setImg] = useState(null);
   const [name, setName] = useState('');
   const [avatar, setAvatar] = useState(null);
-  const [open, setOpen] = useState(true);
   const dispatch = useDispatch();
 
   const modal = document.getElementById('user-info-modal');
+  const close = e => {
+    if (e.keyCode === 27) {
+      // modal.classList.remove(styles.active);
+      console.log('ji');
+    }
+  };
 
   useEffect(() => {
-    const close = e => {
-      if (e.keyCode === 27) {
-        setOpen(false);
-        console.log(open);
-      }
-    };
     window.addEventListener('keydown', close);
+
     return () => window.removeEventListener('keydown', close);
-  }, [open]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   const handleUploadClick = e => {
     const file = e.target.files[0];
@@ -63,12 +63,16 @@ const UserInfoModal = () => {
 
   const closeHandler = e => {
     e.preventDefault();
-    modal.classList.remove(styleModal.active);
+    modal.classList.remove(styles.active);
   };
 
   const check = e => {
-    if (e.currentTarget === e.target && open === false) {
-      modal.classList.remove(styleModal.active);
+    if (
+      e.currentTarget === e.target &&
+      modal.classList.contains(styles.active)
+    ) {
+      // modal.classList.remove(styles.active);
+      console.log(modal.classList.value);
     }
   };
 
