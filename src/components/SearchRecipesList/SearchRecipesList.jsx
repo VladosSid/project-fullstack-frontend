@@ -34,7 +34,9 @@ export default function SearchRecipesList({ searchQuery, searchType }) {
       .catch(function (error) {
         if (error.response && error.response.status === 404) {
           setError(
-            <ErrorComponent message="There is no such ingredient. Try something else... " />
+            <ErrorComponent>
+              "There is no such ingredient. Try something else... "{' '}
+            </ErrorComponent>
           );
         } else {
           setError(<ErrorComponent message="An error occurred" />);
@@ -47,7 +49,9 @@ export default function SearchRecipesList({ searchQuery, searchType }) {
       {error ? (
         <SRLNoItems>
           <SRLNoItemsText>
-            <p>There is no such ingredient. Try something else...</p>
+            <ErrorComponent>
+              There is no such ingredient. Try something else...
+            </ErrorComponent>
           </SRLNoItemsText>
         </SRLNoItems>
       ) : !recipes.length ? (
