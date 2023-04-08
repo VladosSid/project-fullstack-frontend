@@ -41,12 +41,14 @@ export default function SearchRecipesList({ searchQuery, searchType }) {
           <SRLNoItemsText>Try looking for something else...</SRLNoItemsText>
         </SRLNoItems>
       ) : (
-        <GridContainer>
-          {recipes.map(recipe => (
-            <DishCard key={recipe._id} location={location} recipe={recipe} />
-          ))}
+        <>
+          <GridContainer>
+            {recipes.map(recipe => (
+              <DishCard key={recipe._id} location={location} recipe={recipe} />
+            ))}
+          </GridContainer>
           <div>Pagination</div>
-        </GridContainer>
+        </>
       )}
     </>
   );
