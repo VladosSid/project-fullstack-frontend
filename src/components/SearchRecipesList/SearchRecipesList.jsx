@@ -33,7 +33,7 @@ export default function SearchRecipesList({ searchQuery, searchType }) {
         console.log(error.message);
       });
   }, [searchQuery, searchType]);
-  console.log('recipes', recipes);
+
   return (
     <>
       {!recipes.length ? (

@@ -84,10 +84,12 @@ export default function MainPage() {
   //---------------------------
   const handleFormSubmit = query => {
     console.log('Query in Main', query);
-
+    // const processedValue = query.trim().replace(/\s+/g, '%20');
+    // console.log('processedValue', processedValue);
     // const nextQuery = query !== '' ? { query } : {};
     // setSearchParams(nextQuery);
     const searchUrl = createSearchUrl(query);
+    console.log('Query in Main 2', query);
     console.log('SearchUrl in MainPage', searchUrl);
     navigate(searchUrl);
   };
