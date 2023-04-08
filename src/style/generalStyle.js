@@ -13,6 +13,10 @@ export const theme = {
       // background
       backgrounGlobal: '#2A2C36',
 
+      mainPageTitle: {
+        colorTitle: '#FAFAFA',
+      },
+
       footer: {
         bavkgroundFooter: '#8BAA36',
       },
@@ -33,6 +37,10 @@ export const theme = {
         // User Profaile
         background: '#FAFAFA',
         borderInputTextLogo: '#23262A',
+      },
+
+      mainPageTitle: {
+        colorTitle: '#001833',
       },
 
       footer: {

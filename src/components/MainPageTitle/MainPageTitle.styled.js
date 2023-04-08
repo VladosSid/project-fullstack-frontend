@@ -14,7 +14,7 @@ export const Title = styled.h2`
   font-family: 'Poppins';
   font-size: 28px;
   line-height: 28px;
-  color: #001833;
+  color: ${props => props.theme.color.mainPageTitle.colorTitle};
 
   @media ${theme.device.tablet} {
     padding-top: 73px;

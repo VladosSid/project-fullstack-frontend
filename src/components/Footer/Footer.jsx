@@ -36,7 +36,8 @@ export function Footer() {
   const [email, setEmail] = useState('');
 
   const dispatch = useDispatch();
-  dispatch(theme.themeSwitch('dark'));
+  dispatch(theme.themeSwitch('white'));
+  // dispatch(theme.themeSwitch('dark'));
 
   const getSubscription = async e => {
     e.preventDefault();
