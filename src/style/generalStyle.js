@@ -5,6 +5,8 @@ export const theme = {
     desktop: 'screen and (min-width: 1240px)',
   },
 
+  // ${props => props.theme.color.footer.bavkgroundFooter}
+
   dark: {
     color: {
       primary: '#22252A',
@@ -13,6 +15,12 @@ export const theme = {
       // background
       // backgrounGlobal: '#2A2C36',
       backgrounGlobal: '#1E1F28',
+
+      header: {
+        backgroun: '#1E1F28',
+        textNavigation: '#FAFAFA',
+        SearchImg: '#FAFAFA',
+      },
 
       mainPageTitle: {
         colorTitle: '#FAFAFA',
@@ -40,12 +48,17 @@ export const theme = {
       // background
       backgrounGlobal: '#FFFFFF',
 
-      header: {
-        textAndLogo: '#23262A',
+      // header: {
+      //   textAndLogo: '#23262A',
 
-        // User Profaile
-        background: '#FAFAFA',
-        borderInputTextLogo: '#23262A',
+      //   // User Profaile
+      //   background: '#FAFAFA',
+      //   borderInputTextLogo: '#23262A',
+      // },
+      header: {
+        backgroun: '#FAFAFA',
+        textNavigation: '#23262A',
+        SearchImg: '#22252A',
       },
 
       mainPageTitle: {

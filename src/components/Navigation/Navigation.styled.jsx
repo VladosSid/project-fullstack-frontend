@@ -52,7 +52,7 @@ export const Ul = styled.ul`
   }
 
   li a {
-    color: #22252a;
+    color: ${props => props.theme.color.header.textNavigation};
     &.active {
       color: #8baa36;
     }
@@ -73,3 +73,8 @@ export const Ul = styled.ul`
     }
   }
 `;
+
+export const SearchImg = styled.img`
+  // color: ${props => props.theme.color.header.SearchImg};
+`;
+

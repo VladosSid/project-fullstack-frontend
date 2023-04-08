@@ -5,7 +5,7 @@ export const HeaderContainer = styled.div`
   margin: 0 auto;
   position: sticky;
   top: 0;
-  background-color: #fff;
+  background-color: ${props => props.theme.color.header.backgroun};
   z-index: 30;
 
   @media ${theme.device.mobail} {
