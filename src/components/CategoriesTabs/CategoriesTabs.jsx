@@ -6,13 +6,10 @@ import { DishCardContainer } from './CategoriesTabs.styled';
 import { Box } from '@mui/material';
 import DishCard from '../DishCard/DishCard';
 import queryBackEnd from '../../helpers/request/queryBackEnd';
-// import { useSearchParams } from 'react-router-dom';
-
-// import { Recipes } from '../../RecipesData';
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
-  // let [searchParams, setSearchParams] = useSearchParams();
+
   return (
     <div
       role="tabpanel"
@@ -52,10 +49,16 @@ function a11yProps(index) {
 }
 
 export default function CategoriesTabs(props) {
+  console.log('Tab');
   const { tabsTitlesQ, idCategory } = props;
   const [value, setValue] = React.useState(idCategory);
   const [recipeList, setRecipeList] = React.useState([]);
 
+  React.useEffect(() => {
+    setValue(idCategory);
+  }, [idCategory]);
+
+  // --- loading data when component is mounted -----------
   React.useEffect(() => {
     const fetchData = async () => {
       await queryBackEnd
@@ -66,7 +69,7 @@ export default function CategoriesTabs(props) {
     fetchData();
   }, [idCategory, tabsTitlesQ]);
 
-  // get Recipe
+  // ------- get Recipe by categiry id ------------------
   const handleChange = async (event, tabId) => {
     await queryBackEnd
       .queryRecipeCategori(tabsTitlesQ[tabId])
