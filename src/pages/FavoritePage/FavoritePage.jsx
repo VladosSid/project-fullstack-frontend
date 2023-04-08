@@ -11,15 +11,15 @@ import { Children } from 'react';
 // import instanceBacEnd from 'helpers/requestBackEnd';
 import { queryBackEnd } from 'helpers/request';
 import { Container, Pagination, Stack } from '@mui/material';
-import { SxProps, Theme } from '@mui/material/styles';
+// import { SxProps, Theme } from '@mui/material/styles';
 import { PaginationWrapper } from './FavoritePage.styled';
 
 const FavoritePage = () => {
   const location = useLocation();
   const [recipes, setRecipes] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
-  const [allPage, setAllPage] = useState(1);
-  const [allItem, setAllItem] = useState(0);
+  const [allPage, setAllPage] = useState();
+  const [allItem, setAllItem] = useState(1);
 
   useEffect(() => {
     setRecipes([]);
@@ -30,12 +30,12 @@ const FavoritePage = () => {
         setRecipes(results.result.data.list);
         setAllItem(results.result.data.totalItem);
         console.log(results.result.data.totalItem);
-        const pageQty = Math.ceil(allItem / 4);
+        const pageQty = Math.ceil(results.result.data.totalItem / 4);
         console.log(pageQty);
         setAllPage(pageQty);
       })
       .catch(error => error.message);
-  }, []);
+  }, [allItem]);
 
   const changeNum = (_, num) => {
     setCurrentPage(num);
@@ -58,6 +58,10 @@ const FavoritePage = () => {
               count={allPage}
               page={currentPage}
               onChange={changeNum}
+              // showFirstButton
+              // showLastButton
+              siblingCount={1}
+              sx={{ marginY: 3, marginX: 'auto' }}
             />
           </Stack>
         </Container>
