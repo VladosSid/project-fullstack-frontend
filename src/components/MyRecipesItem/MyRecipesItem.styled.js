@@ -268,13 +268,14 @@ export const CardButtonDelete = styled.button`
   height: 24px;
   right: 9px;
   top: 14px;
+  padding: 0;
   display: flex;
   justify-content: center;
   align-items: center;
   color: #fafafa;
   background: #8baa36;
   border-radius: 4px;
-  border-color: transparent;
+  border: none;
   &:hover,
   :focus {
     background: #22252a;
@@ -304,9 +305,6 @@ export const CardButtonDelete = styled.button`
     height: 44px;
     right: 40px;
     top: 40px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     color: #fafafa;
     background: #8baa36;
     border-radius: 4px;
