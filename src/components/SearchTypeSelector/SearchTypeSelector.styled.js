@@ -5,6 +5,7 @@ import ReactSelect from 'react-select';
 export const CustomSelectBox = styled.div`
   display: flex;
   align-items: center;
+  justify-content: center;
 `;
 export const SearchTypeSpan = styled.span`
   font-family: 'Poppins';
@@ -12,11 +13,18 @@ export const SearchTypeSpan = styled.span`
   font-weight: 500;
   font-size: 12px;
   line-height: 1.33;
-
   letter-spacing: -0.24px;
-
   color: #001833;
   margin-right: 15px;
+  @media screen and (min-width: 768px) {
+    font-size: 14px;
+    line-height: 1.29;
+    margin-right: 18px;
+  }
+  @media screen and (min-width: 1240px) {
+    font-size: 18px;
+    line-height: 1.33;
+  }
 `;
 
 export const CustomSelect = styled(ReactSelect)`
@@ -26,6 +34,7 @@ export const CustomSelect = styled(ReactSelect)`
     height: 34px;
     width: 146px;
     border-radius: 6px;
+    font-weight: 400;
     /* padding-left: 14px; */
     /* background-position: 95%; */
     font-size: 12px;
@@ -33,6 +42,17 @@ export const CustomSelect = styled(ReactSelect)`
     font-family: Poppins;
     color: #000000;
     /* gap: 8px; */
+    @media screen and (min-width: 768px) {
+      font-size: 14px;
+      height: 41px;
+      width: 175px;
+    }
+    @media screen and (min-width: 768px) {
+      font-size: 14px;
+      height: 49px;
+      width: 198px;
+    }
+
      {
       :active :hover,
       :focus {

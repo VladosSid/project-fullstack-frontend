@@ -10,7 +10,7 @@ export default function SearchForm({
   isSearchPage,
 }) {
   const [searchWord, setSearchWord] = useState(searchQuery || '');
-  console.log('is?', isSearchPage);
+
   const handleChange = evt => {
     setSearchWord(evt.currentTarget.value);
   };
