@@ -52,9 +52,13 @@ export default function SearchPage() {
         searchQuery={searchQuery}
       />
       {searchQuery !== '' && (
-        <SearchRecipesList searchQuery={searchQuery} searchType={searchType} />
+        <>
+          <SearchRecipesList
+            searchQuery={searchQuery}
+            searchType={searchType}
+          />
+        </>
       )}
-      <div>Pagination</div>
     </ContainerWrapper>
   );
 }

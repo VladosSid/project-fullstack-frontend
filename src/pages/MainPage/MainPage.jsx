@@ -60,7 +60,7 @@ export default function MainPage() {
 
   useEffect(() => {
     instanceBacEnd.defaults.headers.common.Authorization =
-      'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDJkZDdmODlmN2I0N2RlNDk0OGI4ZDIiLCJpYXQiOjE2ODA3MjYwMDh9._Zf3orn5P6u54hilJsmRc8snd2oRt7Ol77pu3M3IqYQ';
+      'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDJkZDdmODlmN2I0N2RlNDk0OGI4ZDIiLCJpYXQiOjE2ODA4NzUxOTF9.4A3dgm3_3EJIMfFCD7WFd2VAM_iDXJ0MWGaA9UAg_uk';
 
     instanceBacEnd
       .get(`/recipes/main-page?query=${quantity}`)
@@ -71,7 +71,6 @@ export default function MainPage() {
       .catch(function (error) {
         console.log(error.message);
       });
-    console.log('quantity', quantity);
   }, [quantity]);
 
   const RecipesByCategory = recipes.reduce((acc, recipe) => {
