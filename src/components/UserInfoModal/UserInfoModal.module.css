@@ -6,11 +6,11 @@
     height: 100%;
     background-color: rgba(0, 0, 0, 0.3);
     z-index: 100;
-    transform: translateY(0);
+    transform: translateY(-130vh);
 }
 
-.unactive {
-    transform: translateY(-130vh);
+.active {
+    transform: translateY(0);
 }
 
 .penSvg {

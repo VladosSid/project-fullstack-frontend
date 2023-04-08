@@ -1,28 +1,33 @@
 import { useDispatch } from 'react-redux';
 import { useState, useEffect } from 'react';
 import { authOperations } from 'redux/users';
-import plus from '../../images/Header/plus.png';
+
+import styleModal from '../UserInfoModal/UserInfoModal.module.css';
 import styles from './UserInfoModal.module.css';
+import plus from '../../images/Header/plus.png';
 import pen from '../../images/Header/pen.svg';
 import user from '../../images/Header/user.png';
 import x from '../../images/Header/x.svg';
 
-const UserInfoModal = ({ toggler, open }) => {
+const UserInfoModal = () => {
   const [image, setImg] = useState(null);
   const [name, setName] = useState('');
   const [avatar, setAvatar] = useState(null);
-
+  const [open, setOpen] = useState(true);
   const dispatch = useDispatch();
+
+  const modal = document.getElementById('user-info-modal');
 
   useEffect(() => {
     const close = e => {
       if (e.keyCode === 27) {
-        toggler();
+        setOpen(false);
+        console.log(open);
       }
     };
     window.addEventListener('keydown', close);
     return () => window.removeEventListener('keydown', close);
-  }, [toggler]);
+  }, [open]);
 
   const handleUploadClick = e => {
     const file = e.target.files[0];
@@ -47,26 +52,30 @@ const UserInfoModal = ({ toggler, open }) => {
 
   const handleSubmit = e => {
     e.preventDefault();
-
     const formData = new FormData();
+
     formData.append('img', avatar);
     formData.append('username', name);
 
     dispatch(authOperations.updateUserData(formData));
-
     reset();
   };
 
+  const closeHandler = e => {
+    e.preventDefault();
+    modal.classList.remove(styleModal.active);
+  };
+
   const check = e => {
-    if (e.currentTarget === e.target) {
-      toggler();
+    if (e.currentTarget === e.target && open === false) {
+      modal.classList.remove(styleModal.active);
     }
   };
 
   return (
-    <form className={open ? styles.backdrop : styles.unactive} onClick={check}>
+    <form className={styles.backdrop} id="user-info-modal" onClick={check}>
       <div className={styles.userInfoModal}>
-        <button className={styles.closeCross} onClick={() => toggler()}>
+        <button className={styles.closeCross} onClick={closeHandler}>
           <img src={x} alt="cross" />
         </button>
         <div>
@@ -91,6 +100,7 @@ const UserInfoModal = ({ toggler, open }) => {
           onInput={onInputChange}
           type="text"
           name="name"
+          max={15}
           value={name}
           placeholder="Your name"
           className={styles.nameInput}

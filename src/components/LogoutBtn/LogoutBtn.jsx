@@ -1,7 +1,8 @@
 import { useDispatch } from 'react-redux';
 import operations from 'redux/users/auth-operations';
-import arrow from '../../images/Header/arrow.svg';
+
 import { Logout } from './LogoutBtn.styled';
+import arrow from '../../images/Header/arrow.svg';
 
 const LogoutBtn = () => {
   const dispatch = useDispatch();
