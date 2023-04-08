@@ -3,35 +3,53 @@ import theme from '../../style/generalStyle';
 
 export const ContainerWrapper = styled.div`
   height: 100%;
+
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+
+  @media screen and (min-width: 768px) {
+  }
+  @media screen and (min-width: 1240px) {
+  }
 `;
+
+export const Section = styled.section`
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-bottom: 100px;
+  @media screen and (min-width: 768px) {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+  @media ${theme.device.desktop} {
+    padding-left: 99px;
+    padding-right: 99px;
+    padding-bottom: 118px;
+  }
+`;
+
 export const Container = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  /* grid-template-columns: repeat(auto-fit, 343px); */
   gap: 32px;
-  width: 100%;
-  padding-left: 16px;
-  padding-right: 16px;
-  @media screen and (min-width: 1440px) {
-    padding-left: 32px;
-    padding-right: 32px;
+  margin-bottom: 40px;
+  @media screen and (min-width: 768px) {
     gap: 50px;
+    margin-bottom: 32px;
   }
 
   @media ${theme.device.desktop} {
     gap: 100px;
-    padding-left: 99px;
-    padding-right: 99px;
+    margin-bottom: 14px;
   }
 `;
+
 export const GridContainer = styled.div`
   justify-content: center;
-  @media ${theme.device.tablet} {
+  @media screen and (min-width: 768px) {
     display: flex;
     gap: 32px;
   }
@@ -111,11 +129,35 @@ export const Button = styled.button`
   line-height: 1.29;
   margin-left: auto;
   margin-top: 24px;
-  @media ${theme.device.tablet} {
+  @media screen and (min-width: 768px) {
     margin-top: 40px;
   }
 
-  @media ${theme.device.desktop} {
+  @media screen and (min-width: 1240px) {
     margin-top: 60px;
+  }
+`;
+
+export const MPButton = styled.button`
+  display: block;
+  width: 195px;
+  height: 46px;
+  /* border-color: transparent; */
+  border-radius: 24px 44px;
+  border: 2px solid #8baa36;
+  background-color: transparent;
+  margin: 0 auto;
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.5;
+  text-align: center;
+  color: #22252a;
+  @media screen and (min-width: 768px) {
+    width: 239px;
+    height: 61px;
+
+    font-size: 16px;
   }
 `;

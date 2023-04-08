@@ -9,7 +9,7 @@ import {
 export default function SearchTypeSelector({ onChange, selectedType }) {
   const options = [
     { value: 'title', label: 'Title' },
-    { value: 'ingredient', label: 'Ingredients' },
+    { value: 'ingredients', label: 'Ingredients' },
   ];
 
   function handleChange(option) {

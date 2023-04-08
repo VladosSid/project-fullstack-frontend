@@ -11,6 +11,8 @@ import {
   Button,
   ContainerWrapper,
   GridContainer,
+  Section,
+  MPButton,
 } from './MainPage.styled';
 
 import MainPageHero from 'components/MainPageHero';
@@ -21,47 +23,56 @@ export default function MainPage() {
   const location = useLocation();
   const navigate = useNavigate();
   const [recipes, setRecipes] = useState([]);
-  // const [searchParams, setSearchParams] = useSearchParams();
-  // const queryRec = searchParams.get('query');
-  // const [width] = useState(window.innerWidth);
-  const [width] = useState(window.innerWidth);
+
   //Do we need resize?
-  // const [width, setWidth] = useState(window.innerWidth);
-  // const handleResize = () => {
-  //   setWidth(window.innerWidth);
-  // };
 
-  // useEffect(() => {
-  //   window.addEventListener('resize', handleResize);
+  // const [viewportWidth, setViewportWidth] = useState(window.innerWidth);
+  const [quantity, setQuantity] = useState(() => {
+    const width = window.innerWidth;
 
-  //   return () => {
-  //     window.removeEventListener('resize', handleResize);
-  //   };
-  // }, []);
+    if (width >= 1240) {
+      return 4;
+    } else if (width >= 768 && width < 1240) {
+      return 2;
+    } else {
+      return 1;
+    }
+  });
+
+  useEffect(() => {
+    const handleWindowResize = () => {
+      const width = window.innerWidth;
+
+      if (width >= 1240) {
+        setQuantity(4);
+      } else if (width >= 768 && width < 1240) {
+        setQuantity(2);
+      } else {
+        setQuantity(1);
+      }
+
+      // setViewportWidth(width);
+    };
+    window.addEventListener('resize', handleWindowResize);
+
+    return () => window.removeEventListener('resize', handleWindowResize);
+  }, []);
 
   useEffect(() => {
     instanceBacEnd.defaults.headers.common.Authorization =
       'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDJkZDdmODlmN2I0N2RlNDk0OGI4ZDIiLCJpYXQiOjE2ODA3MjYwMDh9._Zf3orn5P6u54hilJsmRc8snd2oRt7Ol77pu3M3IqYQ';
-    let queryQuantity;
-    if (width >= 768 && width < 1440) {
-      queryQuantity = 2;
-    } else if (width >= 1440) {
-      queryQuantity = 4;
-    } else if (width < 768) {
-      queryQuantity = 1;
-    }
+
     instanceBacEnd
-      .get(`/recipes/main-page?query=${queryQuantity}`)
+      .get(`/recipes/main-page?query=${quantity}`)
 
       .then(function (response) {
         setRecipes(response.data.result.data);
-
-        console.log(queryQuantity, width);
       })
       .catch(function (error) {
         console.log(error.message);
       });
-  }, [width]);
+    console.log('quantity', quantity);
+  }, [quantity]);
 
   const RecipesByCategory = recipes.reduce((acc, recipe) => {
     if (!acc[recipe.category]) {
@@ -94,26 +105,31 @@ export default function MainPage() {
   return (
     <ContainerWrapper>
       <MainPageHero onSubm={handleFormSubmit} />
-      <Container>
-        {Object.entries(RecipesByCategory).map(([category, recipes]) => (
-          <div key={category}>
-            <RecipeCategoryName>{category}</RecipeCategoryName>
-            <GridContainer>
-              {recipes.map(recipe => (
-                <DishCard
-                  key={recipe._id}
-                  location={location}
-                  recipe={recipe}
-                />
-              ))}
-            </GridContainer>
+      <Section>
+        <Container>
+          {Object.entries(RecipesByCategory).map(([category, recipes]) => (
+            <div key={category}>
+              <RecipeCategoryName>{category}</RecipeCategoryName>
+              <GridContainer>
+                {recipes.map(recipe => (
+                  <DishCard
+                    key={recipe._id}
+                    location={location}
+                    recipe={recipe}
+                  />
+                ))}
+              </GridContainer>
 
-            <Button onClick={() => handleCategoryClick(category)}>
-              See all
-            </Button>
-          </div>
-        ))}
-      </Container>
+              <Button onClick={() => handleCategoryClick(category)}>
+                See all
+              </Button>
+            </div>
+          ))}
+        </Container>
+        <MPButton onClick={() => handleCategoryClick('breakfast')}>
+          Other categories
+        </MPButton>
+      </Section>
     </ContainerWrapper>
   );
 }

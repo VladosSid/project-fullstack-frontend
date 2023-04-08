@@ -4,7 +4,7 @@ import theme from '../../style/generalStyle';
 export const List = styled.ul`
   list-style: none;
   padding-bottom: 100px;
-  @media ${theme.device.tablet} {
+   @media ${theme.device.tablet} {
     padding-bottom: 200px;
   }
 
@@ -32,11 +32,12 @@ export const ItemContainer = styled.div`
   display: flex;
   padding-top: 50px;
   padding-bottom: 50px;
-  border-bottom: 1px solid #e0e0e0;
+  border-bottom: 1px solid
+    ${props => props.theme.color.shoppingList.borderItemContainer};
 
   @media ${theme.device.desktop} {
     padding-right: 32px;
-   }
+  }
 `;
 
 export const ImageContainer = styled.div`
@@ -44,7 +45,7 @@ export const ImageContainer = styled.div`
   width: 60px;
   height: 60px;
   border-radius: 6px;
-  background: #ebf3d4;
+  background: ${props => props.theme.color.shoppingList.colorImageContainer};
   padding: 6px;
   margin-right: 10px;
   @media ${theme.device.tablet} {
@@ -62,7 +63,7 @@ export const TitleProduct = styled.div`
   font-family: 'Poppins';
   font-size: 10px;
   line-height: 12px;
-  color: #3e4462;
+  color: ${props => props.theme.color.shoppingList.titleProduct};
   margin-right: auto;
 
   @media ${theme.device.tablet} {
@@ -109,7 +110,7 @@ export const Remove = styled.button`
 
 export const RemoveSvg = styled.div`
   svg {
-    stroke: #333333;
+    stroke: ${props => props.theme.color.shoppingList.titleProduct};
     width: 8px;
     height: 8px;
 

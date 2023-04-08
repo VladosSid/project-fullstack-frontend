@@ -1,12 +1,12 @@
 import {
   Title,
   BackgroundTopOne,
-  BackgroundTopTwo,
+  BackgroundTopBlack,
   BackgroundTop,
   ContaynerTitle,
 } from './MainPageTitle.styled';
-import img from '../../images/background/Rectangle 9.jpg';
-import imgTop from '../../images/background/Rectangle 8.jpg';
+import img from '../../images/background/green-point.png';
+import imgTop from '../../images/background/black_point.png';
 
 
 
@@ -18,7 +18,7 @@ export const MainPageTitle = ({ title }) => {
         <Title>{title}</Title>
         <BackgroundTopOne src={img} alt="background" />
         <BackgroundTop src={imgTop} alt="background" />
-        <BackgroundTopTwo src={img} alt="background" />
+        <BackgroundTopBlack src={img} alt="background" />
       </ContaynerTitle>
     );
    

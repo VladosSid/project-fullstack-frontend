@@ -1,39 +1,55 @@
-import { useSelector } from 'react-redux';
+import { useEffect, useState } from 'react';
 import IngredientsShoppingList from './IngredientsShoppingList';
 import {
   TitltList,
   TitleListProducts,
   TitleListNumber,
-  Tabl,
+  ImgIngradientsContainer,
+  ImgIngradients,
+  ImgIngradientsText,
 } from './ShoppingList.styled';
-import ingredients from '../../ingredients.json';
-import authSelectors from '../../redux/users/auth-selectors'
-import recipeSelectors from '../../redux/recipe/recipe-selectors';
-
-
-//   useEffect(() => {
-// запит за інградієнтами
-//   }, []);
+import queryBackEnd from '../../helpers/request/queryBackEnd';
+import imgIngradients from '../../images/ShopingList/ingradients.png';
 
 const ShoppingList = () => {
-const ingredientsShopping = useSelector(authSelectors.getShoppingList);
-  console.log('ingredientsShopping', ingredientsShopping);
+  const [ingredientArr, setingredientArr] = useState([]);
+  useEffect(() => {
+    queryBackEnd.queryShoppingList().then(response => {
+      setingredientArr(response.data);
+    });
+  }, []);
 
-  const ollIngradients = useSelector(recipeSelectors.getAllIngredients);
-  console.log("ollIngradients",ollIngradients);
- 
-  
-
+  const deleteIngradient = contactId => {
+    queryBackEnd
+      .queryRemoveShoppingList({ shoppingListIng: contactId })
+      .then(response =>
+        setingredientArr(prevState =>
+          prevState.filter(ingradient => ingradient._id !== contactId)
+        )
+      );
+  };
 
   return (
-    <Tabl>
-      <TitltList>
-        <TitleListProducts>Products</TitleListProducts>
-        <TitleListNumber>Number</TitleListNumber>
-        <span>Remove</span>
-      </TitltList>
-      <IngredientsShoppingList ingredients={ingredients} />
-    </Tabl>
+    <div>
+      {ingredientArr.length > 0 ? (
+        <>
+          <TitltList>
+            <TitleListProducts>Products</TitleListProducts>
+            <TitleListNumber>Number</TitleListNumber>
+            <span>Remove</span>
+          </TitltList>
+          <IngredientsShoppingList
+            ingredients={ingredientArr}
+            deleteIngradient={deleteIngradient}
+          />
+        </>
+      ) : (
+        <ImgIngradientsContainer>
+          <ImgIngradients src={imgIngradients} alt="ingredient" />
+          <ImgIngradientsText>Your shopping list is empty.</ImgIngradientsText>
+        </ImgIngradientsContainer>
+      )}
+    </div>
   );
 };
 export default ShoppingList;

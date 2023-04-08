@@ -37,7 +37,7 @@ export function Footer() {
 
   const dispatch = useDispatch();
   dispatch(theme.themeSwitch('white'));
-  // dispatch(theme.themeSwitch('dark'));
+  dispatch(theme.themeSwitch('dark'));
 
   const getSubscription = async e => {
     e.preventDefault();

@@ -7,6 +7,7 @@ export default function SearchForm({
   marginBottom,
   searchQuery,
   marginTop,
+  isSearchPage,
 }) {
   const [searchWord, setSearchWord] = useState(searchQuery || '');
 
@@ -19,6 +20,7 @@ export default function SearchForm({
     console.log('Query in SF submit', searchWord);
     if (searchWord.trim() === '') {
       console.log('Please fill the search form ');
+
       return;
     }
 
@@ -29,13 +31,17 @@ export default function SearchForm({
       onSubmit={handleSubmit}
       marginBottom={marginBottom}
       marginTop={marginTop}
+      page={isSearchPage ? 'search' : 'main'}
     >
       <SearchInput
         placeholder="Beef"
         value={searchWord}
         onChange={handleChange}
+        page={isSearchPage ? 'search' : 'main'}
       />
-      <SearchBtn green={green}>Search</SearchBtn>
+      <SearchBtn green={green} page={isSearchPage ? 'search' : 'main'}>
+        Search
+      </SearchBtn>
     </SearchesForm>
   );
 }

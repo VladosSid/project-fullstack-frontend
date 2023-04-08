@@ -31,7 +31,7 @@ export const Title = styled.h2`
 
 export const BackgroundTopOne = styled.img`
   position: absolute;
-  z-index: -1;
+
   width: 8px;
   height: 8px;
   bottom: 105px;
@@ -50,7 +50,6 @@ export const BackgroundTopOne = styled.img`
 
 export const BackgroundTop = styled.img`
   position: absolute;
-  z-index: -1;
   width: 6px;
   height: 6px;
   bottom: 43px;
@@ -66,13 +65,13 @@ export const BackgroundTop = styled.img`
     right: 517px;
   } ;
 `;
-export const BackgroundTopTwo = styled.img`
+export const BackgroundTopBlack = styled.img`
   position: absolute;
-  z-index: -1;
   width: 8px;
   height: 8px;
   bottom: 73px;
   right: 7px;
+  color: red;
   @media ${theme.device.tablet} {
     width: 14px;
     height: 14px;

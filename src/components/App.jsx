@@ -2,6 +2,7 @@ import { Suspense, lazy, useEffect } from 'react'; //eslint-disable-line
 import { Route, Routes } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { AppBox } from './App.styled';
+import Modal from './Modal/Modal';
 import { ThemeProvider } from 'styled-components';
 
 import { authSelectors, authOperations } from '../redux/users';
@@ -47,6 +48,7 @@ export const App = () => {
       ) : (
         <Suspense fallback={<b>Loading...</b>}>
           <AppBox>
+        <Modal />
             <Routes>
               <Route
                 index

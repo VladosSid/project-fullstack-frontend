@@ -7,7 +7,7 @@ export const SearchBarWrapper = styled.div`
     padding-bottom: 40px;
   }
 
-  @media ${theme.device.desktop} {
+  @media screen and (min-width: 1440px) {
     padding-bottom: 90px;
   }
 `;

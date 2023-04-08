@@ -1,17 +1,21 @@
-import { useState } from 'react';
 import { HiOutlinePencil } from 'react-icons/hi';
-import UserInfoModal from 'components/UserInfoModal/UserInfoModal';
 import style from './UserLogoModal.module.css';
+import styleModal from '../UserInfoModal/UserInfoModal.module.css';
 import LogoutBtn from 'components/LogoutBtn/LogoutBtn';
 
 const UserLogoModal = ({ isOpen, clickToggle }) => {
-  const [open, setOpen] = useState(false);
+  const modal = document.getElementById('user-info-modal');
 
   const toggler = () => {
-    setOpen(prev => !prev);
+    modalHandler();
   };
+
+  const modalHandler = e => {
+    modal.classList.toggle(styleModal.active);
+  };
+
   return (
-    <>
+    <div className={style.popupOverlay}>
       <div className={isOpen ? style.userLogoPopup : style.hidden}>
         <button
           onClick={() => {
@@ -23,8 +27,7 @@ const UserLogoModal = ({ isOpen, clickToggle }) => {
         </button>
         <LogoutBtn />
       </div>
-      <UserInfoModal open={open} toggler={toggler} />
-    </>
+    </div>
   );
 };
 

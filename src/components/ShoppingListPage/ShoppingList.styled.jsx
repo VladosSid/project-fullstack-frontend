@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 import theme from '../../style/generalStyle';
 
-export const Tabl = styled.div``;
 export const TitltList = styled.div`
   display: flex;
   max-width: 357px;
@@ -38,5 +37,40 @@ export const TitleListNumber = styled.span`
 
   @media ${theme.device.desktop} {
     margin-right: 124px;
+  }
+`;
+
+export const ImgIngradientsContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  padding: 50px 0 100px 0;
+  @media ${theme.device.tablet} {
+    padding-bottom: 200px;
+  }
+`;
+
+export const ImgIngradients = styled.img`
+  margin: auto;
+  width: 208px;
+  margin-bottom: 24px;
+
+  @media ${theme.device.tablet} {
+    width: 350px;
+    margin-bottom: 32px;
+  }
+`;
+
+export const ImgIngradientsText = styled.div`
+  margin: auto;
+  font-size: 14px;
+  line-height: 14px;
+  color: ${props => props.theme.color.shoppingList.ImgIngradientsText};
+  opacity: 0.5;
+
+  @media ${theme.device.tablet} {
+    font-size: 24px;
+    line-height: 24px;
   }
 `;

@@ -1,6 +1,7 @@
 /* eslint-disable no-unused-vars */
 import { useEffect, useState } from 'react';
 import { Title } from './RecipeIngridientsFields.styled';
+import { queryBackEnd } from 'helpers/request';
 import {
   Col,
   Label,
@@ -18,13 +19,16 @@ const PopularRecipe = () => {
   const [viewport, setViewport] = useState(window.visualViewport.width);
 
   useEffect(() => {
+   async function recipes() {
     if (viewport >= 1240) {
-      setRecipes(RECIPE);
+      const { result } = await queryBackEnd.queryPopular(4)
+      setRecipes(result.data);
     } else if (viewport < 1240) {
-      let arr = RECIPE;
-      arr.splice(2);
-      setRecipes(arr);
-    }
+      const { result } = await queryBackEnd.queryPopular(2)
+      setRecipes(result.data);
+    }}
+
+    recipes()
   }, [viewport]);
 
   return (
@@ -32,9 +36,9 @@ const PopularRecipe = () => {
       <Title>Popular Recipe</Title>
       <Recipes>
         {recipes &&
-          recipes.map(({ title, description, thumb }) => (
+          recipes.map(({ title, description, imageUrl }) => (
             <Recipe key={title}>
-              <Thumb src={thumb} alt={title} />
+              <Thumb src={imageUrl} alt={title} />
               <Col>
                 <Label>{title}</Label>
                 <Desc>{description}</Desc>

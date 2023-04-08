@@ -4,7 +4,6 @@ export const ContainerWrapper = styled.div`
   /* height: 100%; */
   display: flex;
   flex-direction: column;
-
   align-items: center;
   justify-content: center;
   /* padding: 0 16px;
@@ -12,13 +11,14 @@ export const ContainerWrapper = styled.div`
   padding-bottom: 100px;
   padding-left: 16px;
   padding-right: 16px;
+
   @media ${theme.device.tablet} {
     padding-left: 32px;
     padding-right: 32px;
     padding-bottom: 200px;
   }
 
-  @media ${theme.device.desktop} {
+  @media screen and (min-width: 1240px) {
     padding-left: 99px;
     padding-right: 99px;
   }

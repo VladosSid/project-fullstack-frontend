@@ -5,9 +5,7 @@ import RecipePreparationFields from './RecipePreparationFields';
 import { Form, Button } from './AddRecipeForm.styled';
 import Notiflix from 'notiflix';
 import { useNavigate } from 'react-router-dom';
-
-const token =
-  'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDJjMTkzOWQ5ODJjZGYxMzgyZWJjMGIiLCJpYXQiOjE2ODA2MTE3MzR9.UK08GzOiR_baNXXDxRt9phx-vk8usXNueLMdIjhNjTY';
+import { queryBackEnd } from 'helpers/request';
 
 const AddRecipieForm = () => {
   const navigate = useNavigate();
@@ -78,15 +76,11 @@ const AddRecipieForm = () => {
     } else return Notiflix.Notify.warning('Іngredients field is empty');
 
     if (data) {
-      await fetch('http://localhost:3001/api/ownRecipes', {
-        headers: {
-          Authorization: `Bearer ${token}`,
-        },
-        method: 'POST',
-        body: data,
-      })
-        .then(res => {
-          navigate('/my');
+     queryBackEnd.queryAddRecipe(data)
+        .then(status => {
+          if (status.code === 200) {
+            navigate('/my');
+          }
         })
         .catch(err => {
           Notiflix.Notify.warning(err);
