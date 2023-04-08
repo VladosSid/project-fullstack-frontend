@@ -55,5 +55,6 @@ export const DishCardContainer = styled.div`
   @media screen and (min-width: 1240px) {
     width: 300px;
     heigth: 323px;
+    overflow: hidden;
   }
 `;

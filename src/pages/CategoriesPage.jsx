@@ -1,27 +1,28 @@
 import { MainContainer } from '../components/MainContainer/MainContainer';
 import CategoriesTabs from '../components/CategoriesTabs/CategoriesTabs';
-import { MainPageTitle } from 'components/MainPageTitle/MainPageTitle';
+import { useState, useEffect } from 'react';
+import queryBackEnd from '../helpers/request/queryBackEnd';
+import { MainPageTitle } from '../components/MainPageTitle/MainPageTitle';
 
 const CategoriesPage = () => {
-  const tabsTitles = [
-    'Beaf',
-    'Breacfast',
-    'Chicken',
-    'Desserts',
-    'Goat',
-    'Lamb',
-    'Miscellaneous',
-    'Pasta',
-    'Pork',
-    'Seafood',
-    'Side',
-  ];
-  const idCategory = 5;
+  const idCategory = 2;
+  const [tabsTitlesQ, setTabsTitlesQ] = useState([]);
+
+  // Get all categories
+  useEffect(() => {
+    const fetchData = async () => {
+      await queryBackEnd
+        .queryCategoryList()
+        .then(data => setTabsTitlesQ(data.result.data))
+        .catch(error => console.log(error.message));
+    };
+    fetchData();
+  }, []);
 
   return (
     <MainContainer>
       <MainPageTitle title="Categories" />
-      <CategoriesTabs tabsTitles={tabsTitles} idCategory={idCategory} />
+      <CategoriesTabs tabsTitlesQ={tabsTitlesQ} idCategory={idCategory} />
     </MainContainer>
   );
 };

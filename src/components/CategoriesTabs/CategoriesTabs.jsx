@@ -5,9 +5,10 @@ import { StyledTab as Tab } from './CategoriesTabs.styled';
 import { DishCardContainer } from './CategoriesTabs.styled';
 import { Box } from '@mui/material';
 import DishCard from '../DishCard/DishCard';
+import queryBackEnd from '../../helpers/request/queryBackEnd';
 // import { useSearchParams } from 'react-router-dom';
 
-import { Recipes } from '../../RecipesData';
+// import { Recipes } from '../../RecipesData';
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -51,10 +52,26 @@ function a11yProps(index) {
 }
 
 export default function CategoriesTabs(props) {
-  const { tabsTitles, idCategory } = props;
+  const { tabsTitlesQ, idCategory } = props;
   const [value, setValue] = React.useState(idCategory);
+  const [recipeList, setRecipeList] = React.useState([]);
 
-  const handleChange = (event, tabId) => {
+  React.useEffect(() => {
+    const fetchData = async () => {
+      await queryBackEnd
+        .queryRecipeCategori(tabsTitlesQ[idCategory])
+        .then(data => setRecipeList(data.result.data))
+        .catch(error => console.log(error));
+    };
+    fetchData();
+  }, [idCategory, tabsTitlesQ]);
+
+  // get Recipe
+  const handleChange = async (event, tabId) => {
+    await queryBackEnd
+      .queryRecipeCategori(tabsTitlesQ[tabId])
+      .then(data => setRecipeList(data.result.data))
+      .catch(error => console.log(error));
     setValue(tabId);
   };
 
@@ -76,13 +93,13 @@ export default function CategoriesTabs(props) {
             '& .Mui-selected': { color: '#8baa36 !important ' },
           }}
         >
-          {tabsTitles.map((title, index) => {
+          {tabsTitlesQ.map((title, index) => {
             return <Tab key={index} label={title} {...a11yProps({ index })} />;
           })}
         </Tabs>
       </Box>
       <TabPanel value={value} index={value}>
-        {Recipes.map((recipe, index) => (
+        {recipeList.map((recipe, index) => (
           <DishCardContainer key={index}>
             <DishCard recipe={recipe} />
           </DishCardContainer>
