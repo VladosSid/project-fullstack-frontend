@@ -4,14 +4,14 @@ import { useLocation } from 'react-router-dom';
 import instanceBacEnd from 'helpers/requestBackEnd';
 // import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
-
+import { MainContainer } from '../../components/MainContainer/MainContainer';
 import {
   Container,
   RecipeCategoryName,
   Button,
   ContainerWrapper,
   GridContainer,
-  Section,
+  // Section,
   MPButton,
 } from './MainPage.styled';
 
@@ -102,7 +102,7 @@ export default function MainPage() {
   return (
     <ContainerWrapper>
       <MainPageHero onSubm={handleFormSubmit} />
-      <Section>
+      <MainContainer>
         <Container>
           {Object.entries(RecipesByCategory).map(([category, recipes]) => (
             <div key={category}>
@@ -126,7 +126,7 @@ export default function MainPage() {
         <MPButton onClick={() => handleCategoryClick('Breakfast')}>
           Other categories
         </MPButton>
-      </Section>
+      </MainContainer>
     </ContainerWrapper>
   );
 }
