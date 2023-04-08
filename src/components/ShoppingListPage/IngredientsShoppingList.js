@@ -10,10 +10,14 @@ import {
 } from './IngredientsShoppingList.styled';
 import UseSvg from '../../helpers/useSvg/useSvg';
 
+import { SortArrFromTitle } from '../../helpers/sort/sortArrFromTitle';
+
 const IngredientsShoppingList = ({ ingredients, deleteIngradient }) => {
+  const ingredientsSort = SortArrFromTitle(ingredients);
+
   return (
     <List>
-      {ingredients.map(ingredient => (
+      {ingredientsSort.map(ingredient => (
         <Item key={ingredient._id}>
           <ItemContainer>
             <ImageContainer>
@@ -22,12 +26,7 @@ const IngredientsShoppingList = ({ ingredients, deleteIngradient }) => {
             <TitleProduct>{ingredient.title}</TitleProduct>
             <NumberContainer>{ingredient.measure}</NumberContainer>
             <Remove>
-              <RemoveSvg
-                onClick={() => {
-                  console.log(ingredient._id);
-                  deleteIngradient(ingredient._id);
-                }}
-              >
+              <RemoveSvg onClick={() => deleteIngradient(ingredient._id)}>
                 <UseSvg id="remove" />
               </RemoveSvg>
             </Remove>

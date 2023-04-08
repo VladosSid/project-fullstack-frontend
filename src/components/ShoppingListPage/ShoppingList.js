@@ -8,32 +8,30 @@ import {
   ImgIngradients,
   ImgIngradientsText,
 } from './ShoppingList.styled';
-// import ingredients from '../../ingredients.json';
 import queryBackEnd from '../../helpers/request/queryBackEnd';
 import imgIngradients from '../../images/ShopingList/ingradients.png';
 
-
 const ShoppingList = () => {
-  const [ingredientS, setIngredientS] = useState([]);
+  const [ingredientArr, setingredientArr] = useState([]);
   useEffect(() => {
     queryBackEnd.queryShoppingList().then(response => {
-      setIngredientS(response.data);
+      setingredientArr(response.data);
     });
   }, []);
 
   const deleteIngradient = contactId => {
     queryBackEnd
       .queryRemoveShoppingList({ shoppingListIng: contactId })
-      .then(response => 
-        setIngredientS(prevState =>
-          prevState.filter(ingradient =>ingradient._id !== contactId))
-      )
-      .catch(e => console.log('e', e));
+      .then(response =>
+        setingredientArr(prevState =>
+          prevState.filter(ingradient => ingradient._id !== contactId)
+        )
+      );
   };
 
   return (
     <div>
-      {ingredientS.length > 0 ? (
+      {ingredientArr.length > 0 ? (
         <>
           <TitltList>
             <TitleListProducts>Products</TitleListProducts>
@@ -41,7 +39,7 @@ const ShoppingList = () => {
             <span>Remove</span>
           </TitltList>
           <IngredientsShoppingList
-            ingredients={ingredientS}
+            ingredients={ingredientArr}
             deleteIngradient={deleteIngradient}
           />
         </>
