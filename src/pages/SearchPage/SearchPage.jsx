@@ -35,10 +35,11 @@ export default function SearchPage() {
     setSearchQuery(nextQuery);
     // const searchUrl = createSearchUrl(query, query);!!!!!!!
     setSearchParams({
-      query: query.toLowerCase(),
+      query: query.toLowerCase().trim().replace(/\s+/g, ' '),
       type: searchType,
     });
     console.log('nextQuery in SP submit', nextQuery);
+    console.log('searchParams.get', searchParams.get('query'));
   }
   //----------------------------
   return (
@@ -62,6 +63,7 @@ export default function SearchPage() {
     </ContainerWrapper>
   );
 }
+//.trim().replace(/ +/g, '%20')
 //<SearchRecipesList searchQuery={searchQuery} searchType={searchType} searchResults={searchResults} />
 
 // function SearchTypeSelector({ type, onChange }) {
