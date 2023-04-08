@@ -7,6 +7,7 @@ import { useSearchParams } from 'react-router-dom';
 import SearchBar from 'components/SearchBar/SearchBar';
 // import { createSearchUrl } from 'helpers/createSearchUrl';
 import SearchRecipesList from 'components/SearchRecipesList/SearchRecipesList';
+import { Notify } from 'notiflix/build/notiflix-notify-aio';
 //-------------------------------
 export default function SearchPage() {
   // const location = useLocation();
@@ -21,6 +22,12 @@ export default function SearchPage() {
 
   //------------
   function handleSearchTypeChange(type) {
+    console.log('Skoka', searchQuery.match(/\b\w+\b/g)?.length);
+    const aaa = searchQuery.match(/\b\w+\b/g)?.length;
+    if (type === 'ingredients' && aaa > 1) {
+      Notify.warning('You can only enter one ingredient. ');
+      console.log('tooo mach');
+    }
     setSearchType(type);
     // setSearchParams({ type: type });
     updatedParams.set('type', type);
@@ -38,8 +45,6 @@ export default function SearchPage() {
       query: query.toLowerCase().trim().replace(/\s+/g, ' '),
       type: searchType,
     });
-    console.log('nextQuery in SP submit', nextQuery);
-    console.log('searchParams.get', searchParams.get('query'));
   }
   //----------------------------
   return (

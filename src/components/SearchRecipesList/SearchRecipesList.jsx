@@ -9,6 +9,7 @@ import {
   GridContainer,
   SRLNoItems,
   SRLNoItemsText,
+  ErrorComponent,
 } from './SearchRecipesList.styled';
 
 //-------------------------
@@ -17,6 +18,7 @@ export default function SearchRecipesList({ searchQuery, searchType }) {
   // const [searchValue, setSearchValue] = useState('');
   // const [searchType, setSearchType] = useState('query');
   const [recipes, setRecipes] = useState([]);
+  const [error, setError] = useState(null);
 
   useEffect(() => {
     console.log('in new effect', searchType, searchQuery);
@@ -26,17 +28,29 @@ export default function SearchRecipesList({ searchQuery, searchType }) {
     instanceBacEnd
       .get(`/search/?query=${processedValue}&type=${searchType}`)
       .then(function (response) {
-        console.log(searchQuery, searchType);
         setRecipes(response.data.result.data);
+        setError(null);
       })
       .catch(function (error) {
-        console.log(error.message);
+        if (error.response && error.response.status === 404) {
+          setError(
+            <ErrorComponent message="There is no such ingredient. Try something else... " />
+          );
+        } else {
+          setError(<ErrorComponent message="An error occurred" />);
+        }
       });
   }, [searchQuery, searchType]);
-
+  console.log('recipes', recipes);
   return (
     <>
-      {!recipes.length ? (
+      {error ? (
+        <SRLNoItems>
+          <SRLNoItemsText>
+            <p>There is no such ingredient. Try something else...</p>
+          </SRLNoItemsText>
+        </SRLNoItems>
+      ) : !recipes.length ? (
         <SRLNoItems>
           <SRLNoItemsText>Try looking for something else...</SRLNoItemsText>
         </SRLNoItems>

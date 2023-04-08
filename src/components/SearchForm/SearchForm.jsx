@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { SearchesForm, SearchInput, SearchBtn } from './SearchForm.styled';
+import { Notify } from 'notiflix/build/notiflix-notify-aio';
 //------------------------------------------
 export default function SearchForm({
   green,
@@ -17,8 +18,9 @@ export default function SearchForm({
 
   const handleSubmit = evt => {
     evt.preventDefault();
-    console.log('Query in SF submit', searchWord);
+
     if (searchWord.trim() === '') {
+      Notify.warning('Please fill the search form');
       console.log('Please fill the search form ');
 
       return;

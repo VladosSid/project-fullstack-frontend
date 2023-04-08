@@ -76,3 +76,26 @@ export const SRLNoItemsText = styled.p`
   @media screen and (min-width: 1240px) {
   }
 `;
+
+export const ErrorComponent = styled.p`
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 500;
+
+  line-height: 1;
+  letter-spacing: -0.02em;
+  color: #000000;
+  opacity: 0.5;
+  margin-left: 10px;
+  @media screen and (max-width: 767px) {
+    margin-top: 160px;
+    font-size: 14px;
+  }
+  @media screen and (min-width: 768px) {
+    font-size: 24px;
+    margin-top: 266px;
+  }
+
+  @media screen and (min-width: 1240px) {
+  }
+`;

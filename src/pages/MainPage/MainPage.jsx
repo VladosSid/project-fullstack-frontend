@@ -15,7 +15,7 @@ import {
   MPButton,
 } from './MainPage.styled';
 
-import MainPageHero from 'components/MainPageHero';
+import MainPageHero from '../../components/MainPageHero/MainPageHero';
 import DishCard from 'components/DishCard';
 import { createCategoryUrl, createSearchUrl } from 'helpers/createSearchUrl';
 //--------------------------------------
@@ -123,7 +123,7 @@ export default function MainPage() {
             </div>
           ))}
         </Container>
-        <MPButton onClick={() => handleCategoryClick('breakfast')}>
+        <MPButton onClick={() => handleCategoryClick('Breakfast')}>
           Other categories
         </MPButton>
       </Section>
