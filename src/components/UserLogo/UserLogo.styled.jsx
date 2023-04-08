@@ -26,10 +26,17 @@ export const UserLogoBtn = styled.button`
   align-items: center;
 
   p {
-    font-family: Poppins, sans-serif;
+    font-family: 'Poppins';
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 170%;
+    color: #22252a;
   }
 `;
 
 export const ImgAva = styled.img`
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
   margin-right: 14px;
 `;

@@ -18,6 +18,10 @@
     transition: transform 0.5s cubic-bezier(0.075, 0.82, 0.165, 1), opacity 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
+.hidden {
+    overflow: hidden;
+}
+
 .overlay {
 width: 100vw;
     height: 100vh;
