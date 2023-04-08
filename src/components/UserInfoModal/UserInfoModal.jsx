@@ -1,5 +1,6 @@
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { useState, useEffect } from 'react';
+import { authSelectors } from 'redux/users';
 import { authOperations } from 'redux/users';
 
 import styles from './UserInfoModal.module.css';
@@ -12,6 +13,7 @@ const UserInfoModal = () => {
   const [image, setImg] = useState(null);
   const [name, setName] = useState('');
   const [avatar, setAvatar] = useState(null);
+
   const dispatch = useDispatch();
 
   const modal = document.getElementById('user-info-modal');
@@ -21,6 +23,9 @@ const UserInfoModal = () => {
       console.log('ji');
     }
   };
+
+  const username = useSelector(authSelectors.getUsername);
+  const ava = useSelector(authSelectors.getAvatar);
 
   useEffect(() => {
     window.addEventListener('keydown', close);
@@ -47,7 +52,6 @@ const UserInfoModal = () => {
 
   const reset = e => {
     setName('');
-    setImg(null);
   };
 
   const handleSubmit = e => {
@@ -83,11 +87,12 @@ const UserInfoModal = () => {
           <img src={x} alt="cross" />
         </button>
         <div>
-          {image ? (
-            <img src={image} alt="user" className={styles.uploadedImg} />
-          ) : (
-            <img src={user} alt="user" className={styles.userAvaSvg} />
-          )}
+          <img
+            src={image ? image : ava}
+            alt="user"
+            className={styles.uploadedImg}
+          />
+
           <label htmlFor="upload" className={styles.addImgInput}>
             <input
               style={{ display: 'none' }}
@@ -106,7 +111,7 @@ const UserInfoModal = () => {
           name="name"
           max={15}
           value={name}
-          placeholder="Your name"
+          placeholder={username}
           className={styles.nameInput}
         />
         <img src={user} alt="user" className={styles.userSvg} />
