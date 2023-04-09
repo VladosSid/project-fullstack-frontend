@@ -3,12 +3,13 @@ import CategoriesTabs from '../components/CategoriesTabs/CategoriesTabs';
 import { useState, useEffect } from 'react';
 import queryBackEnd from '../helpers/request/queryBackEnd';
 import { MainPageTitle } from '../components/MainPageTitle/MainPageTitle';
+import { useParams } from 'react-router-dom';
 
 const CategoriesPage = () => {
-  const idCategory = 2;
+  const { categName } = useParams();
   const [tabsTitlesQ, setTabsTitlesQ] = useState([]);
 
-  // Get all categories
+  // Get all titles category
   useEffect(() => {
     const fetchData = async () => {
       await queryBackEnd
@@ -18,6 +19,12 @@ const CategoriesPage = () => {
     };
     fetchData();
   }, []);
+
+  let idCategory = 0;
+
+  if (categName && tabsTitlesQ.length > 0) {
+    idCategory = tabsTitlesQ.indexOf(categName);
+  }
 
   return (
     <MainContainer>

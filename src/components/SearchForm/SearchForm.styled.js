@@ -10,9 +10,9 @@ export const SearchesForm = styled.form`
   @media screen and (max-width: 767px) and (max-width: 1239px) {
     margin: ${props => props.page === 'main' && '0px auto'};
   }
-  /* @media screen and (min-width: 768px) {
-    margin-left: ${props => props.page === 'main' && '32px'};
-  } */
+  @media screen and (min-width: 768px) {
+    margin-bottom: ${props => (props.marginBottom ? '28px' : 0)};
+  }
   @media screen and (min-width: 1240px) {
     margin-right: ${props => props.page === 'main' && '200px'};
   }

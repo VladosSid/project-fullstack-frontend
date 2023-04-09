@@ -183,11 +183,11 @@ const queryAddRecipe = async data => {
         'Content-type': 'multipart/form-data',
       },
     });
-  return add.status
-} catch (err) {
-  console.log(err.response.data.message)
-  return err.response.data.message;
-}
+    return add.status;
+  } catch (err) {
+    console.log(err.response.data.message);
+    return err.response.data.message;
+  }
 };
 
 const queryBackEnd = {
@@ -215,7 +215,7 @@ const queryBackEnd = {
   queryAddShoppingList,
   queryRemoveShoppingList,
 
-  queryAddRecipe
+  queryAddRecipe,
 };
 
 export default queryBackEnd;
