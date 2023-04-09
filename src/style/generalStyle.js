@@ -2,7 +2,7 @@ export const theme = {
   device: {
     mobail: 'screen and (min-width: 375px)',
     tablet: 'screen and (min-width: 768px)',
-    desktop: 'screen and (min-width: 1240px)',
+    desktop: 'screen and (min-width: 1304px)',
   },
 
   // ${props => props.theme.color.footer.bavkgroundFooter}
