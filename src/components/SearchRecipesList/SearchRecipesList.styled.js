@@ -48,7 +48,7 @@ export const SRLNoItems = styled.div`
   }
   @media screen and (min-width: 768px) {
     width: 380px;
-    height: 291px;
+    height: 320px;
     background-image: url('${search_tabl}');
     background-position: center top 15px;
     background-size: 350px;

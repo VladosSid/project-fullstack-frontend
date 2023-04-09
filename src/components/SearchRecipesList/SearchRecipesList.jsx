@@ -51,9 +51,7 @@ export default function SearchRecipesList({ searchQuery, searchType }) {
       {error ? (
         <SRLNoItems>
           <SRLNoItemsText>
-            <ErrorComponent>
-              There is no such ingredient. Try something else...
-            </ErrorComponent>
+            There is no such ingredient. Try something else...
           </SRLNoItemsText>
         </SRLNoItems>
       ) : !recipes.length ? (
