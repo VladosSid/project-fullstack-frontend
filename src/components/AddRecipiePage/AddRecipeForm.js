@@ -78,7 +78,7 @@ const AddRecipieForm = () => {
     if (data) {
      queryBackEnd.queryAddRecipe(data)
         .then(status => {
-          if (status.code === 200) {
+          if (status === 200) {
             navigate('/my');
           }
         })
