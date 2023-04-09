@@ -4,9 +4,9 @@ import theme from '../../style/generalStyle';
 export const ListWrapper = styled.ul`
 display: flex;
 flex-direction: column;
-li {
+ li {
     list-style-type: none;
-}
+    }
 
 
 @media ${theme.device.tablet} {
@@ -18,3 +18,4 @@ flex-direction: column;
 display: flex;
 flex-direction: column;
 `;
+

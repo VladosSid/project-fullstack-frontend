@@ -66,6 +66,7 @@ export const ImgIngradientsText = styled.div`
   margin: auto;
   font-size: 14px;
   line-height: 14px;
+  color: ${props => props.theme.color.shoppingList.ImgIngradientsText};
   opacity: 0.5;
 
   @media ${theme.device.tablet} {

@@ -35,7 +35,7 @@ export function Footer() {
   const getSubscription = async e => {
     e.preventDefault();
     const data = await queryBackEnd.querySubscribe(email);
-    console.log(data);
+
     Notiflix.Notify.success(`${data.message}`);
   };
 
@@ -46,10 +46,12 @@ export function Footer() {
           <FlexBox>
             <div>
               <BoxLogo>
-                {/* <a href="#"> */}
-                <img src={logo} alt="" />
-                <TextLogo>So Yummy</TextLogo>
-                {/* </a> */}
+                <NavLink>
+                  <img src={logo} alt="" />
+                </NavLink>
+                <NavLink to="/home">
+                  <TextLogo>So Yummy</TextLogo>
+                </NavLink>
               </BoxLogo>
 
               <ListDescrition>

@@ -6,14 +6,13 @@ export const Main = styled.div`
   padding: 0 8px;
   margin: 0 auto;
   width: 375px;
-
   @media ${theme.device.tablet} {
     padding: 0 32px;
     width: 704px;
   }
 
   @media ${theme.device.desktop} {
-    width: 1242px;
+    width: 1240px;
     background-position: top 52px left 258px, top 74px left 1181px,
       top 152px left 720px;
   }
