@@ -9,6 +9,7 @@ import SearchBar from 'components/SearchBar/SearchBar';
 // import { createSearchUrl } from 'helpers/createSearchUrl';
 import SearchRecipesList from 'components/SearchRecipesList/SearchRecipesList';
 import { Notify } from 'notiflix/build/notiflix-notify-aio';
+import BG from '../../images/mainPagePhoto/search_tabl_opt.png';
 //-------------------------------
 export default function SearchPage() {
   // const location = useLocation();
@@ -37,6 +38,7 @@ export default function SearchPage() {
   //---------
   function handleSubmit(query) {
     const nextQuery = query !== '' ? query : '';
+
     setSearchQuery(nextQuery);
     // const searchUrl = createSearchUrl(query, query);!!!!!!!
     setSearchParams({
@@ -56,13 +58,15 @@ export default function SearchPage() {
           searchQuery={searchQuery}
         />
       </>
-      {searchQuery !== '' && (
+      {searchQuery !== '' ? (
         <ContainerWrapper>
           <SearchRecipesList
             searchQuery={searchQuery}
             searchType={searchType}
           />
         </ContainerWrapper>
+      ) : (
+        <img style={{ margin: '0 auto 40px' }} src={BG} alt="Background" />
       )}
     </MainContainer>
   );

@@ -10,10 +10,8 @@ import {
   SRLNoItems,
   SRLNoItemsText,
   ErrorComponent,
-  imgNoItems,
 } from './SearchRecipesList.styled';
-import search_mob from '../../images/mainPagePhoto/search_mob_opt.png';
-import search_tabl from '../../images/mainPagePhoto/search_tabl_opt.png';
+
 //-------------------------
 export default function SearchRecipesList({ searchQuery, searchType }) {
   const location = useLocation();
