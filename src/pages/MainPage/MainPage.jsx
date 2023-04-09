@@ -11,7 +11,7 @@ import {
   Button,
   ContainerWrapper,
   GridContainer,
-  // Section,
+  Section,
   MPButton,
 } from './MainPage.styled';
 
@@ -103,29 +103,32 @@ export default function MainPage() {
     <ContainerWrapper>
       <MainPageHero onSubm={handleFormSubmit} />
       <MainContainer>
-        <Container>
-          {Object.entries(RecipesByCategory).map(([category, recipes]) => (
-            <div key={category}>
-              <RecipeCategoryName>{category}</RecipeCategoryName>
-              <GridContainer>
-                {recipes.map(recipe => (
-                  <DishCard
-                    key={recipe._id}
-                    location={location}
-                    recipe={recipe}
-                  />
-                ))}
-              </GridContainer>
+        <Section>
+          {' '}
+          <Container>
+            {Object.entries(RecipesByCategory).map(([category, recipes]) => (
+              <div key={category}>
+                <RecipeCategoryName>{category}</RecipeCategoryName>
+                <GridContainer>
+                  {recipes.map(recipe => (
+                    <DishCard
+                      key={recipe._id}
+                      location={location}
+                      recipe={recipe}
+                    />
+                  ))}
+                </GridContainer>
 
-              <Button onClick={() => handleCategoryClick(category)}>
-                See all
-              </Button>
-            </div>
-          ))}
-        </Container>
-        <MPButton onClick={() => handleCategoryClick('Breakfast')}>
-          Other categories
-        </MPButton>
+                <Button onClick={() => handleCategoryClick(category)}>
+                  See all
+                </Button>
+              </div>
+            ))}
+          </Container>
+          <MPButton onClick={() => handleCategoryClick('Breakfast')}>
+            Other categories
+          </MPButton>
+        </Section>
       </MainContainer>
     </ContainerWrapper>
   );

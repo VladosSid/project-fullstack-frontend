@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import theme from '../../style/generalStyle';
 import { Link } from 'react-router-dom';
 // import { SearchesForm } from 'components/SearchForm/SearchForm.styled';
 // import theme from '../../style/generalStyle';
@@ -21,8 +22,8 @@ import desktop_bg from '../../images/mainPagePhoto/desktop_bg_1440.png';
 import tablet_bg from '../../images/mainPagePhoto/tablet_bg.png';
 
 //-----------------------------------------------
-export const MPHeroBG = styled.div`
-  /* width: 375px; //****** */
+export const MPHeroBG = styled.section`
+  margin: 0 auto;
   position: relative;
   /* width: 100%; */
   @media screen and (max-width: 767px) {
@@ -36,7 +37,7 @@ export const MPHeroBG = styled.div`
     background-size: 320px, 375px, 60px, 280px;
   }
 
-  @media screen and (min-width: 768px) {
+  @media ${theme.device.tablet} {
     width: 100%;
     height: 640px;
 
@@ -46,11 +47,12 @@ export const MPHeroBG = styled.div`
     background-position: center center;
   }
 
-  @media screen and (min-width: 1240px) {
-    width: 1240px;
+  @media ${theme.device.desktop} {
+    padding-top: 226px;
+    max-width: 1440px;
     position: relative;
 
-    height: 688px;
+    height: 800px;
     background-repeat: no-repeat;
     background-image: url('${desktop_bg}');
     background-size: cover;
@@ -58,21 +60,38 @@ export const MPHeroBG = styled.div`
   }
 `;
 
+export const MPContainer = styled.div`
+  /* @media screen and (max-width: 767px) {
+    position: relative;
+    width: 307px;
+    margin: 0 auto;
+  }
+  @media ${theme.device.tablet} and (max-width: 1303px) {
+    position: relative;
+    width: 703px;
+    margin: 0 auto;
+  } */
+  @media ${theme.device.desktop} {
+    /* position: relative; */
+    width: 1240px;
+    margin: auto 0;
+    padding: 0 32px;
+  }
+`;
 export const MPHeroSection = styled.div`
   @media screen and (max-width: 767px) {
     position: relative;
     width: 307px;
     margin: 0 auto;
   }
-  @media screen and (min-width: 768px) and (max-width: 1239px) {
+  @media ${theme.device.tablet} and (max-width: 1303px) {
     position: relative;
     width: 703px;
     margin: 0 auto;
   }
-  @media screen and (min-width: 1240px) {
+  @media ${theme.device.desktop} {
     /* position: relative; */
 
-    margin: 200px auto 0;
     padding: 0 32px;
   }
 `;
@@ -94,13 +113,13 @@ export const MPHeroTitle = styled.h1`
   @media screen and (max-width: 767px) {
     text-align: center;
   }
-  @media screen and (min-width: 768px) {
+  @media ${theme.device.tablet} {
     /* margin-left: 32px; */
     margin-top: 204px;
     margin-bottom: 24px;
     font-size: 72px;
   }
-  @media screen and (min-width: 1240px) {
+  @media ${theme.device.desktop} {
     /* margin-left: 100px; */
     margin-top: 0px;
     margin-bottom: 14px;
@@ -112,7 +131,7 @@ export const MPHeroTitle = styled.h1`
 `;
 
 export const MDHeroFlex = styled.div`
-  @media screen and (min-width: 1240px) {
+  @media ${theme.device.desktop} {
     display: flex;
   }
 `;
@@ -132,7 +151,7 @@ export const MPHeroText = styled.span`
     text-align: center;
     margin: 0 auto 364px;
   }
-  @media screen and (min-width: 768px) {
+  @media ${theme.device.tablet} {
     margin-left: 38px;
     margin-bottom: 32px;
     width: 362px;
@@ -140,7 +159,7 @@ export const MPHeroText = styled.span`
     line-height: 1.29;
     letter-spacing: -0.02em;
   }
-  @media screen and (min-width: 1240px) {
+  @media ${theme.device.desktop} {
     margin-left: 0px;
 
     margin-bottom: 50px;
@@ -172,7 +191,7 @@ export const MPHeroProduct = styled.span`
     right: 0px;
   }
 
-  @media screen and (min-width: 768px) and (max-width: 1239px) {
+  @media ${theme.device.tablet} and (max-width: 1303px) {
     position: absolute;
     width: 260px;
 
@@ -183,7 +202,7 @@ export const MPHeroProduct = styled.span`
     font-size: 14px;
     line-height: 1.29;
   }
-  @media screen and (min-width: 1240px) {
+  @media ${theme.device.desktop} {
     width: 298px;
 
     /* right: 100px;
@@ -211,11 +230,11 @@ export const StyledLink = styled(Link)`
   font-size: 10px;
   line-height: 1.2;
 
-  @media screen and (min-width: 768px) {
+  @media ${theme.device.tablet} {
     margin-left: 164px;
     font-size: 10px;
   }
-  @media screen and (min-width: 1240px) {
+  @media ${theme.device.desktop} {
     margin-left: 200px;
     font-size: 10px;
   }

@@ -2,30 +2,24 @@ import styled from 'styled-components';
 import theme from '../../style/generalStyle';
 
 export const ContainerWrapper = styled.div`
-  height: 100%;
+  /* height: 100%; */
 
-  display: flex;
+  /* display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: center; */
 
-  @media screen and (min-width: 768px) {
+  @media ${theme.device.tablet} {
   }
   @media ${theme.device.desktop} {
   }
 `;
 
 export const Section = styled.section`
-  padding-left: 16px;
-  padding-right: 16px;
   padding-bottom: 100px;
   @media screen and (min-width: 768px) {
-    padding-left: 32px;
-    padding-right: 32px;
   }
   @media ${theme.device.desktop} {
-    padding-left: 99px;
-    padding-right: 99px;
     padding-bottom: 118px;
   }
 `;
@@ -36,7 +30,7 @@ export const Container = styled.div`
   align-items: center;
   gap: 32px;
   margin-bottom: 40px;
-  @media screen and (min-width: 768px) {
+  @media ${theme.device.tablet} {
     gap: 50px;
     margin-bottom: 32px;
   }
@@ -49,7 +43,7 @@ export const Container = styled.div`
 
 export const GridContainer = styled.div`
   justify-content: center;
-  @media screen and (min-width: 768px) {
+  @media ${theme.device.tablet} {
     display: flex;
     gap: 32px;
   }
