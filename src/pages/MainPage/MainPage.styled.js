@@ -18,8 +18,11 @@ export const ContainerWrapper = styled.div`
 export const Section = styled.section`
   padding-bottom: 100px;
   @media screen and (min-width: 768px) {
+    padding-top: 72px;
+    padding-bottom: 100px;
   }
   @media ${theme.device.desktop} {
+    padding-top: 100px;
     padding-bottom: 118px;
   }
 `;

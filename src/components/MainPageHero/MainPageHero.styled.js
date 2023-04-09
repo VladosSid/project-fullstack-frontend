@@ -38,9 +38,9 @@ export const MPHeroBG = styled.section`
   }
 
   @media ${theme.device.tablet} {
-    width: 100%;
-    height: 640px;
-
+    /* width: 100%; */
+    padding-top: 224px;
+    padding-bottom: 168px;
     background-repeat: no-repeat;
     background-image: url('${tablet_bg}');
     background-size: cover;
@@ -49,30 +49,24 @@ export const MPHeroBG = styled.section`
 
   @media ${theme.device.desktop} {
     padding-top: 226px;
+    padding-bottom: 224px;
     max-width: 1440px;
-    position: relative;
-
-    height: 800px;
     background-repeat: no-repeat;
     background-image: url('${desktop_bg}');
     background-size: cover;
-    /* background-position: center center; */
+    background-position: center center;
   }
 `;
 
 export const MPContainer = styled.div`
-  /* @media screen and (max-width: 767px) {
-    position: relative;
-    width: 307px;
+  @media screen and (min-width: 768px) {
+    width: 704px;
     margin: 0 auto;
+    padding: 0 32px;
   }
-  @media ${theme.device.tablet} and (max-width: 1303px) {
-    position: relative;
-    width: 703px;
-    margin: 0 auto;
-  } */
+
+  /* position: relative; */
   @media ${theme.device.desktop} {
-    /* position: relative; */
     width: 1240px;
     margin: 0 auto;
     padding: 0 32px;
@@ -80,19 +74,16 @@ export const MPContainer = styled.div`
 `;
 export const MPHeroSection = styled.div`
   @media screen and (max-width: 767px) {
-    position: relative;
     width: 307px;
     margin: 0 auto;
   }
   @media ${theme.device.tablet} and (max-width: 1303px) {
-    position: relative;
+    /* position: relative;
     width: 703px;
-    margin: 0 auto;
+    margin: 0 auto; */
   }
   @media ${theme.device.desktop} {
     /* position: relative; */
-
-    padding: 0 32px;
   }
 `;
 
@@ -105,7 +96,7 @@ export const MPHeroTitle = styled.h1`
   line-height: 1;
 
   letter-spacing: -0.005em;
-  margin-top: 132px;
+
   margin-bottom: 14px;
   span {
     color: #22252a;
@@ -114,25 +105,24 @@ export const MPHeroTitle = styled.h1`
     text-align: center;
   }
   @media ${theme.device.tablet} {
-    /* margin-left: 32px; */
-    margin-top: 204px;
     margin-bottom: 24px;
     font-size: 72px;
   }
   @media ${theme.device.desktop} {
-    /* margin-left: 100px; */
-    margin-top: 0px;
     margin-bottom: 14px;
-
     font-size: 100px;
-
-    /* width: 465px; */
   }
 `;
 
 export const MDHeroFlex = styled.div`
+  @media ${theme.device.tablet} {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
   @media ${theme.device.desktop} {
     display: flex;
+    justify-content: space-between;
   }
 `;
 export const MPHeroText = styled.span`
@@ -152,8 +142,7 @@ export const MPHeroText = styled.span`
     margin: 0 auto 364px;
   }
   @media ${theme.device.tablet} {
-    margin-left: 38px;
-    margin-bottom: 32px;
+    margin-bottom: 18px;
     width: 362px;
     font-size: 14px;
     line-height: 1.29;
@@ -161,7 +150,6 @@ export const MPHeroText = styled.span`
   }
   @media ${theme.device.desktop} {
     margin-left: 0px;
-
     margin-bottom: 50px;
     width: 465px;
     font-size: 18px;
@@ -185,28 +173,19 @@ export const MPHeroProduct = styled.span`
   border-radius: 8px;
 
   @media screen and (max-width: 767px) {
-    position: absolute;
     padding: 8px;
     top: 303px;
     right: 0px;
   }
 
   @media ${theme.device.tablet} and (max-width: 1303px) {
-    position: absolute;
     width: 260px;
-
-    right: 5px;
-    top: 160px;
-
     padding: 12px;
     font-size: 14px;
     line-height: 1.29;
   }
   @media ${theme.device.desktop} {
     width: 298px;
-
-    /* right: 100px;
-    top: 236px; */
     padding: 16px;
     font-size: 14px;
     line-height: 1.43;

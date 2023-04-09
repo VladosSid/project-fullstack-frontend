@@ -30,9 +30,9 @@ export default function MainPage() {
   const [quantity, setQuantity] = useState(() => {
     const width = window.innerWidth;
 
-    if (width >= 1240) {
+    if (width >= 1304) {
       return 4;
-    } else if (width >= 768 && width < 1240) {
+    } else if (width >= 768 && width < 1304) {
       return 2;
     } else {
       return 1;
@@ -43,9 +43,9 @@ export default function MainPage() {
     const handleWindowResize = () => {
       const width = window.innerWidth;
 
-      if (width >= 1240) {
+      if (width >= 1304) {
         setQuantity(4);
-      } else if (width >= 768 && width < 1240) {
+      } else if (width >= 768 && width < 1304) {
         setQuantity(2);
       } else {
         setQuantity(1);
@@ -102,9 +102,8 @@ export default function MainPage() {
   return (
     <ContainerWrapper>
       <MainPageHero onSubm={handleFormSubmit} />
-      <MainContainer>
-        <Section>
-          {' '}
+      <Section>
+        <MainContainer>
           <Container>
             {Object.entries(RecipesByCategory).map(([category, recipes]) => (
               <div key={category}>
@@ -128,8 +127,8 @@ export default function MainPage() {
           <MPButton onClick={() => handleCategoryClick('Breakfast')}>
             Other categories
           </MPButton>
-        </Section>
-      </MainContainer>
+        </MainContainer>
+      </Section>
     </ContainerWrapper>
   );
 }
