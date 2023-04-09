@@ -11,7 +11,7 @@ export const ContainerWrapper = styled.div`
 
   @media screen and (min-width: 768px) {
   }
-  @media screen and (min-width: 1240px) {
+  @media ${theme.device.desktop} {
   }
 `;
 
@@ -129,11 +129,11 @@ export const Button = styled.button`
   line-height: 1.29;
   margin-left: auto;
   margin-top: 24px;
-  @media screen and (min-width: 768px) {
+  @media ${theme.device.tablet} {
     margin-top: 40px;
   }
 
-  @media screen and (min-width: 1240px) {
+  @media ${theme.device.desktop} {
     margin-top: 60px;
   }
 `;
@@ -154,7 +154,7 @@ export const MPButton = styled.button`
   line-height: 1.5;
   text-align: center;
   color: #22252a;
-  @media screen and (min-width: 768px) {
+  @media ${theme.device.tablet} {
     width: 239px;
     height: 61px;
 
