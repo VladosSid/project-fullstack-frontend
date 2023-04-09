@@ -24,11 +24,13 @@ import tablet_bg from '../../images/mainPagePhoto/tablet_bg.png';
 //-----------------------------------------------
 export const MPHeroBG = styled.section`
   margin: 0 auto;
-  position: relative;
+  /* position: relative; */
   /* width: 100%; */
   @media screen and (max-width: 767px) {
-    width: 100%;
-    height: 841px;
+    /* width: 100%; */
+    /* height: 791px; */
+    padding-top: 132px;
+    padding-bottom: 97px;
     background-repeat: no-repeat;
     background-image: url('${unsplash_mob}'), url('${blatt_mob}'),
       url('${blatt_l_mob}'), url('${bg_mob}');
@@ -59,7 +61,14 @@ export const MPHeroBG = styled.section`
 `;
 
 export const MPContainer = styled.div`
-  @media screen and (min-width: 768px) {
+  width: 359px;
+  margin: 0 auto;
+  padding: 0 8px;
+  @media screen and (max-width: 767px) {
+    position: relative;
+  }
+
+  @media ${theme.device.tablet} {
     width: 704px;
     margin: 0 auto;
     padding: 0 32px;
@@ -74,8 +83,8 @@ export const MPContainer = styled.div`
 `;
 export const MPHeroSection = styled.div`
   @media screen and (max-width: 767px) {
-    width: 307px;
-    margin: 0 auto;
+    /* width: 307px;
+    margin: 0 auto; */
   }
   @media ${theme.device.tablet} and (max-width: 1303px) {
     /* position: relative;
@@ -173,9 +182,10 @@ export const MPHeroProduct = styled.span`
   border-radius: 8px;
 
   @media screen and (max-width: 767px) {
+    position: absolute;
     padding: 8px;
     top: 303px;
-    right: 0px;
+    right: 27px;
   }
 
   @media ${theme.device.tablet} and (max-width: 1303px) {

@@ -16,6 +16,7 @@ export const ContainerWrapper = styled.div`
 `;
 
 export const Section = styled.section`
+  padding-top: 50px;
   padding-bottom: 100px;
   @media screen and (min-width: 768px) {
     padding-top: 72px;
