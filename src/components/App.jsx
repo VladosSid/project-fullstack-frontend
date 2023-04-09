@@ -22,6 +22,7 @@ const CategoriesPage = lazy(() => import('../pages/CategoriesPage'));
 const AddRecipiePage = lazy(() =>
   import('../pages/AddRecipePage/AddRecipePage')
 );
+const RecipiePage = lazy(() => import('../pages/RecipePage/RecipePage'));
 const MyRecipesPage = lazy(() => import('../pages/MyRecipePage/MyRecipesPage'));
 // const RecipePage = lazy(() => import('../pages/RecipePage/RecipePage'));
 const FavoritePage = lazy(() => import('../pages/FavoritePage/FavoritePage'));
@@ -48,7 +49,7 @@ export const App = () => {
       ) : (
         <Suspense fallback={<b>Loading...</b>}>
           <AppBox>
-        <Modal />
+            <Modal />
             <Routes>
               <Route
                 index
@@ -78,24 +79,50 @@ export const App = () => {
                 }
               />
 
-              <Route
-                path="/"
-                element={
-                  <PrivateRoute component={<SharedLayout />} redirectTo="/" />
-                }
-              >
-                <Route path="/home" element={<MainPage />} />
+              <Route path="/" element={<SharedLayout />}>
+                <Route
+                  path="/home"
+                  element={<PrivateRoute component={<MainPage />} />}
+                />
 
-            <Route path="/categories" element={<CategoriesPage />} />
-            <Route path="/categories/:categName" element={<CategoriesPage />} />
-            <Route path="/add" element={<AddRecipiePage />} />
-            <Route path="/my" element={<MyRecipesPage />} />
-            <Route path="/favorite" element={<FavoritePage />} />
+                <Route
+                  path="/categories/:categName"
+                  element={<PrivateRoute component={<CategoriesPage />} />}
+                />
 
+                <Route
+                  path="/add"
+                  element={<PrivateRoute component={<AddRecipiePage />} />}
+                />
 
-                <Route path="/shopping-list" element={<ShoppingListPage />} />
-                <Route path="/search" element={<SearchPage />} />
-                <Route path="*" element={<NotFoundPage />} />
+                <Route
+                  path="/favorite"
+                  element={<PrivateRoute component={<FavoritePage />} />}
+                />
+
+                <Route
+                  path="/recipe/:recipeId"
+                  element={<PrivateRoute component={<RecipiePage />} />}
+                />
+                <Route
+                  path="/my"
+                  element={<PrivateRoute component={<MyRecipesPage />} />}
+                />
+
+                <Route
+                  path="/search"
+                  element={<PrivateRoute component={<SearchPage />} />}
+                />
+
+                <Route
+                  path="/hopping-list"
+                  element={<PrivateRoute component={<ShoppingListPage />} />}
+                />
+
+                <Route
+                  path="*"
+                  element={<PrivateRoute component={<NotFoundPage />} />}
+                />
               </Route>
             </Routes>
           </AppBox>
