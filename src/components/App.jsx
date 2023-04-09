@@ -12,6 +12,7 @@ import PrivateRoute from './Routes/PrivateRoute';
 
 import getTheme from '../redux/theming/theme-selector';
 import theme from '../style/generalStyle';
+import Burger from './Burger/Burger';
 
 const WelcomePage = lazy(() => import('../pages/WelcomePage/WelcomePage'));
 const RegisterPage = lazy(() => import('../pages/RegisterPage/RegisterPage'));
@@ -49,7 +50,6 @@ export const App = () => {
       ) : (
         <Suspense fallback={<b>Loading...</b>}>
           <AppBox>
-            <Modal />
             <Routes>
               <Route
                 index
@@ -125,6 +125,8 @@ export const App = () => {
                 />
               </Route>
             </Routes>
+            <Modal />
+            <Burger />
           </AppBox>
         </Suspense>
       )}

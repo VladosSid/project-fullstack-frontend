@@ -14,12 +14,13 @@ export const HeaderContainer = styled.div`
 export const HeaderBox = styled.header`
   position: absolute;
   left: 50%;
-  transform: translateX(-50%);
+  top: 50%;
+  transform: translate(-50%, -50%);
   display: flex;
   align-items: center;
 
   @media ${theme.device.mobail} {
-    width: 375px;
+    width: 343px;
   }
   @media ${theme.device.tablet} {
     width: 704px;

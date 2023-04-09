@@ -1,9 +1,9 @@
 .visible {
     background-color: rgb(255, 255, 255);
-    transition: background-color ease-in 0.5s;
+    transition: background-color ease-in 0.7s;
 }
 
 .transparent {
   background-color: transparent;
-  transition: background-color ease-out 0.5s;
+  transition: background-color ease-out 0.7s;
 }

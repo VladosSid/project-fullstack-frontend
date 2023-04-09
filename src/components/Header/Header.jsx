@@ -2,10 +2,10 @@ import { useEffect, useState } from 'react';
 import Logo from 'components/Logo';
 import UserLogo from 'components/UserLogo';
 import Navigation from 'components/Navigation';
-import MobileMenu from 'components/MobileMenu.jsx/MobileMenu';
 import { HeaderBox } from './Header.styled';
 import { HeaderContainer } from './Header.styled';
-import { SB } from 'components/MobileMenu.jsx/MobileMenu.styled';
+import { SB } from 'components/Burger/MobileMenu.jsx/MobileMenu.styled';
+import BurgerButton from 'components/Burger/MobileMenu.jsx/BurgerButton';
 import helper from './helper.module.css';
 
 const Header = () => {
@@ -16,18 +16,17 @@ const Header = () => {
     return () =>
       window.removeEventListener('scroll', () => setScroll(window.scrollY));
   }, []);
-  console.log(scroll);
 
   return (
     <HeaderContainer
-      className={scroll > 100 ? helper.visible : helper.transparent}
+      className={scroll > 80 ? helper.visible : helper.transparent}
       id="header"
     >
       <HeaderBox>
         <Logo />
         <Navigation />
         <UserLogo />
-        <MobileMenu />
+        <BurgerButton />
         <SB />
       </HeaderBox>
     </HeaderContainer>
