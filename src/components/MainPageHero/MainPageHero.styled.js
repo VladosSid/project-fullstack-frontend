@@ -74,7 +74,7 @@ export const MPContainer = styled.div`
   @media ${theme.device.desktop} {
     /* position: relative; */
     width: 1240px;
-    margin: auto 0;
+    margin: 0 auto;
     padding: 0 32px;
   }
 `;
