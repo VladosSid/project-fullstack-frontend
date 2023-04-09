@@ -21,8 +21,9 @@ export default function SearchForm({
 
     if (searchWord.trim() === '') {
       // setSearchWord('');
+      setSearchWord('');
       Notify.warning('Please fill the search form');
-      console.log('searchWord in SF handle', searchWord);
+
       //   return;
     }
 

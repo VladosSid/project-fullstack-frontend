@@ -24,32 +24,38 @@ export default function SearchPage() {
 
   //------------
   function handleSearchTypeChange(type) {
-    if (!searchQuery) {
+    if (searchQuery === '') {
+      Notify.warning('Please fill the search form');
     } else {
-    }
-    const ingredientsLength = searchQuery.match(/\b\w+\b/g)?.length;
-    if (type === 'ingredients' && ingredientsLength > 1) {
-      Notify.warning('You can only enter one ingredient. ');
-    }
-    setSearchType(type);
-    // setSearchParams({ type: type });
-    updatedParams.set('type', type);
-    if (searchQuery) {
+      const ingredientsLength = searchQuery.match(/\b\w+\b/g)?.length;
+      if (type === 'ingredients' && ingredientsLength > 1) {
+        Notify.warning('You can only enter one ingredient. ');
+      }
+
+      setSearchType(type);
+      // setSearchParams({ type: type });
+      updatedParams.set('type', type);
       setSearchParams(updatedParams);
     }
+
+    // if (searchQuery) {
+    //   setSearchParams(updatedParams);
+    // }
   }
   //---------
   function handleSubmit(query) {
     const nextQuery = query !== '' ? query : '';
-    if (nextQuery) {
+
+    if (nextQuery !== '') {
       setSearchQuery(nextQuery);
-      console.log('SP handle', nextQuery);
+
       setSearchParams({
         query: query.toLowerCase().trim().replace(/\s+/g, ' '),
         type: searchType,
       });
     } else {
       setSearchParams({});
+      setSearchQuery('');
     }
   }
   //----------------------------

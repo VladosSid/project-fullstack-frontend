@@ -21,7 +21,6 @@ export default function SearchRecipesList({ searchQuery, searchType }) {
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    console.log('in new effect', searchType, searchQuery);
     const processedValue = searchQuery.trim().replace(/ +/g, '%20');
     instanceBacEnd.defaults.headers.common.Authorization =
       'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDJkZDdmODlmN2I0N2RlNDk0OGI4ZDIiLCJpYXQiOjE2ODA4NzUxOTF9.4A3dgm3_3EJIMfFCD7WFd2VAM_iDXJ0MWGaA9UAg_uk';
@@ -43,7 +42,7 @@ export default function SearchRecipesList({ searchQuery, searchType }) {
         }
       });
   }, [searchQuery, searchType]);
-  console.log('recipes', recipes);
+
   return (
     <>
       {error ? (

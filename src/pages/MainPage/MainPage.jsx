@@ -83,9 +83,11 @@ export default function MainPage() {
   }, {});
   //---------------------------
   const handleFormSubmit = query => {
-    const searchUrl = createSearchUrl(query);
+    if (query) {
+      const searchUrl = createSearchUrl(query);
 
-    navigate(searchUrl);
+      navigate(searchUrl);
+    }
   };
 
   const handleCategoryClick = category => {
