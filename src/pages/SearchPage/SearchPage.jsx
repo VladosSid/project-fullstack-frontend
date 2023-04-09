@@ -24,8 +24,11 @@ export default function SearchPage() {
 
   //------------
   function handleSearchTypeChange(type) {
-    const aaa = searchQuery.match(/\b\w+\b/g)?.length;
-    if (type === 'ingredients' && aaa > 1) {
+    if (!searchQuery) {
+    } else {
+    }
+    const ingredientsLength = searchQuery.match(/\b\w+\b/g)?.length;
+    if (type === 'ingredients' && ingredientsLength > 1) {
       Notify.warning('You can only enter one ingredient. ');
     }
     setSearchType(type);
@@ -38,13 +41,16 @@ export default function SearchPage() {
   //---------
   function handleSubmit(query) {
     const nextQuery = query !== '' ? query : '';
-
-    setSearchQuery(nextQuery);
-    // const searchUrl = createSearchUrl(query, query);!!!!!!!
-    setSearchParams({
-      query: query.toLowerCase().trim().replace(/\s+/g, ' '),
-      type: searchType,
-    });
+    if (nextQuery) {
+      setSearchQuery(nextQuery);
+      console.log('SP handle', nextQuery);
+      setSearchParams({
+        query: query.toLowerCase().trim().replace(/\s+/g, ' '),
+        type: searchType,
+      });
+    } else {
+      setSearchParams({});
+    }
   }
   //----------------------------
   return (
