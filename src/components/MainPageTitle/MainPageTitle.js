@@ -1,26 +1,31 @@
+import { useSelector } from 'react-redux';
 import {
   Title,
   BackgroundTopOne,
-  BackgroundTopTwo,
+  BackgroundTopBlack,
   BackgroundTop,
   ContaynerTitle,
 } from './MainPageTitle.styled';
-import img from '../../images/background/Rectangle 9.jpg';
-import imgTop from '../../images/background/Rectangle 8.jpg';
-
-
-
+import img from '../../images/background/green-point.png';
+import imgTop from '../../images/background/black_point.png';
+import imgWhite from '../../images/background/white_point.png';
+import authSelectors from '../../redux/users/auth-selectors'
 
 export const MainPageTitle = ({ title }) => {
-    
-    return (
-      <ContaynerTitle>
-        <Title>{title}</Title>
-        <BackgroundTopOne src={img} alt="background" />
+
+const theme = useSelector(authSelectors.getTheme);
+  // console.log('theme', theme);
+  return (
+    <ContaynerTitle>
+      <Title>{title}</Title>
+      <BackgroundTopOne src={img} alt="background" />
+      {theme === 'white' ? (
         <BackgroundTop src={imgTop} alt="background" />
-        <BackgroundTopTwo src={img} alt="background" />
-      </ContaynerTitle>
-    );
-   
+      ) : (
+        <BackgroundTop src={imgWhite} alt="background" />
+      )}
+
+      <BackgroundTopBlack src={img} alt="background" />
+    </ContaynerTitle>
+  );
 };
-  

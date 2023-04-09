@@ -8,18 +8,16 @@ export const CardWrapper = styled.div`
   /* width: 343px;
 height: 152px; */
   margin-bottom: 18px;
-  background: #ffffff;
   border-radius: 8px;
   box-shadow: 5px 4px 8px 0px rgba(34, 60, 80, 0.2);
   border: 1px solid rgba(34, 60, 80, 0.2);
+  background: ${props => props.theme.color.favorit.CardWrapper};
 
   @media ${theme.device.tablet} {
     position: relative;
     display: flex;
     justify-content: flex-start;
     padding: 28px 24px;
-
-    background: #ffffff;
     border-radius: 8px;
   }
 
@@ -31,8 +29,7 @@ justify-content: flex-start; */
     margin-bottom: 50px;
     /* width: 1240px;
 height: 404px; */
-    background: #ffffff;
-    border-radius: 8px;
+      border-radius: 8px;
   }
 `;
 
@@ -41,7 +38,6 @@ display: block,
 width: 124px;
 height: 124px;
 border-radius: 8px;
-
 @media ${theme.device.tablet} {
     display: block,
 width: 228px;
@@ -57,7 +53,7 @@ border-radius: 8px;}
 `;
 
 export const CardTextWrapper = styled.div`
-  height: 124px;
+    height: 124px;
   /* width: 170px; */
   margin-left: 14px;
   display: flex;
@@ -91,7 +87,7 @@ export const CardTitle = styled.h3`
   line-height: 14px; /* identical to box height, or 100% */
   letter-spacing: -0.24px;
   /* Color - Text Primary */
-  color: #3e4462;
+  color: ${props => props.theme.color.favorit.CardTitle};
 
   @media ${theme.device.tablet} {
     margin-bottom: 28px;
@@ -103,7 +99,7 @@ export const CardTitle = styled.h3`
     /* identical to box height, or 100% */
     letter-spacing: -0.24px;
     /* Color - Text Primary */
-    color: #3e4462;
+   
   }
 
   @media ${theme.device.desktop} {
@@ -114,7 +110,7 @@ export const CardTitle = styled.h3`
     font-size: 24px;
     line-height: 24px;
     letter-spacing: -0.24px;
-    color: #3e4462;
+    
   }
 `;
 
@@ -128,7 +124,7 @@ export const CardDescription = styled.p`
   line-height: 10px;
   /* or 125% */
   letter-spacing: -0.02em;
-  color: #23262a;
+  color: ${props => props.theme.color.favorit.CardDescription};
 
   @media ${theme.device.tablet} {
     display: inline-block;
@@ -140,7 +136,6 @@ export const CardDescription = styled.p`
     line-height: 18px;
     /* or 129% */
     letter-spacing: -0.02em;
-    color: #23262a;
   }
 
   @media ${theme.device.desktop} {
@@ -153,7 +148,6 @@ export const CardDescription = styled.p`
     line-height: 24px;
     /* or 133% */
     letter-spacing: -0.02em;
-    color: #23262a;
   }
 `;
 
@@ -166,7 +160,7 @@ export const CardTime = styled.p`
   line-height: 14px;
   /* identical to box height, or 140% */
   letter-spacing: -0.24px;
-  color: #3e4462;
+  color: ${props => props.theme.color.favorit.CardTime};
 
   @media ${theme.device.tablet} {
     display: inline-block;
@@ -189,7 +183,7 @@ bottom: 28px;
 display: flex;
 justify-content: center;
 align-items: center;
-background: #22252A;
+background: ${props => props.theme.color.favorit.CardButtonSee};
 font-family: 'Poppins';
 font-style: normal;
 font-weight: 400;
@@ -198,9 +192,10 @@ line-height: 21px;
 /* identical to box height */
 color: #FAFAFA;
 border-radius: 24px 44px;
-  border: 1px solid rgb(250, 250, 250);
+  border: 1px solid ${props => props.theme.color.favorit.CardButtonSeeBorder};
  &:hover {
-    background: #8BAA36;
+    background: ${props => props.theme.color.favorit.CardButtonSeeHover};
+    border-color: ${props => props.theme.color.favorit.CardButtonSeeHover};
     }
 }
 
@@ -214,8 +209,7 @@ height: 54px;
 display: flex;
 justify-content: center;
 align-items: center;
-  background: #22252a;
-  padding: 14px 28px
+   padding: 14px 28px
   font-family: 'Poppins';
   font-style: normal;
   font-weight: 400;
@@ -223,10 +217,7 @@ align-items: center;
   line-height: 24px;
   color: #fafafa;
   border-radius: 24px 44px;
-  border: 1px solid rgb(250, 250, 250);
-  &:hover {
-    background: #8BAA36;
-    }}
+
 `;
 
 export const CardButtonDelete = styled.button`
@@ -239,14 +230,15 @@ export const CardButtonDelete = styled.button`
   height: 24px;
   right: 14px;
   bottom: 14px;
-  background: #ebf3d4;
-  color: #22252a;
+  background: ${props => props.theme.color.favorit.CardButtonDelete};
+  // color: #22252a;
   border-radius: 4px;
-  border: 1.2px solid #22252a;
-  &:hover,
-  :focus {
-    background: #1e1f28;
-    color: #fafafa;
+  border: 1.2px solid
+    ${props => props.theme.color.favorit.CardButtonDeleteBorder};
+  &:hover{
+    background: ${props =>
+      props.theme.color.favorit.CardButtonDeleteHoverBackground};
+    // color: #fafafa;
   }
 
   @media ${theme.device.tablet} {
@@ -255,15 +247,6 @@ export const CardButtonDelete = styled.button`
     height: 38px;
     right: 24px;
     top: 28px;
-    background: #ebf3d4;
-    color: #22252a;
-    border-radius: 4px;
-    border: 1.2px solid #22252a;
-    &:hover,
-    :focus {
-      background: #1e1f28;
-      color: #fafafa;
-    }
 
     @media ${theme.device.desktop} {
       position: absolute;
@@ -271,8 +254,6 @@ export const CardButtonDelete = styled.button`
       height: 44px;
       right: 40px;
       top: 40px;
-      background: #ebf3d4;
-      border-radius: 4px;
     }
   }
 `;
@@ -283,11 +264,11 @@ export const CardIcon = styled.div`
   align-items: center;
   width: 24px;
   height: 24px;
-  fill: #ebf3d4;
-  stroke: #22252a;
-  &:hover {
-    fill: #22252a;
-    stroke: #fafafa;
+  fill: ${props => props.theme.color.favorit.CardIconFill};
+  stroke: ${props => props.theme.color.favorit.CardIconStroke};
+  &:hover{
+    fill: ${props => props.theme.color.favorit.CardIconFillHover};
+    stroke: ${props => props.theme.color.favorit.CardIconStrokeHover};
   }
   svg {
     width: 10px;

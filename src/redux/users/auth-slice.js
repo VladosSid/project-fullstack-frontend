@@ -1,12 +1,15 @@
 import { createSlice } from '@reduxjs/toolkit';
 import authOperations from './auth-operations';
 
+import theme from '../theming/theme-operations';
+
 const initialState = {
   user: {
     name: null,
     email: null,
     avatarURL: null,
   },
+  theme: 'white',
   token: null,
   isLoggedIn: false,
   error: null,
@@ -88,6 +91,11 @@ export const authSlice = createSlice({
     },
     [authOperations.updateUserData.rejected](state, action) {
       state.error = action.payload;
+    },
+
+    // theme
+    [theme.themeSwitch.fulfilled](state, action) {
+      state.theme = action.payload;
     },
   },
 });
