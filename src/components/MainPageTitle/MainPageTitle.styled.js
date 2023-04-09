@@ -3,12 +3,11 @@ import theme from '../../style/generalStyle';
 
 export const ContaynerTitle = styled.div`
   width: 100%;
-
   position: relative;
 `;
 
 export const Title = styled.h2`
-  padding-top: 53px;
+  padding-top: 114px;
   padding-bottom: 50px;
 
   font-family: 'Poppins';
@@ -17,13 +16,13 @@ export const Title = styled.h2`
   color: ${props => props.theme.color.mainPageTitle.colorTitle};
 
   @media ${theme.device.tablet} {
-    padding-top: 73px;
+   
     padding-bottom: 72px;
     font-size: 32px;
     line-height: 32px;
   }
   @media ${theme.device.desktop} {
-    padding-top: 102px;
+    padding-top: 136px;
     font-size: 44px;
     line-height: 44px;
   } ;
