@@ -23,17 +23,33 @@ import theme from '../../style/generalStyle';
 //     padding-right: 99px;
 //   }
 // `;
-export const ContainerWrapper = styled.div`
+// export const ContainerWrapper = styled.section`
+//   /* height: 100%; */
+//   display: flex;
+//   flex-direction: column;
+//   align-items: center;
+//   justify-content: center;
+//   /* padding: 0 16px;
+//   margin: 0 auto; */
+//   padding-bottom: 100px;
+
+//   @media ${theme.device.tablet} {
+//     padding-bottom: 200px;
+//   }
+// `;
+export const ContainerWrapper = styled.section`
   /* height: 100%; */
-  display: flex;
+  /* display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  /* padding: 0 16px;
-  margin: 0 auto; */
-  padding-bottom: 100px;
+
+  padding-bottom: 100px; */
 
   @media ${theme.device.tablet} {
-    padding-bottom: 200px;
+    /* padding-bottom: 200px; */
+  }
+  @media ${theme.device.desktop} {
+    padding-bottom: 100px;
   }
 `;

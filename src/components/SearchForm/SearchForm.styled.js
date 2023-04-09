@@ -14,9 +14,9 @@ export const SearchesForm = styled.form`
   @media ${theme.device.tablet} {
     margin-bottom: ${props => (props.marginBottom ? '28px' : 0)};
   }
-  /* @media screen and (min-width: 1240px) {
-    margin-right: ${props => props.page === 'main' && '200px'};
-  } */
+  @media ${theme.device.desktop} {
+    margin: ${props => props.page === 'search' && '0px auto 28px'};
+  }
   /* margin-top: 0px; */
 `;
 
