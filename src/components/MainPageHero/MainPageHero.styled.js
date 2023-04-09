@@ -19,12 +19,14 @@ import blatt_l_mob from '../../images/mainPagePhoto/blatt_l_mob-min.png';
 import unsplash_mob from '../../images/mainPagePhoto/unsplash_mob-min.png';
 import desktop_bg from '../../images/mainPagePhoto/desktop_bg_1440.png';
 import tablet_bg from '../../images/mainPagePhoto/tablet_bg.png';
+
 //-----------------------------------------------
 export const MPHeroBG = styled.div`
   /* width: 375px; //****** */
   position: relative;
-  width: 100%;
+  /* width: 100%; */
   @media screen and (max-width: 767px) {
+    width: 100%;
     height: 841px;
     background-repeat: no-repeat;
     background-image: url('${unsplash_mob}'), url('${blatt_mob}'),
@@ -35,6 +37,7 @@ export const MPHeroBG = styled.div`
   }
 
   @media screen and (min-width: 768px) {
+    width: 100%;
     height: 640px;
 
     background-repeat: no-repeat;
@@ -44,6 +47,7 @@ export const MPHeroBG = styled.div`
   }
 
   @media screen and (min-width: 1240px) {
+    width: 1240px;
     position: relative;
 
     height: 688px;
@@ -67,10 +71,9 @@ export const MPHeroSection = styled.div`
   }
   @media screen and (min-width: 1240px) {
     /* position: relative; */
-    width: 1240px;
 
     margin: 200px auto 0;
-    padding: 0 100px;
+    padding: 0 32px;
   }
 `;
 

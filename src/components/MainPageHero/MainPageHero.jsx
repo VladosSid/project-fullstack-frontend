@@ -39,7 +39,7 @@ export default function MainPageHero({ onSubm }) {
               </span>
             </div>
 
-            <StyledLink to="/categories/breakfast">
+            <StyledLink to="/categories/Breakfast">
               <span>See recipes</span>
               <BsArrowRight style={{ marginLeft: '7px' }} />
             </StyledLink>

@@ -1,5 +1,6 @@
 import React, { useState } from 'react'; //useEffect
 import { MainPageTitle } from 'components/MainPageTitle/MainPageTitle';
+import { MainContainer } from '../../components/MainContainer/MainContainer';
 // import DishCard from 'components/DishCard/DishCard';
 // import { useLocation } from 'react-router-dom';
 import { ContainerWrapper } from './Searchpage.styled';
@@ -7,6 +8,7 @@ import { useSearchParams } from 'react-router-dom';
 import SearchBar from 'components/SearchBar/SearchBar';
 // import { createSearchUrl } from 'helpers/createSearchUrl';
 import SearchRecipesList from 'components/SearchRecipesList/SearchRecipesList';
+import { Notify } from 'notiflix/build/notiflix-notify-aio';
 //-------------------------------
 export default function SearchPage() {
   // const location = useLocation();
@@ -21,6 +23,12 @@ export default function SearchPage() {
 
   //------------
   function handleSearchTypeChange(type) {
+    console.log('Skoka', searchQuery.match(/\b\w+\b/g)?.length);
+    const aaa = searchQuery.match(/\b\w+\b/g)?.length;
+    if (type === 'ingredients' && aaa > 1) {
+      Notify.warning('You can only enter one ingredient. ');
+      console.log('tooo mach');
+    }
     setSearchType(type);
     // setSearchParams({ type: type });
     updatedParams.set('type', type);
@@ -35,29 +43,35 @@ export default function SearchPage() {
     setSearchQuery(nextQuery);
     // const searchUrl = createSearchUrl(query, query);!!!!!!!
     setSearchParams({
-      query: query.toLowerCase(),
+      query: query.toLowerCase().trim().replace(/\s+/g, ' '),
       type: searchType,
     });
-    console.log('nextQuery in SP submit', nextQuery);
   }
   //----------------------------
   return (
-    <ContainerWrapper>
-      <MainPageTitle title={'Search'} />
-      <SearchBar
-        // onSearch={handleSearch}
-        onTypeChange={handleSearchTypeChange}
-        onSubm={handleSubmit}
-        selectedType={searchType}
-        searchQuery={searchQuery}
-      />
-      {searchQuery !== '' && (
-        <SearchRecipesList searchQuery={searchQuery} searchType={searchType} />
-      )}
-      <div>Pagination</div>
-    </ContainerWrapper>
+    <MainContainer>
+      <ContainerWrapper>
+        <MainPageTitle title={'Search'} />
+        <SearchBar
+          // onSearch={handleSearch}
+          onTypeChange={handleSearchTypeChange}
+          onSubm={handleSubmit}
+          selectedType={searchType}
+          searchQuery={searchQuery}
+        />
+        {searchQuery !== '' && (
+          <>
+            <SearchRecipesList
+              searchQuery={searchQuery}
+              searchType={searchType}
+            />
+          </>
+        )}
+      </ContainerWrapper>
+    </MainContainer>
   );
 }
+//.trim().replace(/ +/g, '%20')
 //<SearchRecipesList searchQuery={searchQuery} searchType={searchType} searchResults={searchResults} />
 
 // function SearchTypeSelector({ type, onChange }) {

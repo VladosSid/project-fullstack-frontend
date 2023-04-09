@@ -4,18 +4,18 @@ import { useLocation } from 'react-router-dom';
 import instanceBacEnd from 'helpers/requestBackEnd';
 // import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
-
+import { MainContainer } from '../../components/MainContainer/MainContainer';
 import {
   Container,
   RecipeCategoryName,
   Button,
   ContainerWrapper,
   GridContainer,
-  Section,
+  // Section,
   MPButton,
 } from './MainPage.styled';
 
-import MainPageHero from 'components/MainPageHero';
+import MainPageHero from '../../components/MainPageHero/MainPageHero';
 import DishCard from 'components/DishCard';
 import { createCategoryUrl, createSearchUrl } from 'helpers/createSearchUrl';
 //--------------------------------------
@@ -60,7 +60,7 @@ export default function MainPage() {
 
   useEffect(() => {
     instanceBacEnd.defaults.headers.common.Authorization =
-      'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDJkZDdmODlmN2I0N2RlNDk0OGI4ZDIiLCJpYXQiOjE2ODA3MjYwMDh9._Zf3orn5P6u54hilJsmRc8snd2oRt7Ol77pu3M3IqYQ';
+      'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDJkZDdmODlmN2I0N2RlNDk0OGI4ZDIiLCJpYXQiOjE2ODA4NzUxOTF9.4A3dgm3_3EJIMfFCD7WFd2VAM_iDXJ0MWGaA9UAg_uk';
 
     instanceBacEnd
       .get(`/recipes/main-page?query=${quantity}`)
@@ -71,7 +71,6 @@ export default function MainPage() {
       .catch(function (error) {
         console.log(error.message);
       });
-    console.log('quantity', quantity);
   }, [quantity]);
 
   const RecipesByCategory = recipes.reduce((acc, recipe) => {
@@ -85,10 +84,8 @@ export default function MainPage() {
   //---------------------------
   const handleFormSubmit = query => {
     console.log('Query in Main', query);
-
-    // const nextQuery = query !== '' ? { query } : {};
-    // setSearchParams(nextQuery);
     const searchUrl = createSearchUrl(query);
+    console.log('Query in Main 2', query);
     console.log('SearchUrl in MainPage', searchUrl);
     navigate(searchUrl);
   };
@@ -105,7 +102,7 @@ export default function MainPage() {
   return (
     <ContainerWrapper>
       <MainPageHero onSubm={handleFormSubmit} />
-      <Section>
+      <MainContainer>
         <Container>
           {Object.entries(RecipesByCategory).map(([category, recipes]) => (
             <div key={category}>
@@ -126,10 +123,10 @@ export default function MainPage() {
             </div>
           ))}
         </Container>
-        <MPButton onClick={() => handleCategoryClick('breakfast')}>
+        <MPButton onClick={() => handleCategoryClick('Breakfast')}>
           Other categories
         </MPButton>
-      </Section>
+      </MainContainer>
     </ContainerWrapper>
   );
 }
