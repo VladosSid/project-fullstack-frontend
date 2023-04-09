@@ -34,6 +34,9 @@ export const GridContainer = styled.div`
 `;
 
 export const SRLNoItems = styled.div`
+  display: flex;
+  margin: 0 auto;
+
   background-repeat: no-repeat;
 
   @media screen and (max-width: 767px) {
@@ -98,4 +101,9 @@ export const ErrorComponent = styled.p`
 
   @media screen and (min-width: 1240px) {
   }
+`;
+
+export const imgNoItems = styled.div`
+  width: 380px;
+  height: 291px;
 `;
