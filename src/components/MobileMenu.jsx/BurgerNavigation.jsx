@@ -39,7 +39,7 @@ const BurgerNavigation = ({ onClick, isOpen }) => {
                 onClick();
               }}
             >
-              <NavLink to="/categories">Categories</NavLink>
+              <NavLink to="/categories/Lamb">Categories</NavLink>
             </li>
             <li
               onClick={() => {

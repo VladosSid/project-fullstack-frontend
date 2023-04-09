@@ -9,7 +9,7 @@ const Navigation = () => {
     <HeaderNav>
       <Ul>
         <li>
-          <NavLink to="/categories">Categories</NavLink>
+          <NavLink to="/categories/Lamb">Categories</NavLink>
         </li>
         <li>
           <NavLink to="/add">Add recipes</NavLink>
