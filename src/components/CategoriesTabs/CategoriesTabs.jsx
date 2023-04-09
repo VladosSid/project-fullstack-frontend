@@ -4,8 +4,10 @@ import { StyledTabs as Tabs } from './CategoriesTabs.styled';
 import { StyledTab as Tab } from './CategoriesTabs.styled';
 import { DishCardContainer } from './CategoriesTabs.styled';
 import { Box } from '@mui/material';
+import { RecipesBox } from './CategoriesTabs.styled';
 import DishCard from '../DishCard/DishCard';
 import queryBackEnd from '../../helpers/request/queryBackEnd';
+import { useSelector } from 'react-redux';
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -18,19 +20,7 @@ function TabPanel(props) {
       aria-labelledby={`categories-tab-${index}`}
       {...other}
     >
-      {value === index && (
-        <Box
-          sx={{
-            py: '50px',
-            display: 'flex',
-            flexWrap: 'wrap',
-            rowGap: '100px',
-            columnGap: '14px',
-          }}
-        >
-          {children}
-        </Box>
-      )}
+      {value === index && <RecipesBox>{children}</RecipesBox>}
     </div>
   );
 }
@@ -49,10 +39,14 @@ function a11yProps(index) {
 }
 
 export default function CategoriesTabs(props) {
-  console.log('Tab');
   const { tabsTitlesQ, idCategory } = props;
   const [value, setValue] = React.useState(idCategory);
   const [recipeList, setRecipeList] = React.useState([]);
+
+  let theme = useSelector(state => state.auth.theme);
+  console.log('theme', theme);
+
+  theme = 'black';
 
   React.useEffect(() => {
     setValue(idCategory);

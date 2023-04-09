@@ -1,7 +1,9 @@
 import styled from 'styled-components';
 import theme from '../style/generalStyle';
 
-export const AppBox = styled.div``;
+export const AppBox = styled.div`
+  background-color: #1e1f28;
+`;
 
 export const BoxBodyApp = styled.div`
   padding-left: 16px;
