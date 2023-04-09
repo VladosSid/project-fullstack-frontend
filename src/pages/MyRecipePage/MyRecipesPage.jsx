@@ -3,21 +3,85 @@ import { recipesG } from 'gannaFakeData';
 import { useLocation } from 'react-router-dom';
 // import instanceBacEnd from 'helpers/requestBackEnd';
 // import { useNavigate } from 'react-router-dom';
+import instanceBacEnd from 'helpers/requestBackEnd';
 import { MainPageTitle } from 'components/MainPageTitle/MainPageTitle';
 import { MainContainer } from '../../components/MainContainer/MainContainer';
 import MyRecipesList from '../../components/MyRecipesList/MyRecipesList';
-
 import { Children } from 'react';
+import { queryBackEnd } from 'helpers/request';
+import { Container, Pagination, Stack } from '@mui/material';
+import { PaginationWrapper } from './MyRecipePage.styled';
 
 const MyRecipesPage = () => {
   const location = useLocation();
   // const navigate = useNavigate();
+  // eslint-disable-next-line
+  const [recipes, setRecipes] = useState([]);
+  const [currentPage, setCurrentPage] = useState(1);
+  const [allPage, setAllPage] = useState();
+  const [allItem, setAllItem] = useState(1);
+
+  useEffect(() => {
+    setRecipes([]);
+    const data = queryBackEnd.queryOwnRecipes();
+    data
+      .then(results => {
+        setRecipes(results.result.data.list);
+        setAllItem(results.result.data.totalItem);
+        const pageQty = Math.ceil(results.result.data.totalItem / 4);
+        setAllPage(pageQty);
+      })
+      .catch(error => error.message);
+  }, []);
+
+  const changeNum = (_, num) => {
+    setCurrentPage(num);
+    instanceBacEnd
+      .get(`/ownRecipes?page=${num}`)
+      .then(response => setRecipes(response.data.result.data.list))
+      .catch(error => console.log(error.message));
+  };
+
+  const removeOwnRecipe = recipeId => {
+    const lastItem = allItem % 4;
+    let pageBack;
+    if (currentPage !== 1 || lastItem === 1) {
+      pageBack = currentPage - 1;
+    } else pageBack = currentPage;
+    console.log(currentPage);
+    instanceBacEnd
+      .delete(`/ownRecipes/${recipeId}?page=${pageBack}`)
+      .then(response => setRecipes(response.data.result.data.list))
+      .catch(error => console.log(error.message));
+  };
   return (
     <MainContainer>
       <MainPageTitle title={'My recipes'} />
-      <MyRecipesList recipes={recipesG} location={location}>
+      <MyRecipesList
+        recipes={recipesG}
+        allItem={allItem}
+        location={location}
+        removeOwnRecipe={removeOwnRecipe}
+      >
         {Children}
       </MyRecipesList>
+      <PaginationWrapper>
+        <Container>
+          <Stack spacing={2}>
+            {allPage > 1 && (
+              <Pagination
+                count={allPage}
+                page={currentPage}
+                onChange={changeNum}
+                // showFirstButton
+                // showLastButton
+                siblingCount={1}
+                sx={{ marginY: 3, marginX: 'auto' }}
+              />
+            )}
+          </Stack>
+        </Container>
+      </PaginationWrapper>
     </MainContainer>
   );
 };

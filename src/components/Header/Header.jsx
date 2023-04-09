@@ -16,7 +16,7 @@ const Header = () => {
     return () =>
       window.removeEventListener('scroll', () => setScroll(window.scrollY));
   }, []);
-  console.log(scroll);
+  // console.log(scroll);
 
   return (
     <HeaderContainer

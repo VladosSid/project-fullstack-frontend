@@ -14,7 +14,8 @@ import {
   CardIcon,
 } from './MyRecipesItem.styled';
 
-const MyRecipesItem = ({ recipe, location }) => {
+const MyRecipesItem = ({ recipe, location, removeOwnRecipe }) => {
+  const recipeId = recipe._id;
   return (
     <CardWrapper>
       <CardImg src={recipe.imageUrl} alt={recipe.title} />
@@ -27,7 +28,12 @@ const MyRecipesItem = ({ recipe, location }) => {
         <CardButtonSee>See recipe</CardButtonSee>
       </Link>
 
-      <CardButtonDelete type="button" onClick={event => console.log(event)}>
+      <CardButtonDelete
+        type="button"
+        onClick={() => {
+          removeOwnRecipe(recipeId);
+        }}
+      >
         <CardIcon>
           <UseSvg id="removefav" />
         </CardIcon>
