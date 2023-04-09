@@ -38,7 +38,7 @@ export const MPHeroBG = styled.section`
   }
 
   @media ${theme.device.tablet} {
-    /* width: 100%; */
+    /* max-width: 768px; */
     padding-top: 224px;
     padding-bottom: 168px;
     background-repeat: no-repeat;
