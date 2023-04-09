@@ -115,7 +115,7 @@ export const App = () => {
                 />
 
                 <Route
-                  path="/hopping-list"
+                  path="/shopping-list"
                   element={<PrivateRoute component={<ShoppingListPage />} />}
                 />
 
