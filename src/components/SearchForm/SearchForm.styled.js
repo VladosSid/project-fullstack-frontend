@@ -13,6 +13,7 @@ export const SearchesForm = styled.form`
   }
   @media ${theme.device.tablet} {
     margin-bottom: ${props => (props.marginBottom ? '28px' : 0)};
+    margin: ${props => props.page === 'search' && '0px auto 28px'};
   }
   @media ${theme.device.desktop} {
     margin: ${props => props.page === 'search' && '0px auto 28px'};
@@ -82,7 +83,7 @@ export const SearchBtn = styled.button`
   }
   @media ${theme.device.tablet} {
     width: ${props => (props.page === 'main' ? '161px' : '161px')};
-    height: ${props => (props.page === 'main' ? '59px' : '59px')};
+    height: ${props => (props.page === 'main' ? '59px' : '61px')};
     font-size: 16px;
   }
   @media ${theme.device.desktop} {
