@@ -83,18 +83,12 @@ export default function MainPage() {
   }, {});
   //---------------------------
   const handleFormSubmit = query => {
-    console.log('Query in Main', query);
     const searchUrl = createSearchUrl(query);
-    console.log('Query in Main 2', query);
-    console.log('SearchUrl in MainPage', searchUrl);
+
     navigate(searchUrl);
   };
 
   const handleCategoryClick = category => {
-    console.log('category in Main', category);
-
-    // const nextQuery = query !== '' ? { query } : {};
-    // setSearchParams(nextQuery);
     const categoryUrl = createCategoryUrl(category);
     navigate(categoryUrl);
   };
