@@ -63,17 +63,20 @@ export const Image = styled.div`
     width: 285px; 
     height: 250px;
     z-index: 2;
+    margin-bottom: -32px;
 
     @media ${theme.device.tablet} {
         background-image: url(${TabletImg});
         width: 409px;
         height: 359px;
+        margin-bottom: -22px;
     }
-    
+
     /* desktop */
     @media screen and (min-width: 1025px) {
         background-image: url(${DesktopImg});
         width: 532px;
         height: 468px;
+        margin-bottom: -12px;
     }
 `
