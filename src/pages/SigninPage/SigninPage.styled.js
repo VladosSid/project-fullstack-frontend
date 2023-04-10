@@ -14,6 +14,7 @@ export const Container = styled.div`
     height: 100vh;
     width: calc(100vw - 70px);  
     color: #fff;
+    background-color: #ECECEC;
 
     display: flex;
     flex-direction: column;
@@ -68,7 +69,7 @@ export const Image = styled.div`
         width: 409px;
         height: 359px;
     }
-    
+
     /* desktop */
     @media screen and (min-width: 1025px) {
         background-image: url(${DesktopImg});
