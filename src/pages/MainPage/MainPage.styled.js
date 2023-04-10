@@ -79,9 +79,6 @@ export const CardWrapper = styled.div`
   position: relative;
   margin-bottom: 24px;
   img {
-    /* width: 343px;
-    height: 323px; */
-    /* object-fit: cover; */
     width: 100%;
     border-radius: 8px;
   }

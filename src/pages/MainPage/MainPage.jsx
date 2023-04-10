@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from 'react';
-// import { recipesG } from 'gannaFakeData';
+
 import { useLocation } from 'react-router-dom';
-// import instanceBacEnd from 'helpers/requestBackEnd';
-// import axios from 'axios';
+
 import { useNavigate } from 'react-router-dom';
 import { MainContainer } from '../../components/MainContainer/MainContainer';
 import { queryBackEnd } from 'helpers/request';
@@ -52,8 +51,6 @@ export default function MainPage() {
       } else {
         setQuantity(1);
       }
-
-      // setViewportWidth(width);
     };
     window.addEventListener('resize', handleWindowResize);
 
