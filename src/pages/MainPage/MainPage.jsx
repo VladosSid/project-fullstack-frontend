@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 // import { recipesG } from 'gannaFakeData';
 import { useLocation } from 'react-router-dom';
-import instanceBacEnd from 'helpers/requestBackEnd';
+// import instanceBacEnd from 'helpers/requestBackEnd';
 // import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import { MainContainer } from '../../components/MainContainer/MainContainer';
@@ -60,8 +60,8 @@ export default function MainPage() {
   }, []);
 
   useEffect(() => {
-    instanceBacEnd.defaults.headers.common.Authorization =
-      'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDJkZDdmODlmN2I0N2RlNDk0OGI4ZDIiLCJpYXQiOjE2ODA4NzUxOTF9.4A3dgm3_3EJIMfFCD7WFd2VAM_iDXJ0MWGaA9UAg_uk';
+    // instanceBacEnd.defaults.headers.common.Authorization =
+    //   'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDJkZDdmODlmN2I0N2RlNDk0OGI4ZDIiLCJpYXQiOjE2ODA4NzUxOTF9.4A3dgm3_3EJIMfFCD7WFd2VAM_iDXJ0MWGaA9UAg_uk';
 
     // instanceBacEnd
     //   .get(`/recipes/main-page?query=${quantity}`)
@@ -132,3 +132,4 @@ export default function MainPage() {
 }
 
 //${ REACT_APP_BASE_URL } /recipes/main - page ? ${ queryQuantity }
+//  REACT_APP_BASE_URL=http://localhost:3001/api

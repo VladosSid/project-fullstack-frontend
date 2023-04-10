@@ -4,7 +4,7 @@ import { useLocation } from 'react-router-dom';
 // import axios from 'axios';
 // import RecipesList from './RecipesList';
 import DishCard from 'components/DishCard/DishCard';
-import instanceBacEnd from 'helpers/requestBackEnd';
+
 import {
   GridContainer,
   SRLNoItems,
@@ -22,8 +22,8 @@ export default function SearchRecipesList({ searchQuery, searchType }) {
 
   useEffect(() => {
     const processedValue = searchQuery.trim().replace(/ +/g, '%20');
-    instanceBacEnd.defaults.headers.common.Authorization =
-      'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDJkZDdmODlmN2I0N2RlNDk0OGI4ZDIiLCJpYXQiOjE2ODA4NzUxOTF9.4A3dgm3_3EJIMfFCD7WFd2VAM_iDXJ0MWGaA9UAg_uk';
+    // instanceBacEnd.defaults.headers.common.Authorization =
+    //   'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDJkZDdmODlmN2I0N2RlNDk0OGI4ZDIiLCJpYXQiOjE2ODA4NzUxOTF9.4A3dgm3_3EJIMfFCD7WFd2VAM_iDXJ0MWGaA9UAg_uk';
     // instanceBacEnd
     //   .get(`/search/?query=${processedValue}&type=${searchType}`)
     const response = queryBackEnd.querySearch(searchType, processedValue, 6, 1);
