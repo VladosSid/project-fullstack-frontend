@@ -1,12 +1,12 @@
 {
   "files": {
-    "main.css": "/project-fullstack-frontend/static/css/main.b781d394.css",
-    "main.js": "/project-fullstack-frontend/static/js/main.990b48bb.js",
+    "main.css": "/project-fullstack-frontend/static/css/main.26fc652f.css",
+    "main.js": "/project-fullstack-frontend/static/js/main.640c881b.js",
     "static/js/703.acb0ffa6.chunk.js": "/project-fullstack-frontend/static/js/703.acb0ffa6.chunk.js",
     "static/js/689.8a47d8bc.chunk.js": "/project-fullstack-frontend/static/js/689.8a47d8bc.chunk.js",
     "static/js/916.d6467c72.chunk.js": "/project-fullstack-frontend/static/js/916.d6467c72.chunk.js",
     "static/css/518.c727d827.chunk.css": "/project-fullstack-frontend/static/css/518.c727d827.chunk.css",
-    "static/js/518.8cc8f599.chunk.js": "/project-fullstack-frontend/static/js/518.8cc8f599.chunk.js",
+    "static/js/518.49ba46ef.chunk.js": "/project-fullstack-frontend/static/js/518.49ba46ef.chunk.js",
     "static/js/939.59e65a61.chunk.js": "/project-fullstack-frontend/static/js/939.59e65a61.chunk.js",
     "static/js/6.68681755.chunk.js": "/project-fullstack-frontend/static/js/6.68681755.chunk.js",
     "static/js/858.548dbbed.chunk.js": "/project-fullstack-frontend/static/js/858.548dbbed.chunk.js",
@@ -50,8 +50,8 @@
     "static/media/WelcomePageBgMobile.jpg": "/project-fullstack-frontend/static/media/WelcomePageBgMobile.8aac0106e3b46109ca27.jpg",
     "static/media/not_found_mob_1x.png": "/project-fullstack-frontend/static/media/not_found_mob_1x.830623caea782215ca94.png",
     "static/media/recipeHero_tab_1x.jpg": "/project-fullstack-frontend/static/media/recipeHero_tab_1x.9eca7de25584899934cd.jpg",
-    "static/media/camera.svg": "/project-fullstack-frontend/static/media/camera.64fb944f2bd998a99c7c9f5cf8ab6110.svg",
     "index.html": "/project-fullstack-frontend/index.html",
+    "static/media/camera.svg": "/project-fullstack-frontend/static/media/camera.64fb944f2bd998a99c7c9f5cf8ab6110.svg",
     "static/media/logo.svg": "/project-fullstack-frontend/static/media/logo.927dd7695b30c923da175e7879cb0f0d.svg",
     "static/media/pen.svg": "/project-fullstack-frontend/static/media/pen.d7617ee24ea37b4a422693a0f1770dbc.svg",
     "static/media/search.svg": "/project-fullstack-frontend/static/media/search.2d6c8eb4d03192b8ece8dd107cf5062e.svg",
@@ -60,13 +60,13 @@
     "static/media/x.svg": "/project-fullstack-frontend/static/media/x.4361f7124e50acd44864b5ffb9da59e7.svg",
     "static/media/menu.svg": "/project-fullstack-frontend/static/media/menu.0e7a3ceba8d1c2ac98513490254e232d.svg",
     "static/media/chevron-down.svg": "/project-fullstack-frontend/static/media/chevron-down.6ca21e11e19f8046984073ff192ce57d.svg",
-    "main.b781d394.css.map": "/project-fullstack-frontend/static/css/main.b781d394.css.map",
-    "main.990b48bb.js.map": "/project-fullstack-frontend/static/js/main.990b48bb.js.map",
+    "main.26fc652f.css.map": "/project-fullstack-frontend/static/css/main.26fc652f.css.map",
+    "main.640c881b.js.map": "/project-fullstack-frontend/static/js/main.640c881b.js.map",
     "703.acb0ffa6.chunk.js.map": "/project-fullstack-frontend/static/js/703.acb0ffa6.chunk.js.map",
     "689.8a47d8bc.chunk.js.map": "/project-fullstack-frontend/static/js/689.8a47d8bc.chunk.js.map",
     "916.d6467c72.chunk.js.map": "/project-fullstack-frontend/static/js/916.d6467c72.chunk.js.map",
     "518.c727d827.chunk.css.map": "/project-fullstack-frontend/static/css/518.c727d827.chunk.css.map",
-    "518.8cc8f599.chunk.js.map": "/project-fullstack-frontend/static/js/518.8cc8f599.chunk.js.map",
+    "518.49ba46ef.chunk.js.map": "/project-fullstack-frontend/static/js/518.49ba46ef.chunk.js.map",
     "939.59e65a61.chunk.js.map": "/project-fullstack-frontend/static/js/939.59e65a61.chunk.js.map",
     "6.68681755.chunk.js.map": "/project-fullstack-frontend/static/js/6.68681755.chunk.js.map",
     "858.548dbbed.chunk.js.map": "/project-fullstack-frontend/static/js/858.548dbbed.chunk.js.map",
@@ -89,7 +89,7 @@
     "3.1106a521.chunk.js.map": "/project-fullstack-frontend/static/js/3.1106a521.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.b781d394.css",
-    "static/js/main.990b48bb.js"
+    "static/css/main.26fc652f.css",
+    "static/js/main.640c881b.js"
   ]
 }
