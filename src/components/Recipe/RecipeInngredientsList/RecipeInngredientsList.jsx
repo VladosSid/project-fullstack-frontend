@@ -1,20 +1,28 @@
-import { InngredientsWrapper } from './RecipeInngredientsList.styled';
-import RecipeInngredientsItem from '../RecipeInngredientsItem/RecipeInngredientsItem';
+import {
+  InngredientsList,
+  RecipeItem,
+  InngredientContainer,
+  ImageWrapper,
+  IngName,
+  IngDescr,
+} from './RecipeInngredientsList.styled';
 
-// const queryRecipeId = async id => {
-//   try {
-//     const { data } = await instanceBacEnd.get(`/recipes/${id}`);
-
-//     return data;
-//   } catch (err) {
-//     return err.response.data.message;
-//   }
-// };
-const RecipeInngredientsList = () => {
+const RecipeInngredientsList = ({ ingredients }) => {
   return (
-    <InngredientsWrapper>
-      <RecipeInngredientsItem></RecipeInngredientsItem>
-    </InngredientsWrapper>
+    <InngredientsList>
+      {ingredients &&
+        ingredients.map(ingredient => (
+          <RecipeItem key={ingredient._id}>
+            <InngredientContainer>
+              <ImageWrapper>
+                <img src={ingredient.imageUrl} alt={ingredient.name} />
+              </ImageWrapper>
+              <IngName>{ingredient.title}</IngName>
+              <IngDescr>{ingredient.measure}</IngDescr>
+            </InngredientContainer>
+          </RecipeItem>
+        ))}
+    </InngredientsList>
   );
 };
 

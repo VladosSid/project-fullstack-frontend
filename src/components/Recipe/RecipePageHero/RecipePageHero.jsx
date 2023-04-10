@@ -6,16 +6,13 @@ import {
   HeroButtonAdd,
 } from './RecipePageHero.styled';
 
-export const RecipePageHero = ({ title, description }) => {
+export const RecipePageHero = ({ title, description, time }) => {
   return (
     <HeroContainer>
-      <HeroTiile>hey{title}</HeroTiile>
-      <HeroText>
-        {description}
-        (Is a healthy salad)
-      </HeroText>
+      <HeroTiile>{title}</HeroTiile>
+      <HeroText>{description}</HeroText>
       <HeroButtonAdd>Add to favorite recipes</HeroButtonAdd>
-      <CookingTime></CookingTime>
+      <CookingTime>{time} min</CookingTime>
     </HeroContainer>
   );
 };
