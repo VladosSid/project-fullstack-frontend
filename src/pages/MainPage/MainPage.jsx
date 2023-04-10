@@ -14,6 +14,7 @@ import {
   GridContainer,
   Section,
   MPButton,
+  RecipeCategoryNameLink,
 } from './MainPage.styled';
 
 import MainPageHero from '../../components/MainPageHero/MainPageHero';
@@ -105,7 +106,11 @@ export default function MainPage() {
           <Container>
             {Object.entries(RecipesByCategory).map(([category, recipes]) => (
               <div key={category}>
-                <RecipeCategoryName>{category}</RecipeCategoryName>
+                <RecipeCategoryName>
+                  <RecipeCategoryNameLink to={`/categories/${category}`}>
+                    {category}
+                  </RecipeCategoryNameLink>
+                </RecipeCategoryName>
                 <GridContainer>
                   {recipes.map(recipe => (
                     <DishCard
@@ -115,7 +120,6 @@ export default function MainPage() {
                     />
                   ))}
                 </GridContainer>
-
                 <Button onClick={() => handleCategoryClick(category)}>
                   See all
                 </Button>

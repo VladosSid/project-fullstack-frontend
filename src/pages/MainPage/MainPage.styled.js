@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import theme from '../../style/generalStyle';
-
+import { Link } from 'react-router-dom';
 export const ContainerWrapper = styled.div`
   /* height: 100%; */
 
@@ -59,18 +59,22 @@ export const GridContainer = styled.div`
 `;
 export const RecipeCategoryName = styled.h2`
   margin-bottom: 32px;
+`;
+export const RecipeCategoryNameLink = styled(Link)`
   font-family: 'Poppins';
   font-style: normal;
   font-weight: 600;
   font-size: 28px;
   line-height: 1;
-
+  text-decoration: none;
   letter-spacing: -0.02em;
   /* font-feature-settings: 'liga' off; */
 
   color: #001833;
+  &:hover {
+    color: #8baa36;
+  }
 `;
-
 export const CardWrapper = styled.div`
   position: relative;
   margin-bottom: 24px;
@@ -152,6 +156,13 @@ export const MPButton = styled.button`
   line-height: 1.5;
   text-align: center;
   color: #22252a;
+  &:hover,
+  &:focus {
+    background-color: #8baa36;
+    cursor: pointer;
+    outline: none;
+    color: #fafafa;
+  }
   @media ${theme.device.tablet} {
     width: 239px;
     height: 61px;
