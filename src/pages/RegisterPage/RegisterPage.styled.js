@@ -1,9 +1,9 @@
 import styled from 'styled-components';
 import theme from '../../style/generalStyle';
 
-import MobileBg from "../../images/Auth/AuthBgMobile.jpg";
-import TabletBg from "../../images/Auth/AuthBgTablet.jpg";
-import DesktopBg from "../../images/Auth/AuthBgDesktop.jpg";
+import MobileBg from "../../images/Auth/AuthBgMobile.png";
+import TabletBg from "../../images/Auth/AuthBgTablet.png";
+import DesktopBg from "../../images/Auth/AuthBgDesktop.png";
 import MobileImg from "../../images/Auth/AuthImgMobile.png";
 import TabletImg from "../../images/Auth/AuthImgTablet.png";
 import DesktopImg from "../../images/Auth/AuthImgDesktop.png";
@@ -14,6 +14,7 @@ export const Container = styled.div`
     height: 100vh;
     width: calc(100vw - 70px);  
     color: #fff;
+    background-color: #ECECEC;
 
     display: flex;
     flex-direction: column;
