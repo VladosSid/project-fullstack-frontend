@@ -10,7 +10,7 @@ import {
   Tabl,
 } from './RecipePage.styled';
 import { MainContainer } from '../../components/MainContainer/MainContainer';
-// import queryRecipeId from '../../helpers/request/queryBackEnd';
+import queryBackEnd from '../../helpers/request/queryBackEnd';
 // import ingredients from '../../ingredients.json';
 
 const RecipePage = () => {
@@ -18,21 +18,24 @@ const RecipePage = () => {
 
   useEffect(() => {
     const fetchData = async () => {
-      axios.defaults.headers.common.Authorization =
-        'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDJlOTUzNTMyY2UwM2ZiNGY4NmM1MDUiLCJpYXQiOjE2ODA3NzQ0NTV9.8SdYAK9XvsoHmvOJYHG_N6QCB59NbzQgdSNGr97rpwg';
+      const data = await queryBackEnd.queryRecipeId('640cd5ac2d9fecf12e889807');
+      console.log(data);
+      // return
+      setRecipe(data.result.data[0]);
 
-      try {
-        const recipe = await axios.get(
-          'https://backend-soyummy.onrender.com/api/recipes/640cd5ac2d9fecf12e889807'
-        );
-        setRecipe(recipe.data.result.data[0]);
-        console.log(recipe.data.result.data[0]);
-      } catch (error) {
-        console.log(error);
-      } finally {
-      }
+      //   axios.defaults.headers.common.Authorization =
+      //     'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDJlOTUzNTMyY2UwM2ZiNGY4NmM1MDUiLCJpYXQiOjE2ODA3NzQ0NTV9.8SdYAK9XvsoHmvOJYHG_N6QCB59NbzQgdSNGr97rpwg';
+      //   try {
+      //     const recipe = await axios.get(
+      //       'https://backend-soyummy.onrender.com/api/recipes/640cd5ac2d9fecf12e889807'
+      //     );
+      //     setRecipe(recipe.data.result.data[0]);
+      //     console.log(recipe.data.result.data[0]);
+      //   } catch (error) {
+      //     console.log(error);
+      //   } finally {
+      //   }
     };
-
     fetchData();
   }, []);
 
