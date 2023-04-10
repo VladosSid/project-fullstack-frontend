@@ -1,21 +1,18 @@
-import { useDispatch } from 'react-redux';
 import { NavLink } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 
 import Logo from 'components/Logo/Logo';
-import theme from '../../../redux/theming/theme-operations';
 import { Ul } from '../../Navigation/Navigation.styled';
 import { CrossIcon } from './MobileMenu.styled';
 import { BackdropMobileMenu } from './MobileMenu.styled';
-import { SwButton } from './MobileMenu.styled';
 import styles from './MobileMenu.module.css';
 import search from '../../../images/Header/search.svg';
 import x from '../../../images/Header/x.svg';
+import SwitcherBtn from './SwitcherBtn';
 
 const MobileMenu = () => {
   const [isOpen, setIsOpen] = useState(false);
 
-  const dispatch = useDispatch();
   const target = document.querySelector('body');
 
   useEffect(() => {
@@ -66,11 +63,10 @@ const MobileMenu = () => {
               </NavLink>
             </li>
           </Ul>
-          <SwButton onClick={() => dispatch(theme.themeSwitch('white'))} />
+          <SwitcherBtn />
         </nav>
       </BackdropMobileMenu>
     </div>
   );
 };
-
 export default MobileMenu;

@@ -1,29 +1,29 @@
 import styled from 'styled-components';
 import theme from 'style/generalStyle';
-import { SwBtn } from './SwitcherBtn.styled';
-import { HeaderSw } from './SwitcherHeader.styled';
+// import { SwBtn } from './SwitcherBtn.styled';
+// import { HeaderSw } from './SwitcherHeader.styled';
 
-export const SwButton = styled(SwBtn)`
-  @media ${theme.device.mobail} {
-    bottom: -110px;
-    left: -110px;
-  }
-  @media ${theme.device.tablet} {
-    bottom: -100px;
-    left: -210px;
-  }
-`;
-export const SB = styled(HeaderSw)`
-  @media ${theme.device.mobail} {
-    display: none;
-  }
-  @media ${theme.device.tablet} {
-    display: none;
-  }
-  @media ${theme.device.desktop} {
-    display: block;
-  }
-`;
+// export const SwButton = styled(SwBtn)`
+//   @media ${theme.device.mobail} {
+//     bottom: -110px;
+//     left: -110px;
+//   }
+//   @media ${theme.device.tablet} {
+//     bottom: -100px;
+//     left: -210px;
+//   }
+// `;
+// export const SB = styled(HeaderSw)`
+//   @media ${theme.device.mobail} {
+//     display: none;
+//   }
+//   @media ${theme.device.tablet} {
+//     display: none;
+//   }
+//   @media ${theme.device.desktop} {
+//     display: block;
+//   }
+// `;
 
 export const BurgerBtn = styled.button`
   cursor: pointer;
