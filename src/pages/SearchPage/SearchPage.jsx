@@ -10,6 +10,7 @@ import SearchBar from 'components/SearchBar/SearchBar';
 import SearchRecipesList from 'components/SearchRecipesList/SearchRecipesList';
 import { Notify } from 'notiflix/build/notiflix-notify-aio';
 import BG from '../../images/mainPagePhoto/search_tabl_opt.png';
+
 //-------------------------------
 export default function SearchPage() {
   // const location = useLocation();

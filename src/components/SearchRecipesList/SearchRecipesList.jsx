@@ -11,7 +11,7 @@ import {
   SRLNoItemsText,
   ErrorComponent,
 } from './SearchRecipesList.styled';
-
+import { queryBackEnd } from 'helpers/request';
 //-------------------------
 export default function SearchRecipesList({ searchQuery, searchType }) {
   const location = useLocation();
@@ -24,10 +24,12 @@ export default function SearchRecipesList({ searchQuery, searchType }) {
     const processedValue = searchQuery.trim().replace(/ +/g, '%20');
     instanceBacEnd.defaults.headers.common.Authorization =
       'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDJkZDdmODlmN2I0N2RlNDk0OGI4ZDIiLCJpYXQiOjE2ODA4NzUxOTF9.4A3dgm3_3EJIMfFCD7WFd2VAM_iDXJ0MWGaA9UAg_uk';
-    instanceBacEnd
-      .get(`/search/?query=${processedValue}&type=${searchType}`)
-      .then(function (response) {
-        setRecipes(response.data.result.data);
+    // instanceBacEnd
+    //   .get(`/search/?query=${processedValue}&type=${searchType}`)
+    const response = queryBackEnd.querySearch(searchType, processedValue, 6, 1);
+    response
+      .then(results => {
+        setRecipes(results.result.data);
         setError(null);
       })
       .catch(function (error) {
