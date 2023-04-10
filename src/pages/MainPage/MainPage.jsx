@@ -3,6 +3,7 @@ import React, { useState, useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 // import instanceBacEnd from 'helpers/requestBackEnd';
 // import axios from 'axios';
+import { Link } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
 import { MainContainer } from '../../components/MainContainer/MainContainer';
 import { queryBackEnd } from 'helpers/request';
@@ -14,6 +15,7 @@ import {
   GridContainer,
   Section,
   MPButton,
+  RecipeCategoryNameLink,
 } from './MainPage.styled';
 
 import MainPageHero from '../../components/MainPageHero/MainPageHero';
@@ -105,7 +107,12 @@ export default function MainPage() {
           <Container>
             {Object.entries(RecipesByCategory).map(([category, recipes]) => (
               <div key={category}>
-                <RecipeCategoryName>{category}</RecipeCategoryName>
+                <RecipeCategoryName>
+                  <RecipeCategoryNameLink to={`/categories/${category}`}>
+                    {category}
+                  </RecipeCategoryNameLink>
+                </RecipeCategoryName>
+
                 <GridContainer>
                   {recipes.map(recipe => (
                     <DishCard
