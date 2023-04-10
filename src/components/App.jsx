@@ -43,8 +43,10 @@ export const App = () => {
     dispatch(authOperations.fetchCurrentUser());
   }, [dispatch]);
 
+  // [themeUser];
+
   return (
-    <ThemeProvider theme={theme[themeUser]}>
+    <ThemeProvider theme={theme.dark}>
       {isGetingCurent ? (
         <b>Refreshing user...</b>
       ) : (
