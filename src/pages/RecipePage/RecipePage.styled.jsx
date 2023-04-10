@@ -14,11 +14,9 @@ export const ContanerRecipeList = styled.div`
   } ;
 `;
 
-export const Tabl = styled.div``;
-
 export const TitltListWrap = styled.div`
   display: flex;
-  width: 357px;
+  width: 340px;
   background: #8baa36;
   border-radius: 8px;
   padding: 10px;
@@ -29,14 +27,14 @@ export const TitltListWrap = styled.div`
   margin-bottom: 24px;
 
   @media ${theme.device.tablet} {
-    width: 734px;
+    width: 665px;
     font-size: 18px;
     line-height: 27px;
     padding: 20px;
     margin-bottom: 23px;
   }
   @media ${theme.device.desktop} {
-    width: 1240px;
+    width: 1160px;
     padding: 21px 40px;
     margin-bottom: 50px;
   } ;
