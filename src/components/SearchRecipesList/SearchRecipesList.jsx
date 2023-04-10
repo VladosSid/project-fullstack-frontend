@@ -43,7 +43,6 @@ export default function SearchRecipesList({ searchQuery, searchType }) {
       const width = window.innerWidth;
 
       if (width >= 1304) {
-        console.log('iwidth ', width);
         setItemsPerPage(12);
       } else {
         setItemsPerPage(6);
@@ -66,8 +65,7 @@ export default function SearchRecipesList({ searchQuery, searchType }) {
     response
       .then(results => {
         setRecipes(results.result.data.list);
-        console.log('itemsPerPage', itemsPerPage);
-        console.log('results', results.result.data.list);
+
         //---- Pag
         setTotalPages(Math.ceil(results.result.data.totalItem / itemsPerPage));
         //-----
