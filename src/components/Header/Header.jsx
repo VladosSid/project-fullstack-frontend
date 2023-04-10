@@ -16,7 +16,6 @@ const Header = () => {
     return () =>
       window.removeEventListener('scroll', () => setScroll(window.scrollY));
   }, []);
-
   return (
     <HeaderContainer
       className={scroll > 80 ? helper.visible : helper.transparent}

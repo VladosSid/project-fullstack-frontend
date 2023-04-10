@@ -26,16 +26,13 @@ const FavoritePage = () => {
     const data = queryBackEnd.queryAllFavorite();
     data
       .then(results => {
-        console.log(results.result.data);
         setRecipes(results.result.data.list);
         setAllItem(results.result.data.totalItem);
-        console.log(results.result.data.totalItem);
         const pageQty = Math.ceil(results.result.data.totalItem / 4);
-        console.log(pageQty);
         setAllPage(pageQty);
       })
       .catch(error => error.message);
-  }, [allItem]);
+  }, []);
 
   const changeNum = (_, num) => {
     setCurrentPage(num);
@@ -44,25 +41,44 @@ const FavoritePage = () => {
       .then(response => setRecipes(response.data.result.data.list))
       .catch(error => console.log(error.message));
   };
-
+  console.log(currentPage);
+  const removeFavorite = recipeId => {
+    const lastItem = allItem % 4;
+    let pageBack;
+    if (currentPage !== 1 || lastItem === 1) {
+      pageBack = currentPage - 1;
+    } else pageBack = currentPage;
+    console.log(currentPage);
+    instanceBacEnd
+      .patch(`/favorite/remove?page=${pageBack}`, { recipe: `${recipeId}` })
+      .then(response => setRecipes(response.data.result.data.list))
+      .catch(error => console.log(error.message));
+  };
   return (
     <MainContainer>
       <MainPageTitle title={'Favorite'} />
-      <FavoriteList recipes={recipes} allItem={allItem} location={location}>
+      <FavoriteList
+        recipes={recipes}
+        allItem={allItem}
+        location={location}
+        removeFavorite={removeFavorite}
+      >
         {Children}
       </FavoriteList>
       <PaginationWrapper>
         <Container>
           <Stack spacing={2}>
-            <Pagination
-              count={allPage}
-              page={currentPage}
-              onChange={changeNum}
-              // showFirstButton
-              // showLastButton
-              siblingCount={1}
-              sx={{ marginY: 3, marginX: 'auto' }}
-            />
+            {allPage > 1 && (
+              <Pagination
+                count={allPage}
+                page={currentPage}
+                onChange={changeNum}
+                // showFirstButton
+                // showLastButton
+                siblingCount={1}
+                sx={{ marginY: 3, marginX: 'auto' }}
+              />
+            )}
           </Stack>
         </Container>
       </PaginationWrapper>
