@@ -28,7 +28,7 @@ export const GridContainer = styled.div`
     display: grid;
     grid-template-columns: repeat(4, 1fr);
 
-    grid-column-gap: 14px;
+    grid-column-gap: 13px;
     grid-row-gap: 100px;
   }
 `;

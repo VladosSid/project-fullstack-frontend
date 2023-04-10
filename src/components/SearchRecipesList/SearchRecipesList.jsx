@@ -35,7 +35,7 @@ export default function SearchRecipesList({ searchQuery, searchType }) {
     //   'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDJkZDdmODlmN2I0N2RlNDk0OGI4ZDIiLCJpYXQiOjE2ODA4NzUxOTF9.4A3dgm3_3EJIMfFCD7WFd2VAM_iDXJ0MWGaA9UAg_uk';
     // instanceBacEnd
     //   .get(`/search/?query=${processedValue}&type=${searchType}`)
-    const response = queryBackEnd.querySearch(searchType, processedValue, 3);
+    const response = queryBackEnd.querySearch(searchType, processedValue, 4);
     response
       .then(results => {
         console.log(results.result.data);
