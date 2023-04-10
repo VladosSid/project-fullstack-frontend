@@ -12,20 +12,37 @@ export const Container = styled.div`
   justify-content: center;
 
   padding: 0 35px;
-  background-image: url(${MobileBg});
+  height: 100vh;
+  width: calc(100vw - 70px); 
+
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  height: 100vh;
-  width: calc(100vw - 70px);  
+  background-image: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0.6) 28.58%,
+      rgba(0, 0, 0, 0.345172) 48.98%,
+      rgba(0, 0, 0, 0) 100%
+    ), url(${MobileBg});
+   
   color: #fff;
 
   @media ${theme.device.tablet} {
-    background-image: url(${TabletBg});
+    background-image: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0.6) 28.58%,
+      rgba(0, 0, 0, 0.345172) 48.98%,
+      rgba(0, 0, 0, 0) 100%
+    ), url(${TabletBg});
   }
 
   /* desktop */
   @media screen and (min-width: 1025px) {
-    background-image: url(${DesktopBg});
+    background-image: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0.5) 28.58%,
+      rgba(0, 0, 0, 0.345172) 48.98%,
+      rgba(0, 0, 0, 0) 100%
+    ), url(${DesktopBg});
   }
 `
