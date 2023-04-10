@@ -43,6 +43,11 @@ export const FormTitle = styled.h2`
         font-size: 28px;
         line-height: 1.07;
     }
+
+    /* desktop */
+    @media screen and (min-width: 1025px) {
+        margin-bottom: 50px;
+    }
 `
 export const List = styled.ul`
     list-style: none;
@@ -68,7 +73,7 @@ export const ListItem = styled.li`
 export const Label = styled.label`
     svg {
         position: absolute;
-        top: 12px;
+        top: 13px;
         left: 14px;
 
         width: 18px;
@@ -80,6 +85,8 @@ export const Label = styled.label`
         @media ${theme.device.tablet} {
             width: 24px;
             height: 24px;
+
+            top: 18px;
         }
     }
 `
