@@ -54,7 +54,7 @@ export const GridContainer = styled.div`
 
   @media ${theme.device.desktop} {
     display: flex;
-    gap: 14px;
+    gap: 13px;
   }
 `;
 export const RecipeCategoryName = styled.h2`

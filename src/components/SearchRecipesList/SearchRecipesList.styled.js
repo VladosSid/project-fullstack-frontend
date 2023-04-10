@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import search_mob from '../../images/mainPagePhoto/search_mob_opt.png';
 import search_tabl from '../../images/mainPagePhoto/search_tabl_opt.png';
+import theme from '../../style/generalStyle';
 // import theme from '../../style/generalStyle';
 // export const GridContainer = styled.div`
 //   width: 100%;
@@ -15,20 +16,20 @@ export const GridContainer = styled.div`
   display: grid;
   grid-template-columns: 1fr;
   grid-row-gap: 28px;
-  padding-bottom: 40px;
-  @media screen and (min-width: 768px) {
+  /* padding-bottom: 40px; */
+  @media ${theme.device.tablet} {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-column-gap: 32px;
     grid-row-gap: 32px;
-    padding-bottom: 50px;
+    /* padding-bottom: 50px; */
   }
 
-  @media screen and (min-width: 1240px) {
+  @media ${theme.device.desktop} {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
 
-    grid-column-gap: 14px;
+    grid-column-gap: 13px;
     grid-row-gap: 100px;
   }
 `;
@@ -46,7 +47,7 @@ export const SRLNoItems = styled.div`
     background-position: center top 10px;
     background-size: 208px;
   }
-  @media screen and (min-width: 768px) {
+  @media ${theme.device.tablet} {
     width: 380px;
     height: 320px;
     background-image: url('${search_tabl}');
@@ -54,7 +55,7 @@ export const SRLNoItems = styled.div`
     background-size: 350px;
   }
 
-  @media screen and (min-width: 1240px) {
+  @media ${theme.device.desktop} {
   }
 `;
 export const SRLNoItemsText = styled.p`
@@ -71,12 +72,12 @@ export const SRLNoItemsText = styled.p`
     margin-top: 160px;
     font-size: 14px;
   }
-  @media screen and (min-width: 768px) {
+  @media ${theme.device.tablet} {
     font-size: 24px;
     margin-top: 266px;
   }
 
-  @media screen and (min-width: 1240px) {
+  @media ${theme.device.desktop} {
   }
 `;
 
@@ -94,12 +95,12 @@ export const ErrorComponent = styled.p`
     margin-top: 160px;
     font-size: 14px;
   }
-  @media screen and (min-width: 768px) {
+  @media ${theme.device.tablet} {
     font-size: 24px;
     margin-top: 266px;
   }
 
-  @media screen and (min-width: 1240px) {
+  @media ${theme.device.desktop} {
   }
 `;
 
@@ -111,4 +112,8 @@ export const imgNoItems = styled.div`
 export const PaginationWrapper = styled.div`
   display: flex;
   justify-content: center;
+  margin-top: 40px;
+  @media ${theme.device.tablet} {
+    margin-top: 50px;
+  }
 `;

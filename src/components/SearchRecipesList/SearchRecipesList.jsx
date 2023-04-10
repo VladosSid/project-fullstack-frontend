@@ -10,11 +10,11 @@ import {
   SRLNoItems,
   SRLNoItemsText,
   ErrorComponent,
-  // PaginationWrapper,
+  PaginationWrapper,
 } from './SearchRecipesList.styled';
 import { queryBackEnd } from 'helpers/request';
 //----
-// import { Container, Pagination, Stack } from '@mui/material';
+import { Container, Pagination, Stack } from '@mui/material';
 
 //-------------------------
 export default function SearchRecipesList({ searchQuery, searchType }) {
@@ -24,26 +24,24 @@ export default function SearchRecipesList({ searchQuery, searchType }) {
   const [recipes, setRecipes] = useState([]);
   const [error, setError] = useState(null);
   //------------------ Pagination
-  // const [currentPage, setCurrentPage] = useState(1);
-  // const [allPage, setAllPage] = useState();
-  // // const [allItem, setAllItem] = useState(1);
-  // const [setAllItem] = useState(1);
+  const [page, setPage] = useState(1);
+  const [totalPages, setTotalPages] = useState(1);
+  const itemsPerPage = 4;
   //-------------
   useEffect(() => {
     const processedValue = searchQuery.trim().replace(/ +/g, '%20');
-    // instanceBacEnd.defaults.headers.common.Authorization =
-    //   'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDJkZDdmODlmN2I0N2RlNDk0OGI4ZDIiLCJpYXQiOjE2ODA4NzUxOTF9.4A3dgm3_3EJIMfFCD7WFd2VAM_iDXJ0MWGaA9UAg_uk';
-    // instanceBacEnd
-    //   .get(`/search/?query=${processedValue}&type=${searchType}`)
-    const response = queryBackEnd.querySearch(searchType, processedValue, 3);
+
+    const response = queryBackEnd.querySearch(
+      searchType,
+      processedValue,
+      itemsPerPage,
+      page
+    );
     response
       .then(results => {
-        console.log(results.result.data);
         setRecipes(results.result.data.list);
         //---- Pag
-        // setAllItem(results.result.data.totalItem);
-        // const pageQty = Math.ceil(results.result.data.totalItem / 3);
-        // setAllPage(pageQty);
+        setTotalPages(Math.ceil(results.result.data.totalItem / itemsPerPage));
         //-----
         setError(null);
       })
@@ -58,16 +56,17 @@ export default function SearchRecipesList({ searchQuery, searchType }) {
           setError(<ErrorComponent message="An error occurred" />);
         }
       });
-  }, [searchQuery, searchType]);
-  // const changeNum = (_, num) => {
-  //   const processedValue = searchQuery.trim().replace(/ +/g, '%20');
-  //   setCurrentPage(num);
-  //   queryBackEnd
-  //     .querySearch(searchType, processedValue, 3, num)
-  //     // .get(`/favorite?page=${num}`)
-  //     .then(results => setRecipes(results.result.data.list))
-  //     .catch(error => console.log(error.message));
-  // };
+  }, [searchQuery, searchType, itemsPerPage, page]);
+
+  const changeNum = (_, num) => {
+    const processedValue = searchQuery.trim().replace(/ +/g, '%20');
+    setPage(num);
+    queryBackEnd
+      .querySearch(searchType, processedValue, 3, num)
+      // .get(`/favorite?page=${num}`)
+      .then(results => setRecipes(results.result.data.list))
+      .catch(error => console.log(error.message));
+  };
   return (
     <>
       {error ? (
@@ -88,21 +87,23 @@ export default function SearchRecipesList({ searchQuery, searchType }) {
               <DishCard key={recipe._id} location={location} recipe={recipe} />
             ))}
           </GridContainer>
-          {/* <PaginationWrapper>
-            <Container>
-              <Stack spacing={2}>
-                <Pagination
-                  count={allPage}
-                  page={currentPage}
-                  onChange={changeNum}
-                  // showFirstButton
-                  // showLastButton
-                  siblingCount={1}
-                  sx={{ marginY: 3, marginX: 'auto' }}
-                />
-              </Stack>
-            </Container>
-          </PaginationWrapper> */}
+          {totalPages > 1 && (
+            <PaginationWrapper>
+              <Container>
+                <Stack spacing={2}>
+                  <Pagination
+                    count={totalPages}
+                    page={page}
+                    onChange={changeNum}
+                    // showFirstButton
+                    // showLastButton
+                    siblingCount={1}
+                    sx={{ marginY: 3, marginX: 'auto' }}
+                  />
+                </Stack>
+              </Container>
+            </PaginationWrapper>
+          )}
         </>
       )}
     </>
