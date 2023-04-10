@@ -16,7 +16,6 @@ export const Item = styled.li`
   padding: 0 8px;
   max-width: 100%;
 
-
   @media ${theme.device.tablet} {
     // padding: 0 32px;
     max-width: 704px;
@@ -124,4 +123,3 @@ export const RemoveSvg = styled.div`
     }
   }
 `;
-

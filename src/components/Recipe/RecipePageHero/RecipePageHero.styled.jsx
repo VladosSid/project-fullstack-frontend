@@ -8,7 +8,9 @@ import tab1 from '../../../images/RecipeHero/recipeHero_tab_1x.jpg';
 import desktop1 from '../../../images/RecipeHero/recipeHero_desktop_1x.jpg';
 // import desktop2 from '../../../images/RecipeHero/recipeHero_desktop_2x.jpg';
 
-export const Container = styled.div`
+export const HeroContainer = styled.div`
+  position: static;
+  z-index: 3;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -21,8 +23,6 @@ export const Container = styled.div`
   background-size: 100%;
   background-color: transparent;
 
-  border: 1px solid red;
-
   @media ${theme.device.tablet} {
     background-image: url(${tab1});
     padding-bottom: 90px;
@@ -34,7 +34,7 @@ export const Container = styled.div`
   }
 `;
 
-export const HeroTiile = styled.title`
+export const HeroTiile = styled.h1`
   font-family: 'Poppins';
   font-style: normal;
   font-weight: 600;
@@ -68,7 +68,7 @@ export const HeroTiile = styled.title`
   }
 `;
 
-export const HeroText = styled.text`
+export const HeroText = styled.p`
   font-family: 'Poppins';
   font-style: normal;
   font-weight: 400;
@@ -97,6 +97,27 @@ export const HeroText = styled.text`
     -webkit-line-clamp: 3;
     margin-bottom: 15px;
     width: 656px;
+  }
+`;
+
+export const HeroButtonAdd = styled.button`
+  padding: 10px 18px;
+  background-color: transparent;
+  color: #22252a;
+  border-radius: 24px 44px;
+  border: 1px solid #8baa36;
+  transition: all 250ms linear;
+  font-size: 10px;
+  line-height: 1.5;
+  @media ${theme.device.tablet};
+   {
+    padding: 18px 44px;
+    font-size: 16px;
+  }
+  &:hover,
+  &:focus {
+    background-color: #8baa36;
+    color: #fafafa;
   }
 `;
 
