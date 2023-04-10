@@ -24,8 +24,8 @@ const RecipeIngridientsFields = ({ onChange }) => {
   const [quantity, setQuantity] = useState(null);
 
   async function fetchMyIngredients()  {
-    const {data} = await queryBackEnd.queryAllIngredients()
-    setIngredients(data);
+    const { result } = await queryBackEnd.queryAllIngredients()
+    setIngredients(result.data);
   }
 
   useEffect(() => {
