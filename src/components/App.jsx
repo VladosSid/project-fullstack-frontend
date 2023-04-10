@@ -12,8 +12,6 @@ import PrivateRoute from './Routes/PrivateRoute';
 
 import getTheme from '../redux/theming/theme-selector';
 import theme from '../style/generalStyle';
-import Burger from './Burger/Burger';
-import Popup from './Popup/Popup';
 
 const WelcomePage = lazy(() => import('../pages/WelcomePage/WelcomePage'));
 const RegisterPage = lazy(() => import('../pages/RegisterPage/RegisterPage'));
@@ -127,8 +125,6 @@ export const App = () => {
               </Route>
             </Routes>
             <Modal />
-            <Burger />
-            <Popup />
           </AppBox>
         </Suspense>
       )}
