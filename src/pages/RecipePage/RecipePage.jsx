@@ -17,13 +17,14 @@ const RecipePage = () => {
   const { recipeId } = useParams();
   useEffect(() => {
     const fetchData = async () => {
+      console.log(recipeId);
       const data = await queryBackEnd.queryRecipeId(recipeId);
       console.log(data);
 
       setRecipe(data.result.data[0]);
     };
     fetchData();
-  }, []);
+  }, [recipeId]);
 
   return (
     <>
