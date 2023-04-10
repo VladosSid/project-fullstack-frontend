@@ -22,7 +22,7 @@ const MyRecipesItem = ({ recipe, location, removeOwnRecipe }) => {
       <CardTextWrapper>
         <CardTitle>{recipe.title}</CardTitle>
         <CardDescription>{recipe.description}</CardDescription>
-        <CardTime>{recipe.time}</CardTime>
+        <CardTime>{recipe.time} min</CardTime>
       </CardTextWrapper>
       <Link to={`/recipe-page/${recipe._id}`} state={{ from: location }}>
         <CardButtonSee>See recipe</CardButtonSee>
