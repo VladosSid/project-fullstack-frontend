@@ -5,6 +5,7 @@ import instanceBacEnd from 'helpers/requestBackEnd';
 // import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import { MainContainer } from '../../components/MainContainer/MainContainer';
+import { queryBackEnd } from 'helpers/request';
 import {
   Container,
   RecipeCategoryName,
@@ -62,11 +63,12 @@ export default function MainPage() {
     instanceBacEnd.defaults.headers.common.Authorization =
       'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDJkZDdmODlmN2I0N2RlNDk0OGI4ZDIiLCJpYXQiOjE2ODA4NzUxOTF9.4A3dgm3_3EJIMfFCD7WFd2VAM_iDXJ0MWGaA9UAg_uk';
 
-    instanceBacEnd
-      .get(`/recipes/main-page?query=${quantity}`)
-
-      .then(function (response) {
-        setRecipes(response.data.result.data);
+    // instanceBacEnd
+    //   .get(`/recipes/main-page?query=${quantity}`)
+    const response = queryBackEnd.queryRecipeMinePage(quantity);
+    response
+      .then(results => {
+        setRecipes(results.result.data);
       })
       .catch(function (error) {
         console.log(error.message);
