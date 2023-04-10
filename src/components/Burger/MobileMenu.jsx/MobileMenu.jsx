@@ -17,6 +17,9 @@ const MobileMenu = () => {
 
   useEffect(() => {
     const burgerBtn = document.getElementById('burger-btn');
+    if (!burgerBtn) {
+      return;
+    }
     burgerBtn.addEventListener('click', () => {
       setIsOpen(true);
       target.classList.add(styles.hidden);

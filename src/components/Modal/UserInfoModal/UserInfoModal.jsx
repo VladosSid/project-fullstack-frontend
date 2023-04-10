@@ -30,6 +30,9 @@ const UserInfoModal = () => {
 
   useEffect(() => {
     const openBtn = document.getElementById('open-modal-button');
+    if (!openBtn) {
+      return;
+    }
     openBtn.addEventListener('click', () => {
       setIsOpen(true);
       target.classList.add(styles.hidden);
