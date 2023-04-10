@@ -29,7 +29,7 @@ export const SearchInput = styled.input`
   padding-left: 32px;
   @media ${theme.device.tablet} {
     width: ${props => (props.page === 'main' ? '330px' : '350px')};
-    height: ${props => (props.page === 'main' ? '59px' : '59px')};
+    height: 59px;
     font-size: 16px;
     padding-left: ${props => props.page === 'main' && '38px'};
   }
@@ -72,13 +72,13 @@ export const SearchBtn = styled.button`
     width: ${props => props.page === 'main' && '113px'};
   }
   @media ${theme.device.tablet} {
-    width: ${props => (props.page === 'main' ? '161px' : '161px')};
-    height: ${props => (props.page === 'main' ? '59px' : '61px')};
+    width: 161px;
+    height: 63px;
     font-size: 16px;
   }
   @media ${theme.device.desktop} {
     width: 161px;
-    height: ${props => (props.page === 'main' ? '75px' : '73px')};
+    height: 75px;
     font-size: 16px;
   }
 `;
