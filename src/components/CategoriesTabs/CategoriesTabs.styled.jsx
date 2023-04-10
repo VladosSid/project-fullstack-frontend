@@ -8,8 +8,10 @@ export const StyledTabs = styled(Tabs)`
   }
 `;
 
-export const StyledTab = styled(Tab)`
+export const StyledTab = styled(Tab)`  
+
   && {
+    
     font-family: 'Poppins';
     font-style: normal;
     font-weight: 400;
@@ -18,7 +20,6 @@ export const StyledTab = styled(Tab)`
     color: #bdbdbd;
     text-transform: capitalize;
     padding: 0 22px;
-
     &:hover {
       color: #8baa36;
     },
@@ -35,14 +36,24 @@ export const StyledTab = styled(Tab)`
   
 `;
 
-export const StyledBox = styled(Box)`
-  && {
-    display: flex;
-    gap: 14px;
+export const RecipesBox = styled(Box)`
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: 32px;
+  row-gap: 28px;
+  margin-bottom: 100px;
 
-    @media ${theme.device.mobail} {
-      justify-content: center;
-    }
+  @media ${theme.device.tablet} {
+    padding-top: 50px;
+    row-gap: 32px;
+    column-gap: 32px;
+    margin-bottom: 200px;
+  }
+  @media ${theme.device.desktop} {
+    padding-top: 40px;
+    row-gap: 100px;
+    column-gap: 14px;
+    margin-bottom: 200px;
   }
 `;
 
@@ -51,9 +62,9 @@ export const DishCardContainer = styled.div`
     width: 336px;
     heigth: 323px;
   }
-  //  ${theme.device.desktop}
-  @media screen and (min-width: 1240px) {
-    width: 300px;
+  //  screen and (min-width: 1240px)
+  @media ${theme.device.desktop} {
+    width: 299px;
     heigth: 323px;
     overflow: hidden;
   }
