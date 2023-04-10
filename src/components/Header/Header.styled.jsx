@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import theme from 'style/generalStyle';
 
-export const HeaderContainer = styled.div`
+export const HeaderContainer = styled.header`
   position: fixed;
   display: flex;
   align-items: center;
@@ -11,15 +11,16 @@ export const HeaderContainer = styled.div`
   width: 100vw;
 `;
 
-export const HeaderBox = styled.header`
+export const HeaderBox = styled.div`
   position: absolute;
   left: 50%;
-  transform: translateX(-50%);
+  top: 50%;
+  transform: translate(-50%, -50%);
   display: flex;
   align-items: center;
 
   @media ${theme.device.mobail} {
-    width: 375px;
+    width: 343px;
   }
   @media ${theme.device.tablet} {
     width: 704px;

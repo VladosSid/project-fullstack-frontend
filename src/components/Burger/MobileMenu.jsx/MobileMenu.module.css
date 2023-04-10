@@ -7,7 +7,7 @@
         position: fixed;
     
         background-color: #ebf3d4;
-        background-image: url(../../images/Header/spinach.png);
+        background-image: url(../../../images/Header/spinach.png);
         background-repeat: no-repeat;
         background-position: bottom;
         background-size: cover;
@@ -31,7 +31,7 @@ width: 100vw;
     position: fixed;
 
     background-color: #ebf3d4;
-    background-image: url(../../images/Header/spinach.png);
+    background-image: url(../../../images/Header/spinach.png);
     background-repeat: no-repeat;
     background-position: bottom;
     background-size: cover;
