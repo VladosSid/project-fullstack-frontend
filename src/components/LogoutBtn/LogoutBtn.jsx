@@ -1,14 +1,9 @@
-import { useDispatch } from 'react-redux';
-import operations from 'redux/users/auth-operations';
-
 import { Logout } from './LogoutBtn.styled';
 import arrow from '../../images/Header/arrow.svg';
 
-const LogoutBtn = () => {
-  const dispatch = useDispatch();
-
+const LogoutBtn = ({ onClick }) => {
   return (
-    <Logout onClick={() => dispatch(operations.logOut())}>
+    <Logout id="close-modal-btn" onClick={() => onClick()}>
       Logout <img src={arrow} alt="pen" />
     </Logout>
   );
