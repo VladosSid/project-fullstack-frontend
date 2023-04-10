@@ -4,13 +4,17 @@ import { useLocation } from 'react-router-dom';
 // import axios from 'axios';
 // import RecipesList from './RecipesList';
 import DishCard from 'components/DishCard/DishCard';
-import instanceBacEnd from 'helpers/requestBackEnd';
+
 import {
   GridContainer,
   SRLNoItems,
   SRLNoItemsText,
   ErrorComponent,
+  // PaginationWrapper,
 } from './SearchRecipesList.styled';
+import { queryBackEnd } from 'helpers/request';
+//----
+// import { Container, Pagination, Stack } from '@mui/material';
 
 //-------------------------
 export default function SearchRecipesList({ searchQuery, searchType }) {
@@ -19,23 +23,35 @@ export default function SearchRecipesList({ searchQuery, searchType }) {
   // const [searchType, setSearchType] = useState('query');
   const [recipes, setRecipes] = useState([]);
   const [error, setError] = useState(null);
-
+  //------------------ Pagination
+  // const [currentPage, setCurrentPage] = useState(1);
+  // const [allPage, setAllPage] = useState();
+  // // const [allItem, setAllItem] = useState(1);
+  // const [setAllItem] = useState(1);
+  //-------------
   useEffect(() => {
-    console.log('in new effect', searchType, searchQuery);
     const processedValue = searchQuery.trim().replace(/ +/g, '%20');
-    instanceBacEnd.defaults.headers.common.Authorization =
-      'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDJkZDdmODlmN2I0N2RlNDk0OGI4ZDIiLCJpYXQiOjE2ODA4NzUxOTF9.4A3dgm3_3EJIMfFCD7WFd2VAM_iDXJ0MWGaA9UAg_uk';
-    instanceBacEnd
-      .get(`/search/?query=${processedValue}&type=${searchType}`)
-      .then(function (response) {
-        setRecipes(response.data.result.data);
+    // instanceBacEnd.defaults.headers.common.Authorization =
+    //   'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDJkZDdmODlmN2I0N2RlNDk0OGI4ZDIiLCJpYXQiOjE2ODA4NzUxOTF9.4A3dgm3_3EJIMfFCD7WFd2VAM_iDXJ0MWGaA9UAg_uk';
+    // instanceBacEnd
+    //   .get(`/search/?query=${processedValue}&type=${searchType}`)
+    const response = queryBackEnd.querySearch(searchType, processedValue, 3);
+    response
+      .then(results => {
+        console.log(results.result.data);
+        setRecipes(results.result.data.list);
+        //---- Pag
+        // setAllItem(results.result.data.totalItem);
+        // const pageQty = Math.ceil(results.result.data.totalItem / 3);
+        // setAllPage(pageQty);
+        //-----
         setError(null);
       })
       .catch(function (error) {
         if (error.response && error.response.status === 404) {
           setError(
             <ErrorComponent>
-              "There is no such ingredient. Try something else... "{' '}
+              "There is no such ingredient. Try something else... "
             </ErrorComponent>
           );
         } else {
@@ -43,15 +59,22 @@ export default function SearchRecipesList({ searchQuery, searchType }) {
         }
       });
   }, [searchQuery, searchType]);
-  console.log('recipes', recipes);
+  // const changeNum = (_, num) => {
+  //   const processedValue = searchQuery.trim().replace(/ +/g, '%20');
+  //   setCurrentPage(num);
+  //   queryBackEnd
+  //     .querySearch(searchType, processedValue, 3, num)
+  //     // .get(`/favorite?page=${num}`)
+  //     .then(results => setRecipes(results.result.data.list))
+  //     .catch(error => console.log(error.message));
+  // };
   return (
     <>
       {error ? (
         <SRLNoItems>
           <SRLNoItemsText>
-            <ErrorComponent>
-              There is no such ingredient. Try something else...
-            </ErrorComponent>
+            There is no such ingredient.
+            <br /> Try something else...
           </SRLNoItemsText>
         </SRLNoItems>
       ) : !recipes.length ? (
@@ -65,7 +88,21 @@ export default function SearchRecipesList({ searchQuery, searchType }) {
               <DishCard key={recipe._id} location={location} recipe={recipe} />
             ))}
           </GridContainer>
-          <div>Pagination</div>
+          {/* <PaginationWrapper>
+            <Container>
+              <Stack spacing={2}>
+                <Pagination
+                  count={allPage}
+                  page={currentPage}
+                  onChange={changeNum}
+                  // showFirstButton
+                  // showLastButton
+                  siblingCount={1}
+                  sx={{ marginY: 3, marginX: 'auto' }}
+                />
+              </Stack>
+            </Container>
+          </PaginationWrapper> */}
         </>
       )}
     </>

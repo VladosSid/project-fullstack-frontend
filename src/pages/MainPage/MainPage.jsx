@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from 'react';
 // import { recipesG } from 'gannaFakeData';
 import { useLocation } from 'react-router-dom';
-import instanceBacEnd from 'helpers/requestBackEnd';
+// import instanceBacEnd from 'helpers/requestBackEnd';
 // import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import { MainContainer } from '../../components/MainContainer/MainContainer';
+import { queryBackEnd } from 'helpers/request';
 import {
   Container,
   RecipeCategoryName,
@@ -30,9 +31,9 @@ export default function MainPage() {
   const [quantity, setQuantity] = useState(() => {
     const width = window.innerWidth;
 
-    if (width >= 1240) {
+    if (width >= 1304) {
       return 4;
-    } else if (width >= 768 && width < 1240) {
+    } else if (width >= 768 && width < 1304) {
       return 2;
     } else {
       return 1;
@@ -43,9 +44,9 @@ export default function MainPage() {
     const handleWindowResize = () => {
       const width = window.innerWidth;
 
-      if (width >= 1240) {
+      if (width >= 1304) {
         setQuantity(4);
-      } else if (width >= 768 && width < 1240) {
+      } else if (width >= 768 && width < 1304) {
         setQuantity(2);
       } else {
         setQuantity(1);
@@ -59,14 +60,15 @@ export default function MainPage() {
   }, []);
 
   useEffect(() => {
-    instanceBacEnd.defaults.headers.common.Authorization =
-      'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDJkZDdmODlmN2I0N2RlNDk0OGI4ZDIiLCJpYXQiOjE2ODA4NzUxOTF9.4A3dgm3_3EJIMfFCD7WFd2VAM_iDXJ0MWGaA9UAg_uk';
+    // instanceBacEnd.defaults.headers.common.Authorization =
+    //   'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDJkZDdmODlmN2I0N2RlNDk0OGI4ZDIiLCJpYXQiOjE2ODA4NzUxOTF9.4A3dgm3_3EJIMfFCD7WFd2VAM_iDXJ0MWGaA9UAg_uk';
 
-    instanceBacEnd
-      .get(`/recipes/main-page?query=${quantity}`)
-
-      .then(function (response) {
-        setRecipes(response.data.result.data);
+    // instanceBacEnd
+    //   .get(`/recipes/main-page?query=${quantity}`)
+    const response = queryBackEnd.queryRecipeMinePage(quantity);
+    response
+      .then(results => {
+        setRecipes(results.result.data);
       })
       .catch(function (error) {
         console.log(error.message);
@@ -83,18 +85,14 @@ export default function MainPage() {
   }, {});
   //---------------------------
   const handleFormSubmit = query => {
-    console.log('Query in Main', query);
-    const searchUrl = createSearchUrl(query);
-    console.log('Query in Main 2', query);
-    console.log('SearchUrl in MainPage', searchUrl);
-    navigate(searchUrl);
+    if (query) {
+      const searchUrl = createSearchUrl(query);
+
+      navigate(searchUrl);
+    }
   };
 
   const handleCategoryClick = category => {
-    console.log('category in Main', category);
-
-    // const nextQuery = query !== '' ? { query } : {};
-    // setSearchParams(nextQuery);
     const categoryUrl = createCategoryUrl(category);
     navigate(categoryUrl);
   };
@@ -102,9 +100,8 @@ export default function MainPage() {
   return (
     <ContainerWrapper>
       <MainPageHero onSubm={handleFormSubmit} />
-      <MainContainer>
-        <Section>
-          {' '}
+      <Section>
+        <MainContainer>
           <Container>
             {Object.entries(RecipesByCategory).map(([category, recipes]) => (
               <div key={category}>
@@ -128,10 +125,11 @@ export default function MainPage() {
           <MPButton onClick={() => handleCategoryClick('Breakfast')}>
             Other categories
           </MPButton>
-        </Section>
-      </MainContainer>
+        </MainContainer>
+      </Section>
     </ContainerWrapper>
   );
 }
 
 //${ REACT_APP_BASE_URL } /recipes/main - page ? ${ queryQuantity }
+//  REACT_APP_BASE_URL=http://localhost:3001/api

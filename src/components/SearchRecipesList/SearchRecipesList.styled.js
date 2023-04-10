@@ -34,6 +34,9 @@ export const GridContainer = styled.div`
 `;
 
 export const SRLNoItems = styled.div`
+  display: flex;
+  margin: 0 auto;
+
   background-repeat: no-repeat;
 
   @media screen and (max-width: 767px) {
@@ -45,7 +48,7 @@ export const SRLNoItems = styled.div`
   }
   @media screen and (min-width: 768px) {
     width: 380px;
-    height: 291px;
+    height: 320px;
     background-image: url('${search_tabl}');
     background-position: center top 15px;
     background-size: 350px;
@@ -98,4 +101,14 @@ export const ErrorComponent = styled.p`
 
   @media screen and (min-width: 1240px) {
   }
+`;
+
+export const imgNoItems = styled.div`
+  width: 380px;
+  height: 291px;
+`;
+
+export const PaginationWrapper = styled.div`
+  display: flex;
+  justify-content: center;
 `;

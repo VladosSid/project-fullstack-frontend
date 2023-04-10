@@ -20,10 +20,11 @@ export default function SearchForm({
     evt.preventDefault();
 
     if (searchWord.trim() === '') {
+      // setSearchWord('');
+      setSearchWord('');
       Notify.warning('Please fill the search form');
-      console.log('Please fill the search form ');
 
-      return;
+      //   return;
     }
 
     onSubm(searchWord);

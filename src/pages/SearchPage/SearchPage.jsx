@@ -9,6 +9,8 @@ import SearchBar from 'components/SearchBar/SearchBar';
 // import { createSearchUrl } from 'helpers/createSearchUrl';
 import SearchRecipesList from 'components/SearchRecipesList/SearchRecipesList';
 import { Notify } from 'notiflix/build/notiflix-notify-aio';
+import BG from '../../images/mainPagePhoto/search_tabl_opt.png';
+
 //-------------------------------
 export default function SearchPage() {
   // const location = useLocation();
@@ -23,69 +25,62 @@ export default function SearchPage() {
 
   //------------
   function handleSearchTypeChange(type) {
-    console.log('Skoka', searchQuery.match(/\b\w+\b/g)?.length);
-    const aaa = searchQuery.match(/\b\w+\b/g)?.length;
-    if (type === 'ingredients' && aaa > 1) {
-      Notify.warning('You can only enter one ingredient. ');
-      console.log('tooo mach');
-    }
-    setSearchType(type);
-    // setSearchParams({ type: type });
-    updatedParams.set('type', type);
-    if (searchQuery) {
+    if (searchQuery === '') {
+      Notify.warning('Please fill the search form');
+    } else {
+      const ingredientsLength = searchQuery.match(/\b\w+\b/g)?.length;
+      if (type === 'ingredients' && ingredientsLength > 1) {
+        Notify.warning('You can only enter one ingredient. ');
+      }
+
+      setSearchType(type);
+      // setSearchParams({ type: type });
+      updatedParams.set('type', type);
       setSearchParams(updatedParams);
     }
+
+    // if (searchQuery) {
+    //   setSearchParams(updatedParams);
+    // }
   }
   //---------
   function handleSubmit(query) {
-    console.log('Query in SP submit', query);
     const nextQuery = query !== '' ? query : '';
-    setSearchQuery(nextQuery);
-    // const searchUrl = createSearchUrl(query, query);!!!!!!!
-    setSearchParams({
-      query: query.toLowerCase().trim().replace(/\s+/g, ' '),
-      type: searchType,
-    });
+
+    if (nextQuery !== '') {
+      setSearchQuery(nextQuery);
+
+      setSearchParams({
+        query: query.toLowerCase().trim().replace(/\s+/g, ' '),
+        type: searchType,
+      });
+    } else {
+      setSearchParams({});
+      setSearchQuery('');
+    }
   }
   //----------------------------
   return (
     <MainContainer>
-      <ContainerWrapper>
+      <>
         <MainPageTitle title={'Search'} />
         <SearchBar
-          // onSearch={handleSearch}
           onTypeChange={handleSearchTypeChange}
           onSubm={handleSubmit}
           selectedType={searchType}
           searchQuery={searchQuery}
         />
-        {searchQuery !== '' && (
-          <>
-            <SearchRecipesList
-              searchQuery={searchQuery}
-              searchType={searchType}
-            />
-          </>
-        )}
-      </ContainerWrapper>
+      </>
+      {searchQuery !== '' ? (
+        <ContainerWrapper>
+          <SearchRecipesList
+            searchQuery={searchQuery}
+            searchType={searchType}
+          />
+        </ContainerWrapper>
+      ) : (
+        <img style={{ margin: '0 auto 40px' }} src={BG} alt="Background" />
+      )}
     </MainContainer>
   );
 }
-//.trim().replace(/ +/g, '%20')
-//<SearchRecipesList searchQuery={searchQuery} searchType={searchType} searchResults={searchResults} />
-
-// function SearchTypeSelector({ type, onChange }) {
-//   function handleSelect(eventKey) {
-//     onChange(eventKey);
-//   }
-
-//   return (
-//     <DropdownButton
-//       title={type === 'query' ? 'Поиск по запросу' : 'Поиск по ингредиенту'}
-//       onSelect={handleSelect}
-//     >
-//       <Dropdown.Item eventKey="query">Поиск по запросу</Dropdown.Item>
-//       <Dropdown.Item eventKey="ingredient">Поиск по ингредиенту</Dropdown.Item>
-//     </DropdownButton>
-//   );
-// }

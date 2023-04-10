@@ -1,22 +1,20 @@
 import styled from 'styled-components';
+import theme from '../../style/generalStyle';
 //------------------------
 export const SearchesForm = styled.form`
   display: flex;
   width: fit-content;
   position: relative;
-
-  margin-bottom: ${props => (props.marginBottom ? '24px' : 0)};
-  /* margin-top: ${props => (props.marginTop ? '650px' : 0)}; */
-  @media screen and (max-width: 767px) and (max-width: 1239px) {
+  margin: ${props => props.page === 'search' && '0px auto 24px'};
+  @media screen and (max-width: 767px) and (max-width: 1303px) {
     margin: ${props => props.page === 'main' && '0px auto'};
   }
-  @media screen and (min-width: 768px) {
-    margin-bottom: ${props => (props.marginBottom ? '28px' : 0)};
+  @media ${theme.device.tablet} {
+    margin: ${props => props.page === 'search' && '0px auto 28px'};
   }
-  @media screen and (min-width: 1240px) {
-    margin-right: ${props => props.page === 'main' && '200px'};
+  @media ${theme.device.desktop} {
+    margin: ${props => props.page === 'search' && '0px auto 28px'};
   }
-  /* margin-top: 0px; */
 `;
 
 export const SearchInput = styled.input`
@@ -29,16 +27,15 @@ export const SearchInput = styled.input`
 
   width: 283px;
   padding-left: 32px;
-  @media screen and (min-width: 768px) {
+  @media ${theme.device.tablet} {
     width: ${props => (props.page === 'main' ? '330px' : '350px')};
-    height: ${props => (props.page === 'main' ? '59px' : '59px')};
+    height: 59px;
     font-size: 16px;
     padding-left: ${props => props.page === 'main' && '38px'};
   }
-  @media screen and (min-width: 1240px) {
-    width: ${props => (props.page === 'main' ? '465px' : '465px')};
+  @media ${theme.device.desktop} {
+    width: 465px;
     height: 70px;
-    /* width: ${props => props.page === 'search' && '350px'}; */
   }
 
   ::placeholder {
@@ -48,26 +45,21 @@ export const SearchInput = styled.input`
     font-size: 12px;
     line-height: 1.5;
     color: #3e4462;
-    @media screen and (min-width: 768px) {
+    @media ${theme.device.tablet} {
       font-size: ${props => (props.page === 'main' ? '16px' : '14px')};
     }
-    @media screen and (min-width: 1240px) {
+    @media ${theme.device.desktop} {
       font-size: 16px;
     }
   }
-  /* ::placeholder {
-    font: inherit;
-    font-size: 18px;
-  } */
 `;
 export const SearchBtn = styled.button`
   position: absolute;
   right: 0;
   width: 113px;
   height: 56px;
-  /* border-color: transparent; */
+
   border-radius: 24px 44px;
-  /* border: 1px solid rgba(34, 37, 42, 1); */
   color: #fafafa;
   font-family: 'Poppins';
   font-style: normal;
@@ -79,14 +71,14 @@ export const SearchBtn = styled.button`
   @media screen and (max-width: 767px) {
     width: ${props => props.page === 'main' && '113px'};
   }
-  @media screen and (min-width: 768px) {
-    width: ${props => (props.page === 'main' ? '161px' : '161px')};
-    height: ${props => (props.page === 'main' ? '59px' : '59px')};
+  @media ${theme.device.tablet} {
+    width: 161px;
+    height: 63px;
     font-size: 16px;
   }
-  @media screen and (min-width: 1240px) {
+  @media ${theme.device.desktop} {
     width: 161px;
-    height: ${props => (props.page === 'main' ? '75px' : '73px')};
+    height: 75px;
     font-size: 16px;
   }
 `;

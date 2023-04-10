@@ -5,7 +5,8 @@ export const Main = styled.div`
   position: relative;
   padding: 0 8px;
   margin: 0 auto;
-  width: 375px;
+  /* width: 375px; */
+  width: 359px;
   @media ${theme.device.tablet} {
     padding: 0 32px;
     width: 704px;
