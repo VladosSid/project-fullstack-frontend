@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import theme from '../../style/generalStyle';
+
 export const DishWrapper = styled.div`
   position: relative;
   overflow: hidden;

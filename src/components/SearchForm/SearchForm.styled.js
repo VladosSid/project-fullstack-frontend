@@ -68,6 +68,13 @@ export const SearchBtn = styled.button`
   line-height: 1.5;
   background-color: ${props => (props.green ? '#8BAA36' : '#22252a')};
   border: ${props => (props.green ? '1px solid #8BAA36' : '1px solid #22252a')};
+  &:hover,
+  &:focus {
+    background-color: ${props => (props.green ? '#22252a' : '#8BAA36')};
+    border: ${props =>
+      props.green ? '1px solid #22252a' : '1px solid #8BAA36'};
+    cursor: pointer;
+  }
   @media screen and (max-width: 767px) {
     width: ${props => props.page === 'main' && '113px'};
   }

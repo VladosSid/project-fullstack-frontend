@@ -131,6 +131,10 @@ export const Button = styled.button`
   line-height: 1.29;
   margin-left: auto;
   margin-top: 24px;
+  &:hover,
+  &:focus {
+    cursor: pointer;
+  }
   @media ${theme.device.tablet} {
     margin-top: 40px;
   }
