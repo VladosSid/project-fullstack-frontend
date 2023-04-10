@@ -107,3 +107,8 @@ export const imgNoItems = styled.div`
   width: 380px;
   height: 291px;
 `;
+
+export const PaginationWrapper = styled.div`
+  display: flex;
+  justify-content: center;
+`;
