@@ -2,7 +2,7 @@ import React from 'react';
 import FavoriteItem from 'components/FaforiteItem/FavoriteItem';
 import { ListWrapper } from './FavoriteList.styled';
 
-const FavoriteList = ({ recipes, allItem, location }) => {
+const FavoriteList = ({ recipes, allItem, location, removeFavorite }) => {
   console.log(recipes);
 
   return (
@@ -14,6 +14,7 @@ const FavoriteList = ({ recipes, allItem, location }) => {
               recipe={recipe}
               allItem={allItem}
               location={location}
+              removeFavorite={removeFavorite}
             />
           </li>
         ))}
