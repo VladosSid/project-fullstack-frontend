@@ -1,20 +1,21 @@
 import {
-  Container,
+  HeroContainer,
   HeroTiile,
   HeroText,
   CookingTime,
+  HeroButtonAdd,
 } from './RecipePageHero.styled';
 
-export const RecipePageHero = () => {
+export const RecipePageHero = ({ title, description }) => {
   return (
-    <Container>
-      <HeroTiile>Salmon Avocado Salad</HeroTiile>
+    <HeroContainer>
+      <HeroTiile>hey{title}</HeroTiile>
       <HeroText>
-        Is a healthy salad recipe that’s big on nutrients and flavor. A moist,
-        pan seared salmon is layered on top of spinach, avocado, tomatoes, and
-        red onions. Then drizzled with a homemade lemon vinaigrette.
+        {description}
+        (Is a healthy salad)
       </HeroText>
-      <CookingTime>20min</CookingTime>
-    </Container>
+      <HeroButtonAdd>Add to favorite recipes</HeroButtonAdd>
+      <CookingTime></CookingTime>
+    </HeroContainer>
   );
 };

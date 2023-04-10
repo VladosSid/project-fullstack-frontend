@@ -7,6 +7,7 @@ import { authSelectors, authOperations } from '../redux/users';
 
 import RestrictedRoute from './Routes/RestrictedRoute';
 import PrivateRoute from './Routes/PrivateRoute';
+import RecipePage from 'pages/RecipePage/RecipePage';
 
 const WelcomePage = lazy(() => import('../pages/WelcomePage/WelcomePage'));
 const RegisterPage = lazy(() => import('../pages/RegisterPage/RegisterPage'));
@@ -72,8 +73,9 @@ export const App = () => {
 
             <Route path="/categories" element={<CategoriesPage />} />
             <Route path="/add" element={<AddRecipiePage />} />
-            <Route path="/my" element={<MyRecipesPage />} />
+            {/* <Route path="/my" element={<MyRecipesPage />} /> */}
             <Route path="/favorite" element={<FavoritePage />} />
+            <Route path="/my" element={<RecipePage />} />
 
             <Route path="/shopping-list" element={<ShoppingListPage />} />
             <Route path="/search" element={<SearchPage />} />

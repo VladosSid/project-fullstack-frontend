@@ -26,16 +26,19 @@ export const TitltListWrap = styled.div`
   font-family: 'Poppins';
   font-size: 12px;
   line-height: 18px;
+  margin-bottom: 24px;
 
   @media ${theme.device.tablet} {
     width: 734px;
     font-size: 18px;
     line-height: 27px;
     padding: 20px;
+    margin-bottom: 23px;
   }
   @media ${theme.device.desktop} {
     width: 1240px;
     padding: 21px 40px;
+    margin-bottom: 50px;
   } ;
 `;
 
