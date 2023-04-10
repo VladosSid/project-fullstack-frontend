@@ -27,7 +27,6 @@ export const RecipeItem = styled.li`
   }
 
   @media ${theme.device.desktop} {
-    // padding: 0 41px;
     max-width: 1160px;
   }
 `;

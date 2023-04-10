@@ -7,7 +7,6 @@ import { authSelectors, authOperations } from '../redux/users';
 
 import RestrictedRoute from './Routes/RestrictedRoute';
 import PrivateRoute from './Routes/PrivateRoute';
-import RecipePage from 'pages/RecipePage/RecipePage';
 
 const WelcomePage = lazy(() => import('../pages/WelcomePage/WelcomePage'));
 const RegisterPage = lazy(() => import('../pages/RegisterPage/RegisterPage'));

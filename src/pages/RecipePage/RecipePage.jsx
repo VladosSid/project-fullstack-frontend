@@ -1,7 +1,7 @@
 import { RecipePageHero } from 'components/Recipe/RecipePageHero/RecipePageHero';
 import RecipeInngredientsList from 'components/Recipe/RecipeInngredientsList/RecipeInngredientsList';
 import { useState, useEffect } from 'react';
-// import axios from 'axios';
+
 import {
   TitltListWrap,
   TitleListIngredient,
