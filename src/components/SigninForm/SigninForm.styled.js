@@ -43,6 +43,11 @@ export const FormTitle = styled.h2`
         font-size: 28px;
         line-height: 1.07;
     }
+
+    /* desktop */
+    @media screen and (min-width: 1025px) {
+        margin-bottom: 50px;
+    }
 `
 export const List = styled.ul`
     list-style: none;
