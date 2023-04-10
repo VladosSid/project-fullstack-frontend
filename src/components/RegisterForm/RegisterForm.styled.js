@@ -5,7 +5,8 @@ export const Container = styled.div`
     z-index: 3;
     text-align: center;
 
-    @media ${theme.device.desktop} {
+    /* desktop */
+    @media screen and (min-width: 1240px) {
         margin-left: 115px;
     }
 `
