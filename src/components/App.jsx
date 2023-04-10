@@ -3,7 +3,6 @@ import { Route, Routes } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { AppBox } from './App.styled';
 import Modal from './Modal/Modal';
-import Burger from './Burger/Burger';
 import { ThemeProvider } from 'styled-components';
 
 import { authSelectors, authOperations } from '../redux/users';
@@ -11,8 +10,10 @@ import { authSelectors, authOperations } from '../redux/users';
 import RestrictedRoute from './Routes/RestrictedRoute';
 import PrivateRoute from './Routes/PrivateRoute';
 
-import getTheme from '../redux/theming/theme-selector';
+// import getTheme from '../redux/theming/theme-selector';
 import theme from '../style/generalStyle';
+import Burger from './Burger/Burger';
+import Popup from './Popup/Popup';
 
 const WelcomePage = lazy(() => import('../pages/WelcomePage/WelcomePage'));
 const RegisterPage = lazy(() => import('../pages/RegisterPage/RegisterPage'));
@@ -34,7 +35,7 @@ const SearchPage = lazy(() => import('../pages/SearchPage/SearchPage'));
 const NotFoundPage = lazy(() => import('../pages/NotFoundPage/NotFoundPage'));
 
 export const App = () => {
-  const themeUser = useSelector(getTheme);
+  // const themeUser = useSelector(getTheme);
 
   const dispatch = useDispatch();
   const isGetingCurent = useSelector(authSelectors.getGetingCurentUser);
@@ -43,8 +44,10 @@ export const App = () => {
     dispatch(authOperations.fetchCurrentUser());
   }, [dispatch]);
 
+  // [themeUser];
+
   return (
-    <ThemeProvider theme={theme[themeUser]}>
+    <ThemeProvider theme={theme.white}>
       {isGetingCurent ? (
         <b>Refreshing user...</b>
       ) : (
@@ -125,8 +128,9 @@ export const App = () => {
                 />
               </Route>
             </Routes>
-            <Burger />
             <Modal />
+            <Burger />
+            <Popup />
           </AppBox>
         </Suspense>
       )}
