@@ -23,7 +23,9 @@ export const Container = styled.div`
   @media ${theme.device.tablet} {
     background-image: url(${TabletBg});
   }
-  @media ${theme.device.desktop} {
+
+  /* desktop */
+  @media screen and (min-width: 1025px) {
     background-image: url(${DesktopBg});
   }
 `

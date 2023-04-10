@@ -21,7 +21,8 @@ export const Container = styled.div`
     align-items: center;
     justify-content: center;
 
-    @media ${theme.device.desktop} {
+    /* desktop */
+    @media screen and (min-width: 1025px) {
         flex-direction: row;
     }
 `
@@ -43,7 +44,9 @@ export const Background = styled.div`
         background-image: url(${TabletBg});
         height: 606px;
     }
-    @media ${theme.device.desktop} {
+
+    /* desktop */
+    @media screen and (min-width: 1025px) {
         background-image: url(${DesktopBg});
         height: 325px;
     }
@@ -66,7 +69,9 @@ export const Image = styled.div`
         width: 409px;
         height: 359px;
     }
-    @media ${theme.device.desktop} {
+    
+    /* desktop */
+    @media screen and (min-width: 1025px) {
         background-image: url(${DesktopImg});
         width: 532px;
         height: 468px;
