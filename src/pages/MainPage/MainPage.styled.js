@@ -4,12 +4,10 @@ import theme from '../../style/generalStyle';
 
 export const ContainerWrapper = styled.div`
   /* height: 100%; */
-
   /* display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center; */
-
   @media ${theme.device.tablet} {
   }
   @media ${theme.device.desktop} {
@@ -39,7 +37,6 @@ export const Container = styled.div`
     gap: 50px;
     margin-bottom: 32px;
   }
-
   @media ${theme.device.desktop} {
     gap: 100px;
     margin-bottom: 14px;
@@ -52,7 +49,6 @@ export const GridContainer = styled.div`
     display: flex;
     gap: 32px;
   }
-
   @media ${theme.device.desktop} {
     display: flex;
     gap: 13px;
@@ -122,11 +118,8 @@ export const RecipeTitle = styled.h3`
   font-size: 16px;
   line-height: 1.25;
   /* identical to box height, or 125% */
-
   letter-spacing: -0.24px;
-
   /* Color - Text Primary */
-
   color: #3e4462;
 `;
 export const Button = styled.button`
@@ -148,6 +141,10 @@ export const Button = styled.button`
   line-height: 1.29;
   margin-left: auto;
   margin-top: 24px;
+  &:hover,
+  &:focus {
+    cursor: pointer;
+  }
   @media ${theme.device.tablet} {
     margin-top: 40px;
   }
@@ -173,6 +170,15 @@ export const MPButton = styled.button`
   line-height: 1.5;
   text-align: center;
   color: ${props => props.theme.color.mainPage.mpButton};
+
+  &:hover,
+  &:focus {
+    background-color: #8baa36;
+    cursor: pointer;
+    outline: none;
+    color: #fafafa;
+  }
+
   @media ${theme.device.tablet} {
     width: 239px;
     height: 61px;

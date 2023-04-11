@@ -3,11 +3,11 @@ import { SearchesForm, SearchInput, SearchBtn } from './SearchForm.styled';
 import { Notify } from 'notiflix/build/notiflix-notify-aio';
 //------------------------------------------
 export default function SearchForm({
-  green,
+  // green,
   onSubm,
-  marginBottom,
+  // marginBottom,
   searchQuery,
-  marginTop,
+  // marginTop,
   isSearchPage,
 }) {
   const [searchWord, setSearchWord] = useState(searchQuery || '');
@@ -32,8 +32,8 @@ export default function SearchForm({
   return (
     <SearchesForm
       onSubmit={handleSubmit}
-      marginBottom={marginBottom}
-      marginTop={marginTop}
+      // marginBottom={marginBottom}
+      // marginTop={marginTop}
       page={isSearchPage ? 'search' : 'main'}
     >
       <SearchInput
@@ -42,9 +42,7 @@ export default function SearchForm({
         onChange={handleChange}
         page={isSearchPage ? 'search' : 'main'}
       />
-      <SearchBtn green={green} page={isSearchPage ? 'search' : 'main'}>
-        Search
-      </SearchBtn>
+      <SearchBtn page={isSearchPage ? 'search' : 'main'}>Search</SearchBtn>
     </SearchesForm>
   );
 }

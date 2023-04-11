@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import theme from '../../style/generalStyle';
+
 export const DishWrapper = styled.div`
   position: relative;
   overflow: hidden;
@@ -34,7 +35,7 @@ export const DishTitleWrapper = styled.div`
   left: 18px;
   right: 18px;
   bottom: 26px;
-  background: #ffffff;
+  background-color: ${props => props.theme.color.dishCard.dishTitleWrapper};
   border-radius: 8px;
   padding: 16px;
   max-width: 323px;
@@ -54,7 +55,7 @@ export const DishTitle = styled.h3`
   font-size: 16px;
   line-height: 1.25;
   letter-spacing: -0.24px;
-  color: #3e4462;
+  color: ${props => props.theme.color.dishCard.dishTitle};
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
