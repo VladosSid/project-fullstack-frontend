@@ -1,17 +1,27 @@
 import { HiOutlinePencil } from 'react-icons/hi';
-import style from './UserLogoModal.module.css';
 import LogoutBtn from 'components/LogoutBtn/LogoutBtn';
+import { UserLogoPopup } from './UserLogoModal.styled';
 
-const UserLogoModal = ({ isOpen, clickToggle }) => {
+const UserLogoModal = ({ isOpen, popupToggle, toggler }) => {
   return (
-    <div className={style.popupOverlay}>
-      <div className={isOpen ? style.userLogoPopup : style.hidden}>
-        <button id="open-modal-button" onClick={() => clickToggle()}>
-          Edit profile <HiOutlinePencil size={14} />
-        </button>
-        <LogoutBtn onClick={clickToggle} />
-      </div>
-    </div>
+    <>
+      {isOpen === true && (
+        <UserLogoPopup>
+          <div>
+            <button
+              id="open-modal-button"
+              onClick={() => {
+                toggler();
+                popupToggle();
+              }}
+            >
+              Edit profile <HiOutlinePencil size={14} />
+            </button>
+            <LogoutBtn />
+          </div>
+        </UserLogoPopup>
+      )}
+    </>
   );
 };
 

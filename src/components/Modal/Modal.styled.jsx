@@ -9,14 +9,8 @@ export const Overlay = styled.div`
   background-color: rgba(0, 0, 0, 0.3);
   z-index: 100;
   transition: transform cubic-bezier(0.075, 0.82, 0.165, 1) 0.5s;
-  transform: translateY(-130vh);
-      
-   ${props => props.isOpenVlados && 'transform: translateY(0)'};
-  }
-`;
-
-export const ModalEl = styled.div`
-  width: 500px;
-  height: 500px;
-  background: red;
+  ${props =>
+    props.open === true
+      ? 'transform: translateY(0)'
+      : 'transform: translateY(-130vh)'};
 `;

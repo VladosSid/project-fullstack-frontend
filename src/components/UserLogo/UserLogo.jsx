@@ -4,35 +4,54 @@ import { authSelectors } from 'redux/users';
 
 import { BtnWrapper, UserLogoBtn } from 'components/UserLogo/UserLogo.styled';
 import UserLogoModal from 'components/UserLogoModal/UserLogoModal';
-import { Modal } from '../Modal/ModalVlados';
+import { Modal } from '../Modal/Modal';
 import { ImgAva } from 'components/UserLogo/UserLogo.styled';
 
 import UserInfoModal from '../Modal/UserInfoModal/UserInfoModal';
 
 const UserLogo = () => {
-  const [isOpen, setIsOpen] = useState(false);
+  const [popupIsOpen, setPopupIsOpen] = useState(false);
+  const [LogoModalOpen, setLogoModalOpen] = useState(false);
 
   const name = useSelector(authSelectors.getUsername);
   const ava = useSelector(authSelectors.getAvatar);
 
-  const clickToggle = e => {
-    e.preventDefault();
-    setIsOpen(prev => !prev);
+  const popupToggle = () => {
+    setPopupIsOpen(prev => !prev);
   };
+
+  const modalToggle = () => {
+    setLogoModalOpen(prev => !prev);
+    document.body.style.overflow = 'hidden';
+  };
+
+  const close = e => {
+    if (e.code === 'Escape') {
+      setPopupIsOpen(false);
+      setLogoModalOpen(false);
+    }
+  };
+
   return (
     <BtnWrapper>
-      <UserLogoBtn onClick={e => clickToggle(e)}>
+      <UserLogoBtn onClick={e => popupToggle(e)}>
         <ImgAva src={ava} alt="avatar" />
         <p>{name}</p>
       </UserLogoBtn>
 
       <Modal
-        toggle={clickToggle}
-        isOpenVlados={isOpen}
-        children={<UserInfoModal toggle={clickToggle} />}
+        close={close}
+        open={LogoModalOpen}
+        children={
+          <UserInfoModal setLogoModalOpen={setLogoModalOpen} close={close} />
+        }
       />
 
-      {/* <UserLogoModal isOpen={isOpen} clickToggle={clickToggle} /> */}
+      <UserLogoModal
+        isOpen={popupIsOpen}
+        popupToggle={popupToggle}
+        toggler={modalToggle}
+      />
     </BtnWrapper>
   );
 };

@@ -2,49 +2,47 @@ import { useDispatch, useSelector } from 'react-redux';
 import { useState, useEffect } from 'react';
 import { authSelectors } from 'redux/users';
 import { authOperations } from 'redux/users';
-import { Form } from './UserModal.styled';
+import {
+  Overlay,
+  UserIModal,
+  PenSvg,
+  SaveBtn,
+  NameInput,
+  CloseCross,
+  UploadedImg,
+  PlusSvg,
+  AddImgInput,
+  UserSvg,
+} from './UserModal.styled';
 
-import styles from './UserInfoModal.module.css';
 import plus from '../../../images/Header/plus.svg';
 import pen from '../../../images/Header/pen.svg';
 import user from '../../../images/Header/user.png';
 import x from '../../../images/Header/x.svg';
 
-const UserInfoModal = ({ toggle }) => {
+const UserInfoModal = ({ setLogoModalOpen, close }) => {
   const [image, setImg] = useState(null);
   const [name, setName] = useState('');
   const [avatar, setAvatar] = useState(null);
-  const [isOpen, setIsOpen] = useState(false);
 
   const dispatch = useDispatch();
-
-  const close = e => {
-    if (e.keyCode === 27) {
-      setIsOpen(false);
-      document.body.style.overflow = '';
-    }
-  };
 
   const username = useSelector(authSelectors.getUsername);
   const ava = useSelector(authSelectors.getAvatar);
 
   useEffect(() => {
-    const openBtn = document.getElementById('open-modal-button');
-    if (!openBtn) {
-      return;
-    }
-    openBtn.addEventListener('click', () => {
-      setIsOpen(true);
-      document.body.style.overflow = 'hidden';
+    window.addEventListener('keydown', e => {
+      document.body.style.overflow = '';
+      setLogoModalOpen(false);
+      close(e);
     });
 
-    return openBtn.removeEventListener('click', () => setIsOpen(true));
-  });
-
-  useEffect(() => {
-    window.addEventListener('keydown', close);
-
-    return () => window.removeEventListener('keydown', close);
+    return () =>
+      window.removeEventListener('keydown', e => {
+        document.body.style.overflow = '';
+        setLogoModalOpen(false);
+        close(e);
+      });
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
@@ -79,42 +77,29 @@ const UserInfoModal = ({ toggle }) => {
     reset();
   };
 
-  const closeHandler = e => {
-    e.preventDefault();
-    setIsOpen(false);
-    document.body.style.overflow = '';
-  };
-
   const check = e => {
     if (e.currentTarget === e.target) {
-      setIsOpen(false);
       document.body.style.overflow = '';
+      setLogoModalOpen(false);
     }
   };
 
   return (
-    <form
-      // isOpenVlados={isOpenVlados}
-      // className={
-      //   isOpen === false
-      //     ? styles.backdrop
-      //     : styles.active + ' ' + styles.backdrop
-      // }
-      id="user-info-modal"
-      onClick={check}
-    >
-      <div className={styles.userInfoModal}>
-        <button className={styles.closeCross} onClick={e => toggle(e)}>
+    <Overlay id="user-info-modal" onClick={e => check(e)}>
+      <UserIModal>
+        <CloseCross
+          onClick={e => {
+            e.preventDefault();
+            setLogoModalOpen(false);
+            document.body.style.overflow = '';
+          }}
+        >
           <img src={x} alt="cross" />
-        </button>
+        </CloseCross>
         <div>
-          <img
-            src={image ? image : ava}
-            alt="user"
-            className={styles.uploadedImg}
-          />
+          <UploadedImg src={image ? image : ava} alt="user" />
 
-          <label htmlFor="upload" className={styles.addImgInput}>
+          <AddImgInput htmlFor="upload">
             <input
               style={{ display: 'none' }}
               name="picture"
@@ -123,25 +108,24 @@ const UserInfoModal = ({ toggle }) => {
               id="upload"
               onChange={handleUploadClick}
             />
-          </label>
+          </AddImgInput>
         </div>
-        <img src={plus} alt="plus" className={styles.plusSvg} />
-        <input
+        <PlusSvg src={plus} alt="plus" />
+        <NameInput
           onInput={onInputChange}
           type="text"
           name="name"
           max={15}
           value={name}
           placeholder={username}
-          className={styles.nameInput}
         />
-        <img src={user} alt="user" className={styles.userSvg} />
-        <img src={pen} alt="pen" className={styles.penSvg} />
-        <button type="submit" onClick={handleSubmit} className={styles.saveBtn}>
+        <UserSvg src={user} alt="user" />
+        <PenSvg src={pen} alt="pen" />
+        <SaveBtn type="submit" onClick={handleSubmit}>
           Save Changes
-        </button>
-      </div>
-    </form>
+        </SaveBtn>
+      </UserIModal>
+    </Overlay>
   );
 };
 
