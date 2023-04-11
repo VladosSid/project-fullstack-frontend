@@ -2,6 +2,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { useState, useEffect } from 'react';
 import { authSelectors } from 'redux/users';
 import { authOperations } from 'redux/users';
+import { Form } from './UserModal.styled';
 
 import styles from './UserInfoModal.module.css';
 import plus from '../../../images/Header/plus.svg';
@@ -9,7 +10,7 @@ import pen from '../../../images/Header/pen.svg';
 import user from '../../../images/Header/user.png';
 import x from '../../../images/Header/x.svg';
 
-const UserInfoModal = () => {
+const UserInfoModal = ({ toggle }) => {
   const [image, setImg] = useState(null);
   const [name, setName] = useState('');
   const [avatar, setAvatar] = useState(null);
@@ -93,16 +94,17 @@ const UserInfoModal = () => {
 
   return (
     <form
-      className={
-        isOpen === false
-          ? styles.backdrop
-          : styles.active + ' ' + styles.backdrop
-      }
+      // isOpenVlados={isOpenVlados}
+      // className={
+      //   isOpen === false
+      //     ? styles.backdrop
+      //     : styles.active + ' ' + styles.backdrop
+      // }
       id="user-info-modal"
       onClick={check}
     >
       <div className={styles.userInfoModal}>
-        <button className={styles.closeCross} onClick={closeHandler}>
+        <button className={styles.closeCross} onClick={e => toggle(e)}>
           <img src={x} alt="cross" />
         </button>
         <div>
