@@ -42,7 +42,6 @@ const MyRecipesPage = () => {
       .then(response => setRecipes(response.data.result.data.list))
       .catch(error => {
         console.log(error.message);
-        // Notiflix.Notify.failure(error.message);
       });
   };
 
