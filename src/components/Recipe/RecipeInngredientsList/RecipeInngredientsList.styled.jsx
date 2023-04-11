@@ -16,6 +16,8 @@ export const InngredientsList = styled.ul`
 `;
 
 export const RecipeItem = styled.li`
+  display: flex;
+  align-items: center;
   border-radius: 8px;
   background-color: #ebf3d4;
   list-style: none;
@@ -104,4 +106,27 @@ export const IngDescr = styled.div`
     font-size: 17px;
     height: 40px;
   } ;
+`;
+
+export const RealCheckbox = styled.input`
+  display: none;
+`;
+
+export const CustomCheckbox = styled.input`
+  margin-left: 30px;
+  position: relative;
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  background: transparent;
+  border: 1px solid rgba(126, 126, 126, 0.5);
+  border-radius: 4px;
+  @media ${theme.device.tablet} {
+    margin-left: 78px;
+    width: 18px;
+    height: 18px;
+  }
+  @media ${theme.device.desktop} {
+    margin-left: 151px;
+  }
 `;

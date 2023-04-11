@@ -6,6 +6,7 @@ import {
   TitltListWrap,
   TitleListIngredient,
   TitleListNumber,
+  AddtoList,
 } from './RecipePage.styled';
 import { MainContainer } from '../../components/MainContainer/MainContainer';
 import queryBackEnd from '../../helpers/request/queryBackEnd';
@@ -36,7 +37,7 @@ const RecipePage = () => {
         <TitltListWrap>
           <TitleListIngredient>Ingredients</TitleListIngredient>
           <TitleListNumber>Number</TitleListNumber>
-          <span>Add to list</span>
+          <AddtoList>Add to list</AddtoList>
         </TitltListWrap>
 
         <RecipeInngredientsList ingredients={recipe.ingredients} />

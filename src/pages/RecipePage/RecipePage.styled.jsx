@@ -45,13 +45,21 @@ export const TitleListIngredient = styled.span`
 `;
 
 export const TitleListNumber = styled.span`
-  margin-right: 24px;
+  margin-right: 22px;
 
   @media ${theme.device.tablet} {
-    margin-right: 78px;
+    margin-right: 56px;
   }
 
   @media ${theme.device.desktop} {
-    margin-right: 124px;
+    margin-right: 118px;
+  }
+`;
+export const AddtoList = styled.span`
+  @media ${theme.device.tablet} {
+    margin-right: 24px;
+  }
+  @media ${theme.device.desktop} {
+    margin-right: 3px;
   }
 `;
