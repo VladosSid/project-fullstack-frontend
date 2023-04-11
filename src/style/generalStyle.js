@@ -31,6 +31,7 @@ export const theme = {
         searchBtnFocus: '#fafafa',
         searchInputBorder: 'rgba(250, 250, 250, 0.5)',
         searchInputBG: 'transparent',
+        // searchInputColor: '',
         searchInputPlaceholder: 'rgba(250, 250, 250, 0.5)',
         searchBtncolorFocus: '#22252A',
       },
