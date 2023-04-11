@@ -9,6 +9,7 @@ import desktop1 from '../../../images/RecipeHero/recipeHero_desktop_1x.jpg';
 // import desktop2 from '../../../images/RecipeHero/recipeHero_desktop_2x.jpg';
 
 export const HeroContainer = styled.div`
+  justify-content: space-between;
   position: static;
   z-index: 3;
   display: flex;
@@ -26,7 +27,7 @@ export const HeroContainer = styled.div`
   @media ${theme.device.tablet} {
     background-image: url(${tab1});
     padding-bottom: 90px;
-    padding: 18px 44px;
+    padding: 80px 44px;
   }
   @media ${theme.device.desktop} {
     padding-top: 100px;
@@ -45,7 +46,7 @@ export const HeroTiile = styled.h1`
   text-align: center;
   font-size: 24px;
   line-height: 1.3;
-  margin-bottom: 18px;
+  // margin-bottom: 18px;
   color: #8baa36;
 
   max-width: 330px;
@@ -59,13 +60,13 @@ export const HeroTiile = styled.h1`
   @media ${theme.device.tablet} {
     max-width: 680px;
     font-size: 44px;
-    margin-top: 72px;
+    // margin-top: 72px;
     // margin-bottom: 24px;
   }
 
   @media ${theme.device.desktop} {
-    margin-top: 75px;
-    margin-bottom: 24px;
+    // margin-top: 75px;
+    // margin-bottom: 24px;
     max-width: 1000px;
   }
 `;
@@ -80,7 +81,7 @@ export const HeroText = styled.p`
   letter-spacing: -0.02em;
 
   width: 303px;
-  margin-bottom: 15px;
+  // margin-bottom: 15px;
   overflow: hidden;
   text-overflow: ellipsis;
   display: -webkit-box;
@@ -93,12 +94,12 @@ export const HeroText = styled.p`
     width: 506px;
     font-size: 18px;
     line-height: 1.33;
-    margin-bottom: 24px;
+    // margin-bottom: 24px;
   }
 
   @media ${theme.device.desktop} {
     -webkit-line-clamp: 3;
-    margin-bottom: 15px;
+    // margin-bottom: 15px;
     width: 656px;
   }
 `;
@@ -116,7 +117,7 @@ export const HeroButtonAdd = styled.button`
    {
     padding: 18px 44px;
     font-size: 16px;
-    margin-bottom: 60px;
+    // margin-bottom: 60px;
   }
   @media ${theme.device.desktop} {
     // margin-bottom: 60px;
@@ -141,7 +142,7 @@ padding: 10px 18px;
    {
     padding: 18px 44px;
     font-size: 16px;
-    margin-bottom: 60px;
+    // margin-bottom: 60px;
   }
   @media ${theme.device.desktop} {
     // margin-bottom: 60px;
@@ -152,23 +153,28 @@ padding: 10px 18px;
     color: #fafafa;
 `;
 
-export const CookingTimeContainer = styled.div``;
+export const CookingTimeContainer = styled.div`
+  // margin-bottom: 60px;
+`;
 
 export const CookingTime = styled.div`
   display: flex;
   width: fit-content;
   align-items: center;
-  
+  // padding-bottom: 40px;
   color: #23262A;
-  /
-  font-size: 10px;
+  margin-bottom: 140px;
+  font-size: 14px;
   line-height: 1.4;
  
   @media ${theme.device.tablet} {
     font-size: 20px;
+  margin-bottom: 0px;
+
   }
   @media ${theme.device.desktop} {
     font-size: 20px;
+  margin-bottom: 0px;
     
   }
   & svg {
