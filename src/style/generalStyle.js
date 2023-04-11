@@ -20,7 +20,19 @@ export const theme = {
         textNavigation: '#FAFAFA',
         SearchImg: '#FAFAFA',
       },
-
+      mainPage: {
+        mpHeroTitle: '#FAFAFA',
+        mpHeroText: '#FAFAFA',
+        mpHeroProductColor: '#FAFAFA',
+        mpHeroProductBackground: '#2A2C36',
+        recipeCategoryName: '#FAFAFA',
+        mpButton: '#FAFAFA',
+        searchBtn: '#8BAA36',
+        searchBtnFocus: '#22252A',
+        searchInputBorder: 'rgba(250, 250, 250, 0.5)',
+        searchInputBG: 'transparent',
+        searchInputPlaceholder: 'rgba(250, 250, 250, 0.5)',
+      },
       mainPageTitle: {
         colorTitle: '#FAFAFA',
       },
@@ -69,7 +81,19 @@ export const theme = {
         textNavigation: '#23262A',
         SearchImg: '#22252A',
       },
-
+      mainPage: {
+        mpHeroTitle: '#22252a',
+        mpHeroText: '#23262a',
+        mpHeroProductColor: '#3E4462',
+        mpHeroProductBackground: '#ffffff',
+        recipeCategoryName: '#001833',
+        mpButton: '#22252a',
+        searchBtn: '#22252A',
+        searchBtnFocus: '#8BAA36',
+        searchInputBorder: '#F0F0F0',
+        searchInputBG: '#fafafa',
+        searchInputPlaceholder: '#3e4462',
+      },
       mainPageTitle: {
         colorTitle: '#001833',
       },

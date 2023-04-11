@@ -18,15 +18,18 @@ export const SearchesForm = styled.form`
 `;
 
 export const SearchInput = styled.input`
-  background-color: #fafafa;
-  border: none;
   outline: none;
   border-radius: 24px 44px;
-  border: 1px solid #f0f0f0;
+  border: 1px;
+  border-style: solid;
+  border-color: ${props => props.theme.color.mainPage.searchInputBorder};
+
+  background-color: ${props => props.theme.color.mainPage.searchInputBG};
   height: 52px;
 
   width: 283px;
   padding-left: 32px;
+
   @media ${theme.device.tablet} {
     width: ${props => (props.page === 'main' ? '330px' : '350px')};
     height: 59px;
@@ -44,7 +47,8 @@ export const SearchInput = styled.input`
     font-weight: 400;
     font-size: 12px;
     line-height: 1.5;
-    color: #3e4462;
+    color: ${props => props.theme.color.mainPage.searchInputPlaceholder};
+
     @media ${theme.device.tablet} {
       font-size: ${props => (props.page === 'main' ? '16px' : '14px')};
     }
@@ -55,7 +59,7 @@ export const SearchInput = styled.input`
 `;
 export const SearchBtn = styled.button`
   position: absolute;
-  right: 0;
+  right: -1px;
   width: 113px;
   height: 56px;
 
@@ -66,21 +70,29 @@ export const SearchBtn = styled.button`
   font-weight: 400;
   font-size: 14px;
   line-height: 1.5;
+  border-style: solid;
+  border: 1px;
   /* background-color: ${props => (props.green ? '#8BAA36' : '#22252a')};
   border: ${props =>
     props.green ? '1px solid #8BAA36' : '1px solid #22252a'}; */
-  background-color: ${props => (props.page === 'main' ? '#22252a' : '#8BAA36')};
-  border: ${props =>
-    props.page === 'main' ? '1px solid #22252a' : '1px solid #8BAA36'};
+  background-color: ${props =>
+    props.page === 'main' ? props.theme.color.mainPage.searchBtn : '#8BAA36'};
+  border-color: ${props =>
+    props.page === 'main' ? props.theme.color.mainPage.searchBtn : '#8BAA36'};
   &:hover,
   &:focus {
     /* background-color: ${props => (props.green ? '#22252a' : '#8BAA36')};
     border: ${props =>
       props.green ? '1px solid #22252a' : '1px solid #8BAA36'}; */
     background-color: ${props =>
-      props.page === 'main' ? '#8BAA36' : '#22252a'};
-    border: ${props =>
-      props.page === 'main' ? '1px solid #8BAA36' : '1px solid #22252a'};
+      props.page === 'main'
+        ? props.theme.color.mainPage.searchBtnFocus
+        : '#22252a'};
+    border-color: ${props =>
+      props.page === 'main'
+        ? props.theme.color.mainPage.searchBtnFocus
+        : '#22252a'};
+
     cursor: pointer;
   }
   @media screen and (max-width: 767px) {
@@ -93,8 +105,8 @@ export const SearchBtn = styled.button`
   }
   @media ${theme.device.desktop} {
     width: 161px;
-    height: 75px;
+    height: 76px;
     font-size: 16px;
   }
 `;
-//color: ${props => props.theme.color.mainPageTitle.colorTitle};
+//color: ${props => props.theme.color.mainPage.colorTitle};

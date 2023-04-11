@@ -38,7 +38,6 @@ export const MPHeroBG = styled.section`
       top 140px right 0px;
     background-size: 320px, 375px, 60px, 280px;
   }
-
   @media ${theme.device.tablet} {
     /* max-width: 768px; */
     padding-top: 224px;
@@ -48,7 +47,6 @@ export const MPHeroBG = styled.section`
     background-size: cover;
     background-position: center center;
   }
-
   @media ${theme.device.desktop} {
     padding-top: 226px;
     padding-bottom: 224px;
@@ -67,13 +65,11 @@ export const MPContainer = styled.div`
   @media screen and (max-width: 767px) {
     position: relative;
   }
-
   @media ${theme.device.tablet} {
     width: 704px;
     margin: 0 auto;
     padding: 0 32px;
   }
-
   /* position: relative; */
   @media ${theme.device.desktop} {
     width: 1240px;
@@ -103,12 +99,10 @@ export const MPHeroTitle = styled.h1`
   font-weight: 400;
   font-size: 60px;
   line-height: 1;
-
   letter-spacing: -0.005em;
-
   margin-bottom: 14px;
   span {
-    color: #22252a;
+    color: ${props => props.theme.color.mainPageTitle.colorTitle};
   }
   @media screen and (max-width: 767px) {
     text-align: center;
@@ -136,12 +130,10 @@ export const MDHeroFlex = styled.div`
 `;
 export const MPHeroText = styled.span`
   display: block;
-
   font-family: 'Poppins';
   font-style: normal;
   font-weight: 400;
-
-  color: #23262a;
+  color: ${props => props.theme.color.mainPage.mpHeroText};
   width: 248px;
   font-size: 14px;
   line-height: 1.29;
@@ -176,18 +168,16 @@ export const MPHeroProduct = styled.span`
   font-size: 12px;
   line-height: 1.5;
   letter-spacing: -0.24px;
-  color: #3e4462;
-
-  background-color: #ffffff;
+  color: ${props => props.theme.color.mainPage.mpHeroProductColor};
+  background-color: ${props =>
+    props.theme.color.mainPage.mpHeroProductBackground};
   border-radius: 8px;
-
   @media screen and (max-width: 767px) {
     position: absolute;
     padding: 8px;
     top: 303px;
     right: 27px;
   }
-
   @media ${theme.device.tablet} and (max-width: 1303px) {
     width: 260px;
     padding: 12px;
@@ -210,7 +200,7 @@ export const StyledLink = styled(Link)`
   align-items: center;
   text-align: center;
   margin-top: 7px;
-  color: #3e4462;
+  color: ${props => props.theme.color.mainPage.mpHeroProductColor};
   font-family: 'Poppins';
   font-style: normal;
   font-weight: 400;
@@ -218,7 +208,6 @@ export const StyledLink = styled(Link)`
   margin-left: 135px;
   font-size: 10px;
   line-height: 1.2;
-
   @media ${theme.device.tablet} {
     margin-left: 164px;
     font-size: 10px;

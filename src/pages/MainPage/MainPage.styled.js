@@ -1,14 +1,13 @@
+import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import theme from '../../style/generalStyle';
-import { Link } from 'react-router-dom';
+
 export const ContainerWrapper = styled.div`
   /* height: 100%; */
-
   /* display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center; */
-
   @media ${theme.device.tablet} {
   }
   @media ${theme.device.desktop} {
@@ -38,7 +37,6 @@ export const Container = styled.div`
     gap: 50px;
     margin-bottom: 32px;
   }
-
   @media ${theme.device.desktop} {
     gap: 100px;
     margin-bottom: 14px;
@@ -51,15 +49,29 @@ export const GridContainer = styled.div`
     display: flex;
     gap: 32px;
   }
-
   @media ${theme.device.desktop} {
     display: flex;
     gap: 13px;
   }
 `;
+// export const RecipeCategoryName = styled.h2`
+//   margin-bottom: 32px;
+//   font-family: 'Poppins';
+//   font-style: normal;
+//   font-weight: 600;
+//   font-size: 28px;
+//   line-height: 1;
+
+//   letter-spacing: -0.02em;
+//   /* font-feature-settings: 'liga' off; */
+
+//   color: ${props => props.theme.color.mainPage.recipeCategoryName};
+// `;
+
 export const RecipeCategoryName = styled.h2`
   margin-bottom: 32px;
 `;
+
 export const RecipeCategoryNameLink = styled(Link)`
   font-family: 'Poppins';
   font-style: normal;
@@ -69,16 +81,19 @@ export const RecipeCategoryNameLink = styled(Link)`
   text-decoration: none;
   letter-spacing: -0.02em;
   /* font-feature-settings: 'liga' off; */
-
-  color: #001833;
+  color: ${props => props.theme.color.mainPage.recipeCategoryName};
   &:hover {
     color: #8baa36;
   }
 `;
+
 export const CardWrapper = styled.div`
   position: relative;
   margin-bottom: 24px;
   img {
+    /* width: 343px;
+    height: 323px; */
+    /* object-fit: cover; */
     width: 100%;
     border-radius: 8px;
   }
@@ -102,11 +117,8 @@ export const RecipeTitle = styled.h3`
   font-size: 16px;
   line-height: 1.25;
   /* identical to box height, or 125% */
-
   letter-spacing: -0.24px;
-
   /* Color - Text Primary */
-
   color: #3e4462;
 `;
 export const Button = styled.button`
@@ -156,7 +168,7 @@ export const MPButton = styled.button`
   font-size: 14px;
   line-height: 1.5;
   text-align: center;
-  color: #22252a;
+  color: ${props => props.theme.color.mainPage.mpButton};
   &:hover,
   &:focus {
     background-color: #8baa36;
