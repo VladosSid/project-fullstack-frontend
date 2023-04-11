@@ -2,6 +2,7 @@ import styled from 'styled-components';
 import theme from 'style/generalStyle';
 
 export const PopupWrapper = styled.div`
+  display: ${props => (props.isOpen ? 'block' : 'none')};
   background-color: #00000070;
   overflow: hidden;
   position: fixed;
