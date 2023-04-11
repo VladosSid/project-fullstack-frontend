@@ -14,6 +14,8 @@ const initialState = {
   isLoggedIn: false,
   error: null,
   isGetingCurentUser: false,
+  favorite: [],
+  shoppingList: [],
 };
 
 export const authSlice = createSlice({
@@ -65,11 +67,14 @@ export const authSlice = createSlice({
       state.isGetingCurentUser = true;
     },
     [authOperations.fetchCurrentUser.fulfilled](state, action) {
-      const { email, username, avatarURL } = action.payload.user;
+      const { email, username, avatarURL, favorite, shoppingList } =
+        action.payload.user;
 
       state.user.email = email;
       state.user.name = username;
       state.user.avatarURL = avatarURL;
+      state.user.favorite = favorite;
+      state.user.shoppingList = shoppingList;
       state.error = null;
 
       state.isLoggedIn = true;

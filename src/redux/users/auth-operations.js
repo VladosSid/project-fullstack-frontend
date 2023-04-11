@@ -68,6 +68,7 @@ const fetchCurrentUser = createAsyncThunk(
     token.set(persistedToken);
     try {
       const { data } = await instanceBacEnd.get('users/current');
+      console.log(data);
       return data;
     } catch (err) {
       return thunkAPI.rejectWithValue(err.message);
