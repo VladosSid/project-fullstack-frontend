@@ -1,9 +1,7 @@
-// import RecipeInngredientsList from 'Components/Recipe/RecipeInngredientsList/RecipeInngredientsList';
-
-// import RecipePageHero from 'Components/Recipe/RecipePageHero/RecipePageHero';
-// import RecipePreparation from 'Components/Recipe/RecipePreparation/RecipePreparation';
-
 import { RecipePageHero } from 'components/Recipe/RecipePageHero/RecipePageHero';
+import RecipeInngredientsList from 'components/Recipe/RecipeInngredientsList/RecipeInngredientsList';
+import { useState, useEffect } from 'react';
+
 import {
   TitltListWrap,
   TitleListIngredient,
@@ -11,13 +9,30 @@ import {
   Tabl,
 } from './RecipePage.styled';
 import { MainContainer } from '../../components/MainContainer/MainContainer';
-
-// import ingredients from '../../ingredients.json';
+import queryBackEnd from '../../helpers/request/queryBackEnd';
+import { useParams } from 'react-router-dom';
 
 const RecipePage = () => {
+  const [recipe, setRecipe] = useState({});
+  const { recipeId } = useParams();
+  useEffect(() => {
+    const fetchData = async () => {
+      console.log(recipeId);
+      const data = await queryBackEnd.queryRecipeId(recipeId);
+      console.log(data);
+
+      setRecipe(data.result.data[0]);
+    };
+    fetchData();
+  }, [recipeId]);
+
   return (
     <>
-      <RecipePageHero />
+      <RecipePageHero
+        title={recipe.title}
+        description={recipe.description}
+        time={recipe.time}
+      />
       <MainContainer>
         <div>
           <h1>Recipe</h1>
@@ -28,8 +43,8 @@ const RecipePage = () => {
             <TitleListNumber>Number</TitleListNumber>
             <span>Add to list</span>
           </TitltListWrap>
-          {/* <IngredientsShoppingList ingredients={ingredients} /> */}
         </Tabl>
+        <RecipeInngredientsList ingredients={recipe.ingredients} />
       </MainContainer>
     </>
   );
