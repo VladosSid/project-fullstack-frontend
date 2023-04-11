@@ -13,8 +13,9 @@ import { queryBackEnd } from 'helpers/request';
 import { Container, Pagination, Stack } from '@mui/material';
 
 // import { SxProps, Theme } from '@mui/material/styles';
-import { PaginationWrapper } from './FavoritePage.styled';
-import Notiflix from 'notiflix';
+import { PaginationWrapper, ImgWrapper, ImgTitle } from './FavoritePage.styled';
+// import Notiflix from 'notiflix';
+import imgIngradients from '../../images/ShopingList/ingradients.png';
 
 const FavoritePage = () => {
   const location = useLocation();
@@ -28,9 +29,9 @@ const FavoritePage = () => {
     const data = queryBackEnd.queryAllFavorite();
     data
       .then(results => {
-        if (results.result.data.list === []) {
-          Notiflix.Notify.failure('The list is empty');
-        }
+        // if (results.result.data.list === []) {
+        //   Notiflix.Notify.failure('The list is empty');
+        // }
         setRecipes(results.result.data.list);
         setAllItem(results.result.data.totalItem);
         const pageQty = Math.ceil(results.result.data.totalItem / 4);
@@ -38,7 +39,7 @@ const FavoritePage = () => {
       })
       .catch(error => {
         console.log(error.message);
-        Notiflix.Notify.failure(`The list is empty`);
+        // Notiflix.Notify.failure(`The list is empty`);
       });
   }, []);
 
@@ -62,9 +63,9 @@ const FavoritePage = () => {
       .patch(`/favorite/remove?page=${pageBack}`, { recipe: `${recipeId}` })
       .then(res => {
         const list = res.data.result.data.list;
-        if (list.length === 0) {
-          Notiflix.Notify.failure(`The list is empty`);
-        }
+        // if (list.length === 0) {
+        //   Notiflix.Notify.failure(`The list is empty`);
+        // }
         setRecipes(list);
         const totalItem = res.data.result.data.totalItem;
         setAllItem(totalItem);
@@ -73,21 +74,28 @@ const FavoritePage = () => {
       })
       .catch(error => {
         console.log(error.message);
-        Notiflix.Notify.failure(`The list is empty`);
+        // Notiflix.Notify.failure(`The list is empty`);
         // setRecipes([]);
       });
   };
   return (
     <MainContainer>
       <MainPageTitle title={'Favorite'} />
-      <FavoriteList
-        recipes={recipes}
-        allItem={allItem}
-        location={location}
-        removeFavorite={removeFavorite}
-      >
-        {Children}
-      </FavoriteList>
+      {recipes.length !== 0 ? (
+        <FavoriteList
+          recipes={recipes}
+          allItem={allItem}
+          location={location}
+          removeFavorite={removeFavorite}
+        >
+          {Children}
+        </FavoriteList>
+      ) : (
+        <ImgWrapper>
+          <img src={imgIngradients} alt={'Empty list'} />
+          <ImgTitle>The list is empty</ImgTitle>
+        </ImgWrapper>
+      )}
       <PaginationWrapper>
         <Container>
           <Stack spacing={2}>
