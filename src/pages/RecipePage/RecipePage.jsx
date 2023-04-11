@@ -2,6 +2,8 @@ import { RecipePageHero } from 'components/Recipe/RecipePageHero/RecipePageHero'
 import RecipeInngredientsList from 'components/Recipe/RecipeInngredientsList/RecipeInngredientsList';
 import { useState, useEffect } from 'react';
 
+import Notiflix from 'notiflix';
+
 import {
   TitltListWrap,
   TitleListIngredient,
@@ -12,14 +14,51 @@ import { MainContainer } from '../../components/MainContainer/MainContainer';
 import queryBackEnd from '../../helpers/request/queryBackEnd';
 import { useParams } from 'react-router-dom';
 
+import { checkoutfavorite } from '../../helpers/RecipePage';
+
 const RecipePage = () => {
   const [recipe, setRecipe] = useState({});
+  const [favorite, setFavorite] = useState(false);
   const { recipeId } = useParams();
+
+  // addFavorite
+  const addFavorite = async e => {
+    e.preventDefault();
+    try {
+      await queryBackEnd.queryAddFavorite({
+        recipe: recipeId,
+      });
+
+      Notiflix.Notify.success('Add favorite.');
+
+      setFavorite(true);
+    } catch (err) {
+      console.log(err);
+    }
+  };
+
+  // removeFavorite
+  const removeFavorite = async e => {
+    try {
+      e.preventDefault();
+      queryBackEnd.queryRemoveFavorite({
+        recipe: recipeId,
+      });
+
+      Notiflix.Notify.success('Remove favorite.');
+
+      setFavorite(false);
+    } catch (err) {
+      console.log(err);
+    }
+  };
+
   useEffect(() => {
     const fetchData = async () => {
-      console.log(recipeId);
+      const check = await checkoutfavorite(recipeId);
+
+      setFavorite(check);
       const data = await queryBackEnd.queryRecipeId(recipeId);
-      console.log(data);
 
       setRecipe(data.result.data[0]);
     };
@@ -32,6 +71,9 @@ const RecipePage = () => {
         title={recipe.title}
         description={recipe.description}
         time={recipe.time}
+        addFavorite={addFavorite}
+        removeFavorite={removeFavorite}
+        favorite={favorite}
       />
       <MainContainer>
         <TitltListWrap>

@@ -4,7 +4,6 @@ import {
   HeroText,
   CookingTime,
   HeroButtonAdd,
-  HeroButtonDel,
 } from './RecipePageHero.styled';
 import { UseSvg } from '../../../helpers/useSvg/useSvg';
 
