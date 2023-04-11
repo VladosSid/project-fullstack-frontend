@@ -154,6 +154,9 @@ export const CardTime = styled.p`
 
 export const CardButtonSee = styled.button`
   position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 87px;
   height: 27px;
   right: 9px;
@@ -163,6 +166,7 @@ export const CardButtonSee = styled.button`
   font-weight: 400;
   font-size: 10px;
   line-height: 15px;
+  cursor: pointer;
   color: #fafafa;
   background: #8baa36;
   border-radius: 24px 44px;
@@ -187,10 +191,10 @@ export const CardButtonSee = styled.button`
   @media ${theme.device.desktop} {
     position: absolute;
     width: 172px;
-    height: 59px;
+    height: 54px;
     right: 40px;
     bottom: 40px;
-    padding: 18px 44px;
+    padding: 18px 40px;
     font-size: 16px;
     line-height: 24px;
     &:hover {
@@ -212,9 +216,9 @@ export const CardButtonDelete = styled.button`
   color: #fafafa;
   background: #8baa36;
   border-radius: 4px;
+  cursor: pointer;
   border: none;
-  &:hover,
-  :focus {
+  &:hover {
     background: #22252a;
   }
 
@@ -230,8 +234,7 @@ export const CardButtonDelete = styled.button`
     color: #fafafa;
     background: #8baa36;
     border-radius: 4px; */
-    &:hover,
-    :focus {
+    &:hover {
       background: #22252a;
     }
   }
@@ -245,8 +248,7 @@ export const CardButtonDelete = styled.button`
     /* color: #fafafa;
     background: #8baa36;
     border-radius: 4px; */
-    &:hover,
-    :focus {
+    &:hover {
       background: #22252a;
     }
   }

@@ -117,6 +117,7 @@ export const MPHeroTitle = styled.h1`
   }
 `;
 
+
 export const MDHeroFlex = styled.div`
   @media ${theme.device.tablet} {
     display: flex;
@@ -169,6 +170,7 @@ export const MPHeroProduct = styled.span`
   line-height: 1.5;
   letter-spacing: -0.24px;
   color: ${props => props.theme.color.mainPage.mpHeroProductColor};
+
   background-color: ${props =>
     props.theme.color.mainPage.mpHeroProductBackground};
   border-radius: 8px;

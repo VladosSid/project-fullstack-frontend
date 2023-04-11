@@ -81,6 +81,7 @@ export const RecipeCategoryNameLink = styled(Link)`
   text-decoration: none;
   letter-spacing: -0.02em;
   /* font-feature-settings: 'liga' off; */
+
   color: ${props => props.theme.color.mainPage.recipeCategoryName};
   &:hover {
     color: #8baa36;
@@ -169,6 +170,7 @@ export const MPButton = styled.button`
   line-height: 1.5;
   text-align: center;
   color: ${props => props.theme.color.mainPage.mpButton};
+
   &:hover,
   &:focus {
     background-color: #8baa36;
@@ -176,10 +178,16 @@ export const MPButton = styled.button`
     outline: none;
     color: #fafafa;
   }
+
   @media ${theme.device.tablet} {
     width: 239px;
     height: 61px;
-
     font-size: 16px;
+  }
+
+  &:hover,
+  focus {
+    background-color: #8baa36;
+    color: #fafafa;
   }
 `;

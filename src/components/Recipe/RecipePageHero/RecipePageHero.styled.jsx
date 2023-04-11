@@ -8,25 +8,26 @@ import tab1 from '../../../images/RecipeHero/recipeHero_tab_1x.jpg';
 import desktop1 from '../../../images/RecipeHero/recipeHero_desktop_1x.jpg';
 // import desktop2 from '../../../images/RecipeHero/recipeHero_desktop_2x.jpg';
 
-export const Container = styled.div`
+export const HeroContainer = styled.div`
+  justify-content: space-between;
+  position: static;
+  z-index: 3;
   display: flex;
   flex-direction: column;
   align-items: center;
   background-repeat: no-repeat;
   background-image: url(${mob1});
-  height: 455px;
+  height: 375px;
   margin-bottom: 32px;
   padding-top: 144px;
-  padding-bottom: 90px;
+  // padding-bottom: 90px;
   background-size: 100%;
   background-color: transparent;
-
-  border: 1px solid red;
 
   @media ${theme.device.tablet} {
     background-image: url(${tab1});
     padding-bottom: 90px;
-    padding: 18px 44px;
+    padding: 80px 44px;
   }
   @media ${theme.device.desktop} {
     padding-top: 100px;
@@ -34,7 +35,7 @@ export const Container = styled.div`
   }
 `;
 
-export const HeroTiile = styled.title`
+export const HeroTiile = styled.h1`
   font-family: 'Poppins';
   font-style: normal;
   font-weight: 600;
@@ -45,9 +46,8 @@ export const HeroTiile = styled.title`
   text-align: center;
   font-size: 24px;
   line-height: 1.3;
-  margin-bottom: 18px;
-
-  //   color: 8BAA36;
+  // margin-bottom: 18px;
+  color: #8baa36;
 
   max-width: 330px;
   overflow: hidden;
@@ -60,15 +60,18 @@ export const HeroTiile = styled.title`
   @media ${theme.device.tablet} {
     max-width: 680px;
     font-size: 44px;
-    margin-bottom: 24px;
+    // margin-top: 72px;
+    // margin-bottom: 24px;
   }
 
   @media ${theme.device.desktop} {
+    // margin-top: 75px;
+    // margin-bottom: 24px;
     max-width: 1000px;
   }
 `;
 
-export const HeroText = styled.text`
+export const HeroText = styled.p`
   font-family: 'Poppins';
   font-style: normal;
   font-weight: 400;
@@ -78,7 +81,7 @@ export const HeroText = styled.text`
   letter-spacing: -0.02em;
 
   width: 303px;
-  margin-bottom: 15px;
+  // margin-bottom: 15px;
   overflow: hidden;
   text-overflow: ellipsis;
   display: -webkit-box;
@@ -91,30 +94,105 @@ export const HeroText = styled.text`
     width: 506px;
     font-size: 18px;
     line-height: 1.33;
+    // margin-bottom: 24px;
   }
 
   @media ${theme.device.desktop} {
     -webkit-line-clamp: 3;
-    margin-bottom: 15px;
+    // margin-bottom: 15px;
     width: 656px;
   }
+`;
+
+export const HeroButtonAdd = styled.button`
+  padding: 10px 18px;
+  background-color: transparent;
+  color: #22252a;
+  border-radius: 24px 44px;
+  border: 1px solid #8baa36;
+  transition: all 250ms linear;
+  font-size: 10px;
+  line-height: 1.5;
+  @media ${theme.device.tablet};
+   {
+    padding: 18px 44px;
+    font-size: 16px;
+    // margin-bottom: 60px;
+  }
+  @media ${theme.device.desktop} {
+    // margin-bottom: 60px;
+  }
+  &:hover,
+  &:focus {
+    background-color: #8baa36;
+    color: #fafafa;
+  }
+`;
+export const HeroButtonDel = styled.button`
+display: none;
+padding: 10px 18px;
+  background-color: transparent;
+  color: #22252a;
+  border-radius: 24px 44px;
+  border: 1px solid #8baa36;
+  transition: all 250ms linear;
+  font-size: 10px;
+  line-height: 1.5;
+  @media ${theme.device.tablet};
+   {
+    padding: 18px 44px;
+    font-size: 16px;
+    // margin-bottom: 60px;
+  }
+  @media ${theme.device.desktop} {
+    // margin-bottom: 60px;
+  }
+  &:hover,
+  &:focus {
+    background-color: #8baa36;
+    color: #fafafa;
+`;
+
+export const CookingTimeContainer = styled.div`
+  // margin-bottom: 60px;
 `;
 
 export const CookingTime = styled.div`
   display: flex;
   width: fit-content;
   align-items: center;
-  color: black;
-  margin-top: 42px;
-  font-size: 10px;
+  // padding-bottom: 40px;
+  color: #23262A;
+  margin-bottom: 140px;
+  font-size: 14px;
   line-height: 1.4;
-  height: 14px;
+ 
   @media ${theme.device.tablet} {
-    height: 20px;
-    margin-top: 65px;
-    font-size: 14px;
+    font-size: 20px;
+  margin-bottom: 0px;
+
   }
   @media ${theme.device.desktop} {
-    margin-top: 48px;
+    font-size: 20px;
+  margin-bottom: 0px;
+    
   }
+  & svg {
+    margin-right: 5px;
+    
+    stroke: #23262A;
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    @media ${theme.device.tablet} {
+      
+      height: 20px;
+      width: 20px;
+    }
+    @media ${theme.device.desktop} {
+      
+      height: 20px;
+      width: 20px;
+      
+    }
 `;

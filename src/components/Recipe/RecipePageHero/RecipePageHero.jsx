@@ -1,20 +1,37 @@
 import {
-  Container,
+  HeroContainer,
   HeroTiile,
   HeroText,
   CookingTime,
+  HeroButtonAdd,
 } from './RecipePageHero.styled';
+import { UseSvg } from '../../../helpers/useSvg/useSvg';
 
-export const RecipePageHero = () => {
+export const RecipePageHero = ({
+  title,
+  description,
+  time,
+  addFavorite,
+  removeFavorite,
+  favorite,
+}) => {
   return (
-    <Container>
-      <HeroTiile>Salmon Avocado Salad</HeroTiile>
-      <HeroText>
-        Is a healthy salad recipe that’s big on nutrients and flavor. A moist,
-        pan seared salmon is layered on top of spinach, avocado, tomatoes, and
-        red onions. Then drizzled with a homemade lemon vinaigrette.
-      </HeroText>
-      <CookingTime>20min</CookingTime>
-    </Container>
+    <HeroContainer>
+      <HeroTiile>{title}</HeroTiile>
+      <HeroText>{description}</HeroText>
+      {favorite ? (
+        <HeroButtonAdd onClick={e => removeFavorite(e)}>
+          Remove to favorite recipes
+        </HeroButtonAdd>
+      ) : (
+        <HeroButtonAdd onClick={e => addFavorite(e)}>
+          Add to favorite recipes
+        </HeroButtonAdd>
+      )}
+      <CookingTime>
+        <UseSvg id="Time" />
+        {time} min
+      </CookingTime>
+    </HeroContainer>
   );
 };

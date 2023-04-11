@@ -9,7 +9,7 @@ export const CardWrapper = styled.div`
   border-radius: 8px;
   box-shadow: 5px 4px 8px 0px rgba(34, 60, 80, 0.2);
   border: 1px solid rgba(34, 60, 80, 0.2);
-  background: ${props => props.theme.color.favorit.CardWrapper};
+  background: ${props => props.theme.color.favorit.cardWrapper};
 
   @media ${theme.device.tablet} {
     position: relative;
@@ -80,7 +80,7 @@ export const CardTitle = styled.h3`
   font-size: 14px;
   line-height: 14px;
   letter-spacing: -0.24px;
-  color: ${props => props.theme.color.favorit.CardTitle};
+  color: ${props => props.theme.color.favorit.cardTitle};
 
   @media ${theme.device.tablet} {
     font-size: 24px;
@@ -102,7 +102,7 @@ export const CardDescription = styled.p`
   font-size: 8px;
   line-height: 10px;
   letter-spacing: -0.02em;
-  color: ${props => props.theme.color.favorit.CardDescription};
+  color: ${props => props.theme.color.favorit.cardDescription};
 
   @media ${theme.device.tablet} {
     display: inline-block;
@@ -128,7 +128,7 @@ export const CardTime = styled.p`
   line-height: 14px;
   letter-spacing: -0.24px;
   color: #3e4462;
-  color: ${props => props.theme.color.favorit.CardTime};
+  color: ${props => props.theme.color.favorit.cardTime};
 
   @media ${theme.device.tablet} {
     display: inline-block;
@@ -155,18 +155,19 @@ export const CardButtonSee = styled.div`
     height: 45px;
     right: 24px;
     bottom: 28px;
-    background: ${props => props.theme.color.favorit.CardButtonSee};
+    background: ${props => props.theme.color.favorit.cardButtonSee};
     font-family: 'Poppins';
     font-style: normal;
     font-weight: 400;
     font-size: 14px;
     line-height: 21px;
+    cursor: pointer;
     color: #fafafa;
     border-radius: 24px 44px;
-    border: 1px solid ${props => props.theme.color.favorit.CardButtonSeeBorder};
+    border: 1px solid ${props => props.theme.color.favorit.cardButtonSeeBorder};
     &:hover {
-      background: ${props => props.theme.color.favorit.CardButtonSeeHover};
-      border-color: ${props => props.theme.color.favorit.CardButtonSeeHover};
+      background: ${props => props.theme.color.favorit.cardButtonSeeHover};
+      border-color: ${props => props.theme.color.favorit.cardButtonSeeHover};
     }
   }
 
@@ -180,7 +181,7 @@ export const CardButtonSee = styled.div`
     bottom: 40px;
     width: 160px;
     height: 54px;
-    padding: 14px 28px;
+    /* padding: 10px 20px; */
     font-size: 16px;
     line-height: 24px;
     color: #fafafa;
@@ -198,14 +199,15 @@ export const CardButtonDelete = styled.button`
   height: 24px;
   right: 14px;
   bottom: 14px;
-  background: ${props => props.theme.color.favorit.CardButtonDelete};
+  background: ${props => props.theme.color.favorit.cardButtonDelete};
   // color: #22252a;
   border-radius: 4px;
+  cursor: pointer;
   border: 1.2px solid
-    ${props => props.theme.color.favorit.CardButtonDeleteBorder};
+    ${props => props.theme.color.favorit.cardButtonDeleteBorder};
   &:hover {
     background: ${props =>
-      props.theme.color.favorit.CardButtonDeleteHoverBackground};
+      props.theme.color.favorit.cardButtonDeleteHoverBackground};
     // color: #fafafa;
   }
 
@@ -232,11 +234,11 @@ export const CardIcon = styled.div`
   align-items: center;
   width: 24px;
   height: 24px;
-  fill: ${props => props.theme.color.favorit.CardIconFill};
-  stroke: ${props => props.theme.color.favorit.CardIconStroke};
+  fill: ${props => props.theme.color.favorit.cardIconFill};
+  stroke: ${props => props.theme.color.favorit.cardIconStroke};
   &:hover {
-    fill: ${props => props.theme.color.favorit.CardIconFillHover};
-    stroke: ${props => props.theme.color.favorit.CardIconStrokeHover};
+    fill: ${props => props.theme.color.favorit.cardIconFillHover};
+    stroke: ${props => props.theme.color.favorit.cardIconStrokeHover};
   }
   svg {
     width: 10px;

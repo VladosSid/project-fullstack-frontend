@@ -1,3 +1,4 @@
+import { AiOutlineSearch } from 'react-icons/ai';
 import styled from 'styled-components';
 import theme from 'style/generalStyle';
 
@@ -74,9 +75,4 @@ export const Ul = styled.ul`
   }
 `;
 
-export const SearchImg = styled.img`
-  // color: ${props => props.theme.color.header.SearchImg};
-  // stroke: red;
-  // fill: red;
-`;
-
+export const SearchImg = styled(AiOutlineSearch)``;

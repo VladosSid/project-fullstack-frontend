@@ -2,7 +2,6 @@ import { NavLink } from 'react-router-dom';
 
 import { Ul } from './Navigation.styled';
 import { HeaderNav, SearchImg } from './Navigation.styled';
-import search from '../../images/Header/search.svg';
 
 const Navigation = () => {
   return (
@@ -25,7 +24,7 @@ const Navigation = () => {
         </li>
         <li>
           <NavLink to="/search">
-            <SearchImg src={search} alt="search" />
+            <SearchImg size={24} alt="search" />
             <p>Search</p>
           </NavLink>
         </li>

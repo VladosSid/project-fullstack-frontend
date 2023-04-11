@@ -2,6 +2,14 @@ import styled, { keyframes } from 'styled-components';
 import { ReactComponent as Fork } from '../../images/Loader/fork-white.svg';
 import { ReactComponent as Knife } from '../../images/Loader/knife-white.svg';
 
+export const WrapperLoader = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+`;
+
 export const Box = styled.div`
   width: ${p => p.square}px;
   height: ${p => p.square}px;
@@ -10,6 +18,7 @@ export const Box = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  opacity: 0.75;
   box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.75);
 `;
 

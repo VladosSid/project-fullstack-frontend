@@ -16,9 +16,19 @@ export const theme = {
       backgrounGlobal: '#1E1F28',
 
       header: {
+        headerContainer: '#1E1F28',
         backgroun: '#1E1F28',
         textNavigation: '#FAFAFA',
-        SearchImg: '#FAFAFA',
+      
+      },
+
+      mainPage: {
+        mpHeroTitle: '#FAFAFA',
+        mpHeroText: '#FAFAFA',
+        mpHeroProductColor: '#FAFAFA',
+        mpHeroProductBackground: '#2A2C36',
+        recipeCategoryName: '#FAFAFA',
+        mpButton: '#FAFAFA',
       },
       mainPage: {
         mpHeroTitle: '#FAFAFA',
@@ -55,20 +65,20 @@ export const theme = {
       },
 
       favorit: {
-        CardWrapper: '#2A2C36',
-        CardTitle: '#FAFAFA',
-        CardDescription: 'rgba(250, 250, 250, 0.6)',
-        CardTime: '#FAFAFA',
-        CardButtonSee: '#8BAA36',
-        CardButtonSeeBorder: '#8BAA36',
-        CardButtonSeeHover: '#22252A',
-        CardButtonDelete: '#1E1F28',
-        CardButtonDeleteHoverBackground: '#EBF3D4',
-        CardButtonDeleteBorder: '#1E1F28',
-        CardIconStroke: '#fafafa',
-        CardIconStrokeHover: '#22252a',
-        CardIconFill: '#1E1F28',
-        CardIconFillHover: '#EBF3D4',
+        cardWrapper: '#2A2C36',
+        cardTitle: '#FAFAFA',
+        cardDescription: 'rgba(250, 250, 250, 0.6)',
+        cardTime: '#FAFAFA',
+        cardButtonSee: '#8BAA36',
+        cardButtonSeeBorder: '#8BAA36',
+        cardButtonSeeHover: '#22252A',
+        cardButtonDelete: '#1E1F28',
+        cardButtonDeleteHoverBackground: '#EBF3D4',
+        cardButtonDeleteBorder: '#1E1F28',
+        cardIconStroke: '#fafafa',
+        cardIconStrokeHover: '#22252a',
+        cardIconFill: '#1E1F28',
+        cardIconFillHover: '#EBF3D4',
       },
 
       shoppingList: {
@@ -94,9 +104,18 @@ export const theme = {
       backgrounGlobal: '#FFFFFF',
 
       header: {
+        headerContainer: 'rgb(255, 255, 255)',
         backgroun: '#FAFAFA',
         textNavigation: '#23262A',
-        SearchImg: '#22252A',
+      },
+
+      mainPage: {
+        mpHeroTitle: '#22252a',
+        mpHeroText: '#23262a',
+        mpHeroProductColor: '#3E4462',
+        mpHeroProductBackground: '#ffffff',
+        recipeCategoryName: '#001833',
+        mpButton: '#22252a',
       },
       mainPage: {
         mpHeroTitle: '#22252a',
@@ -133,20 +152,20 @@ export const theme = {
       },
 
       favorit: {
-        CardWrapper: '#FFFFFF',
-        CardTitle: '#3e4462',
-        CardDescription: '#23262A',
-        CardTime: '#3e4462',
-        CardButtonSee: '#22252A',
-        CardButtonSeeBorder: 'rgb(250, 250, 250)',
-        CardButtonSeeHover: '#8BAA36',
-        CardButtonDelete: '#ebf3d4',
-        CardButtonDeleteHoverBackground: '#1e1f28',
-        CardButtonDeleteBorder: '#EBF3D4',
-        CardIconStroke: '#22252a',
-        CardIconStrokeHover: '#fafafa',
-        CardIconFill: '#ebf3d4',
-        CardIconFillHover: '#22252a',
+        cardWrapper: '#FFFFFF',
+        cardTitle: '#3e4462',
+        cardDescription: '#23262A',
+        cardTime: '#3e4462',
+        cardButtonSee: '#22252A',
+        cardButtonSeeBorder: 'rgb(250, 250, 250)',
+        cardButtonSeeHover: '#8BAA36',
+        cardButtonDelete: '#ebf3d4',
+        cardButtonDeleteHoverBackground: '#1e1f28',
+        cardButtonDeleteBorder: '#EBF3D4',
+        cardIconStroke: '#22252a',
+        cardIconStrokeHover: '#fafafa',
+        cardIconFill: '#ebf3d4',
+        cardIconFillHover: '#22252a',
       },
 
       shoppingList: {
