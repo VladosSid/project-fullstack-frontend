@@ -108,7 +108,7 @@ export const MPHeroTitle = styled.h1`
 
   margin-bottom: 14px;
   span {
-    color: #22252a;
+    color: ${props => props.theme.color.mainPageTitle.colorTitle};
   }
   @media screen and (max-width: 767px) {
     text-align: center;
@@ -122,6 +122,7 @@ export const MPHeroTitle = styled.h1`
     font-size: 100px;
   }
 `;
+
 
 export const MDHeroFlex = styled.div`
   @media ${theme.device.tablet} {
@@ -141,7 +142,7 @@ export const MPHeroText = styled.span`
   font-style: normal;
   font-weight: 400;
 
-  color: #23262a;
+  color: ${props => props.theme.color.mainPage.mpHeroText};
   width: 248px;
   font-size: 14px;
   line-height: 1.29;
@@ -176,9 +177,10 @@ export const MPHeroProduct = styled.span`
   font-size: 12px;
   line-height: 1.5;
   letter-spacing: -0.24px;
-  color: #3e4462;
+  color: ${props => props.theme.color.mainPage.mpHeroProductColor};
 
-  background-color: #ffffff;
+  background-color: ${props =>
+    props.theme.color.mainPage.mpHeroProductBackground};
   border-radius: 8px;
 
   @media screen and (max-width: 767px) {
@@ -210,7 +212,7 @@ export const StyledLink = styled(Link)`
   align-items: center;
   text-align: center;
   margin-top: 7px;
-  color: #3e4462;
+  color: ${props => props.theme.color.mainPage.mpHeroProductColor};
   font-family: 'Poppins';
   font-style: normal;
   font-weight: 400;

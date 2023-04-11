@@ -10,9 +10,10 @@ import { authSelectors, authOperations } from '../redux/users';
 import RestrictedRoute from './Routes/RestrictedRoute';
 import PrivateRoute from './Routes/PrivateRoute';
 
-import getTheme from '../redux/theming/theme-selector';
+// import getTheme from '../redux/theming/theme-selector';
 import theme from '../style/generalStyle';
 import Burger from './Burger/Burger';
+import Popup from './Popup/Popup';
 import { Loader } from './Loader/Loader';
 
 const WelcomePage = lazy(() => import('../pages/WelcomePage/WelcomePage'));
@@ -35,7 +36,7 @@ const SearchPage = lazy(() => import('../pages/SearchPage/SearchPage'));
 const NotFoundPage = lazy(() => import('../pages/NotFoundPage/NotFoundPage'));
 
 export const App = () => {
-  const themeUser = useSelector(getTheme);
+  // const themeUser = useSelector(getTheme);
 
   const dispatch = useDispatch();
   const isGetingCurent = useSelector(authSelectors.getGetingCurentUser);
@@ -44,8 +45,10 @@ export const App = () => {
     dispatch(authOperations.fetchCurrentUser());
   }, [dispatch]);
 
+  // [themeUser];
+
   return (
-    <ThemeProvider theme={theme[themeUser]}>
+    <ThemeProvider theme={theme.white}>
       {isGetingCurent ? (
         <Loader />
       ) : (
@@ -128,6 +131,7 @@ export const App = () => {
             </Routes>
             <Modal />
             <Burger />
+            <Popup />
           </AppBox>
         </Suspense>
       )}

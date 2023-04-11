@@ -6,15 +6,10 @@ const UserLogoModal = ({ isOpen, clickToggle }) => {
   return (
     <div className={style.popupOverlay}>
       <div className={isOpen ? style.userLogoPopup : style.hidden}>
-        <button
-          id="open-modal-button"
-          onClick={() => {
-            clickToggle();
-          }}
-        >
+        <button id="open-modal-button" onClick={() => clickToggle()}>
           Edit profile <HiOutlinePencil size={14} />
         </button>
-        <LogoutBtn />
+        <LogoutBtn onClick={clickToggle} />
       </div>
     </div>
   );

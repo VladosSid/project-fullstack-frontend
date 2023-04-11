@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import theme from '../../style/generalStyle';
 
@@ -54,21 +55,41 @@ export const GridContainer = styled.div`
 
   @media ${theme.device.desktop} {
     display: flex;
-    gap: 14px;
+    gap: 13px;
   }
 `;
+// export const RecipeCategoryName = styled.h2`
+//   margin-bottom: 32px;
+//   font-family: 'Poppins';
+//   font-style: normal;
+//   font-weight: 600;
+//   font-size: 28px;
+//   line-height: 1;
+
+//   letter-spacing: -0.02em;
+//   /* font-feature-settings: 'liga' off; */
+
+//   color: ${props => props.theme.color.mainPage.recipeCategoryName};
+// `;
+
 export const RecipeCategoryName = styled.h2`
   margin-bottom: 32px;
+`;
+
+export const RecipeCategoryNameLink = styled(Link)`
   font-family: 'Poppins';
   font-style: normal;
   font-weight: 600;
   font-size: 28px;
   line-height: 1;
-
+  text-decoration: none;
   letter-spacing: -0.02em;
   /* font-feature-settings: 'liga' off; */
 
-  color: #001833;
+  color: ${props => props.theme.color.mainPage.recipeCategoryName};
+  &:hover {
+    color: #8baa36;
+  }
 `;
 
 export const CardWrapper = styled.div`
@@ -151,11 +172,16 @@ export const MPButton = styled.button`
   font-size: 14px;
   line-height: 1.5;
   text-align: center;
-  color: #22252a;
+  color: ${props => props.theme.color.mainPage.mpButton};
   @media ${theme.device.tablet} {
     width: 239px;
     height: 61px;
-
     font-size: 16px;
+  }
+
+  &:hover,
+  focus {
+    background-color: #8baa36;
+    color: #fafafa;
   }
 `;
