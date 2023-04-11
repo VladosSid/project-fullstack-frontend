@@ -24,6 +24,7 @@ const RecipeInngredientsList = ({ ingredients }) => {
               <IngDescr>{ingredient.measure}</IngDescr>
             </InngredientContainer>
             <RealCheckbox type="checkbox" />
+
             <CustomCheckbox>
               <UseSvg id="Pick" />
             </CustomCheckbox>

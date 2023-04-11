@@ -124,20 +124,23 @@ export const CustomCheckbox = styled.div`
   background: transparent;
   border: 1px solid rgba(126, 126, 126, 0.5);
   border-radius: 4px;
-  @media ${theme.device.tablet} {
-    margin-left: 60px;
-    width: 18px;
-    height: 18px;
-  }
-  @media ${theme.device.desktop} {
-    margin-left: 120px;
-  }
   & svg {
-    display: inline-block;
     width: 9px;
     height: 9px;
     position: absolute;
     left: 50%;
     top: 50%;
-    transform: translate(-50%, -50%) scale(0);
+    transform: translate(-50%, -50%);
+  }
+  @media ${theme.device.tablet} {
+    border: 2px solid rgba(126, 126, 126, 0.5);
+    margin-left: 60px;
+    width: 18px;
+    height: 18px;
+  }
+  @media ${theme.device.desktop} {
+    width: 20px;
+    height: 20px;
+    margin-left: 120px;
+  }
 `;
