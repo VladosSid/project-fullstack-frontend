@@ -161,6 +161,7 @@ export const CardButtonSee = styled.div`
     font-weight: 400;
     font-size: 14px;
     line-height: 21px;
+    cursor: pointer;
     color: #fafafa;
     border-radius: 24px 44px;
     border: 1px solid ${props => props.theme.color.favorit.CardButtonSeeBorder};
@@ -180,7 +181,7 @@ export const CardButtonSee = styled.div`
     bottom: 40px;
     width: 160px;
     height: 54px;
-    padding: 14px 28px;
+    /* padding: 10px 20px; */
     font-size: 16px;
     line-height: 24px;
     color: #fafafa;
@@ -201,6 +202,7 @@ export const CardButtonDelete = styled.button`
   background: ${props => props.theme.color.favorit.CardButtonDelete};
   // color: #22252a;
   border-radius: 4px;
+  cursor: pointer;
   border: 1.2px solid
     ${props => props.theme.color.favorit.CardButtonDeleteBorder};
   &:hover {
