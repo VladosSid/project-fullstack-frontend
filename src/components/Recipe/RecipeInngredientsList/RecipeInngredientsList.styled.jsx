@@ -85,26 +85,29 @@ export const IngDescr = styled.div`
   align-items: center;
   font-family: 'Poppins';
   font-size: 12px;
+  width: 60px;
   line-height: 15px;
-  min-width: 37px;
-  max-width: 60px;
-  height: 23px;
+  // min-width: 37px;
+  // max-width: 60px;
+  // height: 23px;
   border-radius: 4px;
   background: #8baa36;
   color: #fafafa;
 
-  padding: 4px 8px 4px 8px;
+  padding: 4px 8px;
   @media ${theme.device.tablet} {
-    min-width: 68px;
-    max-width: 85px;
-    height: 35px;
+    padding: 4px 8px;
+    width: 125px;
+    // min-width: 68px;
+    // max-width: 85px;
+    // height: 35px;
     font-size: 15px;
   }
   @media ${theme.device.desktop} {
-    padding: 4px 8px 4px 8px;
+    padding: 8px 8px;
     // margin-right: 142px;
     font-size: 17px;
-    height: 40px;
+    // height: 40px;
   } ;
 `;
 
@@ -122,12 +125,12 @@ export const CustomCheckbox = styled.div`
   border: 1px solid rgba(126, 126, 126, 0.5);
   border-radius: 4px;
   @media ${theme.device.tablet} {
-    margin-left: 78px;
+    margin-left: 40px;
     width: 18px;
     height: 18px;
   }
   @media ${theme.device.desktop} {
-    margin-left: 151px;
+    margin-left: 90px;
   }
   & svg {
     display: inline-block;
