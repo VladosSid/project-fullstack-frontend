@@ -14,9 +14,7 @@ import PrivateRoute from './Routes/PrivateRoute';
 import theme from '../style/generalStyle';
 import Burger from './Burger/Burger';
 import LogoutModal from './LogoutModal/LogoutModal';
-import Popup from './Popup/Popup';
 import { Loader } from './Loader/Loader';
-
 
 const WelcomePage = lazy(() => import('../pages/WelcomePage/WelcomePage'));
 const RegisterPage = lazy(() => import('../pages/RegisterPage/RegisterPage'));
