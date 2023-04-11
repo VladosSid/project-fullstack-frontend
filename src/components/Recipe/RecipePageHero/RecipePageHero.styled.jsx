@@ -127,20 +127,66 @@ export const HeroButtonAdd = styled.button`
     color: #fafafa;
   }
 `;
+export const HeroButtonDel = styled.button`
+display: none;
+padding: 10px 18px;
+  background-color: transparent;
+  color: #22252a;
+  border-radius: 24px 44px;
+  border: 1px solid #8baa36;
+  transition: all 250ms linear;
+  font-size: 10px;
+  line-height: 1.5;
+  @media ${theme.device.tablet};
+   {
+    padding: 18px 44px;
+    font-size: 16px;
+    margin-bottom: 60px;
+  }
+  @media ${theme.device.desktop} {
+    // margin-bottom: 60px;
+  }
+  &:hover,
+  &:focus {
+    background-color: #8baa36;
+    color: #fafafa;
+`;
+
+export const CookingTimeContainer = styled.div``;
 
 export const CookingTime = styled.div`
   display: flex;
   width: fit-content;
   align-items: center;
-  color: black;
-  // margin-top: 42px;
+  
+  color: #23262A;
+  /
   font-size: 10px;
   line-height: 1.4;
-  height: 14px;
+ 
   @media ${theme.device.tablet} {
-    height: 20px;
-    font-size: 14px;
+    font-size: 20px;
   }
   @media ${theme.device.desktop} {
+    font-size: 20px;
+    
   }
+  & svg {
+    margin-right: 5px;
+    
+    stroke: #23262A;
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    @media ${theme.device.tablet} {
+      
+      height: 20px;
+      width: 20px;
+    }
+    @media ${theme.device.desktop} {
+      
+      height: 20px;
+      width: 20px;
+      
+    }
 `;

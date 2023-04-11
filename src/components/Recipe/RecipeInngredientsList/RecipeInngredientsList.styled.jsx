@@ -112,7 +112,7 @@ export const RealCheckbox = styled.input`
   display: none;
 `;
 
-export const CustomCheckbox = styled.input`
+export const CustomCheckbox = styled.div`
   margin-left: 30px;
   position: relative;
   display: inline-block;
@@ -129,4 +129,12 @@ export const CustomCheckbox = styled.input`
   @media ${theme.device.desktop} {
     margin-left: 151px;
   }
+  & svg {
+    display: inline-block;
+    width: 9px;
+    height: 9px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%) scale(0);
 `;

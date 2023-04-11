@@ -4,7 +4,9 @@ import {
   HeroText,
   CookingTime,
   HeroButtonAdd,
+  HeroButtonDel,
 } from './RecipePageHero.styled';
+import { UseSvg } from '../../../helpers/useSvg/useSvg';
 
 export const RecipePageHero = ({ title, description, time }) => {
   return (
@@ -12,7 +14,11 @@ export const RecipePageHero = ({ title, description, time }) => {
       <HeroTiile>{title}</HeroTiile>
       <HeroText>{description}</HeroText>
       <HeroButtonAdd>Add to favorite recipes</HeroButtonAdd>
-      <CookingTime>{time} min</CookingTime>
+      <HeroButtonDel>Del from favorite recipes</HeroButtonDel>
+      <CookingTime>
+        <UseSvg id="Time" />
+        {time} min
+      </CookingTime>
     </HeroContainer>
   );
 };
