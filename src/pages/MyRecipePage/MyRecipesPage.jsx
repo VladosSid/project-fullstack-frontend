@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react'; // eslint-disable-line
-import { recipesG } from 'gannaFakeData';
 import { useLocation } from 'react-router-dom';
 // import instanceBacEnd from 'helpers/requestBackEnd';
 // import { useNavigate } from 'react-router-dom';
@@ -11,15 +10,14 @@ import { Children } from 'react';
 import { queryBackEnd } from 'helpers/request';
 import { Container, Pagination, Stack } from '@mui/material';
 import { PaginationWrapper } from './MyRecipePage.styled';
+import Notiflix from 'notiflix';
 
 const MyRecipesPage = () => {
   const location = useLocation();
-  // const navigate = useNavigate();
-  // eslint-disable-next-line
   const [recipes, setRecipes] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
   const [allPage, setAllPage] = useState();
-  const [allItem, setAllItem] = useState(1);
+  const [allItem, setAllItem] = useState();
 
   useEffect(() => {
     setRecipes([]);
@@ -31,7 +29,10 @@ const MyRecipesPage = () => {
         const pageQty = Math.ceil(results.result.data.totalItem / 4);
         setAllPage(pageQty);
       })
-      .catch(error => error.message);
+      .catch(error => {
+        console.log(error.message);
+        Notiflix.Notify.failure('The list is empty');
+      });
   }, []);
 
   const changeNum = (_, num) => {
@@ -39,7 +40,10 @@ const MyRecipesPage = () => {
     instanceBacEnd
       .get(`/ownRecipes?page=${num}`)
       .then(response => setRecipes(response.data.result.data.list))
-      .catch(error => console.log(error.message));
+      .catch(error => {
+        console.log(error.message);
+        // Notiflix.Notify.failure(error.message);
+      });
   };
 
   const removeOwnRecipe = recipeId => {
@@ -48,18 +52,27 @@ const MyRecipesPage = () => {
     if (currentPage !== 1 || lastItem === 1) {
       pageBack = currentPage - 1;
     } else pageBack = currentPage;
-    console.log(currentPage);
     instanceBacEnd
       .delete(`/ownRecipes/${recipeId}?page=${pageBack}`)
-      .then(response => setRecipes(response.data.result.data.list))
-      .catch(error => console.log(error.message));
+      .then(res => {
+        const list = res.data.result.list;
+        setRecipes(list);
+        const totalItem = res.data.result.totalItem;
+        setAllItem(totalItem);
+        const quantyty = Math.ceil(totalItem / 4);
+        setAllPage(quantyty);
+      })
+      .catch(error => {
+        console.log(error.message);
+        Notiflix.Notify.failure('The list is empty');
+        setRecipes([]);
+      });
   };
   return (
     <MainContainer>
       <MainPageTitle title={'My recipes'} />
       <MyRecipesList
-        recipes={recipesG}
-        allItem={allItem}
+        recipes={recipes}
         location={location}
         removeOwnRecipe={removeOwnRecipe}
       >

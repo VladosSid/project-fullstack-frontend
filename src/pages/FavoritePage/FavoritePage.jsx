@@ -11,27 +11,35 @@ import { Children } from 'react';
 // import instanceBacEnd from 'helpers/requestBackEnd';
 import { queryBackEnd } from 'helpers/request';
 import { Container, Pagination, Stack } from '@mui/material';
+
 // import { SxProps, Theme } from '@mui/material/styles';
 import { PaginationWrapper } from './FavoritePage.styled';
+import Notiflix from 'notiflix';
 
 const FavoritePage = () => {
   const location = useLocation();
   const [recipes, setRecipes] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
   const [allPage, setAllPage] = useState();
-  const [allItem, setAllItem] = useState(1);
+  const [allItem, setAllItem] = useState();
 
   useEffect(() => {
-    setRecipes([]);
+    // setRecipes([]);
     const data = queryBackEnd.queryAllFavorite();
     data
       .then(results => {
+        if (results.result.data.list === []) {
+          Notiflix.Notify.failure('The list is empty');
+        }
         setRecipes(results.result.data.list);
         setAllItem(results.result.data.totalItem);
         const pageQty = Math.ceil(results.result.data.totalItem / 4);
         setAllPage(pageQty);
       })
-      .catch(error => error.message);
+      .catch(error => {
+        console.log(error.message);
+        Notiflix.Notify.failure(`The list is empty`);
+      });
   }, []);
 
   const changeNum = (_, num) => {
@@ -41,18 +49,33 @@ const FavoritePage = () => {
       .then(response => setRecipes(response.data.result.data.list))
       .catch(error => console.log(error.message));
   };
-  console.log(currentPage);
+
   const removeFavorite = recipeId => {
     const lastItem = allItem % 4;
     let pageBack;
     if (currentPage !== 1 || lastItem === 1) {
       pageBack = currentPage - 1;
     } else pageBack = currentPage;
-    console.log(currentPage);
+    // console.log(currentPage);
+
     instanceBacEnd
       .patch(`/favorite/remove?page=${pageBack}`, { recipe: `${recipeId}` })
-      .then(response => setRecipes(response.data.result.data.list))
-      .catch(error => console.log(error.message));
+      .then(res => {
+        const list = res.data.result.data.list;
+        if (list.length === 0) {
+          Notiflix.Notify.failure(`The list is empty`);
+        }
+        setRecipes(list);
+        const totalItem = res.data.result.data.totalItem;
+        setAllItem(totalItem);
+        const quantyty = Math.ceil(totalItem / 4);
+        setAllPage(quantyty);
+      })
+      .catch(error => {
+        console.log(error.message);
+        Notiflix.Notify.failure(`The list is empty`);
+        // setRecipes([]);
+      });
   };
   return (
     <MainContainer>

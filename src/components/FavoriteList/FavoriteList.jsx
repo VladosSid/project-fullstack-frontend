@@ -3,7 +3,7 @@ import FavoriteItem from 'components/FaforiteItem/FavoriteItem';
 import { ListWrapper } from './FavoriteList.styled';
 
 const FavoriteList = ({ recipes, allItem, location, removeFavorite }) => {
-  console.log(recipes);
+  // console.log(recipes);
 
   return (
     <>
@@ -11,6 +11,7 @@ const FavoriteList = ({ recipes, allItem, location, removeFavorite }) => {
         {recipes.map(recipe => (
           <li id={recipe._id}>
             <FavoriteItem
+              id={recipe._id}
               recipe={recipe}
               allItem={allItem}
               location={location}
