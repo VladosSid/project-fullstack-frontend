@@ -36,6 +36,20 @@ export const theme = {
         searchBtncolorFocus: '#22252A',
       },
       dishCard: { dishTitleWrapper: '#2A2C36', dishTitle: '#FAFAFA' },
+      searchPage: {
+        searchTypeSpan: '#FAFAFA',
+        customSelectBG: 'transparent',
+        customSelectColor: '#FAFAFA',
+        reactSelectMenuList: '#8BAA36',
+        reactSelectOptionColor: '#FAFAFA',
+        reactSelectOptionHover: '#2A2C36',
+        SRLNoItemsText: '#FAFAFA',
+        //-------------
+        reactSelectContainer: '#ececec',
+        reactSelectDropdown: '#8baa36',
+
+        reactSelectOptionColorBG: 'transparent',
+      },
       mainPageTitle: {
         colorTitle: '#FAFAFA',
       },
@@ -99,6 +113,21 @@ export const theme = {
         searchBtncolorFocus: '#fafafa',
       },
       dishCard: { dishTitleWrapper: '#ffffff', dishTitle: '#3e4462' },
+      searchPage: {
+        searchTypeSpan: '#001833',
+        customSelectBG: '#ececec',
+        customSelectColor: '#000000',
+        reactSelectMenuList: '#FAFAFA',
+        reactSelectOptionColor: '#000000',
+        reactSelectOptionHover: '#8BAA36',
+        //-------------
+        SRLNoItemsText: '#000000',
+        reactSelectContainer: '#ececec',
+        reactSelectDropdown: '#8baa36',
+
+        reactSelectOptionColorBG: 'transparent',
+      },
+
       mainPageTitle: {
         colorTitle: '#001833',
       },

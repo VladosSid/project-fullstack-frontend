@@ -7,6 +7,7 @@ export const CustomSelectBox = styled.div`
   align-items: center;
   justify-content: center;
 `;
+
 export const SearchTypeSpan = styled.span`
   font-family: 'Poppins';
   font-style: normal;
@@ -14,7 +15,7 @@ export const SearchTypeSpan = styled.span`
   font-size: 12px;
   line-height: 1.33;
   letter-spacing: -0.24px;
-  color: #001833;
+  color: ${props => props.theme.color.searchPage.searchTypeSpan};
   margin-right: 15px;
   @media screen and (min-width: 768px) {
     font-size: 14px;
@@ -28,19 +29,32 @@ export const SearchTypeSpan = styled.span`
 `;
 
 export const CustomSelect = styled(ReactSelect)`
+  ////?
+  border: 1px;
+  border-style: solid;
+  border-color: rgba(250, 250, 250, 0.2);
+  border-radius: 6px;
+
+  /////
+
+  .react-select__value-container .react-select__single-value {
+    color: ${props =>
+      props.theme.color.searchPage.customSelectColor} !important;
+  }
   .react-select__control {
     border: none;
-    background-color: #ececec;
+    background-color: ${props =>
+      props.theme.color.searchPage.customSelectBG}; // #ececec;
     height: 34px;
     width: 146px;
-    border-radius: 6px;
+
     font-weight: 400;
     /* padding-left: 14px; */
     /* background-position: 95%; */
     font-size: 12px;
     line-height: 1.5;
     font-family: Poppins;
-    color: #000000;
+    color: ${props => props.theme.color.searchPage.customSelectColor}; //#000000
     /* gap: 8px; */
     @media screen and (min-width: 768px) {
       font-size: 14px;
@@ -53,15 +67,19 @@ export const CustomSelect = styled(ReactSelect)`
       width: 198px;
     }
 
-     {
-      :active :hover,
-      :focus {
-        outline: 0;
-        border: 0;
-        box-shadow: none;
-      }
+    &:active,
+    &:hover,
+    &:focus {
+      outline: 0;
+      border: 0;
+      box-shadow: none;
+      caret-color: transparent;
     }
   }
+  /* &.react-select_value-container*/
+  /* .react-select_single-value {
+    color: white;
+  } */
 
   .css-t3ipsp-control:hover {
     outline: 0;
@@ -89,9 +107,11 @@ export const CustomSelect = styled(ReactSelect)`
   .react-select__indicator-separator {
     display: none;
   }
+
   .react-select__dropdown-indicator {
     color: #8baa36;
   }
+
   .react-select__dropdown-indicator:hover,
   .react-select__dropdown-indicator:focus,
   .react-select__dropdown-indicator:active {
@@ -100,6 +120,15 @@ export const CustomSelect = styled(ReactSelect)`
   .react-select__menu-list {
     max-height: 96px;
     width: 146px;
+    border-radius: 0px 0px 6px 6px;
+    background-color: ${props =>
+      props.theme.color.searchPage.reactSelectMenuList};
+    @media screen and (min-width: 768px) {
+      width: 175px;
+    }
+    @media screen and (min-width: 768px) {
+      width: 198px;
+    }
   }
 
   .react-select__menu:hover {
@@ -115,25 +144,27 @@ export const CustomSelect = styled(ReactSelect)`
   }
 
   .react-select__option {
-    color: #000000;
+    color: ${props =>
+      props.theme.color.searchPage.reactSelectOptionColor}; //#000000;
     background-color: transparent;
     opacity: 0.5;
     font-size: 14px;
     font-weight: 400;
     line-height: 1.5;
-    letter-spasing: -0.02em;
+    letter-spacing: -0.02em;
     font-family: Poppins;
   }
 
   .react-select__option:hover {
-    color: #8baa36;
+    color: ${props =>
+      props.theme.color.searchPage.reactSelectOptionHover}; //#8baa36;
     background-color: transparent;
   }
 
-  .react-select__option:hover {
+  /* .react-select__option:hover {
     color: #8baa36;
     background-color: transparent;
-  }
+  } */
 `;
 //-------------------------
 // export const customStyles = {
