@@ -2,7 +2,7 @@ import React from 'react';
 import MyRecipesItem from 'components/MyRecipesItem/MyRecipesItem';
 import { ListWrapper } from './MyRecipesList.styled';
 
-const MyRecipesList = ({ recipes, allItem, location, removeOwmRecipe }) => {
+const MyRecipesList = ({ recipes, location, removeOwnRecipe }) => {
   // console.log(recipes)
 
   return (
@@ -11,10 +11,10 @@ const MyRecipesList = ({ recipes, allItem, location, removeOwmRecipe }) => {
         {recipes.map(recipe => (
           <li id={recipe._id}>
             <MyRecipesItem
+              id={recipe._id}
               recipe={recipe}
-              allItem={allItem}
               location={location}
-              removeOwnRecipe={removeOwmRecipe}
+              removeOwnRecipe={removeOwnRecipe}
             />
           </li>
         ))}
