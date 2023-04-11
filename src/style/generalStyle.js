@@ -28,10 +28,11 @@ export const theme = {
         recipeCategoryName: '#FAFAFA',
         mpButton: '#FAFAFA',
         searchBtn: '#8BAA36',
-        searchBtnFocus: '#22252A',
+        searchBtnFocus: '#fafafa',
         searchInputBorder: 'rgba(250, 250, 250, 0.5)',
         searchInputBG: 'transparent',
         searchInputPlaceholder: 'rgba(250, 250, 250, 0.5)',
+        searchBtncolorFocus: '#22252A',
       },
       mainPageTitle: {
         colorTitle: '#FAFAFA',
@@ -93,6 +94,7 @@ export const theme = {
         searchInputBorder: '#F0F0F0',
         searchInputBG: '#fafafa',
         searchInputPlaceholder: '#3e4462',
+        searchBtncolorFocus: '#fafafa',
       },
       mainPageTitle: {
         colorTitle: '#001833',
