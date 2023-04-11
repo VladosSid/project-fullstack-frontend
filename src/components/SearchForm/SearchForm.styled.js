@@ -66,13 +66,21 @@ export const SearchBtn = styled.button`
   font-weight: 400;
   font-size: 14px;
   line-height: 1.5;
-  background-color: ${props => (props.green ? '#8BAA36' : '#22252a')};
-  border: ${props => (props.green ? '1px solid #8BAA36' : '1px solid #22252a')};
+  /* background-color: ${props => (props.green ? '#8BAA36' : '#22252a')};
+  border: ${props =>
+    props.green ? '1px solid #8BAA36' : '1px solid #22252a'}; */
+  background-color: ${props => (props.page === 'main' ? '#22252a' : '#8BAA36')};
+  border: ${props =>
+    props.page === 'main' ? '1px solid #22252a' : '1px solid #8BAA36'};
   &:hover,
   &:focus {
-    background-color: ${props => (props.green ? '#22252a' : '#8BAA36')};
+    /* background-color: ${props => (props.green ? '#22252a' : '#8BAA36')};
     border: ${props =>
-      props.green ? '1px solid #22252a' : '1px solid #8BAA36'};
+      props.green ? '1px solid #22252a' : '1px solid #8BAA36'}; */
+    background-color: ${props =>
+      props.page === 'main' ? '#8BAA36' : '#22252a'};
+    border: ${props =>
+      props.page === 'main' ? '1px solid #8BAA36' : '1px solid #22252a'};
     cursor: pointer;
   }
   @media screen and (max-width: 767px) {
@@ -89,3 +97,4 @@ export const SearchBtn = styled.button`
     font-size: 16px;
   }
 `;
+//color: ${props => props.theme.color.mainPageTitle.colorTitle};
