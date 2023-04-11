@@ -3,7 +3,9 @@ import theme from 'style/generalStyle';
 
 export const HeaderContainer = styled.header`
   background-color: ${props =>
-    props.scroll > 80 ? ' rgb(255, 255, 255)' : 'transparent'};
+    props.scroll > 80
+      ? props.theme.color.header.headerContainer
+      : 'transparent'};
   position: fixed;
   display: flex;
   align-items: center;

@@ -16,9 +16,10 @@ export const theme = {
       backgrounGlobal: '#1E1F28',
 
       header: {
+        headerContainer: '#1E1F28',
         backgroun: '#1E1F28',
         textNavigation: '#FAFAFA',
-        SearchImg: '#FAFAFA',
+      
       },
 
       mainPage: {
@@ -74,9 +75,9 @@ export const theme = {
       backgrounGlobal: '#FFFFFF',
 
       header: {
+        headerContainer: 'rgb(255, 255, 255)',
         backgroun: '#FAFAFA',
         textNavigation: '#23262A',
-        SearchImg: '#22252A',
       },
 
       mainPage: {
