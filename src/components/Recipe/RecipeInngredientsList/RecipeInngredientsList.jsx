@@ -5,6 +5,8 @@ import {
   ImageWrapper,
   IngName,
   IngDescr,
+  RealCheckbox,
+  CustomCheckbox,
 } from './RecipeInngredientsList.styled';
 
 const RecipeInngredientsList = ({ ingredients }) => {
@@ -20,6 +22,8 @@ const RecipeInngredientsList = ({ ingredients }) => {
               <IngName>{ingredient.title}</IngName>
               <IngDescr>{ingredient.measure}</IngDescr>
             </InngredientContainer>
+            <RealCheckbox type="checkbox" />
+            <CustomCheckbox></CustomCheckbox>
           </RecipeItem>
         ))}
     </InngredientsList>

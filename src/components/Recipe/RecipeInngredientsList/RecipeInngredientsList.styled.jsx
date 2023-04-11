@@ -16,6 +16,8 @@ export const InngredientsList = styled.ul`
 `;
 
 export const RecipeItem = styled.li`
+  display: flex;
+  align-items: center;
   border-radius: 8px;
   background-color: #ebf3d4;
   list-style: none;
@@ -27,7 +29,8 @@ export const RecipeItem = styled.li`
   }
 
   @media ${theme.device.desktop} {
-    max-width: 1160px;
+    // max-width: 1160px;
+    max-width: 1240px;
   }
 `;
 
@@ -48,6 +51,10 @@ export const ImageWrapper = styled.div`
   @media ${theme.device.tablet} {
     width: 128px;
     height: 128px;
+    margin-right: 24px;
+    margin-left: 24px;
+  }
+  @media ${theme.device.desktop} {
     margin-right: 40px;
     margin-left: 32px;
   }
@@ -55,13 +62,21 @@ export const ImageWrapper = styled.div`
 
 export const IngName = styled.div`
   display: block;
-  margin-right: 160px;
   font-family: 'Poppins';
   font-style: normal;
   font-weight: 500;
-  font-size: 24px;
-  line-height: 24px;
+  font-size: 12px;
+  line-height: 1.17;
   color: #3e4462;
+  width: 127px;
+  @media ${theme.device.tablet} {
+    width: 247px;
+    font-size: 15px;
+  }
+  @media ${theme.device.desktop} {
+    width: 695px;
+    font-size: 24px;
+  }
 `;
 
 export const IngDescr = styled.div`
@@ -69,25 +84,49 @@ export const IngDescr = styled.div`
   justify-content: center;
   align-items: center;
   font-family: 'Poppins';
-  font-size: 10px;
+  font-size: 12px;
   line-height: 15px;
   min-width: 37px;
+  max-width: 60px;
   height: 23px;
   border-radius: 4px;
   background: #8baa36;
   color: #fafafa;
-  margin-right: 49px;
+
   padding: 4px 8px 4px 8px;
-  p @media ${theme.device.tablet} {
+  @media ${theme.device.tablet} {
     min-width: 68px;
+    max-width: 85px;
     height: 35px;
-    font-size: 18px;
-    margin-right: 115px;
+    font-size: 15px;
   }
   @media ${theme.device.desktop} {
-    margin-right: 142px;
-    font-size: 18px;
+    padding: 4px 8px 4px 8px;
+    // margin-right: 142px;
+    font-size: 17px;
+    height: 40px;
   } ;
 `;
 
-export const MeasureBox = styled.div``;
+export const RealCheckbox = styled.input`
+  display: none;
+`;
+
+export const CustomCheckbox = styled.input`
+  margin-left: 30px;
+  position: relative;
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  background: transparent;
+  border: 1px solid rgba(126, 126, 126, 0.5);
+  border-radius: 4px;
+  @media ${theme.device.tablet} {
+    margin-left: 78px;
+    width: 18px;
+    height: 18px;
+  }
+  @media ${theme.device.desktop} {
+    margin-left: 151px;
+  }
+`;

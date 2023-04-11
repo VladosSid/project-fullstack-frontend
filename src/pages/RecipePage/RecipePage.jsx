@@ -6,7 +6,7 @@ import {
   TitltListWrap,
   TitleListIngredient,
   TitleListNumber,
-  Tabl,
+  AddtoList,
 } from './RecipePage.styled';
 import { MainContainer } from '../../components/MainContainer/MainContainer';
 import queryBackEnd from '../../helpers/request/queryBackEnd';
@@ -34,16 +34,12 @@ const RecipePage = () => {
         time={recipe.time}
       />
       <MainContainer>
-        <div>
-          <h1>Recipe</h1>
-        </div>
-        <Tabl>
-          <TitltListWrap>
-            <TitleListIngredient>Ingredients</TitleListIngredient>
-            <TitleListNumber>Number</TitleListNumber>
-            <span>Add to list</span>
-          </TitltListWrap>
-        </Tabl>
+        <TitltListWrap>
+          <TitleListIngredient>Ingredients</TitleListIngredient>
+          <TitleListNumber>Number</TitleListNumber>
+          <AddtoList>Add to list</AddtoList>
+        </TitltListWrap>
+
         <RecipeInngredientsList ingredients={recipe.ingredients} />
       </MainContainer>
     </>

@@ -16,10 +16,10 @@ export const HeroContainer = styled.div`
   align-items: center;
   background-repeat: no-repeat;
   background-image: url(${mob1});
-  height: 455px;
+  height: 375px;
   margin-bottom: 32px;
   padding-top: 144px;
-  padding-bottom: 90px;
+  // padding-bottom: 90px;
   background-size: 100%;
   background-color: transparent;
 
@@ -46,8 +46,7 @@ export const HeroTiile = styled.h1`
   font-size: 24px;
   line-height: 1.3;
   margin-bottom: 18px;
-
-  //   color: 8BAA36;
+  color: #8baa36;
 
   max-width: 330px;
   overflow: hidden;
@@ -60,10 +59,13 @@ export const HeroTiile = styled.h1`
   @media ${theme.device.tablet} {
     max-width: 680px;
     font-size: 44px;
-    margin-bottom: 24px;
+    margin-top: 72px;
+    // margin-bottom: 24px;
   }
 
   @media ${theme.device.desktop} {
+    margin-top: 75px;
+    margin-bottom: 24px;
     max-width: 1000px;
   }
 `;
@@ -91,6 +93,7 @@ export const HeroText = styled.p`
     width: 506px;
     font-size: 18px;
     line-height: 1.33;
+    margin-bottom: 24px;
   }
 
   @media ${theme.device.desktop} {
@@ -113,6 +116,10 @@ export const HeroButtonAdd = styled.button`
    {
     padding: 18px 44px;
     font-size: 16px;
+    margin-bottom: 60px;
+  }
+  @media ${theme.device.desktop} {
+    // margin-bottom: 60px;
   }
   &:hover,
   &:focus {
@@ -126,16 +133,14 @@ export const CookingTime = styled.div`
   width: fit-content;
   align-items: center;
   color: black;
-  margin-top: 42px;
+  // margin-top: 42px;
   font-size: 10px;
   line-height: 1.4;
   height: 14px;
   @media ${theme.device.tablet} {
     height: 20px;
-    margin-top: 65px;
     font-size: 14px;
   }
   @media ${theme.device.desktop} {
-    margin-top: 48px;
   }
 `;
