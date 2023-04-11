@@ -47,9 +47,7 @@ export const App = () => {
   // [themeUser];
 
   return (
-
     <ThemeProvider theme={theme.white}>
-
       {isGetingCurent ? (
         <b>Refreshing user...</b>
       ) : (

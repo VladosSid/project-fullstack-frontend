@@ -21,6 +21,15 @@ export const theme = {
         SearchImg: '#FAFAFA',
       },
 
+      mainPage: {
+        mpHeroTitle: '#FAFAFA',
+        mpHeroText: '#FAFAFA',
+        mpHeroProductColor: '#FAFAFA',
+        mpHeroProductBackground: '#2A2C36',
+        recipeCategoryName: '#FAFAFA',
+        mpButton: '#FAFAFA',
+      },
+
       mainPageTitle: {
         colorTitle: '#FAFAFA',
       },
@@ -68,6 +77,15 @@ export const theme = {
         backgroun: '#FAFAFA',
         textNavigation: '#23262A',
         SearchImg: '#22252A',
+      },
+
+      mainPage: {
+        mpHeroTitle: '#22252a',
+        mpHeroText: '#23262a',
+        mpHeroProductColor: '#3E4462',
+        mpHeroProductBackground: '#ffffff',
+        recipeCategoryName: '#001833',
+        mpButton: '#22252a',
       },
 
       mainPageTitle: {
