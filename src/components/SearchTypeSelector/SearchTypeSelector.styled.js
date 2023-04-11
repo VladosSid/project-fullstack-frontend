@@ -36,7 +36,9 @@ export const CustomSelect = styled(ReactSelect)`
   border-radius: 6px;
 
   /////
-
+  .react-select__input {
+    pointer-events: none;
+  }
   .react-select__value-container .react-select__single-value {
     color: ${props =>
       props.theme.color.searchPage.customSelectColor} !important;
