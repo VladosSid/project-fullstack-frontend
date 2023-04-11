@@ -36,7 +36,8 @@ export const CustomSelect = styled(ReactSelect)`
   border-radius: 6px;
 
   /////
-  .react-select__input {
+  .react-select__value-container .react-select__input {
+    cursor: none;
     pointer-events: none;
   }
   .react-select__value-container .react-select__single-value {
