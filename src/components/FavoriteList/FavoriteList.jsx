@@ -9,9 +9,8 @@ const FavoriteList = ({ recipes, allItem, location, removeFavorite }) => {
     <>
       <ListWrapper>
         {recipes.map(recipe => (
-          <li id={recipe._id}>
+          <li key={recipe._id}>
             <FavoriteItem
-              id={recipe._id}
               recipe={recipe}
               allItem={allItem}
               location={location}

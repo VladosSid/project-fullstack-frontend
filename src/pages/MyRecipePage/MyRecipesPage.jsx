@@ -9,8 +9,9 @@ import MyRecipesList from '../../components/MyRecipesList/MyRecipesList';
 import { Children } from 'react';
 import { queryBackEnd } from 'helpers/request';
 import { Container, Pagination, Stack } from '@mui/material';
-import { PaginationWrapper } from './MyRecipePage.styled';
-import Notiflix from 'notiflix';
+import { PaginationWrapper, ImgWrapper, ImgTitle } from './MyRecipePage.styled';
+// import Notiflix from 'notiflix';
+import imgIngradients from '../../images/ShopingList/ingradients.png';
 
 const MyRecipesPage = () => {
   const location = useLocation();
@@ -31,7 +32,7 @@ const MyRecipesPage = () => {
       })
       .catch(error => {
         console.log(error.message);
-        Notiflix.Notify.failure('The list is empty');
+        // Notiflix.Notify.failure('The list is empty');
       });
   }, []);
 
@@ -63,20 +64,27 @@ const MyRecipesPage = () => {
       })
       .catch(error => {
         console.log(error.message);
-        Notiflix.Notify.failure('The list is empty');
+        // Notiflix.Notify.failure('The list is empty');
         setRecipes([]);
       });
   };
   return (
     <MainContainer>
       <MainPageTitle title={'My recipes'} />
-      <MyRecipesList
-        recipes={recipes}
-        location={location}
-        removeOwnRecipe={removeOwnRecipe}
-      >
-        {Children}
-      </MyRecipesList>
+      {recipes.length !== 0 ? (
+        <MyRecipesList
+          recipes={recipes}
+          location={location}
+          removeOwnRecipe={removeOwnRecipe}
+        >
+          {Children}
+        </MyRecipesList>
+      ) : (
+        <ImgWrapper>
+          <img src={imgIngradients} alt={'Empty list'} />
+          <ImgTitle>The list is empty</ImgTitle>
+        </ImgWrapper>
+      )}
       <PaginationWrapper>
         <Container>
           <Stack spacing={2}>

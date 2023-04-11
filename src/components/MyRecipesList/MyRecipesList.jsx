@@ -9,9 +9,8 @@ const MyRecipesList = ({ recipes, location, removeOwnRecipe }) => {
     <>
       <ListWrapper>
         {recipes.map(recipe => (
-          <li id={recipe._id}>
+          <li key={recipe._id}>
             <MyRecipesItem
-              id={recipe._id}
               recipe={recipe}
               location={location}
               removeOwnRecipe={removeOwnRecipe}
