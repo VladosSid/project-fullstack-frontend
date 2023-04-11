@@ -31,13 +31,12 @@ export default function SearchRecipesList({ searchQuery, searchType }) {
   const [itemsPerPage, setItemsPerPage] = useState(() => {
     const width = window.innerWidth;
     if (width >= 1304) {
-      return 4;
-    } else if (width >= 768 && width < 1304) {
-      return 2;
+      return 12;
     } else {
-      return 1;
+      return 6;
     }
   });
+
   useEffect(() => {
     const handleWindowResize = () => {
       const width = window.innerWidth;
