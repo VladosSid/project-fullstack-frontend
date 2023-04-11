@@ -19,17 +19,8 @@ export const theme = {
         headerContainer: '#1E1F28',
         backgroun: '#1E1F28',
         textNavigation: '#FAFAFA',
-      
       },
 
-      mainPage: {
-        mpHeroTitle: '#FAFAFA',
-        mpHeroText: '#FAFAFA',
-        mpHeroProductColor: '#FAFAFA',
-        mpHeroProductBackground: '#2A2C36',
-        recipeCategoryName: '#FAFAFA',
-        mpButton: '#FAFAFA',
-      },
       mainPage: {
         mpHeroTitle: '#FAFAFA',
         mpHeroText: '#FAFAFA',
@@ -109,14 +100,6 @@ export const theme = {
         textNavigation: '#23262A',
       },
 
-      mainPage: {
-        mpHeroTitle: '#22252a',
-        mpHeroText: '#23262a',
-        mpHeroProductColor: '#3E4462',
-        mpHeroProductBackground: '#ffffff',
-        recipeCategoryName: '#001833',
-        mpButton: '#22252a',
-      },
       mainPage: {
         mpHeroTitle: '#22252a',
         mpHeroText: '#23262a',
