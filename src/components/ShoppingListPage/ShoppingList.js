@@ -8,6 +8,7 @@ import {
   ImgIngradients,
   ImgIngradientsText,
 } from './ShoppingList.styled';
+import Notiflix from 'notiflix';
 import queryBackEnd from '../../helpers/request/queryBackEnd';
 import imgIngradients from '../../images/ShopingList/ingradients.png';
 
@@ -22,11 +23,20 @@ const ShoppingList = () => {
   const deleteIngradient = contactId => {
     queryBackEnd
       .queryRemoveShoppingList({ shoppingListIng: contactId })
-      .then(response =>
+      .then(response => {
+        console.log(response);
+        if (response.status === 'success') {
+          Notiflix.Notify.success('ingredient removed');
+        }
+        else{ Notiflix.Notify.warning(`${response}`);}
+               
         setingredientArr(prevState =>
           prevState.filter(ingradient => ingradient._id !== contactId)
-        )
-      );
+        );
+      })
+      .catch(error => {
+        Notiflix.Notify.warning('error');
+      });
   };
 
   return (
