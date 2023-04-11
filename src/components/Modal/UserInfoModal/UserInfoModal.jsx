@@ -16,12 +16,11 @@ const UserInfoModal = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const dispatch = useDispatch();
-  const target = document.querySelector('body');
 
   const close = e => {
     if (e.keyCode === 27) {
       setIsOpen(false);
-      target.classList.remove(styles.hidden);
+      document.body.style.overflow = '';
     }
   };
 
@@ -35,7 +34,7 @@ const UserInfoModal = () => {
     }
     openBtn.addEventListener('click', () => {
       setIsOpen(true);
-      target.classList.add(styles.hidden);
+      document.body.style.overflow = 'hidden';
     });
 
     return openBtn.removeEventListener('click', () => setIsOpen(true));
@@ -82,13 +81,13 @@ const UserInfoModal = () => {
   const closeHandler = e => {
     e.preventDefault();
     setIsOpen(false);
-    target.classList.remove(styles.hidden);
+    document.body.style.overflow = '';
   };
 
   const check = e => {
     if (e.currentTarget === e.target) {
       setIsOpen(false);
-      target.classList.remove(styles.hidden);
+      document.body.style.overflow = '';
     }
   };
 

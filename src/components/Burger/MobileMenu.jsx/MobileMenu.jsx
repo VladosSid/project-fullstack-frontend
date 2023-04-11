@@ -1,19 +1,17 @@
 import { NavLink } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 
+import { AiOutlineSearch } from 'react-icons/ai';
 import Logo from 'components/Logo/Logo';
 import { Ul } from '../../Navigation/Navigation.styled';
 import { CrossIcon } from './MobileMenu.styled';
 import { BackdropMobileMenu } from './MobileMenu.styled';
 import styles from './MobileMenu.module.css';
-import search from '../../../images/Header/search.svg';
 import x from '../../../images/Header/x.svg';
 import SwitcherBtn from './SwitcherBtn';
 
 const MobileMenu = () => {
   const [isOpen, setIsOpen] = useState(false);
-
-  const target = document.querySelector('body');
 
   useEffect(() => {
     const burgerBtn = document.getElementById('burger-btn');
@@ -22,7 +20,7 @@ const MobileMenu = () => {
     }
     burgerBtn.addEventListener('click', () => {
       setIsOpen(true);
-      target.classList.add(styles.hidden);
+      document.body.style.overflow = 'hidden';
     });
 
     return burgerBtn.removeEventListener('click', () => setIsOpen(true));
@@ -30,7 +28,7 @@ const MobileMenu = () => {
 
   const clickToggle = () => {
     setIsOpen(false);
-    target.classList.remove(styles.hidden);
+    document.body.style.overflow = '';
   };
 
   return (
@@ -61,7 +59,7 @@ const MobileMenu = () => {
             </li>
             <li onClick={() => clickToggle()}>
               <NavLink to="/search">
-                <img src={search} alt="search" />
+                <AiOutlineSearch size={24} alt="search" />
                 <p>Search</p>
               </NavLink>
             </li>

@@ -2,6 +2,8 @@ import styled from 'styled-components';
 import theme from 'style/generalStyle';
 
 export const HeaderContainer = styled.header`
+  background-color: ${props =>
+    props.scroll > 80 ? ' rgb(255, 255, 255)' : 'transparent'};
   position: fixed;
   display: flex;
   align-items: center;
@@ -9,6 +11,7 @@ export const HeaderContainer = styled.header`
   height: 80px;
   z-index: 30;
   width: 100vw;
+  transition: background-color ease-in 0.7s;
 `;
 
 export const HeaderBox = styled.div`

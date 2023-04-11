@@ -5,7 +5,6 @@ import Navigation from 'components/Navigation';
 import { HeaderBox } from './Header.styled';
 import { HeaderContainer } from './Header.styled';
 import BurgerButton from 'components/Burger/MobileMenu.jsx/BurgerButton';
-import helper from './helper.module.css';
 import SwitcherBtn from '../Burger/MobileMenu.jsx/SwitcherBtn';
 
 const Header = () => {
@@ -30,10 +29,7 @@ const Header = () => {
       window.removeEventListener('scroll', () => setScroll(window.scrollY));
   }, []);
   return (
-    <HeaderContainer
-      className={scroll > 80 ? helper.visible : helper.transparent}
-      id="header"
-    >
+    <HeaderContainer scroll={scroll} id="header">
       <HeaderBox id="header-box">
         <Logo />
         <Navigation />
