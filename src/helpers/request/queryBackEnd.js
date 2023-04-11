@@ -102,7 +102,7 @@ const queryPopular = async query => {
 // додавання рецепту до favotie
 const queryAddFavorite = async id => {
   try {
-    const { data } = await instanceBacEnd.patch(`/favorite/add`, id);
+    const data = await instanceBacEnd.patch(`/favorite/add`, id);
     return data;
   } catch (err) {
     return err.response.data.message;
@@ -112,7 +112,7 @@ const queryAddFavorite = async id => {
 // видалення рецепту з favorite
 const queryRemoveFavorite = async id => {
   try {
-    const { data } = await instanceBacEnd.patch(`/favorite/remove`, id);
+    const data = await instanceBacEnd.patch(`/favorite/remove`, id);
     return data;
   } catch (err) {
     return err.response.data.message;

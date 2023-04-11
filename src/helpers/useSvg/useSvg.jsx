@@ -220,6 +220,40 @@ export const UseSvg = ({ id }) => {
           />
         </svg>
       );
+    case 'Time':
+      return (
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+          <path
+            d="M9.99996 18.3334C14.6023 18.3334 18.3333 14.6024 18.3333 10C18.3333 5.39765 14.6023 1.66669 9.99996 1.66669C5.39759 1.66669 1.66663 5.39765 1.66663 10C1.66663 14.6024 5.39759 18.3334 9.99996 18.3334Z"
+            strokeWidth="1.8"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            fillOpacity="0"
+          />
+          <path
+            d="M10 5V10L13.3333 11.6667"
+            strokeWidth="1.8"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            fillOpacity="0"
+          />
+        </svg>
+      );
+    case 'Pick':
+      return (
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="17"
+          height="17"
+          viewBox="0 0 17 17"
+          fill="none"
+        >
+          <path
+            d="M13.8928 0.746184C14.4196 -0.0309226 15.4767 -0.233794 16.2538 0.293059C17.0309 0.819911 17.2338 1.87698 16.7069 2.65409L7.48678 16.2538C6.81241 17.2485 5.34699 17.2485 4.67262 16.2538L0.293059 9.79396C-0.233794 9.01686 -0.0309226 7.95979 0.746184 7.43294C1.52329 6.90608 2.58036 7.10896 3.10721 7.88606L6.0797 12.2705L13.8928 0.746184Z"
+            fill="#8BAA36"
+          />
+        </svg>
+      );
 
     default:
       return <svg></svg>;

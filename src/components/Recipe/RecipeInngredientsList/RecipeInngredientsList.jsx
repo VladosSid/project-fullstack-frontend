@@ -8,6 +8,7 @@ import {
   RealCheckbox,
   CustomCheckbox,
 } from './RecipeInngredientsList.styled';
+import { UseSvg } from '../../../helpers/useSvg/useSvg';
 
 const RecipeInngredientsList = ({ ingredients }) => {
   return (
@@ -23,7 +24,9 @@ const RecipeInngredientsList = ({ ingredients }) => {
               <IngDescr>{ingredient.measure}</IngDescr>
             </InngredientContainer>
             <RealCheckbox type="checkbox" />
-            <CustomCheckbox></CustomCheckbox>
+            <CustomCheckbox>
+              <UseSvg id="Pick" />
+            </CustomCheckbox>
           </RecipeItem>
         ))}
     </InngredientsList>
