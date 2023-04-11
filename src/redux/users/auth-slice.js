@@ -8,14 +8,14 @@ const initialState = {
     name: null,
     email: null,
     avatarURL: null,
+    favorite: [],
+    shoppingList: [],
   },
   theme: 'white',
   token: null,
   isLoggedIn: false,
   error: null,
   isGetingCurentUser: false,
-  favorite: [],
-  shoppingList: [],
 };
 
 export const authSlice = createSlice({
@@ -67,13 +67,13 @@ export const authSlice = createSlice({
       state.isGetingCurentUser = true;
     },
     [authOperations.fetchCurrentUser.fulfilled](state, action) {
-      const { email, username, avatarURL, favorite, shoppingList } =
+      const { email, username, avatarURL, favorites, shoppingList } =
         action.payload.user;
 
       state.user.email = email;
       state.user.name = username;
       state.user.avatarURL = avatarURL;
-      state.user.favorite = favorite;
+      state.user.favorite = favorites;
       state.user.shoppingList = shoppingList;
       state.error = null;
 
