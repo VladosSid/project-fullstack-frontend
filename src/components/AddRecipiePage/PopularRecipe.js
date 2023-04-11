@@ -11,7 +11,6 @@ import {
   Recipes,
   Popular,
 } from './PopularRecipe.styled';
-import RECIPE from './recipes.json';
 
 const PopularRecipe = () => {
   // eslint-disable-next-line no-unused-vars

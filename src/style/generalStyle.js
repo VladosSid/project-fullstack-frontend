@@ -83,6 +83,12 @@ export const theme = {
       footer: {
         bavkgroundFooter: '#8BAA36',
       },
+
+      addResipe: {
+        inputColor: '#FAFAFA',
+        optionMenuColor: '#8BAA36',
+        optionSelectHover: '#FFFFFF',
+      }
     },
   },
 
@@ -159,6 +165,11 @@ export const theme = {
       },
       footer: {
         bavkgroundFooter: '#22252A',
+      },
+            addResipe: {
+        inputColor: '#000000',
+        optionMenuColor: 'transperent',
+        optionSelectHover: '#8baa36'
       },
 
       //  text
