@@ -3,11 +3,6 @@ import styled from 'styled-components';
 import theme from '../../style/generalStyle';
 
 export const ContainerWrapper = styled.div`
-  /* height: 100%; */
-  /* display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center; */
   @media ${theme.device.tablet} {
   }
   @media ${theme.device.desktop} {
