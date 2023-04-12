@@ -114,10 +114,17 @@ export const RemoveSvg = styled.div`
     width: 8px;
     height: 8px;
 
+    transition: stroke 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
     @media ${theme.device.tablet} {
       width: 12px;
       height: 12px;
     }
+
+    /* @media ${theme.device.desktop} {
+      width: 20px;
+      height: 20px;
+    } */
 
     &:hover {
       stroke: #8baa36;
