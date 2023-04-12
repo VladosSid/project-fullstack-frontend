@@ -43,7 +43,7 @@ export const theme = {
         customSelectBG: 'transparent',
         customSelectColor: '#FAFAFA',
         reactSelectMenuList: '#8BAA36',
-        reactSelectOptionColor: 'rgba(250, 250, 250, 0.8)',
+        reactSelectOptionColor: 'rgba(250, 250, 250, 0.5)',
         reactSelectOptionHover: 'rgba(250, 250, 250)',
         SRLNoItemsText: '#FAFAFA',
         //-------------

@@ -160,7 +160,8 @@ export const CustomSelect = styled(ReactSelect)`
     font-family: Poppins;
   }
 
-  .react-select__option:hover {
+  .react-select__option:hover,
+  .react-select__option:focus {
     color: ${props => props.theme.color.searchPage.reactSelectOptionHover};
     /* background-color: transparent; */
   }
