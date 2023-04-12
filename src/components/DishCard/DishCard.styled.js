@@ -29,6 +29,17 @@ export const DishWrapper = styled.div`
     width: 300px;
     height: 323px;
   }
+
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1),
+  transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover {
+    -webkit-box-shadow: 0px 0px 20px 0px rgba(138,169,54,1);
+    -moz-box-shadow: 0px 0px 20px 0px rgba(138,169,54,1);
+    box-shadow: 0px 0px 10px 0px rgba(138,169,54,1);
+
+    transform: scale(1.05);
+  }
 `;
 export const DishTitleWrapper = styled.div`
   position: absolute;
