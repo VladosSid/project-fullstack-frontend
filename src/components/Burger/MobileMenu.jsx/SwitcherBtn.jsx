@@ -1,22 +1,29 @@
 import { useState } from 'react';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 
 import { SwBtn, Circle } from './SwitcherBtn.styled';
 import theme from 'redux/theming/theme-operations';
+import getTheme from 'redux/theming/theme-selector';
 
 const SwitcherBtn = () => {
-  const [checked, setChecked] = useState(false);
+  const color = useSelector(getTheme);
+  const dispatch = useDispatch();
+
+  const [checked, setChecked] = useState(color === 'dark' ? true : false);
   const switchHandler = () => {
     setChecked(prev => !prev);
-  };
 
-  const dispatch = useDispatch();
+    if (color === 'white') {
+      dispatch(theme.themeSwitch('dark'));
+    } else {
+      dispatch(theme.themeSwitch('white'));
+    }
+  };
 
   return (
     <SwBtn
       checked={checked}
       onClick={() => {
-        dispatch(theme.themeSwitch('white'));
         switchHandler();
       }}
     >
