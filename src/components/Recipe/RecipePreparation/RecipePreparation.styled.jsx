@@ -26,7 +26,15 @@ export const InstructionTitle = styled.h2`
 `;
 
 export const InstructionWrapper = styled.div`
-  overflow: scroll;
+  overflow: hidden visible;
+  ::-webkit-scrollbar {
+    background: #8baa36;
+    width: 12px;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #22252a;
+    height: 10px;
+  }
   width: 343px;
   height: 290px;
 
