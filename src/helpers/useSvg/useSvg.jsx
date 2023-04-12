@@ -72,10 +72,10 @@ export const UseSvg = ({ id }) => {
           <path
             d="M2.5 8H13.5"
             stroke="#333333"
-            stroke-opacity="1"
-            stroke-width="1.5"
-            stroke-linecap="round"
-            stroke-linejoin="round"
+            strokeOpacity="1"
+            strokeWidth="1.5"
+            strokeLinecap="round"
+            strokeLinejoin="round"
           />
         </svg>
       );
@@ -91,16 +91,16 @@ export const UseSvg = ({ id }) => {
           <path
             d="M2.5 8H13.5"
             stroke="#333"
-            stroke-width="1.5"
-            stroke-linecap="round"
-            stroke-linejoin="round"
+            strokeWidth="1.5"
+            strokeLinecap="round"
+            strokeLinejoin="round"
           />
           <path
             d="M8 2.5V13.5"
             stroke="#333"
-            stroke-width="1.5"
-            stroke-linecap="round"
-            stroke-linejoin="round"
+            strokeWidth="1.5"
+            strokeLinecap="round"
+            strokeLinejoin="round"
           />
         </svg>
       );
@@ -117,23 +117,23 @@ export const UseSvg = ({ id }) => {
           <path
             d="M8.79883 8.89566V13.9857V14.0884V13.9857C8.79883 15.439 9.43295 16.7258 10.4161 17.5585C10.8969 17.9658 11.2145 18.5156 11.2145 19.1259V27.6223C11.2145 28.5668 12.0262 29.3334 13.0263 29.3334C14.0264 29.3334 14.838 28.5668 14.838 27.6223V19.1259C14.838 18.5156 15.1557 17.9658 15.6364 17.5585C16.6196 16.7258 17.2537 15.439 17.2537 13.9857V8.89566V13.9857"
             stroke="#FAFAFA"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
           />
           <path
             d="M13.0254 14.5038V8.79999"
             stroke="#FAFAFA"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
           />
           <path
             d="M29.3322 9.99973C29.3322 9.37004 28.7911 8.85898 28.1243 8.85898H26.9165C24.9151 8.85898 23.293 10.391 23.293 12.2812V19.1258C23.293 20.6133 24.3039 21.867 25.7087 22.3381V27.6221C25.7087 28.5667 26.5203 29.3332 27.5204 29.3332C28.5205 29.3332 29.3322 28.5667 29.3322 27.6221V22.548V9.99973Z"
             stroke="#FAFAFA"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
           />
         </svg>
       );
@@ -148,9 +148,9 @@ export const UseSvg = ({ id }) => {
           <path
             d="M3.5 14H24.5M3.5 7H24.5M3.5 21H17.5"
             stroke="#22252A"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
           />
         </svg>
       );
@@ -166,16 +166,16 @@ export const UseSvg = ({ id }) => {
           <path
             d="M9.16666 15.8333C12.8486 15.8333 15.8333 12.8486 15.8333 9.16666C15.8333 5.48477 12.8486 2.5 9.16666 2.5C5.48477 2.5 2.5 5.48477 2.5 9.16666C2.5 12.8486 5.48477 15.8333 9.16666 15.8333Z"
             stroke="#22252A"
-            stroke-width="1.6"
-            stroke-linecap="round"
-            stroke-linejoin="round"
+            strokeWidth="1.6"
+            strokeLinecap="round"
+            strokeLinejoin="round"
           />
           <path
             d="M17.5 17.5L13.875 13.875"
             stroke="#22252A"
-            stroke-width="1.6"
-            stroke-linecap="round"
-            stroke-linejoin="round"
+            strokeWidth="1.6"
+            strokeLinecap="round"
+            strokeLinejoin="round"
           />
         </svg>
       );
@@ -190,16 +190,16 @@ export const UseSvg = ({ id }) => {
           <path
             d="M10.9375 3.0625L3.0625 10.9375"
             // stroke="#333333"
-            stroke-width="1.5"
-            stroke-linecap="round"
-            stroke-linejoin="round"
+            strokeWidth="1.5"
+            strokeLinecap="round"
+            strokeLinejoin="round"
           />
           <path
             d="M10.9375 10.9375L3.0625 3.0625"
             // stroke="#333333"
-            stroke-width="1.5"
-            stroke-linecap="round"
-            stroke-linejoin="round"
+            strokeWidth="1.5"
+            strokeLinecap="round"
+            strokeLinejoin="round"
           />
         </svg>
       );
@@ -214,9 +214,9 @@ export const UseSvg = ({ id }) => {
           <path
             id="Icon"
             d="M13.6667 5.50004V4.76671C13.6667 3.73994 13.6667 3.22656 13.4668 2.83439C13.2911 2.48943 13.0106 2.20896 12.6656 2.0332C12.2735 1.83337 11.7601 1.83337 10.7333 1.83337H9.26667C8.2399 1.83337 7.72652 1.83337 7.33435 2.0332C6.98939 2.20896 6.70892 2.48943 6.53315 2.83439C6.33333 3.22656 6.33333 3.73994 6.33333 4.76671V5.50004M8.16667 10.5417V15.125M11.8333 10.5417V15.125M1.75 5.50004H18.25M16.4167 5.50004V15.7667C16.4167 17.3069 16.4167 18.0769 16.1169 18.6652C15.8533 19.1826 15.4326 19.6033 14.9151 19.867C14.3269 20.1667 13.5568 20.1667 12.0167 20.1667H7.98333C6.44319 20.1667 5.67312 20.1667 5.08486 19.867C4.56741 19.6033 4.14672 19.1826 3.88307 18.6652C3.58333 18.0769 3.58333 17.3069 3.58333 15.7667V5.50004"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
           />
         </svg>
       );
@@ -243,15 +243,12 @@ export const UseSvg = ({ id }) => {
       return (
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          width="17"
-          height="17"
+          // width="17"
+          // height="17"
           viewBox="0 0 17 17"
-          fill="none"
+          fill="#8baa36"
         >
-          <path
-            d="M13.8928 0.746184C14.4196 -0.0309226 15.4767 -0.233794 16.2538 0.293059C17.0309 0.819911 17.2338 1.87698 16.7069 2.65409L7.48678 16.2538C6.81241 17.2485 5.34699 17.2485 4.67262 16.2538L0.293059 9.79396C-0.233794 9.01686 -0.0309226 7.95979 0.746184 7.43294C1.52329 6.90608 2.58036 7.10896 3.10721 7.88606L6.0797 12.2705L13.8928 0.746184Z"
-            fill="#8BAA36"
-          />
+          <path d="M13.8928 0.746184C14.4196 -0.0309226 15.4767 -0.233794 16.2538 0.293059C17.0309 0.819911 17.2338 1.87698 16.7069 2.65409L7.48678 16.2538C6.81241 17.2485 5.34699 17.2485 4.67262 16.2538L0.293059 9.79396C-0.233794 9.01686 -0.0309226 7.95979 0.746184 7.43294C1.52329 6.90608 2.58036 7.10896 3.10721 7.88606L6.0797 12.2705L13.8928 0.746184Z" />
         </svg>
       );
 

@@ -2,7 +2,6 @@ import { Suspense, lazy, useEffect } from 'react'; //eslint-disable-line
 import { Route, Routes } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { AppBox } from './App.styled';
-import Modal from './Modal/Modal';
 import { ThemeProvider } from 'styled-components';
 
 import { authSelectors, authOperations } from '../redux/users';
@@ -13,7 +12,6 @@ import PrivateRoute from './Routes/PrivateRoute';
 // import getTheme from '../redux/theming/theme-selector';
 import theme from '../style/generalStyle';
 import Burger from './Burger/Burger';
-import LogoutModal from './LogoutModal/LogoutModal';
 import { Loader } from './Loader/Loader';
 
 const WelcomePage = lazy(() => import('../pages/WelcomePage/WelcomePage'));
@@ -129,9 +127,7 @@ export const App = () => {
                 />
               </Route>
             </Routes>
-            <Modal />
             <Burger />
-            <LogoutModal />
           </AppBox>
         </Suspense>
       )}

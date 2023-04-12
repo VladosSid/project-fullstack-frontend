@@ -19,7 +19,6 @@ export const theme = {
         headerContainer: '#1E1F28',
         backgroun: '#1E1F28',
         textNavigation: '#FAFAFA',
-      
       },
 
       mainPage: {
@@ -29,8 +28,29 @@ export const theme = {
         mpHeroProductBackground: '#2A2C36',
         recipeCategoryName: '#FAFAFA',
         mpButton: '#FAFAFA',
+        searchBtn: '#8BAA36',
+        searchBtnFocus: '#fafafa',
+        searchInputBorder: 'rgba(250, 250, 250, 0.5)',
+        searchInputBG: 'transparent',
+        // searchInputColor: '',
+        searchInputPlaceholder: 'rgba(250, 250, 250, 0.5)',
+        searchBtncolorFocus: '#22252A',
       },
+      dishCard: { dishTitleWrapper: '#2A2C36', dishTitle: '#FAFAFA' },
+      searchPage: {
+        searchTypeSpan: '#FAFAFA',
+        customSelectBG: 'transparent',
+        customSelectColor: '#FAFAFA',
+        reactSelectMenuList: '#8BAA36',
+        reactSelectOptionColor: '#FAFAFA',
+        reactSelectOptionHover: '#2A2C36',
+        SRLNoItemsText: '#FAFAFA',
+        //-------------
+        reactSelectContainer: '#ececec',
+        reactSelectDropdown: '#8baa36',
 
+        reactSelectOptionColorBG: 'transparent',
+      },
       mainPageTitle: {
         colorTitle: '#FAFAFA',
       },
@@ -87,6 +107,27 @@ export const theme = {
         mpHeroProductBackground: '#ffffff',
         recipeCategoryName: '#001833',
         mpButton: '#22252a',
+        searchBtn: '#22252A',
+        searchBtnFocus: '#8BAA36',
+        searchInputBorder: '#F0F0F0',
+        searchInputBG: '#fafafa',
+        searchInputPlaceholder: '#3e4462',
+        searchBtncolorFocus: '#fafafa',
+      },
+      dishCard: { dishTitleWrapper: '#ffffff', dishTitle: '#3e4462' },
+      searchPage: {
+        searchTypeSpan: '#001833',
+        customSelectBG: '#ececec',
+        customSelectColor: '#000000',
+        reactSelectMenuList: '#FAFAFA',
+        reactSelectOptionColor: '#000000',
+        reactSelectOptionHover: '#8BAA36',
+        //-------------
+        SRLNoItemsText: '#000000',
+        reactSelectContainer: '#ececec',
+        reactSelectDropdown: '#8baa36',
+
+        reactSelectOptionColorBG: 'transparent',
       },
 
       mainPageTitle: {

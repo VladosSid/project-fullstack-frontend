@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import theme from '../../style/generalStyle';
+
 export const DishWrapper = styled.div`
   position: relative;
   overflow: hidden;
@@ -28,13 +29,24 @@ export const DishWrapper = styled.div`
     width: 300px;
     height: 323px;
   }
+
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1),
+  transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover {
+    -webkit-box-shadow: 0px 0px 20px 0px rgba(138,169,54,1);
+    -moz-box-shadow: 0px 0px 20px 0px rgba(138,169,54,1);
+    box-shadow: 0px 0px 10px 0px rgba(138,169,54,1);
+
+    transform: scale(1.03);
+  }
 `;
 export const DishTitleWrapper = styled.div`
   position: absolute;
   left: 18px;
   right: 18px;
   bottom: 26px;
-  background: #ffffff;
+  background-color: ${props => props.theme.color.dishCard.dishTitleWrapper};
   border-radius: 8px;
   padding: 16px;
   max-width: 323px;
@@ -54,7 +66,7 @@ export const DishTitle = styled.h3`
   font-size: 16px;
   line-height: 1.25;
   letter-spacing: -0.24px;
-  color: #3e4462;
+  color: ${props => props.theme.color.dishCard.dishTitle};
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;

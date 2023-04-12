@@ -25,7 +25,7 @@ const IngredientsShoppingList = ({ ingredients, deleteIngradient }) => {
             </ImageContainer>
             <TitleProduct>{ingredient.title}</TitleProduct>
             <NumberContainer>{ingredient.measure}</NumberContainer>
-            <Remove>
+            <Remove type="button">
               <RemoveSvg onClick={() => deleteIngradient(ingredient._id)}>
                 <UseSvg id="remove" />
               </RemoveSvg>

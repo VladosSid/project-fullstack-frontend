@@ -26,7 +26,31 @@ export default function SearchRecipesList({ searchQuery, searchType }) {
   //------------------ Pagination
   const [page, setPage] = useState(1);
   const [totalPages, setTotalPages] = useState(1);
-  const itemsPerPage = 4;
+
+  //-----------------------------------
+  const [itemsPerPage, setItemsPerPage] = useState(() => {
+    const width = window.innerWidth;
+    if (width >= 1304) {
+      return 12;
+    } else {
+      return 6;
+    }
+  });
+
+  useEffect(() => {
+    const handleWindowResize = () => {
+      const width = window.innerWidth;
+
+      if (width >= 1304) {
+        setItemsPerPage(12);
+      } else {
+        setItemsPerPage(6);
+      }
+    };
+    window.addEventListener('resize', handleWindowResize);
+
+    return () => window.removeEventListener('resize', handleWindowResize);
+  }, []);
   //-------------
   useEffect(() => {
     const processedValue = searchQuery.trim().replace(/ +/g, '%20');
@@ -40,6 +64,7 @@ export default function SearchRecipesList({ searchQuery, searchType }) {
     response
       .then(results => {
         setRecipes(results.result.data.list);
+
         //---- Pag
         setTotalPages(Math.ceil(results.result.data.totalItem / itemsPerPage));
         //-----

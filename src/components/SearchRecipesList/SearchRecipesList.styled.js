@@ -65,7 +65,7 @@ export const SRLNoItemsText = styled.p`
 
   line-height: 1;
   letter-spacing: -0.02em;
-  color: #000000;
+  color: ${props => props.theme.color.searchPage.SRLNoItemsText};
   opacity: 0.5;
   margin-left: 10px;
   @media screen and (max-width: 767px) {

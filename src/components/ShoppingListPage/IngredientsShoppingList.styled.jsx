@@ -105,6 +105,7 @@ export const Remove = styled.button`
   display: flex;
   background-color: transparent;
   border: 0;
+  cursor: pointer;
 `;
 
 export const RemoveSvg = styled.div`

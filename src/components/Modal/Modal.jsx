@@ -1,18 +1,9 @@
-import { useEffect } from 'react';
 import { createPortal } from 'react-dom';
-import UserInfoModal from './UserInfoModal/UserInfoModal';
 
-const Modal = () => {
-  const modalRoot = document.getElementById('modal-root');
-  const portalElement = document.createElement('div');
+const modalRoot = document.querySelector('#modal-root');
 
-  useEffect(() => {
-    modalRoot.appendChild(portalElement);
-
-    return () => modalRoot.removeChild(portalElement);
-  }, [modalRoot, portalElement]);
-
-  return createPortal(<UserInfoModal />, portalElement);
+export const Modal = ({ children }) => {
+  return createPortal(<>{children}</>, modalRoot);
 };
 
 export default Modal;
