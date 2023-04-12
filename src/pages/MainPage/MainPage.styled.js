@@ -83,6 +83,9 @@ export const RecipeCategoryNameLink = styled(Link)`
   /* font-feature-settings: 'liga' off; */
 
   color: ${props => props.theme.color.mainPage.recipeCategoryName};
+
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  
   &:hover {
     color: #8baa36;
   }
