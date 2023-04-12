@@ -117,7 +117,6 @@ export const MPHeroTitle = styled.h1`
   }
 `;
 
-
 export const MDHeroFlex = styled.div`
   @media ${theme.device.tablet} {
     display: flex;
@@ -210,6 +209,11 @@ export const StyledLink = styled(Link)`
   margin-left: 135px;
   font-size: 10px;
   line-height: 1.2;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  &:hover,
+  &:focus {
+    color: #8baa36;
+  }
   @media ${theme.device.tablet} {
     margin-left: 164px;
     font-size: 10px;
