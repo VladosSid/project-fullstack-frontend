@@ -76,6 +76,10 @@ export const SearchBtn = styled.button`
     props.page === 'main' ? props.theme.color.mainPage.searchBtn : '#8BAA36'};
   border-color: ${props =>
     props.page === 'main' ? props.theme.color.mainPage.searchBtn : '#8BAA36'};
+
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    
   &:hover,
   &:focus {
     color: ${props => props.theme.color.mainPage.searchBtncolorFocus};
