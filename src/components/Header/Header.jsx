@@ -3,7 +3,7 @@ import Logo from 'components/Logo';
 import UserLogo from 'components/UserLogo';
 import Navigation from 'components/Navigation';
 import { HeaderBox } from './Header.styled';
-import { HeaderContainer } from './Header.styled';
+import { HeaderContainer, BoxSwitch } from './Header.styled';
 import BurgerButton from 'components/Burger/MobileMenu.jsx/BurgerButton';
 import SwitcherBtn from '../Burger/MobileMenu.jsx/SwitcherBtn';
 
@@ -35,7 +35,9 @@ const Header = () => {
         <Navigation />
         <UserLogo />
         <BurgerButton />
-        {width >= 1240 && <SwitcherBtn />}
+        <BoxSwitch>
+          <SwitcherBtn />
+        </BoxSwitch>
       </HeaderBox>
     </HeaderContainer>
   );

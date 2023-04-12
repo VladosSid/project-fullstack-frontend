@@ -9,7 +9,7 @@ import { authSelectors, authOperations } from '../redux/users';
 import RestrictedRoute from './Routes/RestrictedRoute';
 import PrivateRoute from './Routes/PrivateRoute';
 
-// import getTheme from '../redux/theming/theme-selector';
+import getTheme from '../redux/theming/theme-selector';
 import theme from '../style/generalStyle';
 import Burger from './Burger/Burger';
 import { Loader } from './Loader/Loader';
@@ -34,7 +34,7 @@ const SearchPage = lazy(() => import('../pages/SearchPage/SearchPage'));
 const NotFoundPage = lazy(() => import('../pages/NotFoundPage/NotFoundPage'));
 
 export const App = () => {
-  // const themeUser = useSelector(getTheme);
+  const themeUser = useSelector(getTheme);
 
   const dispatch = useDispatch();
   const isGetingCurent = useSelector(authSelectors.getGetingCurentUser);
@@ -46,7 +46,7 @@ export const App = () => {
   // [themeUser];
 
   return (
-    <ThemeProvider theme={theme.white}>
+    <ThemeProvider theme={theme[themeUser]}>
       {isGetingCurent ? (
         <Loader />
       ) : (

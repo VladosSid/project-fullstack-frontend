@@ -34,3 +34,11 @@ export const HeaderBox = styled.div`
     width: 1240px;
   }
 `;
+
+export const BoxSwitch = styled.div`
+  display: none;
+
+  @media ${theme.device.desktop} {
+    display: block;
+  }
+`;

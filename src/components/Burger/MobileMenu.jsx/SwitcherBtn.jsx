@@ -6,25 +6,25 @@ import theme from 'redux/theming/theme-operations';
 import getTheme from 'redux/theming/theme-selector';
 
 const SwitcherBtn = () => {
-  const [checked, setChecked] = useState(false);
   const color = useSelector(getTheme);
-  const [current, setCurrent] = useState(color);
+  const dispatch = useDispatch();
 
+  const [checked, setChecked] = useState(color === 'dark' ? true : false);
   const switchHandler = () => {
     setChecked(prev => !prev);
-    if (current === 'white') {
-      setCurrent('dark');
-    } else setCurrent('white');
-  };
 
-  const dispatch = useDispatch();
+    if (color === 'white') {
+      dispatch(theme.themeSwitch('dark'));
+    } else {
+      dispatch(theme.themeSwitch('white'));
+    }
+  };
 
   return (
     <SwBtn
       checked={checked}
       onClick={() => {
         switchHandler();
-        dispatch(theme.themeSwitch(current));
       }}
     >
       <Circle checked={checked} />
