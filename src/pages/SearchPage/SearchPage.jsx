@@ -1,12 +1,9 @@
-import React, { useState } from 'react'; //useEffect
+import React, { useState } from 'react'; 
 import { MainPageTitle } from 'components/MainPageTitle/MainPageTitle';
 import { MainContainer } from '../../components/MainContainer/MainContainer';
-// import DishCard from 'components/DishCard/DishCard';
-// import { useLocation } from 'react-router-dom';
 import { ContainerWrapper } from './Searchpage.styled';
 import { useSearchParams } from 'react-router-dom';
 import SearchBar from 'components/SearchBar/SearchBar';
-// import { createSearchUrl } from 'helpers/createSearchUrl';
 import SearchRecipesList from 'components/SearchRecipesList/SearchRecipesList';
 import { Notify } from 'notiflix/build/notiflix-notify-aio';
 import BG from '../../images/mainPagePhoto/search_tabl_opt.png';
@@ -34,14 +31,11 @@ export default function SearchPage() {
       }
 
       setSearchType(type);
-      // setSearchParams({ type: type });
       updatedParams.set('type', type);
       setSearchParams(updatedParams);
     }
 
-    // if (searchQuery) {
-    //   setSearchParams(updatedParams);
-    // }
+    
   }
   //---------
   function handleSubmit(query) {

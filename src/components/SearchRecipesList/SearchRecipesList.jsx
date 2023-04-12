@@ -1,8 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import { useLocation } from 'react-router-dom';
-// import { useLocation } from 'react-router-dom';
-// import axios from 'axios';
-// import RecipesList from './RecipesList';
 import DishCard from 'components/DishCard/DishCard';
 
 import {
@@ -19,8 +16,7 @@ import { Container, Pagination, Stack } from '@mui/material';
 //-------------------------
 export default function SearchRecipesList({ searchQuery, searchType }) {
   const location = useLocation();
-  // const [searchValue, setSearchValue] = useState('');
-  // const [searchType, setSearchType] = useState('query');
+
   const [recipes, setRecipes] = useState([]);
   const [error, setError] = useState(null);
   //------------------ Pagination
@@ -30,6 +26,7 @@ export default function SearchRecipesList({ searchQuery, searchType }) {
   //-----------------------------------
   const [itemsPerPage, setItemsPerPage] = useState(() => {
     const width = window.innerWidth;
+    console.log('width 1', width);
     if (width >= 1304) {
       return 12;
     } else {
@@ -40,7 +37,7 @@ export default function SearchRecipesList({ searchQuery, searchType }) {
   useEffect(() => {
     const handleWindowResize = () => {
       const width = window.innerWidth;
-
+      console.log('width2', width);
       if (width >= 1304) {
         setItemsPerPage(12);
       } else {
@@ -84,13 +81,7 @@ export default function SearchRecipesList({ searchQuery, searchType }) {
   }, [searchQuery, searchType, itemsPerPage, page]);
 
   const changeNum = (_, num) => {
-    const processedValue = searchQuery.trim().replace(/ +/g, '%20');
     setPage(num);
-    queryBackEnd
-      .querySearch(searchType, processedValue, 3, num)
-      // .get(`/favorite?page=${num}`)
-      .then(results => setRecipes(results.result.data.list))
-      .catch(error => console.log(error.message));
   };
   return (
     <>
@@ -120,8 +111,6 @@ export default function SearchRecipesList({ searchQuery, searchType }) {
                     count={totalPages}
                     page={page}
                     onChange={changeNum}
-                    // showFirstButton
-                    // showLastButton
                     siblingCount={1}
                     sx={{ marginY: 3, marginX: 'auto' }}
                   />
@@ -134,6 +123,3 @@ export default function SearchRecipesList({ searchQuery, searchType }) {
     </>
   );
 }
-
-//<RecipesList recipes={recipes} />
-//searchQuery.query.toLowerCase()

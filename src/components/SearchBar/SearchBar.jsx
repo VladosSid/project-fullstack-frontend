@@ -34,9 +34,3 @@ export default function SearchBar(props) {
     </SearchBarWrapper>
   );
 }
-//function handleSubmit(query) {
-//     onSearch(query);
-//   }
-// function handleTypeChange(type) {
-//   onTypeChange(type);
-// }

@@ -23,13 +23,17 @@ export const SearchInput = styled.input`
   border: 1px;
   border-style: solid;
   border-color: ${props => props.theme.color.mainPage.searchInputBorder};
-  color: ${props => props.theme.color.mainPage.searchInputPlaceholder};
+  color: ${props => props.theme.color.mainPage.searchInputColor};
   background-color: ${props => props.theme.color.mainPage.searchInputBG};
   height: 52px;
 
   width: 283px;
   padding-left: 32px;
-
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  &:hover,
+  &:focus {
+    border-color: ${props => props.theme.color.mainPage.searchInputHover};
+  }
   @media ${theme.device.tablet} {
     width: ${props => (props.page === 'main' ? '330px' : '350px')};
     height: 59px;
@@ -79,7 +83,7 @@ export const SearchBtn = styled.button`
 
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    
+
   &:hover,
   &:focus {
     color: ${props => props.theme.color.mainPage.searchBtncolorFocus};
@@ -91,7 +95,6 @@ export const SearchBtn = styled.button`
       props.page === 'main'
         ? props.theme.color.mainPage.searchBtnFocus
         : props.theme.color.mainPage.searchBtnFocus};
-    /* color: ${props => props.theme.color.mainPage.searchBtnColor}; */
     cursor: pointer;
   }
   @media screen and (max-width: 767px) {
@@ -108,4 +111,3 @@ export const SearchBtn = styled.button`
     font-size: 16px;
   }
 `;
-//color: ${props => props.theme.color.mainPage.colorTitle};
