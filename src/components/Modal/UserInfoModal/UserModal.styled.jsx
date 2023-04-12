@@ -11,7 +11,7 @@ export const Overlay = styled.form`
   z-index: 100;
   transition: transform cubic-bezier(0.075, 0.82, 0.165, 1) 0.5s;
   transform: ${props =>
-    props.isOpen === false ? 'translateY(-130vh)' : 'translateY(0)'};
+    props.open === false ? 'translateY(-130vh)' : 'translateY(0)'};
 `;
 
 export const UserIModal = styled.div`

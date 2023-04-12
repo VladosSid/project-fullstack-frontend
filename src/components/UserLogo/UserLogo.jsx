@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useSelector } from 'react-redux';
 import { authSelectors } from 'redux/users';
 
@@ -16,6 +16,20 @@ const UserLogo = () => {
   const name = useSelector(authSelectors.getUsername);
   const ava = useSelector(authSelectors.getAvatar);
 
+  useEffect(() => {
+    window.addEventListener(
+      'keydown',
+      e => e.keyCode === 27 && setPopupIsOpen(false)
+    );
+
+    return () =>
+      window.removeEventListener(
+        'keydown',
+        e => e.keyCode === 27 && setPopupIsOpen(false)
+      );
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
   const popupToggle = () => {
     setPopupIsOpen(prev => !prev);
   };
@@ -23,13 +37,6 @@ const UserLogo = () => {
   const modalToggle = () => {
     setLogoModalOpen(prev => !prev);
     document.body.style.overflow = 'hidden';
-  };
-
-  const close = e => {
-    if (e.code === 'Escape') {
-      setPopupIsOpen(false);
-      setLogoModalOpen(false);
-    }
   };
 
   return (
@@ -40,10 +47,11 @@ const UserLogo = () => {
       </UserLogoBtn>
 
       <Modal
-        close={close}
-        open={LogoModalOpen}
         children={
-          <UserInfoModal setLogoModalOpen={setLogoModalOpen} close={close} />
+          <UserInfoModal
+            open={LogoModalOpen}
+            setLogoModalOpen={setLogoModalOpen}
+          />
         }
       />
 

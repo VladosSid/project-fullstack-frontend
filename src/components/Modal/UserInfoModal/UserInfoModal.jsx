@@ -20,7 +20,7 @@ import pen from '../../../images/Header/pen.svg';
 import user from '../../../images/Header/user.png';
 import x from '../../../images/Header/x.svg';
 
-const UserInfoModal = ({ setLogoModalOpen, close }) => {
+const UserInfoModal = ({ setLogoModalOpen, open }) => {
   const [image, setImg] = useState(null);
   const [name, setName] = useState('');
   const [avatar, setAvatar] = useState(null);
@@ -32,16 +32,15 @@ const UserInfoModal = ({ setLogoModalOpen, close }) => {
 
   useEffect(() => {
     window.addEventListener('keydown', e => {
-      document.body.style.overflow = '';
-      setLogoModalOpen(false);
-      close(e);
+      if (e.keyCode === 27) {
+        document.body.style.overflow = '';
+        setLogoModalOpen(false);
+      }
     });
 
     return () =>
       window.removeEventListener('keydown', e => {
-        document.body.style.overflow = '';
-        setLogoModalOpen(false);
-        close(e);
+        if (e.keyCode === 27) setLogoModalOpen(false);
       });
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
@@ -74,6 +73,9 @@ const UserInfoModal = ({ setLogoModalOpen, close }) => {
     formData.append('username', name);
 
     dispatch(authOperations.updateUserData(formData));
+    if (image !== ava || username !== name) {
+      setLogoModalOpen(false);
+    }
     reset();
   };
 
@@ -84,8 +86,20 @@ const UserInfoModal = ({ setLogoModalOpen, close }) => {
     }
   };
 
+  // const onEnterPress = e => {
+  //   e.preventDefault();
+  //   if (e.keyCode === 13) {
+  //     handleSubmit(e);
+  //   }
+  // };
+
   return (
-    <Overlay id="user-info-modal" onClick={e => check(e)}>
+    <Overlay
+      open={open}
+      id="user-info-modal"
+      onClick={e => check(e)}
+      onSubmit={handleSubmit}
+    >
       <UserIModal>
         <CloseCross
           onClick={e => {
@@ -121,9 +135,7 @@ const UserInfoModal = ({ setLogoModalOpen, close }) => {
         />
         <UserSvg src={user} alt="user" />
         <PenSvg src={pen} alt="pen" />
-        <SaveBtn type="submit" onClick={handleSubmit}>
-          Save Changes
-        </SaveBtn>
+        <SaveBtn type="submit">Save Changes</SaveBtn>
       </UserIModal>
     </Overlay>
   );
