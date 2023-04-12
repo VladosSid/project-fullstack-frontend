@@ -1,18 +1,18 @@
 import { useEffect } from 'react';
 import { createPortal } from 'react-dom';
-import UserInfoModal from './UserInfoModal/UserInfoModal';
+import { Overlay } from './Modal.styled';
 
-const Modal = () => {
-  const modalRoot = document.getElementById('modal-root');
-  const portalElement = document.createElement('div');
+const modalRoot = document.querySelector('#modal-root');
 
+export const Modal = ({ close, children, open }) => {
   useEffect(() => {
-    modalRoot.appendChild(portalElement);
+    window.addEventListener('keydown', e => close(e));
 
-    return () => modalRoot.removeChild(portalElement);
-  }, [modalRoot, portalElement]);
+    return window.removeEventListener('keydown', e => close(e));
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
-  return createPortal(<UserInfoModal />, portalElement);
+  return createPortal(<Overlay open={open}>{children}</Overlay>, modalRoot);
 };
 
 export default Modal;
