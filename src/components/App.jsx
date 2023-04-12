@@ -46,7 +46,7 @@ export const App = () => {
   // [themeUser];
 
   return (
-    <ThemeProvider theme={theme.dark}>
+    <ThemeProvider theme={theme.white}>
       {isGetingCurent ? (
         <Loader />
       ) : (

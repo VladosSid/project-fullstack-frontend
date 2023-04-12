@@ -47,10 +47,10 @@ export const theme = {
         reactSelectOptionHover: 'rgba(250, 250, 250)',
         SRLNoItemsText: '#FAFAFA',
         //-------------
-        reactSelectContainer: '#ececec',
-        reactSelectDropdown: '#8baa36',
+        // reactSelectContainer: '#ececec',
+        // reactSelectDropdown: '#8baa36',
 
-        reactSelectOptionColorBG: 'transparent',
+        // reactSelectOptionColorBG: 'transparent',
       },
       mainPageTitle: {
         colorTitle: '#FAFAFA',
@@ -127,10 +127,9 @@ export const theme = {
         reactSelectOptionHover: '#000000',
         //-------------
         SRLNoItemsText: '#000000',
-        reactSelectContainer: '#ececec',
-        reactSelectDropdown: '#8baa36',
-
-        reactSelectOptionColorBG: 'transparent',
+        // reactSelectContainer: '#ececec',
+        // reactSelectDropdown: '#8baa36',
+        // reactSelectOptionColorBG: 'transparent',
       },
 
       mainPageTitle: {

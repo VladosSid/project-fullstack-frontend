@@ -5,7 +5,6 @@ import placeholderImage from '../../images/mainPagePhoto/placeholderImage.png';
 export default function DishCard({ location, recipe }) {
   return (
     <DishWrapper>
-      {/* Здесь вместо <a> должно быть  <Link to={} state={{from:location}} >  */}
       <Link to={`/recipe/${recipe._id}`} state={{ from: location }}>
         {recipe.imageUrl ? (
           <img src={recipe.imageUrl} alt={recipe.title} />

@@ -1,6 +1,5 @@
 import styled from 'styled-components';
 import ReactSelect from 'react-select';
-// import Select from 'react-select';
 
 export const CustomSelectBox = styled.div`
   display: flex;
@@ -34,7 +33,6 @@ export const CustomSelect = styled(ReactSelect)`
   border-color: rgba(250, 250, 250, 0.2);
   border-radius: 6px;
 
-  /////
   .react-select__value-container .react-select__input {
     cursor: none;
     pointer-events: none;
@@ -52,13 +50,10 @@ export const CustomSelect = styled(ReactSelect)`
     width: 146px;
 
     font-weight: 400;
-    /* padding-left: 14px; */
-    /* background-position: 95%; */
     font-size: 12px;
     line-height: 1.5;
     font-family: Poppins;
-    color: ${props => props.theme.color.searchPage.customSelectColor}; //#000000
-    /* gap: 8px; */
+    color: ${props => props.theme.color.searchPage.customSelectColor};
     @media screen and (min-width: 768px) {
       font-size: 14px;
       height: 41px;
@@ -79,10 +74,6 @@ export const CustomSelect = styled(ReactSelect)`
       caret-color: transparent;
     }
   }
-  /* &.react-select_value-container*/
-  /* .react-select_single-value {
-    color: white;
-  } */
 
   .css-t3ipsp-control:hover {
     outline: 0;
@@ -99,7 +90,6 @@ export const CustomSelect = styled(ReactSelect)`
   .react-select-container {
     outline: 0;
     border: 0;
-    /* background-color: #ececec; */
   }
 
   .react-select__control--is-focused {
@@ -139,9 +129,9 @@ export const CustomSelect = styled(ReactSelect)`
       width: 198px;
     }
   }
-  .react-select__menu-list {
-    /* border-radius: 0px 0px 6px 6px; */
-  }
+  /* .react-select__menu-list {
+    border-radius: 0px 0px 6px 6px;
+  } */
 
   .react-select__menu-list:hover {
     outline: 0;
@@ -150,8 +140,7 @@ export const CustomSelect = styled(ReactSelect)`
 
   .react-select__option {
     cursor: pointer;
-    color: ${props =>
-      props.theme.color.searchPage.reactSelectOptionColor}; //#000000;
+    color: ${props => props.theme.color.searchPage.reactSelectOptionColor};
     background-color: transparent;
     font-size: 14px;
     font-weight: 400;
@@ -163,6 +152,5 @@ export const CustomSelect = styled(ReactSelect)`
   .react-select__option:hover,
   .react-select__option:focus {
     color: ${props => props.theme.color.searchPage.reactSelectOptionHover};
-    /* background-color: transparent; */
   }
 `;

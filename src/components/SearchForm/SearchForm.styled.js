@@ -95,7 +95,6 @@ export const SearchBtn = styled.button`
       props.page === 'main'
         ? props.theme.color.mainPage.searchBtnFocus
         : props.theme.color.mainPage.searchBtnFocus};
-    /* color: ${props => props.theme.color.mainPage.searchBtnColor}; */
     cursor: pointer;
   }
   @media screen and (max-width: 767px) {
@@ -112,4 +111,3 @@ export const SearchBtn = styled.button`
     font-size: 16px;
   }
 `;
-//color: ${props => props.theme.color.mainPage.colorTitle};

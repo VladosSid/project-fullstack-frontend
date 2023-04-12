@@ -45,6 +45,7 @@ export default function MainPage() {
   useEffect(() => {
     const handleWindowResize = () => {
       const width = window.innerWidth;
+      console.log('width', width);
 
       if (width >= 1304) {
         setQuantity(4);
