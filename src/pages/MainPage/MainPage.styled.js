@@ -83,6 +83,9 @@ export const RecipeCategoryNameLink = styled(Link)`
   /* font-feature-settings: 'liga' off; */
 
   color: ${props => props.theme.color.mainPage.recipeCategoryName};
+
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  
   &:hover {
     color: #8baa36;
   }
@@ -141,9 +144,11 @@ export const Button = styled.button`
   line-height: 1.29;
   margin-left: auto;
   margin-top: 24px;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   &:hover,
   &:focus {
     cursor: pointer;
+    color: #22252A;
   }
   @media ${theme.device.tablet} {
     margin-top: 40px;
@@ -170,6 +175,9 @@ export const MPButton = styled.button`
   line-height: 1.5;
   text-align: center;
   color: ${props => props.theme.color.mainPage.mpButton};
+
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+  background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
   &:hover,
   &:focus {
