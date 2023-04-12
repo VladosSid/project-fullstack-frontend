@@ -54,6 +54,10 @@ const RecipePage = () => {
     }
   };
 
+  const addIngrid = id => {
+    console.log(id);
+  };
+
   useEffect(() => {
     const fetchData = async () => {
       const check = await checkoutfavorite(recipeId);
@@ -62,7 +66,6 @@ const RecipePage = () => {
       const data = await queryBackEnd.queryRecipeId(recipeId);
 
       setRecipe(data.result.data[0]);
-      console.log(data.result.data[0]);
     };
     fetchData();
   }, [recipeId]);
@@ -84,7 +87,10 @@ const RecipePage = () => {
           <AddtoList>Add to list</AddtoList>
         </TitltListWrap>
 
-        <RecipeInngredientsList ingredients={recipe.ingredients} />
+        <RecipeInngredientsList
+          ingredients={recipe.ingredients}
+          addIngrid={addIngrid}
+        />
         <RecipePreparation
           imageUrl={recipe.imageUrl}
           instructions={recipe.instructions}

@@ -10,7 +10,7 @@ import {
 } from './RecipeInngredientsList.styled';
 import { UseSvg } from '../../../helpers/useSvg/useSvg';
 
-const RecipeInngredientsList = ({ ingredients }) => {
+const RecipeInngredientsList = ({ ingredients, addIngrid }) => {
   return (
     <InngredientsList>
       {ingredients &&
@@ -25,7 +25,7 @@ const RecipeInngredientsList = ({ ingredients }) => {
             </InngredientContainer>
             <RealCheckbox type="checkbox" />
 
-            <CustomCheckbox>
+            <CustomCheckbox onClick={() => addIngrid(ingredient._id)}>
               <UseSvg id="Pick" />
             </CustomCheckbox>
           </RecipeItem>

@@ -1,7 +1,7 @@
 import { queryBackEnd } from '../request';
 export default async function checkoutfavorite(id) {
   const favorite = await queryBackEnd.queryAllFavorite();
-  console.log(favorite);
+
   if (favorite === 'The recipe list is empty') {
     return false;
   }
