@@ -20,7 +20,7 @@ export const FlexBox = styled.div`
   
   @media ${theme.device.tablet} {
     width: 100%;
-    justify-content: center;
+    justify-content: space-around;
     flex-direction: row;
 
     flex-wrap: wrap;
@@ -30,16 +30,16 @@ export const FlexBox = styled.div`
 
   };
 
-   @media screen and (min-width: 1281px) {
-    width: 100%;
-    justify-content: space-between;
-    flex-direction: row;
+  //  @media screen and (min-width: 1281px) {
+  //   width: 100%;
+  //   justify-content: space-between;
+  //   flex-direction: row;
 
-    flex-wrap: nowrap;
-  calc((100% - 64px) / 3);
+  //   flex-wrap: nowrap;
+  // calc((100% - 64px) / 3);
 
-  margin-bottom: 41px;
-  };
+  // margin-bottom: 41px;
+  // };
 `;
 
 export const BoxLogo = styled.div`
@@ -84,7 +84,7 @@ export const TextLogo = styled.span`
 
 export const ListDescrition = styled.ul`
   display: none;
-  list-style: inside;
+  // list-style: inside;
 
   @media ${theme.device.tablet} {
     font-family: 'Poppins';
@@ -104,6 +104,11 @@ export const ListDescrition = styled.ul`
     font-size: 18px;
     line-height: 24px;
     gap: 12px;
+
+    & > li:nth-child(2) > div {
+      display: flex;
+      flex-direction: column;
+    }
   } ;
 `;
 
@@ -127,9 +132,7 @@ export const NavList = styled.ul`
   color: #fafafa;
 
   @media ${theme.device.tablet} {
-    align-items: center;
-    margin-left: 194px;
-    margin-right: 56px;
+    align-items: baseline;
   }
 
   @media screen and (min-width: 1281px) {
