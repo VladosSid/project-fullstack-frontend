@@ -1,5 +1,6 @@
 import { RecipePageHero } from 'components/Recipe/RecipePageHero/RecipePageHero';
 import RecipeInngredientsList from 'components/Recipe/RecipeInngredientsList/RecipeInngredientsList';
+import RecipePreparation from '../../components/Recipe/RecipePreparation/RecipePreparation';
 import { useState, useEffect } from 'react';
 
 import Notiflix from 'notiflix';
@@ -61,6 +62,7 @@ const RecipePage = () => {
       const data = await queryBackEnd.queryRecipeId(recipeId);
 
       setRecipe(data.result.data[0]);
+      console.log(data.result.data[0]);
     };
     fetchData();
   }, [recipeId]);
@@ -83,6 +85,10 @@ const RecipePage = () => {
         </TitltListWrap>
 
         <RecipeInngredientsList ingredients={recipe.ingredients} />
+        <RecipePreparation
+          imageUrl={recipe.imageUrl}
+          instructions={recipe.instructions}
+        />
       </MainContainer>
     </>
   );

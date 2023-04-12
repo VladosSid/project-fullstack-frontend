@@ -117,7 +117,10 @@ export const HeroButtonAdd = styled.button`
    {
     padding: 18px 44px;
     font-size: 16px;
-    // margin-bottom: 60px;
+
+    margin-bottom: 40px;
+
+
   }
   @media ${theme.device.desktop} {
     // margin-bottom: 60px;
