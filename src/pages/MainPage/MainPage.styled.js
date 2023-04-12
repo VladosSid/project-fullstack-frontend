@@ -54,19 +54,6 @@ export const GridContainer = styled.div`
     gap: 13px;
   }
 `;
-// export const RecipeCategoryName = styled.h2`
-//   margin-bottom: 32px;
-//   font-family: 'Poppins';
-//   font-style: normal;
-//   font-weight: 600;
-//   font-size: 28px;
-//   line-height: 1;
-
-//   letter-spacing: -0.02em;
-//   /* font-feature-settings: 'liga' off; */
-
-//   color: ${props => props.theme.color.mainPage.recipeCategoryName};
-// `;
 
 export const RecipeCategoryName = styled.h2`
   margin-bottom: 32px;
@@ -80,12 +67,11 @@ export const RecipeCategoryNameLink = styled(Link)`
   line-height: 1;
   text-decoration: none;
   letter-spacing: -0.02em;
-  /* font-feature-settings: 'liga' off; */
 
   color: ${props => props.theme.color.mainPage.recipeCategoryName};
 
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  
+
   &:hover {
     color: #8baa36;
   }
@@ -95,9 +81,6 @@ export const CardWrapper = styled.div`
   position: relative;
   margin-bottom: 24px;
   img {
-    /* width: 343px;
-    height: 323px; */
-    /* object-fit: cover; */
     width: 100%;
     border-radius: 8px;
   }
@@ -120,9 +103,9 @@ export const RecipeTitle = styled.h3`
   font-weight: 500;
   font-size: 16px;
   line-height: 1.25;
-  /* identical to box height, or 125% */
+
   letter-spacing: -0.24px;
-  /* Color - Text Primary */
+
   color: #3e4462;
 `;
 export const Button = styled.button`
@@ -148,7 +131,7 @@ export const Button = styled.button`
   &:hover,
   &:focus {
     cursor: pointer;
-    color: #22252A;
+    color: #22252a;
   }
   @media ${theme.device.tablet} {
     margin-top: 40px;
@@ -177,7 +160,7 @@ export const MPButton = styled.button`
   color: ${props => props.theme.color.mainPage.mpButton};
 
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-  background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
   &:hover,
   &:focus {
