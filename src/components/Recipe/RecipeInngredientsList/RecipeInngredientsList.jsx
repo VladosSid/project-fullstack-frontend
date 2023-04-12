@@ -25,7 +25,13 @@ const RecipeInngredientsList = ({ ingredients, addIngrid }) => {
             </InngredientContainer>
             <RealCheckbox type="checkbox" />
 
-            <CustomCheckbox onClick={() => addIngrid(ingredient._id)}>
+            <CustomCheckbox
+              onClick={() =>
+                addIngrid({
+                  ing: [{ id: ingredient._id, measure: ingredient.measure }],
+                })
+              }
+            >
               <UseSvg id="Pick" />
             </CustomCheckbox>
           </RecipeItem>

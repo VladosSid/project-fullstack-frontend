@@ -54,8 +54,8 @@ const RecipePage = () => {
     }
   };
 
-  const addIngrid = id => {
-    console.log(id);
+  const addIngrid = ing => {
+    console.log(ing);
   };
 
   useEffect(() => {
