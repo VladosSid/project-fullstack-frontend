@@ -26,7 +26,7 @@ export const MPHeroBG = styled.section`
   margin: 0 auto;
   /* position: relative; */
   /* width: 100%; */
-  @media screen and (max-width: 767px) {
+  @media screen and (max-width: 768px) {
     /* width: 100%; */
     /* height: 791px; */
     padding-top: 132px;
@@ -62,7 +62,7 @@ export const MPContainer = styled.div`
   width: 359px;
   margin: 0 auto;
   padding: 0 8px;
-  @media screen and (max-width: 767px) {
+  @media screen and (max-width: 768px) {
     position: relative;
   }
   @media ${theme.device.tablet} {
@@ -78,10 +78,10 @@ export const MPContainer = styled.div`
   }
 `;
 export const MPHeroSection = styled.div`
-  @media screen and (max-width: 767px) {
-    /* width: 307px;
+  /* @media screen and (max-width: 768px) { */
+  /* width: 307px;
     margin: 0 auto; */
-  }
+  /* } */
   @media ${theme.device.tablet} and (max-width: 1303px) {
     /* position: relative;
     width: 703px;
@@ -104,7 +104,7 @@ export const MPHeroTitle = styled.h1`
   span {
     color: ${props => props.theme.color.mainPageTitle.colorTitle};
   }
-  @media screen and (max-width: 767px) {
+  @media screen and (max-width: 768px) {
     text-align: center;
   }
   @media ${theme.device.tablet} {
@@ -138,7 +138,7 @@ export const MPHeroText = styled.span`
   font-size: 14px;
   line-height: 1.29;
   letter-spacing: -0.02em;
-  @media screen and (max-width: 767px) {
+  @media screen and (max-width: 768px) {
     text-align: center;
     margin: 0 auto 364px;
   }
@@ -173,13 +173,13 @@ export const MPHeroProduct = styled.span`
   background-color: ${props =>
     props.theme.color.mainPage.mpHeroProductBackground};
   border-radius: 8px;
-  @media screen and (max-width: 767px) {
+  @media screen and (max-width: 768px) {
     position: absolute;
     padding: 8px;
     top: 303px;
     right: 27px;
   }
-  @media ${theme.device.tablet} and (max-width: 1303px) {
+  @media ${theme.device.tablet} and (max-width: 1304px) {
     width: 260px;
     padding: 12px;
     font-size: 14px;
