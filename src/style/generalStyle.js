@@ -82,6 +82,8 @@ export const theme = {
 
       footer: {
         bavkgroundFooter: '#8BAA36',
+        buttonBgDisable: '#869b4e',
+        buttonBg: '#1E1F28',
       },
     },
   },
@@ -159,6 +161,8 @@ export const theme = {
       },
       footer: {
         bavkgroundFooter: '#22252A',
+        buttonBgDisable: '#869b4e',
+        buttonBg: '#8baa36',
       },
 
       //  text

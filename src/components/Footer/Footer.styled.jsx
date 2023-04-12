@@ -259,6 +259,7 @@ export const Input = styled.input`
 
 export const Button = styled.button`
   width: 251px;
+  cursor: pointer;
 
   display: flex;
   justify-content: center;
@@ -269,7 +270,10 @@ export const Button = styled.button`
   line-height: 18px;
 
   color: #fff;
-  background: ${props => (!props.disabled ? '#8baa36' : '#869b4e')};
+  background: ${props =>
+    !props.disabled
+      ? props.theme.color.footer.buttonBg
+      : props.theme.color.footer.buttonBgDisable};
 
   padding: 11px 0;
 
@@ -278,7 +282,7 @@ export const Button = styled.button`
 
   ${props => (!props.disabled ? '&:hover {color: #000;}' : '')}
 
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), background 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
   @media ${theme.device.tablet} {
     width: 171px;
