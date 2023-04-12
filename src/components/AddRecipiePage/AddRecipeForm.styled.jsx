@@ -25,10 +25,9 @@ export const Row = styled.div`
 `;
 
 export const Button = styled.div`
-  background-color: #22252a;
+  background-color: ${props => props.theme.color.addResipe.addDutton};
   color: rgb(255, 255, 255);
   border-radius: 24px 44px;
-  border: 1px solid rgb(250, 250, 250);
   height: 52px;
   width: 161px;
   margin-top: 32px;
@@ -36,6 +35,7 @@ export const Button = styled.div`
   justify-content: center;
   align-items: center;
   margin-bottom: 72px;
+  cursor: pointer;
   @media ${theme.device.desktop} {
     margin-bottom: 200px;
   }

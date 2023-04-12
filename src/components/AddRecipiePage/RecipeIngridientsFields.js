@@ -128,7 +128,7 @@ const RecipeIngridientsFields = ({ onChange }) => {
             <Quantity>
               <InputQuantity
                 onChange={e => setQuantity(e.currentTarget.value)}
-                defaultValue="0"
+                placeholder="0"
               />
               <CustomSelectUnit
                 key={index}

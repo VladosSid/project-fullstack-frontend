@@ -1,21 +1,24 @@
 import { Icons, Follow } from './FollowUs.styled';
 import { Title } from './RecipeIngridientsFields.styled';
-import {
-  FaFacebook,
-  FaYoutubeSquare,
-  FaTwitter,
-  FaInstagram,
-} from 'react-icons/fa';
+import { Fb, Youtube, Twiter, Instagram } from './FollowUs.styled';
 
 const FollosUs = () => {
   return (
     <Follow>
       <Title>Follow Us</Title>
       <Icons>
-        <FaFacebook fill="#8BAA36" size="26" />
-        <FaYoutubeSquare fill="#8BAA36" size="26" />
-        <FaTwitter fill="#8BAA36" size="26" />
-        <FaInstagram fill="#8BAA36" size="26" />
+        <a href={'fb.com'}>
+          <Fb fill="#8BAA36" size="26" />
+        </a>
+        <a href={'youtube.com'}>
+          <Youtube fill="#8BAA36" size="26" />
+        </a>
+        <a href={'twetter.com'}>
+          <Twiter fill="#8BAA36" size="26" />
+        </a>
+        <a href={'instagram.com'}>
+          <Instagram fill="#8BAA36" size="26" />
+        </a>
       </Icons>
     </Follow>
   );

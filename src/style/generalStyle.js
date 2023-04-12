@@ -88,6 +88,14 @@ export const theme = {
         inputColor: '#FAFAFA',
         optionMenuColor: '#8BAA36',
         optionSelectHover: '#FFFFFF',
+        titleColor: '#FAFAFA',
+        ingridientsCounter: '#FFFFFF',
+        simbolColor: '#FFFFFF',
+        ingridientsBackground: 'transparent',
+        ingredientsBorder: 'rgba(250, 250, 250, 0.2)',
+        ingridientsOpasity: '1',
+        ingredientsSelested: 'rgba(217, 217, 217, 0.6)',
+        addDutton: '8BAA36',
       }
     },
   },
@@ -166,10 +174,18 @@ export const theme = {
       footer: {
         bavkgroundFooter: '#22252A',
       },
-            addResipe: {
+        addResipe: {
         inputColor: '#000000',
         optionMenuColor: 'transperent',
-        optionSelectHover: '#8baa36'
+        optionSelectHover: '#8baa36',
+        titleColor: '#3E4462',
+        ingridientsCounter: 'rgba(51, 51, 51)',
+        simbolColor: 'rgba(51, 51, 51, 0.3)',
+        ingridientsBackground: '#f5f5f5',
+        ingredientsBorder: '#f5f5f5',
+        ingridientsOpasity: '0,5',
+        ingredientsSelested: 'rgba(0, 0, 0, 0.5)',
+        addDutton: '#22252A',
       },
 
       //  text

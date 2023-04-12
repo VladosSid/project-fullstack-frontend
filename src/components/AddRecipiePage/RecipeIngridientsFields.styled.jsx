@@ -4,53 +4,46 @@ import down from '../../images/AddRecipiePage/chevron-down.svg';
 import ReactSelect from 'react-select';
 
 export const CustomSelectUnit = styled(ReactSelect)`
+  .react-select__single-value {
+    color: ${props => props.theme.color.addResipe.inputColor};
+  }
+
+  .react-select__placeholder {
+    color: ${props => props.theme.color.addResipe.ingredientsSelested};
+  }
+
   .react-select__value-container {
     padding: 0;
+    ::placeholder {
+      opacity: 1;
+      color: ${props => props.theme.color.addResipe.inputColor};
+    }
   }
 
   .react-select__control {
-    border: none;
-    background-color: #f5f5f5;
+    background-color: ${props =>
+      props.theme.color.addResipe.ingridientsBackground};
     height: 59px;
     width: 68px;
-    border-top-right-radius: 6px;
-    border-bottom-right-radius: 6px;
+    border-radius: 0px 6px 6px 0px;
     background-image: url(${down});
     background-repeat: no-repeat;
     background-position: 70%;
     font-size: 18px;
     line-height: 27px;
     font-family: Poppins;
-     {
-      :active :hover,
-      :focus {
-        outline: 0;
-        border: 0;
-        box-shadow: none;
-      }
+    border: ${props => props.theme.color.addResipe.ingredientsBorder};
+    border-style: solid;
+    border-width: 1px 1px 1px 0;
+    :hover {
+      outline: 0;
+      border-color: ${props => props.theme.color.addResipe.ingredientsBorder};
     }
-  }
-
-  .css-t3ipsp-control:hover {
-    outline: 0;
-    border: 0;
-    box-shadow: 0;
-  }
-
-  .css-t3ipsp-control {
-    outline: 0;
-    border: 0;
-    box-shadow: none;
-  }
-
-  .react-select-container {
-    outline: 0;
-    border: 0;
   }
 
   .react-select__control--is-focused {
     outline: 0;
-    border: 0;
+    box-shadow: none;
   }
 
   .react-select__indicators {
@@ -58,13 +51,19 @@ export const CustomSelectUnit = styled(ReactSelect)`
   }
 
   .react-select__menu-list {
+    background-color: ${props => props.theme.color.addResipe.optionMenuColor};
+    color: ${props => props.theme.color.addResipe.titleColor};
     max-height: 185px;
     width: 99px;
+    border-radius: 6px;
   }
 
-  .react-select__menu:hover {
-    outline: 0;
-    border: 0;
+  .react-select-listbox {
+    background-color: ${props => props.theme.color.addResipe.optionMenuColor};
+    color: ${props => props.theme.color.addResipe.titleColor};
+    max-height: 185px;
+    width: 99px;
+    border-radius: 6px;
   }
 
   .react-select__menu {
@@ -74,10 +73,14 @@ export const CustomSelectUnit = styled(ReactSelect)`
     margin-top: 0;
     margin-left: -31px;
     box-shadow: 0px 6.51852px 7.82222px rgba(0, 0, 0, 0.0314074);
+    :hover {
+      outline: 0;
+      border: 0;
+    }
   }
 
   .react-select__option {
-    color: #000000;
+    color: ${props => props.theme.color.addResipe.titleColor};
     background-color: transparent;
     opacity: 0.5;
     font-size: 14px;
@@ -85,23 +88,26 @@ export const CustomSelectUnit = styled(ReactSelect)`
     line-height: 1;
     letter-spasing: -0.02em;
     font-family: Poppins;
-  }
-
-  .react-select__option:hover {
-    color: #8baa36;
-    background-color: transparent;
-  }
-
-  .react-select__option:hover {
-    color: #8baa36;
-    background-color: transparent;
+    :hover {
+      color: ${props => props.theme.color.addResipe.optionSelectHover};
+      background-color: transparent;
+      opacity: ${props => props.theme.color.addResipe.ingridientsOpasity};
+    }
   }
 `;
 
 export const CustomSelect = styled(ReactSelect)`
+  .react-select__single-value {
+    color: ${props => props.theme.color.addResipe.inputColor};
+  }
+
+  .react-select__placeholder {
+    color: ${props => props.theme.color.addResipe.ingredientsSelested};
+  }
+
   .react-select__control {
-    border: none;
-    background-color: #f5f5f5;
+    background-color: ${props =>
+      props.theme.color.addResipe.ingridientsBackground};
     height: 59px;
     width: 194px;
     border-radius: 6px;
@@ -113,39 +119,19 @@ export const CustomSelect = styled(ReactSelect)`
     font-size: 18px;
     line-height: 27px;
     font-family: Poppins;
-     {
-      :active :hover,
-      :focus {
-        outline: 0;
-        border: 0;
-        box-shadow: none;
-      }
-    }
+    border: 1px solid ${props => props.theme.color.addResipe.ingredientsBorder};
     @media ${theme.device.tablet} {
       width: 398px;
     }
-  }
-
-  .css-t3ipsp-control:hover {
-    outline: 0;
-    border: 0;
-    box-shadow: 0;
-  }
-
-  .css-t3ipsp-control {
-    outline: 0;
-    border: 0;
-    box-shadow: none;
-  }
-
-  .react-select-container {
-    outline: 0;
-    border: 0;
+    :hover {
+      outline: 0;
+      border-color: ${props => props.theme.color.addResipe.ingredientsBorder};
+    }
   }
 
   .react-select__control--is-focused {
     outline: 0;
-    border: 0;
+    box-shadow: none;
   }
 
   .react-select__indicators {
@@ -154,7 +140,10 @@ export const CustomSelect = styled(ReactSelect)`
 
   .react-select__menu-list {
     max-height: 185px;
+    color: ${props => props.theme.color.addResipe.titleColor};
     width: 198px;
+    border-radius: 6px;
+    background-color: ${props => props.theme.color.addResipe.optionMenuColor};
     @media ${theme.device.desktop} {
       width: 398px;
     }
@@ -178,7 +167,7 @@ export const CustomSelect = styled(ReactSelect)`
   }
 
   .react-select__option {
-    color: #000000;
+    color: ${props => props.theme.color.addResipe.titleColor};
     background-color: transparent;
     opacity: 0.5;
     font-size: 14px;
@@ -186,16 +175,11 @@ export const CustomSelect = styled(ReactSelect)`
     line-height: 1;
     letter-spasing: -0.02em;
     font-family: Poppins;
-  }
-
-  .react-select__option:hover {
-    color: #8baa36;
-    background-color: transparent;
-  }
-
-  .react-select__option:hover {
-    color: #8baa36;
-    background-color: transparent;
+    :hover {
+      color: ${props => props.theme.color.addResipe.optionSelectHover};
+      background-color: transparent;
+      opacity: ${props => props.theme.color.addResipe.ingridientsOpasity};
+    }
   }
 `;
 
@@ -223,12 +207,12 @@ export const Simbol = styled.button`
   height: 16px;
   width: 16px;
   border: 0;
-  stroke-opacity: 0.3;
-  stroke: #333333;
+  stroke: ${props => props.theme.color.addResipe.simbolColor};
   padding: 0;
    {
     :hover {
       stroke: #8baa36;
+      fill: #8baa36;
       stroke-opacity: 1;
       cursor: pointer;
     }
@@ -240,17 +224,18 @@ export const Title = styled.div`
   font-size: 24px;
   justify-content: space-between;
   font-weight: 600;
-  color: #3e4462;
+  color: ${props => props.theme.color.addResipe.titleColor};
 `;
 
 export const Counter = styled.div`
   display: flex;
-  border: 1px solid rgba(51, 51, 51, 0.5);
+  border: 1px solid ${props => props.theme.color.addResipe.ingridientsCounter};
   width: 110px;
   height: 32px;
   border-radius: 18px;
   justify-content: space-around;
   align-items: center;
+  color: ${props => props.theme.color.addResipe.ingridientsCounter};
 `;
 
 export const IngridientsList = styled.ul`
@@ -276,13 +261,16 @@ export const Quantity = styled.div`
 export const InputQuantity = styled.input`
   display: flex;
   list-style: none;
-  background-color: #f5f5f5;
-  border: none;
-  border-top-left-radius: 6px;
-  border-bottom-left-radius: 6px;
+  color: ${props => props.theme.color.addResipe.inputColor};
+  background-color: ${props =>
+    props.theme.color.addResipe.ingridientsBackground};
+  border: ${props => props.theme.color.addResipe.ingredientsBorder};
+  border-radius: 6px 0px 0px 6px;
+  border-style: solid;
+  border-width: 1px 0 1px 1px;
   padding-left: 14px;
-  width: 16px;
-  height: 59px;
+  width: 30px;
+  height: 57px;
   padding-top: 0;
   padding-bottom: 0;
   font-size: 18px;
@@ -290,7 +278,11 @@ export const InputQuantity = styled.input`
   font-family: Poppins;
    {
     :focus-visible {
+      border-radius: 6px 0px 0px 6px;
+      border-style: solid;
+      border-width: 1px 0 1px 1px;
       outline: none;
+      box-shadow: none;
     }
   }
 `;
@@ -303,7 +295,7 @@ export const Delete = styled.button`
   height: 59px;
   width: 51px;
   border: 0;
-  stroke: #333333;
+  stroke: ${props => props.theme.color.addResipe.simbolColor};
   padding: 0;
   display: flex;
   justify-content: end;

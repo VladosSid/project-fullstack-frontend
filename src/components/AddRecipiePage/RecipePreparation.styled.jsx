@@ -6,23 +6,28 @@ export const Title = styled.div`
   justify-content: space-between;
   font-weight: 600;
   margin-top: 100px;
-  color: #3e4462;
+  color: ${props => props.theme.color.addResipe.titleColor};
 `;
 
 export const Textarea = styled.textarea`
   padding: 20px;
   height: 224px;
   width: 100%;
-  color: #333333;
-  background-color: #f5f5f5;
-  border: 0;
+  color:  ${props => props.theme.color.addResipe.ingredientsSelested};
+  background-color: ${props => props.theme.color.addResipe.ingridientsBackground};
+  border: 1px solid;
+  border-color:  ${props => props.theme.color.addResipe.ingredientsBorder};
   border-radius: 6px;
   margin-top: 32px;
   box-sizing: border-box;
   resize: none;
+  font-size: 18px;
+  font-family: Poppins;
+  font-weight: 400;
   ::placeholder {
     font-size: 18px;
     font-family: Poppins;
     font-weight: 400;
+    color: ${props => props.theme.color.addResipe.ingredientsSelested};
   }
 `;
