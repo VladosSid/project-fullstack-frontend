@@ -43,8 +43,8 @@ export const theme = {
         customSelectBG: 'transparent',
         customSelectColor: '#FAFAFA',
         reactSelectMenuList: '#8BAA36',
-        reactSelectOptionColor: '#FAFAFA',
-        reactSelectOptionHover: '#2A2C36',
+        reactSelectOptionColor: 'rgba(250, 250, 250, 0.8)',
+        reactSelectOptionHover: 'rgba(250, 250, 250)',
         SRLNoItemsText: '#FAFAFA',
         //-------------
         reactSelectContainer: '#ececec',
@@ -120,11 +120,11 @@ export const theme = {
       dishCard: { dishTitleWrapper: '#ffffff', dishTitle: '#3e4462' },
       searchPage: {
         searchTypeSpan: '#001833',
-        customSelectBG: '#ececec',
+        customSelectBG: '#ececec', //#D9D9D9
         customSelectColor: '#000000',
         reactSelectMenuList: '#FAFAFA',
-        reactSelectOptionColor: '#000000',
-        reactSelectOptionHover: '#8BAA36',
+        reactSelectOptionColor: 'rgba(0, 0, 0, 0.5)',
+        reactSelectOptionHover: '#000000',
         //-------------
         SRLNoItemsText: '#000000',
         reactSelectContainer: '#ececec',
