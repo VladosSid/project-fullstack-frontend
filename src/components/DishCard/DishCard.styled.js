@@ -38,7 +38,7 @@ export const DishWrapper = styled.div`
     -moz-box-shadow: 0px 0px 20px 0px rgba(138,169,54,1);
     box-shadow: 0px 0px 10px 0px rgba(138,169,54,1);
 
-    transform: scale(1.05);
+    transform: scale(1.03);
   }
 `;
 export const DishTitleWrapper = styled.div`
