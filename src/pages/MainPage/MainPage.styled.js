@@ -47,6 +47,7 @@ export const GridContainer = styled.div`
   justify-content: center;
   @media ${theme.device.tablet} {
     display: flex;
+    flex-wrap: wrap; //just for case
     gap: 32px;
   }
   @media ${theme.device.desktop} {
