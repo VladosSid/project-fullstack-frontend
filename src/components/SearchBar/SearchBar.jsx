@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import SearchForm from 'components/SearchForm/SearchForm';
 import { SearchBarWrapper, SearchTypeSelectorBox } from './SearchBar.styled';
 import SearchTypeSelector from 'components/SearchTypeSelector/SearchTypeSelector';
@@ -6,30 +6,26 @@ import SearchTypeSelector from 'components/SearchTypeSelector/SearchTypeSelector
 //-------------
 export default function SearchBar(props) {
   const { onTypeChange, selectedType, onSubm, searchQuery } = props;
-
+  const [searchWord, setSearchWord] = useState(searchQuery || '');
+  function handleSearchWordChange(word) {
+    setSearchWord(word);
+  }
   return (
     <SearchBarWrapper>
       <SearchForm
         green
         onSubm={onSubm}
         marginBottom
-        searchQuery={searchQuery}
+        searchQuery={searchWord}
         isSearchPage
+        onSearchWordChange={handleSearchWordChange}
       />
       <SearchTypeSelectorBox>
         <SearchTypeSelector
           onChange={onTypeChange}
           selectedType={selectedType}
+          searchWord={searchWord}
         />
-        {/* {searchType === 'query' ? (
-          <input type="text" value={searchQuery} onChange={handleQueryChange} />
-        ) : (
-          <input
-            type="text"
-            value={searchIngredient}
-            onChange={handleIngredientChange}
-          />
-        )} */}
       </SearchTypeSelectorBox>
     </SearchBarWrapper>
   );
