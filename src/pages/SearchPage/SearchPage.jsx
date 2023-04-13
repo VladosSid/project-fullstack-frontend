@@ -1,4 +1,4 @@
-import React, { useState } from 'react'; 
+import React, { useState } from 'react';
 import { MainPageTitle } from 'components/MainPageTitle/MainPageTitle';
 import { MainContainer } from '../../components/MainContainer/MainContainer';
 import { ContainerWrapper } from './Searchpage.styled';
@@ -10,7 +10,6 @@ import BG from '../../images/mainPagePhoto/search_tabl_opt.png';
 
 //-------------------------------
 export default function SearchPage() {
-  // const location = useLocation();
   const [searchParams, setSearchParams] = useSearchParams();
   const [searchQuery, setSearchQuery] = useState(
     searchParams.get('query') || ''
@@ -21,21 +20,47 @@ export default function SearchPage() {
   const updatedParams = new URLSearchParams(searchParams.toString());
 
   //------------
-  function handleSearchTypeChange(type) {
-    if (searchQuery === '') {
-      Notify.warning('Please fill the search form');
-    } else {
-      const ingredientsLength = searchQuery.match(/\b\w+\b/g)?.length;
-      if (type === 'ingredients' && ingredientsLength > 1) {
-        Notify.warning('You can only enter one ingredient. ');
+  function handleSearchTypeChange(type, query) {
+    const nextQuery = query;
+    if (searchQuery !== query) {
+      if (nextQuery !== '') {
+        setSearchQuery(nextQuery);
+        updatedParams.set(
+          'query',
+          nextQuery.toLowerCase().trim().replace(/\s+/g, ' ')
+        );
+        const ingredientsLength = searchQuery.match(/\b\w+\b/g)?.length;
+        if (type === 'ingredients' && ingredientsLength > 1) {
+          Notify.warning('You can only enter one ingredient. ');
+        }
+
+        setSearchType(type);
+
+        updatedParams.set('type', type);
+        setSearchParams(updatedParams);
+      } else {
+        setSearchParams({});
+        setSearchQuery('');
+
+        Notify.warning('Please fill the search form');
       }
+    } else {
+      if (nextQuery !== '') {
+        const ingredientsLength = searchQuery.match(/\b\w+\b/g)?.length;
+        if (type === 'ingredients' && ingredientsLength > 1) {
+          Notify.warning('You can only enter one ingredient. ');
+        }
 
-      setSearchType(type);
-      updatedParams.set('type', type);
-      setSearchParams(updatedParams);
+        setSearchType(type);
+
+        updatedParams.set('type', type);
+        setSearchParams(updatedParams);
+      } else {
+        Notify.warning('Please fill the search form');
+        setSearchParams({});
+        setSearchQuery('');
+      }
     }
-
-    
   }
   //---------
   function handleSubmit(query) {

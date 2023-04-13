@@ -6,14 +6,18 @@ import {
   SearchTypeSpan,
 } from './SearchTypeSelector.styled';
 
-export default function SearchTypeSelector({ onChange, selectedType }) {
+export default function SearchTypeSelector({
+  onChange,
+  selectedType,
+  searchWord,
+}) {
   const options = [
     { value: 'title', label: 'Title' },
     { value: 'ingredients', label: 'Ingredients' },
   ];
 
   function handleChange(option) {
-    onChange(option.value);
+    onChange(option.value, searchWord);
   }
   return (
     <>
