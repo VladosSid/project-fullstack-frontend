@@ -86,6 +86,7 @@ export const theme = {
         buttonBg: '#1E1F28',
 
         hoverLink: '#1E1F28',
+        hoverButtonText: '#8BAA36',
       },
     },
   },
@@ -167,6 +168,7 @@ export const theme = {
         buttonBg: '#8baa36',
 
         hoverLink: '#8BAA36',
+        hoverButtonText: '#22252A',
       },
 
       //  text
