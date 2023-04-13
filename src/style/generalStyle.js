@@ -95,7 +95,7 @@ export const theme = {
         ingredientsBorder: 'rgba(250, 250, 250, 0.2)',
         ingridientsOpasity: '1',
         ingredientsSelested: 'rgba(217, 217, 217, 0.6)',
-        addDutton: '8BAA36',
+        addButton: '#8BAA36',
       }
     },
   },
@@ -185,7 +185,7 @@ export const theme = {
         ingredientsBorder: '#f5f5f5',
         ingridientsOpasity: '0,5',
         ingredientsSelested: 'rgba(0, 0, 0, 0.5)',
-        addDutton: '#22252A',
+        addButton: '#22252A',
       },
 
       //  text

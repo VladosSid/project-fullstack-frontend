@@ -25,7 +25,7 @@ export const Row = styled.div`
 `;
 
 export const Button = styled.div`
-  background-color: ${props => props.theme.color.addResipe.addDutton};
+  background-color: ${props => props.theme.color.addResipe.addButton};
   color: rgb(255, 255, 255);
   border-radius: 24px 44px;
   height: 52px;
