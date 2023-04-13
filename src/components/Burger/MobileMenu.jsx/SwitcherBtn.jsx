@@ -1,32 +1,34 @@
 import { useState } from 'react';
-import style from './CustomSwitch.module.css';
+import { useDispatch, useSelector } from 'react-redux';
+
+import { SwBtn, Circle } from './SwitcherBtn.styled';
 import theme from 'redux/theming/theme-operations';
-import { useDispatch } from 'react-redux';
+import getTheme from 'redux/theming/theme-selector';
 
 const SwitcherBtn = () => {
-  const [checked, setChecked] = useState(false);
-  const switchHandler = () => {
-    setChecked(prev => !prev);
-  };
-
+  const color = useSelector(getTheme);
   const dispatch = useDispatch();
 
+  const [checked, setChecked] = useState(color === 'dark' ? true : false);
+  const switchHandler = () => {
+    setChecked(prev => !prev);
+
+    if (color === 'white') {
+      dispatch(theme.themeSwitch('dark'));
+    } else {
+      dispatch(theme.themeSwitch('white'));
+    }
+  };
+
   return (
-    <button
-      className={
-        checked === false ? style.switch : style.switch + ' ' + style.switchedBg
-      }
+    <SwBtn
+      checked={checked}
       onClick={() => {
-        dispatch(theme.themeSwitch('white'));
         switchHandler();
       }}
     >
-      <span
-        className={
-          checked === false ? style.circle : style.switched + ' ' + style.circle
-        }
-      ></span>
-    </button>
+      <Circle checked={checked} />
+    </SwBtn>
   );
 };
 

@@ -36,7 +36,12 @@ export function Footer() {
     e.preventDefault();
     const data = await queryBackEnd.querySubscribe(email);
 
+    remove();
     Notiflix.Notify.success(`${data.message}`);
+  };
+
+  const remove = () => {
+    setEmail('');
   };
 
   return (
@@ -57,8 +62,10 @@ export function Footer() {
               <ListDescrition>
                 <li>Database of recipes that can be replenished </li>
                 <li>
-                  Flexible search for desired and unwanted <br />
-                  ingredients
+                  <div>
+                    Flexible search for desired and unwanted
+                    <span> ingredients</span>
+                  </div>
                 </li>
                 <li>Ability to add your own recipes with photos</li>
                 <li>Convenient and easy to use</li>

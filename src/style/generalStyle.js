@@ -31,8 +31,9 @@ export const theme = {
         searchBtn: '#8BAA36',
         searchBtnFocus: '#fafafa',
         searchInputBorder: 'rgba(250, 250, 250, 0.5)',
-        searchInputBG: 'transparent',
-        // searchInputColor: '',
+        searchInputHover: 'rgba(250, 250, 250)',
+        searchInputBG: '#1E1F28',
+        searchInputColor: '#FAFAFA',
         searchInputPlaceholder: 'rgba(250, 250, 250, 0.5)',
         searchBtncolorFocus: '#22252A',
       },
@@ -42,14 +43,14 @@ export const theme = {
         customSelectBG: 'transparent',
         customSelectColor: '#FAFAFA',
         reactSelectMenuList: '#8BAA36',
-        reactSelectOptionColor: '#FAFAFA',
-        reactSelectOptionHover: '#2A2C36',
+        reactSelectOptionColor: 'rgba(250, 250, 250, 0.5)',
+        reactSelectOptionHover: 'rgba(250, 250, 250)',
         SRLNoItemsText: '#FAFAFA',
         //-------------
-        reactSelectContainer: '#ececec',
-        reactSelectDropdown: '#8baa36',
+        // reactSelectContainer: '#ececec',
+        // reactSelectDropdown: '#8baa36',
 
-        reactSelectOptionColorBG: 'transparent',
+        // reactSelectOptionColorBG: 'transparent',
       },
       mainPageTitle: {
         colorTitle: '#FAFAFA',
@@ -82,6 +83,12 @@ export const theme = {
 
       footer: {
         bavkgroundFooter: '#8BAA36',
+        buttonBgDisable: '#869b4e',
+        buttonBg: '#1E1F28',
+
+        hoverLink: '#1E1F28',
+        hoverButtonText: '#8BAA36',
+        hoverBoxShadow: '10px 10px 43px -14px rgba(34,37,42,0.75)',
       },
 
       addResipe: {
@@ -97,6 +104,7 @@ export const theme = {
         ingredientsSelested: 'rgba(217, 217, 217, 0.6)',
         addButton: '#8BAA36',
       }
+
     },
   },
 
@@ -124,24 +132,25 @@ export const theme = {
         searchBtn: '#22252A',
         searchBtnFocus: '#8BAA36',
         searchInputBorder: '#F0F0F0',
+        searchInputHover: '#dfdfdf',
         searchInputBG: '#fafafa',
+        searchInputColor: 'rgb(62, 68, 98)',
         searchInputPlaceholder: '#3e4462',
         searchBtncolorFocus: '#fafafa',
       },
       dishCard: { dishTitleWrapper: '#ffffff', dishTitle: '#3e4462' },
       searchPage: {
         searchTypeSpan: '#001833',
-        customSelectBG: '#ececec',
+        customSelectBG: '#ececec', //#D9D9D9
         customSelectColor: '#000000',
         reactSelectMenuList: '#FAFAFA',
-        reactSelectOptionColor: '#000000',
-        reactSelectOptionHover: '#8BAA36',
+        reactSelectOptionColor: 'rgba(0, 0, 0, 0.5)',
+        reactSelectOptionHover: '#000000',
         //-------------
         SRLNoItemsText: '#000000',
-        reactSelectContainer: '#ececec',
-        reactSelectDropdown: '#8baa36',
-
-        reactSelectOptionColorBG: 'transparent',
+        // reactSelectContainer: '#ececec',
+        // reactSelectDropdown: '#8baa36',
+        // reactSelectOptionColorBG: 'transparent',
       },
 
       mainPageTitle: {
@@ -173,8 +182,14 @@ export const theme = {
       },
       footer: {
         bavkgroundFooter: '#22252A',
+        buttonBgDisable: '#869b4e',
+        buttonBg: '#8baa36',
+
+        hoverLink: '#8BAA36',
+        hoverButtonText: '#22252A',
+        hoverBoxShadow: '10px 10px 43px -14px rgba(139,170,54,0.75)',
       },
-        addResipe: {
+      addResipe: {
         inputColor: '#000000',
         optionMenuColor: 'transperent',
         optionSelectHover: '#8baa36',

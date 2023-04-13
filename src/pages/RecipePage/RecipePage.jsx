@@ -1,5 +1,6 @@
 import { RecipePageHero } from 'components/Recipe/RecipePageHero/RecipePageHero';
 import RecipeInngredientsList from 'components/Recipe/RecipeInngredientsList/RecipeInngredientsList';
+import RecipePreparation from '../../components/Recipe/RecipePreparation/RecipePreparation';
 import { useState, useEffect } from 'react';
 
 import Notiflix from 'notiflix';
@@ -53,6 +54,20 @@ const RecipePage = () => {
     }
   };
 
+  const addIngrid = async ing => {
+    try {
+      const data = await queryBackEnd.queryAddShoppingList(ing);
+
+      if (data.code === 200) {
+        return Notiflix.Notify.success('Add in Shopping list.');
+      }
+
+      return Notiflix.Notify.failure('Error add in shopping list!!!');
+    } catch (err) {
+      console.log(err);
+    }
+  };
+
   useEffect(() => {
     const fetchData = async () => {
       const check = await checkoutfavorite(recipeId);
@@ -82,7 +97,14 @@ const RecipePage = () => {
           <AddtoList>Add to list</AddtoList>
         </TitltListWrap>
 
-        <RecipeInngredientsList ingredients={recipe.ingredients} />
+        <RecipeInngredientsList
+          ingredients={recipe.ingredients}
+          addIngrid={addIngrid}
+        />
+        <RecipePreparation
+          imageUrl={recipe.imageUrl}
+          instructions={recipe.instructions}
+        />
       </MainContainer>
     </>
   );

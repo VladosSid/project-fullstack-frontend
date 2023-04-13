@@ -45,9 +45,9 @@ export const ImgIngradientsContainer = styled.div`
   flex-direction: column;
   justify-content: center;
   align-content: center;
-  padding: 50px 0 100px 0;
+  padding: 50px 0 50px 0;
   @media ${theme.device.tablet} {
-    padding-bottom: 200px;
+    padding-bottom: 50px;
   }
 `;
 

@@ -32,8 +32,6 @@ export default function SearchForm({
   return (
     <SearchesForm
       onSubmit={handleSubmit}
-      // marginBottom={marginBottom}
-      // marginTop={marginTop}
       page={isSearchPage ? 'search' : 'main'}
     >
       <SearchInput

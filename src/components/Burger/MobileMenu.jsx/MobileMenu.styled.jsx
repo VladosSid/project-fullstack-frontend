@@ -1,35 +1,42 @@
 import styled from 'styled-components';
 import theme from 'style/generalStyle';
-// import { SwBtn } from './SwitcherBtn.styled';
-// import { HeaderSw } from './SwitcherHeader.styled';
+import bgSpinach from '../../../images/Header/background-spinach.jpg';
 
-// export const SwButton = styled(SwBtn)`
-//   @media ${theme.device.mobail} {
-//     bottom: -110px;
-//     left: -110px;
-//   }
-//   @media ${theme.device.tablet} {
-//     bottom: -100px;
-//     left: -210px;
-//   }
-// `;
-// export const SB = styled(HeaderSw)`
-//   @media ${theme.device.mobail} {
-//     display: none;
-//   }
-//   @media ${theme.device.tablet} {
-//     display: none;
-//   }
-//   @media ${theme.device.desktop} {
-//     display: block;
-//   }
-// `;
+export const Overlay = styled.div`
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  position: fixed;
+
+  background-color: #ebf3d4;
+  background-image: url(${bgSpinach});
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: cover;
+
+  z-index: 150;
+  opacity: 1;
+  transform: ${props =>
+    props.isOpen === false ? 'translateY(-120vh)' : 'translateY(0)'};
+  transition: transform 0.5s cubic-bezier(0.075, 0.82, 0.165, 1),
+    opacity 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+`;
 
 export const BurgerBtn = styled.button`
   cursor: pointer;
   padding: 0;
   border: none;
   background-color: transparent;
+  transition: transform cubic-bezier(0.075, 0.82, 0.165, 1) 0.3s,
+    color cubic-bezier(0.075, 0.82, 0.165, 1) 0.3s;
+
+  &:hover,
+  &:focus {
+    color: rgb(139, 170, 54);
+    transform: scale(1.1);
+  }
 
   @media ${theme.device.desktop} {
     display: none;
@@ -62,28 +69,19 @@ export const BackdropMobileMenu = styled.div`
 `;
 
 export const CrossIcon = styled.button`
+  display: flex;
+  justify-content: center;
+  align-items: center;
   cursor: pointer;
   border: none;
   padding: 0;
   background-color: transparent;
-`;
-
-export const HeaderSwitcher = styled.button`
-  display: none;
-  width: 60px;
-  height: 30px;
-  cursor: pointer;
-  padding: 0;
-  background-color: transparent;
-  border: none;
-  transition: transform cubic-bezier(0.075, 0.82, 0.165, 1) 0.3s;
+  transition: transform cubic-bezier(0.075, 0.82, 0.165, 1) 0.5s,
+    color cubic-bezier(0.075, 0.82, 0.165, 1) 0.5s;
 
   &:hover,
   &:focus {
     transform: scale(1.1);
-  }
-
-  @media ${theme.device.desktop} {
-    display: block;
+    color: rgb(139, 170, 54);
   }
 `;

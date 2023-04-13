@@ -3,6 +3,10 @@ import theme from 'style/generalStyle';
 
 export const BtnWrapper = styled.div`
   position: relative;
+  @media (min-width: 320px) {
+    margin-left: auto;
+    margin-right: 10px;
+  }
   @media ${theme.device.mobail} {
     margin-left: auto;
     margin-right: 55px;
@@ -21,9 +25,18 @@ export const UserLogoBtn = styled.button`
   cursor: pointer;
   border: none;
   background-color: transparent;
-  padding: 0;
   display: flex;
+  padding: 3px;
+  border-radius: 50px;
   align-items: center;
+  transition: transform cubic-bezier(0.075, 0.82, 0.165, 1) 0.3s,
+    box-shadow cubic-bezier(0.075, 0.82, 0.165, 1) 0.3s;
+
+  &:hover,
+  &:focus {
+    transform: scale(1.05);
+    box-shadow: 1px 1px 5px 0px rgb(139, 170, 54);
+  }
 
   p {
     font-family: 'Poppins';
