@@ -20,6 +20,9 @@ export const theme = {
         backgroun: '#1E1F28',
         textNavigation: '#FAFAFA',
         burgerBtn: '#FAFAFA',
+        modalBackground: '#2A2C36',
+        modalText: '#FAFAFA',
+        modaBorder: ' #8baa36',
       },
 
       mainPage: {
@@ -114,6 +117,7 @@ export const theme = {
         instructionScrollbarThumb: '#EBF3D4',
       },
 
+
     },
   },
 
@@ -130,6 +134,9 @@ export const theme = {
         backgroun: '#FAFAFA',
         textNavigation: '#23262A',
         burgerBtn: '#22252A',
+        modalBackground: '#fafafa',
+        modalText: '#23262A',
+        modaBorder: ' #FAFAFA',
       },
 
       mainPage: {
