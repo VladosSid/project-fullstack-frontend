@@ -6,10 +6,11 @@ export const CardWrapper = styled.div`
   display: flex;
   padding: 14px 9px;
   margin-bottom: 14px;
-  background: #ffffff;
+  /* background: #ffffff; */
   border-radius: 8px;
   box-shadow: 5px 4px 8px 0px rgba(34, 60, 80, 0.2);
   border: 1px solid rgba(34, 60, 80, 0.2);
+  background: ${props => props.theme.color.favorit.cardWrapper};
 
   @media ${theme.device.tablet} {
     position: relative;
@@ -80,7 +81,8 @@ export const CardTitle = styled.h3`
   font-size: 14px;
   line-height: 14px;
   letter-spacing: -0.24px;
-  color: #3e4462;
+  /* color: #3e4462; */
+  color: ${props => props.theme.color.favorit.cardTitle};
 
   @media ${theme.device.tablet} {
     font-size: 24px;
@@ -104,7 +106,8 @@ export const CardDescription = styled.p`
   font-size: 8px;
   line-height: 10px;
   letter-spacing: -0.02em;
-  color: #23262a;
+  /* color: #23262a; */
+  color: ${props => props.theme.color.favorit.cardDescription};
 
   @media ${theme.device.tablet} {
     /* display: inline-block; */
@@ -137,7 +140,8 @@ export const CardTime = styled.p`
   font-size: 10px;
   line-height: 14px;
   letter-spacing: -0.24px;
-  color: #3e4462;
+  /* color: #3e4462; */
+  color: ${props => props.theme.color.favorit.cardTime};
 
   @media ${theme.device.tablet} {
     display: inline-block;
@@ -171,8 +175,14 @@ export const CardButtonSee = styled.button`
   background: #8baa36;
   border-radius: 24px 44px;
   border: 1px solid rgb(250, 250, 250);
+  /* border: 1px solid ${props =>
+    props.theme.color.favorit.cardButtonSeeBorder}; */
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   &:hover {
-    background: #22252a;
+    /* background: #22252a; */
+    background: ${props => props.theme.color.favorit.cardButtonSeeHover};
   }
 
   @media ${theme.device.tablet} {
@@ -218,6 +228,9 @@ export const CardButtonDelete = styled.button`
   border-radius: 4px;
   cursor: pointer;
   border: none;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   &:hover {
     background: #22252a;
   }
@@ -262,6 +275,8 @@ export const CardIcon = styled.div`
   height: 24px;
   fill: #8baa36;
   stroke: #ebf3d4;
+  transition: stroke 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
   &:hover {
     fill: #22252a;
     stroke: #fafafa;

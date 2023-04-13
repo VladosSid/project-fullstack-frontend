@@ -71,6 +71,8 @@ export const theme = {
         cardIconStrokeHover: '#22252a',
         cardIconFill: '#1E1F28',
         cardIconFillHover: '#EBF3D4',
+        pagination: '#ebf3d4',
+        paginationHover: '#8BAA36',
       },
 
       shoppingList: {
@@ -153,6 +155,8 @@ export const theme = {
         cardIconStrokeHover: '#fafafa',
         cardIconFill: '#ebf3d4',
         cardIconFillHover: '#22252a',
+        pagination: '#8BAA36',
+        paginationHover: '#ebf3d4',
       },
 
       shoppingList: {

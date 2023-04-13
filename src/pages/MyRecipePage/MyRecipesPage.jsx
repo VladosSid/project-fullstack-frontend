@@ -31,7 +31,7 @@ const MyRecipesPage = () => {
         setAllPage(pageQty);
       })
       .catch(error => {
-        console.log(error.message);
+        console.log(error);
         // Notiflix.Notify.failure('The list is empty');
       });
   }, []);

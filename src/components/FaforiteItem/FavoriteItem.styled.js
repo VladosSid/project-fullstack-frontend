@@ -164,10 +164,16 @@ export const CardButtonSee = styled.div`
     cursor: pointer;
     color: #fafafa;
     border-radius: 24px 44px;
-    border: 1px solid ${props => props.theme.color.favorit.cardButtonSeeBorder};
+    border: 1px solid rgb(250, 250, 250);
+    /* border: 1px solid ${props =>
+      props.theme.color.favorit.cardButtonSeeBorder}; */
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+      border 250ms cubic-bezier(0.4, 0, 0.2, 1),
+      color 250ms cubic-bezier(0.4, 0, 0.2, 1);
     &:hover {
       background: ${props => props.theme.color.favorit.cardButtonSeeHover};
-      border-color: ${props => props.theme.color.favorit.cardButtonSeeHover};
+      /* border-color: ${props =>
+        props.theme.color.favorit.cardButtonSeeHover}; */
     }
   }
 
@@ -205,6 +211,9 @@ export const CardButtonDelete = styled.button`
   cursor: pointer;
   border: 1.2px solid
     ${props => props.theme.color.favorit.cardButtonDeleteBorder};
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   &:hover {
     background: ${props =>
       props.theme.color.favorit.cardButtonDeleteHoverBackground};
@@ -236,6 +245,8 @@ export const CardIcon = styled.div`
   height: 24px;
   fill: ${props => props.theme.color.favorit.cardIconFill};
   stroke: ${props => props.theme.color.favorit.cardIconStroke};
+  transition: stroke 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
   &:hover {
     fill: ${props => props.theme.color.favorit.cardIconFillHover};
     stroke: ${props => props.theme.color.favorit.cardIconStrokeHover};

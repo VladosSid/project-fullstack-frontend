@@ -4,6 +4,26 @@ import styled from 'styled-components';
 export const PaginationWrapper = styled.div`
   display: flex;
   justify-content: center;
+  ul {
+    padding: 5px 10px;
+    box-shadow: 5px 4px 8px 0px rgba(34, 60, 80, 0.2);
+    border: 1px solid rgba(34, 60, 80, 0.2);
+    border-radius: 30px;
+    background: ${props => props.theme.color.favorit.cardWrapper};
+  }
+  button {
+    color: ${props => props.theme.color.favorit.cardTitle};
+    &:hover {
+      background-color: ${props => props.theme.color.favorit.pagination};
+      color: ${props => props.theme.color.favorit.cardWrapper};
+    }
+  }
+  button.Mui-selected {
+    background-color: ${props => props.theme.color.favorit.paginationHover};
+    &:hover {
+      background-color: ${props => props.theme.color.favorit.pagination};
+    }
+  }
 `;
 
 export const ImgWrapper = styled.div`
@@ -11,7 +31,7 @@ export const ImgWrapper = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 50px;
+  padding: 50px;
   img {
     display: block;
   }
