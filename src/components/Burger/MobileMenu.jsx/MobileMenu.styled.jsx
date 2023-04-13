@@ -10,7 +10,7 @@ export const Overlay = styled.div`
   overflow: hidden;
   position: fixed;
 
-  background-color: #ebf3d4;
+  background-color: ${props => props.theme.color.header.modalBackground};
   background-image: url(${bgSpinach});
   background-repeat: no-repeat;
   background-position: bottom;

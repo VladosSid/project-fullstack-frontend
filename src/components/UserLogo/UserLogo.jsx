@@ -12,6 +12,7 @@ import UserInfoModal from '../Modal/UserInfoModal/UserInfoModal';
 const UserLogo = () => {
   const [popupIsOpen, setPopupIsOpen] = useState(false);
   const [LogoModalOpen, setLogoModalOpen] = useState(false);
+  const [scroll, setScroll] = useState(0);
 
   const name = useSelector(authSelectors.getUsername);
   const ava = useSelector(authSelectors.getAvatar);
@@ -39,11 +40,19 @@ const UserLogo = () => {
     document.body.style.overflow = 'hidden';
   };
 
+  useEffect(() => {
+    window.addEventListener('scroll', () => {
+      setScroll(window.scrollY);
+    });
+    return () =>
+      window.removeEventListener('scroll', () => setScroll(window.scrollY));
+  }, []);
+
   return (
     <BtnWrapper>
       <UserLogoBtn onClick={e => popupToggle(e)}>
         <ImgAva src={ava} alt="avatar" />
-        <NameUser>{name}</NameUser>
+        <NameUser scroll={scroll}>{name}</NameUser>
       </UserLogoBtn>
 
       <Modal

@@ -24,7 +24,7 @@ export const UserIModal = styled.div`
   overflow: auto;
   position: absolute;
   z-index: 30;
-  background: #fafafa;
+  background-color: ${props => props.theme.color.header.modalBackground};
   box-shadow: 0px 4px 48px rgba(0, 0, 0, 0.1);
   border-radius: 24px;
 

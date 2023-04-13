@@ -59,7 +59,10 @@ const UserInfoModal = ({ setLogoModalOpen, open }) => {
 
   const onInputChange = e => {
     setName(e.target.value);
+    localStorage.setItem('name', e.target.value);
   };
+
+  const getName = localStorage.getItem('name');
 
   const handleSubmit = e => {
     e.preventDefault();
@@ -119,7 +122,7 @@ const UserInfoModal = ({ setLogoModalOpen, open }) => {
           type="text"
           name="name"
           max={15}
-          value={name}
+          value={getName}
           placeholder={username}
           maxLength={15}
         />
