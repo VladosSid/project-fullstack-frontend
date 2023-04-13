@@ -19,7 +19,7 @@ export const InstructionTitle = styled.h2`
   font-size: 24px;
   line-height: 1;
   letter-spacing: -0.02em;
-  color: #3e4462;
+  color: ${props => props.theme.color.recipePage.instructionTitle};
   @media ${theme.device.tablet} {
     margin-bottom: 32px;
   }
@@ -32,8 +32,8 @@ export const InstructionWrapper = styled.div`
     width: 12px;
   }
   ::-webkit-scrollbar-thumb {
-    background: #22252a;
-    height: 10px;
+    background: ${props =>
+      props.theme.color.recipePage.instructionScrollbarThumb};
   }
   width: 343px;
   height: 290px;
@@ -79,7 +79,9 @@ export const Span = styled.span`
   font-size: 14px;
   line-height: 1.3;
 `;
-export const Text = styled.p``;
+export const Text = styled.p`
+  color: ${props => props.theme.color.recipePage.instructionText};
+`;
 
 export const InstructionList = styled.ul`
   display: flex;
