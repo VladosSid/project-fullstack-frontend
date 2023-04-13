@@ -52,7 +52,6 @@ export const ImgAva = styled.img`
   height: 34px;
   border-radius: 50%;
   margin-right: 14px;
-  
 `;
 
 export const NameUser = styled.span`
