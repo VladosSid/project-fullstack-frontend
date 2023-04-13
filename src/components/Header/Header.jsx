@@ -11,7 +11,8 @@ import { useLocation } from 'react-router-dom';
 const Header = () => {
   const [scroll, setScroll] = useState(0);
   const [width, setWidth] = useState(0);
-  const [locat, setlocat] = useState(false);
+  // eslint-disable-next-line no-unused-vars
+  const [locat, setlocat] = useState(null);
 
   useEffect(() => {
     window.addEventListener('resize', () => {
@@ -23,22 +24,21 @@ const Header = () => {
       });
   }, [width]);
 
-  const location = useLocation().pathname;;
-  console.log('location', location);
+  const location = useLocation().pathname;
 
-  // const getLocation = () => {
-  //     if (location === "/home ") {
-  //       console.log('true home');
-  //   }
-  // }
-  //  getLocation()
-    useEffect(() => {
-      window.addEventListener('scroll', () => {
-        setScroll(window.scrollY);
-      });
-      return () =>
-        window.removeEventListener('scroll', () => setScroll(window.scrollY));
-    }, []);
+  const getLocation = () => {
+    if (location === '/home ') {
+      setlocat(true);
+    }
+  };
+  getLocation();
+  useEffect(() => {
+    window.addEventListener('scroll', () => {
+      setScroll(window.scrollY);
+    });
+    return () =>
+      window.removeEventListener('scroll', () => setScroll(window.scrollY));
+  }, []);
   return (
     <HeaderContainer scroll={scroll} id="header">
       <HeaderBox id="header-box">

@@ -15,10 +15,10 @@ import {
   UserSvg,
 } from './UserModal.styled';
 
+import { RxCross1 } from 'react-icons/rx';
 import plus from '../../../images/Header/plus.svg';
 import pen from '../../../images/Header/pen.svg';
 import user from '../../../images/Header/user.png';
-import x from '../../../images/Header/x.svg';
 
 const UserInfoModal = ({ setLogoModalOpen, open }) => {
   const [image, setImg] = useState(null);
@@ -87,13 +87,6 @@ const UserInfoModal = ({ setLogoModalOpen, open }) => {
     }
   };
 
-  // const onEnterPress = e => {
-  //   e.preventDefault();
-  //   if (e.keyCode === 13) {
-  //     handleSubmit(e);
-  //   }
-  // };
-
   return (
     <Overlay
       open={open}
@@ -109,7 +102,7 @@ const UserInfoModal = ({ setLogoModalOpen, open }) => {
             document.body.style.overflow = '';
           }}
         >
-          <img src={x} alt="cross" />
+          <RxCross1 size={24} />
         </CloseCross>
         <div>
           <UploadedImg src={image ? image : ava} alt="user" />

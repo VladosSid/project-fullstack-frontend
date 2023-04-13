@@ -33,6 +33,9 @@ export const UserLogoPopup = styled.div`
     padding: 0;
     border: none;
     background-color: transparent;
+    transition: transform cubic-bezier(0.075, 0.82, 0.165, 1) 0.5s,
+      color cubic-bezier(0.075, 0.82, 0.165, 1) 0.5s,
+      box-shadow cubic-bezier(0.075, 0.82, 0.165, 1) 0.5s;
   }
 
   button:first-child {
@@ -43,6 +46,11 @@ export const UserLogoPopup = styled.div`
     line-height: 22px;
 
     color: #23262a;
+    &:hover,
+    &:focus {
+      transform: scale(1.05);
+      color: #8baa36;
+    }
   }
 
   button:last-child {
@@ -59,5 +67,11 @@ export const UserLogoPopup = styled.div`
     line-height: 21px;
 
     color: #fafafa;
+
+    &:hover,
+    &:focus {
+      transform: scale(1.1);
+      box-shadow: rgb(139, 170, 54) 1px 1px 5px 0px;
+    }
   }
 `;
