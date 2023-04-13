@@ -85,6 +85,9 @@ export const theme = {
         bavkgroundFooter: '#8BAA36',
         buttonBgDisable: '#869b4e',
         buttonBg: '#1E1F28',
+
+        hoverLink: '#1E1F28',
+        hoverButtonText: '#8BAA36',
       },
 
       addResipe: {
@@ -179,6 +182,9 @@ export const theme = {
         bavkgroundFooter: '#22252A',
         buttonBgDisable: '#869b4e',
         buttonBg: '#8baa36',
+
+        hoverLink: '#8BAA36',
+        hoverButtonText: '#22252A',
       },
         addResipe: {
         inputColor: '#000000',

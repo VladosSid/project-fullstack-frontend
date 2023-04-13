@@ -157,7 +157,7 @@ export const NavList = styled.ul`
 
     color: #fafafa;
     &:hover {
-      color: rgb(139, 170, 54);
+      color: ${props => props.theme.color.footer.hoverLink};
     }
 
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);

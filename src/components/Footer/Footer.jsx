@@ -36,7 +36,12 @@ export function Footer() {
     e.preventDefault();
     const data = await queryBackEnd.querySubscribe(email);
 
+    remove();
     Notiflix.Notify.success(`${data.message}`);
+  };
+
+  const remove = () => {
+    setEmail('');
   };
 
   return (
