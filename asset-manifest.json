@@ -1,10 +1,10 @@
 {
   "files": {
     "main.css": "/project-fullstack-frontend/static/css/main.6e774571.css",
-    "main.js": "/project-fullstack-frontend/static/js/main.fd884e88.js",
-    "static/js/703.acb0ffa6.chunk.js": "/project-fullstack-frontend/static/js/703.acb0ffa6.chunk.js",
-    "static/js/689.8a47d8bc.chunk.js": "/project-fullstack-frontend/static/js/689.8a47d8bc.chunk.js",
-    "static/js/916.d6467c72.chunk.js": "/project-fullstack-frontend/static/js/916.d6467c72.chunk.js",
+    "main.js": "/project-fullstack-frontend/static/js/main.74ae4114.js",
+    "static/js/703.fde659fa.chunk.js": "/project-fullstack-frontend/static/js/703.fde659fa.chunk.js",
+    "static/js/689.efe4feae.chunk.js": "/project-fullstack-frontend/static/js/689.efe4feae.chunk.js",
+    "static/js/916.651581ba.chunk.js": "/project-fullstack-frontend/static/js/916.651581ba.chunk.js",
     "static/js/192.87ee70d0.chunk.js": "/project-fullstack-frontend/static/js/192.87ee70d0.chunk.js",
     "static/js/939.ba51c8c9.chunk.js": "/project-fullstack-frontend/static/js/939.ba51c8c9.chunk.js",
     "static/js/6.5f86c61f.chunk.js": "/project-fullstack-frontend/static/js/6.5f86c61f.chunk.js",
@@ -59,10 +59,10 @@
     "static/media/arrow.svg": "/project-fullstack-frontend/static/media/arrow.baca8947d57e4992eeecacf1fe7d5ebd.svg",
     "static/media/chevron-down.svg": "/project-fullstack-frontend/static/media/chevron-down.6ca21e11e19f8046984073ff192ce57d.svg",
     "main.6e774571.css.map": "/project-fullstack-frontend/static/css/main.6e774571.css.map",
-    "main.fd884e88.js.map": "/project-fullstack-frontend/static/js/main.fd884e88.js.map",
-    "703.acb0ffa6.chunk.js.map": "/project-fullstack-frontend/static/js/703.acb0ffa6.chunk.js.map",
-    "689.8a47d8bc.chunk.js.map": "/project-fullstack-frontend/static/js/689.8a47d8bc.chunk.js.map",
-    "916.d6467c72.chunk.js.map": "/project-fullstack-frontend/static/js/916.d6467c72.chunk.js.map",
+    "main.74ae4114.js.map": "/project-fullstack-frontend/static/js/main.74ae4114.js.map",
+    "703.fde659fa.chunk.js.map": "/project-fullstack-frontend/static/js/703.fde659fa.chunk.js.map",
+    "689.efe4feae.chunk.js.map": "/project-fullstack-frontend/static/js/689.efe4feae.chunk.js.map",
+    "916.651581ba.chunk.js.map": "/project-fullstack-frontend/static/js/916.651581ba.chunk.js.map",
     "192.87ee70d0.chunk.js.map": "/project-fullstack-frontend/static/js/192.87ee70d0.chunk.js.map",
     "939.ba51c8c9.chunk.js.map": "/project-fullstack-frontend/static/js/939.ba51c8c9.chunk.js.map",
     "6.5f86c61f.chunk.js.map": "/project-fullstack-frontend/static/js/6.5f86c61f.chunk.js.map",
@@ -87,6 +87,6 @@
   },
   "entrypoints": [
     "static/css/main.6e774571.css",
-    "static/js/main.fd884e88.js"
+    "static/js/main.74ae4114.js"
   ]
 }
