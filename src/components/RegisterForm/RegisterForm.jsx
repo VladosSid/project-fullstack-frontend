@@ -63,7 +63,6 @@ const RegisterForm = () => {
             <Form onSubmit={handleSubmit}>
                 <FormTitle>Registration</FormTitle>
                 <List>
-                    {/* username */}
                     <ListItem>
                         <Label
                             htmlFor="usernameInput"
@@ -80,7 +79,6 @@ const RegisterForm = () => {
                             onChange={handleChange}
                         />
                     </ListItem>
-                    {/* email */}
                     <ListItem>
                         <Label
                             htmlFor="emailInput"
@@ -98,7 +96,6 @@ const RegisterForm = () => {
                             onChange={handleChange}
                         />
                     </ListItem>
-                    {/* password */}
                     <ListItem>
                         <Label
                             htmlFor="passwordInput"

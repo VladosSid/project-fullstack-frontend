@@ -11,7 +11,6 @@ export const NavContainer = styled.div`
 `
 
 export const RegisterBtn = styled.button`
-    /* clip-path: inset(25% 0 25% 0 round 15% 35% 15% 30%); */
     padding: 12px 24px;
     border-radius: 24px 44px;
     border: 2px solid transparent;
@@ -40,7 +39,6 @@ export const RegisterBtn = styled.button`
 `
 
 export const SigninBtn = styled.button`
-    /* clip-path: inset(25% 0 25% 0 round 15% 35% 15% 30%); */
     padding: 12px 24px;
     border-radius: 24px 44px;
     border: 2px solid #FAFAFA;

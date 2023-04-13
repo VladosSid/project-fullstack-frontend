@@ -53,7 +53,6 @@ const SigninForm = () => {
             <Form onSubmit={handleSubmit}>
                 <FormTitle>Sign In</FormTitle>
                 <List>
-                    {/* email */}
                     <ListItem>
                         <Label
                             htmlFor="emailInput"
@@ -71,7 +70,6 @@ const SigninForm = () => {
                             onChange={handleChange}
                         />
                     </ListItem>
-                    {/* password */}
                     <ListItem>
                         <Label
                             htmlFor="passwordInput"
