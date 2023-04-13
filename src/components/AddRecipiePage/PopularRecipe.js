@@ -37,7 +37,7 @@ const PopularRecipe = ( {location} ) => {
       <Recipes>
         {recipes &&
           recipes.map(({ title, description, imageUrl, _id }) => (
-            <Link to={`/recipe/${_id}`} state={{ from: location }}>
+            <Link key={_id} to={`/recipe/${_id}`} state={{ from: location }}>
             <Recipe key={title}>
               <Thumb src={imageUrl} alt={title} />
               <Col>
