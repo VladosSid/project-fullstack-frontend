@@ -61,10 +61,6 @@ const UserInfoModal = ({ setLogoModalOpen, open }) => {
     setName(e.target.value);
   };
 
-  const reset = e => {
-    setName('');
-  };
-
   const handleSubmit = e => {
     e.preventDefault();
     const formData = new FormData();
@@ -77,7 +73,6 @@ const UserInfoModal = ({ setLogoModalOpen, open }) => {
       setLogoModalOpen(false);
       document.body.style.overflow = '';
     }
-    reset();
   };
 
   const check = e => {
