@@ -310,10 +310,10 @@ export const ListSocialNetworks = styled.ul`
 
 export const ImgSocial = styled.li`
   svg {
-    fill: #8baa36;
+    fill: ${props => props.theme.color.footer.iconFill};
 
     &:hover {
-      fill: #fff;
+      fill: ${props => props.theme.color.footer.hoverIconFill};
     }
   }
 `;

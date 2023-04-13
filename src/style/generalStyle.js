@@ -90,6 +90,9 @@ export const theme = {
         hoverLink: '#1E1F28',
         hoverButtonText: '#8BAA36',
         hoverBoxShadow: '10px 10px 43px -14px rgba(34,37,42,0.75)',
+
+        iconFill: '#ffffff',
+        hoverIconFill: '#1E1F28',
       },
 
       addResipe: {
@@ -104,8 +107,7 @@ export const theme = {
         ingridientsOpasity: '1',
         ingredientsSelested: 'rgba(217, 217, 217, 0.6)',
         addButton: '#8BAA36',
-      }
-
+      },
     },
   },
 
@@ -190,6 +192,9 @@ export const theme = {
         hoverLink: '#8BAA36',
         hoverButtonText: '#22252A',
         hoverBoxShadow: '10px 10px 43px -14px rgba(139,170,54,0.75)',
+
+        iconFill: '#8baa36',
+        hoverIconFill: '#ffffff',
       },
       addResipe: {
         inputColor: '#000000',

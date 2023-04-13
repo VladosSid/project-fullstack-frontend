@@ -130,17 +130,27 @@ export function Footer() {
 
           <ListSocialNetworks>
             <ImgSocial>
-              <UseSvg id="facebook" />
-            </ImgSocial>
-            <ImgSocial>
-              <UseSvg id="youtube" />
+              <a href={'http://fb.com'} target="_blank" rel="noreferrer">
+                <UseSvg id="facebook" />
+              </a>
             </ImgSocial>
 
             <ImgSocial>
-              <UseSvg id="twit" />
+              <a href={'http://youtube.com'} target="_blank" rel="noreferrer">
+                <UseSvg id="youtube" />
+              </a>
             </ImgSocial>
+
             <ImgSocial>
-              <UseSvg id="inst" />
+              <a href={'http://twetter.com'} target="_blank" rel="noreferrer">
+                <UseSvg id="twit" />
+              </a>
+            </ImgSocial>
+
+            <ImgSocial>
+              <a href={'http://instagram.com'} target="_blank" rel="noreferrer">
+                <UseSvg id="inst" />
+              </a>
             </ImgSocial>
           </ListSocialNetworks>
         </MainContainer>
