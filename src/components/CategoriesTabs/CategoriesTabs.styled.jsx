@@ -57,15 +57,3 @@ export const RecipesBox = styled(Box)`
   }
 `;
 
-// export const DishCardContainer = styled.div`
-//   @media ${theme.device.tablet} {
-//     width: 336px;
-//     heigth: 323px;
-//   }
-//   //  screen and (min-width: 1240px)
-//   @media ${theme.device.desktop} {
-//     width: 299px;
-//     heigth: 323px;
-//     overflow: hidden;
-//   }
-// `;

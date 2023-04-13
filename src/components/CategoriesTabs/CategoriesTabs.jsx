@@ -2,7 +2,6 @@ import * as React from 'react';
 import PropTypes from 'prop-types';
 import { StyledTabs as Tabs } from './CategoriesTabs.styled';
 import { StyledTab as Tab } from './CategoriesTabs.styled';
-// import { DishCardContainer } from './CategoriesTabs.styled';
 import { Box } from '@mui/material';
 import { RecipesBox } from './CategoriesTabs.styled';
 import DishCard from '../DishCard/DishCard';
@@ -97,9 +96,7 @@ export default function CategoriesTabs(props) {
       </Box>
       <TabPanel value={value} index={value}>
         {recipeList.map((recipe, index) => (
-          // <DishCardContainer key={index}>
             <DishCard recipe={recipe} key={index} />
-          // </DishCardContainer>
         ))}
       </TabPanel>
     </Box>
