@@ -19,6 +19,7 @@ export const theme = {
         headerContainer: '#1E1F28',
         backgroun: '#1E1F28',
         textNavigation: '#FAFAFA',
+        burgerBtn: '#FAFAFA',
       },
 
       mainPage: {
@@ -120,6 +121,7 @@ export const theme = {
         headerContainer: 'rgb(255, 255, 255)',
         backgroun: '#FAFAFA',
         textNavigation: '#23262A',
+        burgerBtn: '#22252A',
       },
 
       mainPage: {

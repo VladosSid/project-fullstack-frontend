@@ -5,7 +5,7 @@ import { authSelectors } from 'redux/users';
 import { BtnWrapper, UserLogoBtn } from 'components/UserLogo/UserLogo.styled';
 import UserLogoModal from 'components/UserLogoModal/UserLogoModal';
 import { Modal } from '../Modal/Modal';
-import { ImgAva } from 'components/UserLogo/UserLogo.styled';
+import { ImgAva, NameUser } from 'components/UserLogo/UserLogo.styled';
 
 import UserInfoModal from '../Modal/UserInfoModal/UserInfoModal';
 
@@ -43,7 +43,7 @@ const UserLogo = () => {
     <BtnWrapper>
       <UserLogoBtn onClick={e => popupToggle(e)}>
         <ImgAva src={ava} alt="avatar" />
-        <p>{name}</p>
+        <NameUser>{name}</NameUser>
       </UserLogoBtn>
 
       <Modal
