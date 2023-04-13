@@ -69,6 +69,7 @@ const RecipePage = () => {
   };
 
   useEffect(() => {
+    window.scrollTo(0, 0);
     const fetchData = async () => {
       const check = await checkoutfavorite(recipeId);
 
