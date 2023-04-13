@@ -36,6 +36,7 @@ export const theme = {
         searchInputColor: '#FAFAFA',
         searchInputPlaceholder: 'rgba(250, 250, 250, 0.5)',
         searchBtncolorFocus: '#22252A',
+        searchBtnFocusSearch: '#ECECEC',
       },
       dishCard: { dishTitleWrapper: '#2A2C36', dishTitle: '#FAFAFA' },
       searchPage: {
@@ -136,6 +137,7 @@ export const theme = {
         searchInputColor: 'rgb(62, 68, 98)',
         searchInputPlaceholder: '#3e4462',
         searchBtncolorFocus: '#fafafa',
+        searchBtnFocusSearch: '#22252A',
       },
       dishCard: { dishTitleWrapper: '#ffffff', dishTitle: '#3e4462' },
       searchPage: {

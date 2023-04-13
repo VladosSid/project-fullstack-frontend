@@ -91,11 +91,12 @@ export const SearchBtn = styled.button`
     background-color: ${props =>
       props.page === 'main'
         ? props.theme.color.mainPage.searchBtnFocus
-        : props.theme.color.mainPage.searchBtnFocus};
+        : props.theme.color.mainPage.searchBtnFocusSearch};
     border-color: ${props =>
       props.page === 'main'
         ? props.theme.color.mainPage.searchBtnFocus
-        : props.theme.color.mainPage.searchBtnFocus};
+        : props.theme.color.mainPage.searchBtnFocusSearch};
+
     cursor: pointer;
   }
   @media screen and (max-width: 768px) {
