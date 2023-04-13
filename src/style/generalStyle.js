@@ -19,6 +19,7 @@ export const theme = {
         headerContainer: '#1E1F28',
         backgroun: '#1E1F28',
         textNavigation: '#FAFAFA',
+        burgerBtn: '#FAFAFA',
       },
 
       mainPage: {
@@ -102,7 +103,7 @@ export const theme = {
         ingredientsBorder: 'rgba(250, 250, 250, 0.2)',
         ingridientsOpasity: '1',
         ingredientsSelested: 'rgba(217, 217, 217, 0.6)',
-        addDutton: '8BAA36',
+        addButton: '#8BAA36',
       },
 
       recipePage: {
@@ -112,6 +113,7 @@ export const theme = {
         instructionText: '#FAFAFA',
         instructionScrollbarThumb: '#EBF3D4',
       },
+
     },
   },
 
@@ -127,6 +129,7 @@ export const theme = {
         headerContainer: 'rgb(255, 255, 255)',
         backgroun: '#FAFAFA',
         textNavigation: '#23262A',
+        burgerBtn: '#22252A',
       },
 
       mainPage: {
@@ -207,7 +210,7 @@ export const theme = {
         ingredientsBorder: '#f5f5f5',
         ingridientsOpasity: '0,5',
         ingredientsSelested: 'rgba(0, 0, 0, 0.5)',
-        addDutton: '#22252A',
+        addButton: '#22252A',
       },
 
       recipePage: {
@@ -218,7 +221,7 @@ export const theme = {
         instructionScrollbarThumb: '#22252a',
       },
 
-      //  text
+
     },
   },
 };

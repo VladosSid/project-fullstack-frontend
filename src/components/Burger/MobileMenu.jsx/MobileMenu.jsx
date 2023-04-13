@@ -1,6 +1,7 @@
 import { NavLink } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import { AiOutlineSearch } from 'react-icons/ai';
+import { RxCross1 } from 'react-icons/rx';
 
 import Logo from 'components/Logo/Logo';
 import SwitcherBtn from './SwitcherBtn';
@@ -8,7 +9,6 @@ import { Overlay } from './MobileMenu.styled';
 import { Ul } from '../../Navigation/Navigation.styled';
 import { CrossIcon } from './MobileMenu.styled';
 import { BackdropMobileMenu } from './MobileMenu.styled';
-import x from '../../../images/Header/x.svg';
 
 const MobileMenu = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -51,7 +51,7 @@ const MobileMenu = () => {
         <div>
           <Logo onClick={() => clickToggle()} />
           <CrossIcon onClick={() => clickToggle()}>
-            <img src={x} alt="cross" width={32} height={32} />
+            <RxCross1 size={32} />
           </CrossIcon>
         </div>
         <nav>

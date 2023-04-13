@@ -3,6 +3,10 @@ import theme from 'style/generalStyle';
 
 export const BtnWrapper = styled.div`
   position: relative;
+  @media (min-width: 320px) {
+    margin-left: auto;
+    margin-right: 10px;
+  }
   @media ${theme.device.mobail} {
     margin-left: auto;
     margin-right: 55px;
@@ -48,4 +52,9 @@ export const ImgAva = styled.img`
   height: 34px;
   border-radius: 50%;
   margin-right: 14px;
+
+`;
+
+export const NameUser = styled.p`
+  // color: red;
 `;

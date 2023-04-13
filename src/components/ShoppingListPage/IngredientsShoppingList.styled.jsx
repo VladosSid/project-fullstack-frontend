@@ -4,7 +4,7 @@ import theme from '../../style/generalStyle';
 export const List = styled.ul`
   list-style: none;
   padding-bottom: 100px;
-   @media ${theme.device.tablet} {
+  @media ${theme.device.tablet} {
     padding-bottom: 200px;
   }
 
@@ -17,7 +17,6 @@ export const Item = styled.li`
   max-width: 100%;
 
   @media ${theme.device.tablet} {
-    // padding: 0 32px;
     max-width: 704px;
   }
 
@@ -33,6 +32,11 @@ export const ItemContainer = styled.div`
   padding-bottom: 50px;
   border-bottom: 1px solid
     ${props => props.theme.color.shoppingList.borderItemContainer};
+  padding-right: 15px;
+
+  @media ${theme.device.tablet} {
+    padding-right: 32px;
+  }
 
   @media ${theme.device.desktop} {
     padding-right: 32px;
@@ -121,10 +125,10 @@ export const RemoveSvg = styled.div`
       height: 12px;
     }
 
-    /* @media ${theme.device.desktop} {
+    @media ${theme.device.desktop} {
       width: 20px;
       height: 20px;
-    } */
+    }
 
     &:hover {
       stroke: #8baa36;

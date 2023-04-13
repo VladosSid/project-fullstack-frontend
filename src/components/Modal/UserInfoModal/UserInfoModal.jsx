@@ -75,6 +75,7 @@ const UserInfoModal = ({ setLogoModalOpen, open }) => {
     dispatch(authOperations.updateUserData(formData));
     if (image !== ava || username !== name) {
       setLogoModalOpen(false);
+      document.body.style.overflow = '';
     }
     reset();
   };
@@ -132,6 +133,7 @@ const UserInfoModal = ({ setLogoModalOpen, open }) => {
           max={15}
           value={name}
           placeholder={username}
+          maxLength={15}
         />
         <UserSvg src={user} alt="user" />
         <PenSvg src={pen} alt="pen" />

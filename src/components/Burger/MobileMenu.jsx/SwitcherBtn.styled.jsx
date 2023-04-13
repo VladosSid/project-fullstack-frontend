@@ -12,6 +12,7 @@ export const SwBtn = styled.div`
   background-color: ${props =>
     props.checked === true ? '#8BAA36' : '#efefef'};
   transition: background-color 0.5s;
+
   box-shadow: inset 0px 6px 8px 3px rgba(0, 0, 0, 0.1);
 
   @media ${theme.device.mobail} {
