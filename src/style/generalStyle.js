@@ -20,6 +20,7 @@ export const theme = {
         backgroun: '#1E1F28',
         textNavigation: '#FAFAFA',
         burgerBtn: '#FAFAFA',
+     
       },
 
       mainPage: {
@@ -104,8 +105,7 @@ export const theme = {
         ingridientsOpasity: '1',
         ingredientsSelested: 'rgba(217, 217, 217, 0.6)',
         addButton: '#8BAA36',
-      }
-
+      },
     },
   },
 
