@@ -7,6 +7,7 @@ import { RecipesBox } from './CategoriesTabs.styled';
 import DishCard from '../DishCard/DishCard';
 import queryBackEnd from '../../helpers/request/queryBackEnd';
 import { useSelector } from 'react-redux';
+import { useNavigate } from 'react-router-dom';
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -38,6 +39,7 @@ function a11yProps(index) {
 }
 
 export default function CategoriesTabs(props) {
+  const navigate = useNavigate();
   const { tabsTitlesQ, idCategory } = props;
   const [value, setValue] = React.useState(idCategory);
   const [recipeList, setRecipeList] = React.useState([]);
@@ -64,11 +66,8 @@ export default function CategoriesTabs(props) {
 
   // ------- get Recipe by categiry id ------------------
   const handleChange = async (event, tabId) => {
-    await queryBackEnd
-      .queryRecipeCategori(tabsTitlesQ[tabId])
-      .then(data => setRecipeList(data.result.data))
-      .catch(error => console.log(error));
-    setValue(tabId);
+    // tabsTitlesQ[tabId];
+    navigate(`/categories/${tabsTitlesQ[tabId]}`);
   };
 
   return (
@@ -96,7 +95,7 @@ export default function CategoriesTabs(props) {
       </Box>
       <TabPanel value={value} index={value}>
         {recipeList.map((recipe, index) => (
-            <DishCard recipe={recipe} key={index} />
+          <DishCard recipe={recipe} key={index} />
         ))}
       </TabPanel>
     </Box>

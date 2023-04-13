@@ -88,6 +88,11 @@ export const App = () => {
                 />
 
                 <Route
+                  path="/categories"
+                  element={<PrivateRoute component={<CategoriesPage />} />}
+                />
+
+                <Route
                   path="/categories/:categName"
                   element={<PrivateRoute component={<CategoriesPage />} />}
                 />
