@@ -1,10 +1,10 @@
 import { BurgerBtn } from './MobileMenu.styled';
-import menu from '../../../images/Header/menu.svg';
+import { HiOutlineMenuAlt2 } from 'react-icons/hi';
 
 const BurgerButton = () => {
   return (
     <BurgerBtn id="burger-btn">
-      <img src={menu} alt="menu" />
+      <HiOutlineMenuAlt2 size={32} />
     </BurgerBtn>
   );
 };

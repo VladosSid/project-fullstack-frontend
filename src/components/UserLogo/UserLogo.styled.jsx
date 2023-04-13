@@ -3,6 +3,10 @@ import theme from 'style/generalStyle';
 
 export const BtnWrapper = styled.div`
   position: relative;
+  @media (min-width: 320px) {
+    margin-left: auto;
+    margin-right: 10px;
+  }
   @media ${theme.device.mobail} {
     margin-left: auto;
     margin-right: 55px;
