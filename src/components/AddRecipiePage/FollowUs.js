@@ -7,16 +7,16 @@ const FollosUs = () => {
     <Follow>
       <Title>Follow Us</Title>
       <Icons>
-        <a href={'fb.com'}>
+        <a href={'http://fb.com'}>
           <Fb fill="#8BAA36" size="26" />
         </a>
-        <a href={'youtube.com'}>
+        <a href={'http://youtube.com'}>
           <Youtube fill="#8BAA36" size="26" />
         </a>
-        <a href={'twetter.com'}>
+        <a href={'http://twetter.com'}>
           <Twiter fill="#8BAA36" size="26" />
         </a>
-        <a href={'instagram.com'}>
+        <a href={'http://instagram.com'}>
           <Instagram fill="#8BAA36" size="26" />
         </a>
       </Icons>
