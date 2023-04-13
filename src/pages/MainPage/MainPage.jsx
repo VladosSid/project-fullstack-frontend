@@ -27,7 +27,6 @@ export default function MainPage() {
 
   //Do we need resize?
 
- 
   const [quantity, setQuantity] = useState(() => {
     const width = window.innerWidth;
 
@@ -51,8 +50,6 @@ export default function MainPage() {
       } else {
         setQuantity(1);
       }
-
-     
     };
     window.addEventListener('resize', handleWindowResize);
 
@@ -60,7 +57,6 @@ export default function MainPage() {
   }, []);
 
   useEffect(() => {
-   
     const response = queryBackEnd.queryRecipeMinePage(quantity);
     response
       .then(results => {
@@ -123,7 +119,7 @@ export default function MainPage() {
               </div>
             ))}
           </Container>
-          <MPButton onClick={() => handleCategoryClick('Breakfast')}>
+          <MPButton onClick={() => navigate('/categories')}>
             Other categories
           </MPButton>
         </MainContainer>

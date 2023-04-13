@@ -259,7 +259,7 @@ export const Input = styled.input`
 
 export const Button = styled.button`
   width: 251px;
-  cursor: pointer;
+  cursor: ${props => (!props.disabled ? 'pointer' : 'initial')};
 
   display: flex;
   justify-content: center;
