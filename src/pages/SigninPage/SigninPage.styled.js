@@ -53,8 +53,6 @@ export const Background = styled.div`
 `
 
 export const Image = styled.div`
-    /* position lower on mobile */
-
     background-image: url(${MobileImg});
     background-repeat: no-repeat;
     background-position: center;
