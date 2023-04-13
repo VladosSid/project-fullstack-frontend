@@ -1,6 +1,6 @@
 import { BsArrowRight } from 'react-icons/bs';
 import SearchForm from 'components/SearchForm';
-import React from 'react';
+import React, { useState } from 'react';
 import {
   MPHeroBG,
   MPHeroText,
@@ -15,9 +15,11 @@ import {
 
 // import { useSearchParams } from 'react-router-dom';
 //---------------------------------------------
-export default function MainPageHero({ onSubm }) {
-  // const [searchParams, setSearchParams] = useSearchParams();
-  // const queryFilm = searchParams.get('query');
+export default function MainPageHero({ onSubm, searchQuery }) {
+  const [setSearchWord] = useState(searchQuery || '');
+  function handleSearchWordChange(word) {
+    setSearchWord(word);
+  }
 
   return (
     <MPHeroBG>
@@ -31,7 +33,10 @@ export default function MainPageHero({ onSubm }) {
             cookbook. You can add your own recipes to save them for the future.
           </MPHeroText>
           <MDHeroFlex>
-            <SearchForm onSubm={onSubm} />
+            <SearchForm
+              onSubm={onSubm}
+              onSearchWordChange={handleSearchWordChange}
+            />
             <MPHeroProduct>
               <div>
                 <GreenSpan>Delicious and healthy </GreenSpan>
