@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/project-fullstack-frontend/static/css/main.6e774571.css",
-    "main.js": "/project-fullstack-frontend/static/js/main.80d485bc.js",
+    "main.js": "/project-fullstack-frontend/static/js/main.e00a9c2a.js",
     "static/js/703.fde659fa.chunk.js": "/project-fullstack-frontend/static/js/703.fde659fa.chunk.js",
     "static/js/689.efe4feae.chunk.js": "/project-fullstack-frontend/static/js/689.efe4feae.chunk.js",
     "static/js/916.651581ba.chunk.js": "/project-fullstack-frontend/static/js/916.651581ba.chunk.js",
@@ -9,7 +9,7 @@
     "static/js/939.0ec8a248.chunk.js": "/project-fullstack-frontend/static/js/939.0ec8a248.chunk.js",
     "static/js/6.5f86c61f.chunk.js": "/project-fullstack-frontend/static/js/6.5f86c61f.chunk.js",
     "static/js/506.804f575e.chunk.js": "/project-fullstack-frontend/static/js/506.804f575e.chunk.js",
-    "static/js/25.e20a1f1e.chunk.js": "/project-fullstack-frontend/static/js/25.e20a1f1e.chunk.js",
+    "static/js/25.ed881f87.chunk.js": "/project-fullstack-frontend/static/js/25.ed881f87.chunk.js",
     "static/js/658.552a6567.chunk.js": "/project-fullstack-frontend/static/js/658.552a6567.chunk.js",
     "static/js/34.4ec40651.chunk.js": "/project-fullstack-frontend/static/js/34.4ec40651.chunk.js",
     "static/js/433.ad6ebd28.chunk.js": "/project-fullstack-frontend/static/js/433.ad6ebd28.chunk.js",
@@ -30,6 +30,7 @@
     "static/media/AuthImgDesktop.png": "/project-fullstack-frontend/static/media/AuthImgDesktop.549be07b60dab8fc00fa.png",
     "static/media/desktop-min.png": "/project-fullstack-frontend/static/media/desktop-min.0226454824d8a7a1eded.png",
     "static/media/ingradients.png": "/project-fullstack-frontend/static/media/ingradients.34d30603d2f29910c2ce.png",
+    "static/media/recipeHero_desktop_2x.jpg": "/project-fullstack-frontend/static/media/recipeHero_desktop_2x.924484b464f126e26139.jpg",
     "static/media/tablet_bg.png": "/project-fullstack-frontend/static/media/tablet_bg.bd214bbcbdff8f67c762.png",
     "static/media/WelcomePageBgDesktop.jpg": "/project-fullstack-frontend/static/media/WelcomePageBgDesktop.f31fc4303d48e5b012c6.jpg",
     "static/media/not_found_desk_2x.png": "/project-fullstack-frontend/static/media/not_found_desk_2x.3cfaecf1beea8a207660.png",
@@ -38,6 +39,7 @@
     "static/media/WelcomePageBgTablet.jpg": "/project-fullstack-frontend/static/media/WelcomePageBgTablet.7abf4f24790a74657a90.jpg",
     "static/media/mob-min.png": "/project-fullstack-frontend/static/media/mob-min.d0697a4ac2ff1b861c32.png",
     "static/media/background-spinach.jpg": "/project-fullstack-frontend/static/media/background-spinach.8506519c330c687b4a49.jpg",
+    "static/media/recipeHero_tab_2x.jpg": "/project-fullstack-frontend/static/media/recipeHero_tab_2x.aa991d8fde13c9d1d35f.jpg",
     "static/media/search_mob_opt.png": "/project-fullstack-frontend/static/media/search_mob_opt.2f56a7b7eabacfd09f2e.png",
     "static/media/AuthImgTablet.png": "/project-fullstack-frontend/static/media/AuthImgTablet.73245f21375be7dcbb3d.png",
     "static/media/recipeHero_desktop_1x.jpg": "/project-fullstack-frontend/static/media/recipeHero_desktop_1x.77f181a0d904350a0307.jpg",
@@ -45,6 +47,7 @@
     "static/media/not_found_desk_1x.png": "/project-fullstack-frontend/static/media/not_found_desk_1x.0fce8791c1b5e9b8cbf9.png",
     "static/media/not_found_tablet_1x.png": "/project-fullstack-frontend/static/media/not_found_tablet_1x.a4d4ef93bde63ef4e6fc.png",
     "static/media/search_tabl_opt.png": "/project-fullstack-frontend/static/media/search_tabl_opt.3c6f613b1ecadddef5f1.png",
+    "static/media/recipeHero_mob_2x.jpg": "/project-fullstack-frontend/static/media/recipeHero_mob_2x.04772b35d4bcde8116a5.jpg",
     "static/media/AuthImgMobile.png": "/project-fullstack-frontend/static/media/AuthImgMobile.b85625f4b2da37e130bd.png",
     "static/media/WelcomePageBgMobile.jpg": "/project-fullstack-frontend/static/media/WelcomePageBgMobile.8aac0106e3b46109ca27.jpg",
     "static/media/not_found_mob_1x.png": "/project-fullstack-frontend/static/media/not_found_mob_1x.830623caea782215ca94.png",
@@ -60,7 +63,7 @@
     "static/media/arrow.svg": "/project-fullstack-frontend/static/media/arrow.baca8947d57e4992eeecacf1fe7d5ebd.svg",
     "static/media/chevron-down.svg": "/project-fullstack-frontend/static/media/chevron-down.6ca21e11e19f8046984073ff192ce57d.svg",
     "main.6e774571.css.map": "/project-fullstack-frontend/static/css/main.6e774571.css.map",
-    "main.80d485bc.js.map": "/project-fullstack-frontend/static/js/main.80d485bc.js.map",
+    "main.e00a9c2a.js.map": "/project-fullstack-frontend/static/js/main.e00a9c2a.js.map",
     "703.fde659fa.chunk.js.map": "/project-fullstack-frontend/static/js/703.fde659fa.chunk.js.map",
     "689.efe4feae.chunk.js.map": "/project-fullstack-frontend/static/js/689.efe4feae.chunk.js.map",
     "916.651581ba.chunk.js.map": "/project-fullstack-frontend/static/js/916.651581ba.chunk.js.map",
@@ -68,7 +71,7 @@
     "939.0ec8a248.chunk.js.map": "/project-fullstack-frontend/static/js/939.0ec8a248.chunk.js.map",
     "6.5f86c61f.chunk.js.map": "/project-fullstack-frontend/static/js/6.5f86c61f.chunk.js.map",
     "506.804f575e.chunk.js.map": "/project-fullstack-frontend/static/js/506.804f575e.chunk.js.map",
-    "25.e20a1f1e.chunk.js.map": "/project-fullstack-frontend/static/js/25.e20a1f1e.chunk.js.map",
+    "25.ed881f87.chunk.js.map": "/project-fullstack-frontend/static/js/25.ed881f87.chunk.js.map",
     "658.552a6567.chunk.js.map": "/project-fullstack-frontend/static/js/658.552a6567.chunk.js.map",
     "34.4ec40651.chunk.js.map": "/project-fullstack-frontend/static/js/34.4ec40651.chunk.js.map",
     "433.ad6ebd28.chunk.js.map": "/project-fullstack-frontend/static/js/433.ad6ebd28.chunk.js.map",
@@ -88,6 +91,6 @@
   },
   "entrypoints": [
     "static/css/main.6e774571.css",
-    "static/js/main.80d485bc.js"
+    "static/js/main.e00a9c2a.js"
   ]
 }
