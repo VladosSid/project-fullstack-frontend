@@ -104,6 +104,14 @@ export const theme = {
         ingredientsSelested: 'rgba(217, 217, 217, 0.6)',
         addDutton: '8BAA36',
       },
+
+      recipePage: {
+        backgrounRecipeItem: '#2A2C36',
+        ingName: '#FAFAFA',
+        instructionTitle: '#FAFAFA',
+        instructionText: '#FAFAFA',
+        instructionScrollbarThumb: '#EBF3D4',
+      },
     },
   },
 
@@ -200,6 +208,14 @@ export const theme = {
         ingridientsOpasity: '0,5',
         ingredientsSelested: 'rgba(0, 0, 0, 0.5)',
         addDutton: '#22252A',
+      },
+
+      recipePage: {
+        backgrounRecipeItem: '#ebf3d4',
+        ingName: '#3E4462',
+        instructionTitle: '#3E4462',
+        instructionText: '#3E4462',
+        instructionScrollbarThumb: '#22252a',
       },
 
       //  text
