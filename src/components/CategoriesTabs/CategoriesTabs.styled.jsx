@@ -22,16 +22,16 @@ export const StyledTab = styled(Tab)`
     padding: 0 22px;
     &:hover {
       color: #8baa36;
-    },
+    }
     &:focus {
-      color: #8baa36,
-    },
+      color: #8baa36;
+    }
     &:active {
-      color:#8baa36,
-    },
+      color:#8baa36;
+    }
     & button.Mui-selected {
-      color:#8baa36 !important,
-    },    
+      color:#8baa36 !important;
+    }  
   }
   
 `;
@@ -52,20 +52,20 @@ export const RecipesBox = styled(Box)`
   @media ${theme.device.desktop} {
     padding-top: 40px;
     row-gap: 100px;
-    column-gap: 14px;
+    column-gap: 13px;
     margin-bottom: 200px;
   }
 `;
 
-export const DishCardContainer = styled.div`
-  @media ${theme.device.tablet} {
-    width: 336px;
-    heigth: 323px;
-  }
-  //  screen and (min-width: 1240px)
-  @media ${theme.device.desktop} {
-    width: 299px;
-    heigth: 323px;
-    overflow: hidden;
-  }
-`;
+// export const DishCardContainer = styled.div`
+//   @media ${theme.device.tablet} {
+//     width: 336px;
+//     heigth: 323px;
+//   }
+//   //  screen and (min-width: 1240px)
+//   @media ${theme.device.desktop} {
+//     width: 299px;
+//     heigth: 323px;
+//     overflow: hidden;
+//   }
+// `;
