@@ -13,9 +13,7 @@ export default function SearchBar(props) {
   return (
     <SearchBarWrapper>
       <SearchForm
-        green
         onSubm={onSubm}
-        marginBottom
         searchQuery={searchWord}
         isSearchPage
         onSearchWordChange={handleSearchWordChange}
