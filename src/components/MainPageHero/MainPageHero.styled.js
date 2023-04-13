@@ -1,51 +1,52 @@
 import styled from 'styled-components';
 import theme from '../../style/generalStyle';
 import { Link } from 'react-router-dom';
-
-import bg_mob from '../../images/mainPagePhoto/bg_mob-min.png';
-
-import blatt_mob from '../../images/mainPagePhoto/blatt_mob-min.png';
-
-import blatt_l_mob from '../../images/mainPagePhoto/blatt_l_mob-min.png';
-
-import unsplash_mob from '../../images/mainPagePhoto/unsplash_mob-min.png';
-import desktop_bg from '../../images/mainPagePhoto/desktop_bg_1440.png';
+// import desktop_bg from '../../images/mainPagePhoto/desktop_bg_1440.png';
 import tablet_bg from '../../images/mainPagePhoto/tablet_bg.png';
 
+// import bg_mob from '../../images/mainPagePhoto/bg_mob-min.png';
+// import blatt_mob from '../../images/mainPagePhoto/blatt_mob-min.png';
+import blatt_l_mob from '../../images/mainPagePhoto/blatt_l_mob-min.png';
+// import unsplash_mob from '../../images/mainPagePhoto/unsplash_mob-min.png';
+
+import blatt_l_tabl from '../../images/mainPagePhoto/blatt_l_tab-min.png';
+// import unsplash_tabl from '../../images/mainPagePhoto/unsplash_tab-min.png';
+// import bg_tabl from '../../images/mainPagePhoto/bg_tab-min.png';
+// import blatt_tabl from '../../images/mainPagePhoto/blatt_tab-min.png';
+
+import blatt_l_desk from '../../images/mainPagePhoto/blatt_l_desk-min.png';
+// import unsplash_desk from '../../images/mainPagePhoto/unsplash_desk-min.png';
+// import bg_desk from '../../images/mainPagePhoto/bg_desk-min.png';
+// import blatt_desk from '../../images/mainPagePhoto/blatt_desk-min.png';
+import desktop from '../../images/mainPagePhoto/desktop-min.png';
+import tabl from '../../images/mainPagePhoto/tablet-min.png';
+import mobile from '../../images/mainPagePhoto/mob-min.png';
 //-----------------------------------------------
 export const MPHeroBG = styled.section`
+  outline: 1px solid green;
   margin: 0 auto;
-  /* position: relative; */
-  /* width: 100%; */
+
   @media screen and (max-width: 768px) {
-    /* width: 100%; */
-    /* height: 791px; */
-    padding-top: 132px;
-    padding-bottom: 97px;
     background-repeat: no-repeat;
-    background-image: url('${unsplash_mob}'), url('${blatt_mob}'),
-      url('${blatt_l_mob}'), url('${bg_mob}');
-    background-position: top 322px center, top 70px right 0px, top 10px left 0px,
-      top 140px right 0px;
-    background-size: 320px, 375px, 60px, 280px;
+    background-image: url('${blatt_l_mob}');
+    background-position: top 10px left 0px;
+    background-size: 48px;
   }
   @media ${theme.device.tablet} {
-    /* max-width: 768px; */
-    padding-top: 224px;
-    padding-bottom: 168px;
     background-repeat: no-repeat;
-    background-image: url('${tablet_bg}');
+    /* background-image: url('${tablet_bg}');
     background-size: cover;
-    background-position: center center;
+    background-position: center center; */
+    background-image: url('${blatt_l_tabl}');
+    background-position: top 0px left 0px;
+    background-size: 67px;
   }
   @media ${theme.device.desktop} {
-    padding-top: 226px;
-    padding-bottom: 224px;
     /* max-width: 1440px; */
     background-repeat: no-repeat;
-    background-image: url('${desktop_bg}');
-    background-size: cover;
-    background-position: center center;
+    background-image: url('${blatt_l_desk}');
+    background-position: top 0px left 0px;
+    background-size: 116px;
   }
 `;
 
@@ -61,7 +62,7 @@ export const MPContainer = styled.div`
     margin: 0 auto;
     padding: 0 32px;
   }
-  /* position: relative; */
+
   @media ${theme.device.desktop} {
     width: 1240px;
     margin: 0 auto;
@@ -69,17 +70,27 @@ export const MPContainer = styled.div`
   }
 `;
 export const MPHeroSection = styled.div`
-  /* @media screen and (max-width: 768px) { */
-  /* width: 307px;
-    margin: 0 auto; */
-  /* } */
+  padding-top: 132px;
+  padding-bottom: 97px;
+  background-repeat: no-repeat;
+  background-image: url('${mobile}');
+  background-position: top 0px right 0px;
+  background-size: 375px;
   @media ${theme.device.tablet} and (max-width: 1303px) {
-    /* position: relative;
-    width: 703px;
-    margin: 0 auto; */
+    padding-top: 224px;
+    padding-bottom: 168px;
+    background-repeat: no-repeat;
+    background-image: url('${tabl}');
+    background-position: top 0px right 0px;
+    background-size: 583px;
   }
   @media ${theme.device.desktop} {
-    /* position: relative; */
+    padding-top: 226px;
+    padding-bottom: 224px;
+    background-repeat: no-repeat;
+    background-image: url('${desktop}');
+    background-position: top 0px right 0px;
+    background-size: 913px;
   }
 `;
 
@@ -99,7 +110,7 @@ export const MPHeroTitle = styled.h1`
     text-align: center;
   }
   @media ${theme.device.tablet} {
-    margin-bottom: 24px;
+    margin-bottom: 18px;
     font-size: 72px;
   }
   @media ${theme.device.desktop} {
