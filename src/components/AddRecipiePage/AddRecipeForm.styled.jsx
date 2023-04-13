@@ -39,4 +39,17 @@ export const Button = styled.div`
   @media ${theme.device.desktop} {
     margin-bottom: 200px;
   }
+  &:hover,
+  &:focus {
+    color: ${props => props.theme.color.mainPage.searchBtncolorFocus};
+    background-color: ${props =>
+      props.page === 'main'
+        ? props.theme.color.mainPage.searchBtnFocus
+        : props.theme.color.mainPage.searchBtnFocus};
+    border-color: ${props =>
+      props.page === 'main'
+        ? props.theme.color.mainPage.searchBtnFocus
+        : props.theme.color.mainPage.searchBtnFocus};
+    cursor: pointer;
+  }
 `;
