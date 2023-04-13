@@ -3,6 +3,9 @@ import styled from 'styled-components';
 import theme from 'style/generalStyle';
 
 export const HeaderNav = styled.nav`
+  @media (min-width: 320px) {
+    display: none;
+  }
   @media ${theme.device.mobail} {
     display: none;
   }

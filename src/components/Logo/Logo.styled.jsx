@@ -14,6 +14,6 @@ export const LogoSvg = styled.div`
   &:hover,
   &:focus {
     transform: scale(1.05);
-    box-shadow: rgb(139, 170, 54) 1px 1px 5px 0px;
+    box-shadow: rgb(139, 170, 54) 0px 0px 15px 0px;
   }
 `;

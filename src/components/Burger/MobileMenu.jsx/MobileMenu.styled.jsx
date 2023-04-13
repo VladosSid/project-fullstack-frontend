@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import theme from 'style/generalStyle';
+import bgSpinach from '../../../images/Header/background-spinach.jpg';
 
 export const Overlay = styled.div`
   width: 100vw;
@@ -10,7 +11,7 @@ export const Overlay = styled.div`
   position: fixed;
 
   background-color: #ebf3d4;
-  background-image: url(../../../images/Header/spinach.png);
+  background-image: url(${bgSpinach});
   background-repeat: no-repeat;
   background-position: bottom;
   background-size: cover;
@@ -28,6 +29,14 @@ export const BurgerBtn = styled.button`
   padding: 0;
   border: none;
   background-color: transparent;
+  transition: transform cubic-bezier(0.075, 0.82, 0.165, 1) 0.3s,
+    color cubic-bezier(0.075, 0.82, 0.165, 1) 0.3s;
+
+  &:hover,
+  &:focus {
+    color: rgb(139, 170, 54);
+    transform: scale(1.1);
+  }
 
   @media ${theme.device.desktop} {
     display: none;
@@ -60,28 +69,19 @@ export const BackdropMobileMenu = styled.div`
 `;
 
 export const CrossIcon = styled.button`
+  display: flex;
+  justify-content: center;
+  align-items: center;
   cursor: pointer;
   border: none;
   padding: 0;
   background-color: transparent;
-`;
-
-export const HeaderSwitcher = styled.button`
-  display: none;
-  width: 60px;
-  height: 30px;
-  cursor: pointer;
-  padding: 0;
-  background-color: transparent;
-  border: none;
-  transition: transform cubic-bezier(0.075, 0.82, 0.165, 1) 0.3s;
+  transition: transform cubic-bezier(0.075, 0.82, 0.165, 1) 0.5s,
+    color cubic-bezier(0.075, 0.82, 0.165, 1) 0.5s;
 
   &:hover,
   &:focus {
     transform: scale(1.1);
-  }
-
-  @media ${theme.device.desktop} {
-    display: block;
+    color: rgb(139, 170, 54);
   }
 `;
