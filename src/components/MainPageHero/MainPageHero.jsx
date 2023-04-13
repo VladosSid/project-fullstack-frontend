@@ -16,7 +16,7 @@ import {
 // import { useSearchParams } from 'react-router-dom';
 //---------------------------------------------
 export default function MainPageHero({ onSubm, searchQuery }) {
-  const [setSearchWord] = useState(searchQuery || '');
+  const [searchWord, setSearchWord] = useState(searchQuery || ''); // eslint-disable-line
   function handleSearchWordChange(word) {
     setSearchWord(word);
   }
