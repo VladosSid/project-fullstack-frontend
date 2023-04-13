@@ -6,7 +6,8 @@ export const SearchesForm = styled.form`
   width: fit-content;
   position: relative;
   margin: ${props => props.page === 'search' && '0px auto 24px'};
-  @media screen and (max-width: 767px) and (max-width: 1303px) {
+  @media screen and (max-width: 768px) {
+    //and (max-width: 1303px)
     margin: ${props => props.page === 'main' && '0px auto'};
   }
   @media ${theme.device.tablet} {
@@ -97,7 +98,7 @@ export const SearchBtn = styled.button`
         : props.theme.color.mainPage.searchBtnFocus};
     cursor: pointer;
   }
-  @media screen and (max-width: 767px) {
+  @media screen and (max-width: 768px) {
     width: ${props => props.page === 'main' && '113px'};
   }
   @media ${theme.device.tablet} {

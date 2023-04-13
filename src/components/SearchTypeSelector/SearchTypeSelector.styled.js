@@ -35,7 +35,7 @@ export const CustomSelect = styled(ReactSelect)`
 
   .react-select__value-container .react-select__input {
     cursor: none;
-    pointer-events: none;
+    /* pointer-events: none; */
   }
   .react-select__value-container .react-select__single-value {
     color: ${props =>

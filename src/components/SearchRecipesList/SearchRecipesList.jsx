@@ -26,7 +26,7 @@ export default function SearchRecipesList({ searchQuery, searchType }) {
   //-----------------------------------
   const [itemsPerPage, setItemsPerPage] = useState(() => {
     const width = window.innerWidth;
-    console.log('width 1', width);
+
     if (width >= 1304) {
       return 12;
     } else {
@@ -37,7 +37,7 @@ export default function SearchRecipesList({ searchQuery, searchType }) {
   useEffect(() => {
     const handleWindowResize = () => {
       const width = window.innerWidth;
-      console.log('width2', width);
+
       if (width >= 1304) {
         setItemsPerPage(12);
       } else {
