@@ -20,8 +20,6 @@ export const CardWrapper = styled.div`
 
   @media ${theme.device.desktop} {
     position: relative;
-    /* display: flex;
-justify-content: flex-start; */
     padding: 40px;
     margin-bottom: 50px;
   }
@@ -51,7 +49,6 @@ export const CardTextWrapper = styled.div`
   flex-direction: column;
   justify-content: space-between;
   height: 124px;
-  /* width: 170px; */
   margin-left: 14px;
 
   @media ${theme.device.tablet} {
@@ -59,7 +56,7 @@ export const CardTextWrapper = styled.div`
     flex-direction: column;
     justify-content: space-between;
     height: 232px;
-    /* width: 300px; */
+
     margin-left: 24px;
   }
 
@@ -69,7 +66,6 @@ export const CardTextWrapper = styled.div`
     justify-content: space-between;
     height: 324px;
     margin-left: 40px;
-    /* width: 680px; */
   }
 `;
 
@@ -165,20 +161,15 @@ export const CardButtonSee = styled.div`
     color: #fafafa;
     border-radius: 24px 44px;
     border: 1px solid rgb(250, 250, 250);
-    /* border: 1px solid ${props =>
-      props.theme.color.favorit.cardButtonSeeBorder}; */
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
       border 250ms cubic-bezier(0.4, 0, 0.2, 1),
       color 250ms cubic-bezier(0.4, 0, 0.2, 1);
     &:hover {
       background: ${props => props.theme.color.favorit.cardButtonSeeHover};
-      /* border-color: ${props =>
-        props.theme.color.favorit.cardButtonSeeHover}; */
     }
   }
 
   @media ${theme.device.desktop} {
-    /* background-color: transparent; */
     position: absolute;
     display: flex;
     justify-content: center;
@@ -187,7 +178,6 @@ export const CardButtonSee = styled.div`
     bottom: 40px;
     width: 160px;
     height: 54px;
-    /* padding: 10px 20px; */
     font-size: 16px;
     line-height: 24px;
     color: #fafafa;
@@ -197,16 +187,12 @@ export const CardButtonSee = styled.div`
 
 export const CardButtonDelete = styled.button`
   position: absolute;
-  /* display: flex;
-  justify-content: center;
-  align-items: center; */
   padding: 0;
   width: 24px;
   height: 24px;
   right: 14px;
   bottom: 14px;
   background: ${props => props.theme.color.favorit.cardButtonDelete};
-  // color: #22252a;
   border-radius: 4px;
   cursor: pointer;
   border: 1.2px solid
@@ -217,7 +203,6 @@ export const CardButtonDelete = styled.button`
   &:hover {
     background: ${props =>
       props.theme.color.favorit.cardButtonDeleteHoverBackground};
-    // color: #fafafa;
   }
 
   @media ${theme.device.tablet} {

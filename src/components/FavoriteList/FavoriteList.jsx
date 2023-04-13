@@ -3,8 +3,6 @@ import FavoriteItem from 'components/FaforiteItem/FavoriteItem';
 import { ListWrapper } from './FavoriteList.styled';
 
 const FavoriteList = ({ recipes, allItem, location, removeFavorite }) => {
-  // console.log(recipes);
-
   return (
     <>
       <ListWrapper>

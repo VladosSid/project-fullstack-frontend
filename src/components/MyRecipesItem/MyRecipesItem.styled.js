@@ -6,7 +6,6 @@ export const CardWrapper = styled.div`
   display: flex;
   padding: 14px 9px;
   margin-bottom: 14px;
-  /* background: #ffffff; */
   border-radius: 8px;
   box-shadow: 5px 4px 8px 0px rgba(34, 60, 80, 0.2);
   border: 1px solid rgba(34, 60, 80, 0.2);
@@ -31,7 +30,6 @@ export const CardImg = styled.img`
   width: 124px;
   height: 124px;
   border-radius: 8px;
-  /* Inside auto layout */
 
   @media ${theme.device.tablet} {
     display: block;
@@ -52,7 +50,6 @@ export const CardTextWrapper = styled.div`
   flex-direction: column;
   justify-content: space-between;
   border-radius: 8px;
-  /* width: 187px; */
   height: 124px;
   margin-left: 14px;
 
@@ -60,7 +57,6 @@ export const CardTextWrapper = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    /* width: 420px; */
     height: 232px;
   }
 
@@ -68,7 +64,6 @@ export const CardTextWrapper = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    /* width: 800px; */
     height: 324px;
     margin-left: 50px;
   }
@@ -81,7 +76,6 @@ export const CardTitle = styled.h3`
   font-size: 14px;
   line-height: 14px;
   letter-spacing: -0.24px;
-  /* color: #3e4462; */
   color: ${props => props.theme.color.favorit.cardTitle};
 
   @media ${theme.device.tablet} {
@@ -106,11 +100,9 @@ export const CardDescription = styled.p`
   font-size: 8px;
   line-height: 10px;
   letter-spacing: -0.02em;
-  /* color: #23262a; */
   color: ${props => props.theme.color.favorit.cardDescription};
 
   @media ${theme.device.tablet} {
-    /* display: inline-block; */
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -140,7 +132,6 @@ export const CardTime = styled.p`
   font-size: 10px;
   line-height: 14px;
   letter-spacing: -0.24px;
-  /* color: #3e4462; */
   color: ${props => props.theme.color.favorit.cardTime};
 
   @media ${theme.device.tablet} {
@@ -175,13 +166,10 @@ export const CardButtonSee = styled.button`
   background: #8baa36;
   border-radius: 24px 44px;
   border: 1px solid rgb(250, 250, 250);
-  /* border: 1px solid ${props =>
-    props.theme.color.favorit.cardButtonSeeBorder}; */
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     border 250ms cubic-bezier(0.4, 0, 0.2, 1),
     color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   &:hover {
-    /* background: #22252a; */
     background: ${props => props.theme.color.favorit.cardButtonSeeHover};
   }
 
@@ -241,12 +229,6 @@ export const CardButtonDelete = styled.button`
     height: 38px;
     right: 24px;
     top: 28px;
-    /* display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #fafafa;
-    background: #8baa36;
-    border-radius: 4px; */
     &:hover {
       background: #22252a;
     }
@@ -258,9 +240,6 @@ export const CardButtonDelete = styled.button`
     height: 44px;
     right: 40px;
     top: 40px;
-    /* color: #fafafa;
-    background: #8baa36;
-    border-radius: 4px; */
     &:hover {
       background: #22252a;
     }
