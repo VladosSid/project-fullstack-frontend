@@ -54,6 +54,12 @@ export const UserIModal = styled.div`
     width: 88px;
     height: 88px;
     margin: 0 auto;
+    transition: transform cubic-bezier(0.075, 0.82, 0.165, 1) 0.5s;
+
+    &:hover,
+    &:focus {
+      transform: scale(1.05);
+    }
 
     @media ${theme.device.tablet} {
       width: 103px;
@@ -96,6 +102,12 @@ export const SaveBtn = styled.button`
   align-items: center;
 
   height: 50px;
+  transition: transform cubic-bezier(0.075, 0.82, 0.165, 1) 0.5s;
+
+  &:hover,
+  &:focus {
+    transform: scale(1.03);
+  }
 
   background: #8baa36;
   border-radius: 6px;
@@ -167,9 +179,19 @@ export const CloseCross = styled.button`
   padding: 0;
   border: none;
   background-color: transparent;
+
+  transition: transform cubic-bezier(0.075, 0.82, 0.165, 1) 0.5s,
+    color cubic-bezier(0.075, 0.82, 0.165, 1) 0.5s;
+
+  &:hover,
+  &:focus {
+    transform: scale(1.05);
+    color: #8baa36;
+  }
 `;
 
 export const UploadedImg = styled.img`
+  cursor: pointer;
   height: 100%;
   object-fit: cover;
 `;
@@ -192,6 +214,7 @@ export const PlusSvg = styled.img`
 `;
 
 export const AddImgInput = styled.label`
+  cursor: pointer;
   position: absolute;
   border-radius: 50px;
   width: 88px;

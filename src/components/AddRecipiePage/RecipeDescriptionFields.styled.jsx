@@ -235,4 +235,13 @@ export const FieldList = styled.div`
 
 export const Photo = styled.img`
   background-color: #ffffff;
+  height: 100%;
+  object-fit: cover;
+`;
+
+
+export const PhotoContainer  = styled.div`
+border-radius: 10px;
+    overflow: hidden;
+    height: 100%;
 `;

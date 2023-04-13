@@ -31,7 +31,7 @@ export const TitltListWrap = styled.div`
     font-size: 18px;
     line-height: 27px;
     padding: 20px;
-    margin-bottom: 23px;
+    margin-bottom: 32px;
   }
   @media ${theme.device.desktop} {
     width: 1160px;

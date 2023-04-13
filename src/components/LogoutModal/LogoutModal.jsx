@@ -5,9 +5,9 @@ import { PopupContain } from './LogoutModal.styled';
 import { CrossBtn } from './LogoutModal.styled';
 import { LogoutBtn } from './LogoutModal.styled';
 import { CancelBtn } from './LogoutModal.styled';
-import x from '../../images/Header/x.svg';
 import { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
+import { RxCross2 } from 'react-icons/rx';
 
 const LogoutModal = ({
   openLogoutModal,
@@ -31,7 +31,7 @@ const LogoutModal = ({
           <PopupContain>
             <p>Are you sure you want to log out?</p>
             <CrossBtn onClick={() => closeOnClick()}>
-              <img src={x} alt="cross" />
+              <RxCross2 size={24} />
             </CrossBtn>
             <div>
               <LogoutBtn

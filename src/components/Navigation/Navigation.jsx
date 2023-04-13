@@ -8,7 +8,7 @@ const Navigation = () => {
     <HeaderNav>
       <Ul>
         <li>
-          <NavLink to="/categories/Beef">Categories</NavLink>
+          <NavLink to="/categories">Categories</NavLink>
         </li>
         <li>
           <NavLink to="/add">Add recipes</NavLink>

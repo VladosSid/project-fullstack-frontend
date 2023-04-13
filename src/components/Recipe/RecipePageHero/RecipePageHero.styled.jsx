@@ -18,7 +18,7 @@ export const HeroContainer = styled.div`
   background-repeat: no-repeat;
   background-image: url(${mob1});
   height: 375px;
-  padding-bottom: 32px;
+  margin-bottom: 32px;
   padding-top: 144px;
   // padding-bottom: 90px;
   background-size: 100%;
@@ -27,12 +27,14 @@ export const HeroContainer = styled.div`
   @media ${theme.device.tablet} {
     background-image: url(${tab1});
     padding-bottom: 90px;
+    // margin-bottom: 50px;
     padding: 80px 44px;
   }
   @media ${theme.device.desktop} {
     height: 350px;
     padding-top: 100px;
     padding-bottom: 50px;
+    margin-bottom: 50px;
 
     background-image: url(${desktop1});
   }
@@ -111,6 +113,7 @@ export const HeroButtonAdd = styled.button`
   padding: 10px 18px;
   background-color: transparent;
   color: #22252a;
+  margin-bottom: 0px;
   border-radius: 24px 44px;
   border: 1px solid #8baa36;
   transition: all 250ms linear;
@@ -121,7 +124,7 @@ export const HeroButtonAdd = styled.button`
     padding: 18px 44px;
     font-size: 16px;
 
-    margin-bottom: 40px;
+    // margin-bottom: 40px;
   }
   @media ${theme.device.desktop} {
     // margin-bottom: 60px;
