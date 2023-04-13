@@ -34,7 +34,7 @@ export default function SearchForm({
       page={isSearchPage ? 'search' : 'main'}
     >
       <SearchInput
-        placeholder="Beef"
+        placeholder="Enter the text"
         value={searchWord}
         onChange={handleChange}
         page={isSearchPage ? 'search' : 'main'}

@@ -135,7 +135,7 @@ export const theme = {
         searchInputHover: '#dfdfdf',
         searchInputBG: '#fafafa',
         searchInputColor: 'rgb(62, 68, 98)',
-        searchInputPlaceholder: '#3e4462',
+        searchInputPlaceholder: '#BDBDBD',
         searchBtncolorFocus: '#fafafa',
         searchBtnFocusSearch: '#22252A',
       },
