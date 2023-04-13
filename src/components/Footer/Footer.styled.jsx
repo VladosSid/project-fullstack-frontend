@@ -280,9 +280,13 @@ export const Button = styled.button`
   border: none;
   border-radius: 6px;
 
-  ${props => (!props.disabled ? '&:hover {color: #000;}' : '')}
+  ${props =>
+    !props.disabled
+      ? `&:hover {color: ${props.theme.color.footer.hoverButtonText};
+    box-shadow: ${props.theme.color.footer.hoverBoxShadow};}`
+      : ''}
 
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), background 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), background 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
   @media ${theme.device.tablet} {
     width: 171px;
