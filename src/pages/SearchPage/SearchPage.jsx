@@ -1,4 +1,4 @@
-import React, { useState } from 'react'; 
+import React, { useState } from 'react';
 import { MainPageTitle } from 'components/MainPageTitle/MainPageTitle';
 import { MainContainer } from '../../components/MainContainer/MainContainer';
 import { ContainerWrapper } from './Searchpage.styled';
@@ -10,7 +10,6 @@ import BG from '../../images/mainPagePhoto/search_tabl_opt.png';
 
 //-------------------------------
 export default function SearchPage() {
-  // const location = useLocation();
   const [searchParams, setSearchParams] = useSearchParams();
   const [searchQuery, setSearchQuery] = useState(
     searchParams.get('query') || ''
@@ -34,8 +33,6 @@ export default function SearchPage() {
       updatedParams.set('type', type);
       setSearchParams(updatedParams);
     }
-
-    
   }
   //---------
   function handleSubmit(query) {

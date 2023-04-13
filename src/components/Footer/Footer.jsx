@@ -74,7 +74,7 @@ export function Footer() {
 
             <NavList>
               <li>
-                <NavLink to="/search">Ingredients</NavLink>
+                <NavLink to="/search?type=ingredients">Ingredients</NavLink>
               </li>
               <li>
                 <NavLink to="/add">Add recipes</NavLink>
