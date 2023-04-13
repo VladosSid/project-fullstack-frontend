@@ -25,12 +25,10 @@ export const RecipeItem = styled.li`
   padding: 0 8px;
   max-width: 100%;
   @media ${theme.device.tablet} {
-    // padding: 0 32px;
     max-width: 704px;
   }
 
   @media ${theme.device.desktop} {
-    // max-width: 1160px;
     max-width: 1240px;
   }
 `;
@@ -88,9 +86,6 @@ export const IngDescr = styled.div`
   font-size: 12px;
   width: 60px;
   line-height: 15px;
-  // min-width: 37px;
-  // max-width: 60px;
-  // height: 23px;
   border-radius: 4px;
   background: #8baa36;
   color: #fafafa;
@@ -99,16 +94,11 @@ export const IngDescr = styled.div`
   @media ${theme.device.tablet} {
     padding: 4px 8px;
     width: 125px;
-    // min-width: 68px;
-    // max-width: 85px;
-    // height: 35px;
     font-size: 15px;
   }
   @media ${theme.device.desktop} {
     padding: 8px 8px;
-    // margin-right: 142px;
     font-size: 17px;
-    // height: 40px;
   } ;
 `;
 
