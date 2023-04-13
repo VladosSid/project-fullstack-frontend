@@ -10,6 +10,7 @@ import {
   Desc,
   CustomSelect,
   Photo,
+  PhotoContainer,
 } from './RecipeDescriptionFields.styled';
 
 const STEP = [
@@ -71,7 +72,7 @@ const RecipeDescriptionFields = ({ onChange }) => {
   return (
     <Desc>
       <FilePicker onClick={() => document.querySelector('.input-file').click()}>
-        <div>{image && <Photo src={image} alt="photo" />}</div>
+        <PhotoContainer>{image && <Photo src={image} alt="photo" />}</PhotoContainer>
         <InputFile
           required={true}
           type="file"

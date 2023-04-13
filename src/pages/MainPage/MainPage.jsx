@@ -119,7 +119,9 @@ export default function MainPage() {
               </div>
             ))}
           </Container>
-          <MPButton onClick={() => handleCategoryClick()}>
+
+          <MPButton onClick={() => navigate('/categories')}>
+
             Other categories
           </MPButton>
         </MainContainer>

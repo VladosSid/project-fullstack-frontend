@@ -25,7 +25,7 @@ export const Row = styled.div`
 `;
 
 export const Button = styled.div`
-  background-color: ${props => props.theme.color.addResipe.addDutton};
+  background-color: ${props => props.theme.color.addResipe.addButton};
   color: rgb(255, 255, 255);
   border-radius: 24px 44px;
   height: 52px;
@@ -38,5 +38,18 @@ export const Button = styled.div`
   cursor: pointer;
   @media ${theme.device.desktop} {
     margin-bottom: 200px;
+  }
+  &:hover,
+  &:focus {
+    color: ${props => props.theme.color.mainPage.searchBtncolorFocus};
+    background-color: ${props =>
+      props.page === 'main'
+        ? props.theme.color.mainPage.searchBtnFocus
+        : props.theme.color.mainPage.searchBtnFocus};
+    border-color: ${props =>
+      props.page === 'main'
+        ? props.theme.color.mainPage.searchBtnFocus
+        : props.theme.color.mainPage.searchBtnFocus};
+    cursor: pointer;
   }
 `;

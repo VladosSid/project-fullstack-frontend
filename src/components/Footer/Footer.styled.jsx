@@ -259,7 +259,7 @@ export const Input = styled.input`
 
 export const Button = styled.button`
   width: 251px;
-  cursor: pointer;
+  cursor: ${props => (!props.disabled ? 'pointer' : 'initial')};
 
   display: flex;
   justify-content: center;
@@ -310,10 +310,10 @@ export const ListSocialNetworks = styled.ul`
 
 export const ImgSocial = styled.li`
   svg {
-    fill: #8baa36;
+    fill: ${props => props.theme.color.footer.iconFill};
 
     &:hover {
-      fill: #fff;
+      fill: ${props => props.theme.color.footer.hoverIconFill};
     }
   }
 `;

@@ -19,6 +19,11 @@ export const theme = {
         headerContainer: '#1E1F28',
         backgroun: '#1E1F28',
         textNavigation: '#FAFAFA',
+        burgerBtn: '#FAFAFA',
+        modalBackground: '#2A2C36',
+        modalText: '#FAFAFA',
+        modaBorder: ' #8baa36',
+
       },
 
       mainPage: {
@@ -90,6 +95,9 @@ export const theme = {
         hoverLink: '#1E1F28',
         hoverButtonText: '#8BAA36',
         hoverBoxShadow: '10px 10px 43px -14px rgba(34,37,42,0.75)',
+
+        iconFill: '#ffffff',
+        hoverIconFill: '#1E1F28',
       },
 
       addResipe: {
@@ -103,8 +111,18 @@ export const theme = {
         ingredientsBorder: 'rgba(250, 250, 250, 0.2)',
         ingridientsOpasity: '1',
         ingredientsSelested: 'rgba(217, 217, 217, 0.6)',
-        addDutton: '8BAA36',
+        addButton: '#8BAA36',
       },
+
+      recipePage: {
+        backgrounRecipeItem: '#2A2C36',
+        ingName: '#FAFAFA',
+        instructionTitle: '#FAFAFA',
+        instructionText: '#FAFAFA',
+        instructionScrollbarThumb: '#EBF3D4',
+      },
+
+
     },
   },
 
@@ -120,6 +138,10 @@ export const theme = {
         headerContainer: 'rgb(255, 255, 255)',
         backgroun: '#FAFAFA',
         textNavigation: '#23262A',
+        burgerBtn: '#22252A',
+        modalBackground: '#fafafa',
+        modalText: '#23262A',
+        modaBorder: ' #FAFAFA',
       },
 
       mainPage: {
@@ -189,6 +211,9 @@ export const theme = {
         hoverLink: '#8BAA36',
         hoverButtonText: '#22252A',
         hoverBoxShadow: '10px 10px 43px -14px rgba(139,170,54,0.75)',
+
+        iconFill: '#8baa36',
+        hoverIconFill: '#ffffff',
       },
       addResipe: {
         inputColor: '#000000',
@@ -201,10 +226,18 @@ export const theme = {
         ingredientsBorder: '#f5f5f5',
         ingridientsOpasity: '0,5',
         ingredientsSelested: 'rgba(0, 0, 0, 0.5)',
-        addDutton: '#22252A',
+        addButton: '#22252A',
       },
 
-      //  text
+      recipePage: {
+        backgrounRecipeItem: '#ebf3d4',
+        ingName: '#3E4462',
+        instructionTitle: '#3E4462',
+        instructionText: '#3E4462',
+        instructionScrollbarThumb: '#22252a',
+      },
+
+
     },
   },
 };

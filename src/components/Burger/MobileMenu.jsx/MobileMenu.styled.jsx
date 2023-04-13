@@ -31,6 +31,7 @@ export const BurgerBtn = styled.button`
   background-color: transparent;
   transition: transform cubic-bezier(0.075, 0.82, 0.165, 1) 0.3s,
     color cubic-bezier(0.075, 0.82, 0.165, 1) 0.3s;
+  color: ${props => props.theme.color.header.burgerBtn};
 
   &:hover,
   &:focus {

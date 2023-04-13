@@ -6,10 +6,13 @@ import { HeaderBox } from './Header.styled';
 import { HeaderContainer, BoxSwitch } from './Header.styled';
 import BurgerButton from 'components/Burger/MobileMenu.jsx/BurgerButton';
 import SwitcherBtn from '../Burger/MobileMenu.jsx/SwitcherBtn';
+import { useLocation } from 'react-router-dom';
 
 const Header = () => {
   const [scroll, setScroll] = useState(0);
   const [width, setWidth] = useState(0);
+  // eslint-disable-next-line no-unused-vars
+  const [locat, setlocat] = useState(null);
 
   useEffect(() => {
     window.addEventListener('resize', () => {
@@ -21,6 +24,14 @@ const Header = () => {
       });
   }, [width]);
 
+  const location = useLocation().pathname;
+
+  const getLocation = () => {
+    if (location === '/home ') {
+      setlocat(true);
+    }
+  };
+  getLocation();
   useEffect(() => {
     window.addEventListener('scroll', () => {
       setScroll(window.scrollY);

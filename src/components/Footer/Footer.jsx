@@ -74,7 +74,7 @@ export function Footer() {
 
             <NavList>
               <li>
-                <NavLink to="/search">Ingredients</NavLink>
+                <NavLink to="/search?type=ingredients">Ingredients</NavLink>
               </li>
               <li>
                 <NavLink to="/add">Add recipes</NavLink>
@@ -130,17 +130,27 @@ export function Footer() {
 
           <ListSocialNetworks>
             <ImgSocial>
-              <UseSvg id="facebook" />
-            </ImgSocial>
-            <ImgSocial>
-              <UseSvg id="youtube" />
+              <a href={'http://fb.com'} target="_blank" rel="noreferrer">
+                <UseSvg id="facebook" />
+              </a>
             </ImgSocial>
 
             <ImgSocial>
-              <UseSvg id="twit" />
+              <a href={'http://youtube.com'} target="_blank" rel="noreferrer">
+                <UseSvg id="youtube" />
+              </a>
             </ImgSocial>
+
             <ImgSocial>
-              <UseSvg id="inst" />
+              <a href={'http://twetter.com'} target="_blank" rel="noreferrer">
+                <UseSvg id="twit" />
+              </a>
+            </ImgSocial>
+
+            <ImgSocial>
+              <a href={'http://instagram.com'} target="_blank" rel="noreferrer">
+                <UseSvg id="inst" />
+              </a>
             </ImgSocial>
           </ListSocialNetworks>
         </MainContainer>
