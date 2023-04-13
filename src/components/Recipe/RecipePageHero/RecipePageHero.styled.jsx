@@ -10,15 +10,15 @@ import desktop1 from '../../../images/RecipeHero/recipeHero_desktop_1x.jpg';
 
 export const HeroContainer = styled.div`
   justify-content: space-between;
-  position: static;
-  z-index: 3;
+  // position: static;
+  // z-index: 3;
   display: flex;
   flex-direction: column;
   align-items: center;
   background-repeat: no-repeat;
   background-image: url(${mob1});
   height: 375px;
-  margin-bottom: 32px;
+  padding-bottom: 32px;
   padding-top: 144px;
   // padding-bottom: 90px;
   background-size: 100%;
@@ -30,7 +30,10 @@ export const HeroContainer = styled.div`
     padding: 80px 44px;
   }
   @media ${theme.device.desktop} {
+    height: 350px;
     padding-top: 100px;
+    padding-bottom: 50px;
+
     background-image: url(${desktop1});
   }
 `;
@@ -119,8 +122,6 @@ export const HeroButtonAdd = styled.button`
     font-size: 16px;
 
     margin-bottom: 40px;
-
-
   }
   @media ${theme.device.desktop} {
     // margin-bottom: 60px;

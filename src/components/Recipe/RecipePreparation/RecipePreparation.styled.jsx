@@ -98,6 +98,8 @@ export const InstructionList = styled.ul`
 `;
 
 export const ImageWrapper = styled.div`
+  display: flex;
+  margin-right: 0;
   margin-top: 40px;
   width: 343px;
   height: 250px;
@@ -109,7 +111,7 @@ export const ImageWrapper = styled.div`
 
   @media ${theme.device.desktop} {
     margin-top: 0px;
-    margin-left: 165px;
+    margin-left: 325px;
   }
   width: 343px;
   height: 250px;
