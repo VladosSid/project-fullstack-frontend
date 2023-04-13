@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import theme from '../../style/generalStyle';
 import { Link } from 'react-router-dom';
 // import desktop_bg from '../../images/mainPagePhoto/desktop_bg_1440.png';
-import tablet_bg from '../../images/mainPagePhoto/tablet_bg.png';
+// import tablet_bg from '../../images/mainPagePhoto/tablet_bg.png';
 
 // import bg_mob from '../../images/mainPagePhoto/bg_mob-min.png';
 // import blatt_mob from '../../images/mainPagePhoto/blatt_mob-min.png';
@@ -33,9 +33,7 @@ export const MPHeroBG = styled.section`
   }
   @media ${theme.device.tablet} {
     background-repeat: no-repeat;
-    /* background-image: url('${tablet_bg}');
-    background-size: cover;
-    background-position: center center; */
+
     background-image: url('${blatt_l_tabl}');
     background-position: top 0px left 0px;
     background-size: 67px;
