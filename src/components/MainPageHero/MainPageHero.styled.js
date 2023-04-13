@@ -23,7 +23,6 @@ import tabl from '../../images/mainPagePhoto/tablet-min.png';
 import mobile from '../../images/mainPagePhoto/mob-min.png';
 //-----------------------------------------------
 export const MPHeroBG = styled.section`
-  outline: 1px solid green;
   margin: 0 auto;
 
   @media screen and (max-width: 768px) {
