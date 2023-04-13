@@ -23,7 +23,7 @@ export const Label = styled.p`
   display: flex;
   font-weight: 500;
   font-size: 16px;
-  color: #3e4462;
+  color: ${props => props.theme.color.addResipe.titleColor};
   line-height: 20px;
 `;
 
@@ -32,7 +32,8 @@ export const Desc = styled.p`
   font-weight: 400;
   font-size: 12px;
   line-height: 16px;
-  color: #7e7e7e;
+  color: ${props => props.theme.color.addResipe.ingredientsSelested};
+
 `;
 
 export const Recipe = styled.li`

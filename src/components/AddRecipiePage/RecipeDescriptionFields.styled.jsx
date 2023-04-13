@@ -9,6 +9,14 @@ export const CustomSelect = styled(ReactSelect)`
     padding: 0;
   }
 
+  .react-select__single-value {
+    color: ${props => props.theme.color.addResipe.inputColor};
+  }
+
+  .react-select__placeholder {
+    opacity: ${props => props.theme.color.addResipe.ingridientsOpasity};
+  }
+
   .react-select__control {
     border-radius: 0;
     border: 1px solid #e0e0e0;
@@ -22,6 +30,8 @@ export const CustomSelect = styled(ReactSelect)`
     background-image: url(${down});
     background-repeat: no-repeat;
     background-position: 90%;
+    background-color: transparent;
+    
      {
       :hover
        {
@@ -32,7 +42,6 @@ export const CustomSelect = styled(ReactSelect)`
         border-color: #e0e0e0;
         outline: 0;
         box-shadow: none;
-        co
       }
     }
     @media ${theme.device.tablet} {
@@ -95,6 +104,7 @@ export const CustomSelect = styled(ReactSelect)`
     margin-top: -40px;
     box-shadow: 0px 6.51852px 7.82222px rgba(0, 0, 0, 0.0314074);
     overflow-x:hidden;
+    background-color: ${props => props.theme.color.addResipe.optionMenuColor};
     @media ${theme.device.desktop} {
     font-size: 16px;
     width: 130px;
@@ -102,7 +112,7 @@ export const CustomSelect = styled(ReactSelect)`
   }
 
   .react-select__option {
-    color: #000000;
+    color: ${props => props.theme.color.addResipe.inputColor};
     background-color: transparent;
     opacity: 0.5;
     font-size: 14px;
@@ -110,11 +120,11 @@ export const CustomSelect = styled(ReactSelect)`
     line-height: 1;
     letter-spasing: -0.02em;
     font-family: Poppins;
-  }
-
-  .react-select__option:hover {
-    color: #8baa36;
-    background-color: transparent;
+    :hover {
+      color: ${props => props.theme.color.addResipe.optionSelectHover};
+      background-color: transparent;
+      opacity: ${props => props.theme.color.addResipe.ingridientsOpasity};
+    }
   }
 `;
 
@@ -179,7 +189,9 @@ export const InputText = styled.input`
   line-height: 21px;
   font-family: Poppins;
   background-color: transparent;
-  color: #000000;
+  color: ${props => props.theme.color.addResipe.inputColor};
+
+
   @media ${theme.device.tablet} {
     font-size: 16px;
     line-height: 24px;
@@ -191,6 +203,15 @@ export const InputText = styled.input`
     line-height: 24px;
     margin-bottom: 40px;
   }
+  ::placeholder {
+    opacity: ${props => props.theme.color.addResipe.ingridientsOpasity};
+    color: ${props => props.theme.color.addResipe.inputColor};
+  }
+  :disabled::placeholder {
+    opacity: ${props => props.theme.color.addResipe.ingridientsOpasity};
+    color: ${props => props.theme.color.addResipe.inputColor};
+  }
+
   :focus-visible {
     outline: 0;
     box-shadow: 0;

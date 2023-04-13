@@ -2,6 +2,7 @@
 import { useEffect, useState } from 'react';
 import { Title } from './RecipeIngridientsFields.styled';
 import { queryBackEnd } from 'helpers/request';
+import { Link } from 'react-router-dom';
 import {
   Col,
   Label,
@@ -11,9 +12,8 @@ import {
   Recipes,
   Popular,
 } from './PopularRecipe.styled';
-import RECIPE from './recipes.json';
 
-const PopularRecipe = () => {
+const PopularRecipe = ( {location} ) => {
   // eslint-disable-next-line no-unused-vars
   const [recipes, setRecipes] = useState([]);
   const [viewport, setViewport] = useState(window.visualViewport.width);
@@ -36,7 +36,8 @@ const PopularRecipe = () => {
       <Title>Popular Recipe</Title>
       <Recipes>
         {recipes &&
-          recipes.map(({ title, description, imageUrl }) => (
+          recipes.map(({ title, description, imageUrl, _id }) => (
+            <Link to={`/recipe/${_id}`} state={{ from: location }}>
             <Recipe key={title}>
               <Thumb src={imageUrl} alt={title} />
               <Col>
@@ -44,6 +45,7 @@ const PopularRecipe = () => {
                 <Desc>{description}</Desc>
               </Col>
             </Recipe>
+            </Link>
           ))}
       </Recipes>
     </Popular>
