@@ -84,6 +84,8 @@ export const theme = {
         bavkgroundFooter: '#8BAA36',
         buttonBgDisable: '#869b4e',
         buttonBg: '#1E1F28',
+
+        hoverLink: '#1E1F28',
       },
     },
   },
@@ -163,6 +165,8 @@ export const theme = {
         bavkgroundFooter: '#22252A',
         buttonBgDisable: '#869b4e',
         buttonBg: '#8baa36',
+
+        hoverLink: '#8BAA36',
       },
 
       //  text

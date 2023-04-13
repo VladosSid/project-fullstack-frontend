@@ -54,8 +54,18 @@ const RecipePage = () => {
     }
   };
 
-  const addIngrid = ing => {
-    console.log(ing);
+  const addIngrid = async ing => {
+    try {
+      const data = await queryBackEnd.queryAddShoppingList(ing);
+
+      if (data.code === 200) {
+        return Notiflix.Notify.success('Add in Shopping list.');
+      }
+
+      return Notiflix.Notify.failure('Error add in shopping list!!!');
+    } catch (err) {
+      console.log(err);
+    }
   };
 
   useEffect(() => {
