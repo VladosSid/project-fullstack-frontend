@@ -11,14 +11,9 @@ export const SwBtn = styled.div`
   border-radius: 50px;
   background-color: ${props =>
     props.checked === true ? '#8BAA36' : '#efefef'};
-  transition: background-color 0.5s,
-    transform cubic-bezier(0.075, 0.82, 0.165, 1) 0.3s;
-  box-shadow: inset 0px 6px 8px 3px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.5s;
 
-  &:hover,
-  &:focus {
-    transform: scale(1.05);
-  }
+  box-shadow: inset 0px 6px 8px 3px rgba(0, 0, 0, 0.1);
 
   @media ${theme.device.mobail} {
     position: fixed;
