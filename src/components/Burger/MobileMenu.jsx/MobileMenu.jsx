@@ -51,13 +51,13 @@ const MobileMenu = () => {
         <div>
           <Logo onClick={() => clickToggle()} />
           <CrossIcon onClick={() => clickToggle()}>
-            <RxCross1 size={32} />
+            <RxCross1 size={22} />
           </CrossIcon>
         </div>
         <nav>
           <Ul>
             <li onClick={() => clickToggle()}>
-              <NavLink to="/categories/Beef">Categories</NavLink>
+              <NavLink to="/categories">Categories</NavLink>
             </li>
             <li onClick={() => clickToggle()}>
               <NavLink to="/add">Add recipes</NavLink>

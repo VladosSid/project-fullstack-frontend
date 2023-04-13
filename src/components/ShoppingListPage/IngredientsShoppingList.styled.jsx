@@ -88,17 +88,20 @@ export const NumberContainer = styled.div`
   font-size: 10px;
   line-height: 15px;
   min-width: 37px;
-  height: 23px;
+  height: 20px;
   border-radius: 4px;
   background: #8baa36;
   color: #fafafa;
   margin-right: 49px;
+  padding: 6px;
+
   @media ${theme.device.tablet} {
     min-width: 68px;
     height: 35px;
     font-size: 18px;
     line-height: 27px;
     margin-right: 115px;
+    padding: 8px;
   }
   @media ${theme.device.desktop} {
     margin-right: 142px;

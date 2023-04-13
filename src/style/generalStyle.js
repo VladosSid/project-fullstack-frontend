@@ -23,6 +23,7 @@ export const theme = {
         modalBackground: '#2A2C36',
         modalText: '#FAFAFA',
         modaBorder: ' #8baa36',
+
       },
 
       mainPage: {
@@ -116,7 +117,6 @@ export const theme = {
         instructionText: '#FAFAFA',
         instructionScrollbarThumb: '#EBF3D4',
       },
-
 
     },
   },

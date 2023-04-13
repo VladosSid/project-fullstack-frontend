@@ -66,8 +66,8 @@ export const PopupContain = styled.div`
 `;
 
 export const CrossBtn = styled.button`
-  top: 10px;
-  right: 10px;
+  top: 15px;
+  right: 15px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -78,6 +78,14 @@ export const CrossBtn = styled.button`
   width: 20px;
   height: 20px;
   background-color: transparent;
+  transition: transform cubic-bezier(0.075, 0.82, 0.165, 1) 0.5s,
+    color cubic-bezier(0.075, 0.82, 0.165, 1) 0.5s;
+
+  &:hover,
+  &:focus {
+    transform: scale(1.05);
+    color: #8baa36;
+  }
 
   @media ${theme.device.tablet} {
     top: 20px;
@@ -100,6 +108,13 @@ export const LogoutBtn = styled.button`
   color: #fafafa;
   background-color: #8baa36;
 
+  transition: transform cubic-bezier(0.075, 0.82, 0.165, 1) 0.5s;
+
+  &:hover,
+  &:focus {
+    transform: scale(1.05);
+  }
+
   @media ${theme.device.tablet} {
     width: 192px;
     height: 60px;
@@ -120,6 +135,13 @@ export const CancelBtn = styled.button`
   height: 50px;
   color: #23262a;
   background-color: #d9d9d9;
+
+  transition: transform cubic-bezier(0.075, 0.82, 0.165, 1) 0.5s;
+
+  &:hover,
+  &:focus {
+    transform: scale(1.05);
+  }
 
   @media ${theme.device.tablet} {
     width: 192px;
