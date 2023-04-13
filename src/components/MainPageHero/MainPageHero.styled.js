@@ -28,7 +28,7 @@ export const MPHeroBG = styled.section`
   @media screen and (max-width: 768px) {
     background-repeat: no-repeat;
     background-image: url('${blatt_l_mob}');
-    background-position: top 10px left 0px;
+    background-position: top 48px left 0px;
     background-size: 48px;
   }
   @media ${theme.device.tablet} {
@@ -73,7 +73,7 @@ export const MPHeroSection = styled.div`
   padding-bottom: 97px;
   background-repeat: no-repeat;
   background-image: url('${mobile}');
-  background-position: top 0px right 0px;
+  background-position: top 60px right 0px;
   background-size: 375px;
   @media ${theme.device.tablet} and (max-width: 1303px) {
     padding-top: 224px;
@@ -177,8 +177,8 @@ export const MPHeroProduct = styled.span`
   @media screen and (max-width: 768px) {
     position: absolute;
     padding: 8px;
-    top: 303px;
-    right: 27px;
+    top: 434px;
+    right: 34px;
   }
   @media ${theme.device.tablet} and (max-width: 1304px) {
     width: 260px;
