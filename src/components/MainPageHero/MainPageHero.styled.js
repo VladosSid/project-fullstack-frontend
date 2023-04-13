@@ -1,22 +1,13 @@
 import styled from 'styled-components';
 import theme from '../../style/generalStyle';
 import { Link } from 'react-router-dom';
-// import { SearchesForm } from 'components/SearchForm/SearchForm.styled';
-// import theme from '../../style/generalStyle';
-// import bg_desk from '../../images/mainPagePhoto/bg_desk-min.png';
-// import bg_tab from '../../images/mainPagePhoto/bg_tab-min.png';
+
 import bg_mob from '../../images/mainPagePhoto/bg_mob-min.png';
-// import blatt_desk from '../../images/mainPagePhoto/blatt_desk-min.png';
-// import blatt_tab from '../../images/mainPagePhoto/blatt_tab-min.png';
+
 import blatt_mob from '../../images/mainPagePhoto/blatt_mob-min.png';
-// import blatt_l_desk from '../../images/mainPagePhoto/blatt_l_desk-min.png';
-// import blatt_l_tab from '../../images/mainPagePhoto/blatt_l_tab-min.png';
+
 import blatt_l_mob from '../../images/mainPagePhoto/blatt_l_mob-min.png';
-// import SoYummy_desk from '../../images/mainPagePhoto/SoYummy_desk-min.png';
-// import SoYummy_tab from '../../images/mainPagePhoto/SoYummy_tab-min.png';
-// import SoYummy_mob from '../../images/mainPagePhoto/SoYummy_mob-min.png';
-// import unsplash_desk from '../../images/mainPagePhoto/unsplash_desk-min.png';
-// import unsplash_tab from '../../images/mainPagePhoto/unsplash_tab-min.png';
+
 import unsplash_mob from '../../images/mainPagePhoto/unsplash_mob-min.png';
 import desktop_bg from '../../images/mainPagePhoto/desktop_bg_1440.png';
 import tablet_bg from '../../images/mainPagePhoto/tablet_bg.png';
@@ -50,7 +41,7 @@ export const MPHeroBG = styled.section`
   @media ${theme.device.desktop} {
     padding-top: 226px;
     padding-bottom: 224px;
-    max-width: 1440px;
+    /* max-width: 1440px; */
     background-repeat: no-repeat;
     background-image: url('${desktop_bg}');
     background-size: cover;
