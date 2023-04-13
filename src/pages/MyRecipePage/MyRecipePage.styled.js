@@ -1,5 +1,6 @@
 import styled from 'styled-components';
-// import theme from '../../style/generalStyle';
+// eslint-disable-next-line
+import theme from '../../style/generalStyle';
 
 export const PaginationWrapper = styled.div`
   display: flex;
@@ -42,7 +43,10 @@ export const ImgTitle = styled.p`
   font-family: 'Poppins';
   font-style: normal;
   font-weight: 500;
-  font-size: 20px;
-  line-height: 21px;
-  color: #3e4462;
+  font-size: 24px;
+  line-height: 24px;
+  letter-spacing: -0.02em;
+  font-feature-settings: 'liga' off;
+  color: ${props => props.theme.color.searchPage.SRLNoItemsText};
+  opacity: 0.5;
 `;

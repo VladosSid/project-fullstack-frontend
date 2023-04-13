@@ -1,7 +1,5 @@
 import React, { useState, useEffect } from 'react'; // eslint-disable-line
 import { useLocation } from 'react-router-dom';
-// import instanceBacEnd from 'helpers/requestBackEnd';
-// import { useNavigate } from 'react-router-dom';
 import instanceBacEnd from 'helpers/requestBackEnd';
 import { MainPageTitle } from 'components/MainPageTitle/MainPageTitle';
 import { MainContainer } from '../../components/MainContainer/MainContainer';
@@ -10,7 +8,6 @@ import { Children } from 'react';
 import { queryBackEnd } from 'helpers/request';
 import { Container, Pagination, Stack } from '@mui/material';
 import { PaginationWrapper, ImgWrapper, ImgTitle } from './MyRecipePage.styled';
-// import Notiflix from 'notiflix';
 import imgIngradients from '../../images/ShopingList/ingradients.png';
 
 const MyRecipesPage = () => {
@@ -32,7 +29,6 @@ const MyRecipesPage = () => {
       })
       .catch(error => {
         console.log(error);
-        // Notiflix.Notify.failure('The list is empty');
       });
   }, []);
 
@@ -64,7 +60,6 @@ const MyRecipesPage = () => {
       })
       .catch(error => {
         console.log(error.message);
-        // Notiflix.Notify.failure('The list is empty');
         setRecipes([]);
       });
   };
