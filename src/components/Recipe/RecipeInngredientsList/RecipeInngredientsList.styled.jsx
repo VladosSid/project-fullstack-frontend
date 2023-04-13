@@ -19,7 +19,8 @@ export const RecipeItem = styled.li`
   display: flex;
   align-items: center;
   border-radius: 8px;
-  background-color: #ebf3d4;
+  background-color: ${props =>
+    props.theme.color.recipePage.backgrounRecipeItem};
   list-style: none;
   padding: 0 8px;
   max-width: 100%;
@@ -67,7 +68,7 @@ export const IngName = styled.div`
   font-weight: 500;
   font-size: 12px;
   line-height: 1.17;
-  color: #3e4462;
+  color: ${props => props.theme.color.recipePage.ingName};
   width: 117px;
   @media ${theme.device.tablet} {
     width: 217px;

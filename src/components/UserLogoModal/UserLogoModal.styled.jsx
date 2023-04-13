@@ -18,12 +18,12 @@ export const UserLogoPopup = styled.div`
   flex-direction: column;
   padding: 18px;
 
-  background: #fafafa;
+  background: ${props => props.theme.color.header.modalBackground};
   position: absolute;
   top: 45px;
   right: -60px;
   z-index: 20;
-  border: 1px solid #8baa36;
+  border: 1px solid ${props => props.theme.color.header.modaBorder};
   border-radius: 8px;
 
   button {
@@ -44,13 +44,7 @@ export const UserLogoPopup = styled.div`
     font-size: 14px;
     font-family: 'Poppins', sans-serif;
     line-height: 22px;
-
-    color: #23262a;
-    &:hover,
-    &:focus {
-      transform: scale(1.05);
-      color: #8baa36;
-    }
+    color: ${props => props.theme.color.header.modalText};
   }
 
   button:last-child {
@@ -58,7 +52,7 @@ export const UserLogoPopup = styled.div`
     font-size: 14px;
     padding: 12px 26px;
     border-radius: 24px 44px;
-    border: 1px solid rgb(250, 250, 250);
+    border: 1px solid #8baa36;
     font-family: Poppins;
     font-weight: 400;
     font-size: 14px;

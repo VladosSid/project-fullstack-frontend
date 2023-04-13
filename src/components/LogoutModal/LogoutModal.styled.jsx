@@ -24,7 +24,7 @@ export const PopupContain = styled.div`
   justify-content: space-evenly;
   align-items: center;
   margin: 0 auto;
-
+  color: ${props => props.theme.color.header.modalText};
   @media ${theme.device.tablet} {
     width: 480px;
     height: 215px;
@@ -34,7 +34,7 @@ export const PopupContain = styled.div`
     height: 215px;
   }
 
-  background-color: #fafafa;
+  background-color: ${props => props.theme.color.header.modalBackground};
   box-shadow: 0px 4px 48px rgba(0, 0, 0, 0.1);
   border-radius: 30px;
 
