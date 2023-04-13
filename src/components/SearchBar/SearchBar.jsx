@@ -7,6 +7,7 @@ import SearchTypeSelector from 'components/SearchTypeSelector/SearchTypeSelector
 export default function SearchBar(props) {
   const { onTypeChange, selectedType, onSubm, searchQuery } = props;
   const [searchWord, setSearchWord] = useState(searchQuery || '');
+
   function handleSearchWordChange(word) {
     setSearchWord(word);
   }
