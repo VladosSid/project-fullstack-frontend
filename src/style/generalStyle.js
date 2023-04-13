@@ -134,7 +134,7 @@ export const theme = {
         searchInputBorder: '#F0F0F0',
         searchInputHover: '#dfdfdf',
         searchInputBG: '#fafafa',
-        searchInputColor: 'rgb(62, 68, 98)',
+        searchInputColor: '#23262A',
         searchInputPlaceholder: '#BDBDBD',
         searchBtncolorFocus: '#fafafa',
         searchBtnFocusSearch: '#22252A',
