@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useLocation } from 'react-router-dom';
 import DishCard from 'components/DishCard/DishCard';
-
+import { useSearchParams } from 'react-router-dom';
 import {
   GridContainer,
   SRLNoItems,
@@ -16,13 +16,13 @@ import { Container, Pagination, Stack } from '@mui/material';
 //-------------------------
 export default function SearchRecipesList({ searchQuery, searchType }) {
   const location = useLocation();
-
+  const [searchParams, setSearchParams] = useSearchParams();
   const [recipes, setRecipes] = useState([]);
   const [error, setError] = useState(null);
   //------------------ Pagination
   const [page, setPage] = useState(1);
   const [totalPages, setTotalPages] = useState(1);
-
+  const updatedParams = new URLSearchParams(searchParams.toString());
   //-----------------------------------
   const [itemsPerPage, setItemsPerPage] = useState(() => {
     const width = window.innerWidth;
@@ -79,8 +79,15 @@ export default function SearchRecipesList({ searchQuery, searchType }) {
         }
       });
   }, [searchQuery, searchType, itemsPerPage, page]);
-
+  useEffect(() => {
+    const newPage = parseInt(searchParams.get('page')) || 1;
+    if (newPage !== page) {
+      setPage(newPage);
+    }
+  }, [page, searchParams]);
   const changeNum = (_, num) => {
+    updatedParams.set('page', num.toString());
+    setSearchParams(updatedParams);
     setPage(num);
   };
   return (
