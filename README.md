@@ -17,6 +17,8 @@ So Yummy is a website for those who want to cook at home. The site allows:
 
 The website has an adaptive design and can be used on desktops, tablets and mobile devices.
 
+### Backend
+
 The project interacts with **So Yummy API**, the documentation for which can be accessed [via this link](https://backend-soyummy.onrender.com/api-docs/).
 
 ## Installing and launching the app
@@ -47,10 +49,9 @@ in the drop-down window go to the `Details` link.
 
 Live page can be accessed via [https://vladossid.github.io/project-fullstack-frontend/](https://vladossid.github.io/project-fullstack-frontend/)
 
+## Credits
 
-## Команда проєкту
-
-Даний проєкт виконано командою №1 57го потоку курсу Full-Stack Developer школи програмування GoIT.
+This project was completed by team №1 of the 57th stream of the Full-Stack Developer course of the GoIT programming school.
 
 ==========================================================
 
@@ -70,6 +71,8 @@ So Yummy - сайт-помічник для тих, хто хоче готува
 * змінувати кольорову тему (світлу / темну)
 
 Сайт має адаптивний дизайн та може використовуватися на декстопах, планшетах та мобільних пристроях. 
+
+### Бекенд
 
 Проект взаємодіє з **So Yummy API**, з документацією якого можна ознайомитись [за посиланням](https://backend-soyummy.onrender.com/api-docs/).
 
