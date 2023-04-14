@@ -92,6 +92,7 @@ export default function MainPage() {
   return (
     <ContainerWrapper>
       <MainPageHero onSubm={handleFormSubmit} />
+
       <Section>
         <MainContainer>
           <Container>
@@ -121,7 +122,6 @@ export default function MainPage() {
           </Container>
 
           <MPButton onClick={() => navigate('/categories')}>
-
             Other categories
           </MPButton>
         </MainContainer>
