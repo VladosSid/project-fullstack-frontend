@@ -38,10 +38,11 @@ const UserLogo = () => {
   const target = useLocation().pathname.split('/')[1];
 
   useEffect(() => {
-    if (!target) return;
     if (target === 'recipe') {
-      setLocate(1);
+      return setLocate(1);
     }
+
+    return setLocate(0);
   }, [target]);
 
   const popupToggle = () => {

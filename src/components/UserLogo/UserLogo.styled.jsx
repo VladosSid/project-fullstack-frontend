@@ -55,8 +55,13 @@ export const ImgAva = styled.img`
 `;
 
 export const NameUser = styled.span`
-  color: ${props =>
-    (props.color === 'dark') & (props.scroll > 80) & (props.locate === 1)
-      ? props.theme.color.header.textNavigation
-      : props.theme.color.header.headerDark};
+  color: ${props => props.theme.color.header.textNavigation};
+  ${props => {
+    const { scroll, locate, theme } = props;
+    if (locate === 1) {
+      return scroll < 80
+        ? `color: ${theme.color.header.pageRecipe};`
+        : `color: ${theme.color.header.pageRecipeScroll};`;
+    }
+  }};
 `;
