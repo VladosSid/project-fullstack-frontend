@@ -103,6 +103,8 @@ export const theme = {
 
         iconFill: '#ffffff',
         hoverIconFill: '#1E1F28',
+
+        textBottom: '#FAFAFA',
       },
 
       addResipe: {
@@ -222,6 +224,8 @@ export const theme = {
 
         iconFill: '#8baa36',
         hoverIconFill: '#ffffff',
+
+        textBottom: '#22252A',
       },
       addResipe: {
         inputColor: '#000000',
