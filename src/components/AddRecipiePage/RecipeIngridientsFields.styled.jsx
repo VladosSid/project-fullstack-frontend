@@ -97,6 +97,10 @@ export const CustomSelectUnit = styled(ReactSelect)`
 `;
 
 export const CustomSelect = styled(ReactSelect)`
+  .react-select__input-container {
+    color: ${props => props.theme.color.addResipe.ingridientsInputColor};
+  }
+
   .react-select__single-value {
     color: ${props => props.theme.color.addResipe.inputColor};
   }
@@ -181,6 +185,7 @@ export const CustomSelect = styled(ReactSelect)`
       opacity: ${props => props.theme.color.addResipe.ingridientsOpasity};
     }
   }
+
 `;
 
 export const Ingridients = styled.div`
@@ -269,7 +274,7 @@ export const InputQuantity = styled.input`
   border-style: solid;
   border-width: 1px 0 1px 1px;
   padding-left: 14px;
-  width: 30px;
+  width: 36px;
   height: 57px;
   padding-top: 0;
   padding-bottom: 0;

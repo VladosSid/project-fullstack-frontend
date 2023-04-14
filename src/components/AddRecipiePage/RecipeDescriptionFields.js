@@ -108,7 +108,7 @@ const RecipeDescriptionFields = ({ onChange }) => {
           />
         </Row>
         <Row>
-          <InputText disabled={true} type="text" placeholder="Coocking time" />
+          <InputText disabled={true} type="text" placeholder="Cooking time" />
           <CustomSelect
             required={true}
             onChange={handleValueSelectTime}

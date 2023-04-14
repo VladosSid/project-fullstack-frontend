@@ -101,6 +101,7 @@ export const theme = {
         ingridientsBackground: 'transparent',
         ingredientsBorder: 'rgba(250, 250, 250, 0.2)',
         ingridientsOpasity: '1',
+        ingridientsInputColor: '#D9D9D9',
         ingredientsSelested: 'rgba(217, 217, 217, 0.6)',
         addButton: '#8BAA36',
       }
@@ -199,6 +200,7 @@ export const theme = {
         ingridientsBackground: '#f5f5f5',
         ingredientsBorder: '#f5f5f5',
         ingridientsOpasity: '0,5',
+        ingridientsInputColor: '#000000',
         ingredientsSelested: 'rgba(0, 0, 0, 0.5)',
         addButton: '#22252A',
       },
