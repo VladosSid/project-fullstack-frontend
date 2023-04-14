@@ -1,113 +1,111 @@
-# React homework template
+# GoIT Project Full-Stack: So Yummy
 
-Этот проект был создан при помощи
-[Create React App](https://github.com/facebook/create-react-app). Для знакомства
-и настройки дополнительных возможностей
-[обратись к документации](https://facebook.github.io/create-react-app/docs/getting-started).
+This project was created with the help of
+[Create React App](https://github.com/facebook/create-react-app). To familiarize yourself with and configure additional features
+[refer to documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-## Создание репозитория по шаблону
+## About this project
 
-Используй этот репозиторий организации GoIT как шаблон для создания репозитория
-своего проекта. Для этого нажми на кнопку `«Use this template»` и выбери опцию
-`«Create a new repository»`, как показано на изображении.
+So Yummy is a website for those who want to cook at home. The site allows:
+* user registration and authorization
+* sharing your recipes
+* searching recipes by categories or ingredients
+* adding recipes to the list of favorites
+* creating a shopping list
+* subscribing to the newsletters
+* changing the color theme (light / dark)
 
-![Creating repo from a template step 1](./assets/template-step-1.png)
+The website has an adaptive design and can be used on desktops, tablets and mobile devices.
 
-На следующем шаге откроется страница создания нового репозитория. Заполни поле
-его имени, убедись что репозиторий публичный, после чего нажми кнопку
-`«Create repository from template»`.
+### Backend
 
-![Creating repo from a template step 2](./assets/template-step-2.png)
+The project interacts with **So Yummy API**, the documentation for which can be accessed [via this link](https://backend-soyummy.onrender.com/api-docs/).
 
-После того как репозиторий будет создан, необходимо перейти в настройки
-созданного репозитория на вкладку `Settings` > `Actions` > `General` как
-показано на изображении.
+## Installing and launching the app
 
-![Settings GitHub Actions permissions step 1](./assets/gh-actions-perm-1.png)
+1. Make sure you have the LTS version of Node.js installed on your computer.
+   [Download and install here](https://nodejs.org/en/) if necessary.
+2. Install the basic dependencies of the project with the `npm install` command.
+3. Start development mode by executing `npm start` command.
+4. Go to the browser at [http://localhost:3000](http://localhost:3000).
+   This page will automatically reload after saving changes to project files.
 
-Проскролив страницу до самого конца, в секции `«Workflow permissions»` выбери
-опцию `«Read and write permissions»` и поставь галочку в чекбоксе. Это
-необходимо для автоматизации процесса деплоя проекта.
+## Deploy
 
-![Settings GitHub Actions permissions step 2](./assets/gh-actions-perm-2.png)
+The production version of the project will automatically be linted, compiled and deployed to GitHub Pages, in the `gh-pages` branch, whenever the `main` branch is updated. For example, after a direct push or an accepted pull request. 
 
-Теперь у тебя есть личный репозиторий проекта, со структурой файлов и папок
-репозитория-шаблона. Далее работай с ним как с любым другим личным репозиторием,
-клонируй его себе на компьютер, пиши код, делай коммиты и отправляй их на
-GitHub.
+### Deploy status
 
-## Подготовка к работе
+The deployment status of the last commit is displayed by an icon next to its identifier.
 
-1. Убедись что на компьютере установлена LTS-версия Node.js.
-   [Скачай и установи](https://nodejs.org/en/) её если необходимо.
-2. Установи базовые зависимости проекта командой `npm install`.
-3. Запусти режим разработки, выполнив команду `npm start`.
-4. Перейди в браузере по адресу [http://localhost:3000](http://localhost:3000).
-   Эта страница будет автоматически перезагружаться после сохранения изменений в
-   файлах проекта.
+- **Yellow color** - the project is being compiled and deployed.
+- **Green color** - deployment completed successfully.
+- **Red color** - an error occurred during linting, compilation or deployment.
+
+More detailed information about the status can be viewed by clicking on the icon, then in
+in the drop-down window go to the `Details` link.
+
+### Live page
+
+Live page can be accessed via [https://vladossid.github.io/project-fullstack-frontend/](https://vladossid.github.io/project-fullstack-frontend/)
+
+## Credits
+
+This project was completed by team №1 of the 57th stream of the Full-Stack Developer course of the GoIT programming school.
+
+==========================================================
+
+Даний проєкт був створений за допомогою
+[Create React App](https://github.com/facebook/create-react-app). Для знайомства та налаштування додаткових можливостей
+[звертайтесь до документації](https://facebook.github.io/create-react-app/docs/getting-started).
+
+## Про проєкт
+
+So Yummy - сайт-помічник для тих, хто хоче готувати вдома. Сайт дозволяє:
+* реєстрацію користувача
+* ділитися своїми рецептами
+* шукати рецепти за категоріями чи інгредієнтами
+* додавати рецепти до списку обраних
+* формувати список необхідних покупок
+* підписатися на email розсилку 
+* змінувати кольорову тему (світлу / темну)
+
+Сайт має адаптивний дизайн та може використовуватися на декстопах, планшетах та мобільних пристроях. 
+
+### Бекенд
+
+Проект взаємодіє з **So Yummy API**, з документацією якого можна ознайомитись [за посиланням](https://backend-soyummy.onrender.com/api-docs/).
+
+## Встановлення та запуск
+
+1. Переконайтеся, що на комп'ютері встановлено LTS-версію Node.js.
+   [Скачайте та встановіть](https://nodejs.org/en/) її якщо необхідно.
+2. Встановіть базові залежності проекту командою `npm install`.
+3. Запустіть режим розробки, виконавши команду `npm start`.
+4. Перейдіть до браузера за адресою [http://localhost:3000](http://localhost:3000).
+   Ця сторінка автоматично перезавантажуватиметься після збереження змін у
+   файлах проекту.
 
 ## Деплой
 
-Продакшн версия проекта будет автоматически проходить линтинг, собираться и
-деплоиться на GitHub Pages, в ветку `gh-pages`, каждый раз когда обновляется
-ветка `main`. Например, после прямого пуша или принятого пул-реквеста. Для этого
-необходимо в файле `package.json` отредактировать поле `homepage`, заменив
-`your_username` и `your_repo_name` на свои, и отправить изменения на GitHub.
+Продакшн версія проекту автоматично проходитиме лінтинг, збиратиметься і деплоїтиметься на GitHub Pages, у гілку `gh-pages`, щоразу коли оновлюється гілка `main`. Наприклад, після прямого пуша або прийнятого пул-реквесту. 
 
-```json
-"homepage": "https://your_username.github.io/your_repo_name/"
-```
+### Статус деплою
 
-Далее необходимо зайти в настройки GitHub-репозитория (`Settings` > `Pages`) и
-выставить раздачу продакшн версии файлов из папки `/root` ветки `gh-pages`, если
-это небыло сделано автоматически.
+Статус деплою останнього комміту відображається іконкою біля його ідентифікатора.
 
-![GitHub Pages settings](./assets/repo-settings.png)
+- **Жовтий колір** - виконується складання та деплой проекту.
+- **Зелений колір** - деплой завершився успішно.
+- **Червоний колір** - під час лінтингу, складання або деплою сталася помилка.
 
-### Статус деплоя
+Більш детальну інформацію про статус можна переглянути натиснувши на іконку, і в
+вікні, що випадає, перейти за посиланням `Details`.
 
-Статус деплоя крайнего коммита отображается иконкой возле его идентификатора.
+### Жива сторінка
 
-- **Желтый цвет** - выполняется сборка и деплой проекта.
-- **Зеленый цвет** - деплой завершился успешно.
-- **Красный цвет** - во время линтинга, сборки или деплоя произошла ошибка.
+Живу сторінку можна подивитися за адресою [https://vladossid.github.io/project-fullstack-frontend/](https://vladossid.github.io/project-fullstack-frontend/)
 
-Более детальную информацию о статусе можно посмотреть кликнув по иконке, и в
-выпадающем окне перейти по ссылке `Details`.
 
-![Deployment status](./assets/deploy-status.png)
+## Команда проєкту
 
-### Живая страница
-
-Через какое-то время, обычно пару минут, живую страницу можно будет посмотреть
-по адресу указанному в отредактированном свойстве `homepage`. Например, вот
-ссылка на живую версию для этого репозитория
-[https://goitacademy.github.io/react-homework-template](https://goitacademy.github.io/react-homework-template).
-
-Если открывается пустая страница, убедись что во вкладке `Console` нет ошибок
-связанных с неправильными путями к CSS и JS файлам проекта (**404**). Скорее
-всего у тебя неправильное значение свойства `homepage` в файле `package.json`.
-
-### Маршрутизация
-
-Если приложение использует библиотеку `react-router-dom` для маршрутизации,
-необходимо дополнительно настроить компонент `<BrowserRouter>`, передав в пропе
-`basename` точное название твоего репозитория. Слеш в начале строки обязателен.
-
-```jsx
-<BrowserRouter basename="/your_repo_name">
-  <App />
-</BrowserRouter>
-```
-
-## Как это работает
-
-![How it works](./assets/how-it-works.png)
-
-1. После каждого пуша в ветку `main` GitHub-репозитория, запускается специальный
-   скрипт (GitHub Action) из файла `.github/workflows/deploy.yml`.
-2. Все файлы репозитория копируются на сервер, где проект инициализируется и
-   проходит линтинг и сборку перед деплоем.
-3. Если все шаги прошли успешно, собранная продакшн версия файлов проекта
-   отправляется в ветку `gh-pages`. В противном случае, в логе выполнения
-   скрипта будет указано в чем проблема.
+Даний проєкт виконано командою №1 57го потоку курсу Full-Stack Developer школи програмування GoIT.
