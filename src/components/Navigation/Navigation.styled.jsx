@@ -46,7 +46,20 @@ export const Ul = styled.ul`
     line-height: 22px;
   }
 
-  li a {
+  & li a {
+    color: ${props => props.theme.color.header.textNavigation};
+    ${props => {
+      const { scroll, locate, theme } = props;
+      if (locate === 1) {
+        return scroll < 80
+          ? `color: ${theme.color.header.pageRecipe};`
+          : `color: ${theme.color.header.pageRecipeScroll};`;
+      }
+    }};
+
+    &.active {
+      color: #8baa36;
+    }
     transition: color cubic-bezier(0.075, 0.82, 0.165, 1) 0.5s;
   }
 
@@ -56,13 +69,6 @@ export const Ul = styled.ul`
   }
 
   li a {
-    color: ${props =>
-      (props.color === 'dark') & (props.scroll > 80) & (props.locate === 1)
-        ? props.theme.color.header.textNavigation
-        : props.theme.color.header.headerDark};
-    &.active {
-      color: #8baa36;
-    }
   }
 
   li:last-child a {
@@ -80,5 +86,10 @@ export const Ul = styled.ul`
     }
   }
 `;
+
+// ${props =>
+//       (props.color === 'dark') & (props.scroll > 80) & (props.locate === 1)
+//         ? props.theme.color.header.textNavigation
+//         : props.theme.color.header.headerDark};
 
 export const SearchImg = styled(AiOutlineSearch)``;

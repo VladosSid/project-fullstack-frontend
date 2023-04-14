@@ -24,6 +24,9 @@ export const theme = {
         modalBackground: '#2A2C36',
         modalText: '#FAFAFA',
         modaBorder: ' #8baa36',
+
+        pageRecipe: '#23262A',
+        pageRecipeScroll: '#fff',
       },
 
       mainPage: {
@@ -142,6 +145,9 @@ export const theme = {
         modalBackground: '#fafafa',
         modalText: '#23262A',
         modaBorder: ' #FAFAFA',
+
+        pageRecipe: '#23262A',
+        pageRecipeScroll: '#23262A',
       },
 
       mainPage: {
