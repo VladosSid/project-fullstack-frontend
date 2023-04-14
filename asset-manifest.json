@@ -1,12 +1,12 @@
 {
   "files": {
     "main.css": "/project-fullstack-frontend/static/css/main.6e774571.css",
-    "main.js": "/project-fullstack-frontend/static/js/main.f3be45bf.js",
+    "main.js": "/project-fullstack-frontend/static/js/main.5e8eb8d7.js",
     "static/js/703.fde659fa.chunk.js": "/project-fullstack-frontend/static/js/703.fde659fa.chunk.js",
     "static/js/689.efe4feae.chunk.js": "/project-fullstack-frontend/static/js/689.efe4feae.chunk.js",
     "static/js/916.651581ba.chunk.js": "/project-fullstack-frontend/static/js/916.651581ba.chunk.js",
     "static/js/192.ce955d89.chunk.js": "/project-fullstack-frontend/static/js/192.ce955d89.chunk.js",
-    "static/js/939.0ec8a248.chunk.js": "/project-fullstack-frontend/static/js/939.0ec8a248.chunk.js",
+    "static/js/939.8d097eb0.chunk.js": "/project-fullstack-frontend/static/js/939.8d097eb0.chunk.js",
     "static/js/6.5f86c61f.chunk.js": "/project-fullstack-frontend/static/js/6.5f86c61f.chunk.js",
     "static/js/506.804f575e.chunk.js": "/project-fullstack-frontend/static/js/506.804f575e.chunk.js",
     "static/js/25.ed881f87.chunk.js": "/project-fullstack-frontend/static/js/25.ed881f87.chunk.js",
@@ -31,7 +31,6 @@
     "static/media/desktop-min.png": "/project-fullstack-frontend/static/media/desktop-min.0226454824d8a7a1eded.png",
     "static/media/ingradients.png": "/project-fullstack-frontend/static/media/ingradients.34d30603d2f29910c2ce.png",
     "static/media/recipeHero_desktop_2x.jpg": "/project-fullstack-frontend/static/media/recipeHero_desktop_2x.924484b464f126e26139.jpg",
-    "static/media/tablet_bg.png": "/project-fullstack-frontend/static/media/tablet_bg.bd214bbcbdff8f67c762.png",
     "static/media/WelcomePageBgDesktop.jpg": "/project-fullstack-frontend/static/media/WelcomePageBgDesktop.f31fc4303d48e5b012c6.jpg",
     "static/media/not_found_desk_2x.png": "/project-fullstack-frontend/static/media/not_found_desk_2x.3cfaecf1beea8a207660.png",
     "static/media/not_found_tablet_2x.png": "/project-fullstack-frontend/static/media/not_found_tablet_2x.276a273fa011a4e83403.png",
@@ -63,12 +62,12 @@
     "static/media/arrow.svg": "/project-fullstack-frontend/static/media/arrow.baca8947d57e4992eeecacf1fe7d5ebd.svg",
     "static/media/chevron-down.svg": "/project-fullstack-frontend/static/media/chevron-down.6ca21e11e19f8046984073ff192ce57d.svg",
     "main.6e774571.css.map": "/project-fullstack-frontend/static/css/main.6e774571.css.map",
-    "main.f3be45bf.js.map": "/project-fullstack-frontend/static/js/main.f3be45bf.js.map",
+    "main.5e8eb8d7.js.map": "/project-fullstack-frontend/static/js/main.5e8eb8d7.js.map",
     "703.fde659fa.chunk.js.map": "/project-fullstack-frontend/static/js/703.fde659fa.chunk.js.map",
     "689.efe4feae.chunk.js.map": "/project-fullstack-frontend/static/js/689.efe4feae.chunk.js.map",
     "916.651581ba.chunk.js.map": "/project-fullstack-frontend/static/js/916.651581ba.chunk.js.map",
     "192.ce955d89.chunk.js.map": "/project-fullstack-frontend/static/js/192.ce955d89.chunk.js.map",
-    "939.0ec8a248.chunk.js.map": "/project-fullstack-frontend/static/js/939.0ec8a248.chunk.js.map",
+    "939.8d097eb0.chunk.js.map": "/project-fullstack-frontend/static/js/939.8d097eb0.chunk.js.map",
     "6.5f86c61f.chunk.js.map": "/project-fullstack-frontend/static/js/6.5f86c61f.chunk.js.map",
     "506.804f575e.chunk.js.map": "/project-fullstack-frontend/static/js/506.804f575e.chunk.js.map",
     "25.ed881f87.chunk.js.map": "/project-fullstack-frontend/static/js/25.ed881f87.chunk.js.map",
@@ -91,6 +90,6 @@
   },
   "entrypoints": [
     "static/css/main.6e774571.css",
-    "static/js/main.f3be45bf.js"
+    "static/js/main.5e8eb8d7.js"
   ]
 }
