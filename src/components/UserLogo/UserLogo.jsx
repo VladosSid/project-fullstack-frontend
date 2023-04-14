@@ -36,7 +36,6 @@ const UserLogo = () => {
   }, []);
 
   const target = useLocation().pathname.split('/')[1];
-  console.log(target);
 
   useEffect(() => {
     if (target === 'recipe') {
