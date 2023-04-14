@@ -31,10 +31,9 @@ export const CustomSelect = styled(ReactSelect)`
     background-repeat: no-repeat;
     background-position: 90%;
     background-color: transparent;
-    
+
      {
-      :hover
-       {
+      :hover {
         outline: 0;
         box-shadow: 0;
         border: 1px solid;
@@ -45,16 +44,16 @@ export const CustomSelect = styled(ReactSelect)`
       }
     }
     @media ${theme.device.tablet} {
-    font-size: 16px;
-    width: 130px;
-    height: 43px;
-    margin-bottom: 32px;
-  }
+      font-size: 16px;
+      width: 130px;
+      height: 43px;
+      margin-bottom: 32px;
+    }
     @media ${theme.device.desktop} {
-    font-size: 16px;
-    width: 130px;
-    margin-bottom: 40px;
-  }
+      font-size: 16px;
+      width: 130px;
+      margin-bottom: 40px;
+    }
   }
 
   .css-t3ipsp-control:hover {
@@ -86,12 +85,12 @@ export const CustomSelect = styled(ReactSelect)`
     max-height: 185px;
     width: 100px;
     scrollbar-width: 10px;
-    overflow-x:hidden;  
+    overflow-x: hidden;
     @media ${theme.device.desktop} {
-    font-size: 16px;
-    width: 130px;
-  }
+      font-size: 16px;
+      width: 130px;
     }
+  }
 
   .react-select__menu:hover {
     outline: 0;
@@ -103,12 +102,12 @@ export const CustomSelect = styled(ReactSelect)`
     width: 100px;
     margin-top: -40px;
     box-shadow: 0px 6.51852px 7.82222px rgba(0, 0, 0, 0.0314074);
-    overflow-x:hidden;
+    overflow-x: hidden;
     background-color: ${props => props.theme.color.addResipe.optionMenuColor};
     @media ${theme.device.desktop} {
-    font-size: 16px;
-    width: 130px;
-  }
+      font-size: 16px;
+      width: 130px;
+    }
   }
 
   .react-select__option {
@@ -191,7 +190,6 @@ export const InputText = styled.input`
   background-color: transparent;
   color: ${props => props.theme.color.addResipe.inputColor};
 
-
   @media ${theme.device.tablet} {
     font-size: 16px;
     line-height: 24px;
@@ -240,10 +238,9 @@ export const Photo = styled.img`
   object-fit: cover;
 `;
 
-
-export const PhotoContainer  = styled.div`
-border-radius: 10px;
-    overflow: hidden;
-    height: 100%;
-    width: 100%;
+export const PhotoContainer = styled.div`
+  border-radius: 10px;
+  overflow: hidden;
+  height: 100%;
+  width: 100%;
 `;
