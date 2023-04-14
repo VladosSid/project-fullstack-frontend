@@ -55,10 +55,11 @@ export const ImgAva = styled.img`
 `;
 
 export const NameUser = styled.span`
+  transition: color cubic-bezier(0.075, 0.82, 0.165, 1) 1s;
   color: ${props => props.theme.color.header.textNavigation};
   ${props => {
     const { scroll, locate, theme } = props;
-    if (locate === 1) {
+    if (locate === 1 || locate === 2) {
       return scroll < 80
         ? `color: ${theme.color.header.pageRecipe};`
         : `color: ${theme.color.header.pageRecipeScroll};`;
