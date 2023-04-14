@@ -333,7 +333,7 @@ export const BoxAfter = styled.div`
 
   letter-spacing: -0.01em;
 
-  color: #22252a;
+  color: ${props => props.theme.color.footer.textBottom};
 
   opacity: 0.5;
 

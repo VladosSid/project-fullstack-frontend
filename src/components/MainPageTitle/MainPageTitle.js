@@ -9,12 +9,11 @@ import {
 import img from '../../images/background/green-point.png';
 import imgTop from '../../images/background/black_point.png';
 import imgWhite from '../../images/background/white_point.png';
-import authSelectors from '../../redux/users/auth-selectors'
+import authSelectors from '../../redux/users/auth-selectors';
 
 export const MainPageTitle = ({ title }) => {
+  const theme = useSelector(authSelectors.getTheme);
 
-const theme = useSelector(authSelectors.getTheme);
-  // console.log('theme', theme);
   return (
     <ContaynerTitle>
       <Title>{title}</Title>
