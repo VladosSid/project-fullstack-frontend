@@ -6,7 +6,6 @@ import { Box } from '@mui/material';
 import { RecipesBox } from './CategoriesTabs.styled';
 import DishCard from '../DishCard/DishCard';
 import queryBackEnd from '../../helpers/request/queryBackEnd';
-import { useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 
 function TabPanel(props) {
