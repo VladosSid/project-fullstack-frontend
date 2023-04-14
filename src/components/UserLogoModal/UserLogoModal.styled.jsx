@@ -45,6 +45,12 @@ export const UserLogoPopup = styled.div`
     font-family: 'Poppins', sans-serif;
     line-height: 22px;
     color: ${props => props.theme.color.header.modalText};
+
+    &:hover,
+    &:focus {
+      transform: scale(1.1);
+      color: #8baa36;
+    }
   }
 
   button:last-child {
