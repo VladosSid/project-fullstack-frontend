@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { MainPageTitle } from 'components/MainPageTitle/MainPageTitle';
 import { MainContainer } from '../../components/MainContainer/MainContainer';
 import { ContainerWrapper } from './Searchpage.styled';
@@ -17,6 +17,10 @@ export default function SearchPage() {
   const [searchType, setSearchType] = useState(
     searchParams.get('type') || 'title'
   );
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   const updatedParams = new URLSearchParams(searchParams.toString());
 

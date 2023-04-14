@@ -40,6 +40,8 @@ export default function MainPage() {
   });
 
   useEffect(() => {
+    window.scrollTo(0, 0);
+
     const handleWindowResize = () => {
       const width = window.innerWidth;
 
