@@ -13,7 +13,7 @@ export const HeaderNav = styled.nav`
     display: none;
   }
   @media ${theme.device.desktop} {
-    margin-left: auto;
+    // margin-left: auto;
     display: flex;
     flex-direction: row;
   }
