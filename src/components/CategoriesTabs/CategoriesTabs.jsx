@@ -44,10 +44,6 @@ export default function CategoriesTabs(props) {
   const [value, setValue] = React.useState(idCategory);
   const [recipeList, setRecipeList] = React.useState([]);
 
-  let theme = useSelector(state => state.auth.theme);
-
-  theme = 'black';
-
   React.useEffect(() => {
     setValue(idCategory);
   }, [idCategory]);
