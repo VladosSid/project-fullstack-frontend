@@ -48,22 +48,22 @@ export const MPHeroBG = styled.section`
 `;
 
 export const MPContainer = styled.div`
-  width: 359px;
+  width: 375px;
   margin: 0 auto;
-  padding: 0 8px;
+  // padding: 0 8px;
   @media screen and (max-width: 768px) {
     position: relative;
   }
   @media ${theme.device.tablet} {
-    width: 704px;
-    margin: 0 auto;
-    padding: 0 32px;
+    width: 768px;
+    // margin: 0 auto;
+    // padding: 0 32px;
   }
 
   @media ${theme.device.desktop} {
-    width: 1240px;
-    margin: 0 auto;
-    padding: 0 32px;
+    width: 1440px;
+    // margin: 0 auto;
+    // padding: 0 32px;
   }
 `;
 export const MPHeroSection = styled.div`
@@ -175,8 +175,8 @@ export const MPHeroProduct = styled.span`
   @media screen and (max-width: 768px) {
     position: absolute;
     padding: 8px;
-    top: 434px;
-    right: 34px;
+    top: 306px;
+    right: 32px;
   }
   @media ${theme.device.tablet} and (max-width: 1304px) {
     width: 260px;
