@@ -15,10 +15,11 @@ const Navigation = () => {
   const color = useSelector(getTheme);
 
   useEffect(() => {
-    if (!target) return;
     if (target === 'recipe') {
-      setLocate(1);
+      return setLocate(1);
     }
+
+    return setLocate(0);
   }, [target]);
 
   useEffect(() => {
