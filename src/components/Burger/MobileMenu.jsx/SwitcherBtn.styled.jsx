@@ -28,10 +28,10 @@ export const SwBtn = styled.div`
   }
 
   @media ${theme.device.desktop} {
-    position: fixed;
-    left: 100%;
-    top: 50%;
-    transform: translate(-50%, -50%);
+    position: relative;
+    left: -50px;
+    top: 0;
+    // transform: translate(-50%, -50%);
   }
 `;
 

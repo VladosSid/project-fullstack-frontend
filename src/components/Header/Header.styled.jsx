@@ -23,6 +23,7 @@ export const HeaderBox = styled.div`
   transform: translate(-50%, -50%);
   display: flex;
   align-items: center;
+  justify-content: space-between;
 
   @media ${theme.device.mobail} {
     width: 343px;

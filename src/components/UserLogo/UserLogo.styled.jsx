@@ -4,21 +4,21 @@ import theme from 'style/generalStyle';
 export const BtnWrapper = styled.div`
   position: relative;
   @media (min-width: 320px) {
-    margin-left: auto;
-    margin-right: 10px;
+    // margin-left: auto;
+    // margin-right: 10px;
   }
-  @media ${theme.device.mobail} {
-    margin-left: auto;
-    margin-right: 55px;
-  }
-  @media ${theme.device.tablet} {
-    margin-left: auto;
-    margin-right: 55px;
-  }
-  @media ${theme.device.desktop} {
-    margin-left: 230px;
-    margin-right: 55px;
-  }
+  // @media ${theme.device.mobail} {
+  //   margin-left: auto;
+  //   margin-right: 55px;
+  // }
+  // @media ${theme.device.tablet} {
+  //   margin-left: auto;
+  //   margin-right: 55px;
+  // }
+  // @media ${theme.device.desktop} {
+  //   // margin-left: 230px;
+  //   // margin-right: 55px;
+  // }
 `;
 
 export const UserLogoBtn = styled.button`
