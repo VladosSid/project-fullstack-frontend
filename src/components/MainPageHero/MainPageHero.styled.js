@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import theme from '../../style/generalStyle';
 import { Link } from 'react-router-dom';
 // import desktop_bg from '../../images/mainPagePhoto/desktop_bg_1440.png';
-import tablet_bg from '../../images/mainPagePhoto/tablet_bg.png';
+// import tablet_bg from '../../images/mainPagePhoto/tablet_bg.png';
 
 // import bg_mob from '../../images/mainPagePhoto/bg_mob-min.png';
 // import blatt_mob from '../../images/mainPagePhoto/blatt_mob-min.png';
@@ -28,14 +28,12 @@ export const MPHeroBG = styled.section`
   @media screen and (max-width: 768px) {
     background-repeat: no-repeat;
     background-image: url('${blatt_l_mob}');
-    background-position: top 10px left 0px;
+    background-position: top 48px left 0px;
     background-size: 48px;
   }
   @media ${theme.device.tablet} {
     background-repeat: no-repeat;
-    /* background-image: url('${tablet_bg}');
-    background-size: cover;
-    background-position: center center; */
+
     background-image: url('${blatt_l_tabl}');
     background-position: top 0px left 0px;
     background-size: 67px;
@@ -73,7 +71,7 @@ export const MPHeroSection = styled.div`
   padding-bottom: 97px;
   background-repeat: no-repeat;
   background-image: url('${mobile}');
-  background-position: top 0px right 0px;
+  background-position: top 60px right 0px;
   background-size: 375px;
   @media ${theme.device.tablet} and (max-width: 1303px) {
     padding-top: 224px;
@@ -177,8 +175,8 @@ export const MPHeroProduct = styled.span`
   @media screen and (max-width: 768px) {
     position: absolute;
     padding: 8px;
-    top: 303px;
-    right: 27px;
+    top: 434px;
+    right: 34px;
   }
   @media ${theme.device.tablet} and (max-width: 1304px) {
     width: 260px;
