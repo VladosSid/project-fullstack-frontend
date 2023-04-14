@@ -66,7 +66,7 @@ const MyRecipesPage = () => {
   return (
     <MainContainer>
       <MainPageTitle title={'My recipes'} />
-      {recipes.length !== 0 ? (
+      {allItem !== 0 && recipes.length !== 0 ? (
         <MyRecipesList
           recipes={recipes}
           location={location}

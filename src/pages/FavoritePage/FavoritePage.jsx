@@ -62,7 +62,7 @@ const FavoritePage = () => {
   return (
     <MainContainer>
       <MainPageTitle title={'Favorite'} />
-      {recipes.length !== 0 ? (
+      {allItem !== 0 && recipes.length !== 0 ? (
         <FavoriteList
           recipes={recipes}
           allItem={allItem}
