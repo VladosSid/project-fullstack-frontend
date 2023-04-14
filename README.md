@@ -19,15 +19,14 @@ The website has an adaptive design and can be used on desktops, tablets and mobi
 
 The project interacts with **So Yummy API**, the documentation for which can be accessed [via this link](https://backend-soyummy.onrender.com/api-docs/).
 
-## Встановлення та запуск
+## Installing and launching the app
 
-1. Переконайтеся, що на комп'ютері встановлено LTS-версію Node.js.
-   [Скачайте та встановіть](https://nodejs.org/en/) її якщо необхідно.
-2. Встановіть базові залежності проекту командою `npm install`.
-3. Запустіть режим розробки, виконавши команду `npm start`.
-4. Перейдіть до браузера за адресою [http://localhost:3000](http://localhost:3000).
-   Ця сторінка автоматично перезавантажуватиметься після збереження змін у
-   файлах проекту.
+1. Make sure you have the LTS version of Node.js installed on your computer.
+   [Download and install here](https://nodejs.org/en/) if necessary.
+2. Install the basic dependencies of the project with the `npm install` command.
+3. Start development mode by executing `npm start` command.
+4. Go to the browser at [http://localhost:3000](http://localhost:3000).
+   This page will automatically reload after saving changes to project files.
 
 ## Деплой
 
