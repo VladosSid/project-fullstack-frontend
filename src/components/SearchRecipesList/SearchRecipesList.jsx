@@ -51,7 +51,10 @@ export default function SearchRecipesList({ searchQuery, searchType }) {
   //-------------
   useEffect(() => {
     const processedValue = searchQuery.trim().replace(/ +/g, '%20');
-
+    const newPage = parseInt(searchParams.get('page')) || 1;
+    if (newPage !== page) {
+      setPage(newPage);
+    }
     const response = queryBackEnd.querySearch(
       searchType,
       processedValue,
@@ -78,13 +81,8 @@ export default function SearchRecipesList({ searchQuery, searchType }) {
           setError(<ErrorComponent message="An error occurred" />);
         }
       });
-  }, [searchQuery, searchType, itemsPerPage, page]);
-  useEffect(() => {
-    const newPage = parseInt(searchParams.get('page')) || 1;
-    if (newPage !== page) {
-      setPage(newPage);
-    }
-  }, [page, searchParams]);
+  }, [searchQuery, searchType, itemsPerPage, page, searchParams]);
+
   const changeNum = (_, num) => {
     updatedParams.set('page', num.toString());
     setSearchParams(updatedParams);
