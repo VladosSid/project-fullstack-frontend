@@ -18,8 +18,9 @@ export const HeroContainer = styled.div`
   height: 375px;
   margin-bottom: 32px;
   padding-top: 144px;
-  background-size: 100%;
+  background-size: contain;
   background-color: transparent;
+  background-position: center;
 
   @media screen and (min-device-pixel-ratio: 2),
     screen and (min-resolution: 192dpi),
@@ -40,7 +41,7 @@ export const HeroContainer = styled.div`
       background-image: url(${tab2});
     }
   }
-  @media screen and (max-width: 1440px) {
+  @media screen and (min-width: 1240px) {
     height: 350px;
     padding-top: 100px;
     padding-bottom: 50px;
