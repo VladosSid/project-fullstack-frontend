@@ -28,24 +28,24 @@ The project interacts with **So Yummy API**, the documentation for which can be 
 4. Go to the browser at [http://localhost:3000](http://localhost:3000).
    This page will automatically reload after saving changes to project files.
 
-## Деплой
+## Deploy
 
-Продакшн версія проекту автоматично проходитиме лінтинг, збиратиметься і деплоїтиметься на GitHub Pages, у гілку `gh-pages`, щоразу коли оновлюється гілка `main`. Наприклад, після прямого пуша або прийнятого пул-реквесту. 
+The production version of the project will automatically be linted, compiled and deployed to GitHub Pages, in the `gh-pages` branch, whenever the `main` branch is updated. For example, after a direct push or an accepted pull request. 
 
-### Статус деплою
+### Deploy status
 
-Статус деплою останнього комміту відображається іконкою біля його ідентифікатора.
+The deployment status of the last commit is displayed by an icon next to its identifier.
 
-- **Жовтий колір** - виконується складання та деплой проекту.
-- **Зелений колір** - деплой завершився успішно.
-- **Червоний колір** - під час лінтингу, складання або деплою сталася помилка.
+- **Yellow color** - the project is being compiled and deployed.
+- **Green color** - deployment completed successfully.
+- **Red color** - an error occurred during linting, compilation or deployment.
 
-Більш детальну інформацію про статус можна переглянути натиснувши на іконку, і в
-вікні, що випадає, перейти за посиланням `Details`.
+More detailed information about the status can be viewed by clicking on the icon, then in
+in the drop-down window go to the `Details` link.
 
-### Жива сторінка
+### Live page
 
-Живу сторінку можна подивитися за адресою [https://vladossid.github.io/project-fullstack-frontend/](https://vladossid.github.io/project-fullstack-frontend/)
+Live page can be accessed via [https://vladossid.github.io/project-fullstack-frontend/](https://vladossid.github.io/project-fullstack-frontend/)
 
 
 ## Команда проєкту
