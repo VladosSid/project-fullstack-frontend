@@ -1,5 +1,7 @@
 # GoIT Project Full-Stack: So Yummy
 
+==========================================================
+
 Даний проєкт був створений за допомогою
 [Create React App](https://github.com/facebook/create-react-app). Для знайомства та налаштування додаткових можливостей
 [звертайтесь до документації](https://facebook.github.io/create-react-app/docs/getting-started).
@@ -49,3 +51,6 @@ So Yummy - сайт-помічник для тих, хто хоче готува
 Живу сторінку можна подивитися за адресою [https://vladossid.github.io/project-fullstack-frontend/](https://vladossid.github.io/project-fullstack-frontend/)
 
 
+## Команда проєкту
+
+Даний проєкт виконано командою №1 57го потоку курсу Full-Stack Developer школи програмування GoIT.
