@@ -77,6 +77,7 @@ export const CrossBtn = styled.button`
   border: none;
   width: 20px;
   height: 20px;
+  color: ${props => props.theme.color.header.burgerBtn};
   background-color: transparent;
   transition: transform cubic-bezier(0.075, 0.82, 0.165, 1) 0.5s,
     color cubic-bezier(0.075, 0.82, 0.165, 1) 0.5s;
