@@ -55,5 +55,8 @@ export const ImgAva = styled.img`
 `;
 
 export const NameUser = styled.span`
-  color: ${props => props.theme.color.header.burgerBtn};
+  color: ${props =>
+    (props.color === 'dark') & (props.scroll > 80) & (props.locate === 1)
+      ? props.theme.color.header.textNavigation
+      : props.theme.color.header.headerDark};
 `;

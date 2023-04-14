@@ -1,11 +1,13 @@
 import { useState, useEffect } from 'react';
 import { useSelector } from 'react-redux';
 import { authSelectors } from 'redux/users';
+import { useLocation } from 'react-router-dom';
 
 import { BtnWrapper, UserLogoBtn } from 'components/UserLogo/UserLogo.styled';
 import UserLogoModal from 'components/UserLogoModal/UserLogoModal';
 import { Modal } from '../Modal/Modal';
 import { ImgAva, NameUser } from 'components/UserLogo/UserLogo.styled';
+import getTheme from 'redux/theming/theme-selector';
 
 import UserInfoModal from '../Modal/UserInfoModal/UserInfoModal';
 
@@ -13,7 +15,9 @@ const UserLogo = () => {
   const [popupIsOpen, setPopupIsOpen] = useState(false);
   const [LogoModalOpen, setLogoModalOpen] = useState(false);
   const [scroll, setScroll] = useState(0);
+  const [locate, setLocate] = useState(0);
 
+  const color = useSelector(getTheme);
   const name = useSelector(authSelectors.getUsername);
   const ava = useSelector(authSelectors.getAvatar);
 
@@ -30,6 +34,15 @@ const UserLogo = () => {
       );
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
+
+  const target = useLocation().pathname.split('/')[1];
+
+  useEffect(() => {
+    if (!target) return;
+    if (target === 'recipe') {
+      setLocate(1);
+    }
+  }, [target]);
 
   const popupToggle = () => {
     setPopupIsOpen(prev => !prev);
@@ -52,7 +65,9 @@ const UserLogo = () => {
     <BtnWrapper>
       <UserLogoBtn onClick={e => popupToggle(e)}>
         <ImgAva src={ava} alt="avatar" />
-        <NameUser scroll={scroll}>{name}</NameUser>
+        <NameUser scroll={scroll} color={color} locate={locate}>
+          {name}
+        </NameUser>
       </UserLogoBtn>
 
       <Modal
