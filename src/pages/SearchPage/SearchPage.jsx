@@ -17,6 +17,7 @@ export default function SearchPage() {
   const [searchType, setSearchType] = useState(
     searchParams.get('type') || 'title'
   );
+
   const updatedParams = new URLSearchParams(searchParams.toString());
 
   //------------
@@ -41,6 +42,7 @@ export default function SearchPage() {
         updatedParams.set('type', type);
 
         updatedParams.set('page', 1);
+
         setSearchParams(updatedParams);
       } else {
         setSearchParams({});
@@ -58,6 +60,8 @@ export default function SearchPage() {
         setSearchType(type);
 
         updatedParams.set('type', type);
+        updatedParams.set('page', 1);
+
         setSearchParams(updatedParams);
       } else {
         Notify.warning('Please fill the search form');
