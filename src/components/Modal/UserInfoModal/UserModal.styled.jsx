@@ -179,6 +179,7 @@ export const CloseCross = styled.button`
   padding: 0;
   border: none;
   background-color: transparent;
+  color: ${props => props.theme.color.header.burgerBtn};
 
   transition: transform cubic-bezier(0.075, 0.82, 0.165, 1) 0.5s,
     color cubic-bezier(0.075, 0.82, 0.165, 1) 0.5s;
