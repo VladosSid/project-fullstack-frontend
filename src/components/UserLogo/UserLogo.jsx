@@ -41,6 +41,9 @@ const UserLogo = () => {
     if (target === 'recipe') {
       return setLocate(1);
     }
+    if (target === 'home') {
+      return setLocate(2);
+    }
 
     return setLocate(0);
   }, [target]);
