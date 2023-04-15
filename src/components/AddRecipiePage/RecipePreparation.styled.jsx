@@ -1,4 +1,6 @@
 import styled from 'styled-components';
+import theme from 'style/generalStyle';
+
 
 export const Title = styled.div`
   display: flex;
@@ -30,4 +32,7 @@ export const Textarea = styled.textarea`
     font-weight: 400;
     color: ${props => props.theme.color.addResipe.ingredientsSelested};
   }
+  @media ${theme.device.desktop} {
+      width: 609px;
+    }
 `;

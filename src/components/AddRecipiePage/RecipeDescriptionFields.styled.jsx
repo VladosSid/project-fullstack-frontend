@@ -243,4 +243,5 @@ export const PhotoContainer = styled.div`
   overflow: hidden;
   height: 100%;
   width: 100%;
+  cursor: pointer;
 `;
