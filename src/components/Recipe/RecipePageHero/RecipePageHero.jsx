@@ -21,7 +21,7 @@ export const RecipePageHero = ({
       <HeroText>{description}</HeroText>
       {favorite ? (
         <HeroButtonAdd onClick={e => removeFavorite(e)}>
-          Remove to favorite recipes
+          Remove from favorite recipes
         </HeroButtonAdd>
       ) : (
         <HeroButtonAdd onClick={e => addFavorite(e)}>
