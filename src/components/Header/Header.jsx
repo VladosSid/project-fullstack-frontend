@@ -4,8 +4,8 @@ import UserLogo from 'components/UserLogo';
 import Navigation from 'components/Navigation';
 import { HeaderBox } from './Header.styled';
 import { HeaderContainer, BoxSwitch } from './Header.styled';
-import BurgerButton from 'components/Burger/MobileMenu.jsx/BurgerButton';
-import SwitcherBtn from '../Burger/MobileMenu.jsx/SwitcherBtn';
+import BurgerButton from 'components/Burger/BurgerButton';
+import SwitcherBtn from '../Burger/SwitcherBtn';
 import { useLocation } from 'react-router-dom';
 
 const Header = () => {

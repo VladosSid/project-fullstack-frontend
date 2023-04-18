@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import theme from 'style/generalStyle';
-import bgSpinach from '../../../images/Header/background-spinach.jpg';
+import bgSpinach from '../../images/Header/background-spinach.jpg';
 
 export const Overlay = styled.div`
   width: 100vw;
