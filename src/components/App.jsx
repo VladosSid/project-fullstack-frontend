@@ -11,7 +11,7 @@ import PrivateRoute from './Routes/PrivateRoute';
 
 import getTheme from '../redux/theming/theme-selector';
 import theme from '../style/generalStyle';
-import Burger from './Burger/Burger';
+// import Burger from './Burger/Burger';
 import { Loader } from './Loader/Loader';
 
 const WelcomePage = lazy(() => import('../pages/WelcomePage/WelcomePage'));
@@ -132,7 +132,7 @@ export const App = () => {
                 />
               </Route>
             </Routes>
-            <Burger />
+            {/* <Burger /> */}
           </AppBox>
         </Suspense>
       )}
